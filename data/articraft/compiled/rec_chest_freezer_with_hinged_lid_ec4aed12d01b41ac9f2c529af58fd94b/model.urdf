@@ -1,0 +1,531 @@
+<robot name="sliding_lid_chest_cooler">
+  <material name="blue_plastic">
+    <color rgba="0.03 0.24 0.58 1" />
+    </material>
+  <material name="white_liner">
+    <color rgba="0.94 0.96 0.92 1" />
+    </material>
+  <material name="light_lid">
+    <color rgba="0.88 0.93 0.94 1" />
+    </material>
+  <material name="gray_rail">
+    <color rgba="0.42 0.44 0.46 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.04 0.045 0.05 1" />
+    </material>
+  <material name="pin_steel">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <link name="body">
+    <inertial>
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <mass value="6" />
+      <inertia ixx="0.1768" ixy="0" ixz="0" iyy="0.4162" iyz="0" izz="0.433" />
+      </inertial>
+    <visual name="bottom_shell">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.42 0.05" />
+        </geometry>
+      <material name="blue_plastic">
+        <color rgba="0.03 0.24 0.58 1" />
+        </material>
+      </visual>
+    <visual name="side_wall_0">
+      <origin xyz="0 0.2 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.04 0.32" />
+        </geometry>
+      <material name="blue_plastic">
+        <color rgba="0.03 0.24 0.58 1" />
+        </material>
+      </visual>
+    <visual name="side_wall_1">
+      <origin xyz="0 -0.2 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.04 0.32" />
+        </geometry>
+      <material name="blue_plastic">
+        <color rgba="0.03 0.24 0.58 1" />
+        </material>
+      </visual>
+    <visual name="end_wall_0">
+      <origin xyz="0.38 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.42 0.32" />
+        </geometry>
+      <material name="blue_plastic">
+        <color rgba="0.03 0.24 0.58 1" />
+        </material>
+      </visual>
+    <visual name="end_wall_1">
+      <origin xyz="-0.38 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.42 0.32" />
+        </geometry>
+      <material name="blue_plastic">
+        <color rgba="0.03 0.24 0.58 1" />
+        </material>
+      </visual>
+    <visual name="liner_floor">
+      <origin xyz="0 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.69 0.29 0.018" />
+        </geometry>
+      <material name="white_liner">
+        <color rgba="0.94 0.96 0.92 1" />
+        </material>
+      </visual>
+    <visual name="liner_side_0">
+      <origin xyz="0 0.1755 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.69 0.01 0.22" />
+        </geometry>
+      <material name="white_liner">
+        <color rgba="0.94 0.96 0.92 1" />
+        </material>
+      </visual>
+    <visual name="liner_side_1">
+      <origin xyz="0 -0.1755 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.69 0.01 0.22" />
+        </geometry>
+      <material name="white_liner">
+        <color rgba="0.94 0.96 0.92 1" />
+        </material>
+      </visual>
+    <visual name="liner_end_0">
+      <origin xyz="0.3555 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.3 0.22" />
+        </geometry>
+      <material name="white_liner">
+        <color rgba="0.94 0.96 0.92 1" />
+        </material>
+      </visual>
+    <visual name="liner_end_1">
+      <origin xyz="-0.3555 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.3 0.22" />
+        </geometry>
+      <material name="white_liner">
+        <color rgba="0.94 0.96 0.92 1" />
+        </material>
+      </visual>
+    <visual name="top_rim_0">
+      <origin xyz="0 0.195 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.06 0.03" />
+        </geometry>
+      <material name="blue_plastic">
+        <color rgba="0.03 0.24 0.58 1" />
+        </material>
+      </visual>
+    <visual name="top_rim_1">
+      <origin xyz="0 -0.195 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.06 0.03" />
+        </geometry>
+      <material name="blue_plastic">
+        <color rgba="0.03 0.24 0.58 1" />
+        </material>
+      </visual>
+    <visual name="end_rim_0">
+      <origin xyz="0.382 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.42 0.03" />
+        </geometry>
+      <material name="blue_plastic">
+        <color rgba="0.03 0.24 0.58 1" />
+        </material>
+      </visual>
+    <visual name="end_rim_1">
+      <origin xyz="-0.382 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.42 0.03" />
+        </geometry>
+      <material name="blue_plastic">
+        <color rgba="0.03 0.24 0.58 1" />
+        </material>
+      </visual>
+    <visual name="rail_0">
+      <origin xyz="0 0.145 0.384" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.03 0.018" />
+        </geometry>
+      <material name="gray_rail">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="rail_1">
+      <origin xyz="0 -0.145 0.384" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.03 0.018" />
+        </geometry>
+      <material name="gray_rail">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="rail_lip_0">
+      <origin xyz="0 0.167 0.393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.01 0.036" />
+        </geometry>
+      <material name="gray_rail">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="rail_lip_1">
+      <origin xyz="0 -0.167 0.393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.01 0.036" />
+        </geometry>
+      <material name="gray_rail">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="foot_-0.29_-0.145">
+      <origin xyz="-0.29 -0.145 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.02" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="foot_-0.29_0.145">
+      <origin xyz="-0.29 0.145 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.02" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="foot_0.29_-0.145">
+      <origin xyz="0.29 -0.145 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.02" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="foot_0.29_0.145">
+      <origin xyz="0.29 0.145 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.02" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="drain_plug">
+      <origin xyz="0.407 0 0.135" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.014" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <collision name="bottom_shell">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.42 0.05" />
+        </geometry>
+      </collision>
+    <collision name="side_wall_0">
+      <origin xyz="0 0.2 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.04 0.32" />
+        </geometry>
+      </collision>
+    <collision name="side_wall_1">
+      <origin xyz="0 -0.2 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.04 0.32" />
+        </geometry>
+      </collision>
+    <collision name="end_wall_0">
+      <origin xyz="0.38 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.42 0.32" />
+        </geometry>
+      </collision>
+    <collision name="end_wall_1">
+      <origin xyz="-0.38 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.42 0.32" />
+        </geometry>
+      </collision>
+    <collision name="liner_floor">
+      <origin xyz="0 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.69 0.29 0.018" />
+        </geometry>
+      </collision>
+    <collision name="liner_side_0">
+      <origin xyz="0 0.1755 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.69 0.01 0.22" />
+        </geometry>
+      </collision>
+    <collision name="liner_side_1">
+      <origin xyz="0 -0.1755 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.69 0.01 0.22" />
+        </geometry>
+      </collision>
+    <collision name="liner_end_0">
+      <origin xyz="0.3555 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.3 0.22" />
+        </geometry>
+      </collision>
+    <collision name="liner_end_1">
+      <origin xyz="-0.3555 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.3 0.22" />
+        </geometry>
+      </collision>
+    <collision name="top_rim_0">
+      <origin xyz="0 0.195 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.06 0.03" />
+        </geometry>
+      </collision>
+    <collision name="top_rim_1">
+      <origin xyz="0 -0.195 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.06 0.03" />
+        </geometry>
+      </collision>
+    <collision name="end_rim_0">
+      <origin xyz="0.382 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.42 0.03" />
+        </geometry>
+      </collision>
+    <collision name="end_rim_1">
+      <origin xyz="-0.382 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.42 0.03" />
+        </geometry>
+      </collision>
+    <collision name="rail_0">
+      <origin xyz="0 0.145 0.384" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.03 0.018" />
+        </geometry>
+      </collision>
+    <collision name="rail_1">
+      <origin xyz="0 -0.145 0.384" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.03 0.018" />
+        </geometry>
+      </collision>
+    <collision name="rail_lip_0">
+      <origin xyz="0 0.167 0.393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.01 0.036" />
+        </geometry>
+      </collision>
+    <collision name="rail_lip_1">
+      <origin xyz="0 -0.167 0.393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.01 0.036" />
+        </geometry>
+      </collision>
+    <collision name="foot_-0.29_-0.145">
+      <origin xyz="-0.29 -0.145 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.02" />
+        </geometry>
+      </collision>
+    <collision name="foot_-0.29_0.145">
+      <origin xyz="-0.29 0.145 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.02" />
+        </geometry>
+      </collision>
+    <collision name="foot_0.29_-0.145">
+      <origin xyz="0.29 -0.145 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.02" />
+        </geometry>
+      </collision>
+    <collision name="foot_0.29_0.145">
+      <origin xyz="0.29 0.145 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.02" />
+        </geometry>
+      </collision>
+    <collision name="drain_plug">
+      <origin xyz="0.407 0 0.135" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <inertial>
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <mass value="1.8" />
+      <inertia ixx="0.0162037" ixy="0" ixz="0" iyy="0.0585038" iyz="0" izz="0.07302" />
+      </inertial>
+    <visual name="lid_panel">
+      <geometry>
+        <box size="0.62 0.32 0.05" />
+        </geometry>
+      <material name="light_lid">
+        <color rgba="0.88 0.93 0.94 1" />
+        </material>
+      </visual>
+    <visual name="runner_0">
+      <origin xyz="0 0.145 -0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.018 0.016" />
+        </geometry>
+      <material name="gray_rail">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="runner_1">
+      <origin xyz="0 -0.145 -0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.018 0.016" />
+        </geometry>
+      <material name="gray_rail">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="recess_panel">
+      <origin xyz="0 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.22 0.006" />
+        </geometry>
+      <material name="white_liner">
+        <color rgba="0.94 0.96 0.92 1" />
+        </material>
+      </visual>
+    <visual name="pin_block_-1.0">
+      <origin xyz="-0.305 -0.145 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.04 0.074" />
+        </geometry>
+      <material name="light_lid">
+        <color rgba="0.88 0.93 0.94 1" />
+        </material>
+      </visual>
+    <visual name="pivot_pin_-1.0">
+      <origin xyz="-0.27 -0.145 0.055" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.055" />
+        </geometry>
+      <material name="pin_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="pin_block_1.0">
+      <origin xyz="0.305 -0.145 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.04 0.074" />
+        </geometry>
+      <material name="light_lid">
+        <color rgba="0.88 0.93 0.94 1" />
+        </material>
+      </visual>
+    <visual name="pivot_pin_1.0">
+      <origin xyz="0.27 -0.145 0.055" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.055" />
+        </geometry>
+      <material name="pin_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <collision name="lid_panel">
+      <geometry>
+        <box size="0.62 0.32 0.05" />
+        </geometry>
+      </collision>
+    <collision name="runner_0">
+      <origin xyz="0 0.145 -0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.018 0.016" />
+        </geometry>
+      </collision>
+    <collision name="runner_1">
+      <origin xyz="0 -0.145 -0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.018 0.016" />
+        </geometry>
+      </collision>
+    <collision name="recess_panel">
+      <origin xyz="0 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.22 0.006" />
+        </geometry>
+      </collision>
+    <collision name="pin_block_-1.0">
+      <origin xyz="-0.305 -0.145 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.04 0.074" />
+        </geometry>
+      </collision>
+    <collision name="pivot_pin_-1.0">
+      <origin xyz="-0.27 -0.145 0.055" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="pin_block_1.0">
+      <origin xyz="0.305 -0.145 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.04 0.074" />
+        </geometry>
+      </collision>
+    <collision name="pivot_pin_1.0">
+      <origin xyz="0.27 -0.145 0.055" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.055" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="handle">
+    <inertial>
+      <origin xyz="0 0.14 0" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="0.00276792" ixy="0" ixz="0" iyy="0.00995458" iyz="0" izz="0.0124367" />
+      </inertial>
+    <visual name="handle_bar">
+      <geometry>
+        <mesh filename="assets/meshes/swing_handle.obj" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <collision name="handle_bar">
+      <geometry>
+        <mesh filename="assets/meshes/swing_handle.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_lid" type="prismatic">
+    <origin xyz="0 0 0.422" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lid" />
+    <axis xyz="1 0 0" />
+    <limit effort="60" velocity="0.25" lower="0" upper="0.3" />
+    </joint>
+  <joint name="lid_to_handle" type="revolute">
+    <origin xyz="0 -0.145 0.055" rpy="0 0 0" />
+    <parent link="lid" />
+    <child link="handle" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="1.5" lower="0" upper="1.35" />
+    </joint>
+  </robot>

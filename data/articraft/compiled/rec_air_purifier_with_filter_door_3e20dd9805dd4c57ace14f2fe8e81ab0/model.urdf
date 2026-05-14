@@ -1,0 +1,581 @@
+<robot name="tower_purifier">
+  <material name="warm_white_plastic">
+    <color rgba="0.86 0.86 0.82 1" />
+    </material>
+  <material name="matte_white">
+    <color rgba="0.94 0.94 0.9 1" />
+    </material>
+  <material name="charcoal_plastic">
+    <color rgba="0.035 0.038 0.04 1" />
+    </material>
+  <material name="soft_gray_button">
+    <color rgba="0.55 0.58 0.58 1" />
+    </material>
+  <material name="pleated_filter_media">
+    <color rgba="0.82 0.78 0.65 1" />
+    </material>
+  <material name="blue_filter_frame">
+    <color rgba="0.2 0.42 0.58 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.015 0.015 0.014 1" />
+    </material>
+  <link name="purifier_body">
+    <visual name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_tower_shell.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="base_plinth">
+      <geometry>
+        <mesh filename="assets/meshes/base_plinth.obj" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="front_grille">
+      <origin xyz="0 0.1215 0.545" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_outlet_grille.obj" />
+        </geometry>
+      <material name="matte_white">
+        <color rgba="0.94 0.94 0.9 1" />
+        </material>
+      </visual>
+    <visual name="rear_bezel">
+      <origin xyz="0 -0.1235 0.49" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_filter_bezel.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="control_panel">
+      <geometry>
+        <mesh filename="assets/meshes/top_control_panel.obj" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.035 0.038 0.04 1" />
+        </material>
+      </visual>
+    <visual name="body_hinge_leaf">
+      <origin xyz="-0.1345 -0.1195 0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.027 0.525" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.035 0.038 0.04 1" />
+        </material>
+      </visual>
+    <visual name="filter_track_0">
+      <origin xyz="-0.1065 -0.024 0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="0.005 0.19 0.432" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.035 0.038 0.04 1" />
+        </material>
+      </visual>
+    <visual name="filter_track_1">
+      <origin xyz="0.1065 -0.024 0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="0.005 0.19 0.432" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.035 0.038 0.04 1" />
+        </material>
+      </visual>
+    <collision name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_tower_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_plinth">
+      <geometry>
+        <mesh filename="assets/meshes/base_plinth.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_grille">
+      <origin xyz="0 0.1215 0.545" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_outlet_grille.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_bezel">
+      <origin xyz="0 -0.1235 0.49" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_filter_bezel.obj" />
+        </geometry>
+      </collision>
+    <collision name="control_panel">
+      <geometry>
+        <mesh filename="assets/meshes/top_control_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="body_hinge_leaf">
+      <origin xyz="-0.1345 -0.1195 0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.027 0.525" />
+        </geometry>
+      </collision>
+    <collision name="filter_track_0">
+      <origin xyz="-0.1065 -0.024 0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="0.005 0.19 0.432" />
+        </geometry>
+      </collision>
+    <collision name="filter_track_1">
+      <origin xyz="0.1065 -0.024 0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="0.005 0.19 0.432" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="access_door">
+    <visual name="door_panel">
+      <origin xyz="0.121 -0.012 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/vented_access_door_panel.obj" />
+        </geometry>
+      <material name="matte_white">
+        <color rgba="0.94 0.94 0.9 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle">
+      <geometry>
+        <cylinder radius="0.006" length="0.53" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.035 0.038 0.04 1" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf">
+      <origin xyz="0.008 -0.007 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.014 0.52" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.035 0.038 0.04 1" />
+        </material>
+      </visual>
+    <visual name="finger_latch">
+      <origin xyz="0.205 -0.019 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.009 0.026" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.035 0.038 0.04 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <origin xyz="0.121 -0.012 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/vented_access_door_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle">
+      <geometry>
+        <cylinder radius="0.006" length="0.53" />
+        </geometry>
+      </collision>
+    <collision name="hinge_leaf">
+      <origin xyz="0.008 -0.007 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.014 0.52" />
+        </geometry>
+      </collision>
+    <collision name="finger_latch">
+      <origin xyz="0.205 -0.019 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.009 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="filter_cartridge">
+    <visual name="filter_media">
+      <origin xyz="0 0.0925 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.166 0.185 0.402" />
+        </geometry>
+      <material name="pleated_filter_media">
+        <color rgba="0.82 0.78 0.65 1" />
+        </material>
+      </visual>
+    <visual name="top_filter_rail">
+      <origin xyz="0 0.098 0.216" rpy="0 0 0" />
+      <geometry>
+        <box size="0.188 0.196 0.03" />
+        </geometry>
+      <material name="blue_filter_frame">
+        <color rgba="0.2 0.42 0.58 1" />
+        </material>
+      </visual>
+    <visual name="bottom_filter_rail">
+      <origin xyz="0 0.098 -0.216" rpy="0 0 0" />
+      <geometry>
+        <box size="0.188 0.196 0.03" />
+        </geometry>
+      <material name="blue_filter_frame">
+        <color rgba="0.2 0.42 0.58 1" />
+        </material>
+      </visual>
+    <visual name="side_filter_rail_0">
+      <origin xyz="-0.096 0.098 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.196 0.432" />
+        </geometry>
+      <material name="blue_filter_frame">
+        <color rgba="0.2 0.42 0.58 1" />
+        </material>
+      </visual>
+    <visual name="side_filter_rail_1">
+      <origin xyz="0.096 0.098 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.196 0.432" />
+        </geometry>
+      <material name="blue_filter_frame">
+        <color rgba="0.2 0.42 0.58 1" />
+        </material>
+      </visual>
+    <visual name="pleat_0">
+      <origin xyz="-0.06 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      <material name="pleat_shadow">
+        <color rgba="0.62 0.58 0.48 1" />
+        </material>
+      </visual>
+    <visual name="pleat_1">
+      <origin xyz="-0.04 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      <material name="pleat_shadow">
+        <color rgba="0.62 0.58 0.48 1" />
+        </material>
+      </visual>
+    <visual name="pleat_2">
+      <origin xyz="-0.02 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      <material name="pleat_shadow">
+        <color rgba="0.62 0.58 0.48 1" />
+        </material>
+      </visual>
+    <visual name="pleat_3">
+      <origin xyz="0 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      <material name="pleat_shadow">
+        <color rgba="0.62 0.58 0.48 1" />
+        </material>
+      </visual>
+    <visual name="pleat_4">
+      <origin xyz="0.02 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      <material name="pleat_shadow">
+        <color rgba="0.62 0.58 0.48 1" />
+        </material>
+      </visual>
+    <visual name="pleat_5">
+      <origin xyz="0.04 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      <material name="pleat_shadow">
+        <color rgba="0.62 0.58 0.48 1" />
+        </material>
+      </visual>
+    <visual name="pleat_6">
+      <origin xyz="0.06 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      <material name="pleat_shadow">
+        <color rgba="0.62 0.58 0.48 1" />
+        </material>
+      </visual>
+    <visual name="pull_tab">
+      <origin xyz="0 -0.009 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.062 0.018 0.072" />
+        </geometry>
+      <material name="blue_filter_frame">
+        <color rgba="0.2 0.42 0.58 1" />
+        </material>
+      </visual>
+    <visual name="tab_grip_recess">
+      <origin xyz="0 -0.012 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.006 0.014" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.035 0.038 0.04 1" />
+        </material>
+      </visual>
+    <collision name="filter_media">
+      <origin xyz="0 0.0925 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.166 0.185 0.402" />
+        </geometry>
+      </collision>
+    <collision name="top_filter_rail">
+      <origin xyz="0 0.098 0.216" rpy="0 0 0" />
+      <geometry>
+        <box size="0.188 0.196 0.03" />
+        </geometry>
+      </collision>
+    <collision name="bottom_filter_rail">
+      <origin xyz="0 0.098 -0.216" rpy="0 0 0" />
+      <geometry>
+        <box size="0.188 0.196 0.03" />
+        </geometry>
+      </collision>
+    <collision name="side_filter_rail_0">
+      <origin xyz="-0.096 0.098 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.196 0.432" />
+        </geometry>
+      </collision>
+    <collision name="side_filter_rail_1">
+      <origin xyz="0.096 0.098 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.196 0.432" />
+        </geometry>
+      </collision>
+    <collision name="pleat_0">
+      <origin xyz="-0.06 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      </collision>
+    <collision name="pleat_1">
+      <origin xyz="-0.04 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      </collision>
+    <collision name="pleat_2">
+      <origin xyz="-0.02 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      </collision>
+    <collision name="pleat_3">
+      <origin xyz="0 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      </collision>
+    <collision name="pleat_4">
+      <origin xyz="0.02 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      </collision>
+    <collision name="pleat_5">
+      <origin xyz="0.04 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      </collision>
+    <collision name="pleat_6">
+      <origin xyz="0.06 0.094 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.188 0.398" />
+        </geometry>
+      </collision>
+    <collision name="pull_tab">
+      <origin xyz="0 -0.009 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.062 0.018 0.072" />
+        </geometry>
+      </collision>
+    <collision name="tab_grip_recess">
+      <origin xyz="0 -0.012 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.006 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="power_button">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      <material name="power_button_cap">
+        <color rgba="0.18 0.7 0.55 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00812" length="0.002" />
+        </geometry>
+      <material name="soft_gray_button">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00812" length="0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="fan_button">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.01" />
+        </geometry>
+      <material name="fan_button_cap">
+        <color rgba="0.62 0.65 0.64 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00696" length="0.002" />
+        </geometry>
+      <material name="soft_gray_button">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00696" length="0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="mode_button">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.01" />
+        </geometry>
+      <material name="mode_button_cap">
+        <color rgba="0.62 0.65 0.64 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00696" length="0.002" />
+        </geometry>
+      <material name="soft_gray_button">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00696" length="0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="timer_button">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.01" />
+        </geometry>
+      <material name="timer_button_cap">
+        <color rgba="0.62 0.65 0.64 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00696" length="0.002" />
+        </geometry>
+      <material name="soft_gray_button">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00696" length="0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_access_door" type="revolute">
+    <origin xyz="-0.126 -0.1345 0.49" rpy="0 0 0" />
+    <parent link="purifier_body" />
+    <child link="access_door" />
+    <axis xyz="0 0 -1" />
+    <limit effort="4" velocity="1.8" lower="0" upper="1.75" />
+    </joint>
+  <joint name="body_to_filter_cartridge" type="prismatic">
+    <origin xyz="0 -0.1185 0.49" rpy="0 0 0" />
+    <parent link="purifier_body" />
+    <child link="filter_cartridge" />
+    <axis xyz="0 -1 0" />
+    <limit effort="35" velocity="0.22" lower="0" upper="0.13" />
+    </joint>
+  <joint name="body_to_power_button" type="prismatic">
+    <origin xyz="-0.07 0.032 0.9385" rpy="0 0 0" />
+    <parent link="purifier_body" />
+    <child link="power_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.05" lower="0" upper="0.006" />
+    </joint>
+  <joint name="body_to_fan_button" type="prismatic">
+    <origin xyz="-0.025 0.032 0.9385" rpy="0 0 0" />
+    <parent link="purifier_body" />
+    <child link="fan_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.05" lower="0" upper="0.006" />
+    </joint>
+  <joint name="body_to_mode_button" type="prismatic">
+    <origin xyz="0.02 0.032 0.9385" rpy="0 0 0" />
+    <parent link="purifier_body" />
+    <child link="mode_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.05" lower="0" upper="0.006" />
+    </joint>
+  <joint name="body_to_timer_button" type="prismatic">
+    <origin xyz="0.065 0.032 0.9385" rpy="0 0 0" />
+    <parent link="purifier_body" />
+    <child link="timer_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.05" lower="0" upper="0.006" />
+    </joint>
+  </robot>

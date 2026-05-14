@@ -1,0 +1,773 @@
+<robot name="brushed_zippo_lighter">
+  <material name="brushed_stainless">
+    <color rgba="0.7 0.71 0.68 1" />
+    </material>
+  <material name="dark_brush_grain">
+    <color rgba="0.46 0.47 0.45 1" />
+    </material>
+  <material name="insert_satin_steel">
+    <color rgba="0.78 0.78 0.73 1" />
+    </material>
+  <material name="blackened_holes">
+    <color rgba="0.015 0.014 0.012 1" />
+    </material>
+  <material name="knurled_spark_steel">
+    <color rgba="0.3 0.31 0.3 1" />
+    </material>
+  <material name="charred_cotton_wick">
+    <color rgba="0.1 0.08 0.055 1" />
+    </material>
+  <link name="lower_shell">
+    <visual name="front_wall">
+      <origin xyz="0 -0.0058 0.01895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.0014 0.034" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="back_wall">
+      <origin xyz="0 0.0058 0.01895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.0014 0.034" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="free_side_wall">
+      <origin xyz="-0.0183 0 0.01895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0014 0.013 0.034" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="hinge_side_wall">
+      <origin xyz="0.0183 0 0.01895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0014 0.013 0.034" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="floor_plate">
+      <geometry>
+        <mesh filename="assets/meshes/floor_plate.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="lower_hinge_barrel">
+      <origin xyz="0.0212 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.031" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="lower_hinge_leaf">
+      <origin xyz="0.01955 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0042 0.013 0.03" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="front_brush_sheen">
+      <origin xyz="0 -0.00653 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.00018 0.028" />
+        </geometry>
+      <material name="dark_brush_grain">
+        <color rgba="0.46 0.47 0.45 1" />
+        </material>
+      </visual>
+    <collision name="front_wall">
+      <origin xyz="0 -0.0058 0.01895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.0014 0.034" />
+        </geometry>
+      </collision>
+    <collision name="back_wall">
+      <origin xyz="0 0.0058 0.01895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.0014 0.034" />
+        </geometry>
+      </collision>
+    <collision name="free_side_wall">
+      <origin xyz="-0.0183 0 0.01895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0014 0.013 0.034" />
+        </geometry>
+      </collision>
+    <collision name="hinge_side_wall">
+      <origin xyz="0.0183 0 0.01895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0014 0.013 0.034" />
+        </geometry>
+      </collision>
+    <collision name="floor_plate">
+      <geometry>
+        <mesh filename="assets/meshes/floor_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_hinge_barrel">
+      <origin xyz="0.0212 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.031" />
+        </geometry>
+      </collision>
+    <collision name="lower_hinge_leaf">
+      <origin xyz="0.01955 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0042 0.013 0.03" />
+        </geometry>
+      </collision>
+    <collision name="front_brush_sheen">
+      <origin xyz="0 -0.00653 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.00018 0.028" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="insert">
+    <visual name="insert_body">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.0086 0.035" />
+        </geometry>
+      <material name="insert_satin_steel">
+        <color rgba="0.78 0.78 0.73 1" />
+        </material>
+      </visual>
+    <visual name="front_lip">
+      <origin xyz="-0.0015 -0.0047 0.0356" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.0008 0.0022" />
+        </geometry>
+      <material name="insert_satin_steel">
+        <color rgba="0.78 0.78 0.73 1" />
+        </material>
+      </visual>
+    <visual name="back_lip">
+      <origin xyz="-0.0015 0.0047 0.0356" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.0008 0.0022" />
+        </geometry>
+      <material name="insert_satin_steel">
+        <color rgba="0.78 0.78 0.73 1" />
+        </material>
+      </visual>
+    <visual name="chimney_front">
+      <origin xyz="-0.003 -0.0047 0.0425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.021 0.00085 0.021" />
+        </geometry>
+      <material name="insert_satin_steel">
+        <color rgba="0.78 0.78 0.73 1" />
+        </material>
+      </visual>
+    <visual name="chimney_back">
+      <origin xyz="-0.003 0.0047 0.0425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.021 0.00085 0.021" />
+        </geometry>
+      <material name="insert_satin_steel">
+        <color rgba="0.78 0.78 0.73 1" />
+        </material>
+      </visual>
+    <visual name="chimney_side">
+      <origin xyz="-0.014 0 0.0405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0009 0.0094 0.017" />
+        </geometry>
+      <material name="insert_satin_steel">
+        <color rgba="0.78 0.78 0.73 1" />
+        </material>
+      </visual>
+    <visual name="wick">
+      <origin xyz="-0.0045 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0012" length="0.01" />
+        </geometry>
+      <material name="charred_cotton_wick">
+        <color rgba="0.1 0.08 0.055 1" />
+        </material>
+      </visual>
+    <visual name="front_chimney_hole_0">
+      <origin xyz="-0.009 -0.00516 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="back_chimney_hole_0">
+      <origin xyz="-0.009 0.00516 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_chimney_hole_1">
+      <origin xyz="-0.004 -0.00516 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="back_chimney_hole_1">
+      <origin xyz="-0.004 0.00516 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_chimney_hole_2">
+      <origin xyz="0.0015 -0.00516 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="back_chimney_hole_2">
+      <origin xyz="0.0015 0.00516 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_chimney_hole_3">
+      <origin xyz="-0.009 -0.00516 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="back_chimney_hole_3">
+      <origin xyz="-0.009 0.00516 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_chimney_hole_4">
+      <origin xyz="-0.004 -0.00516 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="back_chimney_hole_4">
+      <origin xyz="-0.004 0.00516 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_chimney_hole_5">
+      <origin xyz="0.0015 -0.00516 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="back_chimney_hole_5">
+      <origin xyz="0.0015 0.00516 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_chimney_hole_6">
+      <origin xyz="-0.009 -0.00516 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="back_chimney_hole_6">
+      <origin xyz="-0.009 0.00516 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_chimney_hole_7">
+      <origin xyz="-0.004 -0.00516 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="back_chimney_hole_7">
+      <origin xyz="-0.004 0.00516 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_chimney_hole_8">
+      <origin xyz="0.0015 -0.00516 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="back_chimney_hole_8">
+      <origin xyz="0.0015 0.00516 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      <material name="blackened_holes">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="spark_fork_front">
+      <origin xyz="0.0095 -0.0042 0.0415" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.0008 0.013" />
+        </geometry>
+      <material name="insert_satin_steel">
+        <color rgba="0.78 0.78 0.73 1" />
+        </material>
+      </visual>
+    <visual name="spark_fork_back">
+      <origin xyz="0.0095 0.0042 0.0415" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.0008 0.013" />
+        </geometry>
+      <material name="insert_satin_steel">
+        <color rgba="0.78 0.78 0.73 1" />
+        </material>
+      </visual>
+    <visual name="cam_bracket_front">
+      <origin xyz="0.0144 -0.0041 0.0393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0021 0.0008 0.009" />
+        </geometry>
+      <material name="insert_satin_steel">
+        <color rgba="0.78 0.78 0.73 1" />
+        </material>
+      </visual>
+    <visual name="cam_bracket_back">
+      <origin xyz="0.0144 0.0041 0.0393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0021 0.0008 0.009" />
+        </geometry>
+      <material name="insert_satin_steel">
+        <color rgba="0.78 0.78 0.73 1" />
+        </material>
+      </visual>
+    <collision name="insert_body">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.0086 0.035" />
+        </geometry>
+      </collision>
+    <collision name="front_lip">
+      <origin xyz="-0.0015 -0.0047 0.0356" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.0008 0.0022" />
+        </geometry>
+      </collision>
+    <collision name="back_lip">
+      <origin xyz="-0.0015 0.0047 0.0356" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.0008 0.0022" />
+        </geometry>
+      </collision>
+    <collision name="chimney_front">
+      <origin xyz="-0.003 -0.0047 0.0425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.021 0.00085 0.021" />
+        </geometry>
+      </collision>
+    <collision name="chimney_back">
+      <origin xyz="-0.003 0.0047 0.0425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.021 0.00085 0.021" />
+        </geometry>
+      </collision>
+    <collision name="chimney_side">
+      <origin xyz="-0.014 0 0.0405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0009 0.0094 0.017" />
+        </geometry>
+      </collision>
+    <collision name="wick">
+      <origin xyz="-0.0045 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0012" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="front_chimney_hole_0">
+      <origin xyz="-0.009 -0.00516 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="back_chimney_hole_0">
+      <origin xyz="-0.009 0.00516 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="front_chimney_hole_1">
+      <origin xyz="-0.004 -0.00516 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="back_chimney_hole_1">
+      <origin xyz="-0.004 0.00516 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="front_chimney_hole_2">
+      <origin xyz="0.0015 -0.00516 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="back_chimney_hole_2">
+      <origin xyz="0.0015 0.00516 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="front_chimney_hole_3">
+      <origin xyz="-0.009 -0.00516 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="back_chimney_hole_3">
+      <origin xyz="-0.009 0.00516 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="front_chimney_hole_4">
+      <origin xyz="-0.004 -0.00516 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="back_chimney_hole_4">
+      <origin xyz="-0.004 0.00516 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="front_chimney_hole_5">
+      <origin xyz="0.0015 -0.00516 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="back_chimney_hole_5">
+      <origin xyz="0.0015 0.00516 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="front_chimney_hole_6">
+      <origin xyz="-0.009 -0.00516 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="back_chimney_hole_6">
+      <origin xyz="-0.009 0.00516 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="front_chimney_hole_7">
+      <origin xyz="-0.004 -0.00516 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="back_chimney_hole_7">
+      <origin xyz="-0.004 0.00516 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="front_chimney_hole_8">
+      <origin xyz="0.0015 -0.00516 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="back_chimney_hole_8">
+      <origin xyz="0.0015 0.00516 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.00018 0.00145" />
+        </geometry>
+      </collision>
+    <collision name="spark_fork_front">
+      <origin xyz="0.0095 -0.0042 0.0415" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.0008 0.013" />
+        </geometry>
+      </collision>
+    <collision name="spark_fork_back">
+      <origin xyz="0.0095 0.0042 0.0415" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.0008 0.013" />
+        </geometry>
+      </collision>
+    <collision name="cam_bracket_front">
+      <origin xyz="0.0144 -0.0041 0.0393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0021 0.0008 0.009" />
+        </geometry>
+      </collision>
+    <collision name="cam_bracket_back">
+      <origin xyz="0.0144 0.0041 0.0393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0021 0.0008 0.009" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="lid_front_wall">
+      <origin xyz="-0.0212 -0.0058 0.01005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.0014 0.0192" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="lid_back_wall">
+      <origin xyz="-0.0212 0.0058 0.01005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.0014 0.0192" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="lid_free_wall">
+      <origin xyz="-0.0395 0 0.01005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0014 0.013 0.0192" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_wall">
+      <origin xyz="-0.0029 0 0.01005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0014 0.013 0.0192" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="lid_top">
+      <geometry>
+        <mesh filename="assets/meshes/lid_top.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_barrel">
+      <origin xyz="0 0 0.01095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.018" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_leaf">
+      <origin xyz="-0.00055 0 0.01095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0042 0.013 0.016" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.71 0.68 1" />
+        </material>
+      </visual>
+    <visual name="lid_front_sheen">
+      <origin xyz="-0.0212 -0.00653 0.01095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.00018 0.014" />
+        </geometry>
+      <material name="dark_brush_grain">
+        <color rgba="0.46 0.47 0.45 1" />
+        </material>
+      </visual>
+    <collision name="lid_front_wall">
+      <origin xyz="-0.0212 -0.0058 0.01005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.0014 0.0192" />
+        </geometry>
+      </collision>
+    <collision name="lid_back_wall">
+      <origin xyz="-0.0212 0.0058 0.01005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.0014 0.0192" />
+        </geometry>
+      </collision>
+    <collision name="lid_free_wall">
+      <origin xyz="-0.0395 0 0.01005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0014 0.013 0.0192" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_wall">
+      <origin xyz="-0.0029 0 0.01005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0014 0.013 0.0192" />
+        </geometry>
+      </collision>
+    <collision name="lid_top">
+      <geometry>
+        <mesh filename="assets/meshes/lid_top.obj" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_barrel">
+      <origin xyz="0 0 0.01095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_leaf">
+      <origin xyz="-0.00055 0 0.01095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0042 0.013 0.016" />
+        </geometry>
+      </collision>
+    <collision name="lid_front_sheen">
+      <origin xyz="-0.0212 -0.00653 0.01095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.00018 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="spark_wheel">
+    <visual name="knurled_wheel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spark_wheel_knurl.obj" />
+        </geometry>
+      <material name="knurled_spark_steel">
+        <color rgba="0.3 0.31 0.3 1" />
+        </material>
+      </visual>
+    <collision name="knurled_wheel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spark_wheel_knurl.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cam_lever">
+    <visual name="cam_pivot_sleeve">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00125" length="0.0074" />
+        </geometry>
+      <material name="knurled_spark_steel">
+        <color rgba="0.3 0.31 0.3 1" />
+        </material>
+      </visual>
+    <visual name="cam_arm">
+      <origin xyz="-0.0004 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0018 0.001 0.01" />
+        </geometry>
+      <material name="knurled_spark_steel">
+        <color rgba="0.3 0.31 0.3 1" />
+        </material>
+      </visual>
+    <collision name="cam_pivot_sleeve">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00125" length="0.0074" />
+        </geometry>
+      </collision>
+    <collision name="cam_arm">
+      <origin xyz="-0.0004 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0018 0.001 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shell_to_insert" type="fixed">
+    <origin xyz="0 0 0.002" rpy="0 0 0" />
+    <parent link="lower_shell" />
+    <child link="insert" />
+    </joint>
+  <joint name="lid_hinge" type="revolute">
+    <origin xyz="0.0212 0 0.036" rpy="0 0 0" />
+    <parent link="lower_shell" />
+    <child link="lid" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.8" velocity="5" lower="0" upper="1.95" />
+    </joint>
+  <joint name="spark_wheel_axis" type="continuous">
+    <origin xyz="0.0095 0 0.044" rpy="0 0 0" />
+    <parent link="insert" />
+    <child link="spark_wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.05" velocity="40" />
+    </joint>
+  <joint name="cam_pivot" type="revolute">
+    <origin xyz="0.0144 0 0.0395" rpy="0 0 0" />
+    <parent link="insert" />
+    <child link="cam_lever" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.15" velocity="8" lower="0" upper="0.95" />
+    <mimic joint="lid_hinge" multiplier="0.45" />
+    </joint>
+  </robot>

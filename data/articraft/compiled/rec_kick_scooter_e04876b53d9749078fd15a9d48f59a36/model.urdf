@@ -1,0 +1,375 @@
+<robot name="three_wheel_childrens_kick_scooter">
+  <material name="deck_blue">
+    <color rgba="0.04 0.35 0.78 1" />
+    </material>
+  <material name="grip_black">
+    <color rgba="0.02 0.02 0.025 1" />
+    </material>
+  <material name="safety_red">
+    <color rgba="0.86 0.08 0.06 1" />
+    </material>
+  <material name="satin_steel">
+    <color rgba="0.74 0.76 0.78 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.23 0.24 0.25 1" />
+    </material>
+  <material name="soft_black_rubber">
+    <color rgba="0.025 0.025 0.025 1" />
+    </material>
+  <material name="translucent_urethane">
+    <color rgba="0.2 0.72 0.95 0.92" />
+    </material>
+  <material name="white_wheel_core">
+    <color rgba="0.92 0.92 0.88 1" />
+    </material>
+  <link name="deck">
+    <visual name="deck_shell">
+      <origin xyz="-0.01 0 0.1325" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_deck_shell.obj" />
+        </geometry>
+      <material name="deck_blue">
+        <color rgba="0.04 0.35 0.78 1" />
+        </material>
+      </visual>
+    <visual name="grip_pad">
+      <origin xyz="-0.04 0 0.158" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/textured_grip_pad.obj" />
+        </geometry>
+      <material name="grip_black">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <visual name="nose_bearing">
+      <origin xyz="0.355 0 0.1325" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.05" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="nose_cap">
+      <origin xyz="0.318 0 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.16 0.048" />
+        </geometry>
+      <material name="safety_red">
+        <color rgba="0.86 0.08 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rear_fork_0">
+      <origin xyz="-0.39 0.037 0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.012 0.055" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="rear_fork_1">
+      <origin xyz="-0.39 -0.037 0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.012 0.055" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="rear_axle">
+      <origin xyz="-0.43 0 0.075" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.105" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <collision name="deck_shell">
+      <origin xyz="-0.01 0 0.1325" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_deck_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="grip_pad">
+      <origin xyz="-0.04 0 0.158" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/textured_grip_pad.obj" />
+        </geometry>
+      </collision>
+    <collision name="nose_bearing">
+      <origin xyz="0.355 0 0.1325" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="nose_cap">
+      <origin xyz="0.318 0 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.16 0.048" />
+        </geometry>
+      </collision>
+    <collision name="rear_fork_0">
+      <origin xyz="-0.39 0.037 0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.012 0.055" />
+        </geometry>
+      </collision>
+    <collision name="rear_fork_1">
+      <origin xyz="-0.39 -0.037 0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.012 0.055" />
+        </geometry>
+      </collision>
+    <collision name="rear_axle">
+      <origin xyz="-0.43 0 0.075" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.105" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_assembly">
+    <visual name="lean_collar">
+      <origin xyz="0.04 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="front_axle">
+      <origin xyz="0.12 0 -0.0575" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.315" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="center_fork">
+      <geometry>
+        <mesh filename="assets/meshes/front_center_fork.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="steering_stem">
+      <geometry>
+        <mesh filename="assets/meshes/leaning_handlebar_stem.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bar_clamp">
+      <origin xyz="-0.153 0 0.71" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.06 0.044" />
+        </geometry>
+      <material name="safety_red">
+        <color rgba="0.86 0.08 0.06 1" />
+        </material>
+      </visual>
+    <visual name="handlebar_bar">
+      <origin xyz="-0.165 0 0.742" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.46" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="grip_0">
+      <origin xyz="-0.165 0.235 0.742" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.105" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.025 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="grip_1">
+      <origin xyz="-0.165 -0.235 0.742" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.105" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.025 0.025 0.025 1" />
+        </material>
+      </visual>
+    <collision name="lean_collar">
+      <origin xyz="0.04 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="front_axle">
+      <origin xyz="0.12 0 -0.0575" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.315" />
+        </geometry>
+      </collision>
+    <collision name="center_fork">
+      <geometry>
+        <mesh filename="assets/meshes/front_center_fork.obj" />
+        </geometry>
+      </collision>
+    <collision name="steering_stem">
+      <geometry>
+        <mesh filename="assets/meshes/leaning_handlebar_stem.obj" />
+        </geometry>
+      </collision>
+    <collision name="bar_clamp">
+      <origin xyz="-0.153 0 0.71" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.06 0.044" />
+        </geometry>
+      </collision>
+    <collision name="handlebar_bar">
+      <origin xyz="-0.165 0 0.742" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.46" />
+        </geometry>
+      </collision>
+    <collision name="grip_0">
+      <origin xyz="-0.165 0.235 0.742" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.105" />
+        </geometry>
+      </collision>
+    <collision name="grip_1">
+      <origin xyz="-0.165 -0.235 0.742" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.105" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_wheel_0">
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/front_wheel_0_rim.obj" />
+        </geometry>
+      <material name="white_wheel_core">
+        <color rgba="0.92 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/front_wheel_0_tire.obj" />
+        </geometry>
+      <material name="translucent_urethane">
+        <color rgba="0.2 0.72 0.95 0.92" />
+        </material>
+      </visual>
+    <collision name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/front_wheel_0_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/front_wheel_0_tire.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_wheel_1">
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/front_wheel_1_rim.obj" />
+        </geometry>
+      <material name="white_wheel_core">
+        <color rgba="0.92 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/front_wheel_1_tire.obj" />
+        </geometry>
+      <material name="translucent_urethane">
+        <color rgba="0.2 0.72 0.95 0.92" />
+        </material>
+      </visual>
+    <collision name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/front_wheel_1_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/front_wheel_1_tire.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rear_wheel">
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_rim.obj" />
+        </geometry>
+      <material name="white_wheel_core">
+        <color rgba="0.92 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_tire.obj" />
+        </geometry>
+      <material name="translucent_urethane">
+        <color rgba="0.2 0.72 0.95 0.92" />
+        </material>
+      </visual>
+    <collision name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_tire.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="deck_to_front" type="revolute">
+    <origin xyz="0.38 0 0.1325" rpy="0 0 0" />
+    <parent link="deck" />
+    <child link="front_assembly" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="2.5" lower="-0.45" upper="0.45" />
+    </joint>
+  <joint name="front_wheel_0_spin" type="continuous">
+    <origin xyz="0.12 0.11 -0.0575" rpy="0 0 0" />
+    <parent link="front_assembly" />
+    <child link="front_wheel_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="3" velocity="24" />
+    </joint>
+  <joint name="front_wheel_1_spin" type="continuous">
+    <origin xyz="0.12 -0.11 -0.0575" rpy="0 0 0" />
+    <parent link="front_assembly" />
+    <child link="front_wheel_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="3" velocity="24" />
+    </joint>
+  <joint name="rear_wheel_spin" type="continuous">
+    <origin xyz="-0.43 0 0.075" rpy="0 0 0" />
+    <parent link="deck" />
+    <child link="rear_wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="3" velocity="24" />
+    </joint>
+  </robot>

@@ -1,0 +1,332 @@
+<robot name="motorized_sensor_roll_stage">
+  <material name="dark_anodized_aluminum">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.62 0.64 0.62 1" />
+    </material>
+  <material name="bearing_steel">
+    <color rgba="0.78 0.78 0.74 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="blue_anodized_tube">
+    <color rgba="0.06 0.16 0.34 1" />
+    </material>
+  <material name="smoked_glass">
+    <color rgba="0.02 0.04 0.06 0.72" />
+    </material>
+  <material name="white_index_mark">
+    <color rgba="0.92 0.9 0.82 1" />
+    </material>
+  <link name="stage">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.32 0.025" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_pedestal">
+      <origin xyz="0.32 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.12 0.11" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_ring">
+      <origin xyz="0.32 0 0.2" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bearing_ring_mesh.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="front_bolt_inner">
+      <origin xyz="0.32 -0.044 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="front_bolt_outer">
+      <origin xyz="0.32 0.044 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="rear_pedestal">
+      <origin xyz="-0.32 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.12 0.11" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="rear_bearing_ring">
+      <origin xyz="-0.32 0 0.2" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_bearing_ring_mesh.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="rear_bolt_inner">
+      <origin xyz="-0.32 -0.044 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="rear_bolt_outer">
+      <origin xyz="-0.32 0.044 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="motor_bracket">
+      <origin xyz="0.16 -0.157 0.0975" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.036 0.145" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="motor_body">
+      <origin xyz="0.16 -0.115 0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.085 0.09" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="motor_face">
+      <origin xyz="0.102 -0.115 0.2" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.012" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="motor_pulley">
+      <origin xyz="0.085 -0.096 0.2" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_pulley_mesh.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.32 0.025" />
+        </geometry>
+      </collision>
+    <collision name="front_pedestal">
+      <origin xyz="0.32 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.12 0.11" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_ring">
+      <origin xyz="0.32 0 0.2" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bearing_ring_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_bolt_inner">
+      <origin xyz="0.32 -0.044 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="front_bolt_outer">
+      <origin xyz="0.32 0.044 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="rear_pedestal">
+      <origin xyz="-0.32 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.12 0.11" />
+        </geometry>
+      </collision>
+    <collision name="rear_bearing_ring">
+      <origin xyz="-0.32 0 0.2" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_bearing_ring_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_bolt_inner">
+      <origin xyz="-0.32 -0.044 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="rear_bolt_outer">
+      <origin xyz="-0.32 0.044 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="motor_bracket">
+      <origin xyz="0.16 -0.157 0.0975" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.036 0.145" />
+        </geometry>
+      </collision>
+    <collision name="motor_body">
+      <origin xyz="0.16 -0.115 0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.085 0.09" />
+        </geometry>
+      </collision>
+    <collision name="motor_face">
+      <origin xyz="0.102 -0.115 0.2" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="motor_pulley">
+      <origin xyz="0.085 -0.096 0.2" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_pulley_mesh.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="sensor_tube">
+    <visual name="tube_shell">
+      <geometry>
+        <mesh filename="assets/meshes/sensor_tube_shell_mesh.obj" />
+        </geometry>
+      <material name="blue_anodized_tube">
+        <color rgba="0.06 0.16 0.34 1" />
+        </material>
+      </visual>
+    <visual name="drive_ring">
+      <origin xyz="0.085 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/drive_ring_mesh.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="front_journal">
+      <origin xyz="0.32 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_journal_mesh.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="rear_journal">
+      <origin xyz="-0.32 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_journal_mesh.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0.352 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.008" />
+        </geometry>
+      <material name="smoked_glass">
+        <color rgba="0.02 0.04 0.06 0.72" />
+        </material>
+      </visual>
+    <visual name="rear_cap">
+      <origin xyz="-0.356 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.014" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="index_stripe">
+      <origin xyz="0 0 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.01 0.004" />
+        </geometry>
+      <material name="white_index_mark">
+        <color rgba="0.92 0.9 0.82 1" />
+        </material>
+      </visual>
+    <collision name="tube_shell">
+      <geometry>
+        <mesh filename="assets/meshes/sensor_tube_shell_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="drive_ring">
+      <origin xyz="0.085 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/drive_ring_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_journal">
+      <origin xyz="0.32 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_journal_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_journal">
+      <origin xyz="-0.32 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_journal_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_lens">
+      <origin xyz="0.352 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="rear_cap">
+      <origin xyz="-0.356 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="index_stripe">
+      <origin xyz="0 0 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.01 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="stage_to_tube" type="continuous">
+    <origin xyz="0 0 0.2" rpy="0 0 0" />
+    <parent link="stage" />
+    <child link="sensor_tube" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="2" />
+    </joint>
+  </robot>

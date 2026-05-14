@@ -1,0 +1,454 @@
+<robot name="three_joint_transfer_chain">
+  <material name="brushed_steel">
+    <color rgba="0.62 0.64 0.64 1" />
+    </material>
+  <material name="dark_burnished_steel">
+    <color rgba="0.11 0.12 0.13 1" />
+    </material>
+  <material name="blue_carriage_paint">
+    <color rgba="0.05 0.18 0.42 1" />
+    </material>
+  <material name="orange_arm_paint">
+    <color rgba="0.95 0.36 0.08 1" />
+    </material>
+  <material name="polished_slide">
+    <color rgba="0.82 0.84 0.82 1" />
+    </material>
+  <material name="black_end_stop">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <link name="base_guide">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.24 0.045" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="rod_pedestal_0">
+      <origin xyz="0 0.065 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="1.12 0.03 0.052" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="rod_pedestal_1">
+      <origin xyz="0 -0.065 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="1.12 0.03 0.052" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="guide_rod_0">
+      <origin xyz="0 0.065 0.095" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="1.12" />
+        </geometry>
+      <material name="polished_slide">
+        <color rgba="0.82 0.84 0.82 1" />
+        </material>
+      </visual>
+    <visual name="guide_rod_1">
+      <origin xyz="0 -0.065 0.095" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="1.12" />
+        </geometry>
+      <material name="polished_slide">
+        <color rgba="0.82 0.84 0.82 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_0">
+      <origin xyz="-0.585 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.24 0.075" />
+        </geometry>
+      <material name="black_end_stop">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_1">
+      <origin xyz="0.585 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.24 0.075" />
+        </geometry>
+      <material name="black_end_stop">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.24 0.045" />
+        </geometry>
+      </collision>
+    <collision name="rod_pedestal_0">
+      <origin xyz="0 0.065 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="1.12 0.03 0.052" />
+        </geometry>
+      </collision>
+    <collision name="rod_pedestal_1">
+      <origin xyz="0 -0.065 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="1.12 0.03 0.052" />
+        </geometry>
+      </collision>
+    <collision name="guide_rod_0">
+      <origin xyz="0 0.065 0.095" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="1.12" />
+        </geometry>
+      </collision>
+    <collision name="guide_rod_1">
+      <origin xyz="0 -0.065 0.095" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="1.12" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_0">
+      <origin xyz="-0.585 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.24 0.075" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_1">
+      <origin xyz="0.585 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.24 0.075" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carriage">
+    <visual name="saddle_plate">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.2 0.028" />
+        </geometry>
+      <material name="blue_carriage_paint">
+        <color rgba="0.05 0.18 0.42 1" />
+        </material>
+      </visual>
+    <visual name="guide_skirt_0">
+      <origin xyz="0 0.112 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.03 0.075" />
+        </geometry>
+      <material name="blue_carriage_paint">
+        <color rgba="0.05 0.18 0.42 1" />
+        </material>
+      </visual>
+    <visual name="guide_skirt_1">
+      <origin xyz="0 -0.112 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.03 0.075" />
+        </geometry>
+      <material name="blue_carriage_paint">
+        <color rgba="0.05 0.18 0.42 1" />
+        </material>
+      </visual>
+    <visual name="yoke_foot">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.145 0.024" />
+        </geometry>
+      <material name="blue_carriage_paint">
+        <color rgba="0.05 0.18 0.42 1" />
+        </material>
+      </visual>
+    <visual name="pin_cheek_0">
+      <origin xyz="0 0.058 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.026 0.115" />
+        </geometry>
+      <material name="blue_carriage_paint">
+        <color rgba="0.05 0.18 0.42 1" />
+        </material>
+      </visual>
+    <visual name="pin_cheek_1">
+      <origin xyz="0 -0.058 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.026 0.115" />
+        </geometry>
+      <material name="blue_carriage_paint">
+        <color rgba="0.05 0.18 0.42 1" />
+        </material>
+      </visual>
+    <visual name="pin_cap_0">
+      <origin xyz="0 0.077 0.105" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="pin_cap_1">
+      <origin xyz="0 -0.077 0.105" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <collision name="saddle_plate">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.2 0.028" />
+        </geometry>
+      </collision>
+    <collision name="guide_skirt_0">
+      <origin xyz="0 0.112 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.03 0.075" />
+        </geometry>
+      </collision>
+    <collision name="guide_skirt_1">
+      <origin xyz="0 -0.112 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.03 0.075" />
+        </geometry>
+      </collision>
+    <collision name="yoke_foot">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.145 0.024" />
+        </geometry>
+      </collision>
+    <collision name="pin_cheek_0">
+      <origin xyz="0 0.058 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.026 0.115" />
+        </geometry>
+      </collision>
+    <collision name="pin_cheek_1">
+      <origin xyz="0 -0.058 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.026 0.115" />
+        </geometry>
+      </collision>
+    <collision name="pin_cap_0">
+      <origin xyz="0 0.077 0.105" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="pin_cap_1">
+      <origin xyz="0 -0.077 0.105" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="middle_arm">
+    <visual name="hinge_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.09" />
+        </geometry>
+      <material name="orange_arm_paint">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="hinge_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.082" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="arm_beam">
+      <origin xyz="0.185 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.045 0.05" />
+        </geometry>
+      <material name="orange_arm_paint">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_collar">
+      <origin xyz="0.32 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.078 0.078" />
+        </geometry>
+      <material name="orange_arm_paint">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="slide_sleeve_top">
+      <origin xyz="0.4475 0 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.078 0.012" />
+        </geometry>
+      <material name="orange_arm_paint">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="slide_sleeve_bottom">
+      <origin xyz="0.4475 0 -0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.078 0.012" />
+        </geometry>
+      <material name="orange_arm_paint">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="slide_sleeve_side_0">
+      <origin xyz="0.4475 0.033 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.012 0.078" />
+        </geometry>
+      <material name="orange_arm_paint">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="slide_sleeve_side_1">
+      <origin xyz="0.4475 -0.033 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.012 0.078" />
+        </geometry>
+      <material name="orange_arm_paint">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="bearing_pad_top">
+      <origin xyz="0.455 0 0.02225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.03 0.0095" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="bearing_pad_bottom">
+      <origin xyz="0.455 0 -0.02225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.03 0.0095" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <collision name="hinge_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.082" />
+        </geometry>
+      </collision>
+    <collision name="arm_beam">
+      <origin xyz="0.185 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.045 0.05" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_collar">
+      <origin xyz="0.32 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.078 0.078" />
+        </geometry>
+      </collision>
+    <collision name="slide_sleeve_top">
+      <origin xyz="0.4475 0 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.078 0.012" />
+        </geometry>
+      </collision>
+    <collision name="slide_sleeve_bottom">
+      <origin xyz="0.4475 0 -0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.078 0.012" />
+        </geometry>
+      </collision>
+    <collision name="slide_sleeve_side_0">
+      <origin xyz="0.4475 0.033 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.012 0.078" />
+        </geometry>
+      </collision>
+    <collision name="slide_sleeve_side_1">
+      <origin xyz="0.4475 -0.033 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.012 0.078" />
+        </geometry>
+      </collision>
+    <collision name="bearing_pad_top">
+      <origin xyz="0.455 0 0.02225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.03 0.0095" />
+        </geometry>
+      </collision>
+    <collision name="bearing_pad_bottom">
+      <origin xyz="0.455 0 -0.02225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.03 0.0095" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="end_slide">
+    <visual name="inner_member">
+      <origin xyz="-0.02 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.035 0.035" />
+        </geometry>
+      <material name="polished_slide">
+        <color rgba="0.82 0.84 0.82 1" />
+        </material>
+      </visual>
+    <visual name="nose_block">
+      <origin xyz="0.2065 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.06 0.06" />
+        </geometry>
+      <material name="black_end_stop">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="inner_member">
+      <origin xyz="-0.02 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.035 0.035" />
+        </geometry>
+      </collision>
+    <collision name="nose_block">
+      <origin xyz="0.2065 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.06 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="guide_slide" type="prismatic">
+    <origin xyz="-0.35 0 0.113" rpy="0 0 0" />
+    <parent link="base_guide" />
+    <child link="carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="90" velocity="0.3" lower="0" upper="0.7" />
+    </joint>
+  <joint name="arm_hinge" type="revolute">
+    <origin xyz="0 0 0.105" rpy="0 0 0" />
+    <parent link="carriage" />
+    <child link="middle_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="35" velocity="1.2" lower="-0.35" upper="1.2" />
+    </joint>
+  <joint name="end_slide_joint" type="prismatic">
+    <origin xyz="0.565 0 0" rpy="0 0 0" />
+    <parent link="middle_arm" />
+    <child link="end_slide" />
+    <axis xyz="1 0 0" />
+    <limit effort="45" velocity="0.25" lower="0" upper="0.16" />
+    </joint>
+  </robot>

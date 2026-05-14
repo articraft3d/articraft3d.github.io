@@ -1,0 +1,665 @@
+<robot name="precision_calibration_syringe">
+  <material name="clear_polycarbonate">
+    <color rgba="0.62 0.88 1 0.34" />
+    </material>
+  <material name="frosted_polymer">
+    <color rgba="0.86 0.91 0.96 0.58" />
+    </material>
+  <material name="black_graduation_ink">
+    <color rgba="0.02 0.025 0.03 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.7 0.72 0.74 1" />
+    </material>
+  <material name="dark_anodized">
+    <color rgba="0.15 0.16 0.18 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.015 0.014 0.013 1" />
+    </material>
+  <material name="datum_blue">
+    <color rgba="0.08 0.22 0.7 1" />
+    </material>
+  <material name="adjustment_amber">
+    <color rgba="0.95 0.56 0.12 1" />
+    </material>
+  <link name="barrel">
+    <visual name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.62 0.88 1 0.34" />
+        </material>
+      </visual>
+    <visual name="nozzle_tip">
+      <geometry>
+        <mesh filename="assets/meshes/nozzle_tip.obj" />
+        </geometry>
+      <material name="frosted_polymer">
+        <color rgba="0.86 0.91 0.96 0.58" />
+        </material>
+      </visual>
+    <visual name="front_socket">
+      <geometry>
+        <mesh filename="assets/meshes/front_socket.obj" />
+        </geometry>
+      <material name="frosted_polymer">
+        <color rgba="0.86 0.91 0.96 0.58" />
+        </material>
+      </visual>
+    <visual name="rear_guide">
+      <geometry>
+        <mesh filename="assets/meshes/rear_guide.obj" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="side_datum_flat_0">
+      <origin xyz="0.055 0.0143 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.004 0.004" />
+        </geometry>
+      <material name="datum_blue">
+        <color rgba="0.08 0.22 0.7 1" />
+        </material>
+      </visual>
+    <visual name="side_datum_flat_1">
+      <origin xyz="0.055 -0.0143 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.004 0.004" />
+        </geometry>
+      <material name="datum_blue">
+        <color rgba="0.08 0.22 0.7 1" />
+        </material>
+      </visual>
+    <visual name="finger_flange_0">
+      <origin xyz="-0.008 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.02 0.027" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="stop_rail_0">
+      <origin xyz="-0.074 -0.0205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.004 0.008" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="finger_flange_1">
+      <origin xyz="-0.008 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.02 0.027" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="stop_rail_1">
+      <origin xyz="-0.074 0.0205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.004 0.008" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rear_stop_plate">
+      <origin xyz="-0.139 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.052 0.019" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="zero_index">
+      <origin xyz="-0.0125 0 0.0178" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.018 0.003" />
+        </geometry>
+      <material name="datum_blue">
+        <color rgba="0.08 0.22 0.7 1" />
+        </material>
+      </visual>
+    <visual name="graduation_0">
+      <origin xyz="0.01 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.014 0.00055" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="index_dot_0">
+      <origin xyz="0.0122 0.0095 0.00895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.0006" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="graduation_1">
+      <origin xyz="0.018 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.008 0.00055" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="graduation_2">
+      <origin xyz="0.026 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.014 0.00055" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="index_dot_2">
+      <origin xyz="0.0282 0.0095 0.00895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.0006" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="graduation_3">
+      <origin xyz="0.034 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.008 0.00055" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="graduation_4">
+      <origin xyz="0.042 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.014 0.00055" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="index_dot_4">
+      <origin xyz="0.0442 0.0095 0.00895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.0006" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="graduation_5">
+      <origin xyz="0.05 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.008 0.00055" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="graduation_6">
+      <origin xyz="0.058 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.014 0.00055" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="index_dot_6">
+      <origin xyz="0.0602 0.0095 0.00895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.0006" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="graduation_7">
+      <origin xyz="0.066 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.008 0.00055" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="graduation_8">
+      <origin xyz="0.074 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.014 0.00055" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="index_dot_8">
+      <origin xyz="0.0762 0.0095 0.00895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.0006" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="graduation_9">
+      <origin xyz="0.082 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.008 0.00055" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="graduation_10">
+      <origin xyz="0.09 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.014 0.00055" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="index_dot_10">
+      <origin xyz="0.0922 0.0095 0.00895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.0006" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="graduation_11">
+      <origin xyz="0.098 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.008 0.00055" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <collision name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_tip">
+      <geometry>
+        <mesh filename="assets/meshes/nozzle_tip.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_socket">
+      <geometry>
+        <mesh filename="assets/meshes/front_socket.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_guide">
+      <geometry>
+        <mesh filename="assets/meshes/rear_guide.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_datum_flat_0">
+      <origin xyz="0.055 0.0143 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.004 0.004" />
+        </geometry>
+      </collision>
+    <collision name="side_datum_flat_1">
+      <origin xyz="0.055 -0.0143 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.004 0.004" />
+        </geometry>
+      </collision>
+    <collision name="finger_flange_0">
+      <origin xyz="-0.008 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.02 0.027" />
+        </geometry>
+      </collision>
+    <collision name="stop_rail_0">
+      <origin xyz="-0.074 -0.0205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.004 0.008" />
+        </geometry>
+      </collision>
+    <collision name="finger_flange_1">
+      <origin xyz="-0.008 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.02 0.027" />
+        </geometry>
+      </collision>
+    <collision name="stop_rail_1">
+      <origin xyz="-0.074 0.0205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.004 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rear_stop_plate">
+      <origin xyz="-0.139 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.052 0.019" />
+        </geometry>
+      </collision>
+    <collision name="zero_index">
+      <origin xyz="-0.0125 0 0.0178" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.018 0.003" />
+        </geometry>
+      </collision>
+    <collision name="graduation_0">
+      <origin xyz="0.01 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.014 0.00055" />
+        </geometry>
+      </collision>
+    <collision name="index_dot_0">
+      <origin xyz="0.0122 0.0095 0.00895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.0006" />
+        </geometry>
+      </collision>
+    <collision name="graduation_1">
+      <origin xyz="0.018 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.008 0.00055" />
+        </geometry>
+      </collision>
+    <collision name="graduation_2">
+      <origin xyz="0.026 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.014 0.00055" />
+        </geometry>
+      </collision>
+    <collision name="index_dot_2">
+      <origin xyz="0.0282 0.0095 0.00895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.0006" />
+        </geometry>
+      </collision>
+    <collision name="graduation_3">
+      <origin xyz="0.034 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.008 0.00055" />
+        </geometry>
+      </collision>
+    <collision name="graduation_4">
+      <origin xyz="0.042 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.014 0.00055" />
+        </geometry>
+      </collision>
+    <collision name="index_dot_4">
+      <origin xyz="0.0442 0.0095 0.00895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.0006" />
+        </geometry>
+      </collision>
+    <collision name="graduation_5">
+      <origin xyz="0.05 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.008 0.00055" />
+        </geometry>
+      </collision>
+    <collision name="graduation_6">
+      <origin xyz="0.058 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.014 0.00055" />
+        </geometry>
+      </collision>
+    <collision name="index_dot_6">
+      <origin xyz="0.0602 0.0095 0.00895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.0006" />
+        </geometry>
+      </collision>
+    <collision name="graduation_7">
+      <origin xyz="0.066 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.008 0.00055" />
+        </geometry>
+      </collision>
+    <collision name="graduation_8">
+      <origin xyz="0.074 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.014 0.00055" />
+        </geometry>
+      </collision>
+    <collision name="index_dot_8">
+      <origin xyz="0.0762 0.0095 0.00895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.0006" />
+        </geometry>
+      </collision>
+    <collision name="graduation_9">
+      <origin xyz="0.082 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.008 0.00055" />
+        </geometry>
+      </collision>
+    <collision name="graduation_10">
+      <origin xyz="0.09 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.014 0.00055" />
+        </geometry>
+      </collision>
+    <collision name="index_dot_10">
+      <origin xyz="0.0922 0.0095 0.00895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.001 0.0006" />
+        </geometry>
+      </collision>
+    <collision name="graduation_11">
+      <origin xyz="0.098 0 0.01305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00075 0.008 0.00055" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="plunger">
+    <visual name="piston_seal">
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.00945" length="0.008" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="plunger_rod">
+      <origin xyz="-0.001 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.164" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="forward_stop_collar">
+      <origin xyz="-0.014 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.004" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="thumb_pad">
+      <origin xyz="-0.078 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="datum_blue">
+        <color rgba="0.08 0.22 0.7 1" />
+        </material>
+      </visual>
+    <visual name="thumb_flat">
+      <origin xyz="-0.078 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.029 0.004" />
+        </geometry>
+      <material name="datum_blue">
+        <color rgba="0.08 0.22 0.7 1" />
+        </material>
+      </visual>
+    <visual name="moving_index">
+      <origin xyz="-0.028 0 0.00305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.006 0.0005" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <collision name="piston_seal">
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.00945" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="plunger_rod">
+      <origin xyz="-0.001 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.164" />
+        </geometry>
+      </collision>
+    <collision name="forward_stop_collar">
+      <origin xyz="-0.014 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="thumb_pad">
+      <origin xyz="-0.078 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="thumb_flat">
+      <origin xyz="-0.078 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.029 0.004" />
+        </geometry>
+      </collision>
+    <collision name="moving_index">
+      <origin xyz="-0.028 0 0.00305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.006 0.0005" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="fine_adjuster">
+    <visual name="adjuster_ring">
+      <geometry>
+        <mesh filename="assets/meshes/fine_adjuster_ring.obj" />
+        </geometry>
+      <material name="adjustment_amber">
+        <color rgba="0.95 0.56 0.12 1" />
+        </material>
+      </visual>
+    <visual name="knurl_pad_0">
+      <origin xyz="0 0.0077 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0014 0.0026" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="knurl_pad_1">
+      <origin xyz="0 4.71489e-19 0.0077" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0026 0.0014" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="knurl_pad_2">
+      <origin xyz="0 -0.0077 9.42978e-19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0014 0.0026" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="knurl_pad_3">
+      <origin xyz="0 -1.41447e-18 -0.0077" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0026 0.0014" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="adjuster_index">
+      <origin xyz="0 0 0.0085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.0014 0.003" />
+        </geometry>
+      <material name="black_graduation_ink">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <collision name="adjuster_ring">
+      <geometry>
+        <mesh filename="assets/meshes/fine_adjuster_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="knurl_pad_0">
+      <origin xyz="0 0.0077 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0014 0.0026" />
+        </geometry>
+      </collision>
+    <collision name="knurl_pad_1">
+      <origin xyz="0 4.71489e-19 0.0077" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0026 0.0014" />
+        </geometry>
+      </collision>
+    <collision name="knurl_pad_2">
+      <origin xyz="0 -0.0077 9.42978e-19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0014 0.0026" />
+        </geometry>
+      </collision>
+    <collision name="knurl_pad_3">
+      <origin xyz="0 -1.41447e-18 -0.0077" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0026 0.0014" />
+        </geometry>
+      </collision>
+    <collision name="adjuster_index">
+      <origin xyz="0 0 0.0085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.0014 0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="plunger_slide" type="prismatic">
+    <parent link="barrel" />
+    <child link="plunger" />
+    <axis xyz="-1 0 0" />
+    <limit effort="35" velocity="0.12" lower="0" upper="0.055" />
+    </joint>
+  <joint name="adjuster_spin" type="revolute">
+    <origin xyz="-0.045 0 0" rpy="0 0 0" />
+    <parent link="plunger" />
+    <child link="fine_adjuster" />
+    <axis xyz="1 0 0" />
+    <limit effort="1" velocity="2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

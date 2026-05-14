@@ -1,0 +1,484 @@
+<robot name="open_frame_remote_weapon_station">
+  <material name="olive_drab">
+    <color rgba="0.25 0.32 0.22 1" />
+    </material>
+  <material name="dark_armor">
+    <color rgba="0.1 0.12 0.11 1" />
+    </material>
+  <material name="gunmetal">
+    <color rgba="0.06 0.065 0.07 1" />
+    </material>
+  <material name="worn_steel">
+    <color rgba="0.48 0.5 0.47 1" />
+    </material>
+  <material name="black_glass">
+    <color rgba="0.02 0.03 0.035 0.75" />
+    </material>
+  <link name="pedestal">
+    <visual name="floor_plate">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.26" length="0.055" />
+        </geometry>
+      <material name="dark_armor" />
+      </visual>
+    <visual name="pedestal_column">
+      <origin xyz="0 0 0.364" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.672" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="fixed_ring">
+      <origin xyz="0 0 0.7" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fixed_ring.obj" />
+        </geometry>
+      <material name="worn_steel" />
+      </visual>
+    <visual name="ring_spoke_x">
+      <origin xyz="0 0 0.675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.055 0.04" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="ring_spoke_y">
+      <origin xyz="0 0 0.675" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.76 0.055 0.04" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.26" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_column">
+      <origin xyz="0 0 0.364" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.672" />
+        </geometry>
+      </collision>
+    <collision name="fixed_ring">
+      <origin xyz="0 0 0.7" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fixed_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="ring_spoke_x">
+      <origin xyz="0 0 0.675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.055 0.04" />
+        </geometry>
+      </collision>
+    <collision name="ring_spoke_y">
+      <origin xyz="0 0 0.675" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.76 0.055 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="azimuth_frame">
+    <visual name="turntable">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.255" length="0.035" />
+        </geometry>
+      <material name="dark_armor" />
+      </visual>
+    <visual name="azimuth_collar">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.06" />
+        </geometry>
+      <material name="worn_steel" />
+      </visual>
+    <visual name="roof_post_r_n">
+      <origin xyz="-0.13 -0.29 0.36375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.052 0.6575" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="roof_post_r_p">
+      <origin xyz="-0.13 0.29 0.36375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.052 0.6575" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="roof_post_f_n">
+      <origin xyz="0.13 -0.29 0.36375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.052 0.6575" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="roof_post_f_p">
+      <origin xyz="0.13 0.29 0.36375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.052 0.6575" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="side_lug_0">
+      <geometry>
+        <mesh filename="assets/meshes/side_lug_0.obj" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="trunnion_bushing_0">
+      <origin xyz="0 0.24 0.34" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.08" />
+        </geometry>
+      <material name="worn_steel" />
+      </visual>
+    <visual name="lug_stanchion_0">
+      <origin xyz="0 0.264 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.105 0.13" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="side_lug_1">
+      <geometry>
+        <mesh filename="assets/meshes/side_lug_1.obj" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="trunnion_bushing_1">
+      <origin xyz="0 -0.24 0.34" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.08" />
+        </geometry>
+      <material name="worn_steel" />
+      </visual>
+    <visual name="lug_stanchion_1">
+      <origin xyz="0 -0.264 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.105 0.13" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="roof_panel">
+      <origin xyz="0.08 0 0.71" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.72 0.035" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="front_roof_lip">
+      <origin xyz="0.425 0 0.642" rpy="0 -0.24 0" />
+      <geometry>
+        <box size="0.065 0.72 0.175" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="side_roof_lip_0">
+      <origin xyz="0.055 0.375 0.655" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.045 0.115" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="side_roof_lip_1">
+      <origin xyz="0.055 -0.375 0.655" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.045 0.115" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="sight_bracket">
+      <origin xyz="0.11 -0.3525 0.418" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.155 0.052" />
+        </geometry>
+      <material name="olive_drab" />
+      </visual>
+    <visual name="sight_bushing">
+      <origin xyz="0.11 -0.43 0.47" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.075" />
+        </geometry>
+      <material name="worn_steel" />
+      </visual>
+    <collision name="turntable">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.255" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="azimuth_collar">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="roof_post_r_n">
+      <origin xyz="-0.13 -0.29 0.36375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.052 0.6575" />
+        </geometry>
+      </collision>
+    <collision name="roof_post_r_p">
+      <origin xyz="-0.13 0.29 0.36375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.052 0.6575" />
+        </geometry>
+      </collision>
+    <collision name="roof_post_f_n">
+      <origin xyz="0.13 -0.29 0.36375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.052 0.6575" />
+        </geometry>
+      </collision>
+    <collision name="roof_post_f_p">
+      <origin xyz="0.13 0.29 0.36375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.052 0.6575" />
+        </geometry>
+      </collision>
+    <collision name="side_lug_0">
+      <geometry>
+        <mesh filename="assets/meshes/side_lug_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_bushing_0">
+      <origin xyz="0 0.24 0.34" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="lug_stanchion_0">
+      <origin xyz="0 0.264 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.105 0.13" />
+        </geometry>
+      </collision>
+    <collision name="side_lug_1">
+      <geometry>
+        <mesh filename="assets/meshes/side_lug_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_bushing_1">
+      <origin xyz="0 -0.24 0.34" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="lug_stanchion_1">
+      <origin xyz="0 -0.264 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.105 0.13" />
+        </geometry>
+      </collision>
+    <collision name="roof_panel">
+      <origin xyz="0.08 0 0.71" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.72 0.035" />
+        </geometry>
+      </collision>
+    <collision name="front_roof_lip">
+      <origin xyz="0.425 0 0.642" rpy="0 -0.24 0" />
+      <geometry>
+        <box size="0.065 0.72 0.175" />
+        </geometry>
+      </collision>
+    <collision name="side_roof_lip_0">
+      <origin xyz="0.055 0.375 0.655" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.045 0.115" />
+        </geometry>
+      </collision>
+    <collision name="side_roof_lip_1">
+      <origin xyz="0.055 -0.375 0.655" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.045 0.115" />
+        </geometry>
+      </collision>
+    <collision name="sight_bracket">
+      <origin xyz="0.11 -0.3525 0.418" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.155 0.052" />
+        </geometry>
+      </collision>
+    <collision name="sight_bushing">
+      <origin xyz="0.11 -0.43 0.47" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.075" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gun_cradle">
+    <visual name="trunnion_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.55" />
+        </geometry>
+      <material name="worn_steel" />
+      </visual>
+    <visual name="receiver">
+      <origin xyz="0.05 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.2 0.15" />
+        </geometry>
+      <material name="gunmetal" />
+      </visual>
+    <visual name="rear_counterweight">
+      <origin xyz="-0.225 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.16 0.115" />
+        </geometry>
+      <material name="dark_armor" />
+      </visual>
+    <visual name="ammo_box">
+      <origin xyz="0.025 0 -0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.16 0.1" />
+        </geometry>
+      <material name="dark_armor" />
+      </visual>
+    <visual name="barrel_shroud">
+      <origin xyz="0.365 0 0.005" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.235" />
+        </geometry>
+      <material name="dark_armor" />
+      </visual>
+    <visual name="barrel">
+      <origin xyz="0.68 0 0.005" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.79" />
+        </geometry>
+      <material name="gunmetal" />
+      </visual>
+    <visual name="muzzle_brake">
+      <origin xyz="1.095 0 0.005" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.075" />
+        </geometry>
+      <material name="dark_armor" />
+      </visual>
+    <collision name="trunnion_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.55" />
+        </geometry>
+      </collision>
+    <collision name="receiver">
+      <origin xyz="0.05 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.2 0.15" />
+        </geometry>
+      </collision>
+    <collision name="rear_counterweight">
+      <origin xyz="-0.225 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.16 0.115" />
+        </geometry>
+      </collision>
+    <collision name="ammo_box">
+      <origin xyz="0.025 0 -0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.16 0.1" />
+        </geometry>
+      </collision>
+    <collision name="barrel_shroud">
+      <origin xyz="0.365 0 0.005" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.235" />
+        </geometry>
+      </collision>
+    <collision name="barrel">
+      <origin xyz="0.68 0 0.005" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.79" />
+        </geometry>
+      </collision>
+    <collision name="muzzle_brake">
+      <origin xyz="1.095 0 0.005" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.075" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="sight_unit">
+    <visual name="sight_pivot">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.12" />
+        </geometry>
+      <material name="worn_steel" />
+      </visual>
+    <visual name="pivot_housing">
+      <origin xyz="0.04 -0.0875 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.055 0.07" />
+        </geometry>
+      <material name="dark_armor" />
+      </visual>
+    <visual name="optic_body">
+      <origin xyz="0.145 -0.155 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.185 0.12 0.125" />
+        </geometry>
+      <material name="dark_armor" />
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0.2475 -0.155 0.04" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.02" />
+        </geometry>
+      <material name="black_glass" />
+      </visual>
+    <collision name="sight_pivot">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="pivot_housing">
+      <origin xyz="0.04 -0.0875 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.055 0.07" />
+        </geometry>
+      </collision>
+    <collision name="optic_body">
+      <origin xyz="0.145 -0.155 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.185 0.12 0.125" />
+        </geometry>
+      </collision>
+    <collision name="front_lens">
+      <origin xyz="0.2475 -0.155 0.04" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_azimuth" type="continuous">
+    <origin xyz="0 0 0.7" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="azimuth_frame" />
+    <axis xyz="0 0 1" />
+    <limit effort="260" velocity="1.4" />
+    </joint>
+  <joint name="cradle_elevation" type="revolute">
+    <origin xyz="0 0 0.34" rpy="0 0 0" />
+    <parent link="azimuth_frame" />
+    <child link="gun_cradle" />
+    <axis xyz="0 -1 0" />
+    <limit effort="180" velocity="1" lower="-0.25" upper="0.45" />
+    </joint>
+  <joint name="sight_tilt" type="revolute">
+    <origin xyz="0.11 -0.43 0.47" rpy="0 0 0" />
+    <parent link="azimuth_frame" />
+    <child link="sight_unit" />
+    <axis xyz="0 -1 0" />
+    <limit effort="15" velocity="1.2" lower="-0.35" upper="0.35" />
+    </joint>
+  </robot>

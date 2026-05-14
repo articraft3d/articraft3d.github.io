@@ -1,0 +1,691 @@
+<robot name="cross_drilling_vise">
+  <material name="blue_gray_cast_iron">
+    <color rgba="0.22 0.29 0.34 1" />
+    </material>
+  <material name="dark_burnished_steel">
+    <color rgba="0.06 0.065 0.07 1" />
+    </material>
+  <material name="polished_steel">
+    <color rgba="0.7 0.72 0.7 1" />
+    </material>
+  <material name="black_recess">
+    <color rgba="0.005 0.005 0.006 1" />
+    </material>
+  <material name="red_handle_knobs">
+    <color rgba="0.65 0.05 0.035 1" />
+    </material>
+  <link name="base_plate">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.48 0.035" />
+        </geometry>
+      <material name="blue_gray_cast_iron">
+        <color rgba="0.22 0.29 0.34 1" />
+        </material>
+      </visual>
+    <visual name="swivel_shadow_ring">
+      <origin xyz="0 0 0.036" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/swivel_shadow_ring.obj" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="mount_slot_0">
+      <origin xyz="-0.24 -0.16 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.03 0.002" />
+        </geometry>
+      <material name="black_recess">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="mount_slot_1">
+      <origin xyz="0.24 -0.16 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.03 0.002" />
+        </geometry>
+      <material name="black_recess">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="mount_slot_2">
+      <origin xyz="-0.24 0.16 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.03 0.002" />
+        </geometry>
+      <material name="black_recess">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="mount_slot_3">
+      <origin xyz="0.24 0.16 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.03 0.002" />
+        </geometry>
+      <material name="black_recess">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.48 0.035" />
+        </geometry>
+      </collision>
+    <collision name="swivel_shadow_ring">
+      <origin xyz="0 0 0.036" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/swivel_shadow_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="mount_slot_0">
+      <origin xyz="-0.24 -0.16 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.03 0.002" />
+        </geometry>
+      </collision>
+    <collision name="mount_slot_1">
+      <origin xyz="0.24 -0.16 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.03 0.002" />
+        </geometry>
+      </collision>
+    <collision name="mount_slot_2">
+      <origin xyz="-0.24 0.16 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.03 0.002" />
+        </geometry>
+      </collision>
+    <collision name="mount_slot_3">
+      <origin xyz="0.24 0.16 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.03 0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="turntable">
+    <visual name="turntable_disk">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.185" length="0.025" />
+        </geometry>
+      <material name="blue_gray_cast_iron">
+        <color rgba="0.22 0.29 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rectangular_bed">
+      <origin xyz="0 -0.04 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.4 0.032" />
+        </geometry>
+      <material name="blue_gray_cast_iron">
+        <color rgba="0.22 0.29 0.34 1" />
+        </material>
+      </visual>
+    <visual name="guide_bar_0">
+      <origin xyz="-0.115 -0.04 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.365" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="guide_bar_1">
+      <origin xyz="0.115 -0.04 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.365" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="front_bar_lug_0">
+      <origin xyz="-0.115 -0.22 0.0825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.036 0.052" />
+        </geometry>
+      <material name="blue_gray_cast_iron">
+        <color rgba="0.22 0.29 0.34 1" />
+        </material>
+      </visual>
+    <visual name="front_bar_lug_1">
+      <origin xyz="0.115 -0.22 0.0825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.036 0.052" />
+        </geometry>
+      <material name="blue_gray_cast_iron">
+        <color rgba="0.22 0.29 0.34 1" />
+        </material>
+      </visual>
+    <visual name="front_screw_bearing">
+      <origin xyz="0 -0.215 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_screw_bearing.obj" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="bearing_pedestal">
+      <origin xyz="0 -0.215 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.036 0.018" />
+        </geometry>
+      <material name="blue_gray_cast_iron">
+        <color rgba="0.22 0.29 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rear_saddle">
+      <origin xyz="0 0.105 0.128" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.058 0.018" />
+        </geometry>
+      <material name="blue_gray_cast_iron">
+        <color rgba="0.22 0.29 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rear_support_0">
+      <origin xyz="-0.16 0.105 0.0875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.052 0.063" />
+        </geometry>
+      <material name="blue_gray_cast_iron">
+        <color rgba="0.22 0.29 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rear_support_1">
+      <origin xyz="0.16 0.105 0.0875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.052 0.063" />
+        </geometry>
+      <material name="blue_gray_cast_iron">
+        <color rgba="0.22 0.29 0.34 1" />
+        </material>
+      </visual>
+    <visual name="fixed_v_block">
+      <origin xyz="0 0.105 0.18" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fixed_v_block.obj" />
+        </geometry>
+      <material name="blue_gray_cast_iron">
+        <color rgba="0.22 0.29 0.34 1" />
+        </material>
+      </visual>
+    <visual name="fixed_jaw_face">
+      <origin xyz="0 0.072 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.01 0.03" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <collision name="turntable_disk">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.185" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="rectangular_bed">
+      <origin xyz="0 -0.04 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.4 0.032" />
+        </geometry>
+      </collision>
+    <collision name="guide_bar_0">
+      <origin xyz="-0.115 -0.04 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.365" />
+        </geometry>
+      </collision>
+    <collision name="guide_bar_1">
+      <origin xyz="0.115 -0.04 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.365" />
+        </geometry>
+      </collision>
+    <collision name="front_bar_lug_0">
+      <origin xyz="-0.115 -0.22 0.0825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.036 0.052" />
+        </geometry>
+      </collision>
+    <collision name="front_bar_lug_1">
+      <origin xyz="0.115 -0.22 0.0825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.036 0.052" />
+        </geometry>
+      </collision>
+    <collision name="front_screw_bearing">
+      <origin xyz="0 -0.215 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_screw_bearing.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_pedestal">
+      <origin xyz="0 -0.215 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.036 0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_saddle">
+      <origin xyz="0 0.105 0.128" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.058 0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_support_0">
+      <origin xyz="-0.16 0.105 0.0875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.052 0.063" />
+        </geometry>
+      </collision>
+    <collision name="rear_support_1">
+      <origin xyz="0.16 0.105 0.0875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.052 0.063" />
+        </geometry>
+      </collision>
+    <collision name="fixed_v_block">
+      <origin xyz="0 0.105 0.18" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fixed_v_block.obj" />
+        </geometry>
+      </collision>
+    <collision name="fixed_jaw_face">
+      <origin xyz="0 0.072 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.01 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="moving_jaw">
+    <visual name="moving_v_block">
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/moving_v_block.obj" />
+        </geometry>
+      <material name="blue_gray_cast_iron">
+        <color rgba="0.22 0.29 0.34 1" />
+        </material>
+      </visual>
+    <visual name="moving_saddle">
+      <origin xyz="0 0 0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.058 0.02" />
+        </geometry>
+      <material name="blue_gray_cast_iron">
+        <color rgba="0.22 0.29 0.34 1" />
+        </material>
+      </visual>
+    <visual name="moving_jaw_face">
+      <origin xyz="0 0.033 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.01 0.03" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="guide_bushing_0">
+      <origin xyz="-0.115 0 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/guide_bushing_0.obj" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="guide_wear_pad_0">
+      <origin xyz="-0.115 0 0.0815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.05 0.006" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="guide_bushing_1">
+      <origin xyz="0.115 0 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/guide_bushing_1.obj" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="guide_wear_pad_1">
+      <origin xyz="0.115 0 0.0815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.05 0.006" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="lead_nut">
+      <origin xyz="0 0 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lead_nut.obj" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <collision name="moving_v_block">
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/moving_v_block.obj" />
+        </geometry>
+      </collision>
+    <collision name="moving_saddle">
+      <origin xyz="0 0 0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.058 0.02" />
+        </geometry>
+      </collision>
+    <collision name="moving_jaw_face">
+      <origin xyz="0 0.033 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.01 0.03" />
+        </geometry>
+      </collision>
+    <collision name="guide_bushing_0">
+      <origin xyz="-0.115 0 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/guide_bushing_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_wear_pad_0">
+      <origin xyz="-0.115 0 0.0815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.05 0.006" />
+        </geometry>
+      </collision>
+    <collision name="guide_bushing_1">
+      <origin xyz="0.115 0 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/guide_bushing_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_wear_pad_1">
+      <origin xyz="0.115 0 0.0815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.05 0.006" />
+        </geometry>
+      </collision>
+    <collision name="lead_nut">
+      <origin xyz="0 0 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lead_nut.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="leadscrew">
+    <visual name="threaded_shaft">
+      <origin xyz="0 0.015 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/threaded_shaft.obj" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="thread_ridge_0">
+      <origin xyz="0 0.065 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="thread_ridge_1">
+      <origin xyz="0 0.089 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="thread_ridge_2">
+      <origin xyz="0 0.113 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="thread_ridge_3">
+      <origin xyz="0 0.137 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="thread_ridge_4">
+      <origin xyz="0 0.161 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="thread_ridge_5">
+      <origin xyz="0 0.185 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="thread_ridge_6">
+      <origin xyz="0 0.209 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="thread_ridge_7">
+      <origin xyz="0 0.233 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="thread_ridge_8">
+      <origin xyz="0 0.257 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="thread_ridge_9">
+      <origin xyz="0 0.281 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="thread_ridge_10">
+      <origin xyz="0 0.305 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="hex_drive_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hex_drive_hub.obj" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="t_bar">
+      <origin xyz="0 -0.012 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.185" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="handle_knob_0">
+      <origin xyz="-0.097 -0.012 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.014" />
+        </geometry>
+      <material name="red_handle_knobs">
+        <color rgba="0.65 0.05 0.035 1" />
+        </material>
+      </visual>
+    <visual name="handle_knob_1">
+      <origin xyz="0.097 -0.012 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.014" />
+        </geometry>
+      <material name="red_handle_knobs">
+        <color rgba="0.65 0.05 0.035 1" />
+        </material>
+      </visual>
+    <collision name="threaded_shaft">
+      <origin xyz="0 0.015 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/threaded_shaft.obj" />
+        </geometry>
+      </collision>
+    <collision name="thread_ridge_0">
+      <origin xyz="0 0.065 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="thread_ridge_1">
+      <origin xyz="0 0.089 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="thread_ridge_2">
+      <origin xyz="0 0.113 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="thread_ridge_3">
+      <origin xyz="0 0.137 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="thread_ridge_4">
+      <origin xyz="0 0.161 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="thread_ridge_5">
+      <origin xyz="0 0.185 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="thread_ridge_6">
+      <origin xyz="0 0.209 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="thread_ridge_7">
+      <origin xyz="0 0.233 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="thread_ridge_8">
+      <origin xyz="0 0.257 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="thread_ridge_9">
+      <origin xyz="0 0.281 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="thread_ridge_10">
+      <origin xyz="0 0.305 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="hex_drive_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hex_drive_hub.obj" />
+        </geometry>
+      </collision>
+    <collision name="t_bar">
+      <origin xyz="0 -0.012 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.185" />
+        </geometry>
+      </collision>
+    <collision name="handle_knob_0">
+      <origin xyz="-0.097 -0.012 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.014" />
+        </geometry>
+      </collision>
+    <collision name="handle_knob_1">
+      <origin xyz="0.097 -0.012 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_turntable" type="continuous">
+    <origin xyz="0 0 0.035" rpy="0 0 0" />
+    <parent link="base_plate" />
+    <child link="turntable" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="1" />
+    </joint>
+  <joint name="turntable_to_moving_jaw" type="prismatic">
+    <origin xyz="0 -0.045 0" rpy="0 0 0" />
+    <parent link="turntable" />
+    <child link="moving_jaw" />
+    <axis xyz="0 -1 0" />
+    <limit effort="300" velocity="0.06" lower="0" upper="0.085" />
+    </joint>
+  <joint name="turntable_to_leadscrew" type="continuous">
+    <origin xyz="0 -0.255 0.095" rpy="0 0 0" />
+    <parent link="turntable" />
+    <child link="leadscrew" />
+    <axis xyz="0 1 0" />
+    <limit effort="20" velocity="4" />
+    </joint>
+  </robot>

@@ -1,0 +1,416 @@
+<robot name="open_frame_revolute_chain">
+  <material name="pedestal_paint">
+    <color rgba="0.18 0.19 0.2 1" />
+    </material>
+  <material name="link_blue_steel">
+    <color rgba="0.18 0.34 0.58 1" />
+    </material>
+  <material name="link_teal_steel">
+    <color rgba="0.16 0.47 0.5 1" />
+    </material>
+  <material name="link_light_steel">
+    <color rgba="0.34 0.58 0.62 1" />
+    </material>
+  <material name="brushed_pin_steel">
+    <color rgba="0.74 0.76 0.78 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.035 0.035 0.035 1" />
+    </material>
+  <link name="pedestal">
+    <visual name="base_plate">
+      <origin xyz="-0.085 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.22 0.032" />
+        </geometry>
+      <material name="pedestal_paint">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot">
+      <origin xyz="-0.085 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.175 0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.035 0.035 0.035 1" />
+        </material>
+      </visual>
+    <visual name="round_column">
+      <origin xyz="-0.085 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.306" />
+        </geometry>
+      <material name="pedestal_paint">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="-0.118 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.16 0.05" />
+        </geometry>
+      <material name="pedestal_paint">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="upper_yoke">
+      <origin xyz="0 0 0.378" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/root_yoke_cheek.obj" />
+        </geometry>
+      <material name="pedestal_paint">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="lower_yoke">
+      <origin xyz="0 0 0.342" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/root_yoke_cheek.obj" />
+        </geometry>
+      <material name="pedestal_paint">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="root_pin">
+      <origin xyz="0 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.064" />
+        </geometry>
+      <material name="brushed_pin_steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="root_upper_cap">
+      <origin xyz="0 0 0.395" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="brushed_pin_steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="root_lower_cap">
+      <origin xyz="0 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="brushed_pin_steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="-0.085 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.22 0.032" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot">
+      <origin xyz="-0.085 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.175 0.01" />
+        </geometry>
+      </collision>
+    <collision name="round_column">
+      <origin xyz="-0.085 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.306" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="-0.118 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.16 0.05" />
+        </geometry>
+      </collision>
+    <collision name="upper_yoke">
+      <origin xyz="0 0 0.378" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/root_yoke_cheek.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_yoke">
+      <origin xyz="0 0 0.342" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/root_yoke_cheek.obj" />
+        </geometry>
+      </collision>
+    <collision name="root_pin">
+      <origin xyz="0 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.064" />
+        </geometry>
+      </collision>
+    <collision name="root_upper_cap">
+      <origin xyz="0 0 0.395" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="root_lower_cap">
+      <origin xyz="0 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="link_0">
+    <visual name="center_frame">
+      <geometry>
+        <mesh filename="assets/meshes/link_0_center_frame.obj" />
+        </geometry>
+      <material name="link_blue_steel">
+        <color rgba="0.18 0.34 0.58 1" />
+        </material>
+      </visual>
+    <visual name="upper_fork">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/link_0_fork_cheek.obj" />
+        </geometry>
+      <material name="link_blue_steel">
+        <color rgba="0.18 0.34 0.58 1" />
+        </material>
+      </visual>
+    <visual name="lower_fork">
+      <origin xyz="0 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/link_0_fork_cheek.obj" />
+        </geometry>
+      <material name="link_blue_steel">
+        <color rgba="0.18 0.34 0.58 1" />
+        </material>
+      </visual>
+    <visual name="fork_bridge">
+      <origin xyz="0.34 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.1316 0.05" />
+        </geometry>
+      <material name="link_blue_steel">
+        <color rgba="0.18 0.34 0.58 1" />
+        </material>
+      </visual>
+    <visual name="distal_pin">
+      <origin xyz="0.48 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.064" />
+        </geometry>
+      <material name="brushed_pin_steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="distal_upper_cap">
+      <origin xyz="0.48 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="brushed_pin_steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="distal_lower_cap">
+      <origin xyz="0.48 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="brushed_pin_steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <collision name="center_frame">
+      <geometry>
+        <mesh filename="assets/meshes/link_0_center_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_fork">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/link_0_fork_cheek.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_fork">
+      <origin xyz="0 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/link_0_fork_cheek.obj" />
+        </geometry>
+      </collision>
+    <collision name="fork_bridge">
+      <origin xyz="0.34 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.1316 0.05" />
+        </geometry>
+      </collision>
+    <collision name="distal_pin">
+      <origin xyz="0.48 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.064" />
+        </geometry>
+      </collision>
+    <collision name="distal_upper_cap">
+      <origin xyz="0.48 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="distal_lower_cap">
+      <origin xyz="0.48 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="link_1">
+    <visual name="center_frame">
+      <geometry>
+        <mesh filename="assets/meshes/link_1_center_frame.obj" />
+        </geometry>
+      <material name="link_teal_steel">
+        <color rgba="0.16 0.47 0.5 1" />
+        </material>
+      </visual>
+    <visual name="upper_fork">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/link_1_fork_cheek.obj" />
+        </geometry>
+      <material name="link_teal_steel">
+        <color rgba="0.16 0.47 0.5 1" />
+        </material>
+      </visual>
+    <visual name="lower_fork">
+      <origin xyz="0 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/link_1_fork_cheek.obj" />
+        </geometry>
+      <material name="link_teal_steel">
+        <color rgba="0.16 0.47 0.5 1" />
+        </material>
+      </visual>
+    <visual name="fork_bridge">
+      <origin xyz="0.24 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.1128 0.05" />
+        </geometry>
+      <material name="link_teal_steel">
+        <color rgba="0.16 0.47 0.5 1" />
+        </material>
+      </visual>
+    <visual name="distal_pin">
+      <origin xyz="0.38 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.064" />
+        </geometry>
+      <material name="brushed_pin_steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="distal_upper_cap">
+      <origin xyz="0.38 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="brushed_pin_steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="distal_lower_cap">
+      <origin xyz="0.38 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="brushed_pin_steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <collision name="center_frame">
+      <geometry>
+        <mesh filename="assets/meshes/link_1_center_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_fork">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/link_1_fork_cheek.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_fork">
+      <origin xyz="0 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/link_1_fork_cheek.obj" />
+        </geometry>
+      </collision>
+    <collision name="fork_bridge">
+      <origin xyz="0.24 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.1128 0.05" />
+        </geometry>
+      </collision>
+    <collision name="distal_pin">
+      <origin xyz="0.38 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.064" />
+        </geometry>
+      </collision>
+    <collision name="distal_upper_cap">
+      <origin xyz="0.38 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="distal_lower_cap">
+      <origin xyz="0.38 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="link_2">
+    <visual name="center_frame">
+      <geometry>
+        <mesh filename="assets/meshes/link_2_center_frame.obj" />
+        </geometry>
+      <material name="link_light_steel">
+        <color rgba="0.34 0.58 0.62 1" />
+        </material>
+      </visual>
+    <visual name="end_tab">
+      <geometry>
+        <mesh filename="assets/meshes/link_2_end_tab.obj" />
+        </geometry>
+      <material name="link_light_steel">
+        <color rgba="0.34 0.58 0.62 1" />
+        </material>
+      </visual>
+    <collision name="center_frame">
+      <geometry>
+        <mesh filename="assets/meshes/link_2_center_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="end_tab">
+      <geometry>
+        <mesh filename="assets/meshes/link_2_end_tab.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="pedestal_to_link_0" type="revolute">
+    <origin xyz="0 0 0.36" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="link_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="2.5" lower="-1.35" upper="1.35" />
+    </joint>
+  <joint name="link_0_to_link_1" type="revolute">
+    <origin xyz="0.48 0 0" rpy="0 0 0" />
+    <parent link="link_0" />
+    <child link="link_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="2.8" lower="-1.45" upper="1.45" />
+    </joint>
+  <joint name="link_1_to_link_2" type="revolute">
+    <origin xyz="0.38 0 0" rpy="0 0 0" />
+    <parent link="link_1" />
+    <child link="link_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="3" lower="-1.55" upper="1.55" />
+    </joint>
+  </robot>

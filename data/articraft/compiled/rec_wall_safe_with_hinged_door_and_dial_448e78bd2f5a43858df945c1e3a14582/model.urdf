@@ -1,0 +1,414 @@
+<robot name="hotel_wall_safe">
+  <material name="satin_steel">
+    <color rgba="0.55 0.57 0.57 1" />
+    </material>
+  <material name="darker_steel">
+    <color rgba="0.34 0.36 0.37 1" />
+    </material>
+  <material name="shadowed_interior">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="black_dial">
+    <color rgba="0.02 0.021 0.023 1" />
+    </material>
+  <material name="brushed_chrome">
+    <color rgba="0.78 0.76 0.7 1" />
+    </material>
+  <material name="slot_black">
+    <color rgba="0 0 0 1" />
+    </material>
+  <link name="body">
+    <visual name="front_flange">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/broad_front_flange.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.55 0.57 0.57 1" />
+        </material>
+      </visual>
+    <visual name="left_sleeve">
+      <origin xyz="-0.218 0.157 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.286 0.3" />
+        </geometry>
+      <material name="darker_steel">
+        <color rgba="0.34 0.36 0.37 1" />
+        </material>
+      </visual>
+    <visual name="right_sleeve">
+      <origin xyz="0.218 0.157 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.286 0.3" />
+        </geometry>
+      <material name="darker_steel">
+        <color rgba="0.34 0.36 0.37 1" />
+        </material>
+      </visual>
+    <visual name="top_sleeve">
+      <origin xyz="0 0.157 0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.41 0.286 0.024" />
+        </geometry>
+      <material name="darker_steel">
+        <color rgba="0.34 0.36 0.37 1" />
+        </material>
+      </visual>
+    <visual name="bottom_sleeve">
+      <origin xyz="0 0.157 -0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.41 0.286 0.024" />
+        </geometry>
+      <material name="darker_steel">
+        <color rgba="0.34 0.36 0.37 1" />
+        </material>
+      </visual>
+    <visual name="rear_wall">
+      <origin xyz="0 0.309 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.438 0.018 0.324" />
+        </geometry>
+      <material name="shadowed_interior">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf">
+      <origin xyz="0.199 -0.0195 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.011 0.27" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.55 0.57 0.57 1" />
+        </material>
+      </visual>
+    <collision name="front_flange">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/broad_front_flange.obj" />
+        </geometry>
+      </collision>
+    <collision name="left_sleeve">
+      <origin xyz="-0.218 0.157 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.286 0.3" />
+        </geometry>
+      </collision>
+    <collision name="right_sleeve">
+      <origin xyz="0.218 0.157 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.286 0.3" />
+        </geometry>
+      </collision>
+    <collision name="top_sleeve">
+      <origin xyz="0 0.157 0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.41 0.286 0.024" />
+        </geometry>
+      </collision>
+    <collision name="bottom_sleeve">
+      <origin xyz="0 0.157 -0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.41 0.286 0.024" />
+        </geometry>
+      </collision>
+    <collision name="rear_wall">
+      <origin xyz="0 0.309 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.438 0.018 0.324" />
+        </geometry>
+      </collision>
+    <collision name="hinge_leaf">
+      <origin xyz="0.199 -0.0195 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.011 0.27" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="door">
+    <visual name="door_slab">
+      <origin xyz="-0.17 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/compact_door_slab.obj" />
+        </geometry>
+      <material name="darker_steel">
+        <color rgba="0.34 0.36 0.37 1" />
+        </material>
+      </visual>
+    <visual name="top_door_lip">
+      <origin xyz="-0.17 -0.0145 0.098" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.003 0.01" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.55 0.57 0.57 1" />
+        </material>
+      </visual>
+    <visual name="bottom_door_lip">
+      <origin xyz="-0.17 -0.0145 -0.098" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.003 0.01" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.55 0.57 0.57 1" />
+        </material>
+      </visual>
+    <visual name="free_edge_lip">
+      <origin xyz="-0.318 -0.0145 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.003 0.188" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.55 0.57 0.57 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <geometry>
+        <cylinder radius="0.009" length="0.255" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <collision name="door_slab">
+      <origin xyz="-0.17 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/compact_door_slab.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_door_lip">
+      <origin xyz="-0.17 -0.0145 0.098" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.003 0.01" />
+        </geometry>
+      </collision>
+    <collision name="bottom_door_lip">
+      <origin xyz="-0.17 -0.0145 -0.098" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.003 0.01" />
+        </geometry>
+      </collision>
+    <collision name="free_edge_lip">
+      <origin xyz="-0.318 -0.0145 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.003 0.188" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <geometry>
+        <cylinder radius="0.009" length="0.255" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dial">
+    <visual name="dial_cap">
+      <geometry>
+        <mesh filename="assets/meshes/combination_dial.obj" />
+        </geometry>
+      <material name="black_dial">
+        <color rgba="0.02 0.021 0.023 1" />
+        </material>
+      </visual>
+    <visual name="dial_back_ring">
+      <origin xyz="0 0 0.00125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.0025" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <collision name="dial_cap">
+      <geometry>
+        <mesh filename="assets/meshes/combination_dial.obj" />
+        </geometry>
+      </collision>
+    <collision name="dial_back_ring">
+      <origin xyz="0 0 0.00125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.0025" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="handle">
+    <visual name="front_hub">
+      <origin xyz="0 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.016" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0">
+      <origin xyz="0.03 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.076 0.014 0.012" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="spoke_tip_0">
+      <origin xyz="0.061 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1">
+      <origin xyz="-0.015 0.0259808 0.011" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.076 0.014 0.012" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="spoke_tip_1">
+      <origin xyz="-0.0305 0.0528275 0.011" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="spoke_2">
+      <origin xyz="-0.015 -0.0259808 0.011" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.076 0.014 0.012" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="spoke_tip_2">
+      <origin xyz="-0.0305 -0.0528275 0.011" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <collision name="front_hub">
+      <origin xyz="0 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="spoke_0">
+      <origin xyz="0.03 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.076 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="spoke_tip_0">
+      <origin xyz="0.061 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01" />
+        </geometry>
+      </collision>
+    <collision name="spoke_1">
+      <origin xyz="-0.015 0.0259808 0.011" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.076 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="spoke_tip_1">
+      <origin xyz="-0.0305 0.0528275 0.011" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01" />
+        </geometry>
+      </collision>
+    <collision name="spoke_2">
+      <origin xyz="-0.015 -0.0259808 0.011" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.076 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="spoke_tip_2">
+      <origin xyz="-0.0305 -0.0528275 0.011" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="key_cover">
+    <visual name="cover_plate">
+      <origin xyz="0 -0.0075 -0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.006 0.045" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.55 0.57 0.57 1" />
+        </material>
+      </visual>
+    <visual name="cover_hinge_barrel">
+      <origin xyz="0 -0.0045 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.098" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="key_slot_mark">
+      <origin xyz="0 -0.0102 -0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.0015 0.004" />
+        </geometry>
+      <material name="slot_black">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <collision name="cover_plate">
+      <origin xyz="0 -0.0075 -0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.006 0.045" />
+        </geometry>
+      </collision>
+    <collision name="cover_hinge_barrel">
+      <origin xyz="0 -0.0045 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.098" />
+        </geometry>
+      </collision>
+    <collision name="key_slot_mark">
+      <origin xyz="0 -0.0102 -0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.0015 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="door_hinge" type="revolute">
+    <origin xyz="0.17 -0.033 0" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="door" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="1.2" lower="0" upper="1.35" />
+    </joint>
+  <joint name="dial_spin" type="continuous">
+    <origin xyz="-0.17 -0.013 0.044" rpy="1.5708 0 0" />
+    <parent link="door" />
+    <child link="dial" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="8" />
+    </joint>
+  <joint name="handle_turn" type="revolute">
+    <origin xyz="-0.075 -0.013 0.022" rpy="1.5708 0 0" />
+    <parent link="door" />
+    <child link="handle" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="3" lower="-1.2" upper="1.2" />
+    </joint>
+  <joint name="cover_hinge" type="revolute">
+    <origin xyz="-0.17 -0.013 -0.034" rpy="0 0 0" />
+    <parent link="door" />
+    <child link="key_cover" />
+    <axis xyz="-1 0 0" />
+    <limit effort="0.35" velocity="2.5" lower="0" upper="1.15" />
+    </joint>
+  </robot>

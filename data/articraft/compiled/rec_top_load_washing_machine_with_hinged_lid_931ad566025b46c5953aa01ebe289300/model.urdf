@@ -1,0 +1,833 @@
+<robot name="high_efficiency_top_load_washer">
+  <material name="warm_white_plastic">
+    <color rgba="0.93 0.94 0.91 1" />
+    </material>
+  <material name="soft_gray_trim">
+    <color rgba="0.7 0.72 0.72 1" />
+    </material>
+  <material name="brushed_stainless">
+    <color rgba="0.72 0.74 0.72 1" />
+    </material>
+  <material name="smoked_glass">
+    <color rgba="0.08 0.12 0.14 0.36" />
+    </material>
+  <material name="glossy_black">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="button_black">
+    <color rgba="0.035 0.038 0.042 1" />
+    </material>
+  <material name="cool_white_icon">
+    <color rgba="0.7 0.9 1 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.006 0.006 0.006 1" />
+    </material>
+  <material name="deep_shadow">
+    <color rgba="0.02 0.022 0.025 1" />
+    </material>
+  <link name="cabinet">
+    <visual name="cabinet_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cabinet_shell.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.93 0.94 0.91 1" />
+        </material>
+      </visual>
+    <visual name="tub_liner">
+      <geometry>
+        <mesh filename="assets/meshes/tub_liner.obj" />
+        </geometry>
+      <material name="deep_shadow">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <visual name="drive_bearing">
+      <origin xyz="0 -0.05 0.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.15" />
+        </geometry>
+      <material name="soft_gray_trim">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="control_panel">
+      <origin xyz="0 0.312 0.846" rpy="0 0 0" />
+      <geometry>
+        <box size="0.61 0.12 0.012" />
+        </geometry>
+      <material name="glossy_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="front_panel">
+      <origin xyz="0 -0.392 0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.004 0.43" />
+        </geometry>
+      <material name="front_panel_sheen">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="toe_kick">
+      <origin xyz="0 -0.376 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.03 0.055" />
+        </geometry>
+      <material name="deep_shadow">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <visual name="hinge_pedestal_neg">
+      <origin xyz="-0.318 0.246 0.8575" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.05 0.035" />
+        </geometry>
+      <material name="soft_gray_trim">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="hinge_pedestal_pos">
+      <origin xyz="0.318 0.246 0.8575" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.05 0.035" />
+        </geometry>
+      <material name="soft_gray_trim">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="lock_guide">
+      <origin xyz="0 -0.377 0.84" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lock_guide.obj" />
+        </geometry>
+      <material name="glossy_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <collision name="cabinet_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cabinet_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="tub_liner">
+      <geometry>
+        <mesh filename="assets/meshes/tub_liner.obj" />
+        </geometry>
+      </collision>
+    <collision name="drive_bearing">
+      <origin xyz="0 -0.05 0.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.15" />
+        </geometry>
+      </collision>
+    <collision name="control_panel">
+      <origin xyz="0 0.312 0.846" rpy="0 0 0" />
+      <geometry>
+        <box size="0.61 0.12 0.012" />
+        </geometry>
+      </collision>
+    <collision name="front_panel">
+      <origin xyz="0 -0.392 0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.004 0.43" />
+        </geometry>
+      </collision>
+    <collision name="toe_kick">
+      <origin xyz="0 -0.376 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.03 0.055" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pedestal_neg">
+      <origin xyz="-0.318 0.246 0.8575" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.05 0.035" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pedestal_pos">
+      <origin xyz="0.318 0.246 0.8575" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.05 0.035" />
+        </geometry>
+      </collision>
+    <collision name="lock_guide">
+      <origin xyz="0 -0.377 0.84" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lock_guide.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="basket">
+    <visual name="basket_shell">
+      <geometry>
+        <mesh filename="assets/meshes/basket_shell.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="low_impeller">
+      <origin xyz="0 0 -0.171" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.102" length="0.026" />
+        </geometry>
+      <material name="soft_gray_trim">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="drive_shaft">
+      <origin xyz="0 0 -0.265" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.23" />
+        </geometry>
+      <material name="soft_gray_trim">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <collision name="basket_shell">
+      <geometry>
+        <mesh filename="assets/meshes/basket_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="low_impeller">
+      <origin xyz="0 0 -0.171" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.102" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="drive_shaft">
+      <origin xyz="0 0 -0.265" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.23" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="lid_frame">
+      <origin xyz="0 -0.3 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lid_frame.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.93 0.94 0.91 1" />
+        </material>
+      </visual>
+    <visual name="glass_pane">
+      <origin xyz="0 -0.3 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.486 0.506 0.006" />
+        </geometry>
+      <material name="smoked_glass">
+        <color rgba="0.08 0.12 0.14 0.36" />
+        </material>
+      </visual>
+    <visual name="hinge_sleeve">
+      <origin xyz="0 0 0.014" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.54" />
+        </geometry>
+      <material name="soft_gray_trim">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="bumper_0">
+      <origin xyz="-0.265 -0.525 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <visual name="bumper_1">
+      <origin xyz="0.265 -0.525 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <visual name="bumper_2">
+      <origin xyz="-0.265 -0.1 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <visual name="bumper_3">
+      <origin xyz="0.265 -0.1 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <collision name="lid_frame">
+      <origin xyz="0 -0.3 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lid_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="glass_pane">
+      <origin xyz="0 -0.3 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.486 0.506 0.006" />
+        </geometry>
+      </collision>
+    <collision name="hinge_sleeve">
+      <origin xyz="0 0 0.014" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.54" />
+        </geometry>
+      </collision>
+    <collision name="bumper_0">
+      <origin xyz="-0.265 -0.525 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.01" />
+        </geometry>
+      </collision>
+    <collision name="bumper_1">
+      <origin xyz="0.265 -0.525 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.01" />
+        </geometry>
+      </collision>
+    <collision name="bumper_2">
+      <origin xyz="-0.265 -0.1 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.01" />
+        </geometry>
+      </collision>
+    <collision name="bumper_3">
+      <origin xyz="0.265 -0.1 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="selector_knob">
+    <visual name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/selector_knob.obj" />
+        </geometry>
+      <material name="soft_gray_trim">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <collision name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/selector_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_0">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      <material name="button_black">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      <material name="cool_white_icon">
+        <color rgba="0.7 0.9 1 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_1">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      <material name="button_black">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      <material name="cool_white_icon">
+        <color rgba="0.7 0.9 1 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_2">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      <material name="button_black">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      <material name="cool_white_icon">
+        <color rgba="0.7 0.9 1 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_3">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      <material name="button_black">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      <material name="cool_white_icon">
+        <color rgba="0.7 0.9 1 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_4">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      <material name="button_black">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      <material name="cool_white_icon">
+        <color rgba="0.7 0.9 1 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_5">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      <material name="button_black">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      <material name="cool_white_icon">
+        <color rgba="0.7 0.9 1 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_6">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      <material name="button_black">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      <material name="cool_white_icon">
+        <color rgba="0.7 0.9 1 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_7">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      <material name="button_black">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      <material name="cool_white_icon">
+        <color rgba="0.7 0.9 1 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_8">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      <material name="button_black">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      <material name="cool_white_icon">
+        <color rgba="0.7 0.9 1 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_9">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      <material name="button_black">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      <material name="cool_white_icon">
+        <color rgba="0.7 0.9 1 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_10">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      <material name="button_black">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      <material name="cool_white_icon">
+        <color rgba="0.7 0.9 1 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_11">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      <material name="button_black">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      <material name="cool_white_icon">
+        <color rgba="0.7 0.9 1 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/touch_button.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_icon">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.003 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lock_plunger">
+    <visual name="plunger_cap">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.02 0.01" />
+        </geometry>
+      <material name="glossy_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="plunger_tongue">
+      <origin xyz="0 0 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.008 0.06" />
+        </geometry>
+      <material name="soft_gray_trim">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <collision name="plunger_cap">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="plunger_tongue">
+      <origin xyz="0 0 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.008 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="basket_spin" type="continuous">
+    <origin xyz="0 -0.05 0.535" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="basket" />
+    <axis xyz="0 0 1" />
+    <limit effort="90" velocity="18" />
+    </joint>
+  <joint name="lid_hinge" type="revolute">
+    <origin xyz="0 0.24 0.85" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="18" velocity="2.5" lower="0" upper="1.22" />
+    </joint>
+  <joint name="knob_spin" type="continuous">
+    <origin xyz="0 0.312 0.852" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="selector_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="9" />
+    </joint>
+  <joint name="button_slide_0" type="prismatic">
+    <origin xyz="-0.245 0.286 0.852" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_0" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.06" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_slide_1" type="prismatic">
+    <origin xyz="-0.245 0.338 0.852" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.06" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_slide_2" type="prismatic">
+    <origin xyz="-0.175 0.286 0.852" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_2" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.06" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_slide_3" type="prismatic">
+    <origin xyz="-0.175 0.338 0.852" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_3" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.06" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_slide_4" type="prismatic">
+    <origin xyz="-0.105 0.286 0.852" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_4" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.06" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_slide_5" type="prismatic">
+    <origin xyz="-0.105 0.338 0.852" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_5" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.06" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_slide_6" type="prismatic">
+    <origin xyz="0.105 0.286 0.852" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_6" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.06" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_slide_7" type="prismatic">
+    <origin xyz="0.105 0.338 0.852" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_7" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.06" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_slide_8" type="prismatic">
+    <origin xyz="0.175 0.286 0.852" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_8" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.06" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_slide_9" type="prismatic">
+    <origin xyz="0.175 0.338 0.852" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_9" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.06" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_slide_10" type="prismatic">
+    <origin xyz="0.245 0.286 0.852" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_10" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.06" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_slide_11" type="prismatic">
+    <origin xyz="0.245 0.338 0.852" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_11" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.06" lower="0" upper="0.006" />
+    </joint>
+  <joint name="plunger_slide" type="prismatic">
+    <origin xyz="0 -0.377 0.848" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="lock_plunger" />
+    <axis xyz="0 0 -1" />
+    <limit effort="4" velocity="0.08" lower="0" upper="0.032" />
+    </joint>
+  </robot>

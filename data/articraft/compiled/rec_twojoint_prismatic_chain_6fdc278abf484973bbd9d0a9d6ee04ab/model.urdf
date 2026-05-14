@@ -1,0 +1,517 @@
+<robot name="two_carriage_linear_module">
+  <link name="fixed_guide">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.28 0.03" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_0">
+      <origin xyz="0 -0.075 0.0575" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.035 0.055" />
+        </geometry>
+      <material name="polished_linear_rail_steel">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_1">
+      <origin xyz="0 0.075 0.0575" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.035 0.055" />
+        </geometry>
+      <material name="polished_linear_rail_steel">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_0">
+      <origin xyz="-0.45 0 0.0725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.24 0.085" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_1">
+      <origin xyz="0.45 0 0.0725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.24 0.085" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="drive_motor">
+      <origin xyz="-0.525 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.16 0.11" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="motor_coupler">
+      <origin xyz="-0.47 0 0.09" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.03" />
+        </geometry>
+      <material name="polished_linear_rail_steel">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_0">
+      <origin xyz="-0.34 -0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_1">
+      <origin xyz="-0.12 -0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_2">
+      <origin xyz="0.12 -0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_3">
+      <origin xyz="0.34 -0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_4">
+      <origin xyz="-0.34 0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_5">
+      <origin xyz="-0.12 0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_6">
+      <origin xyz="0.12 0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_7">
+      <origin xyz="0.34 0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.28 0.03" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_0">
+      <origin xyz="0 -0.075 0.0575" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.035 0.055" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_1">
+      <origin xyz="0 0.075 0.0575" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.035 0.055" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_0">
+      <origin xyz="-0.45 0 0.0725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.24 0.085" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_1">
+      <origin xyz="0.45 0 0.0725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.24 0.085" />
+        </geometry>
+      </collision>
+    <collision name="drive_motor">
+      <origin xyz="-0.525 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.16 0.11" />
+        </geometry>
+      </collision>
+    <collision name="motor_coupler">
+      <origin xyz="-0.47 0 0.09" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_0">
+      <origin xyz="-0.34 -0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_1">
+      <origin xyz="-0.12 -0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_2">
+      <origin xyz="0.12 -0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_3">
+      <origin xyz="0.34 -0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_4">
+      <origin xyz="-0.34 0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_5">
+      <origin xyz="-0.12 0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_6">
+      <origin xyz="0.12 0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_7">
+      <origin xyz="0.34 0.118 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="large_stage">
+    <visual name="lower_shoe_0">
+      <origin xyz="0 -0.075 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.055 0.028" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="lower_shoe_1">
+      <origin xyz="0 0.075 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.055 0.028" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="main_carriage_plate">
+      <origin xyz="0 0 0.0445" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.23 0.035" />
+        </geometry>
+      <material name="blue_carriage_anodized">
+        <color rgba="0.05 0.16 0.42 1" />
+        </material>
+      </visual>
+    <visual name="tip_rail_0">
+      <origin xyz="0.02 -0.045 0.072" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.018 0.022" />
+        </geometry>
+      <material name="polished_linear_rail_steel">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="tip_rail_1">
+      <origin xyz="0.02 0.045 0.072" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.018 0.022" />
+        </geometry>
+      <material name="polished_linear_rail_steel">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="carriage_bolt_0">
+      <origin xyz="-0.125 -0.09 0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <visual name="carriage_bolt_1">
+      <origin xyz="0.125 -0.09 0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <visual name="carriage_bolt_2">
+      <origin xyz="-0.125 0.09 0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <visual name="carriage_bolt_3">
+      <origin xyz="0.125 0.09 0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <visual name="rear_wiper">
+      <origin xyz="-0.172 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.18 0.024" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_wiper">
+      <origin xyz="0.172 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.18 0.024" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <collision name="lower_shoe_0">
+      <origin xyz="0 -0.075 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.055 0.028" />
+        </geometry>
+      </collision>
+    <collision name="lower_shoe_1">
+      <origin xyz="0 0.075 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.055 0.028" />
+        </geometry>
+      </collision>
+    <collision name="main_carriage_plate">
+      <origin xyz="0 0 0.0445" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.23 0.035" />
+        </geometry>
+      </collision>
+    <collision name="tip_rail_0">
+      <origin xyz="0.02 -0.045 0.072" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.018 0.022" />
+        </geometry>
+      </collision>
+    <collision name="tip_rail_1">
+      <origin xyz="0.02 0.045 0.072" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.018 0.022" />
+        </geometry>
+      </collision>
+    <collision name="carriage_bolt_0">
+      <origin xyz="-0.125 -0.09 0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="carriage_bolt_1">
+      <origin xyz="0.125 -0.09 0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="carriage_bolt_2">
+      <origin xyz="-0.125 0.09 0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="carriage_bolt_3">
+      <origin xyz="0.125 0.09 0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="rear_wiper">
+      <origin xyz="-0.172 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.18 0.024" />
+        </geometry>
+      </collision>
+    <collision name="front_wiper">
+      <origin xyz="0.172 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.18 0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tip_stage">
+    <visual name="tip_shoe_0">
+      <origin xyz="0 -0.045 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.026 0.018" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tip_shoe_1">
+      <origin xyz="0 0.045 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.026 0.018" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tip_carriage_plate">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.13 0.026" />
+        </geometry>
+      <material name="orange_tip_stage">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="tooling_nose">
+      <origin xyz="0.13 0 0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.1 0.05" />
+        </geometry>
+      <material name="orange_tip_stage">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="tool_face">
+      <origin xyz="0.158 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.075 0.032" />
+        </geometry>
+      <material name="polished_linear_rail_steel">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="tip_bolt_0">
+      <origin xyz="0.045 -0.035 0.0445" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.003" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <visual name="tip_bolt_1">
+      <origin xyz="0.045 0.035 0.0445" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.003" />
+        </geometry>
+      <material name="dark_socket_heads">
+        <color rgba="0.02 0.02 0.024 1" />
+        </material>
+      </visual>
+    <collision name="tip_shoe_0">
+      <origin xyz="0 -0.045 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.026 0.018" />
+        </geometry>
+      </collision>
+    <collision name="tip_shoe_1">
+      <origin xyz="0 0.045 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.026 0.018" />
+        </geometry>
+      </collision>
+    <collision name="tip_carriage_plate">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.13 0.026" />
+        </geometry>
+      </collision>
+    <collision name="tooling_nose">
+      <origin xyz="0.13 0 0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.1 0.05" />
+        </geometry>
+      </collision>
+    <collision name="tool_face">
+      <origin xyz="0.158 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.075 0.032" />
+        </geometry>
+      </collision>
+    <collision name="tip_bolt_0">
+      <origin xyz="0.045 -0.035 0.0445" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="tip_bolt_1">
+      <origin xyz="0.045 0.035 0.0445" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="guide_to_large" type="prismatic">
+    <origin xyz="-0.19 0 0.085" rpy="0 0 0" />
+    <parent link="fixed_guide" />
+    <child link="large_stage" />
+    <axis xyz="1 0 0" />
+    <limit effort="250" velocity="0.45" lower="0" upper="0.38" />
+    </joint>
+  <joint name="large_to_tip" type="prismatic">
+    <origin xyz="-0.055 0 0.083" rpy="0 0 0" />
+    <parent link="large_stage" />
+    <child link="tip_stage" />
+    <axis xyz="1 0 0" />
+    <limit effort="80" velocity="0.35" lower="0" upper="0.15" />
+    </joint>
+  </robot>

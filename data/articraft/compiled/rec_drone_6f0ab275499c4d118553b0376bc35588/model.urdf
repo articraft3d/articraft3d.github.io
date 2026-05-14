@@ -1,0 +1,869 @@
+<robot name="folding_arm_hexarotor">
+  <material name="carbon_black">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="matte_graphite">
+    <color rgba="0.075 0.08 0.088 1" />
+    </material>
+  <material name="hinge_metal">
+    <color rgba="0.46 0.48 0.5 1" />
+    </material>
+  <material name="motor_dark">
+    <color rgba="0.03 0.034 0.04 1" />
+    </material>
+  <material name="prop_smoke">
+    <color rgba="0.05 0.06 0.07 0.72" />
+    </material>
+  <material name="blue_detail">
+    <color rgba="0.03 0.16 0.42 1" />
+    </material>
+  <link name="center_plate">
+    <visual name="hex_plate">
+      <geometry>
+        <mesh filename="assets/meshes/hex_center_plate.obj" />
+        </geometry>
+      <material name="carbon_black" />
+      </visual>
+    <visual name="flight_stack">
+      <origin xyz="0 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.02" />
+        </geometry>
+      <material name="matte_graphite" />
+      </visual>
+    <visual name="gps_puck">
+      <origin xyz="0 0 0.033" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.008" />
+        </geometry>
+      <material name="blue_detail" />
+      </visual>
+    <visual name="hinge_pad_0">
+      <origin xyz="0.145 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.04 0.01" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="hinge_barrel_0">
+      <origin xyz="0.14 0 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.054" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="hinge_pad_1">
+      <origin xyz="0.0725 0.125574 0.014" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.082 0.04 0.01" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="hinge_barrel_1">
+      <origin xyz="0.07 0.121244 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.054" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="hinge_pad_2">
+      <origin xyz="-0.0725 0.125574 0.014" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.082 0.04 0.01" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="hinge_barrel_2">
+      <origin xyz="-0.07 0.121244 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.054" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="hinge_pad_3">
+      <origin xyz="-0.145 1.77574e-17 0.014" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.082 0.04 0.01" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="hinge_barrel_3">
+      <origin xyz="-0.14 1.71451e-17 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.054" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="hinge_pad_4">
+      <origin xyz="-0.0725 -0.125574 0.014" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.082 0.04 0.01" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="hinge_barrel_4">
+      <origin xyz="-0.07 -0.121244 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.054" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="hinge_pad_5">
+      <origin xyz="0.0725 -0.125574 0.014" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="0.082 0.04 0.01" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="hinge_barrel_5">
+      <origin xyz="0.07 -0.121244 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.054" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <collision name="hex_plate">
+      <geometry>
+        <mesh filename="assets/meshes/hex_center_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="flight_stack">
+      <origin xyz="0 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="gps_puck">
+      <origin xyz="0 0 0.033" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pad_0">
+      <origin xyz="0.145 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.04 0.01" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel_0">
+      <origin xyz="0.14 0 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.054" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pad_1">
+      <origin xyz="0.0725 0.125574 0.014" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.082 0.04 0.01" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel_1">
+      <origin xyz="0.07 0.121244 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.054" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pad_2">
+      <origin xyz="-0.0725 0.125574 0.014" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.082 0.04 0.01" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel_2">
+      <origin xyz="-0.07 0.121244 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.054" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pad_3">
+      <origin xyz="-0.145 1.77574e-17 0.014" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.082 0.04 0.01" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel_3">
+      <origin xyz="-0.14 1.71451e-17 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.054" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pad_4">
+      <origin xyz="-0.0725 -0.125574 0.014" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.082 0.04 0.01" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel_4">
+      <origin xyz="-0.07 -0.121244 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.054" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pad_5">
+      <origin xyz="0.0725 -0.125574 0.014" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="0.082 0.04 0.01" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel_5">
+      <origin xyz="0.07 -0.121244 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.054" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="arm_0">
+    <visual name="root_lug">
+      <origin xyz="0.044 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.044 0.018" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="carbon_boom">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.365" />
+        </geometry>
+      <material name="carbon_black" />
+      </visual>
+    <visual name="wire_fairing">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.022 0.012" />
+        </geometry>
+      <material name="blue_detail" />
+      </visual>
+    <visual name="motor_pod">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      <material name="motor_dark" />
+      </visual>
+    <visual name="motor_cap">
+      <origin xyz="0.42 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_cap_ring.obj" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <collision name="root_lug">
+      <origin xyz="0.044 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.044 0.018" />
+        </geometry>
+      </collision>
+    <collision name="carbon_boom">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.365" />
+        </geometry>
+      </collision>
+    <collision name="wire_fairing">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.022 0.012" />
+        </geometry>
+      </collision>
+    <collision name="motor_pod">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="motor_cap">
+      <origin xyz="0.42 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_cap_ring.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller_0">
+    <visual name="prop_shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="two_blade_rotor">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller_0.obj" />
+        </geometry>
+      <material name="prop_smoke" />
+      </visual>
+    <collision name="prop_shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="two_blade_rotor">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller_0.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="arm_1">
+    <visual name="root_lug">
+      <origin xyz="0.044 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.044 0.018" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="carbon_boom">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.365" />
+        </geometry>
+      <material name="carbon_black" />
+      </visual>
+    <visual name="wire_fairing">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.022 0.012" />
+        </geometry>
+      <material name="blue_detail" />
+      </visual>
+    <visual name="motor_pod">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      <material name="motor_dark" />
+      </visual>
+    <visual name="motor_cap">
+      <origin xyz="0.42 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_cap_ring.obj" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <collision name="root_lug">
+      <origin xyz="0.044 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.044 0.018" />
+        </geometry>
+      </collision>
+    <collision name="carbon_boom">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.365" />
+        </geometry>
+      </collision>
+    <collision name="wire_fairing">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.022 0.012" />
+        </geometry>
+      </collision>
+    <collision name="motor_pod">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="motor_cap">
+      <origin xyz="0.42 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_cap_ring.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller_1">
+    <visual name="prop_shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="two_blade_rotor">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller_1.obj" />
+        </geometry>
+      <material name="prop_smoke" />
+      </visual>
+    <collision name="prop_shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="two_blade_rotor">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller_1.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="arm_2">
+    <visual name="root_lug">
+      <origin xyz="0.044 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.044 0.018" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="carbon_boom">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.365" />
+        </geometry>
+      <material name="carbon_black" />
+      </visual>
+    <visual name="wire_fairing">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.022 0.012" />
+        </geometry>
+      <material name="blue_detail" />
+      </visual>
+    <visual name="motor_pod">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      <material name="motor_dark" />
+      </visual>
+    <visual name="motor_cap">
+      <origin xyz="0.42 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_cap_ring.obj" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <collision name="root_lug">
+      <origin xyz="0.044 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.044 0.018" />
+        </geometry>
+      </collision>
+    <collision name="carbon_boom">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.365" />
+        </geometry>
+      </collision>
+    <collision name="wire_fairing">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.022 0.012" />
+        </geometry>
+      </collision>
+    <collision name="motor_pod">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="motor_cap">
+      <origin xyz="0.42 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_cap_ring.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller_2">
+    <visual name="prop_shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="two_blade_rotor">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller_2.obj" />
+        </geometry>
+      <material name="prop_smoke" />
+      </visual>
+    <collision name="prop_shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="two_blade_rotor">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller_2.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="arm_3">
+    <visual name="root_lug">
+      <origin xyz="0.044 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.044 0.018" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="carbon_boom">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.365" />
+        </geometry>
+      <material name="carbon_black" />
+      </visual>
+    <visual name="wire_fairing">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.022 0.012" />
+        </geometry>
+      <material name="blue_detail" />
+      </visual>
+    <visual name="motor_pod">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      <material name="motor_dark" />
+      </visual>
+    <visual name="motor_cap">
+      <origin xyz="0.42 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_cap_ring.obj" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <collision name="root_lug">
+      <origin xyz="0.044 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.044 0.018" />
+        </geometry>
+      </collision>
+    <collision name="carbon_boom">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.365" />
+        </geometry>
+      </collision>
+    <collision name="wire_fairing">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.022 0.012" />
+        </geometry>
+      </collision>
+    <collision name="motor_pod">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="motor_cap">
+      <origin xyz="0.42 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_cap_ring.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller_3">
+    <visual name="prop_shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="two_blade_rotor">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller_3.obj" />
+        </geometry>
+      <material name="prop_smoke" />
+      </visual>
+    <collision name="prop_shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="two_blade_rotor">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller_3.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="arm_4">
+    <visual name="root_lug">
+      <origin xyz="0.044 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.044 0.018" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="carbon_boom">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.365" />
+        </geometry>
+      <material name="carbon_black" />
+      </visual>
+    <visual name="wire_fairing">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.022 0.012" />
+        </geometry>
+      <material name="blue_detail" />
+      </visual>
+    <visual name="motor_pod">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      <material name="motor_dark" />
+      </visual>
+    <visual name="motor_cap">
+      <origin xyz="0.42 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_cap_ring.obj" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <collision name="root_lug">
+      <origin xyz="0.044 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.044 0.018" />
+        </geometry>
+      </collision>
+    <collision name="carbon_boom">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.365" />
+        </geometry>
+      </collision>
+    <collision name="wire_fairing">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.022 0.012" />
+        </geometry>
+      </collision>
+    <collision name="motor_pod">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="motor_cap">
+      <origin xyz="0.42 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_cap_ring.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller_4">
+    <visual name="prop_shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="two_blade_rotor">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller_4.obj" />
+        </geometry>
+      <material name="prop_smoke" />
+      </visual>
+    <collision name="prop_shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="two_blade_rotor">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller_4.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="arm_5">
+    <visual name="root_lug">
+      <origin xyz="0.044 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.044 0.018" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="carbon_boom">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.365" />
+        </geometry>
+      <material name="carbon_black" />
+      </visual>
+    <visual name="wire_fairing">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.022 0.012" />
+        </geometry>
+      <material name="blue_detail" />
+      </visual>
+    <visual name="motor_pod">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      <material name="motor_dark" />
+      </visual>
+    <visual name="motor_cap">
+      <origin xyz="0.42 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_cap_ring.obj" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <collision name="root_lug">
+      <origin xyz="0.044 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.044 0.018" />
+        </geometry>
+      </collision>
+    <collision name="carbon_boom">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.365" />
+        </geometry>
+      </collision>
+    <collision name="wire_fairing">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.022 0.012" />
+        </geometry>
+      </collision>
+    <collision name="motor_pod">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="motor_cap">
+      <origin xyz="0.42 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_cap_ring.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller_5">
+    <visual name="prop_shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      <material name="hinge_metal" />
+      </visual>
+    <visual name="two_blade_rotor">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller_5.obj" />
+        </geometry>
+      <material name="prop_smoke" />
+      </visual>
+    <collision name="prop_shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="two_blade_rotor">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller_5.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="arm_hinge_0" type="revolute">
+    <origin xyz="0.14 0 0.039" rpy="0 0 0" />
+    <parent link="center_plate" />
+    <child link="arm_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.4" lower="0" upper="3.14159" />
+    </joint>
+  <joint name="prop_axle_0" type="continuous">
+    <origin xyz="0.42 0 0.02" rpy="0 0 0" />
+    <parent link="arm_0" />
+    <child link="propeller_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="120" />
+    </joint>
+  <joint name="arm_hinge_1" type="revolute">
+    <origin xyz="0.07 0.121244 0.039" rpy="0 0 1.0472" />
+    <parent link="center_plate" />
+    <child link="arm_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.4" lower="0" upper="3.14159" />
+    </joint>
+  <joint name="prop_axle_1" type="continuous">
+    <origin xyz="0.42 0 0.02" rpy="0 0 0" />
+    <parent link="arm_1" />
+    <child link="propeller_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="120" />
+    </joint>
+  <joint name="arm_hinge_2" type="revolute">
+    <origin xyz="-0.07 0.121244 0.039" rpy="0 0 2.0944" />
+    <parent link="center_plate" />
+    <child link="arm_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.4" lower="0" upper="3.14159" />
+    </joint>
+  <joint name="prop_axle_2" type="continuous">
+    <origin xyz="0.42 0 0.02" rpy="0 0 0" />
+    <parent link="arm_2" />
+    <child link="propeller_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="120" />
+    </joint>
+  <joint name="arm_hinge_3" type="revolute">
+    <origin xyz="-0.14 1.71451e-17 0.039" rpy="0 0 3.14159" />
+    <parent link="center_plate" />
+    <child link="arm_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.4" lower="0" upper="3.14159" />
+    </joint>
+  <joint name="prop_axle_3" type="continuous">
+    <origin xyz="0.42 0 0.02" rpy="0 0 0" />
+    <parent link="arm_3" />
+    <child link="propeller_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="120" />
+    </joint>
+  <joint name="arm_hinge_4" type="revolute">
+    <origin xyz="-0.07 -0.121244 0.039" rpy="0 0 4.18879" />
+    <parent link="center_plate" />
+    <child link="arm_4" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.4" lower="0" upper="3.14159" />
+    </joint>
+  <joint name="prop_axle_4" type="continuous">
+    <origin xyz="0.42 0 0.02" rpy="0 0 0" />
+    <parent link="arm_4" />
+    <child link="propeller_4" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="120" />
+    </joint>
+  <joint name="arm_hinge_5" type="revolute">
+    <origin xyz="0.07 -0.121244 0.039" rpy="0 0 5.23599" />
+    <parent link="center_plate" />
+    <child link="arm_5" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.4" lower="0" upper="3.14159" />
+    </joint>
+  <joint name="prop_axle_5" type="continuous">
+    <origin xyz="0.42 0 0.02" rpy="0 0 0" />
+    <parent link="arm_5" />
+    <child link="propeller_5" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="120" />
+    </joint>
+  </robot>

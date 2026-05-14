@@ -1,0 +1,620 @@
+<robot name="stainless_food_processor">
+  <material name="brushed_stainless">
+    <color rgba="0.72 0.74 0.72 1" />
+    </material>
+  <material name="dark_stainless">
+    <color rgba="0.35 0.36 0.36 1" />
+    </material>
+  <material name="clear_polycarbonate">
+    <color rgba="0.72 0.88 1 0.34" />
+    </material>
+  <material name="black_control_panel">
+    <color rgba="0.015 0.017 0.018 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.045 0.045 0.045 1" />
+    </material>
+  <material name="white_markings">
+    <color rgba="0.94 0.94 0.9 1" />
+    </material>
+  <material name="start_green">
+    <color rgba="0.06 0.42 0.16 1" />
+    </material>
+  <material name="latch_gray">
+    <color rgba="0.21 0.23 0.25 1" />
+    </material>
+  <material name="sharp_blade_steel">
+    <color rgba="0.86 0.88 0.86 1" />
+    </material>
+  <link name="motor_base">
+    <inertial>
+      <mass value="5.8" />
+      <inertia ixx="0.0668933" ixy="0" ixz="0" iyy="0.0860333" iyz="0" izz="0.10614" />
+      </inertial>
+    <visual name="rounded_body">
+      <geometry>
+        <mesh filename="assets/meshes/motor_base_body.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="front_fascia">
+      <origin xyz="0 -0.154 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.008 0.088" />
+        </geometry>
+      <material name="black_control_panel">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bowl_socket">
+      <origin xyz="0 0 0.113" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.006" />
+        </geometry>
+      <material name="dark_stainless">
+        <color rgba="0.35 0.36 0.36 1" />
+        </material>
+      </visual>
+    <visual name="drive_coupler">
+      <origin xyz="0 0 0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.05" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_pad">
+      <origin xyz="0 0 -0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.26 0.018" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.045 0.045 0.045 1" />
+        </material>
+      </visual>
+    <collision name="rounded_body">
+      <geometry>
+        <mesh filename="assets/meshes/motor_base_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_fascia">
+      <origin xyz="0 -0.154 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.008 0.088" />
+        </geometry>
+      </collision>
+    <collision name="bowl_socket">
+      <origin xyz="0 0 0.113" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="drive_coupler">
+      <origin xyz="0 0 0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_pad">
+      <origin xyz="0 0 -0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.26 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="work_bowl">
+    <visual name="bowl_shell">
+      <geometry>
+        <mesh filename="assets/meshes/transparent_work_bowl_shell.obj" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.72 0.88 1 0.34" />
+        </material>
+      </visual>
+    <visual name="side_socket_0">
+      <origin xyz="-0.174 0 0.225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.076 0.04" />
+        </geometry>
+      <material name="latch_gray">
+        <color rgba="0.21 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="side_socket_1">
+      <origin xyz="0.174 0 0.225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.076 0.04" />
+        </geometry>
+      <material name="latch_gray">
+        <color rgba="0.21 0.23 0.25 1" />
+        </material>
+      </visual>
+    <collision name="bowl_shell">
+      <geometry>
+        <mesh filename="assets/meshes/transparent_work_bowl_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_socket_0">
+      <origin xyz="-0.174 0 0.225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.076 0.04" />
+        </geometry>
+      </collision>
+    <collision name="side_socket_1">
+      <origin xyz="0.174 0 0.225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.076 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="lid_front_panel">
+      <origin xyz="0 -0.059 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.302 0.188 0.014" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.72 0.88 1 0.34" />
+        </material>
+      </visual>
+    <visual name="lid_rear_panel">
+      <origin xyz="0 0.114 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.302 0.078 0.014" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.72 0.88 1 0.34" />
+        </material>
+      </visual>
+    <visual name="lid_side_panel_0">
+      <origin xyz="-0.093 0.055 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.046 0.014" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.72 0.88 1 0.34" />
+        </material>
+      </visual>
+    <visual name="lid_side_panel_1">
+      <origin xyz="0.093 0.055 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.046 0.014" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.72 0.88 1 0.34" />
+        </material>
+      </visual>
+    <visual name="raised_outer_rim">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/clear_lid_outer_rim.obj" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.72 0.88 1 0.34" />
+        </material>
+      </visual>
+    <visual name="feed_tube_front_wall">
+      <origin xyz="0 0.028 0.104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.01 0.18" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.72 0.88 1 0.34" />
+        </material>
+      </visual>
+    <visual name="feed_tube_rear_wall">
+      <origin xyz="0 0.082 0.104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.01 0.18" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.72 0.88 1 0.34" />
+        </material>
+      </visual>
+    <visual name="feed_tube_side_wall_0">
+      <origin xyz="-0.037 0.055 0.104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.064 0.18" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.72 0.88 1 0.34" />
+        </material>
+      </visual>
+    <visual name="feed_tube_side_wall_1">
+      <origin xyz="0.037 0.055 0.104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.064 0.18" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.72 0.88 1 0.34" />
+        </material>
+      </visual>
+    <visual name="front_latch_bar">
+      <origin xyz="0 -0.116 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.026 0.012" />
+        </geometry>
+      <material name="latch_gray">
+        <color rgba="0.21 0.23 0.25 1" />
+        </material>
+      </visual>
+    <collision name="lid_front_panel">
+      <origin xyz="0 -0.059 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.302 0.188 0.014" />
+        </geometry>
+      </collision>
+    <collision name="lid_rear_panel">
+      <origin xyz="0 0.114 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.302 0.078 0.014" />
+        </geometry>
+      </collision>
+    <collision name="lid_side_panel_0">
+      <origin xyz="-0.093 0.055 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.046 0.014" />
+        </geometry>
+      </collision>
+    <collision name="lid_side_panel_1">
+      <origin xyz="0.093 0.055 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.046 0.014" />
+        </geometry>
+      </collision>
+    <collision name="raised_outer_rim">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/clear_lid_outer_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="feed_tube_front_wall">
+      <origin xyz="0 0.028 0.104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.01 0.18" />
+        </geometry>
+      </collision>
+    <collision name="feed_tube_rear_wall">
+      <origin xyz="0 0.082 0.104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.01 0.18" />
+        </geometry>
+      </collision>
+    <collision name="feed_tube_side_wall_0">
+      <origin xyz="-0.037 0.055 0.104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.064 0.18" />
+        </geometry>
+      </collision>
+    <collision name="feed_tube_side_wall_1">
+      <origin xyz="0.037 0.055 0.104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.064 0.18" />
+        </geometry>
+      </collision>
+    <collision name="front_latch_bar">
+      <origin xyz="0 -0.116 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.026 0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pusher">
+    <visual name="sliding_plunger">
+      <geometry>
+        <mesh filename="assets/meshes/feed_pusher_body.obj" />
+        </geometry>
+      <material name="latch_gray">
+        <color rgba="0.21 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="wide_pusher_cap">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.096 0.074 0.024" />
+        </geometry>
+      <material name="latch_gray">
+        <color rgba="0.21 0.23 0.25 1" />
+        </material>
+      </visual>
+    <collision name="sliding_plunger">
+      <geometry>
+        <mesh filename="assets/meshes/feed_pusher_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="wide_pusher_cap">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.096 0.074 0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cutter_basket">
+    <visual name="drive_shaft">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.16" />
+        </geometry>
+      <material name="dark_stainless">
+        <color rgba="0.35 0.36 0.36 1" />
+        </material>
+      </visual>
+    <visual name="basket_shell">
+      <geometry>
+        <mesh filename="assets/meshes/perforated_cutter_basket_shell.obj" />
+        </geometry>
+      <material name="sharp_blade_steel">
+        <color rgba="0.86 0.88 0.86 1" />
+        </material>
+      </visual>
+    <visual name="swept_blade_0">
+      <origin xyz="0.03 0 0.074" rpy="0 0 0.1" />
+      <geometry>
+        <box size="0.12 0.02 0.006" />
+        </geometry>
+      <material name="sharp_blade_steel">
+        <color rgba="0.86 0.88 0.86 1" />
+        </material>
+      </visual>
+    <visual name="swept_blade_1">
+      <origin xyz="-0.03 0 0.083" rpy="0 0 3.24159" />
+      <geometry>
+        <box size="0.12 0.02 0.006" />
+        </geometry>
+      <material name="sharp_blade_steel">
+        <color rgba="0.86 0.88 0.86 1" />
+        </material>
+      </visual>
+    <collision name="drive_shaft">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="basket_shell">
+      <geometry>
+        <mesh filename="assets/meshes/perforated_cutter_basket_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="swept_blade_0">
+      <origin xyz="0.03 0 0.074" rpy="0 0 0.1" />
+      <geometry>
+        <box size="0.12 0.02 0.006" />
+        </geometry>
+      </collision>
+    <collision name="swept_blade_1">
+      <origin xyz="-0.03 0 0.083" rpy="0 0 3.24159" />
+      <geometry>
+        <box size="0.12 0.02 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="side_clamp_0">
+    <visual name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.066" />
+        </geometry>
+      <material name="latch_gray">
+        <color rgba="0.21 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="upright_arm">
+      <origin xyz="0 0 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.03 0.124" />
+        </geometry>
+      <material name="latch_gray">
+        <color rgba="0.21 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="lid_hook">
+      <origin xyz="0.04 0 0.121" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.03 0.02" />
+        </geometry>
+      <material name="latch_gray">
+        <color rgba="0.21 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="lower_thumb_tab">
+      <origin xyz="0.004 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.034 0.02" />
+        </geometry>
+      <material name="latch_gray">
+        <color rgba="0.21 0.23 0.25 1" />
+        </material>
+      </visual>
+    <collision name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.066" />
+        </geometry>
+      </collision>
+    <collision name="upright_arm">
+      <origin xyz="0 0 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.03 0.124" />
+        </geometry>
+      </collision>
+    <collision name="lid_hook">
+      <origin xyz="0.04 0 0.121" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.03 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lower_thumb_tab">
+      <origin xyz="0.004 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.034 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="side_clamp_1">
+    <visual name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.066" />
+        </geometry>
+      <material name="latch_gray">
+        <color rgba="0.21 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="upright_arm">
+      <origin xyz="0 0 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.03 0.124" />
+        </geometry>
+      <material name="latch_gray">
+        <color rgba="0.21 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="lid_hook">
+      <origin xyz="-0.04 0 0.121" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.03 0.02" />
+        </geometry>
+      <material name="latch_gray">
+        <color rgba="0.21 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="lower_thumb_tab">
+      <origin xyz="-0.004 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.034 0.02" />
+        </geometry>
+      <material name="latch_gray">
+        <color rgba="0.21 0.23 0.25 1" />
+        </material>
+      </visual>
+    <collision name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.066" />
+        </geometry>
+      </collision>
+    <collision name="upright_arm">
+      <origin xyz="0 0 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.03 0.124" />
+        </geometry>
+      </collision>
+    <collision name="lid_hook">
+      <origin xyz="-0.04 0 0.121" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.03 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lower_thumb_tab">
+      <origin xyz="-0.004 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.034 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="timer_dial">
+    <visual name="knurled_dial">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_timer_dial.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="pointer_mark">
+      <origin xyz="0 -0.031 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.02" />
+        </geometry>
+      <material name="white_markings">
+        <color rgba="0.94 0.94 0.9 1" />
+        </material>
+      </visual>
+    <collision name="knurled_dial">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_timer_dial.obj" />
+        </geometry>
+      </collision>
+    <collision name="pointer_mark">
+      <origin xyz="0 -0.031 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="start_button">
+    <visual name="button_cap">
+      <origin xyz="0 -0.007 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.014" />
+        </geometry>
+      <material name="start_green">
+        <color rgba="0.06 0.42 0.16 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.007 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_bowl" type="fixed">
+    <origin xyz="0 0 0.117" rpy="0 0 0" />
+    <parent link="motor_base" />
+    <child link="work_bowl" />
+    </joint>
+  <joint name="bowl_to_lid" type="floating">
+    <origin xyz="0 0 0.31" rpy="0 0 0" />
+    <parent link="work_bowl" />
+    <child link="lid" />
+    </joint>
+  <joint name="lid_to_pusher" type="prismatic">
+    <origin xyz="0 0.055 0.194" rpy="0 0 0" />
+    <parent link="lid" />
+    <child link="pusher" />
+    <axis xyz="0 0 -1" />
+    <limit effort="20" velocity="0.18" lower="0" upper="0.12" />
+    </joint>
+  <joint name="base_to_cutter" type="continuous">
+    <origin xyz="0 0 0.15" rpy="0 0 0" />
+    <parent link="motor_base" />
+    <child link="cutter_basket" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="30" />
+    </joint>
+  <joint name="bowl_to_side_clamp_0" type="revolute">
+    <origin xyz="-0.174 0 0.225" rpy="0 0 0" />
+    <parent link="work_bowl" />
+    <child link="side_clamp_0" />
+    <axis xyz="0 -1 0" />
+    <limit effort="4" velocity="2" lower="0" upper="1.1" />
+    </joint>
+  <joint name="bowl_to_side_clamp_1" type="revolute">
+    <origin xyz="0.174 0 0.225" rpy="0 0 0" />
+    <parent link="work_bowl" />
+    <child link="side_clamp_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="2" lower="0" upper="1.1" />
+    </joint>
+  <joint name="base_to_timer_dial" type="continuous">
+    <origin xyz="-0.048 -0.158 0.11" rpy="0 0 0" />
+    <parent link="motor_base" />
+    <child link="timer_dial" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.2" velocity="8" />
+    </joint>
+  <joint name="base_to_start_button" type="prismatic">
+    <origin xyz="0.056 -0.158 0.086" rpy="0 0 0" />
+    <parent link="motor_base" />
+    <child link="start_button" />
+    <axis xyz="0 1 0" />
+    <limit effort="6" velocity="0.05" lower="0" upper="0.008" />
+    </joint>
+  </robot>

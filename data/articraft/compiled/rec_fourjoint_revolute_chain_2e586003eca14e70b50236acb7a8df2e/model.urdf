@@ -1,0 +1,673 @@
+<robot name="four_link_deployable_arm">
+  <material name="clear_anodized_aluminum">
+    <color rgba="0.72 0.76 0.78 1" />
+    </material>
+  <material name="dark_graphite">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="black_bearing">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="amber_joint_bushing">
+    <color rgba="0.92 0.54 0.12 1" />
+    </material>
+  <material name="blue_black_glass">
+    <color rgba="0.02 0.07 0.12 0.85" />
+    </material>
+  <link name="base">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.18 0.024" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="pedestal">
+      <origin xyz="0 0 0.091" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.134" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="turntable">
+      <origin xyz="0 0 0.174" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.036" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.18 0.024" />
+        </geometry>
+      </collision>
+    <collision name="pedestal">
+      <origin xyz="0 0 0.091" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.134" />
+        </geometry>
+      </collision>
+    <collision name="turntable">
+      <origin xyz="0 0 0.174" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.036" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="link_0">
+    <visual name="beam">
+      <origin xyz="0.2075 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.415 0.038 0.028" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_recess">
+      <origin xyz="0.2225 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.026 0.006" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="yaw_hub">
+      <geometry>
+        <cylinder radius="0.055" length="0.045" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bushing">
+      <geometry>
+        <cylinder radius="0.03" length="0.052" />
+        </geometry>
+      <material name="amber_joint_bushing">
+        <color rgba="0.92 0.54 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_ear_pos">
+      <origin xyz="0.475 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.024 0.074" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="distal_ear_neg">
+      <origin xyz="0.475 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.024 0.074" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="distal_bridge">
+      <origin xyz="0.405 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.128 0.04" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="distal_cap_pos">
+      <origin xyz="0.48 0.068 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.008" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="distal_cap_neg">
+      <origin xyz="0.48 -0.068 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.008" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="distal_pin">
+      <origin xyz="0.48 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.132" />
+        </geometry>
+      <material name="amber_joint_bushing">
+        <color rgba="0.92 0.54 0.12 1" />
+        </material>
+      </visual>
+    <collision name="beam">
+      <origin xyz="0.2075 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.415 0.038 0.028" />
+        </geometry>
+      </collision>
+    <collision name="top_recess">
+      <origin xyz="0.2225 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.026 0.006" />
+        </geometry>
+      </collision>
+    <collision name="yaw_hub">
+      <geometry>
+        <cylinder radius="0.055" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="yaw_bushing">
+      <geometry>
+        <cylinder radius="0.03" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="distal_ear_pos">
+      <origin xyz="0.475 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.024 0.074" />
+        </geometry>
+      </collision>
+    <collision name="distal_ear_neg">
+      <origin xyz="0.475 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.024 0.074" />
+        </geometry>
+      </collision>
+    <collision name="distal_bridge">
+      <origin xyz="0.405 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.128 0.04" />
+        </geometry>
+      </collision>
+    <collision name="distal_cap_pos">
+      <origin xyz="0.48 0.068 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="distal_cap_neg">
+      <origin xyz="0.48 -0.068 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="distal_pin">
+      <origin xyz="0.48 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.132" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="link_1">
+    <visual name="beam">
+      <origin xyz="0.1925 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.325 0.038 0.028" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_recess">
+      <origin xyz="0.2075 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.026 0.006" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="proximal_lug">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.05" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="proximal_bushing">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.058" />
+        </geometry>
+      <material name="amber_joint_bushing">
+        <color rgba="0.92 0.54 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_ear_pos">
+      <origin xyz="0.415 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.024 0.074" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="distal_ear_neg">
+      <origin xyz="0.415 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.024 0.074" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="distal_bridge">
+      <origin xyz="0.345 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.128 0.04" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="distal_cap_pos">
+      <origin xyz="0.42 0.068 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.008" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="distal_cap_neg">
+      <origin xyz="0.42 -0.068 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.008" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="distal_pin">
+      <origin xyz="0.42 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.132" />
+        </geometry>
+      <material name="amber_joint_bushing">
+        <color rgba="0.92 0.54 0.12 1" />
+        </material>
+      </visual>
+    <collision name="beam">
+      <origin xyz="0.1925 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.325 0.038 0.028" />
+        </geometry>
+      </collision>
+    <collision name="top_recess">
+      <origin xyz="0.2075 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.026 0.006" />
+        </geometry>
+      </collision>
+    <collision name="proximal_lug">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="proximal_bushing">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="distal_ear_pos">
+      <origin xyz="0.415 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.024 0.074" />
+        </geometry>
+      </collision>
+    <collision name="distal_ear_neg">
+      <origin xyz="0.415 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.024 0.074" />
+        </geometry>
+      </collision>
+    <collision name="distal_bridge">
+      <origin xyz="0.345 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.128 0.04" />
+        </geometry>
+      </collision>
+    <collision name="distal_cap_pos">
+      <origin xyz="0.42 0.068 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="distal_cap_neg">
+      <origin xyz="0.42 -0.068 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="distal_pin">
+      <origin xyz="0.42 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.132" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="link_2">
+    <visual name="beam">
+      <origin xyz="0.1525 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.038 0.028" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_recess">
+      <origin xyz="0.1675 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.026 0.006" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="proximal_lug">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.05" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="proximal_bushing">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.058" />
+        </geometry>
+      <material name="amber_joint_bushing">
+        <color rgba="0.92 0.54 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_ear_pos">
+      <origin xyz="0.335 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.024 0.074" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="distal_ear_neg">
+      <origin xyz="0.335 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.024 0.074" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="distal_bridge">
+      <origin xyz="0.265 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.128 0.04" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="distal_cap_pos">
+      <origin xyz="0.34 0.068 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.008" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="distal_cap_neg">
+      <origin xyz="0.34 -0.068 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.008" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="distal_pin">
+      <origin xyz="0.34 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.132" />
+        </geometry>
+      <material name="amber_joint_bushing">
+        <color rgba="0.92 0.54 0.12 1" />
+        </material>
+      </visual>
+    <collision name="beam">
+      <origin xyz="0.1525 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.038 0.028" />
+        </geometry>
+      </collision>
+    <collision name="top_recess">
+      <origin xyz="0.1675 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.026 0.006" />
+        </geometry>
+      </collision>
+    <collision name="proximal_lug">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="proximal_bushing">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="distal_ear_pos">
+      <origin xyz="0.335 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.024 0.074" />
+        </geometry>
+      </collision>
+    <collision name="distal_ear_neg">
+      <origin xyz="0.335 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.024 0.074" />
+        </geometry>
+      </collision>
+    <collision name="distal_bridge">
+      <origin xyz="0.265 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.128 0.04" />
+        </geometry>
+      </collision>
+    <collision name="distal_cap_pos">
+      <origin xyz="0.34 0.068 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="distal_cap_neg">
+      <origin xyz="0.34 -0.068 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="distal_pin">
+      <origin xyz="0.34 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.132" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="link_3">
+    <visual name="beam">
+      <origin xyz="0.145 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.038 0.028" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_recess">
+      <origin xyz="0.16 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.026 0.006" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="proximal_lug">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.05" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="proximal_bushing">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.058" />
+        </geometry>
+      <material name="amber_joint_bushing">
+        <color rgba="0.92 0.54 0.12 1" />
+        </material>
+      </visual>
+    <visual name="tip_clamp">
+      <origin xyz="0.2325 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.07 0.045" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <collision name="beam">
+      <origin xyz="0.145 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.038 0.028" />
+        </geometry>
+      </collision>
+    <collision name="top_recess">
+      <origin xyz="0.16 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.026 0.006" />
+        </geometry>
+      </collision>
+    <collision name="proximal_lug">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="proximal_bushing">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="tip_clamp">
+      <origin xyz="0.2325 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.07 0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="sensor_pod">
+    <visual name="mount_foot">
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.058 0.038" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="pod_body">
+      <origin xyz="0.083 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.066 0.054" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0.135 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.018" />
+        </geometry>
+      <material name="blue_black_glass">
+        <color rgba="0.02 0.07 0.12 0.85" />
+        </material>
+      </visual>
+    <collision name="mount_foot">
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.058 0.038" />
+        </geometry>
+      </collision>
+    <collision name="pod_body">
+      <origin xyz="0.083 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.066 0.054" />
+        </geometry>
+      </collision>
+    <collision name="front_lens">
+      <origin xyz="0.135 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_yaw" type="revolute">
+    <origin xyz="0 0 0.215" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="link_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="25" velocity="1.4" lower="-1.57" upper="1.57" />
+    </joint>
+  <joint name="shoulder_pitch" type="revolute">
+    <origin xyz="0.48 0 0" rpy="0 0 0" />
+    <parent link="link_0" />
+    <child link="link_1" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="1.2" lower="-1.05" upper="1.45" />
+    </joint>
+  <joint name="elbow_pitch" type="revolute">
+    <origin xyz="0.42 0 0" rpy="0 0 0" />
+    <parent link="link_1" />
+    <child link="link_2" />
+    <axis xyz="0 -1 0" />
+    <limit effort="14" velocity="1.2" lower="-1.55" upper="1.55" />
+    </joint>
+  <joint name="wrist_pitch" type="revolute">
+    <origin xyz="0.34 0 0" rpy="0 0 0" />
+    <parent link="link_2" />
+    <child link="link_3" />
+    <axis xyz="0 -1 0" />
+    <limit effort="8" velocity="1.5" lower="-1.35" upper="1.35" />
+    </joint>
+  <joint name="tip_sensor_mount" type="fixed">
+    <origin xyz="0.26 0 0" rpy="0 0 0" />
+    <parent link="link_3" />
+    <child link="sensor_pod" />
+    </joint>
+  </robot>

@@ -1,0 +1,498 @@
+<robot name="wall_mounted_task_lamp">
+  <material name="matte_black">
+    <color rgba="0.025 0.026 0.028 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.58 0.6 0.62 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="warm_light">
+    <color rgba="1 0.78 0.35 0.9" />
+    </material>
+  <material name="soft_white">
+    <color rgba="0.96 0.93 0.84 1" />
+    </material>
+  <link name="wall_mount">
+    <visual name="wall_plate">
+      <origin xyz="-0.06 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.18 0.32" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="shoulder_standoff">
+      <origin xyz="-0.0375 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.04 0.05" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="shoulder_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.04" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="screw_n_n">
+      <origin xyz="-0.043 -0.055 -0.11" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="screw_n_p">
+      <origin xyz="-0.043 -0.055 0.11" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="screw_p_n">
+      <origin xyz="-0.043 0.055 -0.11" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="screw_p_p">
+      <origin xyz="-0.043 0.055 0.11" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="wall_plate">
+      <origin xyz="-0.06 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.18 0.32" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_standoff">
+      <origin xyz="-0.0375 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.04 0.05" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="screw_n_n">
+      <origin xyz="-0.043 -0.055 -0.11" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="screw_n_p">
+      <origin xyz="-0.043 -0.055 0.11" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="screw_p_n">
+      <origin xyz="-0.043 0.055 -0.11" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="screw_p_p">
+      <origin xyz="-0.043 0.055 0.11" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_arm">
+    <visual name="shoulder_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.105" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <visual name="shoulder_ear_0">
+      <origin xyz="0 -0.042 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="side_bar_0">
+      <origin xyz="0.18 -0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.012 0.018" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shoulder_tab_0">
+      <origin xyz="0.032 -0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.014 0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shoulder_ear_1">
+      <origin xyz="0 0.042 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="side_bar_1">
+      <origin xyz="0.18 0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.012 0.018" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shoulder_tab_1">
+      <origin xyz="0.032 0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.014 0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shoulder_bridge">
+      <origin xyz="0.075 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.096 0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="elbow_bridge">
+      <origin xyz="0.32 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.096 0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="elbow_barrel">
+      <origin xyz="0.36 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.038" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="shoulder_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.105" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_ear_0">
+      <origin xyz="0 -0.042 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_bar_0">
+      <origin xyz="0.18 -0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.012 0.018" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_tab_0">
+      <origin xyz="0.032 -0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.014 0.016" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_ear_1">
+      <origin xyz="0 0.042 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_bar_1">
+      <origin xyz="0.18 0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.012 0.018" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_tab_1">
+      <origin xyz="0.032 0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.014 0.016" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bridge">
+      <origin xyz="0.075 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.096 0.016" />
+        </geometry>
+      </collision>
+    <collision name="elbow_bridge">
+      <origin xyz="0.32 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.096 0.016" />
+        </geometry>
+      </collision>
+    <collision name="elbow_barrel">
+      <origin xyz="0.36 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.038" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="forearm">
+    <visual name="elbow_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.105" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <visual name="elbow_ear_0">
+      <origin xyz="0 -0.042 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="side_bar_0">
+      <origin xyz="0.165 -0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.292 0.012 0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="elbow_tab_0">
+      <origin xyz="0.03 -0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.014 0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shade_yoke_0">
+      <origin xyz="0.33 -0.042 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.018" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shade_tab_0">
+      <origin xyz="0.3 -0.042 -0.02535" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.014 0.0133" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="elbow_ear_1">
+      <origin xyz="0 0.042 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="side_bar_1">
+      <origin xyz="0.165 0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.292 0.012 0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="elbow_tab_1">
+      <origin xyz="0.03 0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.014 0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shade_yoke_1">
+      <origin xyz="0.33 0.042 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.018" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shade_tab_1">
+      <origin xyz="0.3 0.042 -0.02535" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.014 0.0133" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="elbow_bridge">
+      <origin xyz="0.075 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.096 0.014" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="tip_bridge">
+      <origin xyz="0.25 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.096 0.014" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="elbow_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.105" />
+        </geometry>
+      </collision>
+    <collision name="elbow_ear_0">
+      <origin xyz="0 -0.042 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_bar_0">
+      <origin xyz="0.165 -0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.292 0.012 0.016" />
+        </geometry>
+      </collision>
+    <collision name="elbow_tab_0">
+      <origin xyz="0.03 -0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.014 0.016" />
+        </geometry>
+      </collision>
+    <collision name="shade_yoke_0">
+      <origin xyz="0.33 -0.042 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="shade_tab_0">
+      <origin xyz="0.3 -0.042 -0.02535" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.014 0.0133" />
+        </geometry>
+      </collision>
+    <collision name="elbow_ear_1">
+      <origin xyz="0 0.042 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_bar_1">
+      <origin xyz="0.165 0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.292 0.012 0.016" />
+        </geometry>
+      </collision>
+    <collision name="elbow_tab_1">
+      <origin xyz="0.03 0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.014 0.016" />
+        </geometry>
+      </collision>
+    <collision name="shade_yoke_1">
+      <origin xyz="0.33 0.042 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="shade_tab_1">
+      <origin xyz="0.3 0.042 -0.02535" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.014 0.0133" />
+        </geometry>
+      </collision>
+    <collision name="elbow_bridge">
+      <origin xyz="0.075 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.096 0.014" />
+        </geometry>
+      </collision>
+    <collision name="tip_bridge">
+      <origin xyz="0.25 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.096 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shade">
+    <visual name="shade_shell">
+      <geometry>
+        <mesh filename="assets/meshes/shade_shell.obj" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="shade_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.105" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shade_neck">
+      <origin xyz="0.044 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.026 0.036" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="socket">
+      <origin xyz="0.092 0 -0.055" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.06" />
+        </geometry>
+      <material name="soft_white" />
+      </visual>
+    <visual name="bulb">
+      <origin xyz="0.148 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.026" />
+        </geometry>
+      <material name="warm_light" />
+      </visual>
+    <collision name="shade_shell">
+      <geometry>
+        <mesh filename="assets/meshes/shade_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="shade_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.105" />
+        </geometry>
+      </collision>
+    <collision name="shade_neck">
+      <origin xyz="0.044 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.026 0.036" />
+        </geometry>
+      </collision>
+    <collision name="socket">
+      <origin xyz="0.092 0 -0.055" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="bulb">
+      <origin xyz="0.148 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shoulder_hinge" type="revolute">
+    <parent link="wall_mount" />
+    <child link="lower_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="1.4" lower="-0.7" upper="1.05" />
+    </joint>
+  <joint name="elbow_hinge" type="revolute">
+    <origin xyz="0.36 0 0" rpy="0 0 0" />
+    <parent link="lower_arm" />
+    <child link="forearm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="12" velocity="1.6" lower="-1.45" upper="1.45" />
+    </joint>
+  <joint name="shade_swivel" type="revolute">
+    <origin xyz="0.33 0 0" rpy="0 0 0" />
+    <parent link="forearm" />
+    <child link="shade" />
+    <axis xyz="0 -1 0" />
+    <limit effort="4" velocity="2" lower="-1.2" upper="1.2" />
+    </joint>
+  </robot>

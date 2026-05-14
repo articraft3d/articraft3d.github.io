@@ -1,0 +1,180 @@
+<robot name="retractable_ballpoint_pen">
+  <link name="barrel">
+    <visual name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      <material name="blue_resin">
+        <color rgba="0.04 0.1 0.34 1" />
+        </material>
+      </visual>
+    <visual name="top_collar">
+      <geometry>
+        <mesh filename="assets/meshes/top_collar.obj" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="button_bushing">
+      <geometry>
+        <mesh filename="assets/meshes/button_bushing.obj" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="nose_socket">
+      <geometry>
+        <mesh filename="assets/meshes/nose_socket.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="clip_strip">
+      <origin xyz="0 0.00635 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0032 0.00085 0.054" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.55 0.56 0.58 1" />
+        </material>
+      </visual>
+    <visual name="clip_anchor">
+      <origin xyz="0 0.00595 0.053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0052 0.0018 0.01" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.55 0.56 0.58 1" />
+        </material>
+      </visual>
+    <visual name="clip_lip">
+      <origin xyz="0 0.00655 -0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.0012 0.004" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.55 0.56 0.58 1" />
+        </material>
+      </visual>
+    <collision name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_collar">
+      <geometry>
+        <mesh filename="assets/meshes/top_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_bushing">
+      <geometry>
+        <mesh filename="assets/meshes/button_bushing.obj" />
+        </geometry>
+      </collision>
+    <collision name="nose_socket">
+      <geometry>
+        <mesh filename="assets/meshes/nose_socket.obj" />
+        </geometry>
+      </collision>
+    <collision name="clip_strip">
+      <origin xyz="0 0.00635 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0032 0.00085 0.054" />
+        </geometry>
+      </collision>
+    <collision name="clip_anchor">
+      <origin xyz="0 0.00595 0.053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0052 0.0018 0.01" />
+        </geometry>
+      </collision>
+    <collision name="clip_lip">
+      <origin xyz="0 0.00655 -0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.0012 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="plunger">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.0035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0037" length="0.007" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="button_stem">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0017" length="0.022" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.0035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0037" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="button_stem">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0017" length="0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tip">
+    <visual name="tip_tube">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00075" length="0.011" />
+        </geometry>
+      <material name="brass_tip">
+        <color rgba="0.92 0.68 0.26 1" />
+        </material>
+      </visual>
+    <visual name="ball_point">
+      <origin xyz="0 0 -0.00035" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.00045" />
+        </geometry>
+      <material name="black_ink">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <collision name="tip_tube">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00075" length="0.011" />
+        </geometry>
+      </collision>
+    <collision name="ball_point">
+      <origin xyz="0 0 -0.00035" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.00045" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="barrel_to_plunger" type="prismatic">
+    <origin xyz="0 0 0.064" rpy="0 0 0" />
+    <parent link="barrel" />
+    <child link="plunger" />
+    <axis xyz="0 0 -1" />
+    <limit effort="6" velocity="0.08" lower="0" upper="0.004" />
+    </joint>
+  <joint name="barrel_to_tip" type="prismatic">
+    <origin xyz="0 0 -0.072" rpy="0 0 0" />
+    <parent link="barrel" />
+    <child link="tip" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.1" lower="0" upper="0.006" />
+    <mimic joint="barrel_to_plunger" multiplier="1.5" />
+    </joint>
+  </robot>

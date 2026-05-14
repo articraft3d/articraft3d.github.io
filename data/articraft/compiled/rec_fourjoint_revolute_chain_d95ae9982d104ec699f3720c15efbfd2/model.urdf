@@ -1,0 +1,942 @@
+<robot name="compact_accordion_arm">
+  <material name="dark_anodized">
+    <color rgba="0.06 0.065 0.07 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.72 0.7 0.66 1" />
+    </material>
+  <material name="stop_black">
+    <color rgba="0.015 0.014 0.012 1" />
+    </material>
+  <link name="root_bracket">
+    <visual name="mount_foot">
+      <origin xyz="-0.01 0 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 0.014" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="back_plate">
+      <origin xyz="-0.055 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.12 0.11" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="clevis_cheek_pos">
+      <origin xyz="-0.005 0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.012 0.08" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="root_pin_cap_pos">
+      <origin xyz="0 0.047 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="clevis_cheek_neg">
+      <origin xyz="-0.005 -0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.012 0.08" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="root_pin_cap_neg">
+      <origin xyz="0 -0.047 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="clevis_floor">
+      <origin xyz="-0.006 0 -0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.088 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="root_stop_bar">
+      <origin xyz="0.038 0 -0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.075 0.01" />
+        </geometry>
+      <material name="stop_black" />
+      </visual>
+    <collision name="mount_foot">
+      <origin xyz="-0.01 0 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 0.014" />
+        </geometry>
+      </collision>
+    <collision name="back_plate">
+      <origin xyz="-0.055 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.12 0.11" />
+        </geometry>
+      </collision>
+    <collision name="clevis_cheek_pos">
+      <origin xyz="-0.005 0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.012 0.08" />
+        </geometry>
+      </collision>
+    <collision name="root_pin_cap_pos">
+      <origin xyz="0 0.047 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="clevis_cheek_neg">
+      <origin xyz="-0.005 -0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.012 0.08" />
+        </geometry>
+      </collision>
+    <collision name="root_pin_cap_neg">
+      <origin xyz="0 -0.047 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="clevis_floor">
+      <origin xyz="-0.006 0 -0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.088 0.012" />
+        </geometry>
+      </collision>
+    <collision name="root_stop_bar">
+      <origin xyz="0.038 0 -0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.075 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="link_0">
+    <visual name="side_plate_pos">
+      <origin xyz="0.066 0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_boss_pos">
+      <origin xyz="0 0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_pin_cap_pos">
+      <origin xyz="0 0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="side_plate_neg">
+      <origin xyz="0.066 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_boss_neg">
+      <origin xyz="0 -0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_pin_cap_neg">
+      <origin xyz="0 -0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="hinge_block">
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.04 0.034" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="block_pin_boss">
+      <origin xyz="0.16 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="block_side_web_pos">
+      <origin xyz="0.1225 0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="block_side_web_neg">
+      <origin xyz="0.1225 -0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="fold_stop_tooth">
+      <origin xyz="0.13 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="stop_black" />
+      </visual>
+    <visual name="open_stop_tooth">
+      <origin xyz="0.18 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="stop_black" />
+      </visual>
+    <collision name="side_plate_pos">
+      <origin xyz="0.066 0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_boss_pos">
+      <origin xyz="0 0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_pin_cap_pos">
+      <origin xyz="0 0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="side_plate_neg">
+      <origin xyz="0.066 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_boss_neg">
+      <origin xyz="0 -0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_pin_cap_neg">
+      <origin xyz="0 -0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="hinge_block">
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.04 0.034" />
+        </geometry>
+      </collision>
+    <collision name="block_pin_boss">
+      <origin xyz="0.16 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="block_side_web_pos">
+      <origin xyz="0.1225 0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      </collision>
+    <collision name="block_side_web_neg">
+      <origin xyz="0.1225 -0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      </collision>
+    <collision name="fold_stop_tooth">
+      <origin xyz="0.13 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    <collision name="open_stop_tooth">
+      <origin xyz="0.18 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="link_1">
+    <visual name="side_plate_pos">
+      <origin xyz="0.066 0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_boss_pos">
+      <origin xyz="0 0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_pin_cap_pos">
+      <origin xyz="0 0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="side_plate_neg">
+      <origin xyz="0.066 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_boss_neg">
+      <origin xyz="0 -0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_pin_cap_neg">
+      <origin xyz="0 -0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="hinge_block">
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.04 0.034" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="block_pin_boss">
+      <origin xyz="0.16 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="block_side_web_pos">
+      <origin xyz="0.1225 0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="block_side_web_neg">
+      <origin xyz="0.1225 -0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="fold_stop_tooth">
+      <origin xyz="0.13 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="stop_black" />
+      </visual>
+    <visual name="open_stop_tooth">
+      <origin xyz="0.18 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="stop_black" />
+      </visual>
+    <collision name="side_plate_pos">
+      <origin xyz="0.066 0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_boss_pos">
+      <origin xyz="0 0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_pin_cap_pos">
+      <origin xyz="0 0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="side_plate_neg">
+      <origin xyz="0.066 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_boss_neg">
+      <origin xyz="0 -0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_pin_cap_neg">
+      <origin xyz="0 -0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="hinge_block">
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.04 0.034" />
+        </geometry>
+      </collision>
+    <collision name="block_pin_boss">
+      <origin xyz="0.16 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="block_side_web_pos">
+      <origin xyz="0.1225 0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      </collision>
+    <collision name="block_side_web_neg">
+      <origin xyz="0.1225 -0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      </collision>
+    <collision name="fold_stop_tooth">
+      <origin xyz="0.13 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    <collision name="open_stop_tooth">
+      <origin xyz="0.18 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="link_2">
+    <visual name="side_plate_pos">
+      <origin xyz="0.066 0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_boss_pos">
+      <origin xyz="0 0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_pin_cap_pos">
+      <origin xyz="0 0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="side_plate_neg">
+      <origin xyz="0.066 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_boss_neg">
+      <origin xyz="0 -0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_pin_cap_neg">
+      <origin xyz="0 -0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="hinge_block">
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.04 0.034" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="block_pin_boss">
+      <origin xyz="0.16 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="block_side_web_pos">
+      <origin xyz="0.1225 0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="block_side_web_neg">
+      <origin xyz="0.1225 -0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="fold_stop_tooth">
+      <origin xyz="0.13 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="stop_black" />
+      </visual>
+    <visual name="open_stop_tooth">
+      <origin xyz="0.18 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="stop_black" />
+      </visual>
+    <collision name="side_plate_pos">
+      <origin xyz="0.066 0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_boss_pos">
+      <origin xyz="0 0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_pin_cap_pos">
+      <origin xyz="0 0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="side_plate_neg">
+      <origin xyz="0.066 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_boss_neg">
+      <origin xyz="0 -0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_pin_cap_neg">
+      <origin xyz="0 -0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="hinge_block">
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.04 0.034" />
+        </geometry>
+      </collision>
+    <collision name="block_pin_boss">
+      <origin xyz="0.16 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="block_side_web_pos">
+      <origin xyz="0.1225 0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      </collision>
+    <collision name="block_side_web_neg">
+      <origin xyz="0.1225 -0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      </collision>
+    <collision name="fold_stop_tooth">
+      <origin xyz="0.13 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    <collision name="open_stop_tooth">
+      <origin xyz="0.18 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="link_3">
+    <visual name="side_plate_pos">
+      <origin xyz="0.066 0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_boss_pos">
+      <origin xyz="0 0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_pin_cap_pos">
+      <origin xyz="0 0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="side_plate_neg">
+      <origin xyz="0.066 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_boss_neg">
+      <origin xyz="0 -0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_pin_cap_neg">
+      <origin xyz="0 -0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="hinge_block">
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.04 0.034" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="block_pin_boss">
+      <origin xyz="0.16 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="block_side_web_pos">
+      <origin xyz="0.1225 0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="block_side_web_neg">
+      <origin xyz="0.1225 -0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="fold_stop_tooth">
+      <origin xyz="0.13 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="stop_black" />
+      </visual>
+    <visual name="open_stop_tooth">
+      <origin xyz="0.18 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="stop_black" />
+      </visual>
+    <collision name="side_plate_pos">
+      <origin xyz="0.066 0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_boss_pos">
+      <origin xyz="0 0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_pin_cap_pos">
+      <origin xyz="0 0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="side_plate_neg">
+      <origin xyz="0.066 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.012 0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_boss_neg">
+      <origin xyz="0 -0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_pin_cap_neg">
+      <origin xyz="0 -0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="hinge_block">
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.04 0.034" />
+        </geometry>
+      </collision>
+    <collision name="block_pin_boss">
+      <origin xyz="0.16 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="block_side_web_pos">
+      <origin xyz="0.1225 0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      </collision>
+    <collision name="block_side_web_neg">
+      <origin xyz="0.1225 -0.021 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.022 0.008" />
+        </geometry>
+      </collision>
+    <collision name="fold_stop_tooth">
+      <origin xyz="0.13 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    <collision name="open_stop_tooth">
+      <origin xyz="0.18 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="link_4">
+    <visual name="side_plate_pos">
+      <origin xyz="0.0775 0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.012 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_boss_pos">
+      <origin xyz="0 0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_pin_cap_pos">
+      <origin xyz="0 0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="side_plate_neg">
+      <origin xyz="0.0775 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.012 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_boss_neg">
+      <origin xyz="0 -0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="prox_pin_cap_neg">
+      <origin xyz="0 -0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="fork_tine_pos">
+      <origin xyz="0.186 0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.008 0.01" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="fork_boss_pos">
+      <origin xyz="0.212 0.015 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="fork_tine_neg">
+      <origin xyz="0.186 -0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.008 0.01" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="fork_boss_neg">
+      <origin xyz="0.212 -0.015 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="fork_bridge">
+      <origin xyz="0.156 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.044 0.01" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="fork_tip_stop">
+      <origin xyz="0.218 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.026 0.02" />
+        </geometry>
+      <material name="stop_black" />
+      </visual>
+    <collision name="side_plate_pos">
+      <origin xyz="0.0775 0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.012 0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_boss_pos">
+      <origin xyz="0 0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_pin_cap_pos">
+      <origin xyz="0 0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="side_plate_neg">
+      <origin xyz="0.0775 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.012 0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_boss_neg">
+      <origin xyz="0 -0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="prox_pin_cap_neg">
+      <origin xyz="0 -0.034 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="fork_tine_pos">
+      <origin xyz="0.186 0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.008 0.01" />
+        </geometry>
+      </collision>
+    <collision name="fork_boss_pos">
+      <origin xyz="0.212 0.015 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="fork_tine_neg">
+      <origin xyz="0.186 -0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.008 0.01" />
+        </geometry>
+      </collision>
+    <collision name="fork_boss_neg">
+      <origin xyz="0.212 -0.015 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="fork_bridge">
+      <origin xyz="0.156 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.044 0.01" />
+        </geometry>
+      </collision>
+    <collision name="fork_tip_stop">
+      <origin xyz="0.218 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.026 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="root_to_link_0" type="revolute">
+    <origin xyz="0 0 0" rpy="0 -0.0872665 0" />
+    <parent link="root_bracket" />
+    <child link="link_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="1.2" lower="0" upper="0.0872665" />
+    </joint>
+  <joint name="link_0_to_link_1" type="revolute">
+    <origin xyz="0.16 0 0" rpy="0 -2.6529 0" />
+    <parent link="link_0" />
+    <child link="link_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="1" lower="0" upper="2.56563" />
+    </joint>
+  <joint name="link_1_to_link_2" type="revolute">
+    <origin xyz="0.16 0 0" rpy="0 2.6529 0" />
+    <parent link="link_1" />
+    <child link="link_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="1" lower="-2.74017" upper="0" />
+    </joint>
+  <joint name="link_2_to_link_3" type="revolute">
+    <origin xyz="0.16 0 0" rpy="0 -2.6529 0" />
+    <parent link="link_2" />
+    <child link="link_3" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="1" lower="0" upper="2.56563" />
+    </joint>
+  <joint name="link_3_to_link_4" type="revolute">
+    <origin xyz="0.16 0 0" rpy="0 2.6529 0" />
+    <parent link="link_3" />
+    <child link="link_4" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="1" lower="-2.74017" upper="0" />
+    </joint>
+  </robot>

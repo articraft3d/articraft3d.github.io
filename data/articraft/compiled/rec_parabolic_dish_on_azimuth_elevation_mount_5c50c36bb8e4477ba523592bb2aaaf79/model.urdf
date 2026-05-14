@@ -1,0 +1,492 @@
+<robot name="ground_tracking_dish">
+  <material name="foundation_concrete">
+    <color rgba="0.45 0.43 0.39 1" />
+    </material>
+  <material name="weathered_dark_steel">
+    <color rgba="0.08 0.09 0.095 1" />
+    </material>
+  <material name="galvanized_steel">
+    <color rgba="0.55 0.57 0.58 1" />
+    </material>
+  <material name="black_bearing_rubber">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="matte_white_reflector">
+    <color rgba="0.86 0.88 0.84 1" />
+    </material>
+  <material name="feed_electronics_black">
+    <color rgba="0.02 0.022 0.025 1" />
+    </material>
+  <link name="base">
+    <visual name="ground_pad">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.52" length="0.08" />
+        </geometry>
+      <material name="foundation_concrete">
+        <color rgba="0.45 0.43 0.39 1" />
+        </material>
+      </visual>
+    <visual name="column">
+      <origin xyz="0 0 0.46" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.76" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="top_bearing">
+      <origin xyz="0 0 0.89" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.1" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <collision name="ground_pad">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.52" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="column">
+      <origin xyz="0 0 0.46" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.76" />
+        </geometry>
+      </collision>
+    <collision name="top_bearing">
+      <origin xyz="0 0 0.89" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.1" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="yoke">
+    <visual name="turntable_disk">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.36" length="0.08" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="yoke_base_bridge">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 1.78 0.08" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="side_post_0">
+      <origin xyz="0 -0.84 0.51" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.09 0.7" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_0">
+      <origin xyz="0 -0.84 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.09 0.1" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="elevation_bearing_0">
+      <origin xyz="0 -0.84 0.95" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/elevation_bearing_0.obj" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="yoke_brace_0_0">
+      <geometry>
+        <mesh filename="assets/meshes/yoke_brace_0_0.obj" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="yoke_brace_0_1">
+      <geometry>
+        <mesh filename="assets/meshes/yoke_brace_0_1.obj" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="side_post_1">
+      <origin xyz="0 0.84 0.51" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.09 0.7" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_1">
+      <origin xyz="0 0.84 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.09 0.1" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="elevation_bearing_1">
+      <origin xyz="0 0.84 0.95" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/elevation_bearing_1.obj" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="yoke_brace_1_0">
+      <geometry>
+        <mesh filename="assets/meshes/yoke_brace_1_0.obj" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="yoke_brace_1_1">
+      <geometry>
+        <mesh filename="assets/meshes/yoke_brace_1_1.obj" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <collision name="turntable_disk">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.36" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="yoke_base_bridge">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 1.78 0.08" />
+        </geometry>
+      </collision>
+    <collision name="side_post_0">
+      <origin xyz="0 -0.84 0.51" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.09 0.7" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap_0">
+      <origin xyz="0 -0.84 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.09 0.1" />
+        </geometry>
+      </collision>
+    <collision name="elevation_bearing_0">
+      <origin xyz="0 -0.84 0.95" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/elevation_bearing_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="yoke_brace_0_0">
+      <geometry>
+        <mesh filename="assets/meshes/yoke_brace_0_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="yoke_brace_0_1">
+      <geometry>
+        <mesh filename="assets/meshes/yoke_brace_0_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_post_1">
+      <origin xyz="0 0.84 0.51" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.09 0.7" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap_1">
+      <origin xyz="0 0.84 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.09 0.1" />
+        </geometry>
+      </collision>
+    <collision name="elevation_bearing_1">
+      <origin xyz="0 0.84 0.95" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/elevation_bearing_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="yoke_brace_1_0">
+      <geometry>
+        <mesh filename="assets/meshes/yoke_brace_1_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="yoke_brace_1_1">
+      <geometry>
+        <mesh filename="assets/meshes/yoke_brace_1_1.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dish">
+    <visual name="reflector_shell">
+      <geometry>
+        <mesh filename="assets/meshes/reflector_shell.obj" />
+        </geometry>
+      <material name="matte_white_reflector">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rim_ring">
+      <origin xyz="0.05 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rim_ring.obj" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="elevation_axle">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.077" length="1.76" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_plate_0">
+      <origin xyz="-0.035 -0.72 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.05 0.18" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_plate_1">
+      <origin xyz="-0.035 0.72 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.05 0.18" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="rear_hub">
+      <origin xyz="-0.58 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.14" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="rear_truss_0">
+      <geometry>
+        <mesh filename="assets/meshes/rear_truss_0.obj" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="rear_truss_1">
+      <geometry>
+        <mesh filename="assets/meshes/rear_truss_1.obj" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="rear_truss_2">
+      <geometry>
+        <mesh filename="assets/meshes/rear_truss_2.obj" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="rear_truss_3">
+      <geometry>
+        <mesh filename="assets/meshes/rear_truss_3.obj" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="rear_truss_4">
+      <geometry>
+        <mesh filename="assets/meshes/rear_truss_4.obj" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="rear_truss_5">
+      <geometry>
+        <mesh filename="assets/meshes/rear_truss_5.obj" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="feed_boom">
+      <origin xyz="0.4 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.72" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="feed_horn">
+      <origin xyz="0.8 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.12" />
+        </geometry>
+      <material name="feed_electronics_black">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <visual name="feed_strut_0">
+      <geometry>
+        <mesh filename="assets/meshes/feed_strut_0.obj" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="feed_strut_1">
+      <geometry>
+        <mesh filename="assets/meshes/feed_strut_1.obj" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <visual name="feed_strut_2">
+      <geometry>
+        <mesh filename="assets/meshes/feed_strut_2.obj" />
+        </geometry>
+      <material name="weathered_dark_steel">
+        <color rgba="0.08 0.09 0.095 1" />
+        </material>
+      </visual>
+    <collision name="reflector_shell">
+      <geometry>
+        <mesh filename="assets/meshes/reflector_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="rim_ring">
+      <origin xyz="0.05 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rim_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="elevation_axle">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.077" length="1.76" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_plate_0">
+      <origin xyz="-0.035 -0.72 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.05 0.18" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_plate_1">
+      <origin xyz="-0.035 0.72 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.05 0.18" />
+        </geometry>
+      </collision>
+    <collision name="rear_hub">
+      <origin xyz="-0.58 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.14" />
+        </geometry>
+      </collision>
+    <collision name="rear_truss_0">
+      <geometry>
+        <mesh filename="assets/meshes/rear_truss_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_truss_1">
+      <geometry>
+        <mesh filename="assets/meshes/rear_truss_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_truss_2">
+      <geometry>
+        <mesh filename="assets/meshes/rear_truss_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_truss_3">
+      <geometry>
+        <mesh filename="assets/meshes/rear_truss_3.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_truss_4">
+      <geometry>
+        <mesh filename="assets/meshes/rear_truss_4.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_truss_5">
+      <geometry>
+        <mesh filename="assets/meshes/rear_truss_5.obj" />
+        </geometry>
+      </collision>
+    <collision name="feed_boom">
+      <origin xyz="0.4 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.72" />
+        </geometry>
+      </collision>
+    <collision name="feed_horn">
+      <origin xyz="0.8 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="feed_strut_0">
+      <geometry>
+        <mesh filename="assets/meshes/feed_strut_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="feed_strut_1">
+      <geometry>
+        <mesh filename="assets/meshes/feed_strut_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="feed_strut_2">
+      <geometry>
+        <mesh filename="assets/meshes/feed_strut_2.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="azimuth" type="revolute">
+    <origin xyz="0 0 0.94" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="yoke" />
+    <axis xyz="0 0 1" />
+    <limit effort="900" velocity="0.35" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="elevation" type="revolute">
+    <origin xyz="0 0 0.95" rpy="0 0 0" />
+    <parent link="yoke" />
+    <child link="dish" />
+    <axis xyz="0 -1 0" />
+    <limit effort="650" velocity="0.25" lower="-0.1" upper="1.25" />
+    </joint>
+  </robot>

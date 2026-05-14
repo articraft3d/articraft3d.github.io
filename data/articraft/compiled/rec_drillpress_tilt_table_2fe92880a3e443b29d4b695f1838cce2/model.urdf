@@ -1,0 +1,839 @@
+<robot name="magnetic_base_drill_stand">
+  <material name="magnet_blue">
+    <color rgba="0.03 0.08 0.16 1" />
+    </material>
+  <material name="dark_cast">
+    <color rgba="0.025 0.028 0.032 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.62 0.64 0.62 1" />
+    </material>
+  <material name="black_oxide">
+    <color rgba="0.005 0.005 0.006 1" />
+    </material>
+  <material name="rack_black">
+    <color rgba="0.015 0.015 0.015 1" />
+    </material>
+  <material name="warning_yellow">
+    <color rgba="1 0.72 0.05 1" />
+    </material>
+  <material name="red_switch">
+    <color rgba="0.75 0.02 0.015 1" />
+    </material>
+  <link name="base">
+    <visual name="magnet_sole">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.32 0.026" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="magnet_case">
+      <origin xyz="0 0 0.068" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.3 0.084" />
+        </geometry>
+      <material name="magnet_blue" />
+      </visual>
+    <visual name="front_label">
+      <origin xyz="0 -0.1525 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.005 0.035" />
+        </geometry>
+      <material name="warning_yellow" />
+      </visual>
+    <visual name="sleeve_side_0">
+      <origin xyz="-0.055 0.08 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.095 0.26" />
+        </geometry>
+      <material name="dark_cast" />
+      </visual>
+    <visual name="sleeve_side_1">
+      <origin xyz="0.055 0.08 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.095 0.26" />
+        </geometry>
+      <material name="dark_cast" />
+      </visual>
+    <visual name="sleeve_front">
+      <origin xyz="0 0.032 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.014 0.26" />
+        </geometry>
+      <material name="dark_cast" />
+      </visual>
+    <visual name="sleeve_rear">
+      <origin xyz="0 0.128 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.014 0.26" />
+        </geometry>
+      <material name="dark_cast" />
+      </visual>
+    <visual name="left_gusset">
+      <origin xyz="-0.14 0.07 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.15 0.145" />
+        </geometry>
+      <material name="dark_cast" />
+      </visual>
+    <visual name="right_gusset">
+      <origin xyz="0.14 0.07 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.15 0.145" />
+        </geometry>
+      <material name="dark_cast" />
+      </visual>
+    <collision name="magnet_sole">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.32 0.026" />
+        </geometry>
+      </collision>
+    <collision name="magnet_case">
+      <origin xyz="0 0 0.068" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.3 0.084" />
+        </geometry>
+      </collision>
+    <collision name="front_label">
+      <origin xyz="0 -0.1525 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.005 0.035" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_side_0">
+      <origin xyz="-0.055 0.08 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.095 0.26" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_side_1">
+      <origin xyz="0.055 0.08 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.095 0.26" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_front">
+      <origin xyz="0 0.032 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.014 0.26" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_rear">
+      <origin xyz="0 0.128 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.014 0.26" />
+        </geometry>
+      </collision>
+    <collision name="left_gusset">
+      <origin xyz="-0.14 0.07 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.15 0.145" />
+        </geometry>
+      </collision>
+    <collision name="right_gusset">
+      <origin xyz="0.14 0.07 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.15 0.145" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="magnet_switch">
+    <visual name="switch_rocker">
+      <geometry>
+        <box size="0.035 0.006 0.026" />
+        </geometry>
+      <material name="red_switch" />
+      </visual>
+    <collision name="switch_rocker">
+      <geometry>
+        <box size="0.035 0.006 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="column">
+    <visual name="column_tube">
+      <origin xyz="0 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.055 0.72" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="top_stop">
+      <origin xyz="0 0 0.5375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.075 0.035" />
+        </geometry>
+      <material name="dark_cast" />
+      </visual>
+    <visual name="lower_slide_pad_0">
+      <origin xyz="-0.03925 0 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0135 0.04 0.24" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="lower_slide_pad_1">
+      <origin xyz="0.03925 0 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0135 0.04 0.24" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_web">
+      <origin xyz="0.068 -0.0465 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.038 0.035" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_strip">
+      <origin xyz="0.105 -0.066 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.6" />
+        </geometry>
+      <material name="rack_black" />
+      </visual>
+    <visual name="rack_tooth_0">
+      <origin xyz="0.105 -0.077 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_1">
+      <origin xyz="0.105 -0.077 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_2">
+      <origin xyz="0.105 -0.077 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_3">
+      <origin xyz="0.105 -0.077 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_4">
+      <origin xyz="0.105 -0.077 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_5">
+      <origin xyz="0.105 -0.077 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_6">
+      <origin xyz="0.105 -0.077 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_7">
+      <origin xyz="0.105 -0.077 0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_8">
+      <origin xyz="0.105 -0.077 0.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_9">
+      <origin xyz="0.105 -0.077 0.166" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_10">
+      <origin xyz="0.105 -0.077 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_11">
+      <origin xyz="0.105 -0.077 0.214" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_12">
+      <origin xyz="0.105 -0.077 0.238" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_13">
+      <origin xyz="0.105 -0.077 0.262" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_14">
+      <origin xyz="0.105 -0.077 0.286" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_15">
+      <origin xyz="0.105 -0.077 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_16">
+      <origin xyz="0.105 -0.077 0.334" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_17">
+      <origin xyz="0.105 -0.077 0.358" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_18">
+      <origin xyz="0.105 -0.077 0.382" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_19">
+      <origin xyz="0.105 -0.077 0.406" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_20">
+      <origin xyz="0.105 -0.077 0.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_21">
+      <origin xyz="0.105 -0.077 0.454" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_22">
+      <origin xyz="0.105 -0.077 0.478" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rack_tooth_23">
+      <origin xyz="0.105 -0.077 0.502" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="height_scale">
+      <origin xyz="-0.0355 -0.0295 0.175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.004 0.5" />
+        </geometry>
+      <material name="warning_yellow" />
+      </visual>
+    <collision name="column_tube">
+      <origin xyz="0 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.055 0.72" />
+        </geometry>
+      </collision>
+    <collision name="top_stop">
+      <origin xyz="0 0 0.5375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.075 0.035" />
+        </geometry>
+      </collision>
+    <collision name="lower_slide_pad_0">
+      <origin xyz="-0.03925 0 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0135 0.04 0.24" />
+        </geometry>
+      </collision>
+    <collision name="lower_slide_pad_1">
+      <origin xyz="0.03925 0 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0135 0.04 0.24" />
+        </geometry>
+      </collision>
+    <collision name="rack_web">
+      <origin xyz="0.068 -0.0465 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.038 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rack_strip">
+      <origin xyz="0.105 -0.066 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.6" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_0">
+      <origin xyz="0.105 -0.077 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_1">
+      <origin xyz="0.105 -0.077 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_2">
+      <origin xyz="0.105 -0.077 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_3">
+      <origin xyz="0.105 -0.077 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_4">
+      <origin xyz="0.105 -0.077 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_5">
+      <origin xyz="0.105 -0.077 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_6">
+      <origin xyz="0.105 -0.077 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_7">
+      <origin xyz="0.105 -0.077 0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_8">
+      <origin xyz="0.105 -0.077 0.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_9">
+      <origin xyz="0.105 -0.077 0.166" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_10">
+      <origin xyz="0.105 -0.077 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_11">
+      <origin xyz="0.105 -0.077 0.214" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_12">
+      <origin xyz="0.105 -0.077 0.238" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_13">
+      <origin xyz="0.105 -0.077 0.262" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_14">
+      <origin xyz="0.105 -0.077 0.286" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_15">
+      <origin xyz="0.105 -0.077 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_16">
+      <origin xyz="0.105 -0.077 0.334" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_17">
+      <origin xyz="0.105 -0.077 0.358" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_18">
+      <origin xyz="0.105 -0.077 0.382" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_19">
+      <origin xyz="0.105 -0.077 0.406" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_20">
+      <origin xyz="0.105 -0.077 0.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_21">
+      <origin xyz="0.105 -0.077 0.454" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_22">
+      <origin xyz="0.105 -0.077 0.478" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="rack_tooth_23">
+      <origin xyz="0.105 -0.077 0.502" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="height_scale">
+      <origin xyz="-0.0355 -0.0295 0.175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.004 0.5" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="spindle_head">
+    <visual name="slide_carriage">
+      <origin xyz="0 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.11 0.22" />
+        </geometry>
+      <material name="dark_cast" />
+      </visual>
+    <visual name="guide_shoe_0">
+      <origin xyz="-0.04 0.0835 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.007 0.205" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="guide_shoe_1">
+      <origin xyz="0.04 0.0835 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.007 0.205" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="motor_mount">
+      <origin xyz="0 -0.07 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.086 0.125" />
+        </geometry>
+      <material name="dark_cast" />
+      </visual>
+    <visual name="motor_case">
+      <origin xyz="0 -0.145 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.31" />
+        </geometry>
+      <material name="magnet_blue" />
+      </visual>
+    <visual name="motor_cap">
+      <origin xyz="0 -0.145 0.2" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.075" />
+        </geometry>
+      <material name="dark_cast" />
+      </visual>
+    <visual name="quill">
+      <origin xyz="0 -0.145 -0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.195" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="chuck">
+      <origin xyz="0 -0.145 -0.325" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tapered_chuck.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="drill_bit">
+      <origin xyz="0 -0.145 -0.462" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.19" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="shaft_bushing">
+      <origin xyz="0.1 0.01 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.03" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="slide_carriage">
+      <origin xyz="0 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.11 0.22" />
+        </geometry>
+      </collision>
+    <collision name="guide_shoe_0">
+      <origin xyz="-0.04 0.0835 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.007 0.205" />
+        </geometry>
+      </collision>
+    <collision name="guide_shoe_1">
+      <origin xyz="0.04 0.0835 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.007 0.205" />
+        </geometry>
+      </collision>
+    <collision name="motor_mount">
+      <origin xyz="0 -0.07 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.086 0.125" />
+        </geometry>
+      </collision>
+    <collision name="motor_case">
+      <origin xyz="0 -0.145 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.31" />
+        </geometry>
+      </collision>
+    <collision name="motor_cap">
+      <origin xyz="0 -0.145 0.2" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.075" />
+        </geometry>
+      </collision>
+    <collision name="quill">
+      <origin xyz="0 -0.145 -0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.195" />
+        </geometry>
+      </collision>
+    <collision name="chuck">
+      <origin xyz="0 -0.145 -0.325" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tapered_chuck.obj" />
+        </geometry>
+      </collision>
+    <collision name="drill_bit">
+      <origin xyz="0 -0.145 -0.462" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.19" />
+        </geometry>
+      </collision>
+    <collision name="shaft_bushing">
+      <origin xyz="0.1 0.01 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="handwheel">
+    <visual name="pinion">
+      <origin xyz="0.01 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pinion_gear.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="feed_shaft">
+      <origin xyz="0.037 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.074" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="wheel_hub">
+      <origin xyz="0.082 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.028" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="wheel_spoke_0">
+      <origin xyz="0.083 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.134 0.012" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="wheel_spoke_1">
+      <origin xyz="0.083 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.012 0.134" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="wheel_spoke_2">
+      <origin xyz="0.083 0 0" rpy="0.785398 0 0" />
+      <geometry>
+        <box size="0.009 0.012 0.134" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="wheel_rim">
+      <origin xyz="0.083 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/handwheel_rim.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="crank_stem">
+      <origin xyz="0.111 0 0.067" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.044" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="crank_grip">
+      <origin xyz="0.148 0 0.067" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.045" />
+        </geometry>
+      <material name="dark_cast" />
+      </visual>
+    <collision name="pinion">
+      <origin xyz="0.01 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pinion_gear.obj" />
+        </geometry>
+      </collision>
+    <collision name="feed_shaft">
+      <origin xyz="0.037 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.074" />
+        </geometry>
+      </collision>
+    <collision name="wheel_hub">
+      <origin xyz="0.082 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="wheel_spoke_0">
+      <origin xyz="0.083 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.134 0.012" />
+        </geometry>
+      </collision>
+    <collision name="wheel_spoke_1">
+      <origin xyz="0.083 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.012 0.134" />
+        </geometry>
+      </collision>
+    <collision name="wheel_spoke_2">
+      <origin xyz="0.083 0 0" rpy="0.785398 0 0" />
+      <geometry>
+        <box size="0.009 0.012 0.134" />
+        </geometry>
+      </collision>
+    <collision name="wheel_rim">
+      <origin xyz="0.083 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/handwheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="crank_stem">
+      <origin xyz="0.111 0 0.067" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.044" />
+        </geometry>
+      </collision>
+    <collision name="crank_grip">
+      <origin xyz="0.148 0 0.067" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_magnet_switch" type="revolute">
+    <origin xyz="-0.155 -0.153 0.09" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="magnet_switch" />
+    <axis xyz="1 0 0" />
+    <limit effort="1" velocity="2" lower="-0.25" upper="0.25" />
+    </joint>
+  <joint name="base_to_column" type="prismatic">
+    <origin xyz="0 0.08 0.32" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="column" />
+    <axis xyz="0 0 1" />
+    <limit effort="900" velocity="0.1" lower="0" upper="0.18" />
+    </joint>
+  <joint name="column_to_spindle_head" type="prismatic">
+    <origin xyz="0 -0.115 0.42" rpy="0 0 0" />
+    <parent link="column" />
+    <child link="spindle_head" />
+    <axis xyz="0 0 -1" />
+    <limit effort="500" velocity="0.18" lower="0" upper="0.16" />
+    </joint>
+  <joint name="spindle_head_to_handwheel" type="continuous">
+    <origin xyz="0.115 0.01 0.02" rpy="0 0 0" />
+    <parent link="spindle_head" />
+    <child link="handwheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="8" />
+    </joint>
+  </robot>

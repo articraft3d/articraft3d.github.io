@@ -1,0 +1,459 @@
+<robot name="compact_telescoping_mast_arm">
+  <link name="base">
+    <visual name="foot_plate">
+      <origin xyz="0.03 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.22 0.025" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="saddle">
+      <origin xyz="0.03 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.09 0.055" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_0">
+      <origin xyz="0.03 0.049 0.0825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.018 0.115" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_1">
+      <origin xyz="0.03 -0.049 0.0825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.018 0.115" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_tie_bar">
+      <origin xyz="-0.05 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.145 0.018" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="foot_plate">
+      <origin xyz="0.03 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.22 0.025" />
+        </geometry>
+      </collision>
+    <collision name="saddle">
+      <origin xyz="0.03 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.09 0.055" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_0">
+      <origin xyz="0.03 0.049 0.0825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.018 0.115" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_1">
+      <origin xyz="0.03 -0.049 0.0825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.018 0.115" />
+        </geometry>
+      </collision>
+    <collision name="rear_tie_bar">
+      <origin xyz="-0.05 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.145 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="outer_section">
+    <visual name="outer_tube">
+      <geometry>
+        <mesh filename="assets/meshes/outer_section_tube.obj" />
+        </geometry>
+      <material name="outer_anodized_aluminum">
+        <color rgba="0.33 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="outer_lip">
+      <geometry>
+        <mesh filename="assets/meshes/outer_section_lip.obj" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="outer_tube">
+      <geometry>
+        <mesh filename="assets/meshes/outer_section_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="outer_lip">
+      <geometry>
+        <mesh filename="assets/meshes/outer_section_lip.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="middle_section">
+    <visual name="middle_tube">
+      <geometry>
+        <mesh filename="assets/meshes/middle_section_tube.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.56 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="middle_lip">
+      <geometry>
+        <mesh filename="assets/meshes/middle_section_lip.obj" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="middle_top_pad">
+      <origin xyz="-0.225 0 0.0323" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.018 0.0054" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="middle_bottom_pad">
+      <origin xyz="-0.225 0 -0.0323" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.018 0.0054" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="middle_side_pad_0">
+      <origin xyz="-0.225 0.0323 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.0054 0.018" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="middle_side_pad_1">
+      <origin xyz="-0.225 -0.0323 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.0054 0.018" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="middle_tube">
+      <geometry>
+        <mesh filename="assets/meshes/middle_section_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="middle_lip">
+      <geometry>
+        <mesh filename="assets/meshes/middle_section_lip.obj" />
+        </geometry>
+      </collision>
+    <collision name="middle_top_pad">
+      <origin xyz="-0.225 0 0.0323" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.018 0.0054" />
+        </geometry>
+      </collision>
+    <collision name="middle_bottom_pad">
+      <origin xyz="-0.225 0 -0.0323" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.018 0.0054" />
+        </geometry>
+      </collision>
+    <collision name="middle_side_pad_0">
+      <origin xyz="-0.225 0.0323 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.0054 0.018" />
+        </geometry>
+      </collision>
+    <collision name="middle_side_pad_1">
+      <origin xyz="-0.225 -0.0323 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.0054 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="inner_section">
+    <visual name="inner_tube">
+      <geometry>
+        <mesh filename="assets/meshes/inner_section_tube.obj" />
+        </geometry>
+      <material name="light_aluminum">
+        <color rgba="0.72 0.76 0.76 1" />
+        </material>
+      </visual>
+    <visual name="inner_lip">
+      <geometry>
+        <mesh filename="assets/meshes/inner_section_lip.obj" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="inner_top_pad">
+      <origin xyz="-0.175 0 0.0238" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.018 0.0044" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="inner_bottom_pad">
+      <origin xyz="-0.175 0 -0.0238" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.018 0.0044" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="inner_side_pad_0">
+      <origin xyz="-0.175 0.0238 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.0044 0.018" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="inner_side_pad_1">
+      <origin xyz="-0.175 -0.0238 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.0044 0.018" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="inner_tube">
+      <geometry>
+        <mesh filename="assets/meshes/inner_section_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="inner_lip">
+      <geometry>
+        <mesh filename="assets/meshes/inner_section_lip.obj" />
+        </geometry>
+      </collision>
+    <collision name="inner_top_pad">
+      <origin xyz="-0.175 0 0.0238" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.018 0.0044" />
+        </geometry>
+      </collision>
+    <collision name="inner_bottom_pad">
+      <origin xyz="-0.175 0 -0.0238" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.018 0.0044" />
+        </geometry>
+      </collision>
+    <collision name="inner_side_pad_0">
+      <origin xyz="-0.175 0.0238 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.0044 0.018" />
+        </geometry>
+      </collision>
+    <collision name="inner_side_pad_1">
+      <origin xyz="-0.175 -0.0238 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.0044 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tip_section">
+    <visual name="tip_tube">
+      <geometry>
+        <mesh filename="assets/meshes/tip_section_tube.obj" />
+        </geometry>
+      <material name="pale_aluminum">
+        <color rgba="0.83 0.86 0.84 1" />
+        </material>
+      </visual>
+    <visual name="tip_top_pad">
+      <origin xyz="-0.13 0 0.01705" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.0029" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="tip_bottom_pad">
+      <origin xyz="-0.13 0 -0.01705" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.0029" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="tip_side_pad_0">
+      <origin xyz="-0.13 0.01705 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.0029 0.018" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="tip_side_pad_1">
+      <origin xyz="-0.13 -0.01705 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.0029 0.018" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="faceplate">
+      <origin xyz="0.064 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.09 0.08" />
+        </geometry>
+      <material name="safety_orange_faceplate">
+        <color rgba="0.95 0.42 0.08 1" />
+        </material>
+      </visual>
+    <visual name="faceplate_bolt_0_0">
+      <origin xyz="0.0765 -0.027 -0.022" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.007" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="faceplate_bolt_0_1">
+      <origin xyz="0.0765 -0.027 0.022" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.007" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="faceplate_bolt_1_0">
+      <origin xyz="0.0765 0.027 -0.022" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.007" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="faceplate_bolt_1_1">
+      <origin xyz="0.0765 0.027 0.022" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.007" />
+        </geometry>
+      <material name="black_hardware">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="tip_tube">
+      <geometry>
+        <mesh filename="assets/meshes/tip_section_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="tip_top_pad">
+      <origin xyz="-0.13 0 0.01705" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.0029" />
+        </geometry>
+      </collision>
+    <collision name="tip_bottom_pad">
+      <origin xyz="-0.13 0 -0.01705" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.0029" />
+        </geometry>
+      </collision>
+    <collision name="tip_side_pad_0">
+      <origin xyz="-0.13 0.01705 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.0029 0.018" />
+        </geometry>
+      </collision>
+    <collision name="tip_side_pad_1">
+      <origin xyz="-0.13 -0.01705 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.0029 0.018" />
+        </geometry>
+      </collision>
+    <collision name="faceplate">
+      <origin xyz="0.064 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.09 0.08" />
+        </geometry>
+      </collision>
+    <collision name="faceplate_bolt_0_0">
+      <origin xyz="0.0765 -0.027 -0.022" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="faceplate_bolt_0_1">
+      <origin xyz="0.0765 -0.027 0.022" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="faceplate_bolt_1_0">
+      <origin xyz="0.0765 0.027 -0.022" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="faceplate_bolt_1_1">
+      <origin xyz="0.0765 0.027 0.022" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_outer" type="fixed">
+    <origin xyz="0 0 0.12" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="outer_section" />
+    </joint>
+  <joint name="outer_to_middle" type="prismatic">
+    <origin xyz="0.36 0 0" rpy="0 0 0" />
+    <parent link="outer_section" />
+    <child link="middle_section" />
+    <axis xyz="1 0 0" />
+    <limit effort="90" velocity="0.25" lower="0" upper="0.22" />
+    </joint>
+  <joint name="middle_to_inner" type="prismatic">
+    <origin xyz="0.08 0 0" rpy="0 0 0" />
+    <parent link="middle_section" />
+    <child link="inner_section" />
+    <axis xyz="1 0 0" />
+    <limit effort="70" velocity="0.25" lower="0" upper="0.18" />
+    </joint>
+  <joint name="inner_to_tip" type="prismatic">
+    <origin xyz="0.065 0 0" rpy="0 0 0" />
+    <parent link="inner_section" />
+    <child link="tip_section" />
+    <axis xyz="1 0 0" />
+    <limit effort="45" velocity="0.25" lower="0" upper="0.14" />
+    </joint>
+  </robot>

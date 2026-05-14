@@ -1,0 +1,1172 @@
+<robot name="field_service_sliding_security_gate">
+  <material name="concrete">
+    <color rgba="0.45 0.45 0.42 1" />
+    </material>
+  <material name="galvanized_steel">
+    <color rgba="0.62 0.65 0.63 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.1 0.12 0.12 1" />
+    </material>
+  <material name="worn_rail">
+    <color rgba="0.33 0.34 0.33 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.015 0.015 0.014 1" />
+    </material>
+  <material name="zinc_hardware">
+    <color rgba="0.78 0.76 0.68 1" />
+    </material>
+  <material name="hazard_yellow">
+    <color rgba="0.95 0.72 0.06 1" />
+    </material>
+  <link name="fixed_track">
+    <visual name="anchor_slab">
+      <origin xyz="2.5 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="5.7 0.55 0.12" />
+        </geometry>
+      <material name="concrete" />
+      </visual>
+    <visual name="track_base">
+      <origin xyz="2.5 0 0.1375" rpy="0 0 0" />
+      <geometry>
+        <box size="5.5 0.2 0.035" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="round_rail">
+      <origin xyz="2.5 0 0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="5.45" />
+        </geometry>
+      <material name="worn_rail" />
+      </visual>
+    <visual name="front_mud_channel">
+      <origin xyz="2.5 0.125 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="5.5 0.035 0.08" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="rear_mud_channel">
+      <origin xyz="2.5 -0.125 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="5.5 0.035 0.08" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="latch_post">
+      <origin xyz="-0.19 0 1.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.28 2.28" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="latch_post_foot_plate">
+      <origin xyz="-0.19 0 0.1375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.38 0.035" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="end_post">
+      <origin xyz="5.19 0 1.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.28 2.28" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="end_post_foot_plate">
+      <origin xyz="5.19 0 0.1375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.38 0.035" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="top_header">
+      <origin xyz="2.5 0 2.36" rpy="0 0 0" />
+      <geometry>
+        <box size="5.6 0.24 0.12" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="guide_channel_roof">
+      <origin xyz="2.5 0 2.075" rpy="0 0 0" />
+      <geometry>
+        <box size="5.3 0.48 0.05" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="front_guide_cheek">
+      <origin xyz="2.5 0.22 1.985" rpy="0 0 0" />
+      <geometry>
+        <box size="5.3 0.035 0.18" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="rear_guide_cheek">
+      <origin xyz="2.5 -0.22 1.985" rpy="0 0 0" />
+      <geometry>
+        <box size="5.3 0.035 0.18" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="guide_hanger_0">
+      <origin xyz="0.6 0 2.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.08 0.3" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="guide_hanger_1">
+      <origin xyz="2.5 0 2.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.08 0.3" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="guide_hanger_2">
+      <origin xyz="4.4 0 2.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.08 0.3" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="guide_bracket_0">
+      <origin xyz="0.45 0.1586 2.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.045" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="guide_shaft_0">
+      <origin xyz="0.45 0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.3" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="guide_roller_0">
+      <origin xyz="0.45 0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.12" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="guide_bracket_1">
+      <origin xyz="0.45 -0.1586 2.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.045" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="guide_shaft_1">
+      <origin xyz="0.45 -0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.3" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="guide_roller_1">
+      <origin xyz="0.45 -0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.12" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="guide_bracket_2">
+      <origin xyz="4.55 0.1586 2.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.045" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="guide_shaft_2">
+      <origin xyz="4.55 0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.3" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="guide_roller_2">
+      <origin xyz="4.55 0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.12" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="guide_bracket_3">
+      <origin xyz="4.55 -0.1586 2.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.045" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="guide_shaft_3">
+      <origin xyz="4.55 -0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.3" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="guide_roller_3">
+      <origin xyz="4.55 -0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.12" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="closed_bumper">
+      <origin xyz="-0.09 -0.095 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.08 0.2" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="open_bumper">
+      <origin xyz="5.16 -0.095 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.22" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="latch_backplate">
+      <origin xyz="-0.16 0.1575 1.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.035 0.24" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="receiver_upper_jaw">
+      <origin xyz="-0.1 0.225 1.33" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.14 0.035" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="receiver_lower_jaw">
+      <origin xyz="-0.1 0.225 1.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.14 0.035" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <collision name="anchor_slab">
+      <origin xyz="2.5 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="5.7 0.55 0.12" />
+        </geometry>
+      </collision>
+    <collision name="track_base">
+      <origin xyz="2.5 0 0.1375" rpy="0 0 0" />
+      <geometry>
+        <box size="5.5 0.2 0.035" />
+        </geometry>
+      </collision>
+    <collision name="round_rail">
+      <origin xyz="2.5 0 0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="5.45" />
+        </geometry>
+      </collision>
+    <collision name="front_mud_channel">
+      <origin xyz="2.5 0.125 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="5.5 0.035 0.08" />
+        </geometry>
+      </collision>
+    <collision name="rear_mud_channel">
+      <origin xyz="2.5 -0.125 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="5.5 0.035 0.08" />
+        </geometry>
+      </collision>
+    <collision name="latch_post">
+      <origin xyz="-0.19 0 1.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.28 2.28" />
+        </geometry>
+      </collision>
+    <collision name="latch_post_foot_plate">
+      <origin xyz="-0.19 0 0.1375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.38 0.035" />
+        </geometry>
+      </collision>
+    <collision name="end_post">
+      <origin xyz="5.19 0 1.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.28 2.28" />
+        </geometry>
+      </collision>
+    <collision name="end_post_foot_plate">
+      <origin xyz="5.19 0 0.1375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.38 0.035" />
+        </geometry>
+      </collision>
+    <collision name="top_header">
+      <origin xyz="2.5 0 2.36" rpy="0 0 0" />
+      <geometry>
+        <box size="5.6 0.24 0.12" />
+        </geometry>
+      </collision>
+    <collision name="guide_channel_roof">
+      <origin xyz="2.5 0 2.075" rpy="0 0 0" />
+      <geometry>
+        <box size="5.3 0.48 0.05" />
+        </geometry>
+      </collision>
+    <collision name="front_guide_cheek">
+      <origin xyz="2.5 0.22 1.985" rpy="0 0 0" />
+      <geometry>
+        <box size="5.3 0.035 0.18" />
+        </geometry>
+      </collision>
+    <collision name="rear_guide_cheek">
+      <origin xyz="2.5 -0.22 1.985" rpy="0 0 0" />
+      <geometry>
+        <box size="5.3 0.035 0.18" />
+        </geometry>
+      </collision>
+    <collision name="guide_hanger_0">
+      <origin xyz="0.6 0 2.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.08 0.3" />
+        </geometry>
+      </collision>
+    <collision name="guide_hanger_1">
+      <origin xyz="2.5 0 2.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.08 0.3" />
+        </geometry>
+      </collision>
+    <collision name="guide_hanger_2">
+      <origin xyz="4.4 0 2.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.08 0.3" />
+        </geometry>
+      </collision>
+    <collision name="guide_bracket_0">
+      <origin xyz="0.45 0.1586 2.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.045" />
+        </geometry>
+      </collision>
+    <collision name="guide_shaft_0">
+      <origin xyz="0.45 0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.3" />
+        </geometry>
+      </collision>
+    <collision name="guide_roller_0">
+      <origin xyz="0.45 0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="guide_bracket_1">
+      <origin xyz="0.45 -0.1586 2.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.045" />
+        </geometry>
+      </collision>
+    <collision name="guide_shaft_1">
+      <origin xyz="0.45 -0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.3" />
+        </geometry>
+      </collision>
+    <collision name="guide_roller_1">
+      <origin xyz="0.45 -0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="guide_bracket_2">
+      <origin xyz="4.55 0.1586 2.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.045" />
+        </geometry>
+      </collision>
+    <collision name="guide_shaft_2">
+      <origin xyz="4.55 0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.3" />
+        </geometry>
+      </collision>
+    <collision name="guide_roller_2">
+      <origin xyz="4.55 0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="guide_bracket_3">
+      <origin xyz="4.55 -0.1586 2.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.045" />
+        </geometry>
+      </collision>
+    <collision name="guide_shaft_3">
+      <origin xyz="4.55 -0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.3" />
+        </geometry>
+      </collision>
+    <collision name="guide_roller_3">
+      <origin xyz="4.55 -0.13 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="closed_bumper">
+      <origin xyz="-0.09 -0.095 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.08 0.2" />
+        </geometry>
+      </collision>
+    <collision name="open_bumper">
+      <origin xyz="5.16 -0.095 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.22" />
+        </geometry>
+      </collision>
+    <collision name="latch_backplate">
+      <origin xyz="-0.16 0.1575 1.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.035 0.24" />
+        </geometry>
+      </collision>
+    <collision name="receiver_upper_jaw">
+      <origin xyz="-0.1 0.225 1.33" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.14 0.035" />
+        </geometry>
+      </collision>
+    <collision name="receiver_lower_jaw">
+      <origin xyz="-0.1 0.225 1.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.14 0.035" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gate_leaf">
+    <visual name="bottom_tube">
+      <origin xyz="1.5 0 0.52" rpy="0 0 0" />
+      <geometry>
+        <box size="3 0.1 0.12" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="top_tube">
+      <origin xyz="1.5 0 1.8" rpy="0 0 0" />
+      <geometry>
+        <box size="3 0.1 0.12" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="lead_stile">
+      <origin xyz="0.06 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.1 1.52" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="tail_stile">
+      <origin xyz="2.94 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.1 1.52" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="picket_0">
+      <origin xyz="0.42 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="picket_1">
+      <origin xyz="0.72 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="picket_2">
+      <origin xyz="1.02 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="picket_3">
+      <origin xyz="1.32 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="picket_4">
+      <origin xyz="1.62 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="picket_5">
+      <origin xyz="1.92 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="picket_6">
+      <origin xyz="2.22 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="picket_7">
+      <origin xyz="2.52 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="service_midrail">
+      <origin xyz="1.5 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="2.8 0.06 0.06" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="diagonal_brace">
+      <origin xyz="1.5 0 1.115" rpy="0 -0.435 0" />
+      <geometry>
+        <box size="2.98 0.07 0.07" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="top_wear_strip">
+      <origin xyz="1.5 0 1.91" rpy="0 0 0" />
+      <geometry>
+        <box size="3.05 0.15 0.1" />
+        </geometry>
+      <material name="worn_rail" />
+      </visual>
+    <visual name="latch_mount_plate">
+      <origin xyz="0.03 0.14 1.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.2 0.22" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="latch_tongue">
+      <origin xyz="-0.08 0.225 1.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.045 0.075" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="lock_tab">
+      <origin xyz="0.01 0.255 1.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.035 0.16" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="lock_hole_boss">
+      <origin xyz="0.02 0.255 1.25" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.06" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="roller_cheek_0_0">
+      <origin xyz="0.55 0.075 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.025 0.31" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="roller_cheek_0_1">
+      <origin xyz="0.55 -0.075 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.025 0.31" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="roller_saddle_0">
+      <origin xyz="0.55 0 0.462" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.13 0.05" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="roller_bolt_0_front_low_0">
+      <origin xyz="0.455 0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_0_front_low_1">
+      <origin xyz="0.645 0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_0_front_high_0">
+      <origin xyz="0.455 0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_0_front_high_1">
+      <origin xyz="0.645 0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_0_rear_low_0">
+      <origin xyz="0.455 -0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_0_rear_low_1">
+      <origin xyz="0.645 -0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_0_rear_high_0">
+      <origin xyz="0.455 -0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_0_rear_high_1">
+      <origin xyz="0.645 -0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="access_cover_0">
+      <origin xyz="0.55 0.06 0.52" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.07" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_cheek_1_0">
+      <origin xyz="2.45 0.075 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.025 0.31" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="roller_cheek_1_1">
+      <origin xyz="2.45 -0.075 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.025 0.31" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="roller_saddle_1">
+      <origin xyz="2.45 0 0.462" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.13 0.05" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="roller_bolt_1_front_low_0">
+      <origin xyz="2.355 0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_1_front_low_1">
+      <origin xyz="2.545 0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_1_front_high_0">
+      <origin xyz="2.355 0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_1_front_high_1">
+      <origin xyz="2.545 0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_1_rear_low_0">
+      <origin xyz="2.355 -0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_1_rear_low_1">
+      <origin xyz="2.545 -0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_1_rear_high_0">
+      <origin xyz="2.355 -0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_bolt_1_rear_high_1">
+      <origin xyz="2.545 -0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="access_cover_1">
+      <origin xyz="2.45 0.06 0.52" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.07" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_axle_0">
+      <origin xyz="0.55 0 0.315" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.21" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="roller_axle_1">
+      <origin xyz="2.45 0 0.315" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.21" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <collision name="bottom_tube">
+      <origin xyz="1.5 0 0.52" rpy="0 0 0" />
+      <geometry>
+        <box size="3 0.1 0.12" />
+        </geometry>
+      </collision>
+    <collision name="top_tube">
+      <origin xyz="1.5 0 1.8" rpy="0 0 0" />
+      <geometry>
+        <box size="3 0.1 0.12" />
+        </geometry>
+      </collision>
+    <collision name="lead_stile">
+      <origin xyz="0.06 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.1 1.52" />
+        </geometry>
+      </collision>
+    <collision name="tail_stile">
+      <origin xyz="2.94 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.1 1.52" />
+        </geometry>
+      </collision>
+    <collision name="picket_0">
+      <origin xyz="0.42 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      </collision>
+    <collision name="picket_1">
+      <origin xyz="0.72 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      </collision>
+    <collision name="picket_2">
+      <origin xyz="1.02 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      </collision>
+    <collision name="picket_3">
+      <origin xyz="1.32 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      </collision>
+    <collision name="picket_4">
+      <origin xyz="1.62 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      </collision>
+    <collision name="picket_5">
+      <origin xyz="1.92 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      </collision>
+    <collision name="picket_6">
+      <origin xyz="2.22 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      </collision>
+    <collision name="picket_7">
+      <origin xyz="2.52 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.055 1.3" />
+        </geometry>
+      </collision>
+    <collision name="service_midrail">
+      <origin xyz="1.5 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="2.8 0.06 0.06" />
+        </geometry>
+      </collision>
+    <collision name="diagonal_brace">
+      <origin xyz="1.5 0 1.115" rpy="0 -0.435 0" />
+      <geometry>
+        <box size="2.98 0.07 0.07" />
+        </geometry>
+      </collision>
+    <collision name="top_wear_strip">
+      <origin xyz="1.5 0 1.91" rpy="0 0 0" />
+      <geometry>
+        <box size="3.05 0.15 0.1" />
+        </geometry>
+      </collision>
+    <collision name="latch_mount_plate">
+      <origin xyz="0.03 0.14 1.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.2 0.22" />
+        </geometry>
+      </collision>
+    <collision name="latch_tongue">
+      <origin xyz="-0.08 0.225 1.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.045 0.075" />
+        </geometry>
+      </collision>
+    <collision name="lock_tab">
+      <origin xyz="0.01 0.255 1.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.035 0.16" />
+        </geometry>
+      </collision>
+    <collision name="lock_hole_boss">
+      <origin xyz="0.02 0.255 1.25" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="roller_cheek_0_0">
+      <origin xyz="0.55 0.075 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.025 0.31" />
+        </geometry>
+      </collision>
+    <collision name="roller_cheek_0_1">
+      <origin xyz="0.55 -0.075 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.025 0.31" />
+        </geometry>
+      </collision>
+    <collision name="roller_saddle_0">
+      <origin xyz="0.55 0 0.462" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.13 0.05" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_0_front_low_0">
+      <origin xyz="0.455 0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_0_front_low_1">
+      <origin xyz="0.645 0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_0_front_high_0">
+      <origin xyz="0.455 0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_0_front_high_1">
+      <origin xyz="0.645 0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_0_rear_low_0">
+      <origin xyz="0.455 -0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_0_rear_low_1">
+      <origin xyz="0.645 -0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_0_rear_high_0">
+      <origin xyz="0.455 -0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_0_rear_high_1">
+      <origin xyz="0.645 -0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="access_cover_0">
+      <origin xyz="0.55 0.06 0.52" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.07" />
+        </geometry>
+      </collision>
+    <collision name="roller_cheek_1_0">
+      <origin xyz="2.45 0.075 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.025 0.31" />
+        </geometry>
+      </collision>
+    <collision name="roller_cheek_1_1">
+      <origin xyz="2.45 -0.075 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.025 0.31" />
+        </geometry>
+      </collision>
+    <collision name="roller_saddle_1">
+      <origin xyz="2.45 0 0.462" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.13 0.05" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_1_front_low_0">
+      <origin xyz="2.355 0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_1_front_low_1">
+      <origin xyz="2.545 0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_1_front_high_0">
+      <origin xyz="2.355 0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_1_front_high_1">
+      <origin xyz="2.545 0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_1_rear_low_0">
+      <origin xyz="2.355 -0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_1_rear_low_1">
+      <origin xyz="2.545 -0.086 0.245" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_1_rear_high_0">
+      <origin xyz="2.355 -0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="roller_bolt_1_rear_high_1">
+      <origin xyz="2.545 -0.086 0.355" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="access_cover_1">
+      <origin xyz="2.45 0.06 0.52" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.07" />
+        </geometry>
+      </collision>
+    <collision name="roller_axle_0">
+      <origin xyz="0.55 0 0.315" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.21" />
+        </geometry>
+      </collision>
+    <collision name="roller_axle_1">
+      <origin xyz="2.45 0 0.315" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.21" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_roller_0">
+    <visual name="roller_tread">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.07" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="roller_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.09" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="front_flange">
+      <origin xyz="0 0.047 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.012" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="rear_flange">
+      <origin xyz="0 -0.047 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.012" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <collision name="roller_tread">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="roller_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="front_flange">
+      <origin xyz="0 0.047 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="rear_flange">
+      <origin xyz="0 -0.047 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_roller_1">
+    <visual name="roller_tread">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.07" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="roller_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.09" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="front_flange">
+      <origin xyz="0 0.047 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.012" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <visual name="rear_flange">
+      <origin xyz="0 -0.047 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.012" />
+        </geometry>
+      <material name="zinc_hardware" />
+      </visual>
+    <collision name="roller_tread">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="roller_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="front_flange">
+      <origin xyz="0 0.047 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="rear_flange">
+      <origin xyz="0 -0.047 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="track_slide" type="prismatic">
+    <parent link="fixed_track" />
+    <child link="gate_leaf" />
+    <axis xyz="1 0 0" />
+    <limit effort="1200" velocity="0.4" lower="0" upper="2.1" />
+    <dynamics damping="40" friction="8" />
+    </joint>
+  <joint name="roller_spin_0" type="continuous">
+    <origin xyz="0.55 0 0.315" rpy="0 0 0" />
+    <parent link="gate_leaf" />
+    <child link="lower_roller_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="80" velocity="8" />
+    <dynamics damping="0.05" friction="0.02" />
+    </joint>
+  <joint name="roller_spin_1" type="continuous">
+    <origin xyz="2.45 0 0.315" rpy="0 0 0" />
+    <parent link="gate_leaf" />
+    <child link="lower_roller_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="80" velocity="8" />
+    <dynamics damping="0.05" friction="0.02" />
+    </joint>
+  </robot>

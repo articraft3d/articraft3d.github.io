@@ -1,0 +1,365 @@
+<robot name="bmx_fork_cockpit">
+  <material name="brushed_crmo">
+    <color rgba="0.62 0.64 0.63 1" />
+    </material>
+  <material name="dark_crmo">
+    <color rgba="0.22 0.23 0.23 1" />
+    </material>
+  <material name="anodized_alloy">
+    <color rgba="0.74 0.75 0.73 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.035 0.035 0.035 1" />
+    </material>
+  <material name="bearing_steel">
+    <color rgba="0.86 0.86 0.82 1" />
+    </material>
+  <link name="head_tube">
+    <inertial>
+      <mass value="0.9" />
+      <inertia ixx="0.00233153" ixy="0" ixz="0" iyy="0.00233153" iyz="0" izz="0.00032805" />
+      </inertial>
+    <visual name="head_tube_shell">
+      <geometry>
+        <mesh filename="assets/meshes/head_tube_shell.obj" />
+        </geometry>
+      <material name="dark_crmo">
+        <color rgba="0.22 0.23 0.23 1" />
+        </material>
+      </visual>
+    <visual name="lower_cup">
+      <origin xyz="0 0 -0.076" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_cup.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="upper_cup">
+      <origin xyz="0 0 0.076" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_cup.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="short_frame_stub">
+      <origin xyz="0 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.012 0.032" />
+        </geometry>
+      <material name="dark_crmo">
+        <color rgba="0.22 0.23 0.23 1" />
+        </material>
+      </visual>
+    <collision name="head_tube_shell">
+      <geometry>
+        <mesh filename="assets/meshes/head_tube_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_cup">
+      <origin xyz="0 0 -0.076" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_cup.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_cup">
+      <origin xyz="0 0 0.076" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_cup.obj" />
+        </geometry>
+      </collision>
+    <collision name="short_frame_stub">
+      <origin xyz="0 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.012 0.032" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="fork">
+    <inertial>
+      <origin xyz="0 0.02 -0.235" rpy="0 0 0" />
+      <mass value="1.35" />
+      <inertia ixx="0.0924863" ixy="0" ixz="0" iyy="0.094005" iyz="0" izz="0.00424125" />
+      </inertial>
+    <visual name="steerer">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0127" length="0.36" />
+        </geometry>
+      <material name="brushed_crmo">
+        <color rgba="0.62 0.64 0.63 1" />
+        </material>
+      </visual>
+    <visual name="crmo_fork">
+      <geometry>
+        <mesh filename="assets/meshes/crmo_fork.obj" />
+        </geometry>
+      <material name="brushed_crmo">
+        <color rgba="0.62 0.64 0.63 1" />
+        </material>
+      </visual>
+    <visual name="crown_race">
+      <origin xyz="0 0 -0.092" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/crown_race.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="axle_bore_0">
+      <origin xyz="-0.062 0.07 -0.642" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.022" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.035 0.035 0.035 1" />
+        </material>
+      </visual>
+    <visual name="axle_bore_1">
+      <origin xyz="0.062 0.07 -0.642" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.022" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.035 0.035 0.035 1" />
+        </material>
+      </visual>
+    <collision name="steerer">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0127" length="0.36" />
+        </geometry>
+      </collision>
+    <collision name="crmo_fork">
+      <geometry>
+        <mesh filename="assets/meshes/crmo_fork.obj" />
+        </geometry>
+      </collision>
+    <collision name="crown_race">
+      <origin xyz="0 0 -0.092" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/crown_race.obj" />
+        </geometry>
+      </collision>
+    <collision name="axle_bore_0">
+      <origin xyz="-0.062 0.07 -0.642" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="axle_bore_1">
+      <origin xyz="0.062 0.07 -0.642" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="stem">
+    <inertial>
+      <origin xyz="0 0.045 0.02" rpy="0 0 0" />
+      <mass value="0.38" />
+      <inertia ixx="0.000791667" ixy="0" ixz="0" iyy="0.000513" iyz="0" izz="0.000791667" />
+      </inertial>
+    <visual name="alloy_stem">
+      <geometry>
+        <mesh filename="assets/meshes/alloy_stem.obj" />
+        </geometry>
+      <material name="anodized_alloy">
+        <color rgba="0.74 0.75 0.73 1" />
+        </material>
+      </visual>
+    <visual name="stem_web">
+      <origin xyz="0 0.034 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.04 0.022" />
+        </geometry>
+      <material name="anodized_alloy">
+        <color rgba="0.74 0.75 0.73 1" />
+        </material>
+      </visual>
+    <visual name="lower_bar_saddle">
+      <origin xyz="0 0.078 0.0215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.044 0.014" />
+        </geometry>
+      <material name="anodized_alloy">
+        <color rgba="0.74 0.75 0.73 1" />
+        </material>
+      </visual>
+    <visual name="faceplate">
+      <origin xyz="0 0.104 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.011 0.044" />
+        </geometry>
+      <material name="anodized_alloy">
+        <color rgba="0.74 0.75 0.73 1" />
+        </material>
+      </visual>
+    <visual name="faceplate_bolt_0">
+      <origin xyz="0 0.108 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.08" />
+        </geometry>
+      <material name="dark_crmo">
+        <color rgba="0.22 0.23 0.23 1" />
+        </material>
+      </visual>
+    <visual name="steerer_bolt_0">
+      <origin xyz="0 -0.024 -0.014" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.056" />
+        </geometry>
+      <material name="dark_crmo">
+        <color rgba="0.22 0.23 0.23 1" />
+        </material>
+      </visual>
+    <visual name="faceplate_bolt_1">
+      <origin xyz="0 0.108 0.058" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.08" />
+        </geometry>
+      <material name="dark_crmo">
+        <color rgba="0.22 0.23 0.23 1" />
+        </material>
+      </visual>
+    <visual name="steerer_bolt_1">
+      <origin xyz="0 -0.024 0.014" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.056" />
+        </geometry>
+      <material name="dark_crmo">
+        <color rgba="0.22 0.23 0.23 1" />
+        </material>
+      </visual>
+    <collision name="alloy_stem">
+      <geometry>
+        <mesh filename="assets/meshes/alloy_stem.obj" />
+        </geometry>
+      </collision>
+    <collision name="stem_web">
+      <origin xyz="0 0.034 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.04 0.022" />
+        </geometry>
+      </collision>
+    <collision name="lower_bar_saddle">
+      <origin xyz="0 0.078 0.0215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.044 0.014" />
+        </geometry>
+      </collision>
+    <collision name="faceplate">
+      <origin xyz="0 0.104 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.011 0.044" />
+        </geometry>
+      </collision>
+    <collision name="faceplate_bolt_0">
+      <origin xyz="0 0.108 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="steerer_bolt_0">
+      <origin xyz="0 -0.024 -0.014" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.056" />
+        </geometry>
+      </collision>
+    <collision name="faceplate_bolt_1">
+      <origin xyz="0 0.108 0.058" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="steerer_bolt_1">
+      <origin xyz="0 -0.024 0.014" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.056" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="riser_bar">
+    <inertial>
+      <origin xyz="0 -0.006 0.05" rpy="0 0 0" />
+      <mass value="0.85" />
+      <inertia ixx="0.00164333" ixy="0" ixz="0" iyy="0.0537767" iyz="0" izz="0.0526433" />
+      </inertial>
+    <visual name="main_bar">
+      <geometry>
+        <mesh filename="assets/meshes/main_bar.obj" />
+        </geometry>
+      <material name="dark_crmo">
+        <color rgba="0.22 0.23 0.23 1" />
+        </material>
+      </visual>
+    <visual name="crossbar">
+      <geometry>
+        <mesh filename="assets/meshes/crossbar.obj" />
+        </geometry>
+      <material name="dark_crmo">
+        <color rgba="0.22 0.23 0.23 1" />
+        </material>
+      </visual>
+    <visual name="grip_0">
+      <origin xyz="-0.405 -0.018 0.092" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0145" length="0.115" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.035 0.035 0.035 1" />
+        </material>
+      </visual>
+    <visual name="grip_1">
+      <origin xyz="0.405 -0.018 0.092" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0145" length="0.115" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.035 0.035 0.035 1" />
+        </material>
+      </visual>
+    <collision name="main_bar">
+      <geometry>
+        <mesh filename="assets/meshes/main_bar.obj" />
+        </geometry>
+      </collision>
+    <collision name="crossbar">
+      <geometry>
+        <mesh filename="assets/meshes/crossbar.obj" />
+        </geometry>
+      </collision>
+    <collision name="grip_0">
+      <origin xyz="-0.405 -0.018 0.092" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0145" length="0.115" />
+        </geometry>
+      </collision>
+    <collision name="grip_1">
+      <origin xyz="0.405 -0.018 0.092" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0145" length="0.115" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="steering" type="revolute">
+    <parent link="head_tube" />
+    <child link="fork" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="3" lower="-1.39626" upper="1.39626" />
+    </joint>
+  <joint name="stem_mount" type="fixed">
+    <origin xyz="0 0 0.212" rpy="0 0 0" />
+    <parent link="fork" />
+    <child link="stem" />
+    </joint>
+  <joint name="bar_clamp" type="fixed">
+    <origin xyz="0 0.078 0.044" rpy="0 0 0" />
+    <parent link="stem" />
+    <child link="riser_bar" />
+    </joint>
+  </robot>

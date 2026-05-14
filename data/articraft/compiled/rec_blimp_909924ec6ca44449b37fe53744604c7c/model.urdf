@@ -1,0 +1,744 @@
+<robot name="surveillance_blimp">
+  <material name="warm_silver_fabric">
+    <color rgba="0.78 0.82 0.8 1" />
+    </material>
+  <material name="stitched_gray_seams">
+    <color rgba="0.28 0.3 0.32 1" />
+    </material>
+  <material name="matte_white_gondola">
+    <color rgba="0.88 0.9 0.88 1" />
+    </material>
+  <material name="blue_tinted_glass">
+    <color rgba="0.08 0.2 0.32 0.75" />
+    </material>
+  <material name="dark_composite">
+    <color rgba="0.03 0.035 0.04 1" />
+    </material>
+  <material name="tail_gray_composite">
+    <color rgba="0.58 0.62 0.61 1" />
+    </material>
+  <material name="control_surface_slate">
+    <color rgba="0.36 0.42 0.43 1" />
+    </material>
+  <material name="black_propeller">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.58 0.56 0.52 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.006 0.006 0.005 1" />
+    </material>
+  <link name="hull">
+    <visual name="long_envelope">
+      <geometry>
+        <mesh filename="assets/meshes/long_envelope.obj" />
+        </geometry>
+      <material name="warm_silver_fabric">
+        <color rgba="0.78 0.82 0.8 1" />
+        </material>
+      </visual>
+    <visual name="envelope_band_0">
+      <origin xyz="-3.8 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/envelope_band_0.obj" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="envelope_band_1">
+      <origin xyz="-2.2 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/envelope_band_1.obj" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="envelope_band_2">
+      <origin xyz="-0.6 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/envelope_band_2.obj" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="envelope_band_3">
+      <origin xyz="1 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/envelope_band_3.obj" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="envelope_band_4">
+      <origin xyz="2.6 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/envelope_band_4.obj" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="envelope_band_5">
+      <origin xyz="4 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/envelope_band_5.obj" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="gondola_shell">
+      <origin xyz="0.6 0 -1.46" rpy="0 0 0" />
+      <geometry>
+        <box size="1.55 0.62 0.42" />
+        </geometry>
+      <material name="matte_white_gondola">
+        <color rgba="0.88 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="rounded_nose_block">
+      <origin xyz="1.48 0 -1.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.64 0.36" />
+        </geometry>
+      <material name="matte_white_gondola">
+        <color rgba="0.88 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="rounded_nose_cap">
+      <origin xyz="1.72 0 -1.43" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.32" />
+        </geometry>
+      <material name="matte_white_gondola">
+        <color rgba="0.88 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="cabin_window_0">
+      <origin xyz="0.74 -0.323 -1.34" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.024 0.2" />
+        </geometry>
+      <material name="blue_tinted_glass">
+        <color rgba="0.08 0.2 0.32 0.75" />
+        </material>
+      </visual>
+    <visual name="cabin_window_1">
+      <origin xyz="0.74 0.323 -1.34" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.024 0.2" />
+        </geometry>
+      <material name="blue_tinted_glass">
+        <color rgba="0.08 0.2 0.32 0.75" />
+        </material>
+      </visual>
+    <visual name="sensor_dome">
+      <origin xyz="0.95 0 -1.78" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.2" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <visual name="sensor_neck">
+      <origin xyz="0.95 0 -1.6" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.1" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <visual name="gondola_pylon_0">
+      <origin xyz="0.05 0 -1.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.12 0.72" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="gondola_pylon_1">
+      <origin xyz="0.95 0 -1.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.12 0.72" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="diagonal_cabin_strut_0">
+      <origin xyz="0.5 -0.28 -1.22" rpy="0 0.18 0" />
+      <geometry>
+        <box size="1 0.055 0.15" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="diagonal_cabin_strut_1">
+      <origin xyz="0.5 0.28 -1.22" rpy="0 -0.18 0" />
+      <geometry>
+        <box size="1 0.055 0.15" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="engine_pylon_0">
+      <origin xyz="-0.86 -1 -0.98" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 1.06 0.16" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="engine_nacelle_0">
+      <origin xyz="-1.2 -1.54 -0.92" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.23" length="0.78" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <visual name="engine_spinner_base_0">
+      <origin xyz="-0.77 -1.54 -0.92" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.18" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.56 0.52 1" />
+        </material>
+      </visual>
+    <visual name="engine_pylon_1">
+      <origin xyz="-0.86 1 -0.98" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 1.06 0.16" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="engine_nacelle_1">
+      <origin xyz="-1.2 1.54 -0.92" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.23" length="0.78" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <visual name="engine_spinner_base_1">
+      <origin xyz="-0.77 1.54 -0.92" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.18" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.56 0.52 1" />
+        </material>
+      </visual>
+    <visual name="wheel_fork_bridge">
+      <origin xyz="-0.27 0 -1.7" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.46 0.12" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="wheel_fork_tine_0">
+      <origin xyz="-0.35 -0.19 -1.97" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.055 0.46" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="wheel_fork_tine_1">
+      <origin xyz="-0.35 0.19 -1.97" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.055 0.46" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="wheel_axle_caps">
+      <origin xyz="-0.35 0 -2.16" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.44" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.56 0.52 1" />
+        </material>
+      </visual>
+    <visual name="vertical_fin">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_fin.obj" />
+        </geometry>
+      <material name="tail_gray_composite">
+        <color rgba="0.58 0.62 0.61 1" />
+        </material>
+      </visual>
+    <visual name="ventral_tail_skeg">
+      <geometry>
+        <mesh filename="assets/meshes/ventral_tail_skeg.obj" />
+        </geometry>
+      <material name="tail_gray_composite">
+        <color rgba="0.58 0.62 0.61 1" />
+        </material>
+      </visual>
+    <visual name="horizontal_stabilizer_0">
+      <geometry>
+        <mesh filename="assets/meshes/horizontal_stabilizer_0.obj" />
+        </geometry>
+      <material name="tail_gray_composite">
+        <color rgba="0.58 0.62 0.61 1" />
+        </material>
+      </visual>
+    <visual name="horizontal_stabilizer_1">
+      <geometry>
+        <mesh filename="assets/meshes/horizontal_stabilizer_1.obj" />
+        </geometry>
+      <material name="tail_gray_composite">
+        <color rgba="0.58 0.62 0.61 1" />
+        </material>
+      </visual>
+    <visual name="elevator_hinge_tube">
+      <origin xyz="-5.82 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="2.48" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="rudder_hinge_post">
+      <origin xyz="-5.82 0 0.54" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.78" />
+        </geometry>
+      <material name="stitched_gray_seams">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <collision name="long_envelope">
+      <geometry>
+        <mesh filename="assets/meshes/long_envelope.obj" />
+        </geometry>
+      </collision>
+    <collision name="envelope_band_0">
+      <origin xyz="-3.8 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/envelope_band_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="envelope_band_1">
+      <origin xyz="-2.2 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/envelope_band_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="envelope_band_2">
+      <origin xyz="-0.6 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/envelope_band_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="envelope_band_3">
+      <origin xyz="1 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/envelope_band_3.obj" />
+        </geometry>
+      </collision>
+    <collision name="envelope_band_4">
+      <origin xyz="2.6 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/envelope_band_4.obj" />
+        </geometry>
+      </collision>
+    <collision name="envelope_band_5">
+      <origin xyz="4 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/envelope_band_5.obj" />
+        </geometry>
+      </collision>
+    <collision name="gondola_shell">
+      <origin xyz="0.6 0 -1.46" rpy="0 0 0" />
+      <geometry>
+        <box size="1.55 0.62 0.42" />
+        </geometry>
+      </collision>
+    <collision name="rounded_nose_block">
+      <origin xyz="1.48 0 -1.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.64 0.36" />
+        </geometry>
+      </collision>
+    <collision name="rounded_nose_cap">
+      <origin xyz="1.72 0 -1.43" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.32" />
+        </geometry>
+      </collision>
+    <collision name="cabin_window_0">
+      <origin xyz="0.74 -0.323 -1.34" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.024 0.2" />
+        </geometry>
+      </collision>
+    <collision name="cabin_window_1">
+      <origin xyz="0.74 0.323 -1.34" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.024 0.2" />
+        </geometry>
+      </collision>
+    <collision name="sensor_dome">
+      <origin xyz="0.95 0 -1.78" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.2" />
+        </geometry>
+      </collision>
+    <collision name="sensor_neck">
+      <origin xyz="0.95 0 -1.6" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="gondola_pylon_0">
+      <origin xyz="0.05 0 -1.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.12 0.72" />
+        </geometry>
+      </collision>
+    <collision name="gondola_pylon_1">
+      <origin xyz="0.95 0 -1.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.12 0.72" />
+        </geometry>
+      </collision>
+    <collision name="diagonal_cabin_strut_0">
+      <origin xyz="0.5 -0.28 -1.22" rpy="0 0.18 0" />
+      <geometry>
+        <box size="1 0.055 0.15" />
+        </geometry>
+      </collision>
+    <collision name="diagonal_cabin_strut_1">
+      <origin xyz="0.5 0.28 -1.22" rpy="0 -0.18 0" />
+      <geometry>
+        <box size="1 0.055 0.15" />
+        </geometry>
+      </collision>
+    <collision name="engine_pylon_0">
+      <origin xyz="-0.86 -1 -0.98" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 1.06 0.16" />
+        </geometry>
+      </collision>
+    <collision name="engine_nacelle_0">
+      <origin xyz="-1.2 -1.54 -0.92" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.23" length="0.78" />
+        </geometry>
+      </collision>
+    <collision name="engine_spinner_base_0">
+      <origin xyz="-0.77 -1.54 -0.92" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="engine_pylon_1">
+      <origin xyz="-0.86 1 -0.98" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 1.06 0.16" />
+        </geometry>
+      </collision>
+    <collision name="engine_nacelle_1">
+      <origin xyz="-1.2 1.54 -0.92" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.23" length="0.78" />
+        </geometry>
+      </collision>
+    <collision name="engine_spinner_base_1">
+      <origin xyz="-0.77 1.54 -0.92" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="wheel_fork_bridge">
+      <origin xyz="-0.27 0 -1.7" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.46 0.12" />
+        </geometry>
+      </collision>
+    <collision name="wheel_fork_tine_0">
+      <origin xyz="-0.35 -0.19 -1.97" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.055 0.46" />
+        </geometry>
+      </collision>
+    <collision name="wheel_fork_tine_1">
+      <origin xyz="-0.35 0.19 -1.97" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.055 0.46" />
+        </geometry>
+      </collision>
+    <collision name="wheel_axle_caps">
+      <origin xyz="-0.35 0 -2.16" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.44" />
+        </geometry>
+      </collision>
+    <collision name="vertical_fin">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_fin.obj" />
+        </geometry>
+      </collision>
+    <collision name="ventral_tail_skeg">
+      <geometry>
+        <mesh filename="assets/meshes/ventral_tail_skeg.obj" />
+        </geometry>
+      </collision>
+    <collision name="horizontal_stabilizer_0">
+      <geometry>
+        <mesh filename="assets/meshes/horizontal_stabilizer_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="horizontal_stabilizer_1">
+      <geometry>
+        <mesh filename="assets/meshes/horizontal_stabilizer_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="elevator_hinge_tube">
+      <origin xyz="-5.82 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="2.48" />
+        </geometry>
+      </collision>
+    <collision name="rudder_hinge_post">
+      <origin xyz="-5.82 0 0.54" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.78" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller_0">
+    <visual name="propeller_rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/propeller_rotor_0.obj" />
+        </geometry>
+      <material name="black_propeller">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="propeller_shaft">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.16" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.56 0.52 1" />
+        </material>
+      </visual>
+    <collision name="propeller_rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/propeller_rotor_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="propeller_shaft">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.16" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller_1">
+    <visual name="propeller_rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/propeller_rotor_1.obj" />
+        </geometry>
+      <material name="black_propeller">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="propeller_shaft">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.16" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.56 0.52 1" />
+        </material>
+      </visual>
+    <collision name="propeller_rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/propeller_rotor_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="propeller_shaft">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.16" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rudder">
+    <visual name="rudder_panel">
+      <origin xyz="-0.23 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.055 0.64" />
+        </geometry>
+      <material name="control_surface_slate">
+        <color rgba="0.36 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="rudder_barrel">
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.7" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.56 0.52 1" />
+        </material>
+      </visual>
+    <collision name="rudder_panel">
+      <origin xyz="-0.23 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.055 0.64" />
+        </geometry>
+      </collision>
+    <collision name="rudder_barrel">
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.7" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="elevators">
+    <visual name="elevator_torque_tube">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="2.2" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.56 0.52 1" />
+        </material>
+      </visual>
+    <visual name="elevator_panel_0">
+      <origin xyz="-0.24 -0.72 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.78 0.06" />
+        </geometry>
+      <material name="control_surface_slate">
+        <color rgba="0.36 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="elevator_panel_1">
+      <origin xyz="-0.24 0.72 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.78 0.06" />
+        </geometry>
+      <material name="control_surface_slate">
+        <color rgba="0.36 0.42 0.43 1" />
+        </material>
+      </visual>
+    <collision name="elevator_torque_tube">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="2.2" />
+        </geometry>
+      </collision>
+    <collision name="elevator_panel_0">
+      <origin xyz="-0.24 -0.72 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.78 0.06" />
+        </geometry>
+      </collision>
+    <collision name="elevator_panel_1">
+      <origin xyz="-0.24 0.72 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.78 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="mooring_wheel">
+    <visual name="mooring_tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/mooring_tire.obj" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.006 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="mooring_rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/mooring_rim.obj" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.56 0.52 1" />
+        </material>
+      </visual>
+    <collision name="mooring_tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/mooring_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="mooring_rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/mooring_rim.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="engine_to_propeller_0" type="continuous">
+    <origin xyz="-1.67 -1.54 -0.92" rpy="0 0 0" />
+    <parent link="hull" />
+    <child link="propeller_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="90" />
+    </joint>
+  <joint name="engine_to_propeller_1" type="continuous">
+    <origin xyz="-1.67 1.54 -0.92" rpy="0 0 0" />
+    <parent link="hull" />
+    <child link="propeller_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="90" />
+    </joint>
+  <joint name="tail_to_rudder" type="revolute">
+    <origin xyz="-5.82 0 0.58" rpy="0 0 0" />
+    <parent link="hull" />
+    <child link="rudder" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="1.8" lower="-0.48" upper="0.48" />
+    </joint>
+  <joint name="tail_to_elevators" type="revolute">
+    <origin xyz="-5.82 0 0" rpy="0 0 0" />
+    <parent link="hull" />
+    <child link="elevators" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="1.8" lower="-0.38" upper="0.38" />
+    </joint>
+  <joint name="fork_to_wheel" type="continuous">
+    <origin xyz="-0.35 0 -2.16" rpy="0 0 0" />
+    <parent link="hull" />
+    <child link="mooring_wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="35" />
+    </joint>
+  </robot>

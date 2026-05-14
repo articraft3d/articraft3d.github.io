@@ -1,0 +1,309 @@
+<robot name="telescoping_yoke_spotlight">
+  <material name="matte_black">
+    <color rgba="0.015 0.014 0.012 1" />
+    </material>
+  <material name="satin_black">
+    <color rgba="0.035 0.034 0.031 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.1 0.1 0.095 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.7 0.68 0.62 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.005 0.005 0.004 1" />
+    </material>
+  <material name="pale_fresnel_glass">
+    <color rgba="0.75 0.9 1 0.45" />
+    </material>
+  <link name="stand">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.045" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_tube">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/stand_sleeve.obj" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.1 0.1 0.095 1" />
+        </material>
+      </visual>
+    <visual name="lower_collar">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_sleeve_collar.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="upper_collar">
+      <origin xyz="0 0 0.71" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_sleeve_collar.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="clamp_screw">
+      <origin xyz="0.062 0 0.742" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.065" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.68 0.62 1" />
+        </material>
+      </visual>
+    <visual name="clamp_knob">
+      <origin xyz="0.103 0 0.742" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.018" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="post">
+    <visual name="inner_post">
+      <origin xyz="0 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.05" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.68 0.62 1" />
+        </material>
+      </visual>
+    <visual name="pan_spigot">
+      <origin xyz="0 0 0.66" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.08" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.1 0.1 0.095 1" />
+        </material>
+      </visual>
+    <visual name="height_stop_collar">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.025" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.1 0.1 0.095 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="yoke">
+    <visual name="pan_bearing">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.06" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="lower_bridge">
+      <origin xyz="0 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.405 0.055" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="near_cheek">
+      <origin xyz="0 -0.18 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.03 0.345" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="near_tilt_boss">
+      <origin xyz="0 -0.1935 0.28" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.012" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.1 0.1 0.095 1" />
+        </material>
+      </visual>
+    <visual name="far_cheek">
+      <origin xyz="0 0.18 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.03 0.345" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="far_tilt_boss">
+      <origin xyz="0 0.1935 0.28" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.012" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.1 0.1 0.095 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="can">
+    <visual name="can_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lamp_can_shell.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.035 0.034 0.031 1" />
+        </material>
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0.222 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.124" length="0.01" />
+        </geometry>
+      <material name="pale_fresnel_glass">
+        <color rgba="0.75 0.9 1 0.45" />
+        </material>
+      </visual>
+    <visual name="rear_cap">
+      <origin xyz="-0.222 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.118" length="0.016" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tilt_axle">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.33" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.68 0.62 1" />
+        </material>
+      </visual>
+    <visual name="top_clip_lug">
+      <origin xyz="0.23 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.086 0.02" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="bottom_clip_lug">
+      <origin xyz="0.23 0 -0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.086 0.02" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="top_clip">
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.074" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.68 0.62 1" />
+        </material>
+      </visual>
+    <visual name="clip_tab">
+      <origin xyz="0.015 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.06 0.06" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="retaining_lip">
+      <origin xyz="0.025 0 -0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.06 0.01" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="bottom_clip">
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.074" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.68 0.62 1" />
+        </material>
+      </visual>
+    <visual name="clip_tab">
+      <origin xyz="0.015 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.06 0.06" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="retaining_lip">
+      <origin xyz="0.025 0 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.06 0.01" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="stand_to_post" type="prismatic">
+    <origin xyz="0 0 0.77" rpy="0 0 0" />
+    <parent link="stand" />
+    <child link="post" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.22" lower="0" upper="0.35" />
+    </joint>
+  <joint name="post_to_yoke" type="continuous">
+    <origin xyz="0 0 0.7" rpy="0 0 0" />
+    <parent link="post" />
+    <child link="yoke" />
+    <axis xyz="0 0 1" />
+    <limit effort="25" velocity="1.2" />
+    </joint>
+  <joint name="yoke_to_can" type="revolute">
+    <origin xyz="0 0 0.28" rpy="0 0 0" />
+    <parent link="yoke" />
+    <child link="can" />
+    <axis xyz="0 -1 0" />
+    <limit effort="35" velocity="1" lower="-0.75" upper="0.75" />
+    </joint>
+  <joint name="can_to_top_clip" type="revolute">
+    <origin xyz="0.245 0 0.176" rpy="0 0 0" />
+    <parent link="can" />
+    <child link="top_clip" />
+    <axis xyz="0 -1 0" />
+    <limit effort="1.5" velocity="3" lower="0" upper="1.15" />
+    </joint>
+  <joint name="can_to_bottom_clip" type="revolute">
+    <origin xyz="0.245 0 -0.176" rpy="0 0 0" />
+    <parent link="can" />
+    <child link="bottom_clip" />
+    <axis xyz="0 1 0" />
+    <limit effort="1.5" velocity="3" lower="0" upper="1.15" />
+    </joint>
+  </robot>

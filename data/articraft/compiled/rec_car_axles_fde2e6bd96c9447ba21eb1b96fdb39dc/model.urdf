@@ -1,0 +1,977 @@
+<robot name="swing_axle_rear_suspension">
+  <material name="cast_iron">
+    <color rgba="0.18 0.19 0.19 1" />
+    </material>
+  <material name="dark_cast">
+    <color rgba="0.1 0.11 0.11 1" />
+    </material>
+  <material name="black_paint">
+    <color rgba="0.025 0.027 0.03 1" />
+    </material>
+  <material name="axle_steel">
+    <color rgba="0.3 0.32 0.33 1" />
+    </material>
+  <material name="worn_steel">
+    <color rgba="0.6 0.61 0.58 1" />
+    </material>
+  <material name="bolt_steel">
+    <color rgba="0.78 0.76 0.7 1" />
+    </material>
+  <link name="center_beam">
+    <inertial>
+      <origin xyz="0 0 -0.265" rpy="0 0 0" />
+      <mass value="36" />
+      <inertia ixx="3.4527" ixy="0" ixz="0" iyy="1.0527" iyz="0" izz="4.215" />
+      </inertial>
+    <visual name="main_beam">
+      <origin xyz="0 0 -0.32" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 1.05 0.12" />
+        </geometry>
+      <material name="black_paint">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="saddle_plate">
+      <origin xyz="0 0 -0.242" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.34 0.04" />
+        </geometry>
+      <material name="black_paint">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="center_web">
+      <origin xyz="0 0 -0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.42 0.07" />
+        </geometry>
+      <material name="black_paint">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="front_gusset">
+      <origin xyz="0 0.145 -0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.04 0.07" />
+        </geometry>
+      <material name="black_paint">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="rear_gusset">
+      <origin xyz="0 -0.145 -0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.04 0.07" />
+        </geometry>
+      <material name="black_paint">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <collision name="main_beam">
+      <origin xyz="0 0 -0.32" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 1.05 0.12" />
+        </geometry>
+      </collision>
+    <collision name="saddle_plate">
+      <origin xyz="0 0 -0.242" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.34 0.04" />
+        </geometry>
+      </collision>
+    <collision name="center_web">
+      <origin xyz="0 0 -0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.42 0.07" />
+        </geometry>
+      </collision>
+    <collision name="front_gusset">
+      <origin xyz="0 0.145 -0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.04 0.07" />
+        </geometry>
+      </collision>
+    <collision name="rear_gusset">
+      <origin xyz="0 -0.145 -0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.04 0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="differential">
+    <inertial>
+      <origin xyz="0 0 -0.035" rpy="0 0 0" />
+      <mass value="62" />
+      <inertia ixx="1.20032" ixy="0" ixz="0" iyy="1.20032" iyz="0" izz="1.20032" />
+      </inertial>
+    <visual name="pumpkin">
+      <geometry>
+        <sphere radius="0.18" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="rear_cover">
+      <origin xyz="0 -0.185 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.045" />
+        </geometry>
+      <material name="dark_cast">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="output_bell_0">
+      <origin xyz="0.18 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.14" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="output_bell_1">
+      <origin xyz="-0.18 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.14" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="pivot_face_0">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.025" />
+        </geometry>
+      <material name="dark_cast">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="pivot_face_1">
+      <origin xyz="-0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.025" />
+        </geometry>
+      <material name="dark_cast">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="mount_flange">
+      <origin xyz="0 0 -0.197" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.3 0.05" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="lower_rib">
+      <origin xyz="0 0 -0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.09 0.08" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_0">
+      <origin xyz="0.165 0.105 -0.166" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_1">
+      <origin xyz="-0.165 0.105 -0.166" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_2">
+      <origin xyz="0.165 -0.105 -0.166" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_3">
+      <origin xyz="-0.165 -0.105 -0.166" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_bolt_0">
+      <origin xyz="0.118 -0.212 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_washer_0">
+      <origin xyz="0.118 -0.204 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_bolt_1">
+      <origin xyz="0.0834386 -0.212 0.0834386" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_washer_1">
+      <origin xyz="0.0834386 -0.204 0.0834386" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_bolt_2">
+      <origin xyz="7.22542e-18 -0.212 0.118" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_washer_2">
+      <origin xyz="7.22542e-18 -0.204 0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_bolt_3">
+      <origin xyz="-0.0834386 -0.212 0.0834386" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_washer_3">
+      <origin xyz="-0.0834386 -0.204 0.0834386" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_bolt_4">
+      <origin xyz="-0.118 -0.212 1.44508e-17" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_washer_4">
+      <origin xyz="-0.118 -0.204 1.44508e-17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_bolt_5">
+      <origin xyz="-0.0834386 -0.212 -0.0834386" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_washer_5">
+      <origin xyz="-0.0834386 -0.204 -0.0834386" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_bolt_6">
+      <origin xyz="-2.16762e-17 -0.212 -0.118" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_washer_6">
+      <origin xyz="-2.16762e-17 -0.204 -0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_bolt_7">
+      <origin xyz="0.0834386 -0.212 -0.0834386" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cover_washer_7">
+      <origin xyz="0.0834386 -0.204 -0.0834386" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <collision name="pumpkin">
+      <geometry>
+        <sphere radius="0.18" />
+        </geometry>
+      </collision>
+    <collision name="rear_cover">
+      <origin xyz="0 -0.185 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="output_bell_0">
+      <origin xyz="0.18 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.14" />
+        </geometry>
+      </collision>
+    <collision name="output_bell_1">
+      <origin xyz="-0.18 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.14" />
+        </geometry>
+      </collision>
+    <collision name="pivot_face_0">
+      <origin xyz="0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="pivot_face_1">
+      <origin xyz="-0.2375 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="mount_flange">
+      <origin xyz="0 0 -0.197" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.3 0.05" />
+        </geometry>
+      </collision>
+    <collision name="lower_rib">
+      <origin xyz="0 0 -0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.09 0.08" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_0">
+      <origin xyz="0.165 0.105 -0.166" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_1">
+      <origin xyz="-0.165 0.105 -0.166" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_2">
+      <origin xyz="0.165 -0.105 -0.166" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_3">
+      <origin xyz="-0.165 -0.105 -0.166" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_bolt_0">
+      <origin xyz="0.118 -0.212 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_washer_0">
+      <origin xyz="0.118 -0.204 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_bolt_1">
+      <origin xyz="0.0834386 -0.212 0.0834386" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_washer_1">
+      <origin xyz="0.0834386 -0.204 0.0834386" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_bolt_2">
+      <origin xyz="7.22542e-18 -0.212 0.118" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_washer_2">
+      <origin xyz="7.22542e-18 -0.204 0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_bolt_3">
+      <origin xyz="-0.0834386 -0.212 0.0834386" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_washer_3">
+      <origin xyz="-0.0834386 -0.204 0.0834386" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_bolt_4">
+      <origin xyz="-0.118 -0.212 1.44508e-17" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_washer_4">
+      <origin xyz="-0.118 -0.204 1.44508e-17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_bolt_5">
+      <origin xyz="-0.0834386 -0.212 -0.0834386" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_washer_5">
+      <origin xyz="-0.0834386 -0.204 -0.0834386" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_bolt_6">
+      <origin xyz="-2.16762e-17 -0.212 -0.118" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_washer_6">
+      <origin xyz="-2.16762e-17 -0.204 -0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_bolt_7">
+      <origin xyz="0.0834386 -0.212 -0.0834386" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_washer_7">
+      <origin xyz="0.0834386 -0.204 -0.0834386" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="axle_tube_0">
+    <inertial>
+      <origin xyz="0.35 0 0" rpy="0 1.5708 0" />
+      <mass value="18" />
+      <inertia ixx="0.7938" ixy="0" ixz="0" iyy="0.7938" iyz="0" izz="0.0324" />
+      </inertial>
+    <visual name="inner_pivot_collar">
+      <origin xyz="0.05 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.074" length="0.1" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.3 0.32 0.33 1" />
+        </material>
+      </visual>
+    <visual name="axle_tube">
+      <origin xyz="0.36 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.64" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.3 0.32 0.33 1" />
+        </material>
+      </visual>
+    <visual name="welded_sleeve">
+      <origin xyz="0.175 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.06" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.3 0.32 0.33 1" />
+        </material>
+      </visual>
+    <visual name="outer_bearing">
+      <origin xyz="0.66 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.12" />
+        </geometry>
+      <material name="dark_cast">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="bearing_tab">
+      <origin xyz="0.62 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.05 0.06" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.3 0.32 0.33 1" />
+        </material>
+      </visual>
+    <collision name="inner_pivot_collar">
+      <origin xyz="0.05 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.074" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="axle_tube">
+      <origin xyz="0.36 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.64" />
+        </geometry>
+      </collision>
+    <collision name="welded_sleeve">
+      <origin xyz="0.175 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="outer_bearing">
+      <origin xyz="0.66 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="bearing_tab">
+      <origin xyz="0.62 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.05 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="axle_tube_1">
+    <inertial>
+      <origin xyz="-0.35 0 0" rpy="0 1.5708 0" />
+      <mass value="18" />
+      <inertia ixx="0.7938" ixy="0" ixz="0" iyy="0.7938" iyz="0" izz="0.0324" />
+      </inertial>
+    <visual name="inner_pivot_collar">
+      <origin xyz="-0.05 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.074" length="0.1" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.3 0.32 0.33 1" />
+        </material>
+      </visual>
+    <visual name="axle_tube">
+      <origin xyz="-0.36 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.64" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.3 0.32 0.33 1" />
+        </material>
+      </visual>
+    <visual name="welded_sleeve">
+      <origin xyz="-0.175 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.06" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.3 0.32 0.33 1" />
+        </material>
+      </visual>
+    <visual name="outer_bearing">
+      <origin xyz="-0.66 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.12" />
+        </geometry>
+      <material name="dark_cast">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="bearing_tab">
+      <origin xyz="-0.62 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.05 0.06" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.3 0.32 0.33 1" />
+        </material>
+      </visual>
+    <collision name="inner_pivot_collar">
+      <origin xyz="-0.05 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.074" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="axle_tube">
+      <origin xyz="-0.36 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.64" />
+        </geometry>
+      </collision>
+    <collision name="welded_sleeve">
+      <origin xyz="-0.175 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="outer_bearing">
+      <origin xyz="-0.66 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="bearing_tab">
+      <origin xyz="-0.62 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.05 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="hub_0">
+    <inertial>
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <mass value="12" />
+      <inertia ixx="0.1092" ixy="0" ixz="0" iyy="0.1092" iyz="0" izz="0.1536" />
+      </inertial>
+    <visual name="brake_drum">
+      <origin xyz="0.04 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.08" />
+        </geometry>
+      <material name="dark_cast">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="wheel_flange">
+      <origin xyz="0.105 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.06" />
+        </geometry>
+      <material name="worn_steel">
+        <color rgba="0.6 0.61 0.58 1" />
+        </material>
+      </visual>
+    <visual name="center_cap">
+      <origin xyz="0.145 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.09" />
+        </geometry>
+      <material name="worn_steel">
+        <color rgba="0.6 0.61 0.58 1" />
+        </material>
+      </visual>
+    <visual name="wheel_stud_0">
+      <origin xyz="0.155 0.095 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_stud_1">
+      <origin xyz="0.155 0.0293566 0.0903504" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_stud_2">
+      <origin xyz="0.155 -0.0768566 0.0558396" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_stud_3">
+      <origin xyz="0.155 -0.0768566 -0.0558396" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_stud_4">
+      <origin xyz="0.155 0.0293566 -0.0903504" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <collision name="brake_drum">
+      <origin xyz="0.04 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="wheel_flange">
+      <origin xyz="0.105 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="center_cap">
+      <origin xyz="0.145 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="wheel_stud_0">
+      <origin xyz="0.155 0.095 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="wheel_stud_1">
+      <origin xyz="0.155 0.0293566 0.0903504" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="wheel_stud_2">
+      <origin xyz="0.155 -0.0768566 0.0558396" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="wheel_stud_3">
+      <origin xyz="0.155 -0.0768566 -0.0558396" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="wheel_stud_4">
+      <origin xyz="0.155 0.0293566 -0.0903504" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="hub_1">
+    <inertial>
+      <origin xyz="-0.08 0 0" rpy="0 1.5708 0" />
+      <mass value="12" />
+      <inertia ixx="0.1092" ixy="0" ixz="0" iyy="0.1092" iyz="0" izz="0.1536" />
+      </inertial>
+    <visual name="brake_drum">
+      <origin xyz="-0.04 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.08" />
+        </geometry>
+      <material name="dark_cast">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="wheel_flange">
+      <origin xyz="-0.105 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.06" />
+        </geometry>
+      <material name="worn_steel">
+        <color rgba="0.6 0.61 0.58 1" />
+        </material>
+      </visual>
+    <visual name="center_cap">
+      <origin xyz="-0.145 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.09" />
+        </geometry>
+      <material name="worn_steel">
+        <color rgba="0.6 0.61 0.58 1" />
+        </material>
+      </visual>
+    <visual name="wheel_stud_0">
+      <origin xyz="-0.155 0.095 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_stud_1">
+      <origin xyz="-0.155 0.0293566 0.0903504" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_stud_2">
+      <origin xyz="-0.155 -0.0768566 0.0558396" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_stud_3">
+      <origin xyz="-0.155 -0.0768566 -0.0558396" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_stud_4">
+      <origin xyz="-0.155 0.0293566 -0.0903504" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.76 0.7 1" />
+        </material>
+      </visual>
+    <collision name="brake_drum">
+      <origin xyz="-0.04 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="wheel_flange">
+      <origin xyz="-0.105 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="center_cap">
+      <origin xyz="-0.145 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="wheel_stud_0">
+      <origin xyz="-0.155 0.095 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="wheel_stud_1">
+      <origin xyz="-0.155 0.0293566 0.0903504" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="wheel_stud_2">
+      <origin xyz="-0.155 -0.0768566 0.0558396" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="wheel_stud_3">
+      <origin xyz="-0.155 -0.0768566 -0.0558396" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="wheel_stud_4">
+      <origin xyz="-0.155 0.0293566 -0.0903504" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="beam_to_differential" type="fixed">
+    <parent link="center_beam" />
+    <child link="differential" />
+    </joint>
+  <joint name="differential_to_axle_tube_0" type="revolute">
+    <origin xyz="0.25 0 0" rpy="0 0 0" />
+    <parent link="differential" />
+    <child link="axle_tube_0" />
+    <axis xyz="0 -1 0" />
+    <limit effort="1600" velocity="1.2" lower="-0.28" upper="0.28" />
+    </joint>
+  <joint name="differential_to_axle_tube_1" type="revolute">
+    <origin xyz="-0.25 0 0" rpy="0 0 0" />
+    <parent link="differential" />
+    <child link="axle_tube_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="1600" velocity="1.2" lower="-0.28" upper="0.28" />
+    </joint>
+  <joint name="axle_tube_0_to_hub" type="continuous">
+    <origin xyz="0.72 0 0" rpy="0 0 0" />
+    <parent link="axle_tube_0" />
+    <child link="hub_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="350" velocity="35" />
+    </joint>
+  <joint name="axle_tube_1_to_hub" type="continuous">
+    <origin xyz="-0.72 0 0" rpy="0 0 0" />
+    <parent link="axle_tube_1" />
+    <child link="hub_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="350" velocity="35" />
+    </joint>
+  </robot>

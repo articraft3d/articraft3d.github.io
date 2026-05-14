@@ -1,0 +1,340 @@
+<robot name="rotary_lift_module">
+  <material name="charcoal_powdercoat">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="black_anodized">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.62 0.64 0.63 1" />
+    </material>
+  <material name="polished_rail_steel">
+    <color rgba="0.82 0.84 0.82 1" />
+    </material>
+  <material name="blue_carriage">
+    <color rgba="0.05 0.18 0.34 1" />
+    </material>
+  <material name="bronze_bearing">
+    <color rgba="0.72 0.48 0.18 1" />
+    </material>
+  <link name="base">
+    <visual name="square_plinth">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.38 0.035" />
+        </geometry>
+      <material name="charcoal_powdercoat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="round_pedestal">
+      <origin xyz="0 0 0.0475" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.025" />
+        </geometry>
+      <material name="black_anodized">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_race">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.63 1" />
+        </material>
+      </visual>
+    <collision name="square_plinth">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.38 0.035" />
+        </geometry>
+      </collision>
+    <collision name="round_pedestal">
+      <origin xyz="0 0 0.0475" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_race">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotary_stage">
+    <visual name="turntable_disk">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.145" length="0.028" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.63 1" />
+        </material>
+      </visual>
+    <visual name="slide_mount_plate">
+      <origin xyz="0 -0.005 0.0405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.22 0.025" />
+        </geometry>
+      <material name="charcoal_powdercoat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lower_rail_block">
+      <origin xyz="0 -0.035 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.055 0.044" />
+        </geometry>
+      <material name="black_anodized">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_0">
+      <origin xyz="-0.055 -0.035 0.283" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.462" />
+        </geometry>
+      <material name="polished_rail_steel">
+        <color rgba="0.82 0.84 0.82 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_1">
+      <origin xyz="0.055 -0.035 0.283" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.462" />
+        </geometry>
+      <material name="polished_rail_steel">
+        <color rgba="0.82 0.84 0.82 1" />
+        </material>
+      </visual>
+    <visual name="lift_screw">
+      <origin xyz="0 -0.035 0.303" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.42" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.63 1" />
+        </material>
+      </visual>
+    <visual name="rear_spine">
+      <origin xyz="0 0.037 0.283" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.035 0.462" />
+        </geometry>
+      <material name="black_anodized">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="top_rail_block">
+      <origin xyz="0 -0.035 0.532" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.055 0.036" />
+        </geometry>
+      <material name="black_anodized">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <collision name="turntable_disk">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.145" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="slide_mount_plate">
+      <origin xyz="0 -0.005 0.0405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.22 0.025" />
+        </geometry>
+      </collision>
+    <collision name="lower_rail_block">
+      <origin xyz="0 -0.035 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.055 0.044" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_0">
+      <origin xyz="-0.055 -0.035 0.283" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.462" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_1">
+      <origin xyz="0.055 -0.035 0.283" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.462" />
+        </geometry>
+      </collision>
+    <collision name="lift_screw">
+      <origin xyz="0 -0.035 0.303" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.42" />
+        </geometry>
+      </collision>
+    <collision name="rear_spine">
+      <origin xyz="0 0.037 0.283" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.035 0.462" />
+        </geometry>
+      </collision>
+    <collision name="top_rail_block">
+      <origin xyz="0 -0.035 0.532" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.055 0.036" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lift_carriage">
+    <visual name="front_tool_plate">
+      <origin xyz="0 -0.085 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.018 0.1" />
+        </geometry>
+      <material name="blue_carriage">
+        <color rgba="0.05 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="bearing_shoe_0">
+      <origin xyz="-0.055 -0.0605 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.031 0.07" />
+        </geometry>
+      <material name="bronze_bearing">
+        <color rgba="0.72 0.48 0.18 1" />
+        </material>
+      </visual>
+    <visual name="bearing_shoe_1">
+      <origin xyz="0.055 -0.0605 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.031 0.07" />
+        </geometry>
+      <material name="bronze_bearing">
+        <color rgba="0.72 0.48 0.18 1" />
+        </material>
+      </visual>
+    <visual name="upper_bridge">
+      <origin xyz="0 -0.073 0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.02 0.03" />
+        </geometry>
+      <material name="blue_carriage">
+        <color rgba="0.05 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="lower_bridge">
+      <origin xyz="0 -0.073 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.02 0.03" />
+        </geometry>
+      <material name="blue_carriage">
+        <color rgba="0.05 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="face_bolt_0_0">
+      <origin xyz="-0.055 -0.097 -0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.63 1" />
+        </material>
+      </visual>
+    <visual name="face_bolt_0_1">
+      <origin xyz="-0.055 -0.097 0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.63 1" />
+        </material>
+      </visual>
+    <visual name="face_bolt_1_0">
+      <origin xyz="0.055 -0.097 -0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.63 1" />
+        </material>
+      </visual>
+    <visual name="face_bolt_1_1">
+      <origin xyz="0.055 -0.097 0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.63 1" />
+        </material>
+      </visual>
+    <collision name="front_tool_plate">
+      <origin xyz="0 -0.085 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.018 0.1" />
+        </geometry>
+      </collision>
+    <collision name="bearing_shoe_0">
+      <origin xyz="-0.055 -0.0605 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.031 0.07" />
+        </geometry>
+      </collision>
+    <collision name="bearing_shoe_1">
+      <origin xyz="0.055 -0.0605 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.031 0.07" />
+        </geometry>
+      </collision>
+    <collision name="upper_bridge">
+      <origin xyz="0 -0.073 0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.02 0.03" />
+        </geometry>
+      </collision>
+    <collision name="lower_bridge">
+      <origin xyz="0 -0.073 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.02 0.03" />
+        </geometry>
+      </collision>
+    <collision name="face_bolt_0_0">
+      <origin xyz="-0.055 -0.097 -0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="face_bolt_0_1">
+      <origin xyz="-0.055 -0.097 0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="face_bolt_1_0">
+      <origin xyz="0.055 -0.097 -0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="face_bolt_1_1">
+      <origin xyz="0.055 -0.097 0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="yaw_axis" type="continuous">
+    <origin xyz="0 0 0.078" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="rotary_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="1.2" />
+    </joint>
+  <joint name="lift_axis" type="prismatic">
+    <origin xyz="0 0 0.185" rpy="0 0 0" />
+    <parent link="rotary_stage" />
+    <child link="lift_carriage" />
+    <axis xyz="0 0 1" />
+    <limit effort="90" velocity="0.25" lower="0" upper="0.22" />
+    </joint>
+  </robot>

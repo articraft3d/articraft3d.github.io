@@ -1,0 +1,601 @@
+<robot name="xyz_cartesian_stage">
+  <material name="dark_anodized_aluminum">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="blue_anodized_carriage">
+    <color rgba="0.05 0.2 0.42 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.7 0.72 0.7 1" />
+    </material>
+  <material name="cable_gap_shadow">
+    <color rgba="0.01 0.012 0.015 1" />
+    </material>
+  <material name="machined_plate">
+    <color rgba="0.55 0.57 0.58 1" />
+    </material>
+  <link name="base">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.3 0.04" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="x_rail_0">
+      <origin xyz="0 -0.09 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.026 0.036" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="x_rail_1">
+      <origin xyz="0 0.09 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.026 0.036" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="x_end_stop_0">
+      <origin xyz="-0.42 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.26 0.03" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="x_end_stop_1">
+      <origin xyz="0.42 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.26 0.03" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="x_cable_trough">
+      <origin xyz="0 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.052 0.006" />
+        </geometry>
+      <material name="cable_gap_shadow">
+        <color rgba="0.01 0.012 0.015 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.3 0.04" />
+        </geometry>
+      </collision>
+    <collision name="x_rail_0">
+      <origin xyz="0 -0.09 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.026 0.036" />
+        </geometry>
+      </collision>
+    <collision name="x_rail_1">
+      <origin xyz="0 0.09 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.026 0.036" />
+        </geometry>
+      </collision>
+    <collision name="x_end_stop_0">
+      <origin xyz="-0.42 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.26 0.03" />
+        </geometry>
+      </collision>
+    <collision name="x_end_stop_1">
+      <origin xyz="0.42 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.26 0.03" />
+        </geometry>
+      </collision>
+    <collision name="x_cable_trough">
+      <origin xyz="0 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.052 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="x_carriage">
+    <visual name="x_bearing_shoe_0">
+      <origin xyz="0 -0.075 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.055 0.045" />
+        </geometry>
+      <material name="blue_anodized_carriage">
+        <color rgba="0.05 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="x_bearing_shoe_1">
+      <origin xyz="0 0.075 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.055 0.045" />
+        </geometry>
+      <material name="blue_anodized_carriage">
+        <color rgba="0.05 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="x_bridge_0">
+      <origin xyz="-0.075 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.205 0.045" />
+        </geometry>
+      <material name="blue_anodized_carriage">
+        <color rgba="0.05 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="x_bridge_1">
+      <origin xyz="0.075 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.205 0.045" />
+        </geometry>
+      <material name="blue_anodized_carriage">
+        <color rgba="0.05 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="x_cable_gap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.095 0.006" />
+        </geometry>
+      <material name="cable_gap_shadow">
+        <color rgba="0.01 0.012 0.015 1" />
+        </material>
+      </visual>
+    <visual name="y_bed_side_0">
+      <origin xyz="-0.12 0 0.0605" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.35 0.035" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="y_bed_side_1">
+      <origin xyz="0.12 0 0.0605" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.35 0.035" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="y_bed_bridge_0">
+      <origin xyz="0 -0.145 0.0605" rpy="0 0 0" />
+      <geometry>
+        <box size="0.295 0.04 0.035" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="y_bed_bridge_1">
+      <origin xyz="0 0.145 0.0605" rpy="0 0 0" />
+      <geometry>
+        <box size="0.295 0.04 0.035" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="y_cable_gap">
+      <origin xyz="0 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.235 0.006" />
+        </geometry>
+      <material name="cable_gap_shadow">
+        <color rgba="0.01 0.012 0.015 1" />
+        </material>
+      </visual>
+    <visual name="y_rail_0">
+      <origin xyz="-0.1 0 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.315 0.032" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="y_rail_1">
+      <origin xyz="0.1 0 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.315 0.032" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <collision name="x_bearing_shoe_0">
+      <origin xyz="0 -0.075 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.055 0.045" />
+        </geometry>
+      </collision>
+    <collision name="x_bearing_shoe_1">
+      <origin xyz="0 0.075 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.055 0.045" />
+        </geometry>
+      </collision>
+    <collision name="x_bridge_0">
+      <origin xyz="-0.075 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.205 0.045" />
+        </geometry>
+      </collision>
+    <collision name="x_bridge_1">
+      <origin xyz="0.075 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.205 0.045" />
+        </geometry>
+      </collision>
+    <collision name="x_cable_gap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.095 0.006" />
+        </geometry>
+      </collision>
+    <collision name="y_bed_side_0">
+      <origin xyz="-0.12 0 0.0605" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.35 0.035" />
+        </geometry>
+      </collision>
+    <collision name="y_bed_side_1">
+      <origin xyz="0.12 0 0.0605" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.35 0.035" />
+        </geometry>
+      </collision>
+    <collision name="y_bed_bridge_0">
+      <origin xyz="0 -0.145 0.0605" rpy="0 0 0" />
+      <geometry>
+        <box size="0.295 0.04 0.035" />
+        </geometry>
+      </collision>
+    <collision name="y_bed_bridge_1">
+      <origin xyz="0 0.145 0.0605" rpy="0 0 0" />
+      <geometry>
+        <box size="0.295 0.04 0.035" />
+        </geometry>
+      </collision>
+    <collision name="y_cable_gap">
+      <origin xyz="0 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.235 0.006" />
+        </geometry>
+      </collision>
+    <collision name="y_rail_0">
+      <origin xyz="-0.1 0 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.315 0.032" />
+        </geometry>
+      </collision>
+    <collision name="y_rail_1">
+      <origin xyz="0.1 0 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.315 0.032" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="y_carriage">
+    <visual name="y_bearing_shoe_0">
+      <origin xyz="-0.1 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.14 0.04" />
+        </geometry>
+      <material name="blue_anodized_carriage">
+        <color rgba="0.05 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="y_bearing_shoe_1">
+      <origin xyz="0.1 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.14 0.04" />
+        </geometry>
+      <material name="blue_anodized_carriage">
+        <color rgba="0.05 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="y_bridge_0">
+      <origin xyz="0 -0.055 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.255 0.03 0.04" />
+        </geometry>
+      <material name="blue_anodized_carriage">
+        <color rgba="0.05 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="y_bridge_1">
+      <origin xyz="0 0.055 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.255 0.03 0.04" />
+        </geometry>
+      <material name="blue_anodized_carriage">
+        <color rgba="0.05 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="vertical_cable_gap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.08 0.006" />
+        </geometry>
+      <material name="cable_gap_shadow">
+        <color rgba="0.01 0.012 0.015 1" />
+        </material>
+      </visual>
+    <visual name="z_frame_side_0">
+      <origin xyz="-0.115 0.055 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 0.4" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="z_frame_side_1">
+      <origin xyz="0.115 0.055 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 0.4" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="z_frame_bridge_0">
+      <origin xyz="0 0.055 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.285 0.045 0.04" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="z_frame_bridge_1">
+      <origin xyz="0 0.055 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.285 0.045 0.04" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="z_cable_window">
+      <origin xyz="0 0.03 0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.006 0.26" />
+        </geometry>
+      <material name="cable_gap_shadow">
+        <color rgba="0.01 0.012 0.015 1" />
+        </material>
+      </visual>
+    <visual name="z_rail_0">
+      <origin xyz="-0.065 0.02 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.025 0.32" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="z_rail_1">
+      <origin xyz="0.065 0.02 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.025 0.32" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <collision name="y_bearing_shoe_0">
+      <origin xyz="-0.1 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.14 0.04" />
+        </geometry>
+      </collision>
+    <collision name="y_bearing_shoe_1">
+      <origin xyz="0.1 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.14 0.04" />
+        </geometry>
+      </collision>
+    <collision name="y_bridge_0">
+      <origin xyz="0 -0.055 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.255 0.03 0.04" />
+        </geometry>
+      </collision>
+    <collision name="y_bridge_1">
+      <origin xyz="0 0.055 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.255 0.03 0.04" />
+        </geometry>
+      </collision>
+    <collision name="vertical_cable_gap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.08 0.006" />
+        </geometry>
+      </collision>
+    <collision name="z_frame_side_0">
+      <origin xyz="-0.115 0.055 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 0.4" />
+        </geometry>
+      </collision>
+    <collision name="z_frame_side_1">
+      <origin xyz="0.115 0.055 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 0.4" />
+        </geometry>
+      </collision>
+    <collision name="z_frame_bridge_0">
+      <origin xyz="0 0.055 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.285 0.045 0.04" />
+        </geometry>
+      </collision>
+    <collision name="z_frame_bridge_1">
+      <origin xyz="0 0.055 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.285 0.045 0.04" />
+        </geometry>
+      </collision>
+    <collision name="z_cable_window">
+      <origin xyz="0 0.03 0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.006 0.26" />
+        </geometry>
+      </collision>
+    <collision name="z_rail_0">
+      <origin xyz="-0.065 0.02 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.025 0.32" />
+        </geometry>
+      </collision>
+    <collision name="z_rail_1">
+      <origin xyz="0.065 0.02 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.025 0.32" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="z_carriage">
+    <visual name="z_slide_block">
+      <origin xyz="0 -0.015 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.045 0.12" />
+        </geometry>
+      <material name="blue_anodized_carriage">
+        <color rgba="0.05 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="end_effector_plate">
+      <origin xyz="0 -0.047 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.02 0.16" />
+        </geometry>
+      <material name="machined_plate">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="tool_clearance_square">
+      <origin xyz="0 -0.058 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.004 0.07" />
+        </geometry>
+      <material name="cable_gap_shadow">
+        <color rgba="0.01 0.012 0.015 1" />
+        </material>
+      </visual>
+    <visual name="plate_bolt_0">
+      <origin xyz="-0.055 -0.061 0.005" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="plate_bolt_1">
+      <origin xyz="0.055 -0.061 0.005" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="plate_bolt_2">
+      <origin xyz="-0.055 -0.061 0.115" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="plate_bolt_3">
+      <origin xyz="0.055 -0.061 0.115" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <collision name="z_slide_block">
+      <origin xyz="0 -0.015 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.045 0.12" />
+        </geometry>
+      </collision>
+    <collision name="end_effector_plate">
+      <origin xyz="0 -0.047 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.02 0.16" />
+        </geometry>
+      </collision>
+    <collision name="tool_clearance_square">
+      <origin xyz="0 -0.058 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.004 0.07" />
+        </geometry>
+      </collision>
+    <collision name="plate_bolt_0">
+      <origin xyz="-0.055 -0.061 0.005" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="plate_bolt_1">
+      <origin xyz="0.055 -0.061 0.005" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="plate_bolt_2">
+      <origin xyz="-0.055 -0.061 0.115" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="plate_bolt_3">
+      <origin xyz="0.055 -0.061 0.115" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_x" type="prismatic">
+    <origin xyz="-0.25 0 0.076" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="x_carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="0.35" lower="0" upper="0.5" />
+    </joint>
+  <joint name="x_to_y" type="prismatic">
+    <origin xyz="0 -0.1 0.11" rpy="0 0 0" />
+    <parent link="x_carriage" />
+    <child link="y_carriage" />
+    <axis xyz="0 1 0" />
+    <limit effort="90" velocity="0.3" lower="0" upper="0.2" />
+    </joint>
+  <joint name="y_to_z" type="prismatic">
+    <origin xyz="0 0 0.11" rpy="0 0 0" />
+    <parent link="y_carriage" />
+    <child link="z_carriage" />
+    <axis xyz="0 0 1" />
+    <limit effort="70" velocity="0.2" lower="0" upper="0.22" />
+    </joint>
+  </robot>

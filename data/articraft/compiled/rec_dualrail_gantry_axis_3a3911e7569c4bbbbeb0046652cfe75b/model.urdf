@@ -1,0 +1,307 @@
+<robot name="wide_gantry_positioning_axis">
+  <link name="base">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.46 0.035" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rail_0">
+      <origin xyz="0 -0.17 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.026 0.025" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="travel_stop_0_0">
+      <origin xyz="-0.285 -0.17 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.07 0.045" />
+        </geometry>
+      <material name="travel_stop_red">
+        <color rgba="0.75 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="travel_stop_0_1">
+      <origin xyz="0.285 -0.17 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.07 0.045" />
+        </geometry>
+      <material name="travel_stop_red">
+        <color rgba="0.75 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="rail_1">
+      <origin xyz="0 0.17 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.026 0.025" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="travel_stop_1_0">
+      <origin xyz="-0.285 0.17 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.07 0.045" />
+        </geometry>
+      <material name="travel_stop_red">
+        <color rgba="0.75 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="travel_stop_1_1">
+      <origin xyz="0.285 0.17 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.07 0.045" />
+        </geometry>
+      <material name="travel_stop_red">
+        <color rgba="0.75 0.05 0.03 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.46 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rail_0">
+      <origin xyz="0 -0.17 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.026 0.025" />
+        </geometry>
+      </collision>
+    <collision name="travel_stop_0_0">
+      <origin xyz="-0.285 -0.17 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.07 0.045" />
+        </geometry>
+      </collision>
+    <collision name="travel_stop_0_1">
+      <origin xyz="0.285 -0.17 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.07 0.045" />
+        </geometry>
+      </collision>
+    <collision name="rail_1">
+      <origin xyz="0 0.17 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.026 0.025" />
+        </geometry>
+      </collision>
+    <collision name="travel_stop_1_0">
+      <origin xyz="-0.285 0.17 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.07 0.045" />
+        </geometry>
+      </collision>
+    <collision name="travel_stop_1_1">
+      <origin xyz="0.285 0.17 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.07 0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gantry">
+    <visual name="saddle_0">
+      <origin xyz="0 -0.17 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.07 0.035" />
+        </geometry>
+      <material name="blue_anodized_carriage">
+        <color rgba="0.05 0.2 0.55 1" />
+        </material>
+      </visual>
+    <visual name="saddle_1">
+      <origin xyz="0 0.17 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.07 0.035" />
+        </geometry>
+      <material name="blue_anodized_carriage">
+        <color rgba="0.05 0.2 0.55 1" />
+        </material>
+      </visual>
+    <visual name="crossbeam">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.43 0.06" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="front_guide">
+      <origin xyz="0.0675 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.33 0.014" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lower_guide">
+      <origin xyz="0.0675 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.33 0.014" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="truck_stop_0">
+      <origin xyz="0.073 -0.145 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.028 0.045" />
+        </geometry>
+      <material name="travel_stop_red">
+        <color rgba="0.75 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="truck_stop_1">
+      <origin xyz="0.073 0.145 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.028 0.045" />
+        </geometry>
+      <material name="travel_stop_red">
+        <color rgba="0.75 0.05 0.03 1" />
+        </material>
+      </visual>
+    <collision name="saddle_0">
+      <origin xyz="0 -0.17 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.07 0.035" />
+        </geometry>
+      </collision>
+    <collision name="saddle_1">
+      <origin xyz="0 0.17 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.07 0.035" />
+        </geometry>
+      </collision>
+    <collision name="crossbeam">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.43 0.06" />
+        </geometry>
+      </collision>
+    <collision name="front_guide">
+      <origin xyz="0.0675 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.33 0.014" />
+        </geometry>
+      </collision>
+    <collision name="lower_guide">
+      <origin xyz="0.0675 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.33 0.014" />
+        </geometry>
+      </collision>
+    <collision name="truck_stop_0">
+      <origin xyz="0.073 -0.145 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.028 0.045" />
+        </geometry>
+      </collision>
+    <collision name="truck_stop_1">
+      <origin xyz="0.073 0.145 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.028 0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tool_truck">
+    <visual name="truck_plate">
+      <origin xyz="0.018 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.095 0.08" />
+        </geometry>
+      <material name="blue_anodized_carriage">
+        <color rgba="0.05 0.2 0.55 1" />
+        </material>
+      </visual>
+    <visual name="roller_0">
+      <origin xyz="0.04 0 -0.025" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="roller_1">
+      <origin xyz="0.04 0 0.025" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="tool_holder">
+      <origin xyz="0.047 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.045 0.052" />
+        </geometry>
+      <material name="black_tooling">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tool_bit">
+      <origin xyz="0.047 0 -0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="truck_plate">
+      <origin xyz="0.018 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.095 0.08" />
+        </geometry>
+      </collision>
+    <collision name="roller_0">
+      <origin xyz="0.04 0 -0.025" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="roller_1">
+      <origin xyz="0.04 0 0.025" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="tool_holder">
+      <origin xyz="0.047 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.045 0.052" />
+        </geometry>
+      </collision>
+    <collision name="tool_bit">
+      <origin xyz="0.047 0 -0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_gantry" type="prismatic">
+    <origin xyz="-0.125 0 0.077" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="gantry" />
+    <axis xyz="1 0 0" />
+    <limit effort="180" velocity="0.45" lower="0" upper="0.25" />
+    </joint>
+  <joint name="gantry_to_truck" type="prismatic">
+    <origin xyz="0.0725 -0.06 0.043" rpy="0 0 0" />
+    <parent link="gantry" />
+    <child link="tool_truck" />
+    <axis xyz="0 1 0" />
+    <limit effort="60" velocity="0.35" lower="0" upper="0.12" />
+    </joint>
+  </robot>

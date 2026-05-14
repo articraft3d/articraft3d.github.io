@@ -1,0 +1,1607 @@
+<robot name="modern_observation_wheel">
+  <material name="white_painted_steel">
+    <color rgba="0.88 0.9 0.91 1" />
+    </material>
+  <material name="dark_bearing_steel">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.7 0.73 0.76 1" />
+    </material>
+  <material name="pale_concrete">
+    <color rgba="0.58 0.58 0.55 1" />
+    </material>
+  <material name="blue_tinted_glass">
+    <color rgba="0.38 0.68 0.88 0.58" />
+    </material>
+  <material name="dark_window_band">
+    <color rgba="0.05 0.11 0.17 0.86" />
+    </material>
+  <link name="support_frame">
+    <inertial>
+      <origin xyz="0 0 4" rpy="0 0 0" />
+      <mass value="22000" />
+      <inertia ixx="133833" ixy="0" ixz="0" iyy="246693" iyz="0" izz="145860" />
+      </inertial>
+    <visual name="foundation_slab">
+      <origin xyz="0 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <box size="8.4 3 0.26" />
+        </geometry>
+      <material name="pale_concrete">
+        <color rgba="0.58 0.58 0.55 1" />
+        </material>
+      </visual>
+    <visual name="fixed_axle">
+      <origin xyz="0 0 7.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="1.72" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_housing">
+      <origin xyz="0 0.72 7.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.42" length="0.32" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="rear_bearing_housing">
+      <origin xyz="0 -0.72 7.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.42" length="0.32" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="front_leg_0">
+      <geometry>
+        <mesh filename="assets/meshes/front_leg_0.obj" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_leg_1">
+      <geometry>
+        <mesh filename="assets/meshes/front_leg_1.obj" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_cross_tie">
+      <geometry>
+        <mesh filename="assets/meshes/front_cross_tie.obj" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="rear_leg_0">
+      <geometry>
+        <mesh filename="assets/meshes/rear_leg_0.obj" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="rear_leg_1">
+      <geometry>
+        <mesh filename="assets/meshes/rear_leg_1.obj" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="rear_cross_tie">
+      <geometry>
+        <mesh filename="assets/meshes/rear_cross_tie.obj" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <collision name="foundation_slab">
+      <origin xyz="0 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <box size="8.4 3 0.26" />
+        </geometry>
+      </collision>
+    <collision name="fixed_axle">
+      <origin xyz="0 0 7.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="1.72" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_housing">
+      <origin xyz="0 0.72 7.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.42" length="0.32" />
+        </geometry>
+      </collision>
+    <collision name="rear_bearing_housing">
+      <origin xyz="0 -0.72 7.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.42" length="0.32" />
+        </geometry>
+      </collision>
+    <collision name="front_leg_0">
+      <geometry>
+        <mesh filename="assets/meshes/front_leg_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_leg_1">
+      <geometry>
+        <mesh filename="assets/meshes/front_leg_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_cross_tie">
+      <geometry>
+        <mesh filename="assets/meshes/front_cross_tie.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_leg_0">
+      <geometry>
+        <mesh filename="assets/meshes/rear_leg_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_leg_1">
+      <geometry>
+        <mesh filename="assets/meshes/rear_leg_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_cross_tie">
+      <geometry>
+        <mesh filename="assets/meshes/rear_cross_tie.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <mass value="9800" />
+      <inertia ixx="61297" ixy="0" ixz="0" iyy="61297" iyz="0" izz="122500" />
+      </inertial>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/slender_rim.obj" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="inner_ring">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/inner_tension_ring.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hub_drum">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.7" length="0.96" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hub_core">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.48" length="1.08" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_2">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_2.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_3">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_3.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_4">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_4.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_5">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_5.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_6">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_6.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_7">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_7.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_8">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_8.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_9">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_9.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_10">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_10.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_11">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_11.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_12">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_12.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_13">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_13.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_14">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_14.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spoke_15">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_15.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hanger_arm_0">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_0.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="pivot_socket_0">
+      <origin xyz="5.08 0.93 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_arm_1">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_1.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="pivot_socket_1">
+      <origin xyz="3.5921 0.93 3.5921" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_arm_2">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_2.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="pivot_socket_2">
+      <origin xyz="3.1106e-16 0.93 5.08" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_arm_3">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_3.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="pivot_socket_3">
+      <origin xyz="-3.5921 0.93 3.5921" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_arm_4">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_4.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="pivot_socket_4">
+      <origin xyz="-5.08 0.93 6.22121e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_arm_5">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_5.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="pivot_socket_5">
+      <origin xyz="-3.5921 0.93 -3.5921" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_arm_6">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_6.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="pivot_socket_6">
+      <origin xyz="-9.33181e-16 0.93 -5.08" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_arm_7">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_7.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="pivot_socket_7">
+      <origin xyz="3.5921 0.93 -3.5921" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <collision name="rim">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/slender_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="inner_ring">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/inner_tension_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="hub_drum">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.7" length="0.96" />
+        </geometry>
+      </collision>
+    <collision name="hub_core">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.48" length="1.08" />
+        </geometry>
+      </collision>
+    <collision name="spoke_0">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_1">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_2">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_3">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_3.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_4">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_4.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_5">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_5.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_6">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_6.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_7">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_7.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_8">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_8.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_9">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_9.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_10">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_10.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_11">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_11.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_12">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_12.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_13">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_13.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_14">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_14.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_15">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_15.obj" />
+        </geometry>
+      </collision>
+    <collision name="hanger_arm_0">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_socket_0">
+      <origin xyz="5.08 0.93 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="hanger_arm_1">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_socket_1">
+      <origin xyz="3.5921 0.93 3.5921" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="hanger_arm_2">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_socket_2">
+      <origin xyz="3.1106e-16 0.93 5.08" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="hanger_arm_3">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_3.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_socket_3">
+      <origin xyz="-3.5921 0.93 3.5921" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="hanger_arm_4">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_4.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_socket_4">
+      <origin xyz="-5.08 0.93 6.22121e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="hanger_arm_5">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_5.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_socket_5">
+      <origin xyz="-3.5921 0.93 -3.5921" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="hanger_arm_6">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_6.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_socket_6">
+      <origin xyz="-9.33181e-16 0.93 -5.08" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="hanger_arm_7">
+      <geometry>
+        <mesh filename="assets/meshes/hanger_arm_7.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_socket_7">
+      <origin xyz="3.5921 0.93 -3.5921" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="capsule_0">
+    <inertial>
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <mass value="750" />
+      <inertia ixx="63.05" ixy="0" ixz="0" iyy="173.431" iyz="0" izz="152.431" />
+      </inertial>
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      <material name="blue_tinted_glass">
+        <color rgba="0.38 0.68 0.88 0.58" />
+        </material>
+      </visual>
+    <visual name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      </collision>
+    <collision name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="capsule_1">
+    <inertial>
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <mass value="750" />
+      <inertia ixx="63.05" ixy="0" ixz="0" iyy="173.431" iyz="0" izz="152.431" />
+      </inertial>
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      <material name="blue_tinted_glass">
+        <color rgba="0.38 0.68 0.88 0.58" />
+        </material>
+      </visual>
+    <visual name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      </collision>
+    <collision name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="capsule_2">
+    <inertial>
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <mass value="750" />
+      <inertia ixx="63.05" ixy="0" ixz="0" iyy="173.431" iyz="0" izz="152.431" />
+      </inertial>
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      <material name="blue_tinted_glass">
+        <color rgba="0.38 0.68 0.88 0.58" />
+        </material>
+      </visual>
+    <visual name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      </collision>
+    <collision name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="capsule_3">
+    <inertial>
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <mass value="750" />
+      <inertia ixx="63.05" ixy="0" ixz="0" iyy="173.431" iyz="0" izz="152.431" />
+      </inertial>
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      <material name="blue_tinted_glass">
+        <color rgba="0.38 0.68 0.88 0.58" />
+        </material>
+      </visual>
+    <visual name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      </collision>
+    <collision name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="capsule_4">
+    <inertial>
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <mass value="750" />
+      <inertia ixx="63.05" ixy="0" ixz="0" iyy="173.431" iyz="0" izz="152.431" />
+      </inertial>
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      <material name="blue_tinted_glass">
+        <color rgba="0.38 0.68 0.88 0.58" />
+        </material>
+      </visual>
+    <visual name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      </collision>
+    <collision name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="capsule_5">
+    <inertial>
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <mass value="750" />
+      <inertia ixx="63.05" ixy="0" ixz="0" iyy="173.431" iyz="0" izz="152.431" />
+      </inertial>
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      <material name="blue_tinted_glass">
+        <color rgba="0.38 0.68 0.88 0.58" />
+        </material>
+      </visual>
+    <visual name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      </collision>
+    <collision name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="capsule_6">
+    <inertial>
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <mass value="750" />
+      <inertia ixx="63.05" ixy="0" ixz="0" iyy="173.431" iyz="0" izz="152.431" />
+      </inertial>
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      <material name="blue_tinted_glass">
+        <color rgba="0.38 0.68 0.88 0.58" />
+        </material>
+      </visual>
+    <visual name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      </collision>
+    <collision name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="capsule_7">
+    <inertial>
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <mass value="750" />
+      <inertia ixx="63.05" ixy="0" ixz="0" iyy="173.431" iyz="0" izz="152.431" />
+      </inertial>
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      <material name="dark_bearing_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      <material name="blue_tinted_glass">
+        <color rgba="0.38 0.68 0.88 0.58" />
+        </material>
+      </visual>
+    <visual name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      <material name="dark_window_band">
+        <color rgba="0.05 0.11 0.17 0.86" />
+        </material>
+      </visual>
+    <visual name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      <material name="white_painted_steel">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="hanger_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/capsule_hanger_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="capsule_body">
+      <origin xyz="0 0 -0.86" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glazed_capsule_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_window">
+      <origin xyz="0 0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="rear_window">
+      <origin xyz="0 -0.258 -0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.03 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="roof_frame">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.035 0.045" />
+        </geometry>
+      </collision>
+    <collision name="floor_frame">
+      <origin xyz="0 0 -1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.03 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="wheel_spin" type="continuous">
+    <origin xyz="0 0 7.2" rpy="0 0 0" />
+    <parent link="support_frame" />
+    <child link="wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="180000" velocity="0.2" />
+    </joint>
+  <joint name="capsule_pivot_0" type="continuous">
+    <origin xyz="5.08 1.12 0" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="capsule_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="900" velocity="0.8" />
+    </joint>
+  <joint name="capsule_pivot_1" type="continuous">
+    <origin xyz="3.5921 1.12 3.5921" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="capsule_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="900" velocity="0.8" />
+    </joint>
+  <joint name="capsule_pivot_2" type="continuous">
+    <origin xyz="3.1106e-16 1.12 5.08" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="capsule_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="900" velocity="0.8" />
+    </joint>
+  <joint name="capsule_pivot_3" type="continuous">
+    <origin xyz="-3.5921 1.12 3.5921" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="capsule_3" />
+    <axis xyz="0 1 0" />
+    <limit effort="900" velocity="0.8" />
+    </joint>
+  <joint name="capsule_pivot_4" type="continuous">
+    <origin xyz="-5.08 1.12 6.22121e-16" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="capsule_4" />
+    <axis xyz="0 1 0" />
+    <limit effort="900" velocity="0.8" />
+    </joint>
+  <joint name="capsule_pivot_5" type="continuous">
+    <origin xyz="-3.5921 1.12 -3.5921" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="capsule_5" />
+    <axis xyz="0 1 0" />
+    <limit effort="900" velocity="0.8" />
+    </joint>
+  <joint name="capsule_pivot_6" type="continuous">
+    <origin xyz="-9.33181e-16 1.12 -5.08" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="capsule_6" />
+    <axis xyz="0 1 0" />
+    <limit effort="900" velocity="0.8" />
+    </joint>
+  <joint name="capsule_pivot_7" type="continuous">
+    <origin xyz="3.5921 1.12 -3.5921" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="capsule_7" />
+    <axis xyz="0 1 0" />
+    <limit effort="900" velocity="0.8" />
+    </joint>
+  </robot>

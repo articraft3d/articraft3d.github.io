@@ -1,0 +1,244 @@
+<robot name="pedestrian_barrier_gate">
+  <material name="safety_orange">
+    <color rgba="1 0.45 0.05 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.55 0.58 0.6 1" />
+    </material>
+  <material name="white_paint">
+    <color rgba="0.96 0.96 0.9 1" />
+    </material>
+  <material name="reflector_red">
+    <color rgba="0.9 0.02 0.02 1" />
+    </material>
+  <material name="panel_gray">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <link name="cabinet">
+    <visual name="plinth">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.34 0.08" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="body_shell">
+      <origin xyz="0 0 0.492" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.28 0.828" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="1 0.45 0.05 1" />
+        </material>
+      </visual>
+    <visual name="top_cap">
+      <origin xyz="0 0 0.943" rpy="0 0 0" />
+      <geometry>
+        <box size="0.39 0.31 0.08" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="front_access_panel">
+      <origin xyz="-0.02 -0.145 0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.014 0.46" />
+        </geometry>
+      <material name="panel_gray">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="round_lock">
+      <origin xyz="0.075 -0.157 0.56" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="hinge_backplate">
+      <origin xyz="0.18 -0.151 0.78" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.03 0.18" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="fixed_shaft">
+      <origin xyz="0.18 -0.194 0.78" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.062" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <collision name="plinth">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.34 0.08" />
+        </geometry>
+      </collision>
+    <collision name="body_shell">
+      <origin xyz="0 0 0.492" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.28 0.828" />
+        </geometry>
+      </collision>
+    <collision name="top_cap">
+      <origin xyz="0 0 0.943" rpy="0 0 0" />
+      <geometry>
+        <box size="0.39 0.31 0.08" />
+        </geometry>
+      </collision>
+    <collision name="front_access_panel">
+      <origin xyz="-0.02 -0.145 0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.014 0.46" />
+        </geometry>
+      </collision>
+    <collision name="round_lock">
+      <origin xyz="0.075 -0.157 0.56" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="hinge_backplate">
+      <origin xyz="0.18 -0.151 0.78" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.03 0.18" />
+        </geometry>
+      </collision>
+    <collision name="fixed_shaft">
+      <origin xyz="0.18 -0.194 0.78" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.062" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="arm">
+    <visual name="moving_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.045" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bar">
+      <origin xyz="0.79 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.45 0.07 0.055" />
+        </geometry>
+      <material name="white_paint">
+        <color rgba="0.96 0.96 0.9 1" />
+        </material>
+      </visual>
+    <visual name="red_band_0">
+      <origin xyz="0.34 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.074 0.059" />
+        </geometry>
+      <material name="reflector_red">
+        <color rgba="0.9 0.02 0.02 1" />
+        </material>
+      </visual>
+    <visual name="red_band_1">
+      <origin xyz="0.7 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.074 0.059" />
+        </geometry>
+      <material name="reflector_red">
+        <color rgba="0.9 0.02 0.02 1" />
+        </material>
+      </visual>
+    <visual name="red_band_2">
+      <origin xyz="1.06 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.074 0.059" />
+        </geometry>
+      <material name="reflector_red">
+        <color rgba="0.9 0.02 0.02 1" />
+        </material>
+      </visual>
+    <visual name="red_band_3">
+      <origin xyz="1.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.074 0.059" />
+        </geometry>
+      <material name="reflector_red">
+        <color rgba="0.9 0.02 0.02 1" />
+        </material>
+      </visual>
+    <visual name="end_cap">
+      <origin xyz="1.54 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.078 0.063" />
+        </geometry>
+      <material name="reflector_red">
+        <color rgba="0.9 0.02 0.02 1" />
+        </material>
+      </visual>
+    <collision name="moving_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="bar">
+      <origin xyz="0.79 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.45 0.07 0.055" />
+        </geometry>
+      </collision>
+    <collision name="red_band_0">
+      <origin xyz="0.34 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.074 0.059" />
+        </geometry>
+      </collision>
+    <collision name="red_band_1">
+      <origin xyz="0.7 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.074 0.059" />
+        </geometry>
+      </collision>
+    <collision name="red_band_2">
+      <origin xyz="1.06 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.074 0.059" />
+        </geometry>
+      </collision>
+    <collision name="red_band_3">
+      <origin xyz="1.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.074 0.059" />
+        </geometry>
+      </collision>
+    <collision name="end_cap">
+      <origin xyz="1.54 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.078 0.063" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="cabinet_to_arm" type="revolute">
+    <origin xyz="0.18 -0.2475 0.78" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="80" velocity="1.2" lower="0" upper="1.5708" />
+    </joint>
+  </robot>

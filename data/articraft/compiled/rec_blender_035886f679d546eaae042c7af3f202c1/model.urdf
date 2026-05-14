@@ -1,0 +1,315 @@
+<robot name="laboratory_homogenizer_blender">
+  <material name="warm_gray_powder_coat">
+    <color rgba="0.72 0.74 0.73 1" />
+    </material>
+  <material name="dark_control_panel">
+    <color rgba="0.015 0.018 0.022 1" />
+    </material>
+  <material name="brushed_stainless">
+    <color rgba="0.68 0.7 0.69 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.005 0.005 0.006 1" />
+    </material>
+  <material name="clear_polycarbonate">
+    <color rgba="0.58 0.82 0.95 0.46" />
+    </material>
+  <material name="yellow_lock_mark">
+    <color rgba="1 0.76 0.08 1" />
+    </material>
+  <material name="red_indicator">
+    <color rgba="0.8 0.04 0.03 1" />
+    </material>
+  <link name="housing">
+    <visual name="housing_shell">
+      <origin xyz="0 0 0.275" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_housing.obj" />
+        </geometry>
+      <material name="warm_gray_powder_coat">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="control_panel">
+      <origin xyz="0 -0.163 0.33" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.006 0.255" />
+        </geometry>
+      <material name="dark_control_panel">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_socket">
+      <origin xyz="0 -0.02 0.55" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bayonet_socket.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_slot_0">
+      <origin xyz="0.094 -0.02 0.5645" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.05 0.001" />
+        </geometry>
+      <material name="dark_control_panel">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_slot_1">
+      <origin xyz="-0.047 0.0614064 0.5645" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.014 0.05 0.001" />
+        </geometry>
+      <material name="dark_control_panel">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_slot_2">
+      <origin xyz="-0.047 -0.101406 0.5645" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.014 0.05 0.001" />
+        </geometry>
+      <material name="dark_control_panel">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <visual name="drive_coupler">
+      <origin xyz="0 -0.02 0.555" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.02" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="lock_tick">
+      <origin xyz="0.085 -0.168 0.444" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.028 0.018" />
+        </geometry>
+      <material name="yellow_lock_mark">
+        <color rgba="1 0.76 0.08 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="chamber_cup">
+    <visual name="cup_shell">
+      <geometry>
+        <mesh filename="assets/meshes/stainless_chamber_cup.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="grip_strip">
+      <origin xyz="0 -0.083 0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.008 0.045" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="lid_hinge">
+    <visual name="hinge_bridge">
+      <origin xyz="0 0.089 0.248" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.012 0.018" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="hinge_ear_0">
+      <origin xyz="-0.06 0.089 0.267" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.012 0.034" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="hinge_ear_1">
+      <origin xyz="0.06 0.089 0.267" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.012 0.034" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="chamber_lid">
+    <visual name="lid_disk">
+      <origin xyz="0 -0.088 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.012" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.58 0.82 0.95 0.46" />
+        </material>
+      </visual>
+    <visual name="lid_gasket">
+      <origin xyz="0 -0.088 -0.008" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lid_gasket.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf">
+      <origin xyz="0 -0.022 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.034 0.01" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.58 0.82 0.95 0.46" />
+        </material>
+      </visual>
+    <visual name="lid_knob">
+      <origin xyz="0 -0.088 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.016" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_drive">
+    <visual name="drive_shaft">
+      <geometry>
+        <cylinder radius="0.005" length="0.044" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_hub">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.014" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_leaf_0">
+      <origin xyz="0.033 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.014 0.004" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_leaf_1">
+      <origin xyz="2.02067e-18 0.033 0.012" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.052 0.014 0.004" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_leaf_2">
+      <origin xyz="-0.033 4.04133e-18 0.012" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.052 0.014 0.004" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_leaf_3">
+      <origin xyz="-6.062e-18 -0.033 0.012" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.052 0.014 0.004" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="speed_dial">
+    <visual name="dial_cap">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.018" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="dial_pointer">
+      <origin xyz="0 0.02 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.023 0.002" />
+        </geometry>
+      <material name="yellow_lock_mark">
+        <color rgba="1 0.76 0.08 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="status_light">
+    <visual name="indicator_lens">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.008" />
+        </geometry>
+      <material name="red_indicator">
+        <color rgba="0.8 0.04 0.03 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="housing_to_chamber_cup" type="revolute">
+    <origin xyz="0 -0.02 0.565" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="chamber_cup" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="1.2" lower="0" upper="0.42" />
+    </joint>
+  <joint name="cup_to_lid_hinge" type="fixed">
+    <parent link="chamber_cup" />
+    <child link="lid_hinge" />
+    </joint>
+  <joint name="hinge_to_lid" type="revolute">
+    <origin xyz="0 0.088 0.268" rpy="0 0 0" />
+    <parent link="lid_hinge" />
+    <child link="chamber_lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="4" velocity="1.4" lower="0" upper="1.25" />
+    </joint>
+  <joint name="cup_to_blade" type="continuous">
+    <origin xyz="0 0 0.052" rpy="0 0 0" />
+    <parent link="chamber_cup" />
+    <child link="blade_drive" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="80" />
+    </joint>
+  <joint name="housing_to_speed_dial" type="revolute">
+    <origin xyz="0 -0.166 0.325" rpy="1.5708 0 0" />
+    <parent link="housing" />
+    <child link="speed_dial" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="4" lower="0" upper="4.7" />
+    </joint>
+  <joint name="housing_to_status_light" type="fixed">
+    <origin xyz="-0.065 -0.166 0.405" rpy="1.5708 0 0" />
+    <parent link="housing" />
+    <child link="status_light" />
+    </joint>
+  </robot>

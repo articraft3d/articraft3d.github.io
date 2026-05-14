@@ -1,0 +1,237 @@
+<robot name="cylindrical_metronome">
+  <link name="housing">
+    <visual name="disc_base">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.035" />
+        </geometry>
+      <material name="dark_walnut_base">
+        <color rgba="0.18 0.105 0.055 1" />
+        </material>
+      </visual>
+    <visual name="lower_brass_rim">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.1616" length="0.006" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.92 0.66 0.28 1" />
+        </material>
+      </visual>
+    <visual name="upper_brass_rim">
+      <origin xyz="0 0 0.037" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.128" length="0.008" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.92 0.66 0.28 1" />
+        </material>
+      </visual>
+    <visual name="slotted_round_housing">
+      <geometry>
+        <mesh filename="assets/meshes/slotted_round_housing.obj" />
+        </geometry>
+      <material name="deep_burgundy_enamel">
+        <color rgba="0.23 0.035 0.045 1" />
+        </material>
+      </visual>
+    <visual name="slot_shadow">
+      <origin xyz="0 0.0135 0.186" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07912 0.005 0.21896" />
+        </geometry>
+      <material name="dark_slot_interior">
+        <color rgba="0.005 0.004 0.003 1" />
+        </material>
+      </visual>
+    <visual name="bearing_socket">
+      <origin xyz="0 0.041 0.105" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.056" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.92 0.66 0.28 1" />
+        </material>
+      </visual>
+    <collision name="disc_base">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="lower_brass_rim">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.1616" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="upper_brass_rim">
+      <origin xyz="0 0 0.037" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.128" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="slotted_round_housing">
+      <geometry>
+        <mesh filename="assets/meshes/slotted_round_housing.obj" />
+        </geometry>
+      </collision>
+    <collision name="slot_shadow">
+      <origin xyz="0 0.0135 0.186" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07912 0.005 0.21896" />
+        </geometry>
+      </collision>
+    <collision name="bearing_socket">
+      <origin xyz="0 0.041 0.105" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.056" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pendulum">
+    <visual name="pivot_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.03" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.92 0.66 0.28 1" />
+        </material>
+      </visual>
+    <visual name="shaft_standoff">
+      <origin xyz="0 0.0225 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.049" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.92 0.66 0.28 1" />
+        </material>
+      </visual>
+    <visual name="rod">
+      <origin xyz="0 0.045 0.16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0034" length="0.32" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="tip_cap">
+      <origin xyz="0 0.045 0.32" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.007" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.92 0.66 0.28 1" />
+        </material>
+      </visual>
+    <collision name="pivot_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="shaft_standoff">
+      <origin xyz="0 0.0225 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.049" />
+        </geometry>
+      </collision>
+    <collision name="rod">
+      <origin xyz="0 0.045 0.16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0034" length="0.32" />
+        </geometry>
+      </collision>
+    <collision name="tip_cap">
+      <origin xyz="0 0.045 0.32" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pendulum_weight">
+    <visual name="ring_weight">
+      <geometry>
+        <mesh filename="assets/meshes/sliding_ring_weight.obj" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.92 0.66 0.28 1" />
+        </material>
+      </visual>
+    <visual name="thumb_screw">
+      <origin xyz="0 0.012 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.03" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <collision name="ring_weight">
+      <geometry>
+        <mesh filename="assets/meshes/sliding_ring_weight.obj" />
+        </geometry>
+      </collision>
+    <collision name="thumb_screw">
+      <origin xyz="0 0.012 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="crown_knob">
+    <visual name="crown_stem">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.018" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.92 0.66 0.28 1" />
+        </material>
+      </visual>
+    <visual name="ribbed_crown">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/ribbed_winding_crown.obj" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.92 0.66 0.28 1" />
+        </material>
+      </visual>
+    <collision name="crown_stem">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="ribbed_crown">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/ribbed_winding_crown.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="housing_to_pendulum" type="revolute">
+    <origin xyz="0 0.082 0.105" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pendulum" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.3" velocity="4" lower="-0.12" upper="0.12" />
+    </joint>
+  <joint name="pendulum_to_weight" type="prismatic">
+    <origin xyz="0 0.045 0.155" rpy="0 0 0" />
+    <parent link="pendulum" />
+    <child link="pendulum_weight" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="0.25" lower="0" upper="0.105" />
+    </joint>
+  <joint name="housing_to_crown" type="continuous">
+    <origin xyz="0 0 0.322" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="crown_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="8" />
+    </joint>
+  </robot>

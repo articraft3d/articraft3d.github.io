@@ -1,0 +1,217 @@
+<robot name="cad_robotic_arm">
+  <material name="anodized_dark">
+    <color rgba="0.06 0.065 0.07 1" />
+    </material>
+  <material name="graphite">
+    <color rgba="0.18 0.19 0.2 1" />
+    </material>
+  <material name="brushed_alloy">
+    <color rgba="0.72 0.74 0.72 1" />
+    </material>
+  <material name="safety_orange">
+    <color rgba="0.95 0.38 0.06 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.012 0.012 1" />
+    </material>
+  <link name="base">
+    <visual name="base_casting">
+      <geometry>
+        <mesh filename="assets/meshes/base_casting.obj" />
+        </geometry>
+      <material name="anodized_dark">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <collision name="base_casting">
+      <geometry>
+        <mesh filename="assets/meshes/base_casting.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shoulder">
+    <visual name="shoulder_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/shoulder_yoke.obj" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <collision name="shoulder_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/shoulder_yoke.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_arm">
+    <visual name="upper_arm_link">
+      <geometry>
+        <mesh filename="assets/meshes/upper_arm_link.obj" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="0.95 0.38 0.06 1" />
+        </material>
+      </visual>
+    <collision name="upper_arm_link">
+      <geometry>
+        <mesh filename="assets/meshes/upper_arm_link.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="forearm">
+    <visual name="forearm_link">
+      <geometry>
+        <mesh filename="assets/meshes/forearm_link.obj" />
+        </geometry>
+      <material name="brushed_alloy">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <collision name="forearm_link">
+      <geometry>
+        <mesh filename="assets/meshes/forearm_link.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist_pitch">
+    <visual name="wrist_pitch_housing">
+      <geometry>
+        <mesh filename="assets/meshes/wrist_pitch_housing.obj" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <collision name="wrist_pitch_housing">
+      <geometry>
+        <mesh filename="assets/meshes/wrist_pitch_housing.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist_roll">
+    <visual name="wrist_roll_tool">
+      <geometry>
+        <mesh filename="assets/meshes/wrist_roll_tool.obj" />
+        </geometry>
+      <material name="anodized_dark">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <collision name="wrist_roll_tool">
+      <geometry>
+        <mesh filename="assets/meshes/wrist_roll_tool.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="finger_0">
+    <visual name="finger_0_jaw">
+      <geometry>
+        <mesh filename="assets/meshes/finger_0_jaw.obj" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="finger_0_pad">
+      <origin xyz="0.122 -0.014 -0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.006 0.048" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <collision name="finger_0_jaw">
+      <geometry>
+        <mesh filename="assets/meshes/finger_0_jaw.obj" />
+        </geometry>
+      </collision>
+    <collision name="finger_0_pad">
+      <origin xyz="0.122 -0.014 -0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.006 0.048" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="finger_1">
+    <visual name="finger_1_jaw">
+      <geometry>
+        <mesh filename="assets/meshes/finger_1_jaw.obj" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="finger_1_pad">
+      <origin xyz="0.122 0.014 -0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.006 0.048" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <collision name="finger_1_jaw">
+      <geometry>
+        <mesh filename="assets/meshes/finger_1_jaw.obj" />
+        </geometry>
+      </collision>
+    <collision name="finger_1_pad">
+      <origin xyz="0.122 0.014 -0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.006 0.048" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_yaw" type="continuous">
+    <origin xyz="0 0 0.3" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="shoulder" />
+    <axis xyz="0 0 1" />
+    <limit effort="200" velocity="1.6" />
+    </joint>
+  <joint name="shoulder_pitch" type="revolute">
+    <origin xyz="0 0 0.32" rpy="0 0 0" />
+    <parent link="shoulder" />
+    <child link="upper_arm" />
+    <axis xyz="0 1 0" />
+    <limit effort="260" velocity="1.3" lower="-1.35" upper="1.15" />
+    </joint>
+  <joint name="elbow_pitch" type="revolute">
+    <origin xyz="0.622 0 0" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="forearm" />
+    <axis xyz="0 1 0" />
+    <limit effort="190" velocity="1.6" lower="-2.15" upper="2.15" />
+    </joint>
+  <joint name="wrist_pitch_axis" type="revolute">
+    <origin xyz="0.52 0 0" rpy="0 0 0" />
+    <parent link="forearm" />
+    <child link="wrist_pitch" />
+    <axis xyz="0 1 0" />
+    <limit effort="60" velocity="2.2" lower="-1.85" upper="1.85" />
+    </joint>
+  <joint name="wrist_roll_axis" type="continuous">
+    <origin xyz="0.155 0 0" rpy="0 0 0" />
+    <parent link="wrist_pitch" />
+    <child link="wrist_roll" />
+    <axis xyz="1 0 0" />
+    <limit effort="45" velocity="3" />
+    </joint>
+  <joint name="finger_0_slide" type="prismatic">
+    <origin xyz="0.3 0.033 0" rpy="0 0 0" />
+    <parent link="wrist_roll" />
+    <child link="finger_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="30" velocity="0.1" lower="0" upper="0.036" />
+    </joint>
+  <joint name="finger_1_slide" type="prismatic">
+    <origin xyz="0.3 -0.033 0" rpy="0 0 0" />
+    <parent link="wrist_roll" />
+    <child link="finger_1" />
+    <axis xyz="0 -1 0" />
+    <limit effort="30" velocity="0.1" lower="0" upper="0.036" />
+    <mimic joint="finger_0_slide" />
+    </joint>
+  </robot>

@@ -1,0 +1,589 @@
+<robot name="mesh_back_office_chair">
+  <material name="polished_aluminum">
+    <color rgba="0.72 0.74 0.73 1" />
+    </material>
+  <material name="black_plastic">
+    <color rgba="0.015 0.017 0.018 1" />
+    </material>
+  <material name="satin_black_frame">
+    <color rgba="0.03 0.035 0.038 1" />
+    </material>
+  <material name="charcoal_fabric">
+    <color rgba="0.06 0.065 0.07 1" />
+    </material>
+  <material name="open_black_mesh">
+    <color rgba="0.015 0.018 0.02 0.82" />
+    </material>
+  <material name="soft_black_rubber">
+    <color rgba="0.006 0.006 0.006 1" />
+    </material>
+  <link name="star_base">
+    <visual name="star_spokes">
+      <geometry>
+        <mesh filename="assets/meshes/star_spokes.obj" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="outer_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/outer_sleeve.obj" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <collision name="star_spokes">
+      <geometry>
+        <mesh filename="assets/meshes/star_spokes.obj" />
+        </geometry>
+      </collision>
+    <collision name="outer_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/outer_sleeve.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lift_column">
+    <visual name="inner_column">
+      <origin xyz="0 0 -0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.28" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="swivel_bearing">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.018" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <collision name="inner_column">
+      <origin xyz="0 0 -0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.28" />
+        </geometry>
+      </collision>
+    <collision name="swivel_bearing">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="seat">
+    <visual name="seat_cushion">
+      <geometry>
+        <mesh filename="assets/meshes/seat_cushion.obj" />
+        </geometry>
+      <material name="charcoal_fabric">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="seat_frame">
+      <geometry>
+        <mesh filename="assets/meshes/seat_frame.obj" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.03 0.035 0.038 1" />
+        </material>
+      </visual>
+    <visual name="under_plate">
+      <origin xyz="0 0.03 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.17 0.026" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_bracket_0">
+      <origin xyz="-0.225 0.275 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.048 0.116" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.03 0.035 0.038 1" />
+        </material>
+      </visual>
+    <visual name="rear_bracket_1">
+      <origin xyz="0.225 0.275 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.048 0.116" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.03 0.035 0.038 1" />
+        </material>
+      </visual>
+    <visual name="recline_pin">
+      <origin xyz="0 0.275 0.12" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.5" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <collision name="seat_cushion">
+      <geometry>
+        <mesh filename="assets/meshes/seat_cushion.obj" />
+        </geometry>
+      </collision>
+    <collision name="seat_frame">
+      <geometry>
+        <mesh filename="assets/meshes/seat_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="under_plate">
+      <origin xyz="0 0.03 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.17 0.026" />
+        </geometry>
+      </collision>
+    <collision name="rear_bracket_0">
+      <origin xyz="-0.225 0.275 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.048 0.116" />
+        </geometry>
+      </collision>
+    <collision name="rear_bracket_1">
+      <origin xyz="0.225 0.275 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.048 0.116" />
+        </geometry>
+      </collision>
+    <collision name="recline_pin">
+      <origin xyz="0 0.275 0.12" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.5" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="back_frame">
+    <visual name="back_frame">
+      <geometry>
+        <mesh filename="assets/meshes/back_frame.obj" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.03 0.035 0.038 1" />
+        </material>
+      </visual>
+    <visual name="hinge_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/hinge_sleeve.obj" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.03 0.035 0.038 1" />
+        </material>
+      </visual>
+    <visual name="back_mesh">
+      <geometry>
+        <mesh filename="assets/meshes/back_mesh.obj" />
+        </geometry>
+      <material name="open_black_mesh">
+        <color rgba="0.015 0.018 0.02 0.82" />
+        </material>
+      </visual>
+    <collision name="back_frame">
+      <geometry>
+        <mesh filename="assets/meshes/back_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="hinge_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/hinge_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="back_mesh">
+      <geometry>
+        <mesh filename="assets/meshes/back_mesh.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="caster_fork_0">
+    <visual name="fork_body">
+      <geometry>
+        <mesh filename="assets/meshes/caster_fork.obj" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="axle">
+      <origin xyz="0 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.07" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <collision name="fork_body">
+      <geometry>
+        <mesh filename="assets/meshes/caster_fork.obj" />
+        </geometry>
+      </collision>
+    <collision name="axle">
+      <origin xyz="0 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="caster_wheel_0">
+    <visual name="wheel_rim">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_rim.obj" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/caster_tire.obj" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <collision name="wheel_rim">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/caster_tire.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="caster_fork_1">
+    <visual name="fork_body">
+      <geometry>
+        <mesh filename="assets/meshes/caster_fork.obj" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="axle">
+      <origin xyz="0 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.07" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <collision name="fork_body">
+      <geometry>
+        <mesh filename="assets/meshes/caster_fork.obj" />
+        </geometry>
+      </collision>
+    <collision name="axle">
+      <origin xyz="0 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="caster_wheel_1">
+    <visual name="wheel_rim">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_rim.obj" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/caster_tire.obj" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <collision name="wheel_rim">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/caster_tire.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="caster_fork_2">
+    <visual name="fork_body">
+      <geometry>
+        <mesh filename="assets/meshes/caster_fork.obj" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="axle">
+      <origin xyz="0 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.07" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <collision name="fork_body">
+      <geometry>
+        <mesh filename="assets/meshes/caster_fork.obj" />
+        </geometry>
+      </collision>
+    <collision name="axle">
+      <origin xyz="0 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="caster_wheel_2">
+    <visual name="wheel_rim">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_rim.obj" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/caster_tire.obj" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <collision name="wheel_rim">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/caster_tire.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="caster_fork_3">
+    <visual name="fork_body">
+      <geometry>
+        <mesh filename="assets/meshes/caster_fork.obj" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="axle">
+      <origin xyz="0 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.07" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <collision name="fork_body">
+      <geometry>
+        <mesh filename="assets/meshes/caster_fork.obj" />
+        </geometry>
+      </collision>
+    <collision name="axle">
+      <origin xyz="0 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="caster_wheel_3">
+    <visual name="wheel_rim">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_rim.obj" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/caster_tire.obj" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <collision name="wheel_rim">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/caster_tire.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="caster_fork_4">
+    <visual name="fork_body">
+      <geometry>
+        <mesh filename="assets/meshes/caster_fork.obj" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="axle">
+      <origin xyz="0 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.07" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <collision name="fork_body">
+      <geometry>
+        <mesh filename="assets/meshes/caster_fork.obj" />
+        </geometry>
+      </collision>
+    <collision name="axle">
+      <origin xyz="0 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="caster_wheel_4">
+    <visual name="wheel_rim">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_rim.obj" />
+        </geometry>
+      <material name="polished_aluminum">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/caster_tire.obj" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <collision name="wheel_rim">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/caster_tire.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_fork_0" type="continuous">
+    <origin xyz="2.23498e-17 0.365 0.13" rpy="0 0 0" />
+    <parent link="star_base" />
+    <child link="caster_fork_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="8" />
+    </joint>
+  <joint name="fork_to_wheel_0" type="continuous">
+    <origin xyz="0 0 -0.08" rpy="0 0 0" />
+    <parent link="caster_fork_0" />
+    <child link="caster_wheel_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="25" />
+    </joint>
+  <joint name="base_to_fork_1" type="continuous">
+    <origin xyz="-0.347136 0.112791 0.13" rpy="0 0 1.25664" />
+    <parent link="star_base" />
+    <child link="caster_fork_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="8" />
+    </joint>
+  <joint name="fork_to_wheel_1" type="continuous">
+    <origin xyz="0 0 -0.08" rpy="0 0 0" />
+    <parent link="caster_fork_1" />
+    <child link="caster_wheel_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="25" />
+    </joint>
+  <joint name="base_to_fork_2" type="continuous">
+    <origin xyz="-0.214542 -0.295291 0.13" rpy="0 0 2.51327" />
+    <parent link="star_base" />
+    <child link="caster_fork_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="8" />
+    </joint>
+  <joint name="fork_to_wheel_2" type="continuous">
+    <origin xyz="0 0 -0.08" rpy="0 0 0" />
+    <parent link="caster_fork_2" />
+    <child link="caster_wheel_2" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="25" />
+    </joint>
+  <joint name="base_to_fork_3" type="continuous">
+    <origin xyz="0.214542 -0.295291 0.13" rpy="0 0 3.76991" />
+    <parent link="star_base" />
+    <child link="caster_fork_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="8" />
+    </joint>
+  <joint name="fork_to_wheel_3" type="continuous">
+    <origin xyz="0 0 -0.08" rpy="0 0 0" />
+    <parent link="caster_fork_3" />
+    <child link="caster_wheel_3" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="25" />
+    </joint>
+  <joint name="base_to_fork_4" type="continuous">
+    <origin xyz="0.347136 0.112791 0.13" rpy="0 0 5.02655" />
+    <parent link="star_base" />
+    <child link="caster_fork_4" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="8" />
+    </joint>
+  <joint name="fork_to_wheel_4" type="continuous">
+    <origin xyz="0 0 -0.08" rpy="0 0 0" />
+    <parent link="caster_fork_4" />
+    <child link="caster_wheel_4" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="25" />
+    </joint>
+  <joint name="base_to_column" type="prismatic">
+    <origin xyz="0 0 0.43" rpy="0 0 0" />
+    <parent link="star_base" />
+    <child link="lift_column" />
+    <axis xyz="0 0 1" />
+    <limit effort="900" velocity="0.18" lower="0" upper="0.14" />
+    </joint>
+  <joint name="column_to_seat" type="continuous">
+    <parent link="lift_column" />
+    <child link="seat" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="5" />
+    </joint>
+  <joint name="seat_to_back" type="revolute">
+    <origin xyz="0 0.275 0.12" rpy="-0.18 0 0" />
+    <parent link="seat" />
+    <child link="back_frame" />
+    <axis xyz="1 0 0" />
+    <limit effort="80" velocity="0.8" lower="-0.35" upper="0.2" />
+    </joint>
+  </robot>

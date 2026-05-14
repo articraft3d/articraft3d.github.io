@@ -1,0 +1,829 @@
+<robot name="three_head_track_light">
+  <material name="satin_white">
+    <color rgba="0.86 0.86 0.82 1" />
+    </material>
+  <material name="warm_white">
+    <color rgba="0.96 0.94 0.88 1" />
+    </material>
+  <material name="dark_slot">
+    <color rgba="0.04 0.04 0.045 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.62 0.63 0.61 1" />
+    </material>
+  <material name="black_baffle">
+    <color rgba="0.015 0.014 0.012 1" />
+    </material>
+  <material name="warm_lens">
+    <color rgba="1 0.82 0.45 0.55" />
+    </material>
+  <material name="copper_contacts">
+    <color rgba="0.73 0.38 0.12 1" />
+    </material>
+  <link name="ceiling_rail">
+    <inertial>
+      <origin xyz="0 0 -0.014" rpy="0 0 0" />
+      <mass value="1.7" />
+      <inertia ixx="0.00126083" ixy="0" ixz="0" iyy="0.228848" iyz="0" izz="0.229401" />
+      </inertial>
+    <visual name="top_spine">
+      <geometry>
+        <box size="1.25 0.075 0.018" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="side_wall_0">
+      <origin xyz="0 0.0305 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.014 0.035" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="side_wall_1">
+      <origin xyz="0 -0.0305 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.014 0.035" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="lower_lip_0">
+      <origin xyz="0 0.018 -0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.02 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="lower_lip_1">
+      <origin xyz="0 -0.018 -0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.02 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="shadow_slot">
+      <origin xyz="0 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.018 0.004" />
+        </geometry>
+      <material name="dark_slot">
+        <color rgba="0.04 0.04 0.045 1" />
+        </material>
+      </visual>
+    <visual name="conductor_0">
+      <origin xyz="0 0.0105 -0.0335" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.004 0.003" />
+        </geometry>
+      <material name="copper_contacts">
+        <color rgba="0.73 0.38 0.12 1" />
+        </material>
+      </visual>
+    <visual name="conductor_1">
+      <origin xyz="0 -0.0105 -0.0335" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.004 0.003" />
+        </geometry>
+      <material name="copper_contacts">
+        <color rgba="0.73 0.38 0.12 1" />
+        </material>
+      </visual>
+    <visual name="end_cap_0">
+      <origin xyz="-0.635 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.078 0.045" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.96 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="end_cap_1">
+      <origin xyz="0.635 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.078 0.045" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.96 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="mount_screw_0">
+      <origin xyz="-0.54 0 -0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="mount_screw_1">
+      <origin xyz="0.54 0 -0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <collision name="top_spine">
+      <geometry>
+        <box size="1.25 0.075 0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_wall_0">
+      <origin xyz="0 0.0305 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.014 0.035" />
+        </geometry>
+      </collision>
+    <collision name="side_wall_1">
+      <origin xyz="0 -0.0305 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.014 0.035" />
+        </geometry>
+      </collision>
+    <collision name="lower_lip_0">
+      <origin xyz="0 0.018 -0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.02 0.008" />
+        </geometry>
+      </collision>
+    <collision name="lower_lip_1">
+      <origin xyz="0 -0.018 -0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.02 0.008" />
+        </geometry>
+      </collision>
+    <collision name="shadow_slot">
+      <origin xyz="0 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.018 0.004" />
+        </geometry>
+      </collision>
+    <collision name="conductor_0">
+      <origin xyz="0 0.0105 -0.0335" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.004 0.003" />
+        </geometry>
+      </collision>
+    <collision name="conductor_1">
+      <origin xyz="0 -0.0105 -0.0335" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.004 0.003" />
+        </geometry>
+      </collision>
+    <collision name="end_cap_0">
+      <origin xyz="-0.635 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.078 0.045" />
+        </geometry>
+      </collision>
+    <collision name="end_cap_1">
+      <origin xyz="0.635 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.078 0.045" />
+        </geometry>
+      </collision>
+    <collision name="mount_screw_0">
+      <origin xyz="-0.54 0 -0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="mount_screw_1">
+      <origin xyz="0.54 0 -0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="spotlight_0">
+    <inertial>
+      <origin xyz="0 0.055 -0.16" rpy="0 0 0" />
+      <mass value="0.65" />
+      <inertia ixx="0.00528667" ixy="0" ixz="0" iyy="0.00418167" iyz="0" izz="0.00322833" />
+      </inertial>
+    <visual name="track_adapter">
+      <geometry>
+        <box size="0.11 0.052 0.018" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.96 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="swivel_boss">
+      <origin xyz="0 0 -0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.024" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="drop_stem">
+      <origin xyz="0 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.064" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="ball_knuckle">
+      <origin xyz="0 0 -0.096" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.023" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="angled_neck">
+      <origin xyz="0 0.015 -0.121981" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.06" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="lamp_can">
+      <origin xyz="0 0.06275 -0.204686" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.047" length="0.155" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.96 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="cooling_band_0">
+      <origin xyz="0 0.0675 -0.212913" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="cooling_band_1">
+      <origin xyz="0 0.0795 -0.233698" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="front_bezel">
+      <origin xyz="0 0.09975 -0.268772" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.052" length="0.015" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.96 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0 0.104 -0.276133" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.037" length="0.006" />
+        </geometry>
+      <material name="black_baffle">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="glass_lens">
+      <origin xyz="0 0.106 -0.279597" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.03" length="0.004" />
+        </geometry>
+      <material name="warm_lens">
+        <color rgba="1 0.82 0.45 0.55" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_0">
+      <origin xyz="-0.04 0.017 -0.129" rpy="0 2.58729 1.5708" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0493964" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_1">
+      <origin xyz="0.04 0.017 -0.129" rpy="0 2.58729 1.5708" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0493964" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <collision name="track_adapter">
+      <geometry>
+        <box size="0.11 0.052 0.018" />
+        </geometry>
+      </collision>
+    <collision name="swivel_boss">
+      <origin xyz="0 0 -0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="drop_stem">
+      <origin xyz="0 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.064" />
+        </geometry>
+      </collision>
+    <collision name="ball_knuckle">
+      <origin xyz="0 0 -0.096" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.023" />
+        </geometry>
+      </collision>
+    <collision name="angled_neck">
+      <origin xyz="0 0.015 -0.121981" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="lamp_can">
+      <origin xyz="0 0.06275 -0.204686" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.047" length="0.155" />
+        </geometry>
+      </collision>
+    <collision name="cooling_band_0">
+      <origin xyz="0 0.0675 -0.212913" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="cooling_band_1">
+      <origin xyz="0 0.0795 -0.233698" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="front_bezel">
+      <origin xyz="0 0.09975 -0.268772" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.052" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="front_lens">
+      <origin xyz="0 0.104 -0.276133" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.037" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="glass_lens">
+      <origin xyz="0 0.106 -0.279597" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.03" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_0">
+      <origin xyz="-0.04 0.017 -0.129" rpy="0 2.58729 1.5708" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0493964" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_1">
+      <origin xyz="0.04 0.017 -0.129" rpy="0 2.58729 1.5708" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0493964" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="spotlight_1">
+    <inertial>
+      <origin xyz="0 0.055 -0.16" rpy="0 0 0" />
+      <mass value="0.65" />
+      <inertia ixx="0.00528667" ixy="0" ixz="0" iyy="0.00418167" iyz="0" izz="0.00322833" />
+      </inertial>
+    <visual name="track_adapter">
+      <geometry>
+        <box size="0.11 0.052 0.018" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.96 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="swivel_boss">
+      <origin xyz="0 0 -0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.024" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="drop_stem">
+      <origin xyz="0 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.064" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="ball_knuckle">
+      <origin xyz="0 0 -0.096" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.023" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="angled_neck">
+      <origin xyz="0 0.015 -0.121981" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.06" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="lamp_can">
+      <origin xyz="0 0.06275 -0.204686" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.047" length="0.155" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.96 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="cooling_band_0">
+      <origin xyz="0 0.0675 -0.212913" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="cooling_band_1">
+      <origin xyz="0 0.0795 -0.233698" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="front_bezel">
+      <origin xyz="0 0.09975 -0.268772" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.052" length="0.015" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.96 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0 0.104 -0.276133" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.037" length="0.006" />
+        </geometry>
+      <material name="black_baffle">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="glass_lens">
+      <origin xyz="0 0.106 -0.279597" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.03" length="0.004" />
+        </geometry>
+      <material name="warm_lens">
+        <color rgba="1 0.82 0.45 0.55" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_0">
+      <origin xyz="-0.04 0.017 -0.129" rpy="0 2.58729 1.5708" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0493964" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_1">
+      <origin xyz="0.04 0.017 -0.129" rpy="0 2.58729 1.5708" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0493964" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <collision name="track_adapter">
+      <geometry>
+        <box size="0.11 0.052 0.018" />
+        </geometry>
+      </collision>
+    <collision name="swivel_boss">
+      <origin xyz="0 0 -0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="drop_stem">
+      <origin xyz="0 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.064" />
+        </geometry>
+      </collision>
+    <collision name="ball_knuckle">
+      <origin xyz="0 0 -0.096" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.023" />
+        </geometry>
+      </collision>
+    <collision name="angled_neck">
+      <origin xyz="0 0.015 -0.121981" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="lamp_can">
+      <origin xyz="0 0.06275 -0.204686" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.047" length="0.155" />
+        </geometry>
+      </collision>
+    <collision name="cooling_band_0">
+      <origin xyz="0 0.0675 -0.212913" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="cooling_band_1">
+      <origin xyz="0 0.0795 -0.233698" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="front_bezel">
+      <origin xyz="0 0.09975 -0.268772" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.052" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="front_lens">
+      <origin xyz="0 0.104 -0.276133" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.037" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="glass_lens">
+      <origin xyz="0 0.106 -0.279597" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.03" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_0">
+      <origin xyz="-0.04 0.017 -0.129" rpy="0 2.58729 1.5708" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0493964" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_1">
+      <origin xyz="0.04 0.017 -0.129" rpy="0 2.58729 1.5708" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0493964" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="spotlight_2">
+    <inertial>
+      <origin xyz="0 0.055 -0.16" rpy="0 0 0" />
+      <mass value="0.65" />
+      <inertia ixx="0.00528667" ixy="0" ixz="0" iyy="0.00418167" iyz="0" izz="0.00322833" />
+      </inertial>
+    <visual name="track_adapter">
+      <geometry>
+        <box size="0.11 0.052 0.018" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.96 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="swivel_boss">
+      <origin xyz="0 0 -0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.024" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="drop_stem">
+      <origin xyz="0 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.064" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="ball_knuckle">
+      <origin xyz="0 0 -0.096" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.023" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="angled_neck">
+      <origin xyz="0 0.015 -0.121981" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.06" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="lamp_can">
+      <origin xyz="0 0.06275 -0.204686" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.047" length="0.155" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.96 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="cooling_band_0">
+      <origin xyz="0 0.0675 -0.212913" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="cooling_band_1">
+      <origin xyz="0 0.0795 -0.233698" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="front_bezel">
+      <origin xyz="0 0.09975 -0.268772" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.052" length="0.015" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.96 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0 0.104 -0.276133" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.037" length="0.006" />
+        </geometry>
+      <material name="black_baffle">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="glass_lens">
+      <origin xyz="0 0.106 -0.279597" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.03" length="0.004" />
+        </geometry>
+      <material name="warm_lens">
+        <color rgba="1 0.82 0.45 0.55" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_0">
+      <origin xyz="-0.04 0.017 -0.129" rpy="0 2.58729 1.5708" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0493964" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_1">
+      <origin xyz="0.04 0.017 -0.129" rpy="0 2.58729 1.5708" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0493964" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.63 0.61 1" />
+        </material>
+      </visual>
+    <collision name="track_adapter">
+      <geometry>
+        <box size="0.11 0.052 0.018" />
+        </geometry>
+      </collision>
+    <collision name="swivel_boss">
+      <origin xyz="0 0 -0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="drop_stem">
+      <origin xyz="0 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.064" />
+        </geometry>
+      </collision>
+    <collision name="ball_knuckle">
+      <origin xyz="0 0 -0.096" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.023" />
+        </geometry>
+      </collision>
+    <collision name="angled_neck">
+      <origin xyz="0 0.015 -0.121981" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="lamp_can">
+      <origin xyz="0 0.06275 -0.204686" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.047" length="0.155" />
+        </geometry>
+      </collision>
+    <collision name="cooling_band_0">
+      <origin xyz="0 0.0675 -0.212913" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="cooling_band_1">
+      <origin xyz="0 0.0795 -0.233698" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="front_bezel">
+      <origin xyz="0 0.09975 -0.268772" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.052" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="front_lens">
+      <origin xyz="0 0.104 -0.276133" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.037" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="glass_lens">
+      <origin xyz="0 0.106 -0.279597" rpy="0 2.61799 1.5708" />
+      <geometry>
+        <cylinder radius="0.03" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_0">
+      <origin xyz="-0.04 0.017 -0.129" rpy="0 2.58729 1.5708" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0493964" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_1">
+      <origin xyz="0.04 0.017 -0.129" rpy="0 2.58729 1.5708" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0493964" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="rail_to_spotlight_0" type="revolute">
+    <origin xyz="-0.4 0 -0.046" rpy="0 0 0" />
+    <parent link="ceiling_rail" />
+    <child link="spotlight_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.8" velocity="2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="rail_to_spotlight_1" type="revolute">
+    <origin xyz="0 0 -0.046" rpy="0 0 0" />
+    <parent link="ceiling_rail" />
+    <child link="spotlight_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.8" velocity="2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="rail_to_spotlight_2" type="revolute">
+    <origin xyz="0.4 0 -0.046" rpy="0 0 0" />
+    <parent link="ceiling_rail" />
+    <child link="spotlight_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.8" velocity="2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

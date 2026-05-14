@@ -1,0 +1,456 @@
+<robot name="folding_stick_vacuum">
+  <link name="body">
+    <visual name="upper_spine">
+      <origin xyz="0 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.72" />
+        </geometry>
+      <material name="satin_red">
+        <color rgba="0.75 0.05 0.035 1" />
+        </material>
+      </visual>
+    <visual name="motor_pod">
+      <origin xyz="0.035 0 0.58" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.3" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="dust_bin">
+      <origin xyz="0.055 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.072" length="0.24" />
+        </geometry>
+      <material name="smoky_clear_bin">
+        <color rgba="0.45 0.62 0.72 0.42" />
+        </material>
+      </visual>
+    <visual name="rear_filter_cap">
+      <origin xyz="0.18 0 0.58" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.2" />
+        </geometry>
+      <material name="charcoal_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_grip">
+      <origin xyz="-0.105 0 0.78" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.052 0.4" />
+        </geometry>
+      <material name="charcoal_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="top_handle_bridge">
+      <origin xyz="-0.048 0 0.975" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.052 0.04" />
+        </geometry>
+      <material name="charcoal_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="lower_handle_bridge">
+      <origin xyz="-0.045 0 0.635" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.05 0.036" />
+        </geometry>
+      <material name="charcoal_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="trigger_detail">
+      <origin xyz="-0.007 0 0.59" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.046 0.06" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.035 0.038 0.045 1" />
+        </material>
+      </visual>
+    <visual name="fold_cheek_0">
+      <origin xyz="0 -0.06 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.08" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="fold_outer_barrel_0">
+      <origin xyz="0 -0.06 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.032" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="fold_cheek_1">
+      <origin xyz="0 0.06 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.08" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="fold_outer_barrel_1">
+      <origin xyz="0 0.06 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.032" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="fold_top_bridge">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.15 0.026" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <collision name="upper_spine">
+      <origin xyz="0 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.72" />
+        </geometry>
+      </collision>
+    <collision name="motor_pod">
+      <origin xyz="0.035 0 0.58" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.3" />
+        </geometry>
+      </collision>
+    <collision name="dust_bin">
+      <origin xyz="0.055 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.072" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="rear_filter_cap">
+      <origin xyz="0.18 0 0.58" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.2" />
+        </geometry>
+      </collision>
+    <collision name="rear_grip">
+      <origin xyz="-0.105 0 0.78" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.052 0.4" />
+        </geometry>
+      </collision>
+    <collision name="top_handle_bridge">
+      <origin xyz="-0.048 0 0.975" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.052 0.04" />
+        </geometry>
+      </collision>
+    <collision name="lower_handle_bridge">
+      <origin xyz="-0.045 0 0.635" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.05 0.036" />
+        </geometry>
+      </collision>
+    <collision name="trigger_detail">
+      <origin xyz="-0.007 0 0.59" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.046 0.06" />
+        </geometry>
+      </collision>
+    <collision name="fold_cheek_0">
+      <origin xyz="0 -0.06 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.08" />
+        </geometry>
+      </collision>
+    <collision name="fold_outer_barrel_0">
+      <origin xyz="0 -0.06 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="fold_cheek_1">
+      <origin xyz="0 0.06 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.08" />
+        </geometry>
+      </collision>
+    <collision name="fold_outer_barrel_1">
+      <origin xyz="0 0.06 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="fold_top_bridge">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.15 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wand">
+    <visual name="fold_inner_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.088" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="upper_wand_neck">
+      <origin xyz="0 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.046 0.08" />
+        </geometry>
+      <material name="satin_red">
+        <color rgba="0.75 0.05 0.035 1" />
+        </material>
+      </visual>
+    <visual name="wand_tube">
+      <origin xyz="0 0 -0.32" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.52" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="lower_wand_neck">
+      <origin xyz="0 0 -0.555" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.052" />
+        </geometry>
+      <material name="satin_red">
+        <color rgba="0.75 0.05 0.035 1" />
+        </material>
+      </visual>
+    <visual name="head_yoke_bridge">
+      <origin xyz="0 0 -0.57" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.14 0.036" />
+        </geometry>
+      <material name="satin_red">
+        <color rgba="0.75 0.05 0.035 1" />
+        </material>
+      </visual>
+    <visual name="head_yoke_cheek_0">
+      <origin xyz="0 -0.052 -0.615" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.028 0.1" />
+        </geometry>
+      <material name="satin_red">
+        <color rgba="0.75 0.05 0.035 1" />
+        </material>
+      </visual>
+    <visual name="head_outer_barrel_0">
+      <origin xyz="0 -0.052 -0.64" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.032" />
+        </geometry>
+      <material name="satin_red">
+        <color rgba="0.75 0.05 0.035 1" />
+        </material>
+      </visual>
+    <visual name="head_yoke_cheek_1">
+      <origin xyz="0 0.052 -0.615" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.028 0.1" />
+        </geometry>
+      <material name="satin_red">
+        <color rgba="0.75 0.05 0.035 1" />
+        </material>
+      </visual>
+    <visual name="head_outer_barrel_1">
+      <origin xyz="0 0.052 -0.64" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.032" />
+        </geometry>
+      <material name="satin_red">
+        <color rgba="0.75 0.05 0.035 1" />
+        </material>
+      </visual>
+    <collision name="fold_inner_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.088" />
+        </geometry>
+      </collision>
+    <collision name="upper_wand_neck">
+      <origin xyz="0 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.046 0.08" />
+        </geometry>
+      </collision>
+    <collision name="wand_tube">
+      <origin xyz="0 0 -0.32" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.52" />
+        </geometry>
+      </collision>
+    <collision name="lower_wand_neck">
+      <origin xyz="0 0 -0.555" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.052" />
+        </geometry>
+      </collision>
+    <collision name="head_yoke_bridge">
+      <origin xyz="0 0 -0.57" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.14 0.036" />
+        </geometry>
+      </collision>
+    <collision name="head_yoke_cheek_0">
+      <origin xyz="0 -0.052 -0.615" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.028 0.1" />
+        </geometry>
+      </collision>
+    <collision name="head_outer_barrel_0">
+      <origin xyz="0 -0.052 -0.64" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="head_yoke_cheek_1">
+      <origin xyz="0 0.052 -0.615" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.028 0.1" />
+        </geometry>
+      </collision>
+    <collision name="head_outer_barrel_1">
+      <origin xyz="0 0.052 -0.64" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.032" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="floor_head">
+    <visual name="head_inner_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.072" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.035 0.038 0.045 1" />
+        </material>
+      </visual>
+    <visual name="pitch_neck">
+      <origin xyz="0.035 0 -0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.046 0.044" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.035 0.038 0.045 1" />
+        </material>
+      </visual>
+    <visual name="neck_stem">
+      <origin xyz="0.055 0 -0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.058 0.056" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.035 0.038 0.045 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_shell">
+      <origin xyz="0.12 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.28 0.06" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="suction_slot">
+      <origin xyz="0.135 0 -0.139" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.038 0.014" />
+        </geometry>
+      <material name="charcoal_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="front_roller">
+      <origin xyz="0.25 0 -0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.246" />
+        </geometry>
+      <material name="charcoal_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_bumper">
+      <origin xyz="-0.07 0 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.28 0.07" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.035 0.038 0.045 1" />
+        </material>
+      </visual>
+    <collision name="head_inner_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.072" />
+        </geometry>
+      </collision>
+    <collision name="pitch_neck">
+      <origin xyz="0.035 0 -0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.046 0.044" />
+        </geometry>
+      </collision>
+    <collision name="neck_stem">
+      <origin xyz="0.055 0 -0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.058 0.056" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_shell">
+      <origin xyz="0.12 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.28 0.06" />
+        </geometry>
+      </collision>
+    <collision name="suction_slot">
+      <origin xyz="0.135 0 -0.139" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.038 0.014" />
+        </geometry>
+      </collision>
+    <collision name="front_roller">
+      <origin xyz="0.25 0 -0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.246" />
+        </geometry>
+      </collision>
+    <collision name="rear_bumper">
+      <origin xyz="-0.07 0 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.28 0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="fold_joint" type="revolute">
+    <parent link="body" />
+    <child link="wand" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="1.4" lower="0" upper="1.55" />
+    </joint>
+  <joint name="head_pitch" type="revolute">
+    <origin xyz="0 0 -0.64" rpy="0 0 0" />
+    <parent link="wand" />
+    <child link="floor_head" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="2" lower="-0.55" upper="0.65" />
+    </joint>
+  </robot>

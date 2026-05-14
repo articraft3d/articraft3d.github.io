@@ -1,0 +1,159 @@
+<robot name="chimney_range_hood">
+  <material name="brushed_stainless">
+    <color rgba="0.7 0.7 0.66 1" />
+    </material>
+  <material name="dark_filter_mesh">
+    <color rgba="0.16 0.17 0.17 1" />
+    </material>
+  <material name="black_plastic">
+    <color rgba="0.015 0.015 0.014 1" />
+    </material>
+  <material name="button_plastic">
+    <color rgba="0.06 0.065 0.07 1" />
+    </material>
+  <link name="hood">
+    <visual name="canopy_shell">
+      <geometry>
+        <mesh filename="assets/meshes/deep_canopy_shell.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="chimney_shell">
+      <geometry>
+        <mesh filename="assets/meshes/short_chimney_shell.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="front_panel">
+      <origin xyz="0 -0.59 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.94 0.024 0.12" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="underside_filter">
+      <origin xyz="0 -0.26 0.01" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/slotted_grease_filter.obj" />
+        </geometry>
+      <material name="dark_filter_mesh">
+        <color rgba="0.16 0.17 0.17 1" />
+        </material>
+      </visual>
+    <visual name="front_lip">
+      <origin xyz="0 -0.578 0.13" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.018 0.02" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.7 0.66 1" />
+        </material>
+      </visual>
+    <collision name="canopy_shell">
+      <geometry>
+        <mesh filename="assets/meshes/deep_canopy_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="chimney_shell">
+      <geometry>
+        <mesh filename="assets/meshes/short_chimney_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_panel">
+      <origin xyz="0 -0.59 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.94 0.024 0.12" />
+        </geometry>
+      </collision>
+    <collision name="underside_filter">
+      <origin xyz="0 -0.26 0.01" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/slotted_grease_filter.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_lip">
+      <origin xyz="0 -0.578 0.13" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.018 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="selector_knob">
+    <visual name="knob_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/selector_knob_cap.obj" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="knob_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/selector_knob_cap.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_0">
+    <visual name="button_cap">
+      <origin xyz="0 -0.008 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.016" />
+        </geometry>
+      <material name="button_plastic">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.008 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.016" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_1">
+    <visual name="button_cap">
+      <origin xyz="0 -0.008 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.016" />
+        </geometry>
+      <material name="button_plastic">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.008 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.016" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="hood_to_selector_knob" type="continuous">
+    <origin xyz="-0.345 -0.602 0.073" rpy="0 0 0" />
+    <parent link="hood" />
+    <child link="selector_knob" />
+    <axis xyz="0 -1 0" />
+    <limit effort="1" velocity="5" />
+    </joint>
+  <joint name="hood_to_button_0" type="prismatic">
+    <origin xyz="-0.255 -0.602 0.073" rpy="0 0 0" />
+    <parent link="hood" />
+    <child link="button_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="7" velocity="0.08" lower="0" upper="0.01" />
+    </joint>
+  <joint name="hood_to_button_1" type="prismatic">
+    <origin xyz="-0.205 -0.602 0.073" rpy="0 0 0" />
+    <parent link="hood" />
+    <child link="button_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="7" velocity="0.08" lower="0" upper="0.01" />
+    </joint>
+  </robot>

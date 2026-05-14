@@ -1,0 +1,577 @@
+<robot name="compact_cradle_indexer">
+  <material name="dark_cast_iron">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <material name="machined_steel">
+    <color rgba="0.55 0.57 0.58 1" />
+    </material>
+  <material name="blued_steel">
+    <color rgba="0.18 0.24 0.3 1" />
+    </material>
+  <material name="black_oxide">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="brass_index_marks">
+    <color rgba="0.78 0.6 0.26 1" />
+    </material>
+  <link name="base">
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.055" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="bearing_race">
+      <origin xyz="0 0 0.049" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.012" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_0">
+      <origin xyz="0.123744 0.123744 -0.007" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.09 0.032 0.014" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_1">
+      <origin xyz="-0.123744 0.123744 -0.007" rpy="0 0 2.35619" />
+      <geometry>
+        <box size="0.09 0.032 0.014" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_2">
+      <origin xyz="-0.123744 -0.123744 -0.007" rpy="0 0 3.92699" />
+      <geometry>
+        <box size="0.09 0.032 0.014" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_3">
+      <origin xyz="0.123744 -0.123744 -0.007" rpy="0 0 5.49779" />
+      <geometry>
+        <box size="0.09 0.032 0.014" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="base_plinth">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="bearing_race">
+      <origin xyz="0 0 0.049" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_0">
+      <origin xyz="0.123744 0.123744 -0.007" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.09 0.032 0.014" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_1">
+      <origin xyz="-0.123744 0.123744 -0.007" rpy="0 0 2.35619" />
+      <geometry>
+        <box size="0.09 0.032 0.014" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_2">
+      <origin xyz="-0.123744 -0.123744 -0.007" rpy="0 0 3.92699" />
+      <geometry>
+        <box size="0.09 0.032 0.014" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_3">
+      <origin xyz="0.123744 -0.123744 -0.007" rpy="0 0 5.49779" />
+      <geometry>
+        <box size="0.09 0.032 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cradle">
+    <visual name="lower_stage">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.045" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.18 0.24 0.3 1" />
+        </material>
+      </visual>
+    <visual name="index_table">
+      <origin xyz="0 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.168" length="0.02" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="rotary_hub">
+      <origin xyz="0 0 0.072" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.024" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="index_pin_0">
+      <origin xyz="0.145 0 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      <material name="brass_index_marks">
+        <color rgba="0.78 0.6 0.26 1" />
+        </material>
+      </visual>
+    <visual name="index_pin_1">
+      <origin xyz="0.125574 0.0725 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="index_pin_2">
+      <origin xyz="0.0725 0.125574 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="index_pin_3">
+      <origin xyz="8.87869e-18 0.145 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      <material name="brass_index_marks">
+        <color rgba="0.78 0.6 0.26 1" />
+        </material>
+      </visual>
+    <visual name="index_pin_4">
+      <origin xyz="-0.0725 0.125574 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="index_pin_5">
+      <origin xyz="-0.125574 0.0725 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="index_pin_6">
+      <origin xyz="-0.145 1.77574e-17 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      <material name="brass_index_marks">
+        <color rgba="0.78 0.6 0.26 1" />
+        </material>
+      </visual>
+    <visual name="index_pin_7">
+      <origin xyz="-0.125574 -0.0725 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="index_pin_8">
+      <origin xyz="-0.0725 -0.125574 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="index_pin_9">
+      <origin xyz="-2.66361e-17 -0.145 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      <material name="brass_index_marks">
+        <color rgba="0.78 0.6 0.26 1" />
+        </material>
+      </visual>
+    <visual name="index_pin_10">
+      <origin xyz="0.0725 -0.125574 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="index_pin_11">
+      <origin xyz="0.125574 -0.0725 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="yoke_frame">
+      <origin xyz="0 0.05 0.066" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/offset_trunnion_yoke.obj" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <collision name="lower_stage">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="index_table">
+      <origin xyz="0 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.168" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="rotary_hub">
+      <origin xyz="0 0 0.072" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="index_pin_0">
+      <origin xyz="0.145 0 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="index_pin_1">
+      <origin xyz="0.125574 0.0725 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="index_pin_2">
+      <origin xyz="0.0725 0.125574 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="index_pin_3">
+      <origin xyz="8.87869e-18 0.145 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="index_pin_4">
+      <origin xyz="-0.0725 0.125574 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="index_pin_5">
+      <origin xyz="-0.125574 0.0725 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="index_pin_6">
+      <origin xyz="-0.145 1.77574e-17 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="index_pin_7">
+      <origin xyz="-0.125574 -0.0725 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="index_pin_8">
+      <origin xyz="-0.0725 -0.125574 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="index_pin_9">
+      <origin xyz="-2.66361e-17 -0.145 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="index_pin_10">
+      <origin xyz="0.0725 -0.125574 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="index_pin_11">
+      <origin xyz="0.125574 -0.0725 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="yoke_frame">
+      <origin xyz="0 0.05 0.066" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/offset_trunnion_yoke.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="faceplate">
+    <visual name="plate_disk">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.03" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="front_rim">
+      <origin xyz="0 -0.0185 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.098" length="0.007" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.18 0.24 0.3 1" />
+        </material>
+      </visual>
+    <visual name="center_boss">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.058" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_shaft">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0151" length="0.285" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_collar_neg">
+      <origin xyz="-0.074 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.016" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_collar_pos">
+      <origin xyz="0.074 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.016" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="horizontal_slot">
+      <origin xyz="0 -0.0225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.003 0.012" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="vertical_slot">
+      <origin xyz="0 -0.0227 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.003 0.122" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="socket_bolt_0">
+      <origin xyz="0.0519615 -0.0245 0.03" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="socket_bolt_1">
+      <origin xyz="3.67394e-18 -0.0245 0.06" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="socket_bolt_2">
+      <origin xyz="-0.0519615 -0.0245 0.03" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="socket_bolt_3">
+      <origin xyz="-0.0519615 -0.0245 -0.03" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="socket_bolt_4">
+      <origin xyz="-1.10218e-17 -0.0245 -0.06" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="socket_bolt_5">
+      <origin xyz="0.0519615 -0.0245 -0.03" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="plate_disk">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="front_rim">
+      <origin xyz="0 -0.0185 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.098" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="center_boss">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_shaft">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0151" length="0.285" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_collar_neg">
+      <origin xyz="-0.074 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_collar_pos">
+      <origin xyz="0.074 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="horizontal_slot">
+      <origin xyz="0 -0.0225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.003 0.012" />
+        </geometry>
+      </collision>
+    <collision name="vertical_slot">
+      <origin xyz="0 -0.0227 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.003 0.122" />
+        </geometry>
+      </collision>
+    <collision name="socket_bolt_0">
+      <origin xyz="0.0519615 -0.0245 0.03" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="socket_bolt_1">
+      <origin xyz="3.67394e-18 -0.0245 0.06" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="socket_bolt_2">
+      <origin xyz="-0.0519615 -0.0245 0.03" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="socket_bolt_3">
+      <origin xyz="-0.0519615 -0.0245 -0.03" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="socket_bolt_4">
+      <origin xyz="-1.10218e-17 -0.0245 -0.06" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="socket_bolt_5">
+      <origin xyz="0.0519615 -0.0245 -0.03" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_cradle" type="revolute">
+    <origin xyz="0 0 0.055" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="cradle" />
+    <axis xyz="0 0 1" />
+    <limit effort="60" velocity="1.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="cradle_to_faceplate" type="revolute">
+    <origin xyz="0 0.05 0.246" rpy="0 0 0" />
+    <parent link="cradle" />
+    <child link="faceplate" />
+    <axis xyz="1 0 0" />
+    <limit effort="35" velocity="0.9" lower="-1.35" upper="1.35" />
+    </joint>
+  </robot>

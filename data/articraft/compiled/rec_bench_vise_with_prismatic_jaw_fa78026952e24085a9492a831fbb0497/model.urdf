@@ -1,0 +1,721 @@
+<robot name="welding_positioner_vise">
+  <material name="hammered_blue_paint">
+    <color rgba="0.05 0.18 0.34 1" />
+    </material>
+  <material name="dark_machined_steel">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="polished_leadscrew_steel">
+    <color rgba="0.72 0.72 0.68 1" />
+    </material>
+  <material name="hardened_jaw_steel">
+    <color rgba="0.3 0.31 0.3 1" />
+    </material>
+  <material name="blackened_handle">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <link name="pedestal">
+    <visual name="floor_disk">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.22" length="0.025" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="center_column">
+      <origin xyz="0 0 0.071" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.092" />
+        </geometry>
+      <material name="hammered_blue_paint">
+        <color rgba="0.05 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="turntable_base">
+      <origin xyz="0 0 0.1275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.025" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <collision name="floor_disk">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.22" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="center_column">
+      <origin xyz="0 0 0.071" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="turntable_base">
+      <origin xyz="0 0 0.1275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.025" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="base_plate">
+    <visual name="turntable_top">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.158" length="0.024" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="plate">
+      <origin xyz="0 0 0.0415" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.24 0.035" />
+        </geometry>
+      <material name="hammered_blue_paint">
+        <color rgba="0.05 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rail_0">
+      <origin xyz="0 -0.055 0.059" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dovetail_rail.obj" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="rail_1">
+      <origin xyz="0 0.055 0.059" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dovetail_rail.obj" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="fixed_foot">
+      <origin xyz="0.14 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.205 0.022" />
+        </geometry>
+      <material name="hammered_blue_paint">
+        <color rgba="0.05 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="leadnut_support">
+      <origin xyz="0.078 0 0.091" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.05 0.024" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="leadnut">
+      <origin xyz="0.078 0 0.103" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.026" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="fixed_block">
+      <origin xyz="0.14 0 0.116" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.18 0.112" />
+        </geometry>
+      <material name="hammered_blue_paint">
+        <color rgba="0.05 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="fixed_jaw_face">
+      <origin xyz="0.097 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.162 0.06" />
+        </geometry>
+      <material name="hardened_jaw_steel">
+        <color rgba="0.3 0.31 0.3 1" />
+        </material>
+      </visual>
+    <visual name="fixed_tooth_0">
+      <origin xyz="0.093 0 0.104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.15 0.004" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="fixed_tooth_1">
+      <origin xyz="0.093 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.15 0.004" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="fixed_tooth_2">
+      <origin xyz="0.093 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.15 0.004" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="bolt_0">
+      <origin xyz="-0.205 -0.085 0.0625" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.007" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="bolt_1">
+      <origin xyz="-0.205 0.085 0.0625" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.007" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="bolt_2">
+      <origin xyz="0.205 -0.085 0.0625" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.007" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="bolt_3">
+      <origin xyz="0.205 0.085 0.0625" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.007" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <collision name="turntable_top">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.158" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="plate">
+      <origin xyz="0 0 0.0415" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.24 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rail_0">
+      <origin xyz="0 -0.055 0.059" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dovetail_rail.obj" />
+        </geometry>
+      </collision>
+    <collision name="rail_1">
+      <origin xyz="0 0.055 0.059" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dovetail_rail.obj" />
+        </geometry>
+      </collision>
+    <collision name="fixed_foot">
+      <origin xyz="0.14 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.205 0.022" />
+        </geometry>
+      </collision>
+    <collision name="leadnut_support">
+      <origin xyz="0.078 0 0.091" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.05 0.024" />
+        </geometry>
+      </collision>
+    <collision name="leadnut">
+      <origin xyz="0.078 0 0.103" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="fixed_block">
+      <origin xyz="0.14 0 0.116" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.18 0.112" />
+        </geometry>
+      </collision>
+    <collision name="fixed_jaw_face">
+      <origin xyz="0.097 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.162 0.06" />
+        </geometry>
+      </collision>
+    <collision name="fixed_tooth_0">
+      <origin xyz="0.093 0 0.104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.15 0.004" />
+        </geometry>
+      </collision>
+    <collision name="fixed_tooth_1">
+      <origin xyz="0.093 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.15 0.004" />
+        </geometry>
+      </collision>
+    <collision name="fixed_tooth_2">
+      <origin xyz="0.093 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.15 0.004" />
+        </geometry>
+      </collision>
+    <collision name="bolt_0">
+      <origin xyz="-0.205 -0.085 0.0625" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_1">
+      <origin xyz="-0.205 0.085 0.0625" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_2">
+      <origin xyz="0.205 -0.085 0.0625" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_3">
+      <origin xyz="0.205 0.085 0.0625" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="moving_jaw">
+    <visual name="shoe_0">
+      <origin xyz="0 -0.055 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.064 0.014" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="shoe_lip_0_0">
+      <origin xyz="0 -0.089 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.006 0.012" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="shoe_lip_0_1">
+      <origin xyz="0 -0.021 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.006 0.012" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="shoe_1">
+      <origin xyz="0 0.055 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.064 0.014" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="shoe_lip_1_0">
+      <origin xyz="0 0.021 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.006 0.012" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="shoe_lip_1_1">
+      <origin xyz="0 0.089 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.006 0.012" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="jaw_block">
+      <origin xyz="0 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.19 0.112" />
+        </geometry>
+      <material name="hammered_blue_paint">
+        <color rgba="0.05 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="jaw_face">
+      <origin xyz="0.046 0 0.076" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.164 0.062" />
+        </geometry>
+      <material name="hardened_jaw_steel">
+        <color rgba="0.3 0.31 0.3 1" />
+        </material>
+      </visual>
+    <visual name="jaw_tooth_0">
+      <origin xyz="0.05 0 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.152 0.004" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="jaw_tooth_1">
+      <origin xyz="0.05 0 0.076" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.152 0.004" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="jaw_tooth_2">
+      <origin xyz="0.05 0 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.152 0.004" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="screw_boss">
+      <origin xyz="-0.047 0 0.024" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.02" />
+        </geometry>
+      <material name="dark_machined_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <collision name="shoe_0">
+      <origin xyz="0 -0.055 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.064 0.014" />
+        </geometry>
+      </collision>
+    <collision name="shoe_lip_0_0">
+      <origin xyz="0 -0.089 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.006 0.012" />
+        </geometry>
+      </collision>
+    <collision name="shoe_lip_0_1">
+      <origin xyz="0 -0.021 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.006 0.012" />
+        </geometry>
+      </collision>
+    <collision name="shoe_1">
+      <origin xyz="0 0.055 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.064 0.014" />
+        </geometry>
+      </collision>
+    <collision name="shoe_lip_1_0">
+      <origin xyz="0 0.021 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.006 0.012" />
+        </geometry>
+      </collision>
+    <collision name="shoe_lip_1_1">
+      <origin xyz="0 0.089 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.006 0.012" />
+        </geometry>
+      </collision>
+    <collision name="jaw_block">
+      <origin xyz="0 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.19 0.112" />
+        </geometry>
+      </collision>
+    <collision name="jaw_face">
+      <origin xyz="0.046 0 0.076" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.164 0.062" />
+        </geometry>
+      </collision>
+    <collision name="jaw_tooth_0">
+      <origin xyz="0.05 0 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.152 0.004" />
+        </geometry>
+      </collision>
+    <collision name="jaw_tooth_1">
+      <origin xyz="0.05 0 0.076" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.152 0.004" />
+        </geometry>
+      </collision>
+    <collision name="jaw_tooth_2">
+      <origin xyz="0.05 0 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.152 0.004" />
+        </geometry>
+      </collision>
+    <collision name="screw_boss">
+      <origin xyz="-0.047 0 0.024" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="leadscrew">
+    <visual name="threaded_shaft">
+      <origin xyz="-0.009 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.396" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="thread_0">
+      <origin xyz="-0.176 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="thread_1">
+      <origin xyz="-0.132 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="thread_2">
+      <origin xyz="-0.088 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="thread_3">
+      <origin xyz="-0.044 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="thread_4">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="thread_5">
+      <origin xyz="0.044 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="thread_6">
+      <origin xyz="0.088 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="thread_7">
+      <origin xyz="0.132 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="thread_8">
+      <origin xyz="0.176 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      <material name="polished_leadscrew_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="handle_hub">
+      <origin xyz="-0.222 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.03" />
+        </geometry>
+      <material name="blackened_handle">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="handle_bar">
+      <origin xyz="-0.222 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.17" />
+        </geometry>
+      <material name="blackened_handle">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="handle_knob_0">
+      <origin xyz="-0.222 -0.092 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.015" />
+        </geometry>
+      <material name="blackened_handle">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="handle_knob_1">
+      <origin xyz="-0.222 0.092 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.015" />
+        </geometry>
+      <material name="blackened_handle">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="threaded_shaft">
+      <origin xyz="-0.009 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.396" />
+        </geometry>
+      </collision>
+    <collision name="thread_0">
+      <origin xyz="-0.176 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="thread_1">
+      <origin xyz="-0.132 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="thread_2">
+      <origin xyz="-0.088 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="thread_3">
+      <origin xyz="-0.044 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="thread_4">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="thread_5">
+      <origin xyz="0.044 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="thread_6">
+      <origin xyz="0.088 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="thread_7">
+      <origin xyz="0.132 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="thread_8">
+      <origin xyz="0.176 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/leadscrew_thread_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="handle_hub">
+      <origin xyz="-0.222 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="handle_bar">
+      <origin xyz="-0.222 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.17" />
+        </geometry>
+      </collision>
+    <collision name="handle_knob_0">
+      <origin xyz="-0.222 -0.092 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.015" />
+        </geometry>
+      </collision>
+    <collision name="handle_knob_1">
+      <origin xyz="-0.222 0.092 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.015" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="pedestal_to_plate" type="continuous">
+    <origin xyz="0 0 0.14" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="base_plate" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="1" />
+    </joint>
+  <joint name="plate_to_jaw" type="prismatic">
+    <origin xyz="-0.13 0 0.079" rpy="0 0 0" />
+    <parent link="base_plate" />
+    <child link="moving_jaw" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="0.04" lower="0" upper="0.12" />
+    </joint>
+  <joint name="jaw_to_leadscrew" type="continuous">
+    <origin xyz="0 0 0.024" rpy="0 0 0" />
+    <parent link="moving_jaw" />
+    <child link="leadscrew" />
+    <axis xyz="1 0 0" />
+    <limit effort="35" velocity="3" />
+    </joint>
+  </robot>

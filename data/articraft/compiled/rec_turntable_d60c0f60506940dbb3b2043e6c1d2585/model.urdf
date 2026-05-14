@@ -1,0 +1,404 @@
+<robot name="premium_turntable">
+  <material name="satin_graphite_paint">
+    <color rgba="0.09 0.095 0.1 1" />
+    </material>
+  <material name="warm_black_polymer">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.55 0.56 0.54 1" />
+    </material>
+  <material name="matte_black_elastomer">
+    <color rgba="0.005 0.005 0.004 1" />
+    </material>
+  <material name="dark_gray_elastomer">
+    <color rgba="0.045 0.045 0.043 1" />
+    </material>
+  <material name="polished_steel">
+    <color rgba="0.82 0.82 0.78 1" />
+    </material>
+  <material name="cartridge_black">
+    <color rgba="0.02 0.018 0.016 1" />
+    </material>
+  <material name="muted_red_stylus">
+    <color rgba="0.45 0.035 0.025 1" />
+    </material>
+  <link name="plinth">
+    <visual name="plinth_body">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plinth_body.obj" />
+        </geometry>
+      <material name="warm_black_polymer">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="top_plate">
+      <origin xyz="0 0 0.073" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_plate.obj" />
+        </geometry>
+      <material name="satin_graphite_paint">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="shadow_reveal">
+      <origin xyz="0 0 0.0705" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shadow_reveal.obj" />
+        </geometry>
+      <material name="warm_black_polymer">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="foot_0">
+      <origin xyz="-0.185 -0.14 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.02" />
+        </geometry>
+      <material name="dark_gray_elastomer">
+        <color rgba="0.045 0.045 0.043 1" />
+        </material>
+      </visual>
+    <visual name="foot_1">
+      <origin xyz="0.185 -0.14 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.02" />
+        </geometry>
+      <material name="dark_gray_elastomer">
+        <color rgba="0.045 0.045 0.043 1" />
+        </material>
+      </visual>
+    <visual name="foot_2">
+      <origin xyz="-0.185 0.14 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.02" />
+        </geometry>
+      <material name="dark_gray_elastomer">
+        <color rgba="0.045 0.045 0.043 1" />
+        </material>
+      </visual>
+    <visual name="foot_3">
+      <origin xyz="0.185 0.14 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.02" />
+        </geometry>
+      <material name="dark_gray_elastomer">
+        <color rgba="0.045 0.045 0.043 1" />
+        </material>
+      </visual>
+    <visual name="platter_bearing_collar">
+      <origin xyz="-0.075 0.01 0.076" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/platter_bearing_collar.obj" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="tonearm_bearing_collar">
+      <origin xyz="0.168 0.108 0.076" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tonearm_bearing_collar.obj" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="arm_rest_base">
+      <origin xyz="0.095 0.142 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.018 0.008" />
+        </geometry>
+      <material name="warm_black_polymer">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="arm_rest_post">
+      <origin xyz="0.095 0.142 0.103" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.038" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="arm_rest_cradle">
+      <origin xyz="0.095 0.142 0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.01 0.006" />
+        </geometry>
+      <material name="matte_black_elastomer">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="status_lens">
+      <origin xyz="0.18 -0.14 0.077" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.002" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <collision name="plinth_body">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plinth_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_plate">
+      <origin xyz="0 0 0.073" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="shadow_reveal">
+      <origin xyz="0 0 0.0705" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shadow_reveal.obj" />
+        </geometry>
+      </collision>
+    <collision name="foot_0">
+      <origin xyz="-0.185 -0.14 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="foot_1">
+      <origin xyz="0.185 -0.14 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="foot_2">
+      <origin xyz="-0.185 0.14 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="foot_3">
+      <origin xyz="0.185 0.14 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="platter_bearing_collar">
+      <origin xyz="-0.075 0.01 0.076" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/platter_bearing_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="tonearm_bearing_collar">
+      <origin xyz="0.168 0.108 0.076" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tonearm_bearing_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="arm_rest_base">
+      <origin xyz="0.095 0.142 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.018 0.008" />
+        </geometry>
+      </collision>
+    <collision name="arm_rest_post">
+      <origin xyz="0.095 0.142 0.103" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.038" />
+        </geometry>
+      </collision>
+    <collision name="arm_rest_cradle">
+      <origin xyz="0.095 0.142 0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.01 0.006" />
+        </geometry>
+      </collision>
+    <collision name="status_lens">
+      <origin xyz="0.18 -0.14 0.077" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="platter">
+    <visual name="platter_disc">
+      <geometry>
+        <mesh filename="assets/meshes/platter_disc.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="rubber_mat">
+      <origin xyz="0 0 0.0256" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.126" length="0.0032" />
+        </geometry>
+      <material name="matte_black_elastomer">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="spindle">
+      <origin xyz="0 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.036" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rim_index">
+      <origin xyz="0.128 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.0018" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <collision name="platter_disc">
+      <geometry>
+        <mesh filename="assets/meshes/platter_disc.obj" />
+        </geometry>
+      </collision>
+    <collision name="rubber_mat">
+      <origin xyz="0 0 0.0256" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.126" length="0.0032" />
+        </geometry>
+      </collision>
+    <collision name="spindle">
+      <origin xyz="0 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.036" />
+        </geometry>
+      </collision>
+    <collision name="rim_index">
+      <origin xyz="0.128 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.0018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tonearm">
+    <visual name="pivot_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="gimbal_tower">
+      <origin xyz="0 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.034" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="arm_tube">
+      <origin xyz="-0.11 0 0.039" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.22" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="0.023 0 0.039" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.05" />
+        </geometry>
+      <material name="matte_black_elastomer">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="headshell">
+      <origin xyz="-0.226 0 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.016 0.004" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="cartridge">
+      <origin xyz="-0.237 0 0.0285" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.012" />
+        </geometry>
+      <material name="cartridge_black">
+        <color rgba="0.02 0.018 0.016 1" />
+        </material>
+      </visual>
+    <visual name="stylus">
+      <origin xyz="-0.244 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0015" length="0.006" />
+        </geometry>
+      <material name="muted_red_stylus">
+        <color rgba="0.45 0.035 0.025 1" />
+        </material>
+      </visual>
+    <collision name="pivot_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="gimbal_tower">
+      <origin xyz="0 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="arm_tube">
+      <origin xyz="-0.11 0 0.039" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="counterweight">
+      <origin xyz="0.023 0 0.039" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="headshell">
+      <origin xyz="-0.226 0 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.016 0.004" />
+        </geometry>
+      </collision>
+    <collision name="cartridge">
+      <origin xyz="-0.237 0 0.0285" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.012" />
+        </geometry>
+      </collision>
+    <collision name="stylus">
+      <origin xyz="-0.244 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0015" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="platter_spin" type="continuous">
+    <origin xyz="-0.075 0.01 0.089" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="platter" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.5" velocity="33" />
+    </joint>
+  <joint name="tonearm_swing" type="revolute">
+    <origin xyz="0.168 0.108 0.096" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="tonearm" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="1.2" lower="-0.48" upper="0.36" />
+    </joint>
+  </robot>

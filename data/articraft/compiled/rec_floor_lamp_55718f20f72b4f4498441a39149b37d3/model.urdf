@@ -1,0 +1,442 @@
+<robot name="residential_adjustable_floor_lamp">
+  <material name="matte_black">
+    <color rgba="0.025 0.023 0.021 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.005 0.005 0.004 1" />
+    </material>
+  <material name="aged_brass">
+    <color rgba="0.74 0.55 0.3 1" />
+    </material>
+  <material name="warm_brass">
+    <color rgba="0.95 0.73 0.42 1" />
+    </material>
+  <material name="soft_white">
+    <color rgba="0.92 0.88 0.78 1" />
+    </material>
+  <material name="warm_glass">
+    <color rgba="1 0.86 0.48 0.55" />
+    </material>
+  <material name="warm_light">
+    <color rgba="1 0.76 0.3 1" />
+    </material>
+  <link name="stand">
+    <inertial>
+      <origin xyz="0 0 0.62" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="1.28507" ixy="0" ixz="0" iyy="1.28507" iyz="0" izz="0.2116" />
+      </inertial>
+    <visual name="weighted_base">
+      <geometry>
+        <mesh filename="assets/meshes/weighted_base.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.025 0.023 0.021 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rubber_foot.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="base_collar">
+      <origin xyz="0 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.045" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.74 0.55 0.3 1" />
+        </material>
+      </visual>
+    <visual name="upright_stem">
+      <origin xyz="0 0 0.685" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="1.265" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.74 0.55 0.3 1" />
+        </material>
+      </visual>
+    <visual name="upper_sleeve">
+      <origin xyz="0 0 1.255" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.155" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.025 0.023 0.021 1" />
+        </material>
+      </visual>
+    <visual name="top_socket">
+      <origin xyz="0 0 1.317" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.026" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.74 0.55 0.3 1" />
+        </material>
+      </visual>
+    <visual name="set_screw">
+      <origin xyz="0.033 0 1.255" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.054" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.025 0.023 0.021 1" />
+        </material>
+      </visual>
+    <collision name="weighted_base">
+      <geometry>
+        <mesh filename="assets/meshes/weighted_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rubber_foot.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_collar">
+      <origin xyz="0 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="upright_stem">
+      <origin xyz="0 0 0.685" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="1.265" />
+        </geometry>
+      </collision>
+    <collision name="upper_sleeve">
+      <origin xyz="0 0 1.255" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.155" />
+        </geometry>
+      </collision>
+    <collision name="top_socket">
+      <origin xyz="0 0 1.317" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="set_screw">
+      <origin xyz="0.033 0 1.255" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.054" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="swing_arm">
+    <inertial>
+      <origin xyz="0.25 0 0.025" rpy="0 0 0" />
+      <mass value="0.7" />
+      <inertia ixx="0.00161583" ixy="0" ixz="0" iyy="0.0150558" iyz="0" izz="0.0157267" />
+      </inertial>
+    <visual name="swivel_collar">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.028" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.74 0.55 0.3 1" />
+        </material>
+      </visual>
+    <visual name="arm_tube">
+      <origin xyz="0.231 0 0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.402" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.74 0.55 0.3 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0.405 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.126 0.032" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.74 0.55 0.3 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_0">
+      <origin xyz="0.44 -0.045 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.016 0.074" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.74 0.55 0.3 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_1">
+      <origin xyz="0.44 0.045 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.016 0.074" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.74 0.55 0.3 1" />
+        </material>
+      </visual>
+    <visual name="hinge_washer_0">
+      <origin xyz="0.456 -0.06 0.026" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.95 0.73 0.42 1" />
+        </material>
+      </visual>
+    <visual name="hinge_washer_1">
+      <origin xyz="0.456 0.06 0.026" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.95 0.73 0.42 1" />
+        </material>
+      </visual>
+    <collision name="swivel_collar">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="arm_tube">
+      <origin xyz="0.231 0 0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.402" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0.405 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.126 0.032" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_0">
+      <origin xyz="0.44 -0.045 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.016 0.074" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_1">
+      <origin xyz="0.44 0.045 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.016 0.074" />
+        </geometry>
+      </collision>
+    <collision name="hinge_washer_0">
+      <origin xyz="0.456 -0.06 0.026" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="hinge_washer_1">
+      <origin xyz="0.456 0.06 0.026" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lamp_head">
+    <inertial>
+      <origin xyz="0.2 0 0" rpy="0 0 0" />
+      <mass value="0.9" />
+      <inertia ixx="0.00543" ixy="0" ixz="0" iyy="0.01695" iyz="0" izz="0.01752" />
+      </inertial>
+    <visual name="trunnion_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.074" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.95 0.73 0.42 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.046" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.74 0.55 0.3 1" />
+        </material>
+      </visual>
+    <visual name="shade_neck">
+      <origin xyz="0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.11" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.74 0.55 0.3 1" />
+        </material>
+      </visual>
+    <visual name="rear_socket">
+      <origin xyz="0.095 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.03" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.95 0.73 0.42 1" />
+        </material>
+      </visual>
+    <visual name="shade_shell">
+      <origin xyz="0.09 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shade_shell.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.025 0.023 0.021 1" />
+        </material>
+      </visual>
+    <visual name="front_rim">
+      <origin xyz="0.342 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_rim.obj" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.95 0.73 0.42 1" />
+        </material>
+      </visual>
+    <visual name="diffuser_lens">
+      <origin xyz="0.336 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.006" />
+        </geometry>
+      <material name="warm_glass">
+        <color rgba="1 0.86 0.48 0.55" />
+        </material>
+      </visual>
+    <visual name="bulb_socket">
+      <origin xyz="0.155 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.13" />
+        </geometry>
+      <material name="soft_white">
+        <color rgba="0.92 0.88 0.78 1" />
+        </material>
+      </visual>
+    <visual name="lamp_bulb">
+      <origin xyz="0.238 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.036" />
+        </geometry>
+      <material name="warm_light">
+        <color rgba="1 0.76 0.3 1" />
+        </material>
+      </visual>
+    <visual name="switch_boss">
+      <origin xyz="0.188 0.071 0.024" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0135" length="0.022" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.74 0.55 0.3 1" />
+        </material>
+      </visual>
+    <collision name="trunnion_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.074" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.046" />
+        </geometry>
+      </collision>
+    <collision name="shade_neck">
+      <origin xyz="0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.11" />
+        </geometry>
+      </collision>
+    <collision name="rear_socket">
+      <origin xyz="0.095 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="shade_shell">
+      <origin xyz="0.09 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shade_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_rim">
+      <origin xyz="0.342 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="diffuser_lens">
+      <origin xyz="0.336 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="bulb_socket">
+      <origin xyz="0.155 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.13" />
+        </geometry>
+      </collision>
+    <collision name="lamp_bulb">
+      <origin xyz="0.238 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.036" />
+        </geometry>
+      </collision>
+    <collision name="switch_boss">
+      <origin xyz="0.188 0.071 0.024" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0135" length="0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="switch_knob">
+    <inertial>
+      <mass value="0.03" />
+      <inertia ixx="2.4975e-06" ixy="0" ixz="0" iyy="2.4975e-06" iyz="0" izz="3.375e-06" />
+      </inertial>
+    <visual name="switch_knob">
+      <geometry>
+        <mesh filename="assets/meshes/switch_knob.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.025 0.023 0.021 1" />
+        </material>
+      </visual>
+    <collision name="switch_knob">
+      <geometry>
+        <mesh filename="assets/meshes/switch_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="stand_to_arm" type="revolute">
+    <origin xyz="0 0 1.33" rpy="0 0 0" />
+    <parent link="stand" />
+    <child link="swing_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="1.2" lower="-1.48353" upper="1.48353" />
+    </joint>
+  <joint name="arm_to_head" type="revolute">
+    <origin xyz="0.456 0 0.026" rpy="0 0.418879 0" />
+    <parent link="swing_arm" />
+    <child link="lamp_head" />
+    <axis xyz="0 1 0" />
+    <limit effort="2.5" velocity="1.4" lower="-0.558505" upper="0.733038" />
+    </joint>
+  <joint name="head_to_switch" type="revolute">
+    <origin xyz="0.188 0.082 0.024" rpy="-1.5708 0 0" />
+    <parent link="lamp_head" />
+    <child link="switch_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="4" lower="0" upper="1.74533" />
+    </joint>
+  </robot>

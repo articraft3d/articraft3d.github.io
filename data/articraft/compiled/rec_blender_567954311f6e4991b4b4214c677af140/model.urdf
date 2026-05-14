@@ -1,0 +1,435 @@
+<robot name="personal_single_serve_blender">
+  <link name="motor_base">
+    <visual name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_motor_base.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.92 0.9 0.84 1" />
+        </material>
+      </visual>
+    <visual name="top_shoulder">
+      <origin xyz="0 0 0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.061" length="0.01" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="drive_coupling_socket">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.02" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="drive_spline_0">
+      <origin xyz="0 0 0.153" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.01 0.006" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="drive_spline_157">
+      <origin xyz="0 0 0.153" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.054 0.01 0.006" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="metal_drive_boss">
+      <origin xyz="0 0 0.157" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.006" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="front_badge">
+      <origin xyz="0 -0.084 0.092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.006 0.01" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_ring">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.084" length="0.006" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <collision name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_motor_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_shoulder">
+      <origin xyz="0 0 0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.061" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="drive_coupling_socket">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="drive_spline_0">
+      <origin xyz="0 0 0.153" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.01 0.006" />
+        </geometry>
+      </collision>
+    <collision name="drive_spline_157">
+      <origin xyz="0 0 0.153" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.054 0.01 0.006" />
+        </geometry>
+      </collision>
+    <collision name="metal_drive_boss">
+      <origin xyz="0 0 0.157" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="front_badge">
+      <origin xyz="0 -0.084 0.092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.006 0.01" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_ring">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.084" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cup">
+    <visual name="clear_cup_wall">
+      <geometry>
+        <mesh filename="assets/meshes/transparent_blending_cup.obj" />
+        </geometry>
+      <material name="clear_smoky_copolyester">
+        <color rgba="0.62 0.84 0.95 0.34" />
+        </material>
+      </visual>
+    <visual name="threaded_collar">
+      <geometry>
+        <mesh filename="assets/meshes/threaded_lower_collar.obj" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="thread_rib_0">
+      <origin xyz="0 0 -0.005" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cup_thread_0.obj" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="thread_rib_1">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cup_thread_1.obj" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="thread_rib_2">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cup_thread_2.obj" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="top_lid_deck">
+      <origin xyz="0 0 0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.006" />
+        </geometry>
+      <material name="teal_lid_plastic">
+        <color rgba="0.04 0.44 0.48 1" />
+        </material>
+      </visual>
+    <visual name="top_lid_ring">
+      <geometry>
+        <mesh filename="assets/meshes/teal_screw_lid_ring.obj" />
+        </geometry>
+      <material name="teal_lid_plastic">
+        <color rgba="0.04 0.44 0.48 1" />
+        </material>
+      </visual>
+    <visual name="spout_seal_rim">
+      <origin xyz="0 -0.014 0.254" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.004" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="hinge_bridge">
+      <origin xyz="0 0.05 0.251" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.01 0.008" />
+        </geometry>
+      <material name="teal_lid_plastic">
+        <color rgba="0.04 0.44 0.48 1" />
+        </material>
+      </visual>
+    <visual name="hinge_ear_a">
+      <origin xyz="-0.026 0.056 0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.012 0.016" />
+        </geometry>
+      <material name="teal_lid_plastic">
+        <color rgba="0.04 0.44 0.48 1" />
+        </material>
+      </visual>
+    <visual name="hinge_ear_b">
+      <origin xyz="0.026 0.056 0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.012 0.016" />
+        </geometry>
+      <material name="teal_lid_plastic">
+        <color rgba="0.04 0.44 0.48 1" />
+        </material>
+      </visual>
+    <collision name="clear_cup_wall">
+      <geometry>
+        <mesh filename="assets/meshes/transparent_blending_cup.obj" />
+        </geometry>
+      </collision>
+    <collision name="threaded_collar">
+      <geometry>
+        <mesh filename="assets/meshes/threaded_lower_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="thread_rib_0">
+      <origin xyz="0 0 -0.005" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cup_thread_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="thread_rib_1">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cup_thread_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="thread_rib_2">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cup_thread_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_lid_deck">
+      <origin xyz="0 0 0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="top_lid_ring">
+      <geometry>
+        <mesh filename="assets/meshes/teal_screw_lid_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="spout_seal_rim">
+      <origin xyz="0 -0.014 0.254" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="hinge_bridge">
+      <origin xyz="0 0.05 0.251" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.01 0.008" />
+        </geometry>
+      </collision>
+    <collision name="hinge_ear_a">
+      <origin xyz="-0.026 0.056 0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.012 0.016" />
+        </geometry>
+      </collision>
+    <collision name="hinge_ear_b">
+      <origin xyz="0.026 0.056 0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.012 0.016" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_assembly">
+    <visual name="cutting_blades">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/crossed_blades.obj" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.014" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="retaining_nut">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.01" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <collision name="cutting_blades">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/crossed_blades.obj" />
+        </geometry>
+      </collision>
+    <collision name="hub">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="retaining_nut">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="spout_lid">
+    <visual name="flap_panel">
+      <origin xyz="0 -0.024 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.008" />
+        </geometry>
+      <material name="teal_lid_plastic">
+        <color rgba="0.04 0.44 0.48 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.036" />
+        </geometry>
+      <material name="teal_lid_plastic">
+        <color rgba="0.04 0.44 0.48 1" />
+        </material>
+      </visual>
+    <visual name="thumb_tab">
+      <origin xyz="0 -0.05 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.008 0.013" />
+        </geometry>
+      <material name="teal_lid_plastic">
+        <color rgba="0.04 0.44 0.48 1" />
+        </material>
+      </visual>
+    <collision name="flap_panel">
+      <origin xyz="0 -0.024 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.008" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.036" />
+        </geometry>
+      </collision>
+    <collision name="thumb_tab">
+      <origin xyz="0 -0.05 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.008 0.013" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="power_button">
+    <visual name="button_cap">
+      <origin xyz="0 -0.004 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="button_stem">
+      <origin xyz="0 0.002 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.005 0.011" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.004 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="button_stem">
+      <origin xyz="0 0.002 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.005 0.011" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_cup" type="fixed">
+    <origin xyz="0 0 0.142" rpy="0 0 0" />
+    <parent link="motor_base" />
+    <child link="cup" />
+    </joint>
+  <joint name="cup_to_blade" type="revolute">
+    <origin xyz="0 0 0.018" rpy="0 0 0" />
+    <parent link="cup" />
+    <child link="blade_assembly" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.2" velocity="120" lower="0" upper="6.28319" />
+    </joint>
+  <joint name="cup_to_spout_lid" type="revolute">
+    <origin xyz="0 0.056 0.257" rpy="0 0 0" />
+    <parent link="cup" />
+    <child link="spout_lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="0.8" velocity="4" lower="0" upper="1.75" />
+    </joint>
+  <joint name="base_to_power_button" type="prismatic">
+    <origin xyz="0 -0.086 0.06" rpy="0 0 0" />
+    <parent link="motor_base" />
+    <child link="power_button" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="0.04" lower="0" upper="0.006" />
+    </joint>
+  </robot>

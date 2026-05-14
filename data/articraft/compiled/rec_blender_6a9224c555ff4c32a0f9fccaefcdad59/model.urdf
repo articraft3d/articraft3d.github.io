@@ -1,0 +1,324 @@
+<robot name="countertop_smoothie_blender">
+  <material name="brushed_metal">
+    <color rgba="0.6 0.62 0.64 1" />
+    </material>
+  <material name="dark_plastic">
+    <color rgba="0.025 0.026 0.028 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.005 0.005 0.006 1" />
+    </material>
+  <material name="clear_green_glass">
+    <color rgba="0.72 0.95 0.93 0.36" />
+    </material>
+  <material name="stainless_blade">
+    <color rgba="0.86 0.88 0.87 1" />
+    </material>
+  <material name="speed_mark_white">
+    <color rgba="0.92 0.94 0.93 1" />
+    </material>
+  <link name="base">
+    <visual name="base_body">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.23 0.16" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.6 0.62 0.64 1" />
+        </material>
+      </visual>
+    <visual name="front_panel">
+      <origin xyz="0 -0.118 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.006 0.075" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="base_coupling">
+      <origin xyz="0 0 0.17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.02" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="drive_coupler">
+      <origin xyz="0 0 0.187" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.014" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="foot_0_0">
+      <origin xyz="-0.105 -0.075 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="foot_0_1">
+      <origin xyz="-0.105 0.075 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="foot_1_0">
+      <origin xyz="0.105 -0.075 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="foot_1_1">
+      <origin xyz="0.105 0.075 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="speed_dial">
+    <visual name="dial_cap">
+      <origin xyz="0 -0.014 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.028" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="dial_pointer">
+      <origin xyz="0 -0.029 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.003 0.022" />
+        </geometry>
+      <material name="speed_mark_white">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="jar">
+    <visual name="jar_collar">
+      <geometry>
+        <mesh filename="assets/meshes/jar_bayonet_collar.obj" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_lug_0">
+      <origin xyz="0.09 0 0.011" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.034 0.014 0.01" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_lug_1">
+      <origin xyz="-0.045 0.0779423 0.011" rpy="0 0 3.66519" />
+      <geometry>
+        <box size="0.034 0.014 0.01" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_lug_2">
+      <origin xyz="-0.045 -0.0779423 0.011" rpy="0 0 5.75959" />
+      <geometry>
+        <box size="0.034 0.014 0.01" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="glass_shell">
+      <geometry>
+        <mesh filename="assets/meshes/round_narrow_neck_jar.obj" />
+        </geometry>
+      <material name="clear_green_glass">
+        <color rgba="0.72 0.95 0.93 0.36" />
+        </material>
+      </visual>
+    <visual name="blade_bearing">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.014" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="neck_rim">
+      <geometry>
+        <mesh filename="assets/meshes/jar_neck_rim.obj" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf_0">
+      <origin xyz="-0.036 0.068 0.398" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.028 0.008" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_0">
+      <origin xyz="-0.036 0.074 0.406" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.02" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf_1">
+      <origin xyz="0.036 0.068 0.398" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.028 0.008" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_1">
+      <origin xyz="0.036 0.074 0.406" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.02" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade">
+    <visual name="blade_hub">
+      <geometry>
+        <cylinder radius="0.018" length="0.022" />
+        </geometry>
+      <material name="stainless_blade">
+        <color rgba="0.86 0.88 0.87 1" />
+        </material>
+      </visual>
+    <visual name="blade_wing_0">
+      <origin xyz="0.0394033 -0.0113306 0.002" rpy="-0.12 0 -0.28" />
+      <geometry>
+        <box size="0.07 0.017 0.003" />
+        </geometry>
+      <material name="stainless_blade">
+        <color rgba="0.86 0.88 0.87 1" />
+        </material>
+      </visual>
+    <visual name="blade_wing_1">
+      <origin xyz="-0.0113306 0.0394033 0.002" rpy="0.12 0 1.8508" />
+      <geometry>
+        <box size="0.07 0.017 0.003" />
+        </geometry>
+      <material name="stainless_blade">
+        <color rgba="0.86 0.88 0.87 1" />
+        </material>
+      </visual>
+    <visual name="blade_wing_2">
+      <origin xyz="-0.0394033 0.0113306 0.002" rpy="-0.12 0 2.86159" />
+      <geometry>
+        <box size="0.07 0.017 0.003" />
+        </geometry>
+      <material name="stainless_blade">
+        <color rgba="0.86 0.88 0.87 1" />
+        </material>
+      </visual>
+    <visual name="blade_wing_3">
+      <origin xyz="0.0113306 -0.0394033 0.002" rpy="0.12 0 4.99239" />
+      <geometry>
+        <box size="0.07 0.017 0.003" />
+        </geometry>
+      <material name="stainless_blade">
+        <color rgba="0.86 0.88 0.87 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="pour_lid">
+    <visual name="lid_cap">
+      <origin xyz="0 -0.074 0.008" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.016" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_leaf">
+      <origin xyz="0 -0.01 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.021 0.006" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="lid_knuckle">
+      <origin xyz="0 0 0.008" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.038" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="pour_spout">
+      <origin xyz="0 -0.132 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.02 0.008" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_speed_dial" type="revolute">
+    <origin xyz="0 -0.121 0.083" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="speed_dial" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.5" velocity="2" lower="-2.35" upper="2.35" />
+    </joint>
+  <joint name="base_to_jar_bayonet" type="revolute">
+    <origin xyz="0 0 0.18" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="jar" />
+    <axis xyz="0 0 1" />
+    <limit effort="7.5" velocity="1" lower="0" upper="0.45" />
+    </joint>
+  <joint name="jar_to_blade" type="continuous">
+    <origin xyz="0 0 0.065" rpy="0 0 0" />
+    <parent link="jar" />
+    <child link="blade" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="80" />
+    </joint>
+  <joint name="jar_to_pour_lid" type="revolute">
+    <origin xyz="0 0.074 0.398" rpy="0 0 0" />
+    <parent link="jar" />
+    <child link="pour_lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="1" velocity="2" lower="0" upper="1.45" />
+    </joint>
+  </robot>

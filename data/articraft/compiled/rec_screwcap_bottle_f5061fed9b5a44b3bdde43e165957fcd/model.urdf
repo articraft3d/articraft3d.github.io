@@ -1,0 +1,100 @@
+<robot name="cost_optimized_screwcap_bottle">
+  <material name="clear_pet">
+    <color rgba="0.72 0.88 1 0.38" />
+    </material>
+  <material name="thick_clear_pet">
+    <color rgba="0.58 0.78 1 0.55" />
+    </material>
+  <material name="molded_blue_pp">
+    <color rgba="0.05 0.28 0.82 0.82" />
+    </material>
+  <material name="cap_thread_highlight">
+    <color rgba="0.7 0.86 1 0.9" />
+    </material>
+  <material name="soft_white_liner">
+    <color rgba="0.92 0.96 1 0.95" />
+    </material>
+  <link name="bottle">
+    <visual name="bottle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bottle_shell.obj" />
+        </geometry>
+      <material name="clear_pet">
+        <color rgba="0.72 0.88 1 0.38" />
+        </material>
+      </visual>
+    <visual name="neck_thread">
+      <geometry>
+        <mesh filename="assets/meshes/neck_thread.obj" />
+        </geometry>
+      <material name="thick_clear_pet">
+        <color rgba="0.58 0.78 1 0.55" />
+        </material>
+      </visual>
+    <collision name="bottle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bottle_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="neck_thread">
+      <geometry>
+        <mesh filename="assets/meshes/neck_thread.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="thread_drive" />
+  <link name="cap">
+    <visual name="cap_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cap_shell.obj" />
+        </geometry>
+      <material name="molded_blue_pp">
+        <color rgba="0.05 0.28 0.82 0.82" />
+        </material>
+      </visual>
+    <visual name="liner_seal">
+      <geometry>
+        <mesh filename="assets/meshes/liner_seal.obj" />
+        </geometry>
+      <material name="soft_white_liner">
+        <color rgba="0.92 0.96 1 0.95" />
+        </material>
+      </visual>
+    <visual name="female_thread">
+      <geometry>
+        <mesh filename="assets/meshes/female_thread.obj" />
+        </geometry>
+      <material name="cap_thread_highlight">
+        <color rgba="0.7 0.86 1 0.9" />
+        </material>
+      </visual>
+    <collision name="cap_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cap_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="liner_seal">
+      <geometry>
+        <mesh filename="assets/meshes/liner_seal.obj" />
+        </geometry>
+      </collision>
+    <collision name="female_thread">
+      <geometry>
+        <mesh filename="assets/meshes/female_thread.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="neck_to_cap" type="revolute">
+    <origin xyz="0 0 0.248" rpy="0 0 0" />
+    <parent link="bottle" />
+    <child link="thread_drive" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.5" velocity="4" lower="0" upper="14.1372" />
+    </joint>
+  <joint name="cap_lift" type="prismatic">
+    <parent link="thread_drive" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.06" lower="0" upper="0.02025" />
+    </joint>
+  </robot>

@@ -1,0 +1,128 @@
+<robot name="compact_industrial_barrel_hinge">
+  <material name="dark_phosphate_steel">
+    <color rgba="0.2 0.22 0.23 1" />
+    </material>
+  <material name="satin_carried_steel">
+    <color rgba="0.48 0.5 0.48 1" />
+    </material>
+  <material name="dark_burnished_edges">
+    <color rgba="0.06 0.065 0.07 1" />
+    </material>
+  <material name="oiled_bronze_washers">
+    <color rgba="0.75 0.52 0.24 1" />
+    </material>
+  <link name="grounded_leaf">
+    <visual name="grounded_plate">
+      <geometry>
+        <mesh filename="assets/meshes/grounded_leaf_plate.obj" />
+        </geometry>
+      <material name="dark_phosphate_steel">
+        <color rgba="0.2 0.22 0.23 1" />
+        </material>
+      </visual>
+    <visual name="grounded_knuckles">
+      <geometry>
+        <mesh filename="assets/meshes/grounded_leaf_knuckles.obj" />
+        </geometry>
+      <material name="dark_phosphate_steel">
+        <color rgba="0.2 0.22 0.23 1" />
+        </material>
+      </visual>
+    <visual name="counterbore_rings">
+      <geometry>
+        <mesh filename="assets/meshes/grounded_counterbore_rings.obj" />
+        </geometry>
+      <material name="dark_burnished_edges">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="pin_core">
+      <geometry>
+        <mesh filename="assets/meshes/machined_pin_core.obj" />
+        </geometry>
+      <material name="dark_burnished_edges">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_washers">
+      <geometry>
+        <mesh filename="assets/meshes/bronze_shoulder_washers.obj" />
+        </geometry>
+      <material name="oiled_bronze_washers">
+        <color rgba="0.75 0.52 0.24 1" />
+        </material>
+      </visual>
+    <collision name="grounded_plate">
+      <geometry>
+        <mesh filename="assets/meshes/grounded_leaf_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="grounded_knuckles">
+      <geometry>
+        <mesh filename="assets/meshes/grounded_leaf_knuckles.obj" />
+        </geometry>
+      </collision>
+    <collision name="counterbore_rings">
+      <geometry>
+        <mesh filename="assets/meshes/grounded_counterbore_rings.obj" />
+        </geometry>
+      </collision>
+    <collision name="pin_core">
+      <geometry>
+        <mesh filename="assets/meshes/machined_pin_core.obj" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_washers">
+      <geometry>
+        <mesh filename="assets/meshes/bronze_shoulder_washers.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carried_leaf">
+    <visual name="carried_plate">
+      <geometry>
+        <mesh filename="assets/meshes/carried_leaf_plate.obj" />
+        </geometry>
+      <material name="satin_carried_steel">
+        <color rgba="0.48 0.5 0.48 1" />
+        </material>
+      </visual>
+    <visual name="carried_knuckles">
+      <geometry>
+        <mesh filename="assets/meshes/carried_leaf_knuckles.obj" />
+        </geometry>
+      <material name="satin_carried_steel">
+        <color rgba="0.48 0.5 0.48 1" />
+        </material>
+      </visual>
+    <visual name="slot_liners">
+      <geometry>
+        <mesh filename="assets/meshes/carried_slot_liners.obj" />
+        </geometry>
+      <material name="dark_burnished_edges">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <collision name="carried_plate">
+      <geometry>
+        <mesh filename="assets/meshes/carried_leaf_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="carried_knuckles">
+      <geometry>
+        <mesh filename="assets/meshes/carried_leaf_knuckles.obj" />
+        </geometry>
+      </collision>
+    <collision name="slot_liners">
+      <geometry>
+        <mesh filename="assets/meshes/carried_slot_liners.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="pin_axis" type="revolute">
+    <parent link="grounded_leaf" />
+    <child link="carried_leaf" />
+    <axis xyz="0 0 1" />
+    <limit effort="25" velocity="3" lower="0" upper="1.8" />
+    </joint>
+  </robot>

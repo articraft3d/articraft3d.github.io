@@ -1,0 +1,805 @@
+<robot name="outdoor_wall_thermostat">
+  <material name="uv_stabilized_polycarbonate">
+    <color rgba="0.16 0.18 0.18 1" />
+    </material>
+  <material name="dark_display_bezel">
+    <color rgba="0.02 0.025 0.03 1" />
+    </material>
+  <material name="black_epdm_seal">
+    <color rgba="0.005 0.006 0.005 1" />
+    </material>
+  <material name="matte_light_dial">
+    <color rgba="0.78 0.8 0.78 1" />
+    </material>
+  <material name="red_temperature_marker">
+    <color rgba="0.9 0.06 0.02 1" />
+    </material>
+  <material name="passivated_stainless">
+    <color rgba="0.72 0.74 0.72 1" />
+    </material>
+  <material name="smoked_polycarbonate_window">
+    <color rgba="0.08 0.14 0.18 0.55" />
+    </material>
+  <material name="screen_printed_scale">
+    <color rgba="0.88 0.92 0.88 1" />
+    </material>
+  <link name="body">
+    <visual name="backplate">
+      <origin xyz="-0.016 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.205 0.265" />
+        </geometry>
+      <material name="uv_stabilized_polycarbonate">
+        <color rgba="0.16 0.18 0.18 1" />
+        </material>
+      </visual>
+    <visual name="housing_shell">
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_housing.obj" />
+        </geometry>
+      <material name="uv_stabilized_polycarbonate">
+        <color rgba="0.16 0.18 0.18 1" />
+        </material>
+      </visual>
+    <visual name="front_plate">
+      <origin xyz="0.053 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_plate.obj" />
+        </geometry>
+      <material name="uv_stabilized_polycarbonate">
+        <color rgba="0.16 0.18 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rain_hood">
+      <origin xyz="0.025 0 0.127" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.21 0.014" />
+        </geometry>
+      <material name="uv_stabilized_polycarbonate">
+        <color rgba="0.16 0.18 0.18 1" />
+        </material>
+      </visual>
+    <visual name="drip_break">
+      <origin xyz="0.067 0 0.117" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.21 0.006" />
+        </geometry>
+      <material name="uv_stabilized_polycarbonate">
+        <color rgba="0.16 0.18 0.18 1" />
+        </material>
+      </visual>
+    <visual name="side_gutter_0">
+      <origin xyz="0.024 -0.092 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.01 0.216" />
+        </geometry>
+      <material name="uv_stabilized_polycarbonate">
+        <color rgba="0.16 0.18 0.18 1" />
+        </material>
+      </visual>
+    <visual name="side_gutter_1">
+      <origin xyz="0.024 0.092 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.01 0.216" />
+        </geometry>
+      <material name="uv_stabilized_polycarbonate">
+        <color rgba="0.16 0.18 0.18 1" />
+        </material>
+      </visual>
+    <visual name="top_gasket">
+      <origin xyz="0.052 0 0.104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.15 0.006" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.005 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="bottom_gasket">
+      <origin xyz="0.052 0 -0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.15 0.006" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.005 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="gasket_rail_0">
+      <origin xyz="0.052 -0.075 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.21" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.005 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="gasket_rail_1">
+      <origin xyz="0.052 0.075 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.21" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.005 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="display_bezel">
+      <origin xyz="0.053 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.096 0.038" />
+        </geometry>
+      <material name="dark_display_bezel">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="display_window">
+      <origin xyz="0.056 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.082 0.026" />
+        </geometry>
+      <material name="smoked_polycarbonate_window">
+        <color rgba="0.08 0.14 0.18 0.55" />
+        </material>
+      </visual>
+    <visual name="display_side_seal_0">
+      <origin xyz="0.057 -0.052 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.004 0.044" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.005 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="display_side_seal_1">
+      <origin xyz="0.057 0.052 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.004 0.044" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.005 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="dial_boot">
+      <origin xyz="0.049 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dial_boot_ring.obj" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.005 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="dial_seal">
+      <origin xyz="0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dial_retainer_ring.obj" />
+        </geometry>
+      <material name="dark_display_bezel">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_0">
+      <origin xyz="0.0584 -0.0614878 -0.0355" rpy="-2.0944 0 0" />
+      <geometry>
+        <box size="0.0018 0.0026 0.014" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_1">
+      <origin xyz="0.0584 -0.0699214 -0.012329" rpy="-1.74533 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_2">
+      <origin xyz="0.0584 -0.0699214 0.012329" rpy="-1.39626 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_3">
+      <origin xyz="0.0584 -0.0614878 0.0355" rpy="-1.0472 0 0" />
+      <geometry>
+        <box size="0.0018 0.0026 0.014" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_4">
+      <origin xyz="0.0584 -0.0456379 0.0543892" rpy="-0.698132 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_5">
+      <origin xyz="0.0584 -0.0242834 0.0667182" rpy="-0.349066 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_6">
+      <origin xyz="0.0584 0 0.071" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0018 0.0026 0.014" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_7">
+      <origin xyz="0.0584 0.0242834 0.0667182" rpy="0.349066 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_8">
+      <origin xyz="0.0584 0.0456379 0.0543892" rpy="0.698132 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_9">
+      <origin xyz="0.0584 0.0614878 0.0355" rpy="1.0472 0 0" />
+      <geometry>
+        <box size="0.0018 0.0026 0.014" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_10">
+      <origin xyz="0.0584 0.0699214 0.012329" rpy="1.39626 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_11">
+      <origin xyz="0.0584 0.0699214 -0.012329" rpy="1.74533 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_12">
+      <origin xyz="0.0584 0.0614878 -0.0355" rpy="2.0944 0 0" />
+      <geometry>
+        <box size="0.0018 0.0026 0.014" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="mode_button_seal">
+      <origin xyz="0.054 -0.038 -0.083" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/mode_button_seal_mesh.obj" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.005 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="set_button_seal">
+      <origin xyz="0.054 0.038 -0.083" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/set_button_seal_mesh.obj" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.005 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="screw_0_0">
+      <origin xyz="0.053 -0.075 -0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="passivated_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="screw_0_0_slot">
+      <origin xyz="0.056 -0.075 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.012 0.0015" />
+        </geometry>
+      <material name="dark_display_bezel">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="screw_0_1">
+      <origin xyz="0.053 -0.075 0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="passivated_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="screw_0_1_slot">
+      <origin xyz="0.056 -0.075 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.012 0.0015" />
+        </geometry>
+      <material name="dark_display_bezel">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="screw_1_0">
+      <origin xyz="0.053 0.075 -0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="passivated_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="screw_1_0_slot">
+      <origin xyz="0.056 0.075 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.012 0.0015" />
+        </geometry>
+      <material name="dark_display_bezel">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="screw_1_1">
+      <origin xyz="0.053 0.075 0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="passivated_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="screw_1_1_slot">
+      <origin xyz="0.056 0.075 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.012 0.0015" />
+        </geometry>
+      <material name="dark_display_bezel">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <collision name="backplate">
+      <origin xyz="-0.016 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.205 0.265" />
+        </geometry>
+      </collision>
+    <collision name="housing_shell">
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_housing.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_plate">
+      <origin xyz="0.053 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="rain_hood">
+      <origin xyz="0.025 0 0.127" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.21 0.014" />
+        </geometry>
+      </collision>
+    <collision name="drip_break">
+      <origin xyz="0.067 0 0.117" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.21 0.006" />
+        </geometry>
+      </collision>
+    <collision name="side_gutter_0">
+      <origin xyz="0.024 -0.092 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.01 0.216" />
+        </geometry>
+      </collision>
+    <collision name="side_gutter_1">
+      <origin xyz="0.024 0.092 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.01 0.216" />
+        </geometry>
+      </collision>
+    <collision name="top_gasket">
+      <origin xyz="0.052 0 0.104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.15 0.006" />
+        </geometry>
+      </collision>
+    <collision name="bottom_gasket">
+      <origin xyz="0.052 0 -0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.15 0.006" />
+        </geometry>
+      </collision>
+    <collision name="gasket_rail_0">
+      <origin xyz="0.052 -0.075 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.21" />
+        </geometry>
+      </collision>
+    <collision name="gasket_rail_1">
+      <origin xyz="0.052 0.075 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.21" />
+        </geometry>
+      </collision>
+    <collision name="display_bezel">
+      <origin xyz="0.053 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.096 0.038" />
+        </geometry>
+      </collision>
+    <collision name="display_window">
+      <origin xyz="0.056 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.082 0.026" />
+        </geometry>
+      </collision>
+    <collision name="display_side_seal_0">
+      <origin xyz="0.057 -0.052 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.004 0.044" />
+        </geometry>
+      </collision>
+    <collision name="display_side_seal_1">
+      <origin xyz="0.057 0.052 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.004 0.044" />
+        </geometry>
+      </collision>
+    <collision name="dial_boot">
+      <origin xyz="0.049 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dial_boot_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="dial_seal">
+      <origin xyz="0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dial_retainer_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_0">
+      <origin xyz="0.0584 -0.0614878 -0.0355" rpy="-2.0944 0 0" />
+      <geometry>
+        <box size="0.0018 0.0026 0.014" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_1">
+      <origin xyz="0.0584 -0.0699214 -0.012329" rpy="-1.74533 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_2">
+      <origin xyz="0.0584 -0.0699214 0.012329" rpy="-1.39626 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_3">
+      <origin xyz="0.0584 -0.0614878 0.0355" rpy="-1.0472 0 0" />
+      <geometry>
+        <box size="0.0018 0.0026 0.014" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_4">
+      <origin xyz="0.0584 -0.0456379 0.0543892" rpy="-0.698132 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_5">
+      <origin xyz="0.0584 -0.0242834 0.0667182" rpy="-0.349066 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_6">
+      <origin xyz="0.0584 0 0.071" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0018 0.0026 0.014" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_7">
+      <origin xyz="0.0584 0.0242834 0.0667182" rpy="0.349066 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_8">
+      <origin xyz="0.0584 0.0456379 0.0543892" rpy="0.698132 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_9">
+      <origin xyz="0.0584 0.0614878 0.0355" rpy="1.0472 0 0" />
+      <geometry>
+        <box size="0.0018 0.0026 0.014" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_10">
+      <origin xyz="0.0584 0.0699214 0.012329" rpy="1.39626 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_11">
+      <origin xyz="0.0584 0.0699214 -0.012329" rpy="1.74533 0 0" />
+      <geometry>
+        <box size="0.0018 0.0018 0.009" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_12">
+      <origin xyz="0.0584 0.0614878 -0.0355" rpy="2.0944 0 0" />
+      <geometry>
+        <box size="0.0018 0.0026 0.014" />
+        </geometry>
+      </collision>
+    <collision name="mode_button_seal">
+      <origin xyz="0.054 -0.038 -0.083" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/mode_button_seal_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="set_button_seal">
+      <origin xyz="0.054 0.038 -0.083" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/set_button_seal_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="screw_0_0">
+      <origin xyz="0.053 -0.075 -0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="screw_0_0_slot">
+      <origin xyz="0.056 -0.075 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.012 0.0015" />
+        </geometry>
+      </collision>
+    <collision name="screw_0_1">
+      <origin xyz="0.053 -0.075 0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="screw_0_1_slot">
+      <origin xyz="0.056 -0.075 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.012 0.0015" />
+        </geometry>
+      </collision>
+    <collision name="screw_1_0">
+      <origin xyz="0.053 0.075 -0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="screw_1_0_slot">
+      <origin xyz="0.056 0.075 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.012 0.0015" />
+        </geometry>
+      </collision>
+    <collision name="screw_1_1">
+      <origin xyz="0.053 0.075 0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="screw_1_1_slot">
+      <origin xyz="0.056 0.075 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.012 0.0015" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dial">
+    <visual name="dial_cap">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/sealed_rotary_dial.obj" />
+        </geometry>
+      <material name="matte_light_dial">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <visual name="shaft">
+      <origin xyz="0.0155 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.031" />
+        </geometry>
+      <material name="passivated_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="retainer">
+      <origin xyz="0.0255 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.003" />
+        </geometry>
+      <material name="passivated_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="pointer_marker">
+      <origin xyz="0.027 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.006 0.034" />
+        </geometry>
+      <material name="red_temperature_marker">
+        <color rgba="0.9 0.06 0.02 1" />
+        </material>
+      </visual>
+    <collision name="dial_cap">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/sealed_rotary_dial.obj" />
+        </geometry>
+      </collision>
+    <collision name="shaft">
+      <origin xyz="0.0155 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.031" />
+        </geometry>
+      </collision>
+    <collision name="retainer">
+      <origin xyz="0.0255 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="pointer_marker">
+      <origin xyz="0.027 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.006 0.034" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="mode_button">
+    <visual name="rubber_cap">
+      <origin xyz="0.004 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.008" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.005 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="domed_face">
+      <origin xyz="0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.005 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="m_mark">
+      <origin xyz="0.015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.01 0.0015" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <collision name="rubber_cap">
+      <origin xyz="0.004 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="domed_face">
+      <origin xyz="0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+        </geometry>
+      </collision>
+    <collision name="m_mark">
+      <origin xyz="0.015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.01 0.0015" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="set_button">
+    <visual name="rubber_cap">
+      <origin xyz="0.004 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.008" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.005 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="domed_face">
+      <origin xyz="0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.005 0.006 0.005 1" />
+        </material>
+      </visual>
+    <visual name="s_mark">
+      <origin xyz="0.015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.01 0.0015" />
+        </geometry>
+      <material name="screen_printed_scale">
+        <color rgba="0.88 0.92 0.88 1" />
+        </material>
+      </visual>
+    <collision name="rubber_cap">
+      <origin xyz="0.004 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="domed_face">
+      <origin xyz="0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+        </geometry>
+      </collision>
+    <collision name="s_mark">
+      <origin xyz="0.015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.01 0.0015" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_dial" type="revolute">
+    <origin xyz="0.062 0 0" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="dial" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.8" velocity="2" lower="-2.35" upper="2.35" />
+    </joint>
+  <joint name="body_to_mode_button" type="prismatic">
+    <origin xyz="0.059 -0.038 -0.083" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="mode_button" />
+    <axis xyz="-1 0 0" />
+    <limit effort="4" velocity="0.08" lower="0" upper="0.004" />
+    </joint>
+  <joint name="body_to_set_button" type="prismatic">
+    <origin xyz="0.059 0.038 -0.083" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="set_button" />
+    <axis xyz="-1 0 0" />
+    <limit effort="4" velocity="0.08" lower="0" upper="0.004" />
+    </joint>
+  </robot>

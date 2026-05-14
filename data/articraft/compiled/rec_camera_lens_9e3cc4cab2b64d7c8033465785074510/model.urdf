@@ -1,0 +1,163 @@
+<robot name="macro_lens">
+  <material name="satin_black">
+    <color rgba="0.015 0.016 0.017 1" />
+    </material>
+  <material name="matte_rubber">
+    <color rgba="0.005 0.005 0.005 1" />
+    </material>
+  <material name="gunmetal">
+    <color rgba="0.18 0.18 0.17 1" />
+    </material>
+  <material name="coated_glass">
+    <color rgba="0.08 0.18 0.26 0.55" />
+    </material>
+  <material name="red_macro_mark">
+    <color rgba="0.75 0.02 0.015 1" />
+    </material>
+  <link name="body">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="macro_mark">
+      <geometry>
+        <mesh filename="assets/meshes/macro_mark.obj" />
+        </geometry>
+      <material name="red_macro_mark">
+        <color rgba="0.75 0.02 0.015 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="macro_mark">
+      <geometry>
+        <mesh filename="assets/meshes/macro_mark.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="focus_ring">
+    <visual name="ribbed_grip">
+      <geometry>
+        <mesh filename="assets/meshes/ribbed_focus_ring.obj" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.005 0.005 0.005 1" />
+        </material>
+      </visual>
+    <visual name="ring_bearing_pad_top">
+      <origin xyz="0 0 0.0359" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.0012" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.005 0.005 0.005 1" />
+        </material>
+      </visual>
+    <visual name="ring_bearing_pad_bottom">
+      <origin xyz="0 0 -0.0359" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.0012" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.005 0.005 0.005 1" />
+        </material>
+      </visual>
+    <collision name="ribbed_grip">
+      <geometry>
+        <mesh filename="assets/meshes/ribbed_focus_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="ring_bearing_pad_top">
+      <origin xyz="0 0 0.0359" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="ring_bearing_pad_bottom">
+      <origin xyz="0 0 -0.0359" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="extension_barrel">
+    <visual name="extension_tube">
+      <geometry>
+        <mesh filename="assets/meshes/extension_tube.obj" />
+        </geometry>
+      <material name="gunmetal">
+        <color rgba="0.18 0.18 0.17 1" />
+        </material>
+      </visual>
+    <visual name="barrel_guide_pad_top">
+      <origin xyz="-0.047 0 0.0296" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.005 0.0032" />
+        </geometry>
+      <material name="gunmetal">
+        <color rgba="0.18 0.18 0.17 1" />
+        </material>
+      </visual>
+    <visual name="barrel_guide_pad_bottom">
+      <origin xyz="-0.047 0 -0.0296" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.005 0.0032" />
+        </geometry>
+      <material name="gunmetal">
+        <color rgba="0.18 0.18 0.17 1" />
+        </material>
+      </visual>
+    <visual name="front_glass">
+      <origin xyz="0.033 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.004" />
+        </geometry>
+      <material name="coated_glass">
+        <color rgba="0.08 0.18 0.26 0.55" />
+        </material>
+      </visual>
+    <collision name="extension_tube">
+      <geometry>
+        <mesh filename="assets/meshes/extension_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="barrel_guide_pad_top">
+      <origin xyz="-0.047 0 0.0296" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.005 0.0032" />
+        </geometry>
+      </collision>
+    <collision name="barrel_guide_pad_bottom">
+      <origin xyz="-0.047 0 -0.0296" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.005 0.0032" />
+        </geometry>
+      </collision>
+    <collision name="front_glass">
+      <origin xyz="0.033 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_focus_ring" type="revolute">
+    <parent link="body" />
+    <child link="focus_ring" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.6" velocity="2" lower="-2.2" upper="2.2" />
+    </joint>
+  <joint name="body_to_extension_barrel" type="prismatic">
+    <origin xyz="0.046 0 0" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="extension_barrel" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="0.08" lower="0" upper="0.034" />
+    </joint>
+  </robot>

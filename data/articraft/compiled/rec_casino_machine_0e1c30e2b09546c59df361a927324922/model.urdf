@@ -1,0 +1,783 @@
+<robot name="tall_reel_slot_machine">
+  <material name="cabinet_red">
+    <color rgba="0.56 0.03 0.035 1" />
+    </material>
+  <material name="black_enamel">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="brushed_chrome">
+    <color rgba="0.72 0.72 0.68 1" />
+    </material>
+  <material name="dark_chrome">
+    <color rgba="0.18 0.18 0.18 1" />
+    </material>
+  <material name="warm_marquee">
+    <color rgba="1 0.74 0.18 1" />
+    </material>
+  <material name="reel_ivory">
+    <color rgba="0.95 0.91 0.78 1" />
+    </material>
+  <material name="smoked_glass">
+    <color rgba="0.34 0.62 0.82 0.38" />
+    </material>
+  <material name="service_door_blue">
+    <color rgba="0.08 0.18 0.27 1" />
+    </material>
+  <material name="red_handle_ball">
+    <color rgba="0.86 0.02 0.015 1" />
+    </material>
+  <material name="cherry_red">
+    <color rgba="0.85 0.02 0.06 1" />
+    </material>
+  <material name="lemon_yellow">
+    <color rgba="0.95 0.82 0.05 1" />
+    </material>
+  <material name="lucky_green">
+    <color rgba="0.05 0.62 0.16 1" />
+    </material>
+  <link name="cabinet">
+    <visual name="arched_shell">
+      <geometry>
+        <mesh filename="assets/meshes/arched_cabinet_shell.obj" />
+        </geometry>
+      <material name="cabinet_red">
+        <color rgba="0.56 0.03 0.035 1" />
+        </material>
+      </visual>
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.68 0.07" />
+        </geometry>
+      <material name="black_enamel">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="top_marquee">
+      <origin xyz="0 -0.321 1.48" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.024 0.2" />
+        </geometry>
+      <material name="warm_marquee">
+        <color rgba="1 0.74 0.18 1" />
+        </material>
+      </visual>
+    <visual name="upper_trim">
+      <origin xyz="0 -0.319 1.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.018 0.035" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="lower_trim">
+      <origin xyz="0 -0.319 0.835" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.018 0.032" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_jamb">
+      <origin xyz="-0.316 -0.32 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.02 0.58" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_pin">
+      <origin xyz="-0.285 -0.329 0.49" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.56" />
+        </geometry>
+      <material name="dark_chrome">
+        <color rgba="0.18 0.18 0.18 1" />
+        </material>
+      </visual>
+    <visual name="cabinet_hinge_knuckle_0">
+      <origin xyz="-0.285 -0.329 0.235" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.03" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="cabinet_hinge_knuckle_1">
+      <origin xyz="-0.285 -0.329 0.402" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="cabinet_hinge_knuckle_2">
+      <origin xyz="-0.285 -0.329 0.577" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="cabinet_hinge_knuckle_3">
+      <origin xyz="-0.285 -0.329 0.745" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.03" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="handle_side_boss">
+      <origin xyz="0.371 -0.04 0.88" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.026" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <collision name="arched_shell">
+      <geometry>
+        <mesh filename="assets/meshes/arched_cabinet_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_plinth">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.68 0.07" />
+        </geometry>
+      </collision>
+    <collision name="top_marquee">
+      <origin xyz="0 -0.321 1.48" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.024 0.2" />
+        </geometry>
+      </collision>
+    <collision name="upper_trim">
+      <origin xyz="0 -0.319 1.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.018 0.035" />
+        </geometry>
+      </collision>
+    <collision name="lower_trim">
+      <origin xyz="0 -0.319 0.835" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.018 0.032" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_jamb">
+      <origin xyz="-0.316 -0.32 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.02 0.58" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_pin">
+      <origin xyz="-0.285 -0.329 0.49" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.56" />
+        </geometry>
+      </collision>
+    <collision name="cabinet_hinge_knuckle_0">
+      <origin xyz="-0.285 -0.329 0.235" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="cabinet_hinge_knuckle_1">
+      <origin xyz="-0.285 -0.329 0.402" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="cabinet_hinge_knuckle_2">
+      <origin xyz="-0.285 -0.329 0.577" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="cabinet_hinge_knuckle_3">
+      <origin xyz="-0.285 -0.329 0.745" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="handle_side_boss">
+      <origin xyz="0.371 -0.04 0.88" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="reel_window">
+    <visual name="window_top_frame">
+      <origin xyz="0 0 0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.04 0.05" />
+        </geometry>
+      <material name="black_enamel">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="window_bottom_frame">
+      <origin xyz="0 0 -0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.04 0.05" />
+        </geometry>
+      <material name="black_enamel">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="window_side_frame_0">
+      <origin xyz="-0.275 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.04 0.36" />
+        </geometry>
+      <material name="black_enamel">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="window_side_frame_1">
+      <origin xyz="0.275 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.04 0.36" />
+        </geometry>
+      <material name="black_enamel">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="reel_backing">
+      <origin xyz="0 -0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.51 0.01 0.235" />
+        </geometry>
+      <material name="reel_ivory">
+        <color rgba="0.95 0.91 0.78 1" />
+        </material>
+      </visual>
+    <visual name="window_glass">
+      <origin xyz="0 -0.023 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.515 0.006 0.24" />
+        </geometry>
+      <material name="smoked_glass">
+        <color rgba="0.34 0.62 0.82 0.38" />
+        </material>
+      </visual>
+    <visual name="reel_strip_0">
+      <origin xyz="-0.16 -0.029 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.008 0.205" />
+        </geometry>
+      <material name="reel_ivory">
+        <color rgba="0.95 0.91 0.78 1" />
+        </material>
+      </visual>
+    <visual name="reel_strip_1">
+      <origin xyz="0 -0.029 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.008 0.205" />
+        </geometry>
+      <material name="reel_ivory">
+        <color rgba="0.95 0.91 0.78 1" />
+        </material>
+      </visual>
+    <visual name="reel_strip_2">
+      <origin xyz="0.16 -0.029 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.008 0.205" />
+        </geometry>
+      <material name="reel_ivory">
+        <color rgba="0.95 0.91 0.78 1" />
+        </material>
+      </visual>
+    <visual name="reel_divider_0">
+      <origin xyz="-0.08 -0.032 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.014 0.225" />
+        </geometry>
+      <material name="black_enamel">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="reel_divider_1">
+      <origin xyz="0.08 -0.032 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.014 0.225" />
+        </geometry>
+      <material name="black_enamel">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="symbol_cherry">
+      <origin xyz="-0.16 -0.037 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.01 0.04" />
+        </geometry>
+      <material name="cherry_red">
+        <color rgba="0.85 0.02 0.06 1" />
+        </material>
+      </visual>
+    <visual name="symbol_lemon">
+      <origin xyz="0 -0.037 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.01 0.04" />
+        </geometry>
+      <material name="lemon_yellow">
+        <color rgba="0.95 0.82 0.05 1" />
+        </material>
+      </visual>
+    <visual name="symbol_seven">
+      <origin xyz="0.16 -0.037 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.01 0.04" />
+        </geometry>
+      <material name="lucky_green">
+        <color rgba="0.05 0.62 0.16 1" />
+        </material>
+      </visual>
+    <visual name="symbol_bell">
+      <origin xyz="-0.16 -0.037 -0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.01 0.04" />
+        </geometry>
+      <material name="lemon_yellow">
+        <color rgba="0.95 0.82 0.05 1" />
+        </material>
+      </visual>
+    <visual name="symbol_bar">
+      <origin xyz="0 -0.037 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.01 0.04" />
+        </geometry>
+      <material name="cherry_red">
+        <color rgba="0.85 0.02 0.06 1" />
+        </material>
+      </visual>
+    <visual name="symbol_star">
+      <origin xyz="0.16 -0.037 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.01 0.04" />
+        </geometry>
+      <material name="lemon_yellow">
+        <color rgba="0.95 0.82 0.05 1" />
+        </material>
+      </visual>
+    <collision name="window_top_frame">
+      <origin xyz="0 0 0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.04 0.05" />
+        </geometry>
+      </collision>
+    <collision name="window_bottom_frame">
+      <origin xyz="0 0 -0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.04 0.05" />
+        </geometry>
+      </collision>
+    <collision name="window_side_frame_0">
+      <origin xyz="-0.275 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.04 0.36" />
+        </geometry>
+      </collision>
+    <collision name="window_side_frame_1">
+      <origin xyz="0.275 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.04 0.36" />
+        </geometry>
+      </collision>
+    <collision name="reel_backing">
+      <origin xyz="0 -0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.51 0.01 0.235" />
+        </geometry>
+      </collision>
+    <collision name="window_glass">
+      <origin xyz="0 -0.023 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.515 0.006 0.24" />
+        </geometry>
+      </collision>
+    <collision name="reel_strip_0">
+      <origin xyz="-0.16 -0.029 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.008 0.205" />
+        </geometry>
+      </collision>
+    <collision name="reel_strip_1">
+      <origin xyz="0 -0.029 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.008 0.205" />
+        </geometry>
+      </collision>
+    <collision name="reel_strip_2">
+      <origin xyz="0.16 -0.029 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.008 0.205" />
+        </geometry>
+      </collision>
+    <collision name="reel_divider_0">
+      <origin xyz="-0.08 -0.032 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.014 0.225" />
+        </geometry>
+      </collision>
+    <collision name="reel_divider_1">
+      <origin xyz="0.08 -0.032 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.014 0.225" />
+        </geometry>
+      </collision>
+    <collision name="symbol_cherry">
+      <origin xyz="-0.16 -0.037 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.01 0.04" />
+        </geometry>
+      </collision>
+    <collision name="symbol_lemon">
+      <origin xyz="0 -0.037 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.01 0.04" />
+        </geometry>
+      </collision>
+    <collision name="symbol_seven">
+      <origin xyz="0.16 -0.037 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.01 0.04" />
+        </geometry>
+      </collision>
+    <collision name="symbol_bell">
+      <origin xyz="-0.16 -0.037 -0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.01 0.04" />
+        </geometry>
+      </collision>
+    <collision name="symbol_bar">
+      <origin xyz="0 -0.037 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.01 0.04" />
+        </geometry>
+      </collision>
+    <collision name="symbol_star">
+      <origin xyz="0.16 -0.037 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.01 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="service_door">
+    <visual name="door_panel">
+      <origin xyz="0.2975 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.545 0.03 0.54" />
+        </geometry>
+      <material name="service_door_blue">
+        <color rgba="0.08 0.18 0.27 1" />
+        </material>
+      </visual>
+    <visual name="door_top_rail">
+      <origin xyz="0.2975 -0.021 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.012 0.03" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="door_bottom_rail">
+      <origin xyz="0.2975 -0.021 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.012 0.03" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="door_side_rail_0">
+      <origin xyz="0.08 -0.021 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.455" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="door_side_rail_1">
+      <origin xyz="0.515 -0.021 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.455" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="door_louver_0">
+      <origin xyz="0.2975 -0.02 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.01 0.012" />
+        </geometry>
+      <material name="black_enamel">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="door_louver_1">
+      <origin xyz="0.2975 -0.02 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.01 0.012" />
+        </geometry>
+      <material name="black_enamel">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="door_louver_2">
+      <origin xyz="0.2975 -0.02 0.225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.01 0.012" />
+        </geometry>
+      <material name="black_enamel">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="lock_core">
+      <origin xyz="0.445 -0.024 0.31" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.018" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="key_slot">
+      <origin xyz="0.445 -0.033 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.004 0.034" />
+        </geometry>
+      <material name="black_enamel">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_leaf_0">
+      <origin xyz="0.032 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.012 0.09" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_barrel_0">
+      <origin xyz="0 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.125" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_leaf_1">
+      <origin xyz="0.032 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.012 0.09" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_barrel_1">
+      <origin xyz="0 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.125" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_leaf_2">
+      <origin xyz="0.032 0 0.445" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.012 0.09" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_barrel_2">
+      <origin xyz="0 0 0.445" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.125" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <origin xyz="0.2975 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.545 0.03 0.54" />
+        </geometry>
+      </collision>
+    <collision name="door_top_rail">
+      <origin xyz="0.2975 -0.021 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.012 0.03" />
+        </geometry>
+      </collision>
+    <collision name="door_bottom_rail">
+      <origin xyz="0.2975 -0.021 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.012 0.03" />
+        </geometry>
+      </collision>
+    <collision name="door_side_rail_0">
+      <origin xyz="0.08 -0.021 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.455" />
+        </geometry>
+      </collision>
+    <collision name="door_side_rail_1">
+      <origin xyz="0.515 -0.021 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.455" />
+        </geometry>
+      </collision>
+    <collision name="door_louver_0">
+      <origin xyz="0.2975 -0.02 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.01 0.012" />
+        </geometry>
+      </collision>
+    <collision name="door_louver_1">
+      <origin xyz="0.2975 -0.02 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.01 0.012" />
+        </geometry>
+      </collision>
+    <collision name="door_louver_2">
+      <origin xyz="0.2975 -0.02 0.225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.01 0.012" />
+        </geometry>
+      </collision>
+    <collision name="lock_core">
+      <origin xyz="0.445 -0.024 0.31" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="key_slot">
+      <origin xyz="0.445 -0.033 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.004 0.034" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_leaf_0">
+      <origin xyz="0.032 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.012 0.09" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_barrel_0">
+      <origin xyz="0 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.125" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_leaf_1">
+      <origin xyz="0.032 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.012 0.09" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_barrel_1">
+      <origin xyz="0 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.125" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_leaf_2">
+      <origin xyz="0.032 0 0.445" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.012 0.09" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_barrel_2">
+      <origin xyz="0 0 0.445" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.125" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pull_handle">
+    <visual name="handle_hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.08" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="handle_stem">
+      <origin xyz="0.04 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.54" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="handle_ball">
+      <origin xyz="0.04 0 0.575" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.075" />
+        </geometry>
+      <material name="red_handle_ball">
+        <color rgba="0.86 0.02 0.015 1" />
+        </material>
+      </visual>
+    <collision name="handle_hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="handle_stem">
+      <origin xyz="0.04 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.54" />
+        </geometry>
+      </collision>
+    <collision name="handle_ball">
+      <origin xyz="0.04 0 0.575" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.075" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="cabinet_to_reel_window" type="fixed">
+    <origin xyz="0 -0.33 1.06" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="reel_window" />
+    </joint>
+  <joint name="cabinet_to_service_door" type="revolute">
+    <origin xyz="-0.285 -0.329 0.22" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="service_door" />
+    <axis xyz="0 0 -1" />
+    <limit effort="12" velocity="1.2" lower="0" upper="1.65" />
+    </joint>
+  <joint name="cabinet_to_pull_handle" type="revolute">
+    <origin xyz="0.424 -0.04 0.88" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="pull_handle" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="1.6" lower="0" upper="1.25" />
+    </joint>
+  </robot>

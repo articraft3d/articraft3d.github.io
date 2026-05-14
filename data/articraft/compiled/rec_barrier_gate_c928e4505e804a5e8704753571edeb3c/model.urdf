@@ -1,0 +1,761 @@
+<robot name="railway_level_crossing_barrier">
+  <material name="painted_steel">
+    <color rgba="0.62 0.66 0.66 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.03 0.035 0.035 1" />
+    </material>
+  <material name="dark_hinge">
+    <color rgba="0.015 0.017 0.018 1" />
+    </material>
+  <material name="warning_red">
+    <color rgba="0.85 0.03 0.02 1" />
+    </material>
+  <material name="barrier_white">
+    <color rgba="0.96 0.95 0.86 1" />
+    </material>
+  <material name="lamp_amber">
+    <color rgba="1 0.58 0.08 1" />
+    </material>
+  <link name="cabinet">
+    <visual name="plinth">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.95 0.65 0.12" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.03 0.035 0.035 1" />
+        </material>
+      </visual>
+    <visual name="cabinet_body">
+      <origin xyz="0 0 0.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.52 1" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="sloped_cap">
+      <origin xyz="0 0 1.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.58 0.07" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="door_center_seam">
+      <origin xyz="0 0.263 0.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.78" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="door_top_seam">
+      <origin xyz="0 0.263 0.99" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.012 0.018" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="vent_slat_0">
+      <origin xyz="-0.2 0.264 0.33" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.014 0.018" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="vent_slat_1">
+      <origin xyz="-0.2 0.264 0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.014 0.018" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="vent_slat_2">
+      <origin xyz="-0.2 0.264 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.014 0.018" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="vent_slat_3">
+      <origin xyz="-0.2 0.264 0.51" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.014 0.018" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="warning_lens_0">
+      <origin xyz="-0.27 0.276 0.82" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.045" />
+        </geometry>
+      <material name="lamp_amber">
+        <color rgba="1 0.58 0.08 1" />
+        </material>
+      </visual>
+    <visual name="warning_lens_1">
+      <origin xyz="-0.27 0.276 0.94" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.045" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="pivot_pin">
+      <origin xyz="0.57 0 1.02" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.32" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_clevis_plate">
+      <origin xyz="0.495 -0.115 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.04 0.34" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="front_clevis_plate">
+      <origin xyz="0.495 0.115 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.04 0.34" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <collision name="plinth">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.95 0.65 0.12" />
+        </geometry>
+      </collision>
+    <collision name="cabinet_body">
+      <origin xyz="0 0 0.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.52 1" />
+        </geometry>
+      </collision>
+    <collision name="sloped_cap">
+      <origin xyz="0 0 1.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.58 0.07" />
+        </geometry>
+      </collision>
+    <collision name="door_center_seam">
+      <origin xyz="0 0.263 0.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.78" />
+        </geometry>
+      </collision>
+    <collision name="door_top_seam">
+      <origin xyz="0 0.263 0.99" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.012 0.018" />
+        </geometry>
+      </collision>
+    <collision name="vent_slat_0">
+      <origin xyz="-0.2 0.264 0.33" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.014 0.018" />
+        </geometry>
+      </collision>
+    <collision name="vent_slat_1">
+      <origin xyz="-0.2 0.264 0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.014 0.018" />
+        </geometry>
+      </collision>
+    <collision name="vent_slat_2">
+      <origin xyz="-0.2 0.264 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.014 0.018" />
+        </geometry>
+      </collision>
+    <collision name="vent_slat_3">
+      <origin xyz="-0.2 0.264 0.51" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.014 0.018" />
+        </geometry>
+      </collision>
+    <collision name="warning_lens_0">
+      <origin xyz="-0.27 0.276 0.82" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="warning_lens_1">
+      <origin xyz="-0.27 0.276 0.94" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="pivot_pin">
+      <origin xyz="0.57 0 1.02" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.32" />
+        </geometry>
+      </collision>
+    <collision name="rear_clevis_plate">
+      <origin xyz="0.495 -0.115 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.04 0.34" />
+        </geometry>
+      </collision>
+    <collision name="front_clevis_plate">
+      <origin xyz="0.495 0.115 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.04 0.34" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="boom_arm">
+    <visual name="pivot_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.15" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="arm_beam">
+      <origin xyz="1.49 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="2.8 0.11 0.1" />
+        </geometry>
+      <material name="barrier_white">
+        <color rgba="0.96 0.95 0.86 1" />
+        </material>
+      </visual>
+    <visual name="front_red_band_0">
+      <origin xyz="0.42 0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rear_red_band_0">
+      <origin xyz="0.42 -0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="top_red_band_0">
+      <origin xyz="0.42 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.108 0.008" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="front_red_band_1">
+      <origin xyz="1.12 0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rear_red_band_1">
+      <origin xyz="1.12 -0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="top_red_band_1">
+      <origin xyz="1.12 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.108 0.008" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="front_red_band_2">
+      <origin xyz="1.82 0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rear_red_band_2">
+      <origin xyz="1.82 -0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="top_red_band_2">
+      <origin xyz="1.82 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.108 0.008" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="front_red_band_3">
+      <origin xyz="2.52 0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rear_red_band_3">
+      <origin xyz="2.52 -0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="top_red_band_3">
+      <origin xyz="2.52 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.108 0.008" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="fold_pin">
+      <origin xyz="3 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.28" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_fold_web">
+      <origin xyz="2.9 -0.068 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.035 0.12" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="front_fold_web">
+      <origin xyz="2.9 0.068 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.035 0.12" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_fold_knuckle">
+      <origin xyz="2.94 -0.095 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.035" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="front_fold_knuckle">
+      <origin xyz="2.94 0.095 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.035" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <collision name="pivot_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.15" />
+        </geometry>
+      </collision>
+    <collision name="arm_beam">
+      <origin xyz="1.49 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="2.8 0.11 0.1" />
+        </geometry>
+      </collision>
+    <collision name="front_red_band_0">
+      <origin xyz="0.42 0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      </collision>
+    <collision name="rear_red_band_0">
+      <origin xyz="0.42 -0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      </collision>
+    <collision name="top_red_band_0">
+      <origin xyz="0.42 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.108 0.008" />
+        </geometry>
+      </collision>
+    <collision name="front_red_band_1">
+      <origin xyz="1.12 0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      </collision>
+    <collision name="rear_red_band_1">
+      <origin xyz="1.12 -0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      </collision>
+    <collision name="top_red_band_1">
+      <origin xyz="1.12 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.108 0.008" />
+        </geometry>
+      </collision>
+    <collision name="front_red_band_2">
+      <origin xyz="1.82 0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      </collision>
+    <collision name="rear_red_band_2">
+      <origin xyz="1.82 -0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      </collision>
+    <collision name="top_red_band_2">
+      <origin xyz="1.82 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.108 0.008" />
+        </geometry>
+      </collision>
+    <collision name="front_red_band_3">
+      <origin xyz="2.52 0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      </collision>
+    <collision name="rear_red_band_3">
+      <origin xyz="2.52 -0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.008 0.104" />
+        </geometry>
+      </collision>
+    <collision name="top_red_band_3">
+      <origin xyz="2.52 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.108 0.008" />
+        </geometry>
+      </collision>
+    <collision name="fold_pin">
+      <origin xyz="3 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.28" />
+        </geometry>
+      </collision>
+    <collision name="rear_fold_web">
+      <origin xyz="2.9 -0.068 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.035 0.12" />
+        </geometry>
+      </collision>
+    <collision name="front_fold_web">
+      <origin xyz="2.9 0.068 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.035 0.12" />
+        </geometry>
+      </collision>
+    <collision name="rear_fold_knuckle">
+      <origin xyz="2.94 -0.095 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="front_fold_knuckle">
+      <origin xyz="2.94 0.095 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.035" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="end_section">
+    <visual name="fold_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.09" />
+        </geometry>
+      <material name="dark_hinge">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="end_beam">
+      <origin xyz="1.485 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="2.84 0.1 0.09" />
+        </geometry>
+      <material name="barrier_white">
+        <color rgba="0.96 0.95 0.86 1" />
+        </material>
+      </visual>
+    <visual name="front_red_band_0">
+      <origin xyz="0.38 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rear_red_band_0">
+      <origin xyz="0.38 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="top_red_band_0">
+      <origin xyz="0.38 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.098 0.008" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="front_red_band_1">
+      <origin xyz="1.08 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rear_red_band_1">
+      <origin xyz="1.08 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="top_red_band_1">
+      <origin xyz="1.08 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.098 0.008" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="front_red_band_2">
+      <origin xyz="1.78 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rear_red_band_2">
+      <origin xyz="1.78 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="top_red_band_2">
+      <origin xyz="1.78 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.098 0.008" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="front_red_band_3">
+      <origin xyz="2.48 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rear_red_band_3">
+      <origin xyz="2.48 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="top_red_band_3">
+      <origin xyz="2.48 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.098 0.008" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="end_marker_lamp">
+      <origin xyz="2.91 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.055" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    <collision name="fold_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="end_beam">
+      <origin xyz="1.485 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="2.84 0.1 0.09" />
+        </geometry>
+      </collision>
+    <collision name="front_red_band_0">
+      <origin xyz="0.38 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      </collision>
+    <collision name="rear_red_band_0">
+      <origin xyz="0.38 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      </collision>
+    <collision name="top_red_band_0">
+      <origin xyz="0.38 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.098 0.008" />
+        </geometry>
+      </collision>
+    <collision name="front_red_band_1">
+      <origin xyz="1.08 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      </collision>
+    <collision name="rear_red_band_1">
+      <origin xyz="1.08 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      </collision>
+    <collision name="top_red_band_1">
+      <origin xyz="1.08 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.098 0.008" />
+        </geometry>
+      </collision>
+    <collision name="front_red_band_2">
+      <origin xyz="1.78 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      </collision>
+    <collision name="rear_red_band_2">
+      <origin xyz="1.78 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      </collision>
+    <collision name="top_red_band_2">
+      <origin xyz="1.78 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.098 0.008" />
+        </geometry>
+      </collision>
+    <collision name="front_red_band_3">
+      <origin xyz="2.48 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      </collision>
+    <collision name="rear_red_band_3">
+      <origin xyz="2.48 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.094" />
+        </geometry>
+      </collision>
+    <collision name="top_red_band_3">
+      <origin xyz="2.48 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.098 0.008" />
+        </geometry>
+      </collision>
+    <collision name="end_marker_lamp">
+      <origin xyz="2.91 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.055" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="cabinet_to_boom" type="revolute">
+    <origin xyz="0.57 0 1.02" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="boom_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="180" velocity="0.65" lower="0" upper="1.35" />
+    </joint>
+  <joint name="boom_to_end" type="revolute">
+    <origin xyz="3 0 0" rpy="0 0 0" />
+    <parent link="boom_arm" />
+    <child link="end_section" />
+    <axis xyz="0 1 0" />
+    <limit effort="40" velocity="0.8" lower="0" upper="2.7" />
+    <mimic joint="cabinet_to_boom" multiplier="2" />
+    </joint>
+  </robot>

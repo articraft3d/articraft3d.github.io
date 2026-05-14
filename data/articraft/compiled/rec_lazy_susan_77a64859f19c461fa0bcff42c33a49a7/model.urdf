@@ -1,0 +1,146 @@
+<robot name="round_tabletop_lazy_susan">
+  <material name="warm_bamboo">
+    <color rgba="0.72 0.49 0.27 1" />
+    </material>
+  <material name="dark_endgrain">
+    <color rgba="0.38 0.21 0.1 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.62 0.62 0.58 1" />
+    </material>
+  <material name="small_brass_inlay">
+    <color rgba="0.88 0.66 0.28 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.015 0.014 0.013 1" />
+    </material>
+  <link name="base">
+    <visual name="base_disc">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.03" />
+        </geometry>
+      <material name="dark_endgrain">
+        <color rgba="0.38 0.21 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_race">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_bearing_race.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="bearing_spindle">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.02" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_ring">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rubber_foot_ring.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <collision name="base_disc">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_race">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_bearing_race.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_spindle">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_ring">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rubber_foot_ring.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tray">
+    <visual name="tray_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tray_shell.obj" />
+        </geometry>
+      <material name="warm_bamboo">
+        <color rgba="0.72 0.49 0.27 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing_race">
+      <origin xyz="0 0 -0.009" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_bearing_race.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="upper_hub">
+      <origin xyz="0 0 -0.0065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.013" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="brass_marker">
+      <origin xyz="0.18 0 0.02625" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.0015" />
+        </geometry>
+      <material name="small_brass_inlay">
+        <color rgba="0.88 0.66 0.28 1" />
+        </material>
+      </visual>
+    <collision name="tray_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tray_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing_race">
+      <origin xyz="0 0 -0.009" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_bearing_race.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_hub">
+      <origin xyz="0 0 -0.0065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.013" />
+        </geometry>
+      </collision>
+    <collision name="brass_marker">
+      <origin xyz="0.18 0 0.02625" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.0015" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_tray" type="continuous">
+    <origin xyz="0 0 0.063" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="tray" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="2.5" />
+    </joint>
+  </robot>

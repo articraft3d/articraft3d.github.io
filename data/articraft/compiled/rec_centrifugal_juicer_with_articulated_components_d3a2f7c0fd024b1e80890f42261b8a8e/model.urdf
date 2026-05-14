@@ -1,0 +1,557 @@
+<robot name="compact_countertop_juicer">
+  <material name="white_plastic">
+    <color rgba="0.88 0.9 0.86 1" />
+    </material>
+  <material name="dark_plastic">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="smoked_clear">
+    <color rgba="0.5 0.64 0.7 0.38" />
+    </material>
+  <material name="clear_plastic">
+    <color rgba="0.72 0.9 0.95 0.32" />
+    </material>
+  <material name="stainless">
+    <color rgba="0.72 0.75 0.76 1" />
+    </material>
+  <material name="juice_orange">
+    <color rgba="1 0.55 0.16 1" />
+    </material>
+  <material name="indicator_grey">
+    <color rgba="0.3 0.32 0.34 1" />
+    </material>
+  <link name="base">
+    <visual name="rounded_base">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_base.obj" />
+        </geometry>
+      <material name="white_plastic">
+        <color rgba="0.88 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="side_speed_panel">
+      <origin xyz="0.01 -0.132 0.088" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.03 0.01" />
+        </geometry>
+      <material name="indicator_grey">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="chamber_wall">
+      <origin xyz="0.02 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/clear_chamber_wall.obj" />
+        </geometry>
+      <material name="clear_plastic">
+        <color rgba="0.72 0.9 0.95 0.32" />
+        </material>
+      </visual>
+    <visual name="lower_chamber_gasket">
+      <origin xyz="0.02 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.104" length="0.012" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="drive_spindle">
+      <origin xyz="0.02 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.02" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spout_socket">
+      <origin xyz="0.158 0 0.205" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.036" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spout_lug_0">
+      <origin xyz="0.186 0.034 0.203" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.018 0.052" />
+        </geometry>
+      <material name="white_plastic">
+        <color rgba="0.88 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="spout_lug_1">
+      <origin xyz="0.186 -0.034 0.203" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.018 0.052" />
+        </geometry>
+      <material name="white_plastic">
+        <color rgba="0.88 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="spout_saddle">
+      <origin xyz="0.17 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.092 0.016" />
+        </geometry>
+      <material name="white_plastic">
+        <color rgba="0.88 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_ear_0">
+      <origin xyz="-0.118 0.066 0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.03 0.09" />
+        </geometry>
+      <material name="white_plastic">
+        <color rgba="0.88 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_ear_1">
+      <origin xyz="-0.118 -0.066 0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.03 0.09" />
+        </geometry>
+      <material name="white_plastic">
+        <color rgba="0.88 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_bridge">
+      <origin xyz="-0.106 0 0.174" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.17 0.026" />
+        </geometry>
+      <material name="white_plastic">
+        <color rgba="0.88 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="speed_pivot_boss">
+      <origin xyz="-0.042 -0.136 0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.028" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="rounded_base">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_speed_panel">
+      <origin xyz="0.01 -0.132 0.088" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.03 0.01" />
+        </geometry>
+      </collision>
+    <collision name="chamber_wall">
+      <origin xyz="0.02 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/clear_chamber_wall.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_chamber_gasket">
+      <origin xyz="0.02 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.104" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="drive_spindle">
+      <origin xyz="0.02 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="spout_socket">
+      <origin xyz="0.158 0 0.205" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.036" />
+        </geometry>
+      </collision>
+    <collision name="spout_lug_0">
+      <origin xyz="0.186 0.034 0.203" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.018 0.052" />
+        </geometry>
+      </collision>
+    <collision name="spout_lug_1">
+      <origin xyz="0.186 -0.034 0.203" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.018 0.052" />
+        </geometry>
+      </collision>
+    <collision name="spout_saddle">
+      <origin xyz="0.17 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.092 0.016" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_ear_0">
+      <origin xyz="-0.118 0.066 0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.03 0.09" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_ear_1">
+      <origin xyz="-0.118 -0.066 0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.03 0.09" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_bridge">
+      <origin xyz="-0.106 0 0.174" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.17 0.026" />
+        </geometry>
+      </collision>
+    <collision name="speed_pivot_boss">
+      <origin xyz="-0.042 -0.136 0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.028" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="basket">
+    <visual name="basket_wall">
+      <geometry>
+        <mesh filename="assets/meshes/filter_basket_shell.obj" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="basket_hub">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.05" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="basket_rib_0">
+      <origin xyz="0.052 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.006 0.007" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="basket_rib_1">
+      <origin xyz="0.052 0 0.038" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.078 0.006 0.007" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="basket_rib_2">
+      <origin xyz="0.052 0 0.038" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.078 0.006 0.007" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="basket_rib_3">
+      <origin xyz="0.052 0 0.038" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.078 0.006 0.007" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="basket_rib_4">
+      <origin xyz="0.052 0 0.038" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.078 0.006 0.007" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="basket_rib_5">
+      <origin xyz="0.052 0 0.038" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="0.078 0.006 0.007" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <collision name="basket_wall">
+      <geometry>
+        <mesh filename="assets/meshes/filter_basket_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="basket_hub">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="basket_rib_0">
+      <origin xyz="0.052 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.006 0.007" />
+        </geometry>
+      </collision>
+    <collision name="basket_rib_1">
+      <origin xyz="0.052 0 0.038" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.078 0.006 0.007" />
+        </geometry>
+      </collision>
+    <collision name="basket_rib_2">
+      <origin xyz="0.052 0 0.038" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.078 0.006 0.007" />
+        </geometry>
+      </collision>
+    <collision name="basket_rib_3">
+      <origin xyz="0.052 0 0.038" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.078 0.006 0.007" />
+        </geometry>
+      </collision>
+    <collision name="basket_rib_4">
+      <origin xyz="0.052 0 0.038" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.078 0.006 0.007" />
+        </geometry>
+      </collision>
+    <collision name="basket_rib_5">
+      <origin xyz="0.052 0 0.038" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="0.078 0.006 0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="lid_cover">
+      <geometry>
+        <mesh filename="assets/meshes/annular_lid.obj" />
+        </geometry>
+      <material name="smoked_clear">
+        <color rgba="0.5 0.64 0.7 0.38" />
+        </material>
+      </visual>
+    <visual name="chute_wall">
+      <geometry>
+        <mesh filename="assets/meshes/feed_chute_wall.obj" />
+        </geometry>
+      <material name="smoked_clear">
+        <color rgba="0.5 0.64 0.7 0.38" />
+        </material>
+      </visual>
+    <visual name="rear_lid_leaf">
+      <origin xyz="0.044 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.14 0.016" />
+        </geometry>
+      <material name="smoked_clear">
+        <color rgba="0.5 0.64 0.7 0.38" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.112" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="lid_cover">
+      <geometry>
+        <mesh filename="assets/meshes/annular_lid.obj" />
+        </geometry>
+      </collision>
+    <collision name="chute_wall">
+      <geometry>
+        <mesh filename="assets/meshes/feed_chute_wall.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_lid_leaf">
+      <origin xyz="0.044 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.14 0.016" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.112" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pusher">
+    <visual name="plunger">
+      <origin xyz="0 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.15" />
+        </geometry>
+      <material name="white_plastic">
+        <color rgba="0.88 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="pusher_cap">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.018" />
+        </geometry>
+      <material name="white_plastic">
+        <color rgba="0.88 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="thumb_pad">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.024 0.018" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="plunger">
+      <origin xyz="0 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.15" />
+        </geometry>
+      </collision>
+    <collision name="pusher_cap">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="thumb_pad">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.024 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="spout">
+    <visual name="spout_pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.052" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spout_tube">
+      <origin xyz="0.062 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.096" />
+        </geometry>
+      <material name="juice_orange">
+        <color rgba="1 0.55 0.16 1" />
+        </material>
+      </visual>
+    <visual name="spout_opening">
+      <origin xyz="0.112 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="spout_pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="spout_tube">
+      <origin xyz="0.062 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.096" />
+        </geometry>
+      </collision>
+    <collision name="spout_opening">
+      <origin xyz="0.112 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="speed_lever">
+    <visual name="lever_pivot_cap">
+      <origin xyz="0 -0.006 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lever_paddle">
+      <origin xyz="0 -0.018 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.078" />
+        </geometry>
+      <material name="juice_orange">
+        <color rgba="1 0.55 0.16 1" />
+        </material>
+      </visual>
+    <collision name="lever_pivot_cap">
+      <origin xyz="0 -0.006 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="lever_paddle">
+      <origin xyz="0 -0.018 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.078" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="basket_spin" type="continuous">
+    <origin xyz="0.02 0 0.13" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="basket" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="40" />
+    </joint>
+  <joint name="lid_hinge" type="revolute">
+    <origin xyz="-0.12 0 0.265" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="lid" />
+    <axis xyz="0 -1 0" />
+    <limit effort="5" velocity="2" lower="0" upper="1.15" />
+    </joint>
+  <joint name="pusher_slide" type="prismatic">
+    <origin xyz="0.145 0 0.15" rpy="0 0 0" />
+    <parent link="lid" />
+    <child link="pusher" />
+    <axis xyz="0 0 -1" />
+    <limit effort="12" velocity="0.35" lower="0" upper="0.08" />
+    </joint>
+  <joint name="spout_pivot" type="revolute">
+    <origin xyz="0.19 0 0.205" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="spout" />
+    <axis xyz="0 -1 0" />
+    <limit effort="1.5" velocity="2" lower="0" upper="1.05" />
+    </joint>
+  <joint name="speed_lever_pivot" type="revolute">
+    <origin xyz="-0.042 -0.15 0.07" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="speed_lever" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.8" velocity="1.8" lower="-0.55" upper="0.55" />
+    </joint>
+  </robot>

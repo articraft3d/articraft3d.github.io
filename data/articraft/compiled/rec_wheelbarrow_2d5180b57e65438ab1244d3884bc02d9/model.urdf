@@ -1,0 +1,178 @@
+<robot name="field_service_wheelbarrow">
+  <material name="worn_orange_paint">
+    <color rgba="0.86 0.29 0.08 1" />
+    </material>
+  <material name="black_powdercoated_steel">
+    <color rgba="0.03 0.035 0.035 1" />
+    </material>
+  <material name="chunky_black_rubber">
+    <color rgba="0.005 0.005 0.004 1" />
+    </material>
+  <material name="galvanized_service_metal">
+    <color rgba="0.58 0.6 0.58 1" />
+    </material>
+  <material name="replaceable_grip_rubber">
+    <color rgba="0.015 0.012 0.01 1" />
+    </material>
+  <material name="dark_bolt_heads">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <link name="chassis">
+    <visual name="tray_shell">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_tray.obj" />
+        </geometry>
+      <material name="worn_orange_paint">
+        <color rgba="0.86 0.29 0.08 1" />
+        </material>
+      </visual>
+    <visual name="steel_frame">
+      <geometry>
+        <mesh filename="assets/meshes/steel_frame.obj" />
+        </geometry>
+      <material name="black_powdercoated_steel">
+        <color rgba="0.03 0.035 0.035 1" />
+        </material>
+      </visual>
+    <visual name="axle_assembly">
+      <geometry>
+        <mesh filename="assets/meshes/axle_assembly.obj" />
+        </geometry>
+      <material name="galvanized_service_metal">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="grip_0">
+      <geometry>
+        <mesh filename="assets/meshes/grip_0.obj" />
+        </geometry>
+      <material name="replaceable_grip_rubber">
+        <color rgba="0.015 0.012 0.01 1" />
+        </material>
+      </visual>
+    <visual name="grip_1">
+      <geometry>
+        <mesh filename="assets/meshes/grip_1.obj" />
+        </geometry>
+      <material name="replaceable_grip_rubber">
+        <color rgba="0.015 0.012 0.01 1" />
+        </material>
+      </visual>
+    <visual name="bolt_head_0_0">
+      <geometry>
+        <mesh filename="assets/meshes/bolt_head_0_0.obj" />
+        </geometry>
+      <material name="dark_bolt_heads">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bolt_head_0_1">
+      <geometry>
+        <mesh filename="assets/meshes/bolt_head_0_1.obj" />
+        </geometry>
+      <material name="dark_bolt_heads">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bolt_head_1_0">
+      <geometry>
+        <mesh filename="assets/meshes/bolt_head_1_0.obj" />
+        </geometry>
+      <material name="dark_bolt_heads">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bolt_head_1_1">
+      <geometry>
+        <mesh filename="assets/meshes/bolt_head_1_1.obj" />
+        </geometry>
+      <material name="dark_bolt_heads">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="tray_shell">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_tray.obj" />
+        </geometry>
+      </collision>
+    <collision name="steel_frame">
+      <geometry>
+        <mesh filename="assets/meshes/steel_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="axle_assembly">
+      <geometry>
+        <mesh filename="assets/meshes/axle_assembly.obj" />
+        </geometry>
+      </collision>
+    <collision name="grip_0">
+      <geometry>
+        <mesh filename="assets/meshes/grip_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="grip_1">
+      <geometry>
+        <mesh filename="assets/meshes/grip_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="bolt_head_0_0">
+      <geometry>
+        <mesh filename="assets/meshes/bolt_head_0_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="bolt_head_0_1">
+      <geometry>
+        <mesh filename="assets/meshes/bolt_head_0_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="bolt_head_1_0">
+      <geometry>
+        <mesh filename="assets/meshes/bolt_head_1_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="bolt_head_1_1">
+      <geometry>
+        <mesh filename="assets/meshes/bolt_head_1_1.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_wheel">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/tire.obj" />
+        </geometry>
+      <material name="chunky_black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/rim.obj" />
+        </geometry>
+      <material name="galvanized_service_metal">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/rim.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="wheel_axle" type="continuous">
+    <origin xyz="-0.71 0 0.25" rpy="0 0 0" />
+    <parent link="chassis" />
+    <child link="front_wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="45" velocity="18" />
+    </joint>
+  </robot>

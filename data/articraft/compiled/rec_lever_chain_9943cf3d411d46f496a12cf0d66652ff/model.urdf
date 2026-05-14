@@ -1,0 +1,198 @@
+<robot name="three_link_lever_chain">
+  <material name="blackened_base">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.72 0.74 0.72 1" />
+    </material>
+  <material name="blue_steel_links">
+    <color rgba="0.12 0.3 0.62 1" />
+    </material>
+  <material name="zinc_upper_link">
+    <color rgba="0.68 0.7 0.66 1" />
+    </material>
+  <material name="safety_orange_tab">
+    <color rgba="0.95 0.42 0.08 1" />
+    </material>
+  <material name="dark_bolt_heads">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <link name="base_lug">
+    <visual name="mount_foot">
+      <origin xyz="-0.045 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.1 0.012" />
+        </geometry>
+      <material name="blackened_base">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="round_lug">
+      <origin xyz="0 0 -0.023" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.036" />
+        </geometry>
+      <material name="blackened_base">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="base_pin">
+      <origin xyz="0 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0093" length="0.056" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="pin_head">
+      <origin xyz="0 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.004" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="foot_bolt_0">
+      <origin xyz="-0.095 -0.032 -0.0375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.003" />
+        </geometry>
+      <material name="dark_bolt_heads">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="foot_bolt_1">
+      <origin xyz="-0.095 0.032 -0.0375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.003" />
+        </geometry>
+      <material name="dark_bolt_heads">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="mount_foot">
+      <origin xyz="-0.045 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.1 0.012" />
+        </geometry>
+      </collision>
+    <collision name="round_lug">
+      <origin xyz="0 0 -0.023" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.036" />
+        </geometry>
+      </collision>
+    <collision name="base_pin">
+      <origin xyz="0 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0093" length="0.056" />
+        </geometry>
+      </collision>
+    <collision name="pin_head">
+      <origin xyz="0 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="foot_bolt_0">
+      <origin xyz="-0.095 -0.032 -0.0375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="foot_bolt_1">
+      <origin xyz="-0.095 0.032 -0.0375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lever_0">
+    <visual name="lever_0_plate">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lever_0_plate.obj" />
+        </geometry>
+      <material name="blue_steel_links">
+        <color rgba="0.12 0.3 0.62 1" />
+        </material>
+      </visual>
+    <collision name="lever_0_plate">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lever_0_plate.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lever_1">
+    <visual name="lever_1_plate">
+      <origin xyz="0 0 0.0075" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lever_1_plate.obj" />
+        </geometry>
+      <material name="zinc_upper_link">
+        <color rgba="0.68 0.7 0.66 1" />
+        </material>
+      </visual>
+    <collision name="lever_1_plate">
+      <origin xyz="0 0 0.0075" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lever_1_plate.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lever_2">
+    <visual name="lever_2_plate">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lever_2_plate.obj" />
+        </geometry>
+      <material name="blue_steel_links">
+        <color rgba="0.12 0.3 0.62 1" />
+        </material>
+      </visual>
+    <visual name="end_tab">
+      <origin xyz="0.154 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.018 0.004" />
+        </geometry>
+      <material name="safety_orange_tab">
+        <color rgba="0.95 0.42 0.08 1" />
+        </material>
+      </visual>
+    <collision name="lever_2_plate">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lever_2_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="end_tab">
+      <origin xyz="0.154 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.018 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_lever_0" type="revolute">
+    <parent link="base_lug" />
+    <child link="lever_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="4" lower="-1.35" upper="1.35" />
+    </joint>
+  <joint name="lever_0_to_lever_1" type="revolute">
+    <origin xyz="0.18 0 0" rpy="0 0 0" />
+    <parent link="lever_0" />
+    <child link="lever_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="4" lower="-2.1" upper="2.1" />
+    </joint>
+  <joint name="lever_1_to_lever_2" type="revolute">
+    <origin xyz="0.155 0 0" rpy="0 0 0" />
+    <parent link="lever_1" />
+    <child link="lever_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="4" lower="-2" upper="2" />
+    </joint>
+  </robot>

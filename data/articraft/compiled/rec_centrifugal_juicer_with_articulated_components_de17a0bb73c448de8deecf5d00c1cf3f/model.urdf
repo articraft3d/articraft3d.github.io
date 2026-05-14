@@ -1,0 +1,716 @@
+<robot name="wide_mouth_centrifugal_juicer">
+  <material name="warm_white_plastic">
+    <color rgba="0.88 0.87 0.82 1" />
+    </material>
+  <material name="charcoal_plastic">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.015 0.015 0.014 1" />
+    </material>
+  <material name="clear_smoked_polycarbonate">
+    <color rgba="0.62 0.82 0.96 0.36" />
+    </material>
+  <material name="faint_clear_rim">
+    <color rgba="0.7 0.88 1 0.22" />
+    </material>
+  <material name="satin_stainless_steel">
+    <color rgba="0.7 0.72 0.72 1" />
+    </material>
+  <material name="brushed_basket_steel">
+    <color rgba="0.8 0.82 0.8 1" />
+    </material>
+  <material name="safety_orange_detail">
+    <color rgba="0.95 0.42 0.1 1" />
+    </material>
+  <link name="body">
+    <visual name="low_base">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.46 0.13" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.87 0.82 1" />
+        </material>
+      </visual>
+    <visual name="body_shoulder">
+      <origin xyz="0 0 0.182" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.38 0.105" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.87 0.82 1" />
+        </material>
+      </visual>
+    <visual name="front_control_band">
+      <origin xyz="0 -0.238 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.035 0.045" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="power_switch">
+      <origin xyz="0 -0.258 0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.012 0.02" />
+        </geometry>
+      <material name="safety_orange_detail">
+        <color rgba="0.95 0.42 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_front">
+      <origin xyz="0 -0.255 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.055 0.02" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_rear">
+      <origin xyz="0 0.255 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.055 0.02" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="static_clear_bowl">
+      <origin xyz="0 0 0.2" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/static_clear_bowl.obj" />
+        </geometry>
+      <material name="faint_clear_rim">
+        <color rgba="0.7 0.88 1 0.22" />
+        </material>
+      </visual>
+    <visual name="drive_plate">
+      <origin xyz="0 0 0.232" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.022" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="drive_spindle">
+      <origin xyz="0 0 0.215" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.07" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="juice_spout">
+      <origin xyz="0 -0.244 0.304" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.095 0.045" />
+        </geometry>
+      <material name="faint_clear_rim">
+        <color rgba="0.7 0.88 1 0.22" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_lug_0">
+      <origin xyz="-0.15 0.225 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.085 0.17" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.87 0.82 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_lug_1">
+      <origin xyz="0.15 0.225 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.085 0.17" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.87 0.82 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_pin_0">
+      <origin xyz="-0.15 0.245 0.392" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.09" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_pin_1">
+      <origin xyz="0.15 0.245 0.392" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.09" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="left_pivot_plinth">
+      <origin xyz="-0.308 -0.015 0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.088 0.075" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.87 0.82 1" />
+        </material>
+      </visual>
+    <visual name="right_pivot_plinth">
+      <origin xyz="0.308 -0.015 0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.088 0.075" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.87 0.82 1" />
+        </material>
+      </visual>
+    <visual name="left_pivot_boss">
+      <origin xyz="-0.337 -0.015 0.245" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.035" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="right_pivot_boss">
+      <origin xyz="0.337 -0.015 0.245" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.035" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <collision name="low_base">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.46 0.13" />
+        </geometry>
+      </collision>
+    <collision name="body_shoulder">
+      <origin xyz="0 0 0.182" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.38 0.105" />
+        </geometry>
+      </collision>
+    <collision name="front_control_band">
+      <origin xyz="0 -0.238 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.035 0.045" />
+        </geometry>
+      </collision>
+    <collision name="power_switch">
+      <origin xyz="0 -0.258 0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.012 0.02" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_front">
+      <origin xyz="0 -0.255 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.055 0.02" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_rear">
+      <origin xyz="0 0.255 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.055 0.02" />
+        </geometry>
+      </collision>
+    <collision name="static_clear_bowl">
+      <origin xyz="0 0 0.2" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/static_clear_bowl.obj" />
+        </geometry>
+      </collision>
+    <collision name="drive_plate">
+      <origin xyz="0 0 0.232" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="drive_spindle">
+      <origin xyz="0 0 0.215" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="juice_spout">
+      <origin xyz="0 -0.244 0.304" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.095 0.045" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_lug_0">
+      <origin xyz="-0.15 0.225 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.085 0.17" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_lug_1">
+      <origin xyz="0.15 0.225 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.085 0.17" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_pin_0">
+      <origin xyz="-0.15 0.245 0.392" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_pin_1">
+      <origin xyz="0.15 0.245 0.392" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="left_pivot_plinth">
+      <origin xyz="-0.308 -0.015 0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.088 0.075" />
+        </geometry>
+      </collision>
+    <collision name="right_pivot_plinth">
+      <origin xyz="0.308 -0.015 0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.088 0.075" />
+        </geometry>
+      </collision>
+    <collision name="left_pivot_boss">
+      <origin xyz="-0.337 -0.015 0.245" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="right_pivot_boss">
+      <origin xyz="0.337 -0.015 0.245" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.035" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="basket">
+    <visual name="perforated_basket">
+      <geometry>
+        <mesh filename="assets/meshes/perforated_basket.obj" />
+        </geometry>
+      <material name="brushed_basket_steel">
+        <color rgba="0.8 0.82 0.8 1" />
+        </material>
+      </visual>
+    <visual name="basket_hub">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.034" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="cutting_tooth_0">
+      <origin xyz="0.082 0 0.024" rpy="0 0 0.18" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="cutting_tooth_1">
+      <origin xyz="0.0579828 0.0579828 0.024" rpy="0 0 0.965398" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="cutting_tooth_2">
+      <origin xyz="5.02105e-18 0.082 0.024" rpy="0 0 1.7508" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="cutting_tooth_3">
+      <origin xyz="-0.0579828 0.0579828 0.024" rpy="0 0 2.53619" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="cutting_tooth_4">
+      <origin xyz="-0.082 1.00421e-17 0.024" rpy="0 0 3.32159" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="cutting_tooth_5">
+      <origin xyz="-0.0579828 -0.0579828 0.024" rpy="0 0 4.10699" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="cutting_tooth_6">
+      <origin xyz="-1.50632e-17 -0.082 0.024" rpy="0 0 4.89239" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="cutting_tooth_7">
+      <origin xyz="0.0579828 -0.0579828 0.024" rpy="0 0 5.67779" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <collision name="perforated_basket">
+      <geometry>
+        <mesh filename="assets/meshes/perforated_basket.obj" />
+        </geometry>
+      </collision>
+    <collision name="basket_hub">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="cutting_tooth_0">
+      <origin xyz="0.082 0 0.024" rpy="0 0 0.18" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      </collision>
+    <collision name="cutting_tooth_1">
+      <origin xyz="0.0579828 0.0579828 0.024" rpy="0 0 0.965398" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      </collision>
+    <collision name="cutting_tooth_2">
+      <origin xyz="5.02105e-18 0.082 0.024" rpy="0 0 1.7508" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      </collision>
+    <collision name="cutting_tooth_3">
+      <origin xyz="-0.0579828 0.0579828 0.024" rpy="0 0 2.53619" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      </collision>
+    <collision name="cutting_tooth_4">
+      <origin xyz="-0.082 1.00421e-17 0.024" rpy="0 0 3.32159" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      </collision>
+    <collision name="cutting_tooth_5">
+      <origin xyz="-0.0579828 -0.0579828 0.024" rpy="0 0 4.10699" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      </collision>
+    <collision name="cutting_tooth_6">
+      <origin xyz="-1.50632e-17 -0.082 0.024" rpy="0 0 4.89239" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      </collision>
+    <collision name="cutting_tooth_7">
+      <origin xyz="0.0579828 -0.0579828 0.024" rpy="0 0 5.67779" />
+      <geometry>
+        <box size="0.095 0.012 0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="clear_lid_shell">
+      <origin xyz="0 -0.245 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/clear_lid_shell.obj" />
+        </geometry>
+      <material name="clear_smoked_polycarbonate">
+        <color rgba="0.62 0.82 0.96 0.36" />
+        </material>
+      </visual>
+    <visual name="wide_feed_chute">
+      <origin xyz="0 -0.245 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/wide_feed_chute.obj" />
+        </geometry>
+      <material name="clear_smoked_polycarbonate">
+        <color rgba="0.62 0.82 0.96 0.36" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_leaf">
+      <origin xyz="0 -0.02 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.03 0.026" />
+        </geometry>
+      <material name="clear_smoked_polycarbonate">
+        <color rgba="0.62 0.82 0.96 0.36" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.21" />
+        </geometry>
+      <material name="clear_smoked_polycarbonate">
+        <color rgba="0.62 0.82 0.96 0.36" />
+        </material>
+      </visual>
+    <collision name="clear_lid_shell">
+      <origin xyz="0 -0.245 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/clear_lid_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="wide_feed_chute">
+      <origin xyz="0 -0.245 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/wide_feed_chute.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_leaf">
+      <origin xyz="0 -0.02 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.03 0.026" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.21" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="feed_pusher">
+    <visual name="pusher_plunger">
+      <origin xyz="0 0 -0.17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.34" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="pusher_cap">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.04" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="pusher_grip">
+      <origin xyz="0 0 0.0675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.055" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="pusher_plunger">
+      <origin xyz="0 0 -0.17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.34" />
+        </geometry>
+      </collision>
+    <collision name="pusher_cap">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="pusher_grip">
+      <origin xyz="0 0 0.0675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.055" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="left_locking_arm">
+    <visual name="pivot_hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.03" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="upright_strap">
+      <origin xyz="0 0 0.158" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.036 0.29" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="top_clamp">
+      <origin xyz="0.08 0 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.036 0.026" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="clamp_pad">
+      <origin xyz="0.15 0 0.282" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.05 0.052" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="pivot_hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="upright_strap">
+      <origin xyz="0 0 0.158" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.036 0.29" />
+        </geometry>
+      </collision>
+    <collision name="top_clamp">
+      <origin xyz="0.08 0 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.036 0.026" />
+        </geometry>
+      </collision>
+    <collision name="clamp_pad">
+      <origin xyz="0.15 0 0.282" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.05 0.052" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="right_locking_arm">
+    <visual name="pivot_hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.03" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="upright_strap">
+      <origin xyz="0 0 0.158" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.036 0.29" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="top_clamp">
+      <origin xyz="-0.08 0 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.036 0.026" />
+        </geometry>
+      <material name="satin_stainless_steel">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="clamp_pad">
+      <origin xyz="-0.15 0 0.282" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.05 0.052" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="pivot_hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="upright_strap">
+      <origin xyz="0 0 0.158" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.036 0.29" />
+        </geometry>
+      </collision>
+    <collision name="top_clamp">
+      <origin xyz="-0.08 0 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.036 0.026" />
+        </geometry>
+      </collision>
+    <collision name="clamp_pad">
+      <origin xyz="-0.15 0 0.282" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.05 0.052" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="basket_spin" type="continuous">
+    <origin xyz="0 0 0.25" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="basket" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="80" />
+    </joint>
+  <joint name="lid_hinge" type="revolute">
+    <origin xyz="0 0.245 0.392" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="5" velocity="2.2" lower="0" upper="1.2" />
+    </joint>
+  <joint name="pusher_slide" type="prismatic">
+    <origin xyz="0 -0.245 0.415" rpy="0 0 0" />
+    <parent link="lid" />
+    <child link="feed_pusher" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="0.3" lower="0" upper="0.12" />
+    </joint>
+  <joint name="left_arm_pivot" type="revolute">
+    <origin xyz="-0.3695 -0.015 0.245" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="left_locking_arm" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="2.4" lower="-1.2" upper="0" />
+    </joint>
+  <joint name="right_arm_pivot" type="revolute">
+    <origin xyz="0.3695 -0.015 0.245" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="right_locking_arm" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="2.4" lower="-1.2" upper="0" />
+    </joint>
+  </robot>

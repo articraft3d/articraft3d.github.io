@@ -1,0 +1,547 @@
+<robot name="naval_canister_launcher">
+  <link name="base">
+    <visual name="deck_plate">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.75 1.75 0.08" />
+        </geometry>
+      <material name="deck_dark">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="foundation_plinth">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.72" length="0.12" />
+        </geometry>
+      <material name="naval_grey">
+        <color rgba="0.42 0.47 0.47 1" />
+        </material>
+      </visual>
+    <visual name="fixed_lower_ring">
+      <origin xyz="0 0 0.26" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.58" length="0.16" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.12 0.14 0.14 1" />
+        </material>
+      </visual>
+    <visual name="bearing_race">
+      <origin xyz="0 0 0.32" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.43" length="0.04" />
+        </geometry>
+      <material name="naval_grey">
+        <color rgba="0.42 0.47 0.47 1" />
+        </material>
+      </visual>
+    <collision name="deck_plate">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.75 1.75 0.08" />
+        </geometry>
+      </collision>
+    <collision name="foundation_plinth">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.72" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="fixed_lower_ring">
+      <origin xyz="0 0 0.26" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.58" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="bearing_race">
+      <origin xyz="0 0 0.32" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.43" length="0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="turntable">
+    <visual name="rotating_bearing">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.54" length="0.08" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.12 0.14 0.14 1" />
+        </material>
+      </visual>
+    <visual name="armored_turntable">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.72" length="0.08" />
+        </geometry>
+      <material name="naval_grey">
+        <color rgba="0.42 0.47 0.47 1" />
+        </material>
+      </visual>
+    <visual name="armored_pedestal">
+      <origin xyz="-0.04 0 0.28" rpy="0 0 0" />
+      <geometry>
+        <box size="0.88 0.94 0.24" />
+        </geometry>
+      <material name="armor_green">
+        <color rgba="0.32 0.39 0.34 1" />
+        </material>
+      </visual>
+    <visual name="fork_saddle">
+      <origin xyz="0.02 0 0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.62 0.18" />
+        </geometry>
+      <material name="armor_green">
+        <color rgba="0.32 0.39 0.34 1" />
+        </material>
+      </visual>
+    <visual name="cheek_0">
+      <origin xyz="0.02 -0.6 0.77" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.14 1.24" />
+        </geometry>
+      <material name="armor_green">
+        <color rgba="0.32 0.39 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rear_gusset_0">
+      <origin xyz="-0.18 -0.6 0.36" rpy="0 0.279253 0" />
+      <geometry>
+        <box size="0.34 0.08 0.42" />
+        </geometry>
+      <material name="naval_grey">
+        <color rgba="0.42 0.47 0.47 1" />
+        </material>
+      </visual>
+    <visual name="outer_bearing_0">
+      <origin xyz="0 -0.6975 1.1" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.22" length="0.055" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.12 0.14 0.14 1" />
+        </material>
+      </visual>
+    <visual name="cheek_1">
+      <origin xyz="0.02 0.6 0.77" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.14 1.24" />
+        </geometry>
+      <material name="armor_green">
+        <color rgba="0.32 0.39 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rear_gusset_1">
+      <origin xyz="-0.18 0.6 0.36" rpy="0 0.279253 0" />
+      <geometry>
+        <box size="0.34 0.08 0.42" />
+        </geometry>
+      <material name="naval_grey">
+        <color rgba="0.42 0.47 0.47 1" />
+        </material>
+      </visual>
+    <visual name="outer_bearing_1">
+      <origin xyz="0 0.6975 1.1" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.22" length="0.055" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.12 0.14 0.14 1" />
+        </material>
+      </visual>
+    <visual name="azimuth_mark">
+      <origin xyz="0.05 -0.7 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.95 0.05 0.04" />
+        </geometry>
+      <material name="warning_yellow">
+        <color rgba="0.92 0.72 0.18 1" />
+        </material>
+      </visual>
+    <collision name="rotating_bearing">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.54" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="armored_turntable">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.72" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="armored_pedestal">
+      <origin xyz="-0.04 0 0.28" rpy="0 0 0" />
+      <geometry>
+        <box size="0.88 0.94 0.24" />
+        </geometry>
+      </collision>
+    <collision name="fork_saddle">
+      <origin xyz="0.02 0 0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.62 0.18" />
+        </geometry>
+      </collision>
+    <collision name="cheek_0">
+      <origin xyz="0.02 -0.6 0.77" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.14 1.24" />
+        </geometry>
+      </collision>
+    <collision name="rear_gusset_0">
+      <origin xyz="-0.18 -0.6 0.36" rpy="0 0.279253 0" />
+      <geometry>
+        <box size="0.34 0.08 0.42" />
+        </geometry>
+      </collision>
+    <collision name="outer_bearing_0">
+      <origin xyz="0 -0.6975 1.1" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.22" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="cheek_1">
+      <origin xyz="0.02 0.6 0.77" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.14 1.24" />
+        </geometry>
+      </collision>
+    <collision name="rear_gusset_1">
+      <origin xyz="-0.18 0.6 0.36" rpy="0 0.279253 0" />
+      <geometry>
+        <box size="0.34 0.08 0.42" />
+        </geometry>
+      </collision>
+    <collision name="outer_bearing_1">
+      <origin xyz="0 0.6975 1.1" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.22" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="azimuth_mark">
+      <origin xyz="0.05 -0.7 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.95 0.05 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="canister_pack">
+    <visual name="tube_0_0">
+      <origin xyz="0.38 -0.28 -0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="1.35" />
+        </geometry>
+      <material name="naval_grey">
+        <color rgba="0.42 0.47 0.47 1" />
+        </material>
+      </visual>
+    <visual name="front_cap_0_0">
+      <origin xyz="1.065 -0.28 -0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.101" length="0.025" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="tube_0_1">
+      <origin xyz="0.38 0 -0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="1.35" />
+        </geometry>
+      <material name="naval_grey">
+        <color rgba="0.42 0.47 0.47 1" />
+        </material>
+      </visual>
+    <visual name="front_cap_0_1">
+      <origin xyz="1.065 0 -0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.101" length="0.025" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="tube_0_2">
+      <origin xyz="0.38 0.28 -0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="1.35" />
+        </geometry>
+      <material name="naval_grey">
+        <color rgba="0.42 0.47 0.47 1" />
+        </material>
+      </visual>
+    <visual name="front_cap_0_2">
+      <origin xyz="1.065 0.28 -0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.101" length="0.025" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="tube_1_0">
+      <origin xyz="0.38 -0.28 0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="1.35" />
+        </geometry>
+      <material name="naval_grey">
+        <color rgba="0.42 0.47 0.47 1" />
+        </material>
+      </visual>
+    <visual name="front_cap_1_0">
+      <origin xyz="1.065 -0.28 0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.101" length="0.025" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="tube_1_1">
+      <origin xyz="0.38 0 0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="1.35" />
+        </geometry>
+      <material name="naval_grey">
+        <color rgba="0.42 0.47 0.47 1" />
+        </material>
+      </visual>
+    <visual name="front_cap_1_1">
+      <origin xyz="1.065 0 0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.101" length="0.025" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="tube_1_2">
+      <origin xyz="0.38 0.28 0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="1.35" />
+        </geometry>
+      <material name="naval_grey">
+        <color rgba="0.42 0.47 0.47 1" />
+        </material>
+      </visual>
+    <visual name="front_cap_1_2">
+      <origin xyz="1.065 0.28 0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.101" length="0.025" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="rear_bulkhead">
+      <origin xyz="-0.32 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.94 0.66" />
+        </geometry>
+      <material name="armor_green">
+        <color rgba="0.32 0.39 0.34 1" />
+        </material>
+      </visual>
+    <visual name="top_clamp">
+      <origin xyz="0.36 0 0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="1.28 0.95 0.05" />
+        </geometry>
+      <material name="armor_green">
+        <color rgba="0.32 0.39 0.34 1" />
+        </material>
+      </visual>
+    <visual name="bottom_clamp">
+      <origin xyz="0.36 0 -0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="1.28 0.95 0.05" />
+        </geometry>
+      <material name="armor_green">
+        <color rgba="0.32 0.39 0.34 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_0">
+      <origin xyz="0.38 -0.425 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.22 0.055 0.6" />
+        </geometry>
+      <material name="armor_green">
+        <color rgba="0.32 0.39 0.34 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_cap_0">
+      <origin xyz="0 -0.51 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.04" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.12 0.14 0.14 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="0.38 0.425 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.22 0.055 0.6" />
+        </geometry>
+      <material name="armor_green">
+        <color rgba="0.32 0.39 0.34 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_cap_1">
+      <origin xyz="0 0.51 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.04" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.12 0.14 0.14 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.98" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.12 0.14 0.14 1" />
+        </material>
+      </visual>
+    <collision name="tube_0_0">
+      <origin xyz="0.38 -0.28 -0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="1.35" />
+        </geometry>
+      </collision>
+    <collision name="front_cap_0_0">
+      <origin xyz="1.065 -0.28 -0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.101" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="tube_0_1">
+      <origin xyz="0.38 0 -0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="1.35" />
+        </geometry>
+      </collision>
+    <collision name="front_cap_0_1">
+      <origin xyz="1.065 0 -0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.101" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="tube_0_2">
+      <origin xyz="0.38 0.28 -0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="1.35" />
+        </geometry>
+      </collision>
+    <collision name="front_cap_0_2">
+      <origin xyz="1.065 0.28 -0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.101" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="tube_1_0">
+      <origin xyz="0.38 -0.28 0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="1.35" />
+        </geometry>
+      </collision>
+    <collision name="front_cap_1_0">
+      <origin xyz="1.065 -0.28 0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.101" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="tube_1_1">
+      <origin xyz="0.38 0 0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="1.35" />
+        </geometry>
+      </collision>
+    <collision name="front_cap_1_1">
+      <origin xyz="1.065 0 0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.101" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="tube_1_2">
+      <origin xyz="0.38 0.28 0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="1.35" />
+        </geometry>
+      </collision>
+    <collision name="front_cap_1_2">
+      <origin xyz="1.065 0.28 0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.101" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="rear_bulkhead">
+      <origin xyz="-0.32 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.94 0.66" />
+        </geometry>
+      </collision>
+    <collision name="top_clamp">
+      <origin xyz="0.36 0 0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="1.28 0.95 0.05" />
+        </geometry>
+      </collision>
+    <collision name="bottom_clamp">
+      <origin xyz="0.36 0 -0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="1.28 0.95 0.05" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_0">
+      <origin xyz="0.38 -0.425 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.22 0.055 0.6" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_cap_0">
+      <origin xyz="0 -0.51 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_1">
+      <origin xyz="0.38 0.425 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.22 0.055 0.6" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_cap_1">
+      <origin xyz="0 0.51 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.98" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="azimuth" type="continuous">
+    <origin xyz="0 0 0.34" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="turntable" />
+    <axis xyz="0 0 1" />
+    <limit effort="2000" velocity="0.8" />
+    </joint>
+  <joint name="elevation" type="revolute">
+    <origin xyz="0 0 1.1" rpy="0 0 0" />
+    <parent link="turntable" />
+    <child link="canister_pack" />
+    <axis xyz="0 -1 0" />
+    <limit effort="1200" velocity="0.6" lower="0" upper="1.1" />
+    </joint>
+  </robot>

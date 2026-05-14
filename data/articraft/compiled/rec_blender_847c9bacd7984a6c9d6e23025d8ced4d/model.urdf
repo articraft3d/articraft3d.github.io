@@ -1,0 +1,611 @@
+<robot name="vacuum_blender">
+  <material name="dark_graphite">
+    <color rgba="0.035 0.039 0.045 1" />
+    </material>
+  <material name="satin_black">
+    <color rgba="0.002 0.002 0.002 1" />
+    </material>
+  <material name="smoked_touch_panel">
+    <color rgba="0 0.015 0.025 1" />
+    </material>
+  <material name="blue_display_glow">
+    <color rgba="0.05 0.55 1 0.85" />
+    </material>
+  <material name="brushed_stainless">
+    <color rgba="0.78 0.8 0.78 1" />
+    </material>
+  <material name="clear_copolyester">
+    <color rgba="0.7 0.92 1 0.32" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.006 0.006 0.006 1" />
+    </material>
+  <material name="white_ink">
+    <color rgba="1 1 0.92 0.75" />
+    </material>
+  <link name="base">
+    <visual name="motor_housing">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_motor_base.obj" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.035 0.039 0.045 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_collar">
+      <origin xyz="0 0 0.2" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bayonet_collar.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_stop_0">
+      <origin xyz="0.0765 0.132502 0.25" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.026 0.02 0.01" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_stop_1">
+      <origin xyz="-0.153 1.87371e-17 0.25" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.026 0.02 0.01" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_stop_2">
+      <origin xyz="0.0765 -0.132502 0.25" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="0.026 0.02 0.01" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="touch_panel">
+      <origin xyz="0 -0.163 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.006 0.095" />
+        </geometry>
+      <material name="smoked_touch_panel">
+        <color rgba="0 0.015 0.025 1" />
+        </material>
+      </visual>
+    <visual name="vacuum_display">
+      <origin xyz="-0.05 -0.167 0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.007 0.026" />
+        </geometry>
+      <material name="blue_display_glow">
+        <color rgba="0.05 0.55 1 0.85" />
+        </material>
+      </visual>
+    <visual name="touch_icon_0">
+      <origin xyz="-0.09 -0.167 0.078" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.007 0.018" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="touch_icon_1">
+      <origin xyz="-0.03 -0.167 0.078" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.007 0.018" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="touch_icon_2">
+      <origin xyz="0.03 -0.167 0.078" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.007 0.018" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="touch_icon_3">
+      <origin xyz="0.09 -0.167 0.078" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.007 0.018" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <collision name="motor_housing">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_motor_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_collar">
+      <origin xyz="0 0 0.2" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bayonet_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_stop_0">
+      <origin xyz="0.0765 0.132502 0.25" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.026 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_stop_1">
+      <origin xyz="-0.153 1.87371e-17 0.25" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.026 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_stop_2">
+      <origin xyz="0.0765 -0.132502 0.25" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="0.026 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="touch_panel">
+      <origin xyz="0 -0.163 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.006 0.095" />
+        </geometry>
+      </collision>
+    <collision name="vacuum_display">
+      <origin xyz="-0.05 -0.167 0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.007 0.026" />
+        </geometry>
+      </collision>
+    <collision name="touch_icon_0">
+      <origin xyz="-0.09 -0.167 0.078" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.007 0.018" />
+        </geometry>
+      </collision>
+    <collision name="touch_icon_1">
+      <origin xyz="-0.03 -0.167 0.078" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.007 0.018" />
+        </geometry>
+      </collision>
+    <collision name="touch_icon_2">
+      <origin xyz="0.03 -0.167 0.078" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.007 0.018" />
+        </geometry>
+      </collision>
+    <collision name="touch_icon_3">
+      <origin xyz="0.09 -0.167 0.078" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.007 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="jar">
+    <visual name="jar_glass">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_wide_mouth_jar.obj" />
+        </geometry>
+      <material name="clear_copolyester">
+        <color rgba="0.7 0.92 1 0.32" />
+        </material>
+      </visual>
+    <visual name="bearing_socket">
+      <origin xyz="0 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_lug_0">
+      <origin xyz="0.146 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.02 0.014" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_lug_1">
+      <origin xyz="-0.073 0.12644 0.007" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.044 0.02 0.014" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_lug_2">
+      <origin xyz="-0.073 -0.12644 0.007" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.044 0.02 0.014" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <visual name="measure_scale">
+      <origin xyz="0 -0.129 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.003 0.27" />
+        </geometry>
+      <material name="white_ink">
+        <color rgba="1 1 0.92 0.75" />
+        </material>
+      </visual>
+    <visual name="measure_tick_0">
+      <origin xyz="0.013 -0.128 0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.003 0.004" />
+        </geometry>
+      <material name="white_ink">
+        <color rgba="1 1 0.92 0.75" />
+        </material>
+      </visual>
+    <visual name="measure_tick_1">
+      <origin xyz="0.013 -0.128 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.003 0.004" />
+        </geometry>
+      <material name="white_ink">
+        <color rgba="1 1 0.92 0.75" />
+        </material>
+      </visual>
+    <visual name="measure_tick_2">
+      <origin xyz="0.013 -0.128 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.003 0.004" />
+        </geometry>
+      <material name="white_ink">
+        <color rgba="1 1 0.92 0.75" />
+        </material>
+      </visual>
+    <visual name="measure_tick_3">
+      <origin xyz="0.013 -0.128 0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.003 0.004" />
+        </geometry>
+      <material name="white_ink">
+        <color rgba="1 1 0.92 0.75" />
+        </material>
+      </visual>
+    <visual name="measure_tick_4">
+      <origin xyz="0.013 -0.128 0.345" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.003 0.004" />
+        </geometry>
+      <material name="white_ink">
+        <color rgba="1 1 0.92 0.75" />
+        </material>
+      </visual>
+    <collision name="jar_glass">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_wide_mouth_jar.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_socket">
+      <origin xyz="0 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_lug_0">
+      <origin xyz="0.146 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.02 0.014" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_lug_1">
+      <origin xyz="-0.073 0.12644 0.007" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.044 0.02 0.014" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_lug_2">
+      <origin xyz="-0.073 -0.12644 0.007" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.044 0.02 0.014" />
+        </geometry>
+      </collision>
+    <collision name="measure_scale">
+      <origin xyz="0 -0.129 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.003 0.27" />
+        </geometry>
+      </collision>
+    <collision name="measure_tick_0">
+      <origin xyz="0.013 -0.128 0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.003 0.004" />
+        </geometry>
+      </collision>
+    <collision name="measure_tick_1">
+      <origin xyz="0.013 -0.128 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.003 0.004" />
+        </geometry>
+      </collision>
+    <collision name="measure_tick_2">
+      <origin xyz="0.013 -0.128 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.003 0.004" />
+        </geometry>
+      </collision>
+    <collision name="measure_tick_3">
+      <origin xyz="0.013 -0.128 0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.003 0.004" />
+        </geometry>
+      </collision>
+    <collision name="measure_tick_4">
+      <origin xyz="0.013 -0.128 0.345" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.003 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_assembly">
+    <visual name="blade_hub">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.028" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <visual name="blade_0">
+      <origin xyz="0.05 0 0.017" rpy="0 0.18 0" />
+      <geometry>
+        <box size="0.092 0.02 0.006" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <visual name="blade_1">
+      <origin xyz="0.025 0.0433013 0.017" rpy="0 -0.18 1.0472" />
+      <geometry>
+        <box size="0.092 0.02 0.006" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <visual name="blade_2">
+      <origin xyz="-0.025 0.0433013 0.017" rpy="0 0.18 2.0944" />
+      <geometry>
+        <box size="0.092 0.02 0.006" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <visual name="blade_3">
+      <origin xyz="-0.05 6.12323e-18 0.017" rpy="0 -0.18 3.14159" />
+      <geometry>
+        <box size="0.092 0.02 0.006" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <visual name="blade_4">
+      <origin xyz="-0.025 -0.0433013 0.017" rpy="0 0.18 4.18879" />
+      <geometry>
+        <box size="0.092 0.02 0.006" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <visual name="blade_5">
+      <origin xyz="0.025 -0.0433013 0.017" rpy="0 -0.18 5.23599" />
+      <geometry>
+        <box size="0.092 0.02 0.006" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <collision name="blade_hub">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="blade_0">
+      <origin xyz="0.05 0 0.017" rpy="0 0.18 0" />
+      <geometry>
+        <box size="0.092 0.02 0.006" />
+        </geometry>
+      </collision>
+    <collision name="blade_1">
+      <origin xyz="0.025 0.0433013 0.017" rpy="0 -0.18 1.0472" />
+      <geometry>
+        <box size="0.092 0.02 0.006" />
+        </geometry>
+      </collision>
+    <collision name="blade_2">
+      <origin xyz="-0.025 0.0433013 0.017" rpy="0 0.18 2.0944" />
+      <geometry>
+        <box size="0.092 0.02 0.006" />
+        </geometry>
+      </collision>
+    <collision name="blade_3">
+      <origin xyz="-0.05 6.12323e-18 0.017" rpy="0 -0.18 3.14159" />
+      <geometry>
+        <box size="0.092 0.02 0.006" />
+        </geometry>
+      </collision>
+    <collision name="blade_4">
+      <origin xyz="-0.025 -0.0433013 0.017" rpy="0 0.18 4.18879" />
+      <geometry>
+        <box size="0.092 0.02 0.006" />
+        </geometry>
+      </collision>
+    <collision name="blade_5">
+      <origin xyz="0.025 -0.0433013 0.017" rpy="0 -0.18 5.23599" />
+      <geometry>
+        <box size="0.092 0.02 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="lid_disk">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.142" length="0.026" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <visual name="seal_plug">
+      <origin xyz="0 0 -0.008" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.016" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <visual name="vacuum_port">
+      <origin xyz="0.036 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.002" />
+        </geometry>
+      <material name="smoked_touch_panel">
+        <color rgba="0 0.015 0.025 1" />
+        </material>
+      </visual>
+    <visual name="valve_hinge_ear_0">
+      <origin xyz="0 -0.034 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.008 0.012" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <visual name="valve_hinge_ear_1">
+      <origin xyz="0 0.034 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.008 0.012" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <collision name="lid_disk">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.142" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="seal_plug">
+      <origin xyz="0 0 -0.008" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="vacuum_port">
+      <origin xyz="0.036 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="valve_hinge_ear_0">
+      <origin xyz="0 -0.034 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.008 0.012" />
+        </geometry>
+      </collision>
+    <collision name="valve_hinge_ear_1">
+      <origin xyz="0 0.034 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.008 0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="valve_flap">
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.055" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <visual name="flap_pad">
+      <origin xyz="0.036 0 -0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.045 0.004" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <visual name="flap_web">
+      <origin xyz="0.006 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.039 0.004" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="flap_pad">
+      <origin xyz="0.036 0 -0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.045 0.004" />
+        </geometry>
+      </collision>
+    <collision name="flap_web">
+      <origin xyz="0.006 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.039 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_jar" type="fixed">
+    <origin xyz="0 0 0.245" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="jar" />
+    </joint>
+  <joint name="jar_to_blade" type="continuous">
+    <origin xyz="0 0 0.033" rpy="0 0 0" />
+    <parent link="jar" />
+    <child link="blade_assembly" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="220" />
+    </joint>
+  <joint name="jar_to_lid" type="fixed">
+    <origin xyz="0 0 0.42" rpy="0 0 0" />
+    <parent link="jar" />
+    <child link="lid" />
+    </joint>
+  <joint name="lid_to_valve_flap" type="revolute">
+    <origin xyz="0 0 0.035" rpy="0 0 0" />
+    <parent link="lid" />
+    <child link="valve_flap" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.4" velocity="2" lower="0" upper="1.1" />
+    </joint>
+  </robot>

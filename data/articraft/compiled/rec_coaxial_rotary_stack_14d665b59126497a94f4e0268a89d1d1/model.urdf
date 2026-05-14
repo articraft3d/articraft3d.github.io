@@ -1,0 +1,368 @@
+<robot name="coaxial_rotary_stack">
+  <link name="center_shaft">
+    <visual name="ground_plinth">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.04" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="fixed_shaft">
+      <origin xyz="0 0 0.235" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.39" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_washer">
+      <origin xyz="0 0 0.049" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="middle_spacer">
+      <origin xyz="0 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="top_spacer">
+      <origin xyz="0 0 0.194" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="retaining_nut">
+      <origin xyz="0 0 0.294" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.024" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <collision name="ground_plinth">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="fixed_shaft">
+      <origin xyz="0 0 0.235" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.39" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_washer">
+      <origin xyz="0 0 0.049" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="middle_spacer">
+      <origin xyz="0 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="top_spacer">
+      <origin xyz="0 0 0.194" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="retaining_nut">
+      <origin xyz="0 0 0.294" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="base_turntable">
+    <visual name="turntable_plate">
+      <geometry>
+        <mesh filename="assets/meshes/base_turntable_plate.obj" />
+        </geometry>
+      <material name="satin_blue_turntable">
+        <color rgba="0.12 0.3 0.7 1" />
+        </material>
+      </visual>
+    <visual name="raised_outer_rim">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_turntable_outer_rim.obj" />
+        </geometry>
+      <material name="satin_blue_turntable">
+        <color rgba="0.12 0.3 0.7 1" />
+        </material>
+      </visual>
+    <visual name="central_bearing_boss">
+      <origin xyz="0 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_turntable_bearing_boss.obj" />
+        </geometry>
+      <material name="satin_blue_turntable">
+        <color rgba="0.12 0.3 0.7 1" />
+        </material>
+      </visual>
+    <visual name="radial_index_tab">
+      <origin xyz="0.285 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.035 0.018" />
+        </geometry>
+      <material name="white_index_marks">
+        <color rgba="0.92 0.9 0.82 1" />
+        </material>
+      </visual>
+    <collision name="turntable_plate">
+      <geometry>
+        <mesh filename="assets/meshes/base_turntable_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="raised_outer_rim">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_turntable_outer_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="central_bearing_boss">
+      <origin xyz="0 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_turntable_bearing_boss.obj" />
+        </geometry>
+      </collision>
+    <collision name="radial_index_tab">
+      <origin xyz="0.285 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.035 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="middle_ring">
+    <visual name="outer_ring">
+      <geometry>
+        <mesh filename="assets/meshes/middle_outer_ring.obj" />
+        </geometry>
+      <material name="anodized_orange_ring">
+        <color rgba="0.95 0.42 0.1 1" />
+        </material>
+      </visual>
+    <visual name="shaft_hub">
+      <geometry>
+        <mesh filename="assets/meshes/middle_hub.obj" />
+        </geometry>
+      <material name="anodized_orange_ring">
+        <color rgba="0.95 0.42 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0">
+      <origin xyz="0.111 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.02 0.03" />
+        </geometry>
+      <material name="anodized_orange_ring">
+        <color rgba="0.95 0.42 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1">
+      <origin xyz="0.111 0 0" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.078 0.02 0.03" />
+        </geometry>
+      <material name="anodized_orange_ring">
+        <color rgba="0.95 0.42 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_2">
+      <origin xyz="0.111 0 0" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.078 0.02 0.03" />
+        </geometry>
+      <material name="anodized_orange_ring">
+        <color rgba="0.95 0.42 0.1 1" />
+        </material>
+      </visual>
+    <visual name="outer_index_block">
+      <origin xyz="0 0.206 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.03 0.026" />
+        </geometry>
+      <material name="white_index_marks">
+        <color rgba="0.92 0.9 0.82 1" />
+        </material>
+      </visual>
+    <collision name="outer_ring">
+      <geometry>
+        <mesh filename="assets/meshes/middle_outer_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="shaft_hub">
+      <geometry>
+        <mesh filename="assets/meshes/middle_hub.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_0">
+      <origin xyz="0.111 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.02 0.03" />
+        </geometry>
+      </collision>
+    <collision name="spoke_1">
+      <origin xyz="0.111 0 0" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.078 0.02 0.03" />
+        </geometry>
+      </collision>
+    <collision name="spoke_2">
+      <origin xyz="0.111 0 0" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.078 0.02 0.03" />
+        </geometry>
+      </collision>
+    <collision name="outer_index_block">
+      <origin xyz="0 0.206 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.03 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="top_flange">
+    <visual name="flange_disk">
+      <geometry>
+        <mesh filename="assets/meshes/top_flange_disk.obj" />
+        </geometry>
+      <material name="green_top_flange">
+        <color rgba="0.1 0.58 0.36 1" />
+        </material>
+      </visual>
+    <visual name="raised_neck">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_flange_neck.obj" />
+        </geometry>
+      <material name="green_top_flange">
+        <color rgba="0.1 0.58 0.36 1" />
+        </material>
+      </visual>
+    <visual name="flange_pointer">
+      <origin xyz="-0.16 0 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.028 0.018" />
+        </geometry>
+      <material name="white_index_marks">
+        <color rgba="0.92 0.9 0.82 1" />
+        </material>
+      </visual>
+    <visual name="bolt_head_0">
+      <origin xyz="0.103 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.011" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="bolt_head_1">
+      <origin xyz="6.30693e-18 0.103 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.011" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="bolt_head_2">
+      <origin xyz="-0.103 1.26139e-17 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.011" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="bolt_head_3">
+      <origin xyz="-1.89208e-17 -0.103 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.011" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="flange_disk">
+      <geometry>
+        <mesh filename="assets/meshes/top_flange_disk.obj" />
+        </geometry>
+      </collision>
+    <collision name="raised_neck">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_flange_neck.obj" />
+        </geometry>
+      </collision>
+    <collision name="flange_pointer">
+      <origin xyz="-0.16 0 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.028 0.018" />
+        </geometry>
+      </collision>
+    <collision name="bolt_head_0">
+      <origin xyz="0.103 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.011" />
+        </geometry>
+      </collision>
+    <collision name="bolt_head_1">
+      <origin xyz="6.30693e-18 0.103 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.011" />
+        </geometry>
+      </collision>
+    <collision name="bolt_head_2">
+      <origin xyz="-0.103 1.26139e-17 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.011" />
+        </geometry>
+      </collision>
+    <collision name="bolt_head_3">
+      <origin xyz="-1.89208e-17 -0.103 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.011" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shaft_to_turntable" type="revolute">
+    <origin xyz="0 0 0.08" rpy="0 0 0" />
+    <parent link="center_shaft" />
+    <child link="base_turntable" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="2.5" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="shaft_to_middle_ring" type="revolute">
+    <origin xyz="0 0 0.155" rpy="0 0 0" />
+    <parent link="center_shaft" />
+    <child link="middle_ring" />
+    <axis xyz="0 0 1" />
+    <limit effort="5" velocity="3" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="shaft_to_top_flange" type="revolute">
+    <origin xyz="0 0 0.235" rpy="0 0 0" />
+    <parent link="center_shaft" />
+    <child link="top_flange" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="3.5" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

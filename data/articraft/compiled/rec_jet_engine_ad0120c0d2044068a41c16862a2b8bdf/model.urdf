@@ -1,0 +1,182 @@
+<robot name="high_bypass_turbofan">
+  <material name="ceramic_white">
+    <color rgba="0.8 0.83 0.86 1" />
+    </material>
+  <material name="polished_lip">
+    <color rgba="0.7 0.73 0.78 1" />
+    </material>
+  <material name="dark_titanium">
+    <color rgba="0.16 0.17 0.19 1" />
+    </material>
+  <material name="fan_titanium">
+    <color rgba="0.55 0.58 0.62 1" />
+    </material>
+  <material name="heat_stained_alloy">
+    <color rgba="0.5 0.4 0.31 1" />
+    </material>
+  <link name="nacelle">
+    <visual name="nacelle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/nacelle_shell.obj" />
+        </geometry>
+      <material name="ceramic_white">
+        <color rgba="0.8 0.83 0.86 1" />
+        </material>
+      </visual>
+    <visual name="service_bands">
+      <geometry>
+        <mesh filename="assets/meshes/service_bands.obj" />
+        </geometry>
+      <material name="polished_lip">
+        <color rgba="0.7 0.73 0.78 1" />
+        </material>
+      </visual>
+    <visual name="core_case">
+      <geometry>
+        <mesh filename="assets/meshes/core_case.obj" />
+        </geometry>
+      <material name="dark_titanium">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="stator_vanes">
+      <geometry>
+        <mesh filename="assets/meshes/stator_vanes.obj" />
+        </geometry>
+      <material name="dark_titanium">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="fan_bearing_support">
+      <geometry>
+        <mesh filename="assets/meshes/fan_bearing_support.obj" />
+        </geometry>
+      <material name="dark_titanium">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="core_bearing_support">
+      <geometry>
+        <mesh filename="assets/meshes/core_bearing_support.obj" />
+        </geometry>
+      <material name="dark_titanium">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="exhaust_nozzle">
+      <geometry>
+        <mesh filename="assets/meshes/exhaust_nozzle.obj" />
+        </geometry>
+      <material name="heat_stained_alloy">
+        <color rgba="0.5 0.4 0.31 1" />
+        </material>
+      </visual>
+    <visual name="chevron_petals">
+      <geometry>
+        <mesh filename="assets/meshes/chevron_petals.obj" />
+        </geometry>
+      <material name="heat_stained_alloy">
+        <color rgba="0.5 0.4 0.31 1" />
+        </material>
+      </visual>
+    <visual name="pylon_fairing">
+      <geometry>
+        <mesh filename="assets/meshes/pylon_fairing.obj" />
+        </geometry>
+      <material name="ceramic_white">
+        <color rgba="0.8 0.83 0.86 1" />
+        </material>
+      </visual>
+    <collision name="nacelle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/nacelle_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="service_bands">
+      <geometry>
+        <mesh filename="assets/meshes/service_bands.obj" />
+        </geometry>
+      </collision>
+    <collision name="core_case">
+      <geometry>
+        <mesh filename="assets/meshes/core_case.obj" />
+        </geometry>
+      </collision>
+    <collision name="stator_vanes">
+      <geometry>
+        <mesh filename="assets/meshes/stator_vanes.obj" />
+        </geometry>
+      </collision>
+    <collision name="fan_bearing_support">
+      <geometry>
+        <mesh filename="assets/meshes/fan_bearing_support.obj" />
+        </geometry>
+      </collision>
+    <collision name="core_bearing_support">
+      <geometry>
+        <mesh filename="assets/meshes/core_bearing_support.obj" />
+        </geometry>
+      </collision>
+    <collision name="exhaust_nozzle">
+      <geometry>
+        <mesh filename="assets/meshes/exhaust_nozzle.obj" />
+        </geometry>
+      </collision>
+    <collision name="chevron_petals">
+      <geometry>
+        <mesh filename="assets/meshes/chevron_petals.obj" />
+        </geometry>
+      </collision>
+    <collision name="pylon_fairing">
+      <geometry>
+        <mesh filename="assets/meshes/pylon_fairing.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="fan">
+    <visual name="fan_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/fan_rotor.obj" />
+        </geometry>
+      <material name="fan_titanium">
+        <color rgba="0.55 0.58 0.62 1" />
+        </material>
+      </visual>
+    <collision name="fan_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/fan_rotor.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="core_spool">
+    <visual name="compressor_turbine_spool">
+      <geometry>
+        <mesh filename="assets/meshes/compressor_turbine_spool.obj" />
+        </geometry>
+      <material name="fan_titanium">
+        <color rgba="0.55 0.58 0.62 1" />
+        </material>
+      </visual>
+    <collision name="compressor_turbine_spool">
+      <geometry>
+        <mesh filename="assets/meshes/compressor_turbine_spool.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="nacelle_to_fan" type="continuous">
+    <origin xyz="-1.05 0 0" rpy="0 1.5708 0" />
+    <parent link="nacelle" />
+    <child link="fan" />
+    <axis xyz="0 0 1" />
+    <limit effort="220" velocity="180" />
+    <dynamics damping="0.02" friction="0" />
+    </joint>
+  <joint name="nacelle_to_core_spool" type="continuous">
+    <origin xyz="0 0 0" rpy="0 1.5708 0" />
+    <parent link="nacelle" />
+    <child link="core_spool" />
+    <axis xyz="0 0 1" />
+    <limit effort="140" velocity="260" />
+    <dynamics damping="0.015" friction="0" />
+    </joint>
+  </robot>

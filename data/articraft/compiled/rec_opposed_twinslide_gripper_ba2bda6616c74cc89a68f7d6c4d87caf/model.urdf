@@ -1,0 +1,1132 @@
+<robot name="heavy_block_gripper">
+  <material name="cast_iron_blue_grey">
+    <color rgba="0.18 0.22 0.25 1" />
+    </material>
+  <material name="black_oxide">
+    <color rgba="0.055 0.06 0.065 1" />
+    </material>
+  <material name="ground_rail_steel">
+    <color rgba="0.62 0.64 0.64 1" />
+    </material>
+  <material name="blued_jaw_steel">
+    <color rgba="0.23 0.25 0.26 1" />
+    </material>
+  <material name="bronze_wear_strip">
+    <color rgba="0.72 0.48 0.2 1" />
+    </material>
+  <material name="hardened_grip_face">
+    <color rgba="0.11 0.12 0.13 1" />
+    </material>
+  <link name="housing">
+    <inertial>
+      <mass value="18" />
+      <inertia ixx="0.3183" ixy="0" ixz="0" iyy="1.81575" iyz="0" izz="2.00175" />
+      </inertial>
+    <visual name="housing_shell">
+      <geometry>
+        <mesh filename="assets/meshes/gripper_hollow_housing.obj" />
+        </geometry>
+      <material name="cast_iron_blue_grey">
+        <color rgba="0.18 0.22 0.25 1" />
+        </material>
+      </visual>
+    <visual name="top_cover">
+      <origin xyz="0 0 0.093" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.205 0.018" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="bottom_cover">
+      <origin xyz="0 0 -0.092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.205 0.014" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="cross_tie_cover">
+      <origin xyz="0 0 0.086" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.38 0.028" />
+        </geometry>
+      <material name="cast_iron_blue_grey">
+        <color rgba="0.18 0.22 0.25 1" />
+        </material>
+      </visual>
+    <visual name="rail_0">
+      <origin xyz="0 -0.155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.06 0.036 0.04" />
+        </geometry>
+      <material name="ground_rail_steel">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="rail_boss_0">
+      <origin xyz="0 -0.13485 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.09 0.06" />
+        </geometry>
+      <material name="cast_iron_blue_grey">
+        <color rgba="0.18 0.22 0.25 1" />
+        </material>
+      </visual>
+    <visual name="rail_stop_0_0">
+      <origin xyz="-0.5 -0.155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.074 0.09" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="rail_stop_0_1">
+      <origin xyz="0.5 -0.155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.074 0.09" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="rail_1">
+      <origin xyz="0 0.155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.06 0.036 0.04" />
+        </geometry>
+      <material name="ground_rail_steel">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="rail_boss_1">
+      <origin xyz="0 0.13485 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.09 0.06" />
+        </geometry>
+      <material name="cast_iron_blue_grey">
+        <color rgba="0.18 0.22 0.25 1" />
+        </material>
+      </visual>
+    <visual name="rail_stop_1_0">
+      <origin xyz="-0.5 0.155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.074 0.09" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="rail_stop_1_1">
+      <origin xyz="0.5 0.155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.074 0.09" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="housing_bolt_0">
+      <origin xyz="-0.125 -0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="housing_bolt_1">
+      <origin xyz="-0.125 0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="housing_bolt_2">
+      <origin xyz="0.125 -0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="housing_bolt_3">
+      <origin xyz="0.125 0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="housing_bolt_4">
+      <origin xyz="-0.04 -0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="housing_bolt_5">
+      <origin xyz="-0.04 0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="housing_bolt_6">
+      <origin xyz="0.04 -0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="housing_bolt_7">
+      <origin xyz="0.04 0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="rail_bolt_0_0">
+      <origin xyz="-0.03 -0.155 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="rail_bolt_0_1">
+      <origin xyz="0.03 -0.155 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="rail_bolt_1_0">
+      <origin xyz="-0.03 0.155 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="rail_bolt_1_1">
+      <origin xyz="0.03 0.155 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <collision name="housing_shell">
+      <geometry>
+        <mesh filename="assets/meshes/gripper_hollow_housing.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_cover">
+      <origin xyz="0 0 0.093" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.205 0.018" />
+        </geometry>
+      </collision>
+    <collision name="bottom_cover">
+      <origin xyz="0 0 -0.092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.205 0.014" />
+        </geometry>
+      </collision>
+    <collision name="cross_tie_cover">
+      <origin xyz="0 0 0.086" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.38 0.028" />
+        </geometry>
+      </collision>
+    <collision name="rail_0">
+      <origin xyz="0 -0.155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.06 0.036 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rail_boss_0">
+      <origin xyz="0 -0.13485 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.09 0.06" />
+        </geometry>
+      </collision>
+    <collision name="rail_stop_0_0">
+      <origin xyz="-0.5 -0.155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.074 0.09" />
+        </geometry>
+      </collision>
+    <collision name="rail_stop_0_1">
+      <origin xyz="0.5 -0.155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.074 0.09" />
+        </geometry>
+      </collision>
+    <collision name="rail_1">
+      <origin xyz="0 0.155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.06 0.036 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rail_boss_1">
+      <origin xyz="0 0.13485 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.09 0.06" />
+        </geometry>
+      </collision>
+    <collision name="rail_stop_1_0">
+      <origin xyz="-0.5 0.155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.074 0.09" />
+        </geometry>
+      </collision>
+    <collision name="rail_stop_1_1">
+      <origin xyz="0.5 0.155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.074 0.09" />
+        </geometry>
+      </collision>
+    <collision name="housing_bolt_0">
+      <origin xyz="-0.125 -0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="housing_bolt_1">
+      <origin xyz="-0.125 0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="housing_bolt_2">
+      <origin xyz="0.125 -0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="housing_bolt_3">
+      <origin xyz="0.125 0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="housing_bolt_4">
+      <origin xyz="-0.04 -0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="housing_bolt_5">
+      <origin xyz="-0.04 0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="housing_bolt_6">
+      <origin xyz="0.04 -0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="housing_bolt_7">
+      <origin xyz="0.04 0.07 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="rail_bolt_0_0">
+      <origin xyz="-0.03 -0.155 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="rail_bolt_0_1">
+      <origin xyz="0.03 -0.155 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="rail_bolt_1_0">
+      <origin xyz="-0.03 0.155 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="rail_bolt_1_1">
+      <origin xyz="0.03 0.155 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="jaw_carriage_0">
+    <inertial>
+      <origin xyz="-0.02 0 0" rpy="0 0 0" />
+      <mass value="5.5" />
+      <inertia ixx="0.0979917" ixy="0" ixz="0" iyy="0.101979" iyz="0" izz="0.173479" />
+      </inertial>
+    <visual name="upper_carriage_cap">
+      <origin xyz="0.02 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.4 0.03" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="lower_carriage_cap">
+      <origin xyz="0.02 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.4 0.03" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="center_web">
+      <origin xyz="-0.065 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.09 0.12" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="upper_wear_0">
+      <origin xyz="0.04 -0.155 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      <material name="bronze_wear_strip">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="lower_wear_0">
+      <origin xyz="0.04 -0.155 -0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      <material name="bronze_wear_strip">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing_0">
+      <origin xyz="0.04 -0.155 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_0">
+      <origin xyz="0.04 -0.155 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="upper_wear_1">
+      <origin xyz="0.04 0.155 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      <material name="bronze_wear_strip">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="lower_wear_1">
+      <origin xyz="0.04 0.155 -0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      <material name="bronze_wear_strip">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing_1">
+      <origin xyz="0.04 0.155 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_1">
+      <origin xyz="0.04 0.155 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_0">
+      <origin xyz="-0.055 -0.205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.14" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_1">
+      <origin xyz="-0.055 0.205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.14" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="inner_ram">
+      <origin xyz="0.145 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.05 0.032" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="jaw_lower_step">
+      <origin xyz="0.284 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.086 0.05" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="jaw_upper_step">
+      <origin xyz="0.28 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.078 0.05" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="grip_insert">
+      <origin xyz="0.306 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.082 0.075" />
+        </geometry>
+      <material name="hardened_grip_face">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_0">
+      <origin xyz="0.309 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.084 0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_1">
+      <origin xyz="0.309 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.084 0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_2">
+      <origin xyz="0.309 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.084 0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="jaw0_cap_screw_0">
+      <origin xyz="-0.055 -0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="jaw0_cap_screw_1">
+      <origin xyz="-0.055 0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="jaw0_cap_screw_2">
+      <origin xyz="0.075 -0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="jaw0_cap_screw_3">
+      <origin xyz="0.075 0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <collision name="upper_carriage_cap">
+      <origin xyz="0.02 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.4 0.03" />
+        </geometry>
+      </collision>
+    <collision name="lower_carriage_cap">
+      <origin xyz="0.02 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.4 0.03" />
+        </geometry>
+      </collision>
+    <collision name="center_web">
+      <origin xyz="-0.065 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.09 0.12" />
+        </geometry>
+      </collision>
+    <collision name="upper_wear_0">
+      <origin xyz="0.04 -0.155 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      </collision>
+    <collision name="lower_wear_0">
+      <origin xyz="0.04 -0.155 -0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing_0">
+      <origin xyz="0.04 -0.155 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_0">
+      <origin xyz="0.04 -0.155 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      </collision>
+    <collision name="upper_wear_1">
+      <origin xyz="0.04 0.155 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      </collision>
+    <collision name="lower_wear_1">
+      <origin xyz="0.04 0.155 -0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing_1">
+      <origin xyz="0.04 0.155 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_1">
+      <origin xyz="0.04 0.155 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_0">
+      <origin xyz="-0.055 -0.205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.14" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_1">
+      <origin xyz="-0.055 0.205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.14" />
+        </geometry>
+      </collision>
+    <collision name="inner_ram">
+      <origin xyz="0.145 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.05 0.032" />
+        </geometry>
+      </collision>
+    <collision name="jaw_lower_step">
+      <origin xyz="0.284 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.086 0.05" />
+        </geometry>
+      </collision>
+    <collision name="jaw_upper_step">
+      <origin xyz="0.28 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.078 0.05" />
+        </geometry>
+      </collision>
+    <collision name="grip_insert">
+      <origin xyz="0.306 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.082 0.075" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_0">
+      <origin xyz="0.309 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.084 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_1">
+      <origin xyz="0.309 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.084 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_2">
+      <origin xyz="0.309 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.084 0.004" />
+        </geometry>
+      </collision>
+    <collision name="jaw0_cap_screw_0">
+      <origin xyz="-0.055 -0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="jaw0_cap_screw_1">
+      <origin xyz="-0.055 0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="jaw0_cap_screw_2">
+      <origin xyz="0.075 -0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="jaw0_cap_screw_3">
+      <origin xyz="0.075 0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="jaw_carriage_1">
+    <inertial>
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <mass value="5.5" />
+      <inertia ixx="0.0979917" ixy="0" ixz="0" iyy="0.101979" iyz="0" izz="0.173479" />
+      </inertial>
+    <visual name="upper_carriage_cap">
+      <origin xyz="-0.02 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.4 0.03" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="lower_carriage_cap">
+      <origin xyz="-0.02 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.4 0.03" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="center_web">
+      <origin xyz="0.065 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.09 0.12" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="upper_wear_0">
+      <origin xyz="-0.04 -0.155 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      <material name="bronze_wear_strip">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="lower_wear_0">
+      <origin xyz="-0.04 -0.155 -0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      <material name="bronze_wear_strip">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing_0">
+      <origin xyz="-0.04 -0.155 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_0">
+      <origin xyz="-0.04 -0.155 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="upper_wear_1">
+      <origin xyz="-0.04 0.155 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      <material name="bronze_wear_strip">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="lower_wear_1">
+      <origin xyz="-0.04 0.155 -0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      <material name="bronze_wear_strip">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing_1">
+      <origin xyz="-0.04 0.155 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_1">
+      <origin xyz="-0.04 0.155 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_0">
+      <origin xyz="0.055 -0.205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.14" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_1">
+      <origin xyz="0.055 0.205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.14" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="inner_ram">
+      <origin xyz="-0.145 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.05 0.032" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="jaw_lower_step">
+      <origin xyz="-0.284 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.086 0.05" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="jaw_upper_step">
+      <origin xyz="-0.28 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.078 0.05" />
+        </geometry>
+      <material name="blued_jaw_steel">
+        <color rgba="0.23 0.25 0.26 1" />
+        </material>
+      </visual>
+    <visual name="grip_insert">
+      <origin xyz="-0.306 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.082 0.075" />
+        </geometry>
+      <material name="hardened_grip_face">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_0">
+      <origin xyz="-0.309 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.084 0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_1">
+      <origin xyz="-0.309 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.084 0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_2">
+      <origin xyz="-0.309 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.084 0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="jaw1_cap_screw_0">
+      <origin xyz="0.055 -0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="jaw1_cap_screw_1">
+      <origin xyz="0.055 0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="jaw1_cap_screw_2">
+      <origin xyz="-0.075 -0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="jaw1_cap_screw_3">
+      <origin xyz="-0.075 0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <collision name="upper_carriage_cap">
+      <origin xyz="-0.02 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.4 0.03" />
+        </geometry>
+      </collision>
+    <collision name="lower_carriage_cap">
+      <origin xyz="-0.02 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.4 0.03" />
+        </geometry>
+      </collision>
+    <collision name="center_web">
+      <origin xyz="0.065 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.09 0.12" />
+        </geometry>
+      </collision>
+    <collision name="upper_wear_0">
+      <origin xyz="-0.04 -0.155 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      </collision>
+    <collision name="lower_wear_0">
+      <origin xyz="-0.04 -0.155 -0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing_0">
+      <origin xyz="-0.04 -0.155 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_0">
+      <origin xyz="-0.04 -0.155 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      </collision>
+    <collision name="upper_wear_1">
+      <origin xyz="-0.04 0.155 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      </collision>
+    <collision name="lower_wear_1">
+      <origin xyz="-0.04 0.155 -0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.052 0.006" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing_1">
+      <origin xyz="-0.04 0.155 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_1">
+      <origin xyz="-0.04 0.155 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.064 0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_0">
+      <origin xyz="0.055 -0.205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.14" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_1">
+      <origin xyz="0.055 0.205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.14" />
+        </geometry>
+      </collision>
+    <collision name="inner_ram">
+      <origin xyz="-0.145 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.05 0.032" />
+        </geometry>
+      </collision>
+    <collision name="jaw_lower_step">
+      <origin xyz="-0.284 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.086 0.05" />
+        </geometry>
+      </collision>
+    <collision name="jaw_upper_step">
+      <origin xyz="-0.28 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.078 0.05" />
+        </geometry>
+      </collision>
+    <collision name="grip_insert">
+      <origin xyz="-0.306 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.082 0.075" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_0">
+      <origin xyz="-0.309 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.084 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_1">
+      <origin xyz="-0.309 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.084 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_2">
+      <origin xyz="-0.309 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.084 0.004" />
+        </geometry>
+      </collision>
+    <collision name="jaw1_cap_screw_0">
+      <origin xyz="0.055 -0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="jaw1_cap_screw_1">
+      <origin xyz="0.055 0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="jaw1_cap_screw_2">
+      <origin xyz="-0.075 -0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="jaw1_cap_screw_3">
+      <origin xyz="-0.075 0.13 0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="housing_to_jaw_0" type="prismatic">
+    <origin xyz="-0.34 0 0" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="jaw_carriage_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="900" velocity="0.18" lower="0" upper="0.025" />
+    </joint>
+  <joint name="housing_to_jaw_1" type="prismatic">
+    <origin xyz="0.34 0 0" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="jaw_carriage_1" />
+    <axis xyz="-1 0 0" />
+    <limit effort="900" velocity="0.18" lower="0" upper="0.025" />
+    </joint>
+  </robot>

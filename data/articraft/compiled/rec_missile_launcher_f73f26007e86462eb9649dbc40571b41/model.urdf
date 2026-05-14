@@ -1,0 +1,427 @@
+<robot name="coastal_defense_launcher">
+  <material name="weathered_olive_drab">
+    <color rgba="0.22 0.29 0.2 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.015 0.017 0.016 1" />
+    </material>
+  <material name="dark_gunmetal">
+    <color rgba="0.18 0.19 0.19 1" />
+    </material>
+  <material name="salt_stained_concrete">
+    <color rgba="0.48 0.5 0.47 1" />
+    </material>
+  <material name="faded_yellow">
+    <color rgba="0.8 0.65 0.15 1" />
+    </material>
+  <link name="base">
+    <visual name="concrete_pad">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="2.2 1.8 0.18" />
+        </geometry>
+      <material name="salt_stained_concrete">
+        <color rgba="0.48 0.5 0.47 1" />
+        </material>
+      </visual>
+    <visual name="armored_plinth">
+      <origin xyz="0 0 0.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.82" length="0.22" />
+        </geometry>
+      <material name="dark_gunmetal">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="lower_race">
+      <origin xyz="0 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.72" length="0.1" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.017 0.016 1" />
+        </material>
+      </visual>
+    <visual name="yaw_index_mark">
+      <origin xyz="0.78 0 0.189" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.06 0.018" />
+        </geometry>
+      <material name="faded_yellow">
+        <color rgba="0.8 0.65 0.15 1" />
+        </material>
+      </visual>
+    <collision name="concrete_pad">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="2.2 1.8 0.18" />
+        </geometry>
+      </collision>
+    <collision name="armored_plinth">
+      <origin xyz="0 0 0.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.82" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="lower_race">
+      <origin xyz="0 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.72" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="yaw_index_mark">
+      <origin xyz="0.78 0 0.189" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.06 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pedestal">
+    <visual name="upper_race">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.68" length="0.12" />
+        </geometry>
+      <material name="dark_gunmetal">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="rotating_column">
+      <origin xyz="0 0 0.32" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.31" length="0.4" />
+        </geometry>
+      <material name="weathered_olive_drab">
+        <color rgba="0.22 0.29 0.2 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_deck">
+      <origin xyz="0.08 0 0.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.95 1.08 0.16" />
+        </geometry>
+      <material name="weathered_olive_drab">
+        <color rgba="0.22 0.29 0.2 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_pos">
+      <origin xyz="0.08 0.4 1.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.12 0.82" />
+        </geometry>
+      <material name="weathered_olive_drab">
+        <color rgba="0.22 0.29 0.2 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_neg">
+      <origin xyz="0.08 -0.4 1.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.12 0.82" />
+        </geometry>
+      <material name="weathered_olive_drab">
+        <color rgba="0.22 0.29 0.2 1" />
+        </material>
+      </visual>
+    <visual name="bearing_boss_pos">
+      <origin xyz="0 0.4 1.1" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.12" />
+        </geometry>
+      <material name="dark_gunmetal">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="bearing_boss_neg">
+      <origin xyz="0 -0.4 1.1" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.12" />
+        </geometry>
+      <material name="dark_gunmetal">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="cheek_tie_bar">
+      <origin xyz="-0.2 0 1.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.92 0.14" />
+        </geometry>
+      <material name="weathered_olive_drab">
+        <color rgba="0.22 0.29 0.2 1" />
+        </material>
+      </visual>
+    <visual name="front_gusset_pos">
+      <origin xyz="0.37 0.4 0.93" rpy="0 0.314159 0" />
+      <geometry>
+        <box size="0.12 0.1 0.55" />
+        </geometry>
+      <material name="dark_gunmetal">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="front_gusset_neg">
+      <origin xyz="0.37 -0.4 0.93" rpy="0 0.314159 0" />
+      <geometry>
+        <box size="0.12 0.1 0.55" />
+        </geometry>
+      <material name="dark_gunmetal">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <collision name="upper_race">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.68" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="rotating_column">
+      <origin xyz="0 0 0.32" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.31" length="0.4" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_deck">
+      <origin xyz="0.08 0 0.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.95 1.08 0.16" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_pos">
+      <origin xyz="0.08 0.4 1.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.12 0.82" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_neg">
+      <origin xyz="0.08 -0.4 1.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.12 0.82" />
+        </geometry>
+      </collision>
+    <collision name="bearing_boss_pos">
+      <origin xyz="0 0.4 1.1" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="bearing_boss_neg">
+      <origin xyz="0 -0.4 1.1" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="cheek_tie_bar">
+      <origin xyz="-0.2 0 1.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.92 0.14" />
+        </geometry>
+      </collision>
+    <collision name="front_gusset_pos">
+      <origin xyz="0.37 0.4 0.93" rpy="0 0.314159 0" />
+      <geometry>
+        <box size="0.12 0.1 0.55" />
+        </geometry>
+      </collision>
+    <collision name="front_gusset_neg">
+      <origin xyz="0.37 -0.4 0.93" rpy="0 0.314159 0" />
+      <geometry>
+        <box size="0.12 0.1 0.55" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pod">
+    <visual name="pod_shell">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_pod_shell.obj" />
+        </geometry>
+      <material name="weathered_olive_drab">
+        <color rgba="0.22 0.29 0.2 1" />
+        </material>
+      </visual>
+    <visual name="front_plate">
+      <origin xyz="1.285 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.42 0.34" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.017 0.016 1" />
+        </material>
+      </visual>
+    <visual name="rear_cap">
+      <origin xyz="-0.435 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.4 0.32" />
+        </geometry>
+      <material name="dark_gunmetal">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="tube_cover_0">
+      <origin xyz="1.318 -0.11 -0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.035" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.017 0.016 1" />
+        </material>
+      </visual>
+    <visual name="tube_cover_1">
+      <origin xyz="1.318 0.11 -0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.035" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.017 0.016 1" />
+        </material>
+      </visual>
+    <visual name="tube_cover_2">
+      <origin xyz="1.318 -0.11 0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.035" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.017 0.016 1" />
+        </material>
+      </visual>
+    <visual name="tube_cover_3">
+      <origin xyz="1.318 0.11 0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.035" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.017 0.016 1" />
+        </material>
+      </visual>
+    <visual name="top_access_panel">
+      <origin xyz="0.36 0 0.232" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.5 0.045" />
+        </geometry>
+      <material name="dark_gunmetal">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="rear_band">
+      <origin xyz="0.04 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.51 0.46" />
+        </geometry>
+      <material name="dark_gunmetal">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="front_band">
+      <origin xyz="0.84 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.51 0.46" />
+        </geometry>
+      <material name="dark_gunmetal">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_pin_pos">
+      <origin xyz="0 0.29 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.1" />
+        </geometry>
+      <material name="dark_gunmetal">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_pin_neg">
+      <origin xyz="0 -0.29 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.1" />
+        </geometry>
+      <material name="dark_gunmetal">
+        <color rgba="0.18 0.19 0.19 1" />
+        </material>
+      </visual>
+    <collision name="pod_shell">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_pod_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_plate">
+      <origin xyz="1.285 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.42 0.34" />
+        </geometry>
+      </collision>
+    <collision name="rear_cap">
+      <origin xyz="-0.435 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.4 0.32" />
+        </geometry>
+      </collision>
+    <collision name="tube_cover_0">
+      <origin xyz="1.318 -0.11 -0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="tube_cover_1">
+      <origin xyz="1.318 0.11 -0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="tube_cover_2">
+      <origin xyz="1.318 -0.11 0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="tube_cover_3">
+      <origin xyz="1.318 0.11 0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="top_access_panel">
+      <origin xyz="0.36 0 0.232" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.5 0.045" />
+        </geometry>
+      </collision>
+    <collision name="rear_band">
+      <origin xyz="0.04 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.51 0.46" />
+        </geometry>
+      </collision>
+    <collision name="front_band">
+      <origin xyz="0.84 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.51 0.46" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_pin_pos">
+      <origin xyz="0 0.29 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_pin_neg">
+      <origin xyz="0 -0.29 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.1" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_pedestal" type="revolute">
+    <origin xyz="0 0 0.5" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="pedestal" />
+    <axis xyz="0 0 1" />
+    <limit effort="18000" velocity="0.35" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="pedestal_to_pod" type="revolute">
+    <origin xyz="0 0 1.1" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="pod" />
+    <axis xyz="0 -1 0" />
+    <limit effort="9000" velocity="0.25" lower="-0.08" upper="0.78" />
+    </joint>
+  </robot>

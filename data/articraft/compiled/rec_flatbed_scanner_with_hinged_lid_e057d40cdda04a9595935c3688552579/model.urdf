@@ -1,0 +1,506 @@
+<robot name="low_profile_flatbed_scanner">
+  <link name="base">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_body_shell.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.85 0.8 1" />
+        </material>
+      </visual>
+    <visual name="glass_bezel">
+      <origin xyz="-0.055 0 0.066" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glass_bezel.obj" />
+        </geometry>
+      <material name="shadow_gray_plastic">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="glass_pane">
+      <origin xyz="-0.055 0 0.0635" rpy="0 0 0" />
+      <geometry>
+        <box size="0.386 0.266 0.003" />
+        </geometry>
+      <material name="slightly_blue_glass">
+        <color rgba="0.45 0.75 0.92 0.48" />
+        </material>
+      </visual>
+    <visual name="scan_reference_strip">
+      <origin xyz="-0.24 0 0.0656" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.266 0.0012" />
+        </geometry>
+      <material name="white_reference_strip">
+        <color rgba="0.94 0.96 0.95 1" />
+        </material>
+      </visual>
+    <visual name="control_panel">
+      <origin xyz="0.224 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/control_panel.obj" />
+        </geometry>
+      <material name="shadow_gray_plastic">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="lcd_window">
+      <origin xyz="0.2 -0.105 0.07175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.03 0.0015" />
+        </geometry>
+      <material name="dark_gray_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lcd_screen">
+      <origin xyz="0.2 -0.105 0.0734" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.0018" />
+        </geometry>
+      <material name="muted_green_lcd">
+        <color rgba="0.22 0.75 0.45 1" />
+        </material>
+      </visual>
+    <visual name="front_panel_seam">
+      <origin xyz="0.158 0 0.0626" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.316 0.0012" />
+        </geometry>
+      <material name="shadow_gray_plastic">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="front_shadow_line">
+      <origin xyz="0.292 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.35 0.003" />
+        </geometry>
+      <material name="shadow_gray_plastic">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_shelf">
+      <origin xyz="-0.272 0 0.066" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.36 0.008" />
+        </geometry>
+      <material name="shadow_gray_plastic">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="hinge_block_0">
+      <origin xyz="-0.266 -0.122 0.0665" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.048 0.009" />
+        </geometry>
+      <material name="shadow_gray_plastic">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="hinge_block_1">
+      <origin xyz="-0.266 0.122 0.0665" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.048 0.009" />
+        </geometry>
+      <material name="shadow_gray_plastic">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_0">
+      <origin xyz="-0.23 -0.152 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.006" />
+        </geometry>
+      <material name="soft_gray_rubber">
+        <color rgba="0.35 0.36 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_1">
+      <origin xyz="-0.23 0.152 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.006" />
+        </geometry>
+      <material name="soft_gray_rubber">
+        <color rgba="0.35 0.36 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_2">
+      <origin xyz="0.23 -0.152 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.006" />
+        </geometry>
+      <material name="soft_gray_rubber">
+        <color rgba="0.35 0.36 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_3">
+      <origin xyz="0.23 0.152 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.006" />
+        </geometry>
+      <material name="soft_gray_rubber">
+        <color rgba="0.35 0.36 0.34 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_body_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="glass_bezel">
+      <origin xyz="-0.055 0 0.066" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/glass_bezel.obj" />
+        </geometry>
+      </collision>
+    <collision name="glass_pane">
+      <origin xyz="-0.055 0 0.0635" rpy="0 0 0" />
+      <geometry>
+        <box size="0.386 0.266 0.003" />
+        </geometry>
+      </collision>
+    <collision name="scan_reference_strip">
+      <origin xyz="-0.24 0 0.0656" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.266 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="control_panel">
+      <origin xyz="0.224 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/control_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="lcd_window">
+      <origin xyz="0.2 -0.105 0.07175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.03 0.0015" />
+        </geometry>
+      </collision>
+    <collision name="lcd_screen">
+      <origin xyz="0.2 -0.105 0.0734" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.0018" />
+        </geometry>
+      </collision>
+    <collision name="front_panel_seam">
+      <origin xyz="0.158 0 0.0626" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.316 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="front_shadow_line">
+      <origin xyz="0.292 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.35 0.003" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_shelf">
+      <origin xyz="-0.272 0 0.066" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.36 0.008" />
+        </geometry>
+      </collision>
+    <collision name="hinge_block_0">
+      <origin xyz="-0.266 -0.122 0.0665" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.048 0.009" />
+        </geometry>
+      </collision>
+    <collision name="hinge_block_1">
+      <origin xyz="-0.266 0.122 0.0665" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.048 0.009" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_0">
+      <origin xyz="-0.23 -0.152 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.006" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_1">
+      <origin xyz="-0.23 0.152 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.006" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_2">
+      <origin xyz="0.23 -0.152 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.006" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_3">
+      <origin xyz="0.23 0.152 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="lid_shell">
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lid_shell.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.85 0.8 1" />
+        </material>
+      </visual>
+    <visual name="underside_pad">
+      <origin xyz="0.215 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.37 0.255 0.004" />
+        </geometry>
+      <material name="matte_white_backing">
+        <color rgba="0.78 0.78 0.72 1" />
+        </material>
+      </visual>
+    <visual name="top_inset_panel">
+      <origin xyz="0.215 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.35 0.26 0.002" />
+        </geometry>
+      <material name="subtle_lid_inset">
+        <color rgba="0.8 0.79 0.74 1" />
+        </material>
+      </visual>
+    <visual name="front_grip_pad">
+      <origin xyz="0.418 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.12 0.003" />
+        </geometry>
+      <material name="soft_gray_rubber">
+        <color rgba="0.35 0.36 0.34 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel_0">
+      <origin xyz="0 -0.118 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.064" />
+        </geometry>
+      <material name="shadow_gray_plastic">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel_1">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.064" />
+        </geometry>
+      <material name="shadow_gray_plastic">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel_2">
+      <origin xyz="0 0.118 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.064" />
+        </geometry>
+      <material name="shadow_gray_plastic">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <collision name="lid_shell">
+      <origin xyz="0.215 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lid_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="underside_pad">
+      <origin xyz="0.215 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.37 0.255 0.004" />
+        </geometry>
+      </collision>
+    <collision name="top_inset_panel">
+      <origin xyz="0.215 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.35 0.26 0.002" />
+        </geometry>
+      </collision>
+    <collision name="front_grip_pad">
+      <origin xyz="0.418 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.12 0.003" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel_0">
+      <origin xyz="0 -0.118 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.064" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel_1">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.064" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel_2">
+      <origin xyz="0 0.118 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.064" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="power_button">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.006" />
+        </geometry>
+      <material name="button_gray">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="button_mark">
+      <origin xyz="0 0 0.0064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012075 0.002 0.0008" />
+        </geometry>
+      <material name="white_control_marking">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="button_mark">
+      <origin xyz="0 0 0.0064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012075 0.002 0.0008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="scan_button">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/scan_button_cap.obj" />
+        </geometry>
+      <material name="scan_blue_button">
+        <color rgba="0.18 0.38 0.78 1" />
+        </material>
+      </visual>
+    <visual name="button_mark">
+      <origin xyz="0 0 0.0064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0008" />
+        </geometry>
+      <material name="white_control_marking">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/scan_button_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_mark">
+      <origin xyz="0 0 0.0064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="copy_button">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/copy_button_cap.obj" />
+        </geometry>
+      <material name="copy_green_button">
+        <color rgba="0.12 0.56 0.25 1" />
+        </material>
+      </visual>
+    <visual name="button_mark">
+      <origin xyz="0 0 0.0064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0008" />
+        </geometry>
+      <material name="white_control_marking">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/copy_button_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_mark">
+      <origin xyz="0 0 0.0064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pdf_button">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/pdf_button_cap.obj" />
+        </geometry>
+      <material name="pdf_red_button">
+        <color rgba="0.74 0.18 0.14 1" />
+        </material>
+      </visual>
+    <visual name="button_mark">
+      <origin xyz="0 0 0.0064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0008" />
+        </geometry>
+      <material name="white_control_marking">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/pdf_button_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_mark">
+      <origin xyz="0 0 0.0064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0008" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="lid_hinge" type="revolute">
+    <origin xyz="-0.266 0 0.077" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="lid" />
+    <axis xyz="0 -1 0" />
+    <limit effort="8" velocity="1.6" lower="0" upper="1.32" />
+    </joint>
+  <joint name="power_press" type="prismatic">
+    <origin xyz="0.21 0.126 0.071" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="power_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1.5" velocity="0.04" lower="0" upper="0.003" />
+    </joint>
+  <joint name="scan_press" type="prismatic">
+    <origin xyz="0.236 0.068 0.071" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="scan_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1.5" velocity="0.04" lower="0" upper="0.003" />
+    </joint>
+  <joint name="copy_press" type="prismatic">
+    <origin xyz="0.236 0.02 0.071" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="copy_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1.5" velocity="0.04" lower="0" upper="0.003" />
+    </joint>
+  <joint name="pdf_press" type="prismatic">
+    <origin xyz="0.236 -0.028 0.071" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="pdf_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1.5" velocity="0.04" lower="0" upper="0.003" />
+    </joint>
+  </robot>

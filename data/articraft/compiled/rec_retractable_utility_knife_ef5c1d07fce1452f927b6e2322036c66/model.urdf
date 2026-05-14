@@ -1,0 +1,302 @@
+<robot name="slim_utility_knife">
+  <material name="matte_graphite">
+    <color rgba="0.08 0.085 0.09 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="satin_steel">
+    <color rgba="0.72 0.72 0.68 1" />
+    </material>
+  <material name="blackened_steel">
+    <color rgba="0.12 0.12 0.12 1" />
+    </material>
+  <material name="safety_red">
+    <color rgba="0.76 0.05 0.025 1" />
+    </material>
+  <link name="handle">
+    <visual name="handle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/handle_shell.obj" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="side_grip_0">
+      <origin xyz="-0.04 0.0127 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.0022 0.01" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="side_grip_1">
+      <origin xyz="-0.04 -0.0127 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.0022 0.01" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="rivet_0">
+      <origin xyz="-0.066 0.013 0.02" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0034" length="0.0025" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="rivet_1">
+      <origin xyz="0.056 0.013 0.02" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0034" length="0.0025" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="latch_bushing">
+      <origin xyz="-0.047 0.01325 0.017" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0054" length="0.0026" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.12 0.12 0.12 1" />
+        </material>
+      </visual>
+    <collision name="handle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/handle_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_grip_0">
+      <origin xyz="-0.04 0.0127 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.0022 0.01" />
+        </geometry>
+      </collision>
+    <collision name="side_grip_1">
+      <origin xyz="-0.04 -0.0127 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.0022 0.01" />
+        </geometry>
+      </collision>
+    <collision name="rivet_0">
+      <origin xyz="-0.066 0.013 0.02" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0034" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="rivet_1">
+      <origin xyz="0.056 0.013 0.02" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0034" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="latch_bushing">
+      <origin xyz="-0.047 0.01325 0.017" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0054" length="0.0026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carriage">
+    <visual name="carrier_plate">
+      <origin xyz="-0.02 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.009 0.0048" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.12 0.12 0.12 1" />
+        </material>
+      </visual>
+    <visual name="guide_shoe_0">
+      <origin xyz="-0.02 0.0045 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.003 0.003" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.12 0.12 0.12 1" />
+        </material>
+      </visual>
+    <visual name="guide_shoe_1">
+      <origin xyz="-0.02 -0.0045 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.003 0.003" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.12 0.12 0.12 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <geometry>
+        <mesh filename="assets/meshes/utility_blade.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="slider_stalk">
+      <origin xyz="-0.02 0 0.0205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0055 0.02" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.12 0.12 0.12 1" />
+        </material>
+      </visual>
+    <visual name="thumb_pad">
+      <origin xyz="-0.02 0 0.0315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.015 0.006" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="thumb_ridge_0">
+      <origin xyz="-0.03 0 0.0355" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.0155 0.002" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="thumb_ridge_1">
+      <origin xyz="-0.02 0 0.0355" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.0155 0.002" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="thumb_ridge_2">
+      <origin xyz="-0.01 0 0.0355" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.0155 0.002" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <collision name="carrier_plate">
+      <origin xyz="-0.02 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.009 0.0048" />
+        </geometry>
+      </collision>
+    <collision name="guide_shoe_0">
+      <origin xyz="-0.02 0.0045 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.003 0.003" />
+        </geometry>
+      </collision>
+    <collision name="guide_shoe_1">
+      <origin xyz="-0.02 -0.0045 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.003 0.003" />
+        </geometry>
+      </collision>
+    <collision name="blade">
+      <geometry>
+        <mesh filename="assets/meshes/utility_blade.obj" />
+        </geometry>
+      </collision>
+    <collision name="slider_stalk">
+      <origin xyz="-0.02 0 0.0205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0055 0.02" />
+        </geometry>
+      </collision>
+    <collision name="thumb_pad">
+      <origin xyz="-0.02 0 0.0315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.015 0.006" />
+        </geometry>
+      </collision>
+    <collision name="thumb_ridge_0">
+      <origin xyz="-0.03 0 0.0355" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.0155 0.002" />
+        </geometry>
+      </collision>
+    <collision name="thumb_ridge_1">
+      <origin xyz="-0.02 0 0.0355" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.0155 0.002" />
+        </geometry>
+      </collision>
+    <collision name="thumb_ridge_2">
+      <origin xyz="-0.01 0 0.0355" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.0155 0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="safety_latch">
+    <visual name="latch_pivot">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0047" length="0.003" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.12 0.12 0.12 1" />
+        </material>
+      </visual>
+    <visual name="latch_tab">
+      <origin xyz="0.018 0.0022 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.0032 0.007" />
+        </geometry>
+      <material name="safety_red">
+        <color rgba="0.76 0.05 0.025 1" />
+        </material>
+      </visual>
+    <visual name="latch_tip">
+      <origin xyz="0.033 0.0024 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.0035 0.009" />
+        </geometry>
+      <material name="safety_red">
+        <color rgba="0.76 0.05 0.025 1" />
+        </material>
+      </visual>
+    <collision name="latch_pivot">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0047" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="latch_tab">
+      <origin xyz="0.018 0.0022 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.0032 0.007" />
+        </geometry>
+      </collision>
+    <collision name="latch_tip">
+      <origin xyz="0.033 0.0024 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.0035 0.009" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="handle_to_carriage" type="prismatic">
+    <parent link="handle" />
+    <child link="carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="0.35" lower="0" upper="0.032" />
+    </joint>
+  <joint name="handle_to_safety_latch" type="revolute">
+    <origin xyz="-0.047 0.0155 0.017" rpy="0 0 0" />
+    <parent link="handle" />
+    <child link="safety_latch" />
+    <axis xyz="0 1 0" />
+    <limit effort="1.2" velocity="3" lower="-0.45" upper="0.45" />
+    </joint>
+  </robot>

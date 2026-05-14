@@ -1,0 +1,539 @@
+<robot name="pedestal_peanut_vendor">
+  <link name="pedestal">
+    <visual name="floor_foot">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.19" length="0.05" />
+        </geometry>
+      <material name="dark polished pedestal">
+        <color rgba="0.08 0.075 0.07 1" />
+        </material>
+      </visual>
+    <visual name="base_collar">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.03" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="slim_post">
+      <origin xyz="0 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.5" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="top_flange">
+      <origin xyz="0 0 0.6" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.05" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.188" length="0.012" />
+        </geometry>
+      <material name="black rubber">
+        <color rgba="0.015 0.012 0.01 1" />
+        </material>
+      </visual>
+    <collision name="floor_foot">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.19" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="base_collar">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="slim_post">
+      <origin xyz="0 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.5" />
+        </geometry>
+      </collision>
+    <collision name="top_flange">
+      <origin xyz="0 0 0.6" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.188" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="mechanism_body">
+    <visual name="rounded_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_mechanism_body.obj" />
+        </geometry>
+      <material name="deep red enamel">
+        <color rgba="0.55 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="front_coin_plate">
+      <origin xyz="0 -0.166 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.012 0.175" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="coin_slot">
+      <origin xyz="-0.07 -0.173 0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.008 0.018" />
+        </geometry>
+      <material name="black rubber">
+        <color rgba="0.015 0.012 0.01 1" />
+        </material>
+      </visual>
+    <visual name="price_label">
+      <origin xyz="-0.07 -0.174 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.006 0.04" />
+        </geometry>
+      <material name="cream painted label">
+        <color rgba="0.95 0.84 0.58 1" />
+        </material>
+      </visual>
+    <visual name="knob_bearing">
+      <origin xyz="0 -0.179 0.145" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.038" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="dispense_tray">
+      <origin xyz="0 -0.185 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.06 0.03" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="tray_front_lip">
+      <origin xyz="0 -0.214 0.078" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.006 0.055" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="tray_side_0">
+      <origin xyz="-0.072 -0.185 0.068" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.054 0.045" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="tray_side_1">
+      <origin xyz="0.072 -0.185 0.068" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.054 0.045" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="return_hinge_leaf">
+      <origin xyz="0.117 -0.169 0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.01 0.022" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <collision name="rounded_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_mechanism_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_coin_plate">
+      <origin xyz="0 -0.166 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.012 0.175" />
+        </geometry>
+      </collision>
+    <collision name="coin_slot">
+      <origin xyz="-0.07 -0.173 0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.008 0.018" />
+        </geometry>
+      </collision>
+    <collision name="price_label">
+      <origin xyz="-0.07 -0.174 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.006 0.04" />
+        </geometry>
+      </collision>
+    <collision name="knob_bearing">
+      <origin xyz="0 -0.179 0.145" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.038" />
+        </geometry>
+      </collision>
+    <collision name="dispense_tray">
+      <origin xyz="0 -0.185 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.06 0.03" />
+        </geometry>
+      </collision>
+    <collision name="tray_front_lip">
+      <origin xyz="0 -0.214 0.078" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.006 0.055" />
+        </geometry>
+      </collision>
+    <collision name="tray_side_0">
+      <origin xyz="-0.072 -0.185 0.068" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.054 0.045" />
+        </geometry>
+      </collision>
+    <collision name="tray_side_1">
+      <origin xyz="0.072 -0.185 0.068" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.054 0.045" />
+        </geometry>
+      </collision>
+    <collision name="return_hinge_leaf">
+      <origin xyz="0.117 -0.169 0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.01 0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="glass_jar">
+    <visual name="bottom_ring">
+      <geometry>
+        <mesh filename="assets/meshes/jar_bottom_ring.obj" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="glass_floor">
+      <origin xyz="0 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.162" length="0.012" />
+        </geometry>
+      <material name="slightly blue transparent glass">
+        <color rgba="0.62 0.88 1 0.28" />
+        </material>
+      </visual>
+    <visual name="glass_wall">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_glass_cylinder.obj" />
+        </geometry>
+      <material name="slightly blue transparent glass">
+        <color rgba="0.62 0.88 1 0.28" />
+        </material>
+      </visual>
+    <visual name="peanut_mound">
+      <geometry>
+        <mesh filename="assets/meshes/single_peanut_mound.obj" />
+        </geometry>
+      <material name="visible peanuts">
+        <color rgba="0.88 0.58 0.22 1" />
+        </material>
+      </visual>
+    <visual name="top_ring">
+      <geometry>
+        <mesh filename="assets/meshes/jar_top_ring.obj" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_strap_0">
+      <origin xyz="-0.07 0.174 0.446" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.056 0.02" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_strap_1">
+      <origin xyz="0.07 0.174 0.446" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.056 0.02" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_knuckle_0">
+      <origin xyz="-0.07 0.198 0.46" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.052" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_knuckle_1">
+      <origin xyz="0.07 0.198 0.46" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.052" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <collision name="bottom_ring">
+      <geometry>
+        <mesh filename="assets/meshes/jar_bottom_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="glass_floor">
+      <origin xyz="0 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.162" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="glass_wall">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_glass_cylinder.obj" />
+        </geometry>
+      </collision>
+    <collision name="peanut_mound">
+      <geometry>
+        <mesh filename="assets/meshes/single_peanut_mound.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_ring">
+      <geometry>
+        <mesh filename="assets/meshes/jar_top_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_strap_0">
+      <origin xyz="-0.07 0.174 0.446" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.056 0.02" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_strap_1">
+      <origin xyz="0.07 0.174 0.446" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.056 0.02" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_knuckle_0">
+      <origin xyz="-0.07 0.198 0.46" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_knuckle_1">
+      <origin xyz="0.07 0.198 0.46" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.052" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="refill_lid">
+    <visual name="domed_cap">
+      <geometry>
+        <mesh filename="assets/meshes/domed_refill_lid.obj" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="center_hinge_knuckle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.058" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_strap_0">
+      <origin xyz="-0.026 -0.088 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.176 0.008" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_strap_1">
+      <origin xyz="0.026 -0.088 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.176 0.008" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <collision name="domed_cap">
+      <geometry>
+        <mesh filename="assets/meshes/domed_refill_lid.obj" />
+        </geometry>
+      </collision>
+    <collision name="center_hinge_knuckle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_strap_0">
+      <origin xyz="-0.026 -0.088 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.176 0.008" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_strap_1">
+      <origin xyz="0.026 -0.088 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.176 0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dispense_knob">
+    <visual name="front_shaft">
+      <origin xyz="0 -0.015 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.03" />
+        </geometry>
+      <material name="warm brass">
+        <color rgba="0.94 0.7 0.24 1" />
+        </material>
+      </visual>
+    <visual name="ribbed_dial">
+      <geometry>
+        <mesh filename="assets/meshes/ribbed_dispense_knob.obj" />
+        </geometry>
+      <material name="warm brass">
+        <color rgba="0.94 0.7 0.24 1" />
+        </material>
+      </visual>
+    <visual name="turning_bar">
+      <origin xyz="0 -0.074 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.012 0.018" />
+        </geometry>
+      <material name="warm brass">
+        <color rgba="0.94 0.7 0.24 1" />
+        </material>
+      </visual>
+    <collision name="front_shaft">
+      <origin xyz="0 -0.015 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="ribbed_dial">
+      <geometry>
+        <mesh filename="assets/meshes/ribbed_dispense_knob.obj" />
+        </geometry>
+      </collision>
+    <collision name="turning_bar">
+      <origin xyz="0 -0.074 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.012 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="coin_return_cover">
+    <visual name="return_flap">
+      <origin xyz="-0.036 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.066" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="side_hinge_barrel">
+      <geometry>
+        <cylinder radius="0.007" length="0.08" />
+        </geometry>
+      <material name="polished chrome">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="finger_pull">
+      <origin xyz="-0.036 -0.014 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.004 0.01" />
+        </geometry>
+      <material name="black rubber">
+        <color rgba="0.015 0.012 0.01 1" />
+        </material>
+      </visual>
+    <collision name="return_flap">
+      <origin xyz="-0.036 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.066" />
+        </geometry>
+      </collision>
+    <collision name="side_hinge_barrel">
+      <geometry>
+        <cylinder radius="0.007" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="finger_pull">
+      <origin xyz="-0.036 -0.014 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.004 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="pedestal_to_body" type="fixed">
+    <origin xyz="0 0 0.625" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="mechanism_body" />
+    </joint>
+  <joint name="body_to_jar" type="fixed">
+    <origin xyz="0 0 0.28" rpy="0 0 0" />
+    <parent link="mechanism_body" />
+    <child link="glass_jar" />
+    </joint>
+  <joint name="jar_to_lid" type="revolute">
+    <origin xyz="0 0.198 0.46" rpy="0 0 0" />
+    <parent link="glass_jar" />
+    <child link="refill_lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="3" velocity="2" lower="0" upper="1.2" />
+    </joint>
+  <joint name="body_to_knob" type="continuous">
+    <origin xyz="0 -0.198 0.145" rpy="0 0 0" />
+    <parent link="mechanism_body" />
+    <child link="dispense_knob" />
+    <axis xyz="0 -1 0" />
+    <limit effort="2" velocity="8" />
+    </joint>
+  <joint name="body_to_coin_cover" type="revolute">
+    <origin xyz="0.153 -0.181 0.112" rpy="0 0 0" />
+    <parent link="mechanism_body" />
+    <child link="coin_return_cover" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="2" lower="0" upper="1.1" />
+    </joint>
+  </robot>

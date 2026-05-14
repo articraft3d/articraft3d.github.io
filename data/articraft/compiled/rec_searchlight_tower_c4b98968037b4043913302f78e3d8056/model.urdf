@@ -1,0 +1,322 @@
+<robot name="searchlight_tower">
+  <material name="galvanized_steel">
+    <color rgba="0.55 0.58 0.58 1" />
+    </material>
+  <material name="dark_powdercoat">
+    <color rgba="0.04 0.045 0.05 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="polished_reflector">
+    <color rgba="0.86 0.84 0.78 1" />
+    </material>
+  <material name="warm_lamp_glow">
+    <color rgba="1 0.78 0.32 1" />
+    </material>
+  <material name="pale_glass">
+    <color rgba="0.7 0.86 1 0.42" />
+    </material>
+  <link name="mast">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.7 0.04" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="main_mast">
+      <origin xyz="0 0 0.86" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="1.64" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="fixed_top_flange">
+      <origin xyz="0 0 1.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.04" />
+        </geometry>
+      <material name="dark_powdercoat" />
+      </visual>
+    <visual name="mast_foot_collar">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.06" />
+        </geometry>
+      <material name="dark_powdercoat" />
+      </visual>
+    <visual name="tower_brace_0">
+      <origin xyz="0.156 0.156 0.75" rpy="0 0.243793 -2.35619" />
+      <geometry>
+        <cylinder radius="0.018" length="1.45297" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="tower_brace_1">
+      <origin xyz="-0.156 0.156 0.75" rpy="0 0.243793 -0.785398" />
+      <geometry>
+        <cylinder radius="0.018" length="1.45297" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="tower_brace_2">
+      <origin xyz="-0.156 -0.156 0.75" rpy="0 0.243793 0.785398" />
+      <geometry>
+        <cylinder radius="0.018" length="1.45297" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="tower_brace_3">
+      <origin xyz="0.156 -0.156 0.75" rpy="0 0.243793 2.35619" />
+      <geometry>
+        <cylinder radius="0.018" length="1.45297" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.7 0.04" />
+        </geometry>
+      </collision>
+    <collision name="main_mast">
+      <origin xyz="0 0 0.86" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="1.64" />
+        </geometry>
+      </collision>
+    <collision name="fixed_top_flange">
+      <origin xyz="0 0 1.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="mast_foot_collar">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="tower_brace_0">
+      <origin xyz="0.156 0.156 0.75" rpy="0 0.243793 -2.35619" />
+      <geometry>
+        <cylinder radius="0.018" length="1.45297" />
+        </geometry>
+      </collision>
+    <collision name="tower_brace_1">
+      <origin xyz="-0.156 0.156 0.75" rpy="0 0.243793 -0.785398" />
+      <geometry>
+        <cylinder radius="0.018" length="1.45297" />
+        </geometry>
+      </collision>
+    <collision name="tower_brace_2">
+      <origin xyz="-0.156 -0.156 0.75" rpy="0 0.243793 0.785398" />
+      <geometry>
+        <cylinder radius="0.018" length="1.45297" />
+        </geometry>
+      </collision>
+    <collision name="tower_brace_3">
+      <origin xyz="0.156 -0.156 0.75" rpy="0 0.243793 2.35619" />
+      <geometry>
+        <cylinder radius="0.018" length="1.45297" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pan_stage">
+    <visual name="rotary_bearing">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.05" />
+        </geometry>
+      <material name="dark_powdercoat" />
+      </visual>
+    <visual name="swivel_cap">
+      <origin xyz="0 0 0.071" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.045" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="yoke_base">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.5 0.045" />
+        </geometry>
+      <material name="dark_powdercoat" />
+      </visual>
+    <visual name="yoke_arm_0">
+      <origin xyz="0 -0.22 0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.035 0.31" />
+        </geometry>
+      <material name="dark_powdercoat" />
+      </visual>
+    <visual name="bearing_face_0">
+      <origin xyz="0 -0.2 0.31" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.006" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="yoke_arm_1">
+      <origin xyz="0 0.22 0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.035 0.31" />
+        </geometry>
+      <material name="dark_powdercoat" />
+      </visual>
+    <visual name="bearing_face_1">
+      <origin xyz="0 0.2 0.31" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.006" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <collision name="rotary_bearing">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="swivel_cap">
+      <origin xyz="0 0 0.071" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="yoke_base">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.5 0.045" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_0">
+      <origin xyz="0 -0.22 0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.035 0.31" />
+        </geometry>
+      </collision>
+    <collision name="bearing_face_0">
+      <origin xyz="0 -0.2 0.31" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_1">
+      <origin xyz="0 0.22 0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.035 0.31" />
+        </geometry>
+      </collision>
+    <collision name="bearing_face_1">
+      <origin xyz="0 0.2 0.31" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lamp_head">
+    <visual name="lamp_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lamp_shell.obj" />
+        </geometry>
+      <material name="dark_powdercoat" />
+      </visual>
+    <visual name="reflector_bowl">
+      <geometry>
+        <mesh filename="assets/meshes/reflector_bowl.obj" />
+        </geometry>
+      <material name="polished_reflector" />
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0.238 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.158" length="0.012" />
+        </geometry>
+      <material name="pale_glass" />
+      </visual>
+    <visual name="bulb">
+      <origin xyz="0.045 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      <material name="warm_lamp_glow" />
+      </visual>
+    <visual name="bulb_stem">
+      <origin xyz="-0.082 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.225" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="trunnion_hub_0">
+      <origin xyz="0 -0.172 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.054" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="trunnion_hub_1">
+      <origin xyz="0 0.172 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.054" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <collision name="lamp_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lamp_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="reflector_bowl">
+      <geometry>
+        <mesh filename="assets/meshes/reflector_bowl.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_lens">
+      <origin xyz="0.238 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.158" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="bulb">
+      <origin xyz="0.045 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      </collision>
+    <collision name="bulb_stem">
+      <origin xyz="-0.082 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.225" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_hub_0">
+      <origin xyz="0 -0.172 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.054" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_hub_1">
+      <origin xyz="0 0.172 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.054" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="pan_joint" type="revolute">
+    <origin xyz="0 0 1.72" rpy="0 0 0" />
+    <parent link="mast" />
+    <child link="pan_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="40" velocity="1.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="tilt_joint" type="revolute">
+    <origin xyz="0 0 0.31" rpy="0 0 0" />
+    <parent link="pan_stage" />
+    <child link="lamp_head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="1" lower="-0.65" upper="0.85" />
+    </joint>
+  </robot>

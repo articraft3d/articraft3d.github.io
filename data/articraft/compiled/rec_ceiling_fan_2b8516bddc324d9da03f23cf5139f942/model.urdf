@@ -1,0 +1,755 @@
+<robot name="ceiling_fan">
+  <material name="ceiling_white">
+    <color rgba="0.9 0.88 0.84 1" />
+    </material>
+  <material name="satin_nickel">
+    <color rgba="0.62 0.6 0.55 1" />
+    </material>
+  <material name="shadow_black">
+    <color rgba="0.025 0.024 0.022 1" />
+    </material>
+  <material name="walnut_blade">
+    <color rgba="0.38 0.2 0.1 1" />
+    </material>
+  <material name="dark_bronze">
+    <color rgba="0.17 0.13 0.1 1" />
+    </material>
+  <link name="ceiling_mount">
+    <inertial>
+      <origin xyz="0 0 -0.31" rpy="0 0 0" />
+      <mass value="5.5" />
+      <inertia ixx="0.22" ixy="0" ixz="0" iyy="0.22" iyz="0" izz="0.11" />
+      </inertial>
+    <visual name="ceiling_panel">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.7 0.018" />
+        </geometry>
+      <material name="ceiling_white">
+        <color rgba="0.9 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="canopy_bell">
+      <geometry>
+        <mesh filename="assets/meshes/canopy_bell.obj" />
+        </geometry>
+      <material name="satin_nickel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="downrod">
+      <origin xyz="0 0 -0.294" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.27" />
+        </geometry>
+      <material name="satin_nickel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="upper_collar">
+      <origin xyz="0 0 -0.164" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.032" />
+        </geometry>
+      <material name="satin_nickel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="lower_collar">
+      <origin xyz="0 0 -0.417" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.04" />
+        </geometry>
+      <material name="satin_nickel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="upper_motor">
+      <geometry>
+        <mesh filename="assets/meshes/upper_motor.obj" />
+        </geometry>
+      <material name="satin_nickel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_0">
+      <origin xyz="-0.062 0 -0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.03 0.125" />
+        </geometry>
+      <material name="satin_nickel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_1">
+      <origin xyz="0.062 0 -0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.03 0.125" />
+        </geometry>
+      <material name="satin_nickel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0 0 -0.41" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.032 0.022" />
+        </geometry>
+      <material name="satin_nickel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="vent_slot_0">
+      <origin xyz="0.183 0 -0.52" rpy="0 0 0" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="vent_slot_1">
+      <origin xyz="0.158483 0.0915 -0.52" rpy="0 0 0.523599" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="vent_slot_2">
+      <origin xyz="0.0915 0.158483 -0.52" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="vent_slot_3">
+      <origin xyz="1.12055e-17 0.183 -0.52" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="vent_slot_4">
+      <origin xyz="-0.0915 0.158483 -0.52" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="vent_slot_5">
+      <origin xyz="-0.158483 0.0915 -0.52" rpy="0 0 2.61799" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="vent_slot_6">
+      <origin xyz="-0.183 2.2411e-17 -0.52" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="vent_slot_7">
+      <origin xyz="-0.158483 -0.0915 -0.52" rpy="0 0 3.66519" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="vent_slot_8">
+      <origin xyz="-0.0915 -0.158483 -0.52" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="vent_slot_9">
+      <origin xyz="-3.36166e-17 -0.183 -0.52" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="vent_slot_10">
+      <origin xyz="0.0915 -0.158483 -0.52" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="vent_slot_11">
+      <origin xyz="0.158483 -0.0915 -0.52" rpy="0 0 5.75959" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <collision name="ceiling_panel">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.7 0.018" />
+        </geometry>
+      </collision>
+    <collision name="canopy_bell">
+      <geometry>
+        <mesh filename="assets/meshes/canopy_bell.obj" />
+        </geometry>
+      </collision>
+    <collision name="downrod">
+      <origin xyz="0 0 -0.294" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.27" />
+        </geometry>
+      </collision>
+    <collision name="upper_collar">
+      <origin xyz="0 0 -0.164" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="lower_collar">
+      <origin xyz="0 0 -0.417" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="upper_motor">
+      <geometry>
+        <mesh filename="assets/meshes/upper_motor.obj" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_0">
+      <origin xyz="-0.062 0 -0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.03 0.125" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_1">
+      <origin xyz="0.062 0 -0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.03 0.125" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0 0 -0.41" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.032 0.022" />
+        </geometry>
+      </collision>
+    <collision name="vent_slot_0">
+      <origin xyz="0.183 0 -0.52" rpy="0 0 0" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="vent_slot_1">
+      <origin xyz="0.158483 0.0915 -0.52" rpy="0 0 0.523599" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="vent_slot_2">
+      <origin xyz="0.0915 0.158483 -0.52" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="vent_slot_3">
+      <origin xyz="1.12055e-17 0.183 -0.52" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="vent_slot_4">
+      <origin xyz="-0.0915 0.158483 -0.52" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="vent_slot_5">
+      <origin xyz="-0.158483 0.0915 -0.52" rpy="0 0 2.61799" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="vent_slot_6">
+      <origin xyz="-0.183 2.2411e-17 -0.52" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="vent_slot_7">
+      <origin xyz="-0.158483 -0.0915 -0.52" rpy="0 0 3.66519" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="vent_slot_8">
+      <origin xyz="-0.0915 -0.158483 -0.52" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="vent_slot_9">
+      <origin xyz="-3.36166e-17 -0.183 -0.52" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="vent_slot_10">
+      <origin xyz="0.0915 -0.158483 -0.52" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="vent_slot_11">
+      <origin xyz="0.158483 -0.0915 -0.52" rpy="0 0 5.75959" />
+      <geometry>
+        <box size="0.005 0.026 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotor">
+    <inertial>
+      <origin xyz="0 0 -0.07" rpy="0 0 0" />
+      <mass value="3.8" />
+      <inertia ixx="0.46664" ixy="0" ixz="0" iyy="0.46664" iyz="0" izz="0.931" />
+      </inertial>
+    <visual name="lower_motor">
+      <geometry>
+        <mesh filename="assets/meshes/lower_motor.obj" />
+        </geometry>
+      <material name="satin_nickel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="bottom_finial">
+      <origin xyz="0 0 -0.176" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.073" length="0.038" />
+        </geometry>
+      <material name="satin_nickel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="bearing_socket">
+      <geometry>
+        <cylinder radius="0.052" length="0.028" />
+        </geometry>
+      <material name="satin_nickel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="blade_0">
+      <geometry>
+        <mesh filename="assets/meshes/blade_0.obj" />
+        </geometry>
+      <material name="walnut_blade">
+        <color rgba="0.38 0.2 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_0">
+      <origin xyz="0.202 0 -0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.026 0.018" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.17 0.13 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_clamp_0">
+      <origin xyz="0.318 0 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.098 0.014" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.17 0.13 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_screw_0_0">
+      <origin xyz="0.324 -0.03 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="blade_screw_0_1">
+      <origin xyz="0.324 0.03 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="blade_1">
+      <geometry>
+        <mesh filename="assets/meshes/blade_1.obj" />
+        </geometry>
+      <material name="walnut_blade">
+        <color rgba="0.38 0.2 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_1">
+      <origin xyz="0.0624214 0.192113 -0.064" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.205 0.026 0.018" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.17 0.13 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_clamp_1">
+      <origin xyz="0.0982674 0.302436 -0.06" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.112 0.098 0.014" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.17 0.13 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_screw_1_0">
+      <origin xyz="0.128653 0.298872 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="blade_screw_1_1">
+      <origin xyz="0.0715898 0.317413 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="blade_2">
+      <geometry>
+        <mesh filename="assets/meshes/blade_2.obj" />
+        </geometry>
+      <material name="walnut_blade">
+        <color rgba="0.38 0.2 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_2">
+      <origin xyz="-0.163421 0.118733 -0.064" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.205 0.026 0.018" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.17 0.13 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_clamp_2">
+      <origin xyz="-0.257267 0.186916 -0.06" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.112 0.098 0.014" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.17 0.13 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_screw_2_0">
+      <origin xyz="-0.244488 0.214713 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="blade_screw_2_1">
+      <origin xyz="-0.279755 0.166172 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="blade_3">
+      <geometry>
+        <mesh filename="assets/meshes/blade_3.obj" />
+        </geometry>
+      <material name="walnut_blade">
+        <color rgba="0.38 0.2 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_3">
+      <origin xyz="-0.163421 -0.118733 -0.064" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.205 0.026 0.018" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.17 0.13 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_clamp_3">
+      <origin xyz="-0.257267 -0.186916 -0.06" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.112 0.098 0.014" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.17 0.13 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_screw_3_0">
+      <origin xyz="-0.279755 -0.166172 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="blade_screw_3_1">
+      <origin xyz="-0.244488 -0.214713 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="blade_4">
+      <geometry>
+        <mesh filename="assets/meshes/blade_4.obj" />
+        </geometry>
+      <material name="walnut_blade">
+        <color rgba="0.38 0.2 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_4">
+      <origin xyz="0.0624214 -0.192113 -0.064" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.205 0.026 0.018" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.17 0.13 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_clamp_4">
+      <origin xyz="0.0982674 -0.302436 -0.06" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.112 0.098 0.014" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.17 0.13 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_screw_4_0">
+      <origin xyz="0.0715898 -0.317413 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="blade_screw_4_1">
+      <origin xyz="0.128653 -0.298872 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <collision name="lower_motor">
+      <geometry>
+        <mesh filename="assets/meshes/lower_motor.obj" />
+        </geometry>
+      </collision>
+    <collision name="bottom_finial">
+      <origin xyz="0 0 -0.176" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.073" length="0.038" />
+        </geometry>
+      </collision>
+    <collision name="bearing_socket">
+      <geometry>
+        <cylinder radius="0.052" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="blade_0">
+      <geometry>
+        <mesh filename="assets/meshes/blade_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_arm_0">
+      <origin xyz="0.202 0 -0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.026 0.018" />
+        </geometry>
+      </collision>
+    <collision name="blade_clamp_0">
+      <origin xyz="0.318 0 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.098 0.014" />
+        </geometry>
+      </collision>
+    <collision name="blade_screw_0_0">
+      <origin xyz="0.324 -0.03 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="blade_screw_0_1">
+      <origin xyz="0.324 0.03 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="blade_1">
+      <geometry>
+        <mesh filename="assets/meshes/blade_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_arm_1">
+      <origin xyz="0.0624214 0.192113 -0.064" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.205 0.026 0.018" />
+        </geometry>
+      </collision>
+    <collision name="blade_clamp_1">
+      <origin xyz="0.0982674 0.302436 -0.06" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.112 0.098 0.014" />
+        </geometry>
+      </collision>
+    <collision name="blade_screw_1_0">
+      <origin xyz="0.128653 0.298872 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="blade_screw_1_1">
+      <origin xyz="0.0715898 0.317413 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="blade_2">
+      <geometry>
+        <mesh filename="assets/meshes/blade_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_arm_2">
+      <origin xyz="-0.163421 0.118733 -0.064" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.205 0.026 0.018" />
+        </geometry>
+      </collision>
+    <collision name="blade_clamp_2">
+      <origin xyz="-0.257267 0.186916 -0.06" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.112 0.098 0.014" />
+        </geometry>
+      </collision>
+    <collision name="blade_screw_2_0">
+      <origin xyz="-0.244488 0.214713 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="blade_screw_2_1">
+      <origin xyz="-0.279755 0.166172 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="blade_3">
+      <geometry>
+        <mesh filename="assets/meshes/blade_3.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_arm_3">
+      <origin xyz="-0.163421 -0.118733 -0.064" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.205 0.026 0.018" />
+        </geometry>
+      </collision>
+    <collision name="blade_clamp_3">
+      <origin xyz="-0.257267 -0.186916 -0.06" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.112 0.098 0.014" />
+        </geometry>
+      </collision>
+    <collision name="blade_screw_3_0">
+      <origin xyz="-0.279755 -0.166172 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="blade_screw_3_1">
+      <origin xyz="-0.244488 -0.214713 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="blade_4">
+      <geometry>
+        <mesh filename="assets/meshes/blade_4.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_arm_4">
+      <origin xyz="0.0624214 -0.192113 -0.064" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.205 0.026 0.018" />
+        </geometry>
+      </collision>
+    <collision name="blade_clamp_4">
+      <origin xyz="0.0982674 -0.302436 -0.06" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.112 0.098 0.014" />
+        </geometry>
+      </collision>
+    <collision name="blade_screw_4_0">
+      <origin xyz="0.0715898 -0.317413 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="blade_screw_4_1">
+      <origin xyz="0.128653 -0.298872 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="fan_spin" type="continuous">
+    <origin xyz="0 0 -0.59" rpy="0 0 0" />
+    <parent link="ceiling_mount" />
+    <child link="rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="2.5" velocity="18" />
+    </joint>
+  </robot>

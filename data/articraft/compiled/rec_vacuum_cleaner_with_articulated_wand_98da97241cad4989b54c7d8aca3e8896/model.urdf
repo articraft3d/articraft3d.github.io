@@ -1,0 +1,654 @@
+<robot name="cost_optimized_articulated_vacuum">
+  <link name="body">
+    <visual name="motor_pod">
+      <origin xyz="-0.295 0 0.105" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_pod.obj" />
+        </geometry>
+      <material name="warm_gray_injection_molded_abs">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="dust_cup">
+      <origin xyz="-0.112 0 -0.07" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.175" />
+        </geometry>
+      <material name="smoky_translucent_dust_cup">
+        <color rgba="0.34 0.44 0.46 0.45" />
+        </material>
+      </visual>
+    <visual name="dust_cup_lid">
+      <origin xyz="-0.112 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.03" />
+        </geometry>
+      <material name="dark_graphite_plastic">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="outlet_collar">
+      <origin xyz="-0.07 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.06" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="body_fork_cheek_0">
+      <origin xyz="-0.013 -0.054 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.086" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="body_fork_cheek_1">
+      <origin xyz="-0.013 0.054 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.086" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="body_pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.14" />
+        </geometry>
+      <material name="zinc_plated_pivot_pins">
+        <color rgba="0.58 0.6 0.57 1" />
+        </material>
+      </visual>
+    <visual name="body_pivot_cap_0">
+      <origin xyz="0 -0.074 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      <material name="dark_graphite_plastic">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="body_pivot_cap_1">
+      <origin xyz="0 0.074 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      <material name="dark_graphite_plastic">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="handle_grip">
+      <origin xyz="-0.26 0 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.045 0.045" />
+        </geometry>
+      <material name="dark_graphite_plastic">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="rear_handle_strut">
+      <origin xyz="-0.37 0 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.04 0.18" />
+        </geometry>
+      <material name="dark_graphite_plastic">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="front_handle_strut">
+      <origin xyz="-0.155 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 0.15" />
+        </geometry>
+      <material name="dark_graphite_plastic">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="exhaust_grille">
+      <origin xyz="-0.3 -0.097 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.006 0.05" />
+        </geometry>
+      <material name="dark_graphite_plastic">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="button_recess_bezel">
+      <origin xyz="-0.155 0 0.265" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.04 0.008" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <collision name="motor_pod">
+      <origin xyz="-0.295 0 0.105" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_pod.obj" />
+        </geometry>
+      </collision>
+    <collision name="dust_cup">
+      <origin xyz="-0.112 0 -0.07" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.175" />
+        </geometry>
+      </collision>
+    <collision name="dust_cup_lid">
+      <origin xyz="-0.112 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="outlet_collar">
+      <origin xyz="-0.07 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="body_fork_cheek_0">
+      <origin xyz="-0.013 -0.054 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.086" />
+        </geometry>
+      </collision>
+    <collision name="body_fork_cheek_1">
+      <origin xyz="-0.013 0.054 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.086" />
+        </geometry>
+      </collision>
+    <collision name="body_pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.14" />
+        </geometry>
+      </collision>
+    <collision name="body_pivot_cap_0">
+      <origin xyz="0 -0.074 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="body_pivot_cap_1">
+      <origin xyz="0 0.074 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="handle_grip">
+      <origin xyz="-0.26 0 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.045 0.045" />
+        </geometry>
+      </collision>
+    <collision name="rear_handle_strut">
+      <origin xyz="-0.37 0 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.04 0.18" />
+        </geometry>
+      </collision>
+    <collision name="front_handle_strut">
+      <origin xyz="-0.155 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 0.15" />
+        </geometry>
+      </collision>
+    <collision name="exhaust_grille">
+      <origin xyz="-0.3 -0.097 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.006 0.05" />
+        </geometry>
+      </collision>
+    <collision name="button_recess_bezel">
+      <origin xyz="-0.155 0 0.265" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.04 0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="power_button">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.047 0.028 0.012" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.047 0.028 0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wand_0">
+    <visual name="upper_pivot_boss">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.076" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="upper_tube">
+      <origin xyz="0 0 -0.2515" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.455" />
+        </geometry>
+      <material name="brushed_aluminum_tube">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <visual name="lower_clamp_collar">
+      <origin xyz="0 0 -0.491" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.048" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="lower_fork_cheek_0">
+      <origin xyz="0 -0.048 -0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.016 0.086" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="lower_fork_cheek_1">
+      <origin xyz="0 0.048 -0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.016 0.086" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="lower_fork_web_0">
+      <origin xyz="0 -0.024 -0.505" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.05 0.018" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="lower_fork_web_1">
+      <origin xyz="0 0.024 -0.505" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.05 0.018" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="lower_pivot_pin">
+      <origin xyz="0 0 -0.55" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.112" />
+        </geometry>
+      <material name="zinc_plated_pivot_pins">
+        <color rgba="0.58 0.6 0.57 1" />
+        </material>
+      </visual>
+    <visual name="clamp_snap_tab_0">
+      <origin xyz="0 -0.05796 -0.503" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.018" />
+        </geometry>
+      <material name="dark_graphite_plastic">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="clamp_snap_tab_1">
+      <origin xyz="0 0.05796 -0.503" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.018" />
+        </geometry>
+      <material name="dark_graphite_plastic">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <collision name="upper_pivot_boss">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.076" />
+        </geometry>
+      </collision>
+    <collision name="upper_tube">
+      <origin xyz="0 0 -0.2515" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.455" />
+        </geometry>
+      </collision>
+    <collision name="lower_clamp_collar">
+      <origin xyz="0 0 -0.491" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.048" />
+        </geometry>
+      </collision>
+    <collision name="lower_fork_cheek_0">
+      <origin xyz="0 -0.048 -0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.016 0.086" />
+        </geometry>
+      </collision>
+    <collision name="lower_fork_cheek_1">
+      <origin xyz="0 0.048 -0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.016 0.086" />
+        </geometry>
+      </collision>
+    <collision name="lower_fork_web_0">
+      <origin xyz="0 -0.024 -0.505" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.05 0.018" />
+        </geometry>
+      </collision>
+    <collision name="lower_fork_web_1">
+      <origin xyz="0 0.024 -0.505" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.05 0.018" />
+        </geometry>
+      </collision>
+    <collision name="lower_pivot_pin">
+      <origin xyz="0 0 -0.55" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.112" />
+        </geometry>
+      </collision>
+    <collision name="clamp_snap_tab_0">
+      <origin xyz="0 -0.05796 -0.503" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.018" />
+        </geometry>
+      </collision>
+    <collision name="clamp_snap_tab_1">
+      <origin xyz="0 0.05796 -0.503" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wand_1">
+    <visual name="upper_pivot_boss">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.07" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="lower_tube">
+      <origin xyz="0 0 -0.23" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.41" />
+        </geometry>
+      <material name="brushed_aluminum_tube">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_clamp_collar">
+      <origin xyz="0 0 -0.415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.04" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_fork_cheek_0">
+      <origin xyz="0 -0.047 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.016 0.104" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_fork_cheek_1">
+      <origin xyz="0 0.047 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.016 0.104" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_fork_web_0">
+      <origin xyz="0 -0.024 -0.428" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.05 0.018" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_fork_web_1">
+      <origin xyz="0 0.024 -0.428" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.05 0.018" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_pivot_pin">
+      <origin xyz="0 0 -0.48" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.11" />
+        </geometry>
+      <material name="zinc_plated_pivot_pins">
+        <color rgba="0.58 0.6 0.57 1" />
+        </material>
+      </visual>
+    <collision name="upper_pivot_boss">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="lower_tube">
+      <origin xyz="0 0 -0.23" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.41" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_clamp_collar">
+      <origin xyz="0 0 -0.415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_fork_cheek_0">
+      <origin xyz="0 -0.047 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.016 0.104" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_fork_cheek_1">
+      <origin xyz="0 0.047 -0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.016 0.104" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_fork_web_0">
+      <origin xyz="0 -0.024 -0.428" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.05 0.018" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_fork_web_1">
+      <origin xyz="0 0.024 -0.428" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.05 0.018" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_pivot_pin">
+      <origin xyz="0 0 -0.48" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.11" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="floor_nozzle">
+    <visual name="nozzle_pivot_boss">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.08" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="neck_tube">
+      <origin xyz="0 0 -0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.06" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_shell">
+      <origin xyz="0.07 0 -0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.34 0.055" />
+        </geometry>
+      <material name="warm_gray_injection_molded_abs">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="front_bumper_roll">
+      <origin xyz="0.202 0 -0.096" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.344" />
+        </geometry>
+      <material name="dark_graphite_plastic">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="suction_mouth">
+      <origin xyz="0.083 0 -0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.245 0.006" />
+        </geometry>
+      <material name="matte_black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="snap_on_sole_plate">
+      <origin xyz="0.054 0 -0.066" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.285 0.01" />
+        </geometry>
+      <material name="teal_snap_collar_plastic">
+        <color rgba="0 0.42 0.48 1" />
+        </material>
+      </visual>
+    <visual name="side_wheel_0">
+      <origin xyz="-0.04 -0.178 -0.113" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.026" />
+        </geometry>
+      <material name="matte_black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="side_wheel_1">
+      <origin xyz="-0.04 0.178 -0.113" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.026" />
+        </geometry>
+      <material name="matte_black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <collision name="nozzle_pivot_boss">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="neck_tube">
+      <origin xyz="0 0 -0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_shell">
+      <origin xyz="0.07 0 -0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.34 0.055" />
+        </geometry>
+      </collision>
+    <collision name="front_bumper_roll">
+      <origin xyz="0.202 0 -0.096" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.344" />
+        </geometry>
+      </collision>
+    <collision name="suction_mouth">
+      <origin xyz="0.083 0 -0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.245 0.006" />
+        </geometry>
+      </collision>
+    <collision name="snap_on_sole_plate">
+      <origin xyz="0.054 0 -0.066" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.285 0.01" />
+        </geometry>
+      </collision>
+    <collision name="side_wheel_0">
+      <origin xyz="-0.04 -0.178 -0.113" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="side_wheel_1">
+      <origin xyz="-0.04 0.178 -0.113" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_power_button" type="prismatic">
+    <origin xyz="-0.155 0 0.269" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="power_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1" velocity="0.06" lower="0" upper="0.004" />
+    </joint>
+  <joint name="body_to_wand_0" type="revolute">
+    <parent link="body" />
+    <child link="wand_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="6" velocity="2" lower="-0.65" upper="0.85" />
+    </joint>
+  <joint name="wand_0_to_wand_1" type="revolute">
+    <origin xyz="0 0 -0.55" rpy="0 0 0" />
+    <parent link="wand_0" />
+    <child link="wand_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="2.2" lower="-0.75" upper="0.75" />
+    </joint>
+  <joint name="wand_1_to_floor_nozzle" type="revolute">
+    <origin xyz="0 0 -0.48" rpy="0 0 0" />
+    <parent link="wand_1" />
+    <child link="floor_nozzle" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="2.5" lower="-0.9" upper="0.9" />
+    </joint>
+  </robot>

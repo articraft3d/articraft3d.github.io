@@ -1,0 +1,319 @@
+<robot name="vacuum_blender">
+  <material name="graphite">
+    <color rgba="0.035 0.038 0.045 1" />
+    </material>
+  <material name="black_gloss">
+    <color rgba="0.005 0.005 0.006 1" />
+    </material>
+  <material name="satin_steel">
+    <color rgba="0.7 0.72 0.7 1" />
+    </material>
+  <material name="clear_jug">
+    <color rgba="0.72 0.92 1 0.34" />
+    </material>
+  <material name="smoke_plastic">
+    <color rgba="0.18 0.22 0.26 0.62" />
+    </material>
+  <material name="soft_seal">
+    <color rgba="0.02 0.025 0.03 1" />
+    </material>
+  <material name="blue_valve">
+    <color rgba="0.02 0.28 0.65 1" />
+    </material>
+  <link name="base">
+    <visual name="round_housing">
+      <geometry>
+        <mesh filename="assets/meshes/base_round_housing.obj" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.035 0.038 0.045 1" />
+        </material>
+      </visual>
+    <visual name="top_lock_plate">
+      <origin xyz="0 0 0.199" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.126" length="0.028" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_stop_0">
+      <origin xyz="0.082 0 0.218" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.06 0.024 0.01" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_stop_1">
+      <origin xyz="-0.041 0.0710141 0.218" rpy="0 0 3.66519" />
+      <geometry>
+        <box size="0.06 0.024 0.01" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_stop_2">
+      <origin xyz="-0.041 -0.0710141 0.218" rpy="0 0 5.75959" />
+      <geometry>
+        <box size="0.06 0.024 0.01" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="dial_recess">
+      <origin xyz="0 -0.185 0.09" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.01" />
+        </geometry>
+      <material name="black_gloss">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="jug">
+    <visual name="jug_shell">
+      <geometry>
+        <mesh filename="assets/meshes/jug_hollow_shell.obj" />
+        </geometry>
+      <material name="clear_jug">
+        <color rgba="0.72 0.92 1 0.34" />
+        </material>
+      </visual>
+    <visual name="twist_collar">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.114" length="0.04" />
+        </geometry>
+      <material name="smoke_plastic">
+        <color rgba="0.18 0.22 0.26 0.62" />
+        </material>
+      </visual>
+    <visual name="bearing_socket">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.014" />
+        </geometry>
+      <material name="smoke_plastic">
+        <color rgba="0.18 0.22 0.26 0.62" />
+        </material>
+      </visual>
+    <visual name="bayonet_tab_0">
+      <origin xyz="0.0435 0.0753442 0.007" rpy="0 0 2.61799" />
+      <geometry>
+        <box size="0.052 0.02 0.014" />
+        </geometry>
+      <material name="smoke_plastic">
+        <color rgba="0.18 0.22 0.26 0.62" />
+        </material>
+      </visual>
+    <visual name="bayonet_tab_1">
+      <origin xyz="-0.087 1.06544e-17 0.007" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.052 0.02 0.014" />
+        </geometry>
+      <material name="smoke_plastic">
+        <color rgba="0.18 0.22 0.26 0.62" />
+        </material>
+      </visual>
+    <visual name="bayonet_tab_2">
+      <origin xyz="0.0435 -0.0753442 0.007" rpy="0 0 6.80678" />
+      <geometry>
+        <box size="0.052 0.02 0.014" />
+        </geometry>
+      <material name="smoke_plastic">
+        <color rgba="0.18 0.22 0.26 0.62" />
+        </material>
+      </visual>
+    <visual name="handle_grip">
+      <origin xyz="0 0.188 0.365" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.43" />
+        </geometry>
+      <material name="clear_jug">
+        <color rgba="0.72 0.92 1 0.34" />
+        </material>
+      </visual>
+    <visual name="upper_handle_bridge">
+      <origin xyz="0 0.152 0.555" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.088 0.035" />
+        </geometry>
+      <material name="clear_jug">
+        <color rgba="0.72 0.92 1 0.34" />
+        </material>
+      </visual>
+    <visual name="lower_handle_bridge">
+      <origin xyz="0 0.151 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.086 0.038" />
+        </geometry>
+      <material name="clear_jug">
+        <color rgba="0.72 0.92 1 0.34" />
+        </material>
+      </visual>
+    <visual name="fill_scale">
+      <origin xyz="-0.109 -0.002 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.01 0.36" />
+        </geometry>
+      <material name="smoke_plastic">
+        <color rgba="0.18 0.22 0.26 0.62" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade">
+    <visual name="hub">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.026" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="drive_shaft">
+      <origin xyz="0 0 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.012" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="blade_wing_0">
+      <origin xyz="0.038 0 0.02" rpy="0 0.18 0" />
+      <geometry>
+        <box size="0.07 0.016 0.006" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="blade_wing_1">
+      <origin xyz="2.32683e-18 0.038 0.02" rpy="0 0.18 1.5708" />
+      <geometry>
+        <box size="0.07 0.016 0.006" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="blade_wing_2">
+      <origin xyz="-0.038 4.65366e-18 0.02" rpy="0 0.18 3.14159" />
+      <geometry>
+        <box size="0.07 0.016 0.006" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="blade_wing_3">
+      <origin xyz="-6.98049e-18 -0.038 0.02" rpy="0 0.18 4.71239" />
+      <geometry>
+        <box size="0.07 0.016 0.006" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="connector_cap">
+    <visual name="plug">
+      <origin xyz="0 0 -0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.087" length="0.052" />
+        </geometry>
+      <material name="soft_seal">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="top_disc">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.016" />
+        </geometry>
+      <material name="smoke_plastic">
+        <color rgba="0.18 0.22 0.26 0.62" />
+        </material>
+      </visual>
+    <visual name="cap_stem">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.04" />
+        </geometry>
+      <material name="soft_seal">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="o_ring">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.094" length="0.006" />
+        </geometry>
+      <material name="soft_seal">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <visual name="suction_nozzle">
+      <origin xyz="0 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.036" />
+        </geometry>
+      <material name="smoke_plastic">
+        <color rgba="0.18 0.22 0.26 0.62" />
+        </material>
+      </visual>
+    <visual name="vacuum_valve">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.01" />
+        </geometry>
+      <material name="blue_valve">
+        <color rgba="0.02 0.28 0.65 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="dial">
+    <visual name="knob">
+      <geometry>
+        <mesh filename="assets/meshes/speed_dial_knob.obj" />
+        </geometry>
+      <material name="black_gloss">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_jug" type="revolute">
+    <origin xyz="0 0 0.223" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="jug" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.5" lower="0" upper="0.55" />
+    </joint>
+  <joint name="jug_to_blade" type="continuous">
+    <origin xyz="0 0 0.066" rpy="0 0 0" />
+    <parent link="jug" />
+    <child link="blade" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.8" velocity="90" />
+    </joint>
+  <joint name="jug_to_connector_cap" type="prismatic">
+    <origin xyz="0 0 0.7" rpy="0 0 0" />
+    <parent link="jug" />
+    <child link="connector_cap" />
+    <axis xyz="0 0 -1" />
+    <limit effort="20" velocity="0.08" lower="0" upper="0.012" />
+    </joint>
+  <joint name="base_to_dial" type="revolute">
+    <origin xyz="0 -0.19 0.09" rpy="1.5708 0 0" />
+    <parent link="base" />
+    <child link="dial" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="5" lower="-2.4" upper="2.4" />
+    </joint>
+  </robot>

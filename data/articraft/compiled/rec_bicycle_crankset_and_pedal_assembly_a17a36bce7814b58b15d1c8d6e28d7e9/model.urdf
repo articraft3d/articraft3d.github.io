@@ -1,0 +1,421 @@
+<robot name="mountain_bike_crankset">
+  <material name="brushed_alloy">
+    <color rgba="0.7 0.72 0.7 1" />
+    </material>
+  <material name="black_anodized_alloy">
+    <color rgba="0.015 0.017 0.018 1" />
+    </material>
+  <material name="satin_black">
+    <color rgba="0.02 0.022 0.025 1" />
+    </material>
+  <material name="polished_steel">
+    <color rgba="0.82 0.82 0.78 1" />
+    </material>
+  <material name="dark_bearing_rubber">
+    <color rgba="0.005 0.005 0.006 1" />
+    </material>
+  <link name="bottom_bracket">
+    <visual name="hollow_shell">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_bottom_bracket_shell.obj" />
+        </geometry>
+      <material name="black_anodized_alloy">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bearing_seals">
+      <geometry>
+        <mesh filename="assets/meshes/bearing_seal_lips.obj" />
+        </geometry>
+      <material name="dark_bearing_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <collision name="hollow_shell">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_bottom_bracket_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_seals">
+      <geometry>
+        <mesh filename="assets/meshes/bearing_seal_lips.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="crankset">
+    <visual name="spindle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.182" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="drive_hub">
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.056" />
+        </geometry>
+      <material name="brushed_alloy">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="offside_hub">
+      <origin xyz="-0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.056" />
+        </geometry>
+      <material name="brushed_alloy">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="spider">
+      <geometry>
+        <mesh filename="assets/meshes/four_arm_spider.obj" />
+        </geometry>
+      <material name="brushed_alloy">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="outer_chainring">
+      <geometry>
+        <mesh filename="assets/meshes/outer_chainring_36t.obj" />
+        </geometry>
+      <material name="black_anodized_alloy">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="inner_chainring">
+      <geometry>
+        <mesh filename="assets/meshes/inner_chainring_24t.obj" />
+        </geometry>
+      <material name="black_anodized_alloy">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="drive_arm">
+      <geometry>
+        <mesh filename="assets/meshes/wide_drive_crank_arm.obj" />
+        </geometry>
+      <material name="brushed_alloy">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="offside_arm">
+      <geometry>
+        <mesh filename="assets/meshes/wide_offside_crank_arm.obj" />
+        </geometry>
+      <material name="brushed_alloy">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="drive_pedal_boss">
+      <origin xyz="0.094 0 -0.175" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.04" />
+        </geometry>
+      <material name="brushed_alloy">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="offside_pedal_boss">
+      <origin xyz="-0.094 0 0.175" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.04" />
+        </geometry>
+      <material name="brushed_alloy">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="chainring_bolt_0">
+      <origin xyz="0.07 0.0516188 0.0516188" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.026" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="chainring_bolt_1">
+      <origin xyz="0.07 -0.0516188 0.0516188" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.026" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="chainring_bolt_2">
+      <origin xyz="0.07 -0.0516188 -0.0516188" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.026" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="chainring_bolt_3">
+      <origin xyz="0.07 0.0516188 -0.0516188" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.026" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <collision name="spindle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.182" />
+        </geometry>
+      </collision>
+    <collision name="drive_hub">
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.056" />
+        </geometry>
+      </collision>
+    <collision name="offside_hub">
+      <origin xyz="-0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.056" />
+        </geometry>
+      </collision>
+    <collision name="spider">
+      <geometry>
+        <mesh filename="assets/meshes/four_arm_spider.obj" />
+        </geometry>
+      </collision>
+    <collision name="outer_chainring">
+      <geometry>
+        <mesh filename="assets/meshes/outer_chainring_36t.obj" />
+        </geometry>
+      </collision>
+    <collision name="inner_chainring">
+      <geometry>
+        <mesh filename="assets/meshes/inner_chainring_24t.obj" />
+        </geometry>
+      </collision>
+    <collision name="drive_arm">
+      <geometry>
+        <mesh filename="assets/meshes/wide_drive_crank_arm.obj" />
+        </geometry>
+      </collision>
+    <collision name="offside_arm">
+      <geometry>
+        <mesh filename="assets/meshes/wide_offside_crank_arm.obj" />
+        </geometry>
+      </collision>
+    <collision name="drive_pedal_boss">
+      <origin xyz="0.094 0 -0.175" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="offside_pedal_boss">
+      <origin xyz="-0.094 0 0.175" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="chainring_bolt_0">
+      <origin xyz="0.07 0.0516188 0.0516188" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="chainring_bolt_1">
+      <origin xyz="0.07 -0.0516188 0.0516188" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="chainring_bolt_2">
+      <origin xyz="0.07 -0.0516188 -0.0516188" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="chainring_bolt_3">
+      <origin xyz="0.07 0.0516188 -0.0516188" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="drive_pedal">
+    <visual name="stub_axle">
+      <origin xyz="0.033 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.066" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="clipless_body">
+      <origin xyz="0.092 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.09 0.024" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <visual name="front_cleat_jaw">
+      <origin xyz="0.092 -0.024 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.01 0.01" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rear_cleat_jaw">
+      <origin xyz="0.092 0.024 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.01 0.01" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="lower_retention_plate">
+      <origin xyz="0.092 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.006" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <collision name="stub_axle">
+      <origin xyz="0.033 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.066" />
+        </geometry>
+      </collision>
+    <collision name="clipless_body">
+      <origin xyz="0.092 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.09 0.024" />
+        </geometry>
+      </collision>
+    <collision name="front_cleat_jaw">
+      <origin xyz="0.092 -0.024 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.01 0.01" />
+        </geometry>
+      </collision>
+    <collision name="rear_cleat_jaw">
+      <origin xyz="0.092 0.024 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.01 0.01" />
+        </geometry>
+      </collision>
+    <collision name="lower_retention_plate">
+      <origin xyz="0.092 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="offside_pedal">
+    <visual name="stub_axle">
+      <origin xyz="-0.033 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.066" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="clipless_body">
+      <origin xyz="-0.092 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.09 0.024" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <visual name="front_cleat_jaw">
+      <origin xyz="-0.092 -0.024 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.01 0.01" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rear_cleat_jaw">
+      <origin xyz="-0.092 0.024 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.01 0.01" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="lower_retention_plate">
+      <origin xyz="-0.092 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.006" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <collision name="stub_axle">
+      <origin xyz="-0.033 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.066" />
+        </geometry>
+      </collision>
+    <collision name="clipless_body">
+      <origin xyz="-0.092 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.09 0.024" />
+        </geometry>
+      </collision>
+    <collision name="front_cleat_jaw">
+      <origin xyz="-0.092 -0.024 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.01 0.01" />
+        </geometry>
+      </collision>
+    <collision name="rear_cleat_jaw">
+      <origin xyz="-0.092 0.024 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.01 0.01" />
+        </geometry>
+      </collision>
+    <collision name="lower_retention_plate">
+      <origin xyz="-0.092 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="bottom_bracket_to_crankset" type="revolute">
+    <parent link="bottom_bracket" />
+    <child link="crankset" />
+    <axis xyz="1 0 0" />
+    <limit effort="130" velocity="14" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="drive_pedal_axle" type="revolute">
+    <origin xyz="0.114 0 -0.175" rpy="0 0 0" />
+    <parent link="crankset" />
+    <child link="drive_pedal" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="20" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="offside_pedal_axle" type="revolute">
+    <origin xyz="-0.114 0 0.175" rpy="0 0 0" />
+    <parent link="crankset" />
+    <child link="offside_pedal" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="20" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

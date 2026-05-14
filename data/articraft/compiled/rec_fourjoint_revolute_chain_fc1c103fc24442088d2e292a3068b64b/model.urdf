@@ -1,0 +1,640 @@
+<robot name="long_reach_inspection_arm">
+  <material name="matte_black">
+    <color rgba="0.015 0.017 0.02 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.66 0.68 0.7 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.005 0.006 0.007 1" />
+    </material>
+  <material name="safety_orange">
+    <color rgba="1 0.42 0.06 1" />
+    </material>
+  <link name="base">
+    <visual name="floor_plate">
+      <origin xyz="-0.075 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.3 0.05" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="column">
+      <origin xyz="0 0 0.225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.36" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="turntable_collar">
+      <origin xyz="0 0 0.395" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.082" length="0.055" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="lower_plate">
+      <origin xyz="0 0 0.427" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="upper_plate">
+      <origin xyz="0 0 0.473" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="lower_plate_web">
+      <origin xyz="-0.072 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.13 0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hinge_cap">
+      <origin xyz="0 0 0.4815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.08 0.007" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="1 0.42 0.06 1" />
+        </material>
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="-0.075 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.3 0.05" />
+        </geometry>
+      </collision>
+    <collision name="column">
+      <origin xyz="0 0 0.225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.36" />
+        </geometry>
+      </collision>
+    <collision name="turntable_collar">
+      <origin xyz="0 0 0.395" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.082" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="lower_plate">
+      <origin xyz="0 0 0.427" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      </collision>
+    <collision name="upper_plate">
+      <origin xyz="0 0 0.473" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      </collision>
+    <collision name="lower_plate_web">
+      <origin xyz="-0.072 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.13 0.06" />
+        </geometry>
+      </collision>
+    <collision name="hinge_cap">
+      <origin xyz="0 0 0.4815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.08 0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="segment_0">
+    <visual name="proximal_boss">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.018" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="beam">
+      <origin xyz="0.32 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.61 0.046 0.026" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.66 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cable_strip">
+      <origin xyz="0.2984 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5368 0.014 0.008" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="distal_lower_plate">
+      <origin xyz="0.7 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="distal_upper_plate">
+      <origin xyz="0.7 0 0.053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="distal_lower_plate_web">
+      <origin xyz="0.628 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.13 0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="distal_cap">
+      <origin xyz="0.7 0 0.0615" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.08 0.007" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="1 0.42 0.06 1" />
+        </material>
+      </visual>
+    <collision name="proximal_boss">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="beam">
+      <origin xyz="0.32 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.61 0.046 0.026" />
+        </geometry>
+      </collision>
+    <collision name="cable_strip">
+      <origin xyz="0.2984 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5368 0.014 0.008" />
+        </geometry>
+      </collision>
+    <collision name="distal_lower_plate">
+      <origin xyz="0.7 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      </collision>
+    <collision name="distal_upper_plate">
+      <origin xyz="0.7 0 0.053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      </collision>
+    <collision name="distal_lower_plate_web">
+      <origin xyz="0.628 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.13 0.06" />
+        </geometry>
+      </collision>
+    <collision name="distal_cap">
+      <origin xyz="0.7 0 0.0615" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.08 0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="segment_1">
+    <visual name="proximal_boss">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.018" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="beam">
+      <origin xyz="0.26 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.49 0.046 0.026" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.66 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cable_strip">
+      <origin xyz="0.2456 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4312 0.014 0.008" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="distal_lower_plate">
+      <origin xyz="0.58 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="distal_upper_plate">
+      <origin xyz="0.58 0 0.053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="distal_lower_plate_web">
+      <origin xyz="0.508 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.13 0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="distal_cap">
+      <origin xyz="0.58 0 0.0615" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.08 0.007" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="1 0.42 0.06 1" />
+        </material>
+      </visual>
+    <collision name="proximal_boss">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="beam">
+      <origin xyz="0.26 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.49 0.046 0.026" />
+        </geometry>
+      </collision>
+    <collision name="cable_strip">
+      <origin xyz="0.2456 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4312 0.014 0.008" />
+        </geometry>
+      </collision>
+    <collision name="distal_lower_plate">
+      <origin xyz="0.58 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      </collision>
+    <collision name="distal_upper_plate">
+      <origin xyz="0.58 0 0.053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      </collision>
+    <collision name="distal_lower_plate_web">
+      <origin xyz="0.508 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.13 0.06" />
+        </geometry>
+      </collision>
+    <collision name="distal_cap">
+      <origin xyz="0.58 0 0.0615" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.08 0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="segment_2">
+    <visual name="proximal_boss">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.018" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="beam">
+      <origin xyz="0.21 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.39 0.046 0.026" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.66 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cable_strip">
+      <origin xyz="0.2016 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3432 0.014 0.008" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="distal_lower_plate">
+      <origin xyz="0.48 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="distal_upper_plate">
+      <origin xyz="0.48 0 0.053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="distal_lower_plate_web">
+      <origin xyz="0.408 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.13 0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="distal_cap">
+      <origin xyz="0.48 0 0.0615" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.08 0.007" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="1 0.42 0.06 1" />
+        </material>
+      </visual>
+    <collision name="proximal_boss">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="beam">
+      <origin xyz="0.21 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.39 0.046 0.026" />
+        </geometry>
+      </collision>
+    <collision name="cable_strip">
+      <origin xyz="0.2016 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3432 0.014 0.008" />
+        </geometry>
+      </collision>
+    <collision name="distal_lower_plate">
+      <origin xyz="0.48 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      </collision>
+    <collision name="distal_upper_plate">
+      <origin xyz="0.48 0 0.053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.13 0.014" />
+        </geometry>
+      </collision>
+    <collision name="distal_lower_plate_web">
+      <origin xyz="0.408 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.13 0.06" />
+        </geometry>
+      </collision>
+    <collision name="distal_cap">
+      <origin xyz="0.48 0 0.0615" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.08 0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="segment_3">
+    <visual name="proximal_boss">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.018" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="beam">
+      <origin xyz="0.18 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.046 0.026" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.66 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cable_strip">
+      <origin xyz="0.1752 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2904 0.014 0.008" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="sensor_neck">
+      <origin xyz="0.368 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.064 0.036" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="camera_body">
+      <origin xyz="0.445 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.092 0.076" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="lens_barrel">
+      <origin xyz="0.533 0 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.04" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="glass_face">
+      <origin xyz="0.556 0 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.01" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.1 0.22 0.32 1" />
+        </material>
+      </visual>
+    <visual name="led_0">
+      <origin xyz="0.518 -0.032 0.055" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="1 0.42 0.06 1" />
+        </material>
+      </visual>
+    <visual name="led_1">
+      <origin xyz="0.518 0.032 0.055" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="1 0.42 0.06 1" />
+        </material>
+      </visual>
+    <visual name="led_2">
+      <origin xyz="0.518 -0.032 0.005" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="1 0.42 0.06 1" />
+        </material>
+      </visual>
+    <visual name="led_3">
+      <origin xyz="0.518 0.032 0.005" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="1 0.42 0.06 1" />
+        </material>
+      </visual>
+    <collision name="proximal_boss">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="beam">
+      <origin xyz="0.18 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.046 0.026" />
+        </geometry>
+      </collision>
+    <collision name="cable_strip">
+      <origin xyz="0.1752 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2904 0.014 0.008" />
+        </geometry>
+      </collision>
+    <collision name="sensor_neck">
+      <origin xyz="0.368 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.064 0.036" />
+        </geometry>
+      </collision>
+    <collision name="camera_body">
+      <origin xyz="0.445 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.092 0.076" />
+        </geometry>
+      </collision>
+    <collision name="lens_barrel">
+      <origin xyz="0.533 0 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="glass_face">
+      <origin xyz="0.556 0 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="led_0">
+      <origin xyz="0.518 -0.032 0.055" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      </collision>
+    <collision name="led_1">
+      <origin xyz="0.518 0.032 0.055" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      </collision>
+    <collision name="led_2">
+      <origin xyz="0.518 -0.032 0.005" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      </collision>
+    <collision name="led_3">
+      <origin xyz="0.518 0.032 0.005" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="hinge_0" type="revolute">
+    <origin xyz="0 0 0.42" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="segment_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="1.8" lower="-1.35" upper="1.35" />
+    </joint>
+  <joint name="hinge_1" type="revolute">
+    <origin xyz="0.7 0 0" rpy="0 0 0" />
+    <parent link="segment_0" />
+    <child link="segment_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="1.8" lower="-1.35" upper="1.35" />
+    </joint>
+  <joint name="hinge_2" type="revolute">
+    <origin xyz="0.58 0 0" rpy="0 0 0" />
+    <parent link="segment_1" />
+    <child link="segment_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="1.8" lower="-1.35" upper="1.35" />
+    </joint>
+  <joint name="hinge_3" type="revolute">
+    <origin xyz="0.48 0 0" rpy="0 0 0" />
+    <parent link="segment_2" />
+    <child link="segment_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="1.8" lower="-1.35" upper="1.35" />
+    </joint>
+  </robot>

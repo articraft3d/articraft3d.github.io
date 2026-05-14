@@ -1,0 +1,471 @@
+<robot name="low_console_joystick">
+  <material name="satin_black_panel">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="charcoal_powdercoat">
+    <color rgba="0.055 0.06 0.065 1" />
+    </material>
+  <material name="brushed_gunmetal">
+    <color rgba="0.34 0.35 0.36 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.01 0.011 1" />
+    </material>
+  <material name="dark_screw_steel">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <link name="base">
+    <visual name="panel_flange">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.132" length="0.003" />
+        </geometry>
+      <material name="satin_black_panel">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="cup">
+      <geometry>
+        <mesh filename="assets/meshes/shallow_base_cup.obj" />
+        </geometry>
+      <material name="charcoal_powdercoat">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="rolled_lip">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rolled_lip.obj" />
+        </geometry>
+      <material name="charcoal_powdercoat">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="side_bearing_pos">
+      <origin xyz="0.088 0 0.055" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_bearing_pos.obj" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="bearing_pedestal_pos">
+      <origin xyz="0.088 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.023 0.034" />
+        </geometry>
+      <material name="charcoal_powdercoat">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="bearing_web_pos">
+      <origin xyz="0.073 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.014 0.01" />
+        </geometry>
+      <material name="charcoal_powdercoat">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="side_bearing_neg">
+      <origin xyz="-0.088 0 0.055" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_bearing_neg.obj" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="bearing_pedestal_neg">
+      <origin xyz="-0.088 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.023 0.034" />
+        </geometry>
+      <material name="charcoal_powdercoat">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="bearing_web_neg">
+      <origin xyz="-0.073 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.014 0.01" />
+        </geometry>
+      <material name="charcoal_powdercoat">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="screw_0">
+      <origin xyz="0.086267 0.086267 0.0041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.0022" />
+        </geometry>
+      <material name="dark_screw_steel">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="screw_1">
+      <origin xyz="-0.086267 0.086267 0.0041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.0022" />
+        </geometry>
+      <material name="dark_screw_steel">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="screw_2">
+      <origin xyz="-0.086267 -0.086267 0.0041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.0022" />
+        </geometry>
+      <material name="dark_screw_steel">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="screw_3">
+      <origin xyz="0.086267 -0.086267 0.0041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.0022" />
+        </geometry>
+      <material name="dark_screw_steel">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <collision name="panel_flange">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.132" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="cup">
+      <geometry>
+        <mesh filename="assets/meshes/shallow_base_cup.obj" />
+        </geometry>
+      </collision>
+    <collision name="rolled_lip">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rolled_lip.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_bearing_pos">
+      <origin xyz="0.088 0 0.055" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_bearing_pos.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_pedestal_pos">
+      <origin xyz="0.088 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.023 0.034" />
+        </geometry>
+      </collision>
+    <collision name="bearing_web_pos">
+      <origin xyz="0.073 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.014 0.01" />
+        </geometry>
+      </collision>
+    <collision name="side_bearing_neg">
+      <origin xyz="-0.088 0 0.055" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_bearing_neg.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_pedestal_neg">
+      <origin xyz="-0.088 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.023 0.034" />
+        </geometry>
+      </collision>
+    <collision name="bearing_web_neg">
+      <origin xyz="-0.073 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.014 0.01" />
+        </geometry>
+      </collision>
+    <collision name="screw_0">
+      <origin xyz="0.086267 0.086267 0.0041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="screw_1">
+      <origin xyz="-0.086267 0.086267 0.0041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="screw_2">
+      <origin xyz="-0.086267 -0.086267 0.0041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="screw_3">
+      <origin xyz="0.086267 -0.086267 0.0041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.0022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="outer_ring">
+    <visual name="outer_hoop">
+      <geometry>
+        <mesh filename="assets/meshes/outer_hoop.obj" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="side_pin_pos">
+      <origin xyz="0.071 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.072" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="side_boss_pos">
+      <origin xyz="0.052 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_boss_pos.obj" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="side_pin_neg">
+      <origin xyz="-0.071 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.072" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="side_boss_neg">
+      <origin xyz="-0.052 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_boss_neg.obj" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing">
+      <origin xyz="0 0.052 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bearing.obj" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="rear_bearing">
+      <origin xyz="0 -0.052 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_bearing.obj" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <collision name="outer_hoop">
+      <geometry>
+        <mesh filename="assets/meshes/outer_hoop.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_pin_pos">
+      <origin xyz="0.071 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.072" />
+        </geometry>
+      </collision>
+    <collision name="side_boss_pos">
+      <origin xyz="0.052 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_boss_pos.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_pin_neg">
+      <origin xyz="-0.071 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.072" />
+        </geometry>
+      </collision>
+    <collision name="side_boss_neg">
+      <origin xyz="-0.052 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_boss_neg.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing">
+      <origin xyz="0 0.052 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bearing.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_bearing">
+      <origin xyz="0 -0.052 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_bearing.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cradle">
+    <visual name="center_sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.069" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="center_ball">
+      <geometry>
+        <sphere radius="0.012" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="front_pin">
+      <origin xyz="0 0.045 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.04" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="front_cheek">
+      <origin xyz="0 0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.013 0.026 0.007" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="rear_pin">
+      <origin xyz="0 -0.045 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.04" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="rear_cheek">
+      <origin xyz="0 -0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.013 0.026 0.007" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <collision name="center_sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.069" />
+        </geometry>
+      </collision>
+    <collision name="center_ball">
+      <geometry>
+        <sphere radius="0.012" />
+        </geometry>
+      </collision>
+    <collision name="front_pin">
+      <origin xyz="0 0.045 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="front_cheek">
+      <origin xyz="0 0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.013 0.026 0.007" />
+        </geometry>
+      </collision>
+    <collision name="rear_pin">
+      <origin xyz="0 -0.045 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_cheek">
+      <origin xyz="0 -0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.013 0.026 0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="stick">
+    <visual name="stem">
+      <origin xyz="0 0 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.064" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.011 1" />
+        </material>
+      </visual>
+    <visual name="collar">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/knurled_collar.obj" />
+        </geometry>
+      <material name="brushed_gunmetal">
+        <color rgba="0.34 0.35 0.36 1" />
+        </material>
+      </visual>
+    <visual name="top_cap">
+      <origin xyz="0 0 0.087" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0085" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.011 1" />
+        </material>
+      </visual>
+    <collision name="stem">
+      <origin xyz="0 0 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.064" />
+        </geometry>
+      </collision>
+    <collision name="collar">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/knurled_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_cap">
+      <origin xyz="0 0 0.087" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0085" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_outer_ring" type="revolute">
+    <origin xyz="0 0 0.055" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="outer_ring" />
+    <axis xyz="1 0 0" />
+    <limit effort="6" velocity="3" lower="-0.38" upper="0.38" />
+    </joint>
+  <joint name="outer_ring_to_cradle" type="revolute">
+    <parent link="outer_ring" />
+    <child link="cradle" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="3" lower="-0.38" upper="0.38" />
+    </joint>
+  <joint name="cradle_to_stick" type="fixed">
+    <parent link="cradle" />
+    <child link="stick" />
+    </joint>
+  </robot>

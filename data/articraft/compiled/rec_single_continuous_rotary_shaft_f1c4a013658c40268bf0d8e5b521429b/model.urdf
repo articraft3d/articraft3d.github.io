@@ -1,0 +1,148 @@
+<robot name="supported_rotary_shaft_module">
+  <link name="base">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.22 0.02" />
+        </geometry>
+      <material name="painted_base">
+        <color rgba="0.1 0.12 0.14 1" />
+        </material>
+      </visual>
+    <visual name="bearing_block_0">
+      <origin xyz="-0.18 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pillow_bearing_block.obj" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.45 0.47 0.47 1" />
+        </material>
+      </visual>
+    <visual name="bearing_block_1">
+      <origin xyz="0.18 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pillow_bearing_block.obj" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.45 0.47 0.47 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.22 0.02" />
+        </geometry>
+      </collision>
+    <collision name="bearing_block_0">
+      <origin xyz="-0.18 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pillow_bearing_block.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_block_1">
+      <origin xyz="0.18 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pillow_bearing_block.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shaft">
+    <visual name="shaft_core">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.84" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="hub_neck">
+      <origin xyz="0.392 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.055" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="pulley_groove">
+      <origin xyz="0.435 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.042" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="pulley_flange_0">
+      <origin xyz="0.41 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="pulley_flange_1">
+      <origin xyz="0.46 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="set_screw">
+      <origin xyz="0.435 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="shaft_core">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.84" />
+        </geometry>
+      </collision>
+    <collision name="hub_neck">
+      <origin xyz="0.392 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="pulley_groove">
+      <origin xyz="0.435 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.042" />
+        </geometry>
+      </collision>
+    <collision name="pulley_flange_0">
+      <origin xyz="0.41 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="pulley_flange_1">
+      <origin xyz="0.46 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="set_screw">
+      <origin xyz="0.435 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shaft_rotation" type="continuous">
+    <origin xyz="0 0 0.125" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="shaft" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="18" />
+    </joint>
+  </robot>

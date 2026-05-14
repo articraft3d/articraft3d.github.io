@@ -1,0 +1,233 @@
+<robot name="retractable_utility_knife">
+  <material name="yellow_handle">
+    <color rgba="0.95 0.68 0.1 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.025 0.025 0.023 1" />
+    </material>
+  <material name="dark_carrier">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.72 0.73 0.7 1" />
+    </material>
+  <material name="dull_screw">
+    <color rgba="0.32 0.33 0.33 1" />
+    </material>
+  <link name="handle">
+    <visual name="handle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/handle_shell.obj" />
+        </geometry>
+      <material name="yellow_handle">
+        <color rgba="0.95 0.68 0.1 1" />
+        </material>
+      </visual>
+    <visual name="side_grip_0">
+      <origin xyz="-0.014 -0.0175 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.002 0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.025 0.025 0.023 1" />
+        </material>
+      </visual>
+    <visual name="side_grip_1">
+      <origin xyz="-0.014 0.0175 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.002 0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.025 0.025 0.023 1" />
+        </material>
+      </visual>
+    <visual name="screw_0_0">
+      <origin xyz="-0.052 -0.0178 0.012" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.0024" />
+        </geometry>
+      <material name="dull_screw">
+        <color rgba="0.32 0.33 0.33 1" />
+        </material>
+      </visual>
+    <visual name="screw_0_1">
+      <origin xyz="-0.052 0.0178 0.012" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.0024" />
+        </geometry>
+      <material name="dull_screw">
+        <color rgba="0.32 0.33 0.33 1" />
+        </material>
+      </visual>
+    <visual name="screw_1_0">
+      <origin xyz="0.052 -0.0178 0.012" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.0024" />
+        </geometry>
+      <material name="dull_screw">
+        <color rgba="0.32 0.33 0.33 1" />
+        </material>
+      </visual>
+    <visual name="screw_1_1">
+      <origin xyz="0.052 0.0178 0.012" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.0024" />
+        </geometry>
+      <material name="dull_screw">
+        <color rgba="0.32 0.33 0.33 1" />
+        </material>
+      </visual>
+    <collision name="handle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/handle_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_grip_0">
+      <origin xyz="-0.014 -0.0175 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.002 0.01" />
+        </geometry>
+      </collision>
+    <collision name="side_grip_1">
+      <origin xyz="-0.014 0.0175 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.002 0.01" />
+        </geometry>
+      </collision>
+    <collision name="screw_0_0">
+      <origin xyz="-0.052 -0.0178 0.012" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.0024" />
+        </geometry>
+      </collision>
+    <collision name="screw_0_1">
+      <origin xyz="-0.052 0.0178 0.012" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.0024" />
+        </geometry>
+      </collision>
+    <collision name="screw_1_0">
+      <origin xyz="0.052 -0.0178 0.012" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.0024" />
+        </geometry>
+      </collision>
+    <collision name="screw_1_1">
+      <origin xyz="0.052 0.0178 0.012" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.0024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carrier">
+    <visual name="carrier_rail">
+      <origin xyz="-0.002 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.096 0.012 0.004" />
+        </geometry>
+      <material name="dark_carrier">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <geometry>
+        <mesh filename="assets/meshes/blade.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="thumb_stem">
+      <origin xyz="-0.02 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.006 0.014" />
+        </geometry>
+      <material name="dark_carrier">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="thumb_pad">
+      <origin xyz="-0.02 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.02 0.004" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.025 0.025 0.023 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_0">
+      <origin xyz="-0.027 0 0.0288" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.018 0.0016" />
+        </geometry>
+      <material name="pad_rib_dark">
+        <color rgba="0.004 0.004 0.004 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_1">
+      <origin xyz="-0.02 0 0.0288" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.018 0.0016" />
+        </geometry>
+      <material name="pad_rib_dark">
+        <color rgba="0.004 0.004 0.004 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_2">
+      <origin xyz="-0.013 0 0.0288" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.018 0.0016" />
+        </geometry>
+      <material name="pad_rib_dark">
+        <color rgba="0.004 0.004 0.004 1" />
+        </material>
+      </visual>
+    <collision name="carrier_rail">
+      <origin xyz="-0.002 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.096 0.012 0.004" />
+        </geometry>
+      </collision>
+    <collision name="blade">
+      <geometry>
+        <mesh filename="assets/meshes/blade.obj" />
+        </geometry>
+      </collision>
+    <collision name="thumb_stem">
+      <origin xyz="-0.02 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.006 0.014" />
+        </geometry>
+      </collision>
+    <collision name="thumb_pad">
+      <origin xyz="-0.02 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.02 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_0">
+      <origin xyz="-0.027 0 0.0288" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.018 0.0016" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_1">
+      <origin xyz="-0.02 0 0.0288" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.018 0.0016" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_2">
+      <origin xyz="-0.013 0 0.0288" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.018 0.0016" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="handle_to_carrier" type="prismatic">
+    <parent link="handle" />
+    <child link="carrier" />
+    <axis xyz="1 0 0" />
+    <limit effort="25" velocity="0.18" lower="0" upper="0.045" />
+    </joint>
+  </robot>

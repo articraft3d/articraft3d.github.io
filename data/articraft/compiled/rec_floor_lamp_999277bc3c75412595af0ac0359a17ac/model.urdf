@@ -1,0 +1,224 @@
+<robot name="arc_floor_lamp">
+  <material name="dark_weighted_base">
+    <color rgba="0.025 0.025 0.023 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.005 0.005 0.004 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.58 0.55 0.5 1" />
+    </material>
+  <material name="warm_white_shade">
+    <color rgba="0.92 0.88 0.78 1" />
+    </material>
+  <material name="warm_diffuser">
+    <color rgba="1 0.83 0.46 0.78" />
+    </material>
+  <link name="base">
+    <visual name="weighted_disc">
+      <geometry>
+        <mesh filename="assets/meshes/beveled_weighted_base.obj" />
+        </geometry>
+      <material name="dark_weighted_base">
+        <color rgba="0.025 0.025 0.023 1" />
+        </material>
+      </visual>
+    <visual name="upright_column">
+      <origin xyz="0 0 0.665" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="1.185" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="column_collar">
+      <origin xyz="0 0 1.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.07" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0 0 1.247" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.166 0.032" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="near_yoke_cheek">
+      <origin xyz="0 -0.071 1.32" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.022 0.16" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="near_pivot_cap">
+      <origin xyz="0 -0.0845 1.31" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.012" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="far_yoke_cheek">
+      <origin xyz="0 0.071 1.32" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.022 0.16" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="far_pivot_cap">
+      <origin xyz="0 0.0845 1.31" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.012" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <collision name="weighted_disc">
+      <geometry>
+        <mesh filename="assets/meshes/beveled_weighted_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="upright_column">
+      <origin xyz="0 0 0.665" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="1.185" />
+        </geometry>
+      </collision>
+    <collision name="column_collar">
+      <origin xyz="0 0 1.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0 0 1.247" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.166 0.032" />
+        </geometry>
+      </collision>
+    <collision name="near_yoke_cheek">
+      <origin xyz="0 -0.071 1.32" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.022 0.16" />
+        </geometry>
+      </collision>
+    <collision name="near_pivot_cap">
+      <origin xyz="0 -0.0845 1.31" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="far_yoke_cheek">
+      <origin xyz="0 0.071 1.32" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.022 0.16" />
+        </geometry>
+      </collision>
+    <collision name="far_pivot_cap">
+      <origin xyz="0 0.0845 1.31" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="arm">
+    <visual name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.12" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="arm_tube">
+      <geometry>
+        <mesh filename="assets/meshes/swept_arc_arm.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.55 0.5 1" />
+        </material>
+      </visual>
+    <collision name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="arm_tube">
+      <geometry>
+        <mesh filename="assets/meshes/swept_arc_arm.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shade">
+    <visual name="shade_stem">
+      <origin xyz="0 0 -0.0425" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="shade_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_disc_shade.obj" />
+        </geometry>
+      <material name="warm_white_shade">
+        <color rgba="0.92 0.88 0.78 1" />
+        </material>
+      </visual>
+    <visual name="underside_diffuser">
+      <origin xyz="0 0 -0.256" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.182" length="0.01" />
+        </geometry>
+      <material name="warm_diffuser">
+        <color rgba="1 0.83 0.46 0.78" />
+        </material>
+      </visual>
+    <collision name="shade_stem">
+      <origin xyz="0 0 -0.0425" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.085" />
+        </geometry>
+      </collision>
+    <collision name="shade_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_disc_shade.obj" />
+        </geometry>
+      </collision>
+    <collision name="underside_diffuser">
+      <origin xyz="0 0 -0.256" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.182" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_arm" type="revolute">
+    <origin xyz="0 0 1.31" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="0.8" lower="-0.28" upper="0.42" />
+    </joint>
+  <joint name="arm_to_shade" type="fixed">
+    <origin xyz="1.62 0 -0.11" rpy="0 0 0" />
+    <parent link="arm" />
+    <child link="shade" />
+    </joint>
+  </robot>

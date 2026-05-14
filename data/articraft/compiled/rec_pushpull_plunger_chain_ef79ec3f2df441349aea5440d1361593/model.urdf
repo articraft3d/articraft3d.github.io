@@ -1,0 +1,231 @@
+<robot name="multi_stage_plunger_actuator">
+  <material name="painted_steel">
+    <color rgba="0.18 0.21 0.24 1" />
+    </material>
+  <material name="guide_blue">
+    <color rgba="0.08 0.22 0.36 1" />
+    </material>
+  <material name="sleeve_blue">
+    <color rgba="0.1 0.32 0.48 1" />
+    </material>
+  <material name="polished_rod">
+    <color rgba="0.72 0.75 0.76 1" />
+    </material>
+  <material name="dark_seal">
+    <color rgba="0.02 0.025 0.03 1" />
+    </material>
+  <material name="bolt_steel">
+    <color rgba="0.4 0.42 0.42 1" />
+    </material>
+  <link name="rear_bracket">
+    <visual name="bracket_frame">
+      <geometry>
+        <mesh filename="assets/meshes/rear_bracket.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.21 0.24 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_0">
+      <origin xyz="-0.235 -0.16 -0.143" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.4 0.42 0.42 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_1">
+      <origin xyz="-0.235 0.16 -0.143" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.4 0.42 0.42 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_2">
+      <origin xyz="-0.065 -0.16 -0.143" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.4 0.42 0.42 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_3">
+      <origin xyz="-0.065 0.16 -0.143" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.4 0.42 0.42 1" />
+        </material>
+      </visual>
+    <collision name="bracket_frame">
+      <geometry>
+        <mesh filename="assets/meshes/rear_bracket.obj" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_0">
+      <origin xyz="-0.235 -0.16 -0.143" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_1">
+      <origin xyz="-0.235 0.16 -0.143" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_2">
+      <origin xyz="-0.065 -0.16 -0.143" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_3">
+      <origin xyz="-0.065 0.16 -0.143" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="large_sleeve">
+    <visual name="guide_shell">
+      <geometry>
+        <mesh filename="assets/meshes/large_guide_sleeve.obj" />
+        </geometry>
+      <material name="guide_blue">
+        <color rgba="0.08 0.22 0.36 1" />
+        </material>
+      </visual>
+    <visual name="front_seal">
+      <geometry>
+        <mesh filename="assets/meshes/large_front_seal.obj" />
+        </geometry>
+      <material name="dark_seal">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <collision name="guide_shell">
+      <geometry>
+        <mesh filename="assets/meshes/large_guide_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_seal">
+      <geometry>
+        <mesh filename="assets/meshes/large_front_seal.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="second_sleeve">
+    <visual name="sleeve_shell">
+      <geometry>
+        <mesh filename="assets/meshes/second_sliding_sleeve.obj" />
+        </geometry>
+      <material name="sleeve_blue">
+        <color rgba="0.1 0.32 0.48 1" />
+        </material>
+      </visual>
+    <visual name="rod_seal">
+      <geometry>
+        <mesh filename="assets/meshes/second_front_seal.obj" />
+        </geometry>
+      <material name="dark_seal">
+        <color rgba="0.02 0.025 0.03 1" />
+        </material>
+      </visual>
+    <collision name="sleeve_shell">
+      <geometry>
+        <mesh filename="assets/meshes/second_sliding_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="rod_seal">
+      <geometry>
+        <mesh filename="assets/meshes/second_front_seal.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="output_rod">
+    <visual name="rear_shank">
+      <origin xyz="-0.27 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.7" />
+        </geometry>
+      <material name="polished_rod">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_stop">
+      <origin xyz="0.06 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.06" />
+        </geometry>
+      <material name="polished_rod">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="front_nose">
+      <origin xyz="0.33 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.5" />
+        </geometry>
+      <material name="polished_rod">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="end_pad">
+      <origin xyz="0.595 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.06 0.06" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.21 0.24 1" />
+        </material>
+      </visual>
+    <collision name="rear_shank">
+      <origin xyz="-0.27 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.7" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_stop">
+      <origin xyz="0.06 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="front_nose">
+      <origin xyz="0.33 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.5" />
+        </geometry>
+      </collision>
+    <collision name="end_pad">
+      <origin xyz="0.595 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.06 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="bracket_to_large_sleeve" type="fixed">
+    <parent link="rear_bracket" />
+    <child link="large_sleeve" />
+    </joint>
+  <joint name="large_to_second_sleeve" type="prismatic">
+    <origin xyz="0.72 0 0" rpy="0 0 0" />
+    <parent link="large_sleeve" />
+    <child link="second_sleeve" />
+    <axis xyz="1 0 0" />
+    <limit effort="140" velocity="0.32" lower="0" upper="0.38" />
+    </joint>
+  <joint name="second_sleeve_to_output" type="prismatic">
+    <origin xyz="0.3 0 0" rpy="0 0 0" />
+    <parent link="second_sleeve" />
+    <child link="output_rod" />
+    <axis xyz="1 0 0" />
+    <limit effort="95" velocity="0.4" lower="0" upper="0.32" />
+    </joint>
+  </robot>

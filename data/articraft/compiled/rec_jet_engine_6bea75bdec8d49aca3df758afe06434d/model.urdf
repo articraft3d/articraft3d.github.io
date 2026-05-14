@@ -1,0 +1,339 @@
+<robot name="airliner_turbofan_reverser">
+  <material name="nacelle_white">
+    <color rgba="0.86 0.88 0.9 1" />
+    </material>
+  <material name="sleeve_white">
+    <color rgba="0.82 0.84 0.86 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="blade_metal">
+    <color rgba="0.56 0.6 0.66 1" />
+    </material>
+  <material name="rail_metal">
+    <color rgba="0.2 0.22 0.24 1" />
+    </material>
+  <material name="cascade_metal">
+    <color rgba="0.38 0.4 0.42 1" />
+    </material>
+  <link name="nacelle">
+    <visual name="stationary_shell">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/stationary_nacelle_shell.obj" />
+        </geometry>
+      <material name="nacelle_white">
+        <color rgba="0.86 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="core_body">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/centered_core_body.obj" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="bearing_shaft">
+      <origin xyz="-1 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.082" length="1.4" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="cascade_band">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/reverser_cascade_band.obj" />
+        </geometry>
+      <material name="cascade_metal">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="horizontal_stator">
+      <origin xyz="-0.58 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 2.02 0.055" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="vertical_stator">
+      <origin xyz="-0.58 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.055 2.02" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="cascade_frame_0">
+      <origin xyz="0.48 0.96 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.16 0.16" />
+        </geometry>
+      <material name="cascade_metal">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="cascade_frame_1">
+      <origin xyz="0.48 -0.96 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.16 0.16" />
+        </geometry>
+      <material name="cascade_metal">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="cascade_frame_2">
+      <origin xyz="0.48 0 0.96" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.16 0.16" />
+        </geometry>
+      <material name="cascade_metal">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="cascade_frame_3">
+      <origin xyz="0.48 0 -0.96" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.16 0.16" />
+        </geometry>
+      <material name="cascade_metal">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_0">
+      <origin xyz="0.5 1.37 0" rpy="0 0 0" />
+      <geometry>
+        <box size="2.18 0.075 0.085" />
+        </geometry>
+      <material name="rail_metal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_1">
+      <origin xyz="0.5 -1.37 0" rpy="0 0 0" />
+      <geometry>
+        <box size="2.18 0.075 0.085" />
+        </geometry>
+      <material name="rail_metal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="rail_mount_0_0">
+      <origin xyz="-0.42 1.225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.3 0.12" />
+        </geometry>
+      <material name="rail_metal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="rail_mount_0_1">
+      <origin xyz="1.22 1.225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.3 0.12" />
+        </geometry>
+      <material name="rail_metal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="rail_mount_1_0">
+      <origin xyz="-0.42 -1.225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.3 0.12" />
+        </geometry>
+      <material name="rail_metal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="rail_mount_1_1">
+      <origin xyz="1.22 -1.225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.3 0.12" />
+        </geometry>
+      <material name="rail_metal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <collision name="stationary_shell">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/stationary_nacelle_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="core_body">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/centered_core_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_shaft">
+      <origin xyz="-1 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.082" length="1.4" />
+        </geometry>
+      </collision>
+    <collision name="cascade_band">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/reverser_cascade_band.obj" />
+        </geometry>
+      </collision>
+    <collision name="horizontal_stator">
+      <origin xyz="-0.58 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 2.02 0.055" />
+        </geometry>
+      </collision>
+    <collision name="vertical_stator">
+      <origin xyz="-0.58 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.055 2.02" />
+        </geometry>
+      </collision>
+    <collision name="cascade_frame_0">
+      <origin xyz="0.48 0.96 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.16 0.16" />
+        </geometry>
+      </collision>
+    <collision name="cascade_frame_1">
+      <origin xyz="0.48 -0.96 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.16 0.16" />
+        </geometry>
+      </collision>
+    <collision name="cascade_frame_2">
+      <origin xyz="0.48 0 0.96" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.16 0.16" />
+        </geometry>
+      </collision>
+    <collision name="cascade_frame_3">
+      <origin xyz="0.48 0 -0.96" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.16 0.16" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_0">
+      <origin xyz="0.5 1.37 0" rpy="0 0 0" />
+      <geometry>
+        <box size="2.18 0.075 0.085" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_1">
+      <origin xyz="0.5 -1.37 0" rpy="0 0 0" />
+      <geometry>
+        <box size="2.18 0.075 0.085" />
+        </geometry>
+      </collision>
+    <collision name="rail_mount_0_0">
+      <origin xyz="-0.42 1.225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.3 0.12" />
+        </geometry>
+      </collision>
+    <collision name="rail_mount_0_1">
+      <origin xyz="1.22 1.225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.3 0.12" />
+        </geometry>
+      </collision>
+    <collision name="rail_mount_1_0">
+      <origin xyz="-0.42 -1.225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.3 0.12" />
+        </geometry>
+      </collision>
+    <collision name="rail_mount_1_1">
+      <origin xyz="1.22 -1.225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.3 0.12" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="fan_rotor">
+    <visual name="fan_stage">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_fan_rotor.obj" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.56 0.6 0.66 1" />
+        </material>
+      </visual>
+    <collision name="fan_stage">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_fan_rotor.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="reverser_sleeve">
+    <visual name="outer_cowl">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/translating_reverser_sleeve.obj" />
+        </geometry>
+      <material name="sleeve_white">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="slider_lug_0">
+      <origin xyz="0.38 1.2675 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.13 0.18" />
+        </geometry>
+      <material name="rail_metal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="slider_lug_1">
+      <origin xyz="0.38 -1.2675 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.13 0.18" />
+        </geometry>
+      <material name="rail_metal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <collision name="outer_cowl">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/translating_reverser_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="slider_lug_0">
+      <origin xyz="0.38 1.2675 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.13 0.18" />
+        </geometry>
+      </collision>
+    <collision name="slider_lug_1">
+      <origin xyz="0.38 -1.2675 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.13 0.18" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="fan_spin" type="continuous">
+    <origin xyz="-1.23 0 0" rpy="0 0 0" />
+    <parent link="nacelle" />
+    <child link="fan_rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="30" velocity="70" />
+    </joint>
+  <joint name="sleeve_slide" type="prismatic">
+    <parent link="nacelle" />
+    <child link="reverser_sleeve" />
+    <axis xyz="1 0 0" />
+    <limit effort="8500" velocity="0.35" lower="0" upper="0.46" />
+    </joint>
+  </robot>

@@ -1,0 +1,338 @@
+<robot name="swing_arm_extension_chain">
+  <material name="powder_coated_base">
+    <color rgba="0.08 0.1 0.12 1" />
+    </material>
+  <material name="black_bearing_surfaces">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="safety_yellow_arm">
+    <color rgba="0.92 0.62 0.08 1" />
+    </material>
+  <material name="worn_edge_dark">
+    <color rgba="0.12 0.1 0.08 1" />
+    </material>
+  <material name="brushed_steel_slide">
+    <color rgba="0.62 0.66 0.68 1" />
+    </material>
+  <material name="black_rubber_stop">
+    <color rgba="0.015 0.014 0.013 1" />
+    </material>
+  <link name="support">
+    <visual name="floor_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.25 0.035" />
+        </geometry>
+      <material name="powder_coated_base">
+        <color rgba="0.08 0.1 0.12 1" />
+        </material>
+      </visual>
+    <visual name="post">
+      <origin xyz="0 0 0.275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.49" />
+        </geometry>
+      <material name="powder_coated_base">
+        <color rgba="0.08 0.1 0.12 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing">
+      <origin xyz="0 0 0.5135" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.074" length="0.025" />
+        </geometry>
+      <material name="black_bearing_surfaces">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="yoke_plate_0">
+      <origin xyz="0 0.069 0.558" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.018 0.114" />
+        </geometry>
+      <material name="powder_coated_base">
+        <color rgba="0.08 0.1 0.12 1" />
+        </material>
+      </visual>
+    <visual name="yoke_plate_1">
+      <origin xyz="0 -0.069 0.558" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.018 0.114" />
+        </geometry>
+      <material name="powder_coated_base">
+        <color rgba="0.08 0.1 0.12 1" />
+        </material>
+      </visual>
+    <visual name="top_retainer">
+      <origin xyz="0 0 0.604" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.062" length="0.02" />
+        </geometry>
+      <material name="black_bearing_surfaces">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.25 0.035" />
+        </geometry>
+      </collision>
+    <collision name="post">
+      <origin xyz="0 0 0.275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.49" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing">
+      <origin xyz="0 0 0.5135" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.074" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="yoke_plate_0">
+      <origin xyz="0 0.069 0.558" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.018 0.114" />
+        </geometry>
+      </collision>
+    <collision name="yoke_plate_1">
+      <origin xyz="0 -0.069 0.558" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.018 0.114" />
+        </geometry>
+      </collision>
+    <collision name="top_retainer">
+      <origin xyz="0 0 0.604" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.062" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="arm">
+    <visual name="root_boss">
+      <geometry>
+        <cylinder radius="0.052" length="0.066" />
+        </geometry>
+      <material name="black_bearing_surfaces">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_top">
+      <origin xyz="0.4325 0 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.795 0.09 0.012" />
+        </geometry>
+      <material name="safety_yellow_arm">
+        <color rgba="0.92 0.62 0.08 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_bottom">
+      <origin xyz="0.4325 0 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.795 0.09 0.012" />
+        </geometry>
+      <material name="safety_yellow_arm">
+        <color rgba="0.92 0.62 0.08 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_side_0">
+      <origin xyz="0.4325 0.039 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.795 0.012 0.07" />
+        </geometry>
+      <material name="safety_yellow_arm">
+        <color rgba="0.92 0.62 0.08 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_side_1">
+      <origin xyz="0.4325 -0.039 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.795 0.012 0.07" />
+        </geometry>
+      <material name="safety_yellow_arm">
+        <color rgba="0.92 0.62 0.08 1" />
+        </material>
+      </visual>
+    <visual name="root_collar">
+      <origin xyz="0.075 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.104 0.05" />
+        </geometry>
+      <material name="worn_edge_dark">
+        <color rgba="0.12 0.1 0.08 1" />
+        </material>
+      </visual>
+    <visual name="nose_band_top">
+      <origin xyz="0.8 0 0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.104 0.01" />
+        </geometry>
+      <material name="worn_edge_dark">
+        <color rgba="0.12 0.1 0.08 1" />
+        </material>
+      </visual>
+    <visual name="nose_band_bottom">
+      <origin xyz="0.8 0 -0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.104 0.01" />
+        </geometry>
+      <material name="worn_edge_dark">
+        <color rgba="0.12 0.1 0.08 1" />
+        </material>
+      </visual>
+    <visual name="nose_band_side_0">
+      <origin xyz="0.8 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.084" />
+        </geometry>
+      <material name="worn_edge_dark">
+        <color rgba="0.12 0.1 0.08 1" />
+        </material>
+      </visual>
+    <visual name="nose_band_side_1">
+      <origin xyz="0.8 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.084" />
+        </geometry>
+      <material name="worn_edge_dark">
+        <color rgba="0.12 0.1 0.08 1" />
+        </material>
+      </visual>
+    <collision name="root_boss">
+      <geometry>
+        <cylinder radius="0.052" length="0.066" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_top">
+      <origin xyz="0.4325 0 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.795 0.09 0.012" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_bottom">
+      <origin xyz="0.4325 0 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.795 0.09 0.012" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_side_0">
+      <origin xyz="0.4325 0.039 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.795 0.012 0.07" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_side_1">
+      <origin xyz="0.4325 -0.039 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.795 0.012 0.07" />
+        </geometry>
+      </collision>
+    <collision name="root_collar">
+      <origin xyz="0.075 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.104 0.05" />
+        </geometry>
+      </collision>
+    <collision name="nose_band_top">
+      <origin xyz="0.8 0 0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.104 0.01" />
+        </geometry>
+      </collision>
+    <collision name="nose_band_bottom">
+      <origin xyz="0.8 0 -0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.104 0.01" />
+        </geometry>
+      </collision>
+    <collision name="nose_band_side_0">
+      <origin xyz="0.8 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.084" />
+        </geometry>
+      </collision>
+    <collision name="nose_band_side_1">
+      <origin xyz="0.8 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.084" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="nose_slide">
+    <visual name="slide_bar">
+      <origin xyz="-0.11 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.052 0.032" />
+        </geometry>
+      <material name="brushed_steel_slide">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="top_glide">
+      <origin xyz="-0.135 0 0.01925" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.044 0.0075" />
+        </geometry>
+      <material name="black_bearing_surfaces">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="bottom_glide">
+      <origin xyz="-0.135 0 -0.01925" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.044 0.0075" />
+        </geometry>
+      <material name="black_bearing_surfaces">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="nose_stop">
+      <origin xyz="0.047 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.064 0.046" />
+        </geometry>
+      <material name="black_rubber_stop">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <collision name="slide_bar">
+      <origin xyz="-0.11 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.052 0.032" />
+        </geometry>
+      </collision>
+    <collision name="top_glide">
+      <origin xyz="-0.135 0 0.01925" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.044 0.0075" />
+        </geometry>
+      </collision>
+    <collision name="bottom_glide">
+      <origin xyz="-0.135 0 -0.01925" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.044 0.0075" />
+        </geometry>
+      </collision>
+    <collision name="nose_stop">
+      <origin xyz="0.047 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.064 0.046" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="root_swing" type="revolute">
+    <origin xyz="0 0 0.56" rpy="0 0 0" />
+    <parent link="support" />
+    <child link="arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="70" velocity="1.6" lower="-1.35" upper="1.35" />
+    </joint>
+  <joint name="nose_slide" type="prismatic">
+    <origin xyz="0.83 0 0" rpy="0 0 0" />
+    <parent link="arm" />
+    <child link="nose_slide" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="0.35" lower="0" upper="0.14" />
+    </joint>
+  </robot>

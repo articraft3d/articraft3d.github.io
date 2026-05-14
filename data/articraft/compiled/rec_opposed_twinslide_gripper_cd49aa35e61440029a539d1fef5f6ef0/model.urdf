@@ -1,0 +1,408 @@
+<robot name="fork_finger_parallel_gripper">
+  <link name="spine">
+    <visual name="center_spine">
+      <origin xyz="0 0.03 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.52 0.1" />
+        </geometry>
+      <material name="dark gunmetal anodized steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="guide_bed">
+      <origin xyz="0 0 0.1325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.57 0.26 0.025" />
+        </geometry>
+      <material name="dark gunmetal anodized steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rail_rear">
+      <origin xyz="0 -0.075 0.156" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.56" />
+        </geometry>
+      <material name="polished linear rail steel">
+        <color rgba="0.72 0.74 0.74 1" />
+        </material>
+      </visual>
+    <visual name="rail_front">
+      <origin xyz="0 0.075 0.156" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.56" />
+        </geometry>
+      <material name="polished linear rail steel">
+        <color rgba="0.72 0.74 0.74 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_0">
+      <origin xyz="-0.3 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.25 0.11" />
+        </geometry>
+      <material name="dark gunmetal anodized steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_1">
+      <origin xyz="0.3 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.25 0.11" />
+        </geometry>
+      <material name="dark gunmetal anodized steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="bed_screw_-0.15_-0.10">
+      <origin xyz="-0.15 -0.095 0.148" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      <material name="polished linear rail steel">
+        <color rgba="0.72 0.74 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bed_screw_-0.15_+0.10">
+      <origin xyz="-0.15 0.095 0.148" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      <material name="polished linear rail steel">
+        <color rgba="0.72 0.74 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bed_screw_+0.15_-0.10">
+      <origin xyz="0.15 -0.095 0.148" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      <material name="polished linear rail steel">
+        <color rgba="0.72 0.74 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bed_screw_+0.15_+0.10">
+      <origin xyz="0.15 0.095 0.148" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      <material name="polished linear rail steel">
+        <color rgba="0.72 0.74 0.74 1" />
+        </material>
+      </visual>
+    <collision name="center_spine">
+      <origin xyz="0 0.03 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.52 0.1" />
+        </geometry>
+      </collision>
+    <collision name="guide_bed">
+      <origin xyz="0 0 0.1325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.57 0.26 0.025" />
+        </geometry>
+      </collision>
+    <collision name="rail_rear">
+      <origin xyz="0 -0.075 0.156" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.56" />
+        </geometry>
+      </collision>
+    <collision name="rail_front">
+      <origin xyz="0 0.075 0.156" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.56" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_0">
+      <origin xyz="-0.3 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.25 0.11" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_1">
+      <origin xyz="0.3 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.25 0.11" />
+        </geometry>
+      </collision>
+    <collision name="bed_screw_-0.15_-0.10">
+      <origin xyz="-0.15 -0.095 0.148" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="bed_screw_-0.15_+0.10">
+      <origin xyz="-0.15 0.095 0.148" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="bed_screw_+0.15_-0.10">
+      <origin xyz="0.15 -0.095 0.148" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="bed_screw_+0.15_+0.10">
+      <origin xyz="0.15 0.095 0.148" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="jaw_0">
+    <visual name="guide_body">
+      <geometry>
+        <box size="0.075 0.2 0.09" />
+        </geometry>
+      <material name="brushed aluminum jaw blocks">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="rear_witness_bar">
+      <origin xyz="0 -0.11 -0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.02 0.018" />
+        </geometry>
+      <material name="orange jaw witness marks">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="finger_lower">
+      <origin xyz="0 0.28 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.36 0.032" />
+        </geometry>
+      <material name="brushed aluminum jaw blocks">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="grip_pad_lower">
+      <origin xyz="-0.019 0.33 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.255 0.024" />
+        </geometry>
+      <material name="matte black rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="soft_tip_lower">
+      <origin xyz="0 0.469 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.018 0.036" />
+        </geometry>
+      <material name="matte black rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="finger_upper">
+      <origin xyz="0 0.28 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.36 0.032" />
+        </geometry>
+      <material name="brushed aluminum jaw blocks">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="grip_pad_upper">
+      <origin xyz="-0.019 0.33 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.255 0.024" />
+        </geometry>
+      <material name="matte black rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="soft_tip_upper">
+      <origin xyz="0 0.469 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.018 0.036" />
+        </geometry>
+      <material name="matte black rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <collision name="guide_body">
+      <geometry>
+        <box size="0.075 0.2 0.09" />
+        </geometry>
+      </collision>
+    <collision name="rear_witness_bar">
+      <origin xyz="0 -0.11 -0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.02 0.018" />
+        </geometry>
+      </collision>
+    <collision name="finger_lower">
+      <origin xyz="0 0.28 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.36 0.032" />
+        </geometry>
+      </collision>
+    <collision name="grip_pad_lower">
+      <origin xyz="-0.019 0.33 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.255 0.024" />
+        </geometry>
+      </collision>
+    <collision name="soft_tip_lower">
+      <origin xyz="0 0.469 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.018 0.036" />
+        </geometry>
+      </collision>
+    <collision name="finger_upper">
+      <origin xyz="0 0.28 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.36 0.032" />
+        </geometry>
+      </collision>
+    <collision name="grip_pad_upper">
+      <origin xyz="-0.019 0.33 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.255 0.024" />
+        </geometry>
+      </collision>
+    <collision name="soft_tip_upper">
+      <origin xyz="0 0.469 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.018 0.036" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="jaw_1">
+    <visual name="guide_body">
+      <geometry>
+        <box size="0.075 0.2 0.09" />
+        </geometry>
+      <material name="brushed aluminum jaw blocks">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="rear_witness_bar">
+      <origin xyz="0 -0.11 -0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.02 0.018" />
+        </geometry>
+      <material name="orange jaw witness marks">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="finger_lower">
+      <origin xyz="0 0.28 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.36 0.032" />
+        </geometry>
+      <material name="brushed aluminum jaw blocks">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="grip_pad_lower">
+      <origin xyz="0.019 0.33 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.255 0.024" />
+        </geometry>
+      <material name="matte black rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="soft_tip_lower">
+      <origin xyz="0 0.469 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.018 0.036" />
+        </geometry>
+      <material name="matte black rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="finger_upper">
+      <origin xyz="0 0.28 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.36 0.032" />
+        </geometry>
+      <material name="brushed aluminum jaw blocks">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="grip_pad_upper">
+      <origin xyz="0.019 0.33 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.255 0.024" />
+        </geometry>
+      <material name="matte black rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="soft_tip_upper">
+      <origin xyz="0 0.469 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.018 0.036" />
+        </geometry>
+      <material name="matte black rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <collision name="guide_body">
+      <geometry>
+        <box size="0.075 0.2 0.09" />
+        </geometry>
+      </collision>
+    <collision name="rear_witness_bar">
+      <origin xyz="0 -0.11 -0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.02 0.018" />
+        </geometry>
+      </collision>
+    <collision name="finger_lower">
+      <origin xyz="0 0.28 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.36 0.032" />
+        </geometry>
+      </collision>
+    <collision name="grip_pad_lower">
+      <origin xyz="0.019 0.33 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.255 0.024" />
+        </geometry>
+      </collision>
+    <collision name="soft_tip_lower">
+      <origin xyz="0 0.469 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.018 0.036" />
+        </geometry>
+      </collision>
+    <collision name="finger_upper">
+      <origin xyz="0 0.28 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.36 0.032" />
+        </geometry>
+      </collision>
+    <collision name="grip_pad_upper">
+      <origin xyz="0.019 0.33 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.255 0.024" />
+        </geometry>
+      </collision>
+    <collision name="soft_tip_upper">
+      <origin xyz="0 0.469 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.018 0.036" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="jaw_0_slide" type="prismatic">
+    <origin xyz="0.065 0 0.213" rpy="0 0 0" />
+    <parent link="spine" />
+    <child link="jaw_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="90" velocity="0.35" lower="-0.02" upper="0.085" />
+    </joint>
+  <joint name="jaw_1_slide" type="prismatic">
+    <origin xyz="-0.065 0 0.213" rpy="0 0 0" />
+    <parent link="spine" />
+    <child link="jaw_1" />
+    <axis xyz="-1 0 0" />
+    <limit effort="90" velocity="0.35" lower="-0.02" upper="0.085" />
+    </joint>
+  </robot>

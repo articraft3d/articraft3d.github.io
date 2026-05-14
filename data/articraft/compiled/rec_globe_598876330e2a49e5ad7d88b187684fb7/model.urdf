@@ -1,0 +1,226 @@
+<robot name="canted_single_arm_globe">
+  <link name="base">
+    <visual name="fixed_foot">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.025" />
+        </geometry>
+      <material name="soft_graphite">
+        <color rgba="0.055 0.058 0.06 1" />
+        </material>
+      </visual>
+    <visual name="outer_ring">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_outer_ring.obj" />
+        </geometry>
+      <material name="dark_burnished_metal">
+        <color rgba="0.16 0.15 0.13 1" />
+        </material>
+      </visual>
+    <collision name="fixed_foot">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="outer_ring">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_outer_ring.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pedestal">
+    <visual name="turntable_disc">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.172" length="0.024" />
+        </geometry>
+      <material name="dark_burnished_metal">
+        <color rgba="0.16 0.15 0.13 1" />
+        </material>
+      </visual>
+    <visual name="raised_ring">
+      <origin xyz="0 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_raised_ring.obj" />
+        </geometry>
+      <material name="warm_brushed_brass">
+        <color rgba="0.78 0.58 0.3 1" />
+        </material>
+      </visual>
+    <visual name="center_boss">
+      <origin xyz="0 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.07" />
+        </geometry>
+      <material name="warm_brushed_brass">
+        <color rgba="0.78 0.58 0.3 1" />
+        </material>
+      </visual>
+    <visual name="support_arm">
+      <geometry>
+        <mesh filename="assets/meshes/canted_support_arm.obj" />
+        </geometry>
+      <material name="warm_brushed_brass">
+        <color rgba="0.78 0.58 0.3 1" />
+        </material>
+      </visual>
+    <visual name="bearing_knuckle">
+      <origin xyz="0.0320954 0 0.608512" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.026" />
+        </geometry>
+      <material name="warm_brushed_brass">
+        <color rgba="0.78 0.58 0.3 1" />
+        </material>
+      </visual>
+    <visual name="spindle_pin">
+      <origin xyz="0.0439287 0 0.583135" rpy="0 -0.436332 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.056" />
+        </geometry>
+      <material name="warm_brushed_brass">
+        <color rgba="0.78 0.58 0.3 1" />
+        </material>
+      </visual>
+    <collision name="turntable_disc">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.172" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="raised_ring">
+      <origin xyz="0 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_raised_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="center_boss">
+      <origin xyz="0 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="support_arm">
+      <geometry>
+        <mesh filename="assets/meshes/canted_support_arm.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_knuckle">
+      <origin xyz="0.0320954 0 0.608512" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.026" />
+        </geometry>
+      </collision>
+    <collision name="spindle_pin">
+      <origin xyz="0.0439287 0 0.583135" rpy="0 -0.436332 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.056" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="globe">
+    <visual name="sphere_shell">
+      <geometry>
+        <sphere radius="0.13" />
+        </geometry>
+      <material name="matte_deep_ocean">
+        <color rgba="0.05 0.18 0.32 1" />
+        </material>
+      </visual>
+    <visual name="equator_ring">
+      <geometry>
+        <mesh filename="assets/meshes/globe_equator_ring.obj" />
+        </geometry>
+      <material name="pale_engraved_lines">
+        <color rgba="0.78 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="meridian_ring_0">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/globe_meridian_ring.obj" />
+        </geometry>
+      <material name="pale_engraved_lines">
+        <color rgba="0.78 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="meridian_ring_1">
+      <origin xyz="0 0 0" rpy="1.5708 0 1.0472" />
+      <geometry>
+        <mesh filename="assets/meshes/globe_meridian_ring.obj" />
+        </geometry>
+      <material name="pale_engraved_lines">
+        <color rgba="0.78 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="polar_socket">
+      <origin xyz="0 0 0.141" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.022" />
+        </geometry>
+      <material name="warm_brushed_brass">
+        <color rgba="0.78 0.58 0.3 1" />
+        </material>
+      </visual>
+    <visual name="polar_cap">
+      <origin xyz="0 0 -0.135" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="warm_brushed_brass">
+        <color rgba="0.78 0.58 0.3 1" />
+        </material>
+      </visual>
+    <collision name="sphere_shell">
+      <geometry>
+        <sphere radius="0.13" />
+        </geometry>
+      </collision>
+    <collision name="equator_ring">
+      <geometry>
+        <mesh filename="assets/meshes/globe_equator_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="meridian_ring_0">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/globe_meridian_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="meridian_ring_1">
+      <origin xyz="0 0 0" rpy="1.5708 0 1.0472" />
+      <geometry>
+        <mesh filename="assets/meshes/globe_meridian_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="polar_socket">
+      <origin xyz="0 0 0.141" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="polar_cap">
+      <origin xyz="0 0 -0.135" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_pedestal" type="continuous">
+    <origin xyz="0 0 0.025" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="pedestal" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="1.5" />
+    </joint>
+  <joint name="pedestal_to_globe" type="continuous">
+    <origin xyz="0.12 0 0.42" rpy="0 -0.436332 0" />
+    <parent link="pedestal" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="3" />
+    </joint>
+  </robot>

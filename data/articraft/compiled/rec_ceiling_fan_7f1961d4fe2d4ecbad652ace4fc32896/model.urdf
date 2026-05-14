@@ -1,0 +1,1302 @@
+<robot name="five_blade_ceiling_fan">
+  <material name="aged_bronze">
+    <color rgba="0.38 0.25 0.13 1" />
+    </material>
+  <material name="dark_bronze">
+    <color rgba="0.18 0.12 0.07 1" />
+    </material>
+  <material name="warm_wood">
+    <color rgba="0.64 0.38 0.17 1" />
+    </material>
+  <material name="dark_wood_grain">
+    <color rgba="0.24 0.13 0.055 1" />
+    </material>
+  <material name="slot_screw_heads">
+    <color rgba="0.08 0.075 0.065 1" />
+    </material>
+  <link name="mount">
+    <visual name="bell_canopy">
+      <geometry>
+        <mesh filename="assets/meshes/bell_canopy.obj" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="ceiling_plate">
+      <origin xyz="0 0 0.565" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.026" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="swivel_ball">
+      <origin xyz="0 0 0.332" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.05" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="socket_ring">
+      <origin xyz="0 0 0.346" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/socket_ring.obj" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="downrod">
+      <origin xyz="0 0 0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.235" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="motor_drum">
+      <geometry>
+        <cylinder radius="0.184" length="0.205" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="upper_motor_bead">
+      <origin xyz="0 0 0.104" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_motor_bead.obj" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="lower_motor_bead">
+      <origin xyz="0 0 -0.104" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_motor_bead.obj" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="bearing_collar">
+      <origin xyz="0 0 -0.108" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.04" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="axle_stub">
+      <origin xyz="0 0 -0.165" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.076" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <collision name="bell_canopy">
+      <geometry>
+        <mesh filename="assets/meshes/bell_canopy.obj" />
+        </geometry>
+      </collision>
+    <collision name="ceiling_plate">
+      <origin xyz="0 0 0.565" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="swivel_ball">
+      <origin xyz="0 0 0.332" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.05" />
+        </geometry>
+      </collision>
+    <collision name="socket_ring">
+      <origin xyz="0 0 0.346" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/socket_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="downrod">
+      <origin xyz="0 0 0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.235" />
+        </geometry>
+      </collision>
+    <collision name="motor_drum">
+      <geometry>
+        <cylinder radius="0.184" length="0.205" />
+        </geometry>
+      </collision>
+    <collision name="upper_motor_bead">
+      <origin xyz="0 0 0.104" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_motor_bead.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_motor_bead">
+      <origin xyz="0 0 -0.104" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_motor_bead.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_collar">
+      <origin xyz="0 0 -0.108" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="axle_stub">
+      <origin xyz="0 0 -0.165" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.076" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="hub">
+    <visual name="hub_shell">
+      <geometry>
+        <cylinder radius="0.128" length="0.07" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="lower_cap">
+      <origin xyz="0 0 -0.048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.083" length="0.03" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="hub_bead">
+      <origin xyz="0 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hub_bead.obj" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="socket_0">
+      <origin xyz="0.145 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.105 0.04" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_ear_0_0">
+      <origin xyz="0.188 -0.056 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_ear_0_1">
+      <origin xyz="0.188 0.056 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_pin_0">
+      <origin xyz="0.206 0 -0.004" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.132" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="socket_1">
+      <origin xyz="0.0448075 0.137903 -0.004" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.075 0.105 0.04" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_ear_1_0">
+      <origin xyz="0.111354 0.161494 -0.004" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_ear_1_1">
+      <origin xyz="0.00483603 0.196104 -0.004" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_pin_1">
+      <origin xyz="0.0636575 0.195918 -0.004" rpy="1.5708 0 1.25664" />
+      <geometry>
+        <cylinder radius="0.01" length="0.132" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="socket_2">
+      <origin xyz="-0.117307 0.0852289 -0.004" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.075 0.105 0.04" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_ear_2_0">
+      <origin xyz="-0.119179 0.155809 -0.004" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_ear_2_1">
+      <origin xyz="-0.185011 0.0651987 -0.004" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_pin_2">
+      <origin xyz="-0.166658 0.121084 -0.004" rpy="1.5708 0 2.51327" />
+      <geometry>
+        <cylinder radius="0.01" length="0.132" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="socket_3">
+      <origin xyz="-0.117307 -0.0852289 -0.004" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.075 0.105 0.04" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_ear_3_0">
+      <origin xyz="-0.185011 -0.0651987 -0.004" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_ear_3_1">
+      <origin xyz="-0.119179 -0.155809 -0.004" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_pin_3">
+      <origin xyz="-0.166658 -0.121084 -0.004" rpy="1.5708 0 3.76991" />
+      <geometry>
+        <cylinder radius="0.01" length="0.132" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="socket_4">
+      <origin xyz="0.0448075 -0.137903 -0.004" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.075 0.105 0.04" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_ear_4_0">
+      <origin xyz="0.00483603 -0.196104 -0.004" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_ear_4_1">
+      <origin xyz="0.111354 -0.161494 -0.004" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      <material name="aged_bronze">
+        <color rgba="0.38 0.25 0.13 1" />
+        </material>
+      </visual>
+    <visual name="socket_pin_4">
+      <origin xyz="0.0636575 -0.195918 -0.004" rpy="1.5708 0 5.02655" />
+      <geometry>
+        <cylinder radius="0.01" length="0.132" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <collision name="hub_shell">
+      <geometry>
+        <cylinder radius="0.128" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="lower_cap">
+      <origin xyz="0 0 -0.048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.083" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="hub_bead">
+      <origin xyz="0 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hub_bead.obj" />
+        </geometry>
+      </collision>
+    <collision name="socket_0">
+      <origin xyz="0.145 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.105 0.04" />
+        </geometry>
+      </collision>
+    <collision name="socket_ear_0_0">
+      <origin xyz="0.188 -0.056 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      </collision>
+    <collision name="socket_ear_0_1">
+      <origin xyz="0.188 0.056 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      </collision>
+    <collision name="socket_pin_0">
+      <origin xyz="0.206 0 -0.004" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.132" />
+        </geometry>
+      </collision>
+    <collision name="socket_1">
+      <origin xyz="0.0448075 0.137903 -0.004" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.075 0.105 0.04" />
+        </geometry>
+      </collision>
+    <collision name="socket_ear_1_0">
+      <origin xyz="0.111354 0.161494 -0.004" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      </collision>
+    <collision name="socket_ear_1_1">
+      <origin xyz="0.00483603 0.196104 -0.004" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      </collision>
+    <collision name="socket_pin_1">
+      <origin xyz="0.0636575 0.195918 -0.004" rpy="1.5708 0 1.25664" />
+      <geometry>
+        <cylinder radius="0.01" length="0.132" />
+        </geometry>
+      </collision>
+    <collision name="socket_2">
+      <origin xyz="-0.117307 0.0852289 -0.004" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.075 0.105 0.04" />
+        </geometry>
+      </collision>
+    <collision name="socket_ear_2_0">
+      <origin xyz="-0.119179 0.155809 -0.004" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      </collision>
+    <collision name="socket_ear_2_1">
+      <origin xyz="-0.185011 0.0651987 -0.004" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      </collision>
+    <collision name="socket_pin_2">
+      <origin xyz="-0.166658 0.121084 -0.004" rpy="1.5708 0 2.51327" />
+      <geometry>
+        <cylinder radius="0.01" length="0.132" />
+        </geometry>
+      </collision>
+    <collision name="socket_3">
+      <origin xyz="-0.117307 -0.0852289 -0.004" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.075 0.105 0.04" />
+        </geometry>
+      </collision>
+    <collision name="socket_ear_3_0">
+      <origin xyz="-0.185011 -0.0651987 -0.004" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      </collision>
+    <collision name="socket_ear_3_1">
+      <origin xyz="-0.119179 -0.155809 -0.004" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      </collision>
+    <collision name="socket_pin_3">
+      <origin xyz="-0.166658 -0.121084 -0.004" rpy="1.5708 0 3.76991" />
+      <geometry>
+        <cylinder radius="0.01" length="0.132" />
+        </geometry>
+      </collision>
+    <collision name="socket_4">
+      <origin xyz="0.0448075 -0.137903 -0.004" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.075 0.105 0.04" />
+        </geometry>
+      </collision>
+    <collision name="socket_ear_4_0">
+      <origin xyz="0.00483603 -0.196104 -0.004" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      </collision>
+    <collision name="socket_ear_4_1">
+      <origin xyz="0.111354 -0.161494 -0.004" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.03 0.022 0.036" />
+        </geometry>
+      </collision>
+    <collision name="socket_pin_4">
+      <origin xyz="0.0636575 -0.195918 -0.004" rpy="1.5708 0 5.02655" />
+      <geometry>
+        <cylinder radius="0.01" length="0.132" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_0">
+    <visual name="root_barrel">
+      <origin xyz="0.018 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.084" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="iron_arm">
+      <origin xyz="0.138 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.026 0.014" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0.238 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.104 0.013" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="fork_arm_0">
+      <origin xyz="0.292 0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="fork_arm_1">
+      <origin xyz="0.292 -0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="paddle">
+      <geometry>
+        <mesh filename="assets/meshes/paddle_0.obj" />
+        </geometry>
+      <material name="warm_wood">
+        <color rgba="0.64 0.38 0.17 1" />
+        </material>
+      </visual>
+    <visual name="grain_line_0">
+      <origin xyz="0.505 0.01 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.355 0.01 0.003" />
+        </geometry>
+      <material name="dark_wood_grain">
+        <color rgba="0.24 0.13 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grain_line_1">
+      <origin xyz="0.53 0.064 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.315 0.008 0.003" />
+        </geometry>
+      <material name="dark_wood_grain">
+        <color rgba="0.24 0.13 0.055 1" />
+        </material>
+      </visual>
+    <visual name="screw_0">
+      <origin xyz="0.342 -0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="slot_screw_heads">
+        <color rgba="0.08 0.075 0.065 1" />
+        </material>
+      </visual>
+    <visual name="screw_1">
+      <origin xyz="0.342 0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="slot_screw_heads">
+        <color rgba="0.08 0.075 0.065 1" />
+        </material>
+      </visual>
+    <collision name="root_barrel">
+      <origin xyz="0.018 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.084" />
+        </geometry>
+      </collision>
+    <collision name="iron_arm">
+      <origin xyz="0.138 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.026 0.014" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0.238 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.104 0.013" />
+        </geometry>
+      </collision>
+    <collision name="fork_arm_0">
+      <origin xyz="0.292 0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="fork_arm_1">
+      <origin xyz="0.292 -0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle">
+      <geometry>
+        <mesh filename="assets/meshes/paddle_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="grain_line_0">
+      <origin xyz="0.505 0.01 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.355 0.01 0.003" />
+        </geometry>
+      </collision>
+    <collision name="grain_line_1">
+      <origin xyz="0.53 0.064 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.315 0.008 0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_0">
+      <origin xyz="0.342 -0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="screw_1">
+      <origin xyz="0.342 0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_1">
+    <visual name="root_barrel">
+      <origin xyz="0.018 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.084" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="iron_arm">
+      <origin xyz="0.138 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.026 0.014" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0.238 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.104 0.013" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="fork_arm_0">
+      <origin xyz="0.292 0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="fork_arm_1">
+      <origin xyz="0.292 -0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="paddle">
+      <geometry>
+        <mesh filename="assets/meshes/paddle_1.obj" />
+        </geometry>
+      <material name="warm_wood">
+        <color rgba="0.64 0.38 0.17 1" />
+        </material>
+      </visual>
+    <visual name="grain_line_0">
+      <origin xyz="0.505 0.01 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.355 0.01 0.003" />
+        </geometry>
+      <material name="dark_wood_grain">
+        <color rgba="0.24 0.13 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grain_line_1">
+      <origin xyz="0.53 0.064 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.315 0.008 0.003" />
+        </geometry>
+      <material name="dark_wood_grain">
+        <color rgba="0.24 0.13 0.055 1" />
+        </material>
+      </visual>
+    <visual name="screw_0">
+      <origin xyz="0.342 -0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="slot_screw_heads">
+        <color rgba="0.08 0.075 0.065 1" />
+        </material>
+      </visual>
+    <visual name="screw_1">
+      <origin xyz="0.342 0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="slot_screw_heads">
+        <color rgba="0.08 0.075 0.065 1" />
+        </material>
+      </visual>
+    <collision name="root_barrel">
+      <origin xyz="0.018 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.084" />
+        </geometry>
+      </collision>
+    <collision name="iron_arm">
+      <origin xyz="0.138 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.026 0.014" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0.238 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.104 0.013" />
+        </geometry>
+      </collision>
+    <collision name="fork_arm_0">
+      <origin xyz="0.292 0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="fork_arm_1">
+      <origin xyz="0.292 -0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle">
+      <geometry>
+        <mesh filename="assets/meshes/paddle_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="grain_line_0">
+      <origin xyz="0.505 0.01 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.355 0.01 0.003" />
+        </geometry>
+      </collision>
+    <collision name="grain_line_1">
+      <origin xyz="0.53 0.064 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.315 0.008 0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_0">
+      <origin xyz="0.342 -0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="screw_1">
+      <origin xyz="0.342 0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_2">
+    <visual name="root_barrel">
+      <origin xyz="0.018 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.084" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="iron_arm">
+      <origin xyz="0.138 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.026 0.014" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0.238 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.104 0.013" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="fork_arm_0">
+      <origin xyz="0.292 0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="fork_arm_1">
+      <origin xyz="0.292 -0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="paddle">
+      <geometry>
+        <mesh filename="assets/meshes/paddle_2.obj" />
+        </geometry>
+      <material name="warm_wood">
+        <color rgba="0.64 0.38 0.17 1" />
+        </material>
+      </visual>
+    <visual name="grain_line_0">
+      <origin xyz="0.505 0.01 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.355 0.01 0.003" />
+        </geometry>
+      <material name="dark_wood_grain">
+        <color rgba="0.24 0.13 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grain_line_1">
+      <origin xyz="0.53 0.064 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.315 0.008 0.003" />
+        </geometry>
+      <material name="dark_wood_grain">
+        <color rgba="0.24 0.13 0.055 1" />
+        </material>
+      </visual>
+    <visual name="screw_0">
+      <origin xyz="0.342 -0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="slot_screw_heads">
+        <color rgba="0.08 0.075 0.065 1" />
+        </material>
+      </visual>
+    <visual name="screw_1">
+      <origin xyz="0.342 0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="slot_screw_heads">
+        <color rgba="0.08 0.075 0.065 1" />
+        </material>
+      </visual>
+    <collision name="root_barrel">
+      <origin xyz="0.018 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.084" />
+        </geometry>
+      </collision>
+    <collision name="iron_arm">
+      <origin xyz="0.138 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.026 0.014" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0.238 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.104 0.013" />
+        </geometry>
+      </collision>
+    <collision name="fork_arm_0">
+      <origin xyz="0.292 0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="fork_arm_1">
+      <origin xyz="0.292 -0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle">
+      <geometry>
+        <mesh filename="assets/meshes/paddle_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="grain_line_0">
+      <origin xyz="0.505 0.01 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.355 0.01 0.003" />
+        </geometry>
+      </collision>
+    <collision name="grain_line_1">
+      <origin xyz="0.53 0.064 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.315 0.008 0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_0">
+      <origin xyz="0.342 -0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="screw_1">
+      <origin xyz="0.342 0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_3">
+    <visual name="root_barrel">
+      <origin xyz="0.018 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.084" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="iron_arm">
+      <origin xyz="0.138 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.026 0.014" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0.238 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.104 0.013" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="fork_arm_0">
+      <origin xyz="0.292 0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="fork_arm_1">
+      <origin xyz="0.292 -0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="paddle">
+      <geometry>
+        <mesh filename="assets/meshes/paddle_3.obj" />
+        </geometry>
+      <material name="warm_wood">
+        <color rgba="0.64 0.38 0.17 1" />
+        </material>
+      </visual>
+    <visual name="grain_line_0">
+      <origin xyz="0.505 0.01 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.355 0.01 0.003" />
+        </geometry>
+      <material name="dark_wood_grain">
+        <color rgba="0.24 0.13 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grain_line_1">
+      <origin xyz="0.53 0.064 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.315 0.008 0.003" />
+        </geometry>
+      <material name="dark_wood_grain">
+        <color rgba="0.24 0.13 0.055 1" />
+        </material>
+      </visual>
+    <visual name="screw_0">
+      <origin xyz="0.342 -0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="slot_screw_heads">
+        <color rgba="0.08 0.075 0.065 1" />
+        </material>
+      </visual>
+    <visual name="screw_1">
+      <origin xyz="0.342 0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="slot_screw_heads">
+        <color rgba="0.08 0.075 0.065 1" />
+        </material>
+      </visual>
+    <collision name="root_barrel">
+      <origin xyz="0.018 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.084" />
+        </geometry>
+      </collision>
+    <collision name="iron_arm">
+      <origin xyz="0.138 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.026 0.014" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0.238 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.104 0.013" />
+        </geometry>
+      </collision>
+    <collision name="fork_arm_0">
+      <origin xyz="0.292 0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="fork_arm_1">
+      <origin xyz="0.292 -0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle">
+      <geometry>
+        <mesh filename="assets/meshes/paddle_3.obj" />
+        </geometry>
+      </collision>
+    <collision name="grain_line_0">
+      <origin xyz="0.505 0.01 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.355 0.01 0.003" />
+        </geometry>
+      </collision>
+    <collision name="grain_line_1">
+      <origin xyz="0.53 0.064 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.315 0.008 0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_0">
+      <origin xyz="0.342 -0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="screw_1">
+      <origin xyz="0.342 0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_4">
+    <visual name="root_barrel">
+      <origin xyz="0.018 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.084" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="iron_arm">
+      <origin xyz="0.138 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.026 0.014" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0.238 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.104 0.013" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="fork_arm_0">
+      <origin xyz="0.292 0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="fork_arm_1">
+      <origin xyz="0.292 -0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      <material name="dark_bronze">
+        <color rgba="0.18 0.12 0.07 1" />
+        </material>
+      </visual>
+    <visual name="paddle">
+      <geometry>
+        <mesh filename="assets/meshes/paddle_4.obj" />
+        </geometry>
+      <material name="warm_wood">
+        <color rgba="0.64 0.38 0.17 1" />
+        </material>
+      </visual>
+    <visual name="grain_line_0">
+      <origin xyz="0.505 0.01 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.355 0.01 0.003" />
+        </geometry>
+      <material name="dark_wood_grain">
+        <color rgba="0.24 0.13 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grain_line_1">
+      <origin xyz="0.53 0.064 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.315 0.008 0.003" />
+        </geometry>
+      <material name="dark_wood_grain">
+        <color rgba="0.24 0.13 0.055 1" />
+        </material>
+      </visual>
+    <visual name="screw_0">
+      <origin xyz="0.342 -0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="slot_screw_heads">
+        <color rgba="0.08 0.075 0.065 1" />
+        </material>
+      </visual>
+    <visual name="screw_1">
+      <origin xyz="0.342 0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="slot_screw_heads">
+        <color rgba="0.08 0.075 0.065 1" />
+        </material>
+      </visual>
+    <collision name="root_barrel">
+      <origin xyz="0.018 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.084" />
+        </geometry>
+      </collision>
+    <collision name="iron_arm">
+      <origin xyz="0.138 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.026 0.014" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0.238 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.104 0.013" />
+        </geometry>
+      </collision>
+    <collision name="fork_arm_0">
+      <origin xyz="0.292 0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="fork_arm_1">
+      <origin xyz="0.292 -0.047 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.02 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle">
+      <geometry>
+        <mesh filename="assets/meshes/paddle_4.obj" />
+        </geometry>
+      </collision>
+    <collision name="grain_line_0">
+      <origin xyz="0.505 0.01 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.355 0.01 0.003" />
+        </geometry>
+      </collision>
+    <collision name="grain_line_1">
+      <origin xyz="0.53 0.064 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.315 0.008 0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_0">
+      <origin xyz="0.342 -0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="screw_1">
+      <origin xyz="0.342 0.048 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="axle" type="continuous">
+    <origin xyz="0 0 -0.17" rpy="0 0 0" />
+    <parent link="mount" />
+    <child link="hub" />
+    <axis xyz="0 0 1" />
+    <limit effort="30" velocity="18" />
+    </joint>
+  <joint name="blade_pivot_0" type="revolute">
+    <origin xyz="0.188 0 -0.004" rpy="0 0 0" />
+    <parent link="hub" />
+    <child link="blade_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="2.5" lower="-0.24" upper="0.24" />
+    </joint>
+  <joint name="blade_pivot_1" type="revolute">
+    <origin xyz="0.0580952 0.178799 -0.004" rpy="0 0 1.25664" />
+    <parent link="hub" />
+    <child link="blade_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="2.5" lower="-0.24" upper="0.24" />
+    </joint>
+  <joint name="blade_pivot_2" type="revolute">
+    <origin xyz="-0.152095 0.110504 -0.004" rpy="0 0 2.51327" />
+    <parent link="hub" />
+    <child link="blade_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="2.5" lower="-0.24" upper="0.24" />
+    </joint>
+  <joint name="blade_pivot_3" type="revolute">
+    <origin xyz="-0.152095 -0.110504 -0.004" rpy="0 0 3.76991" />
+    <parent link="hub" />
+    <child link="blade_3" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="2.5" lower="-0.24" upper="0.24" />
+    </joint>
+  <joint name="blade_pivot_4" type="revolute">
+    <origin xyz="0.0580952 -0.178799 -0.004" rpy="0 0 5.02655" />
+    <parent link="hub" />
+    <child link="blade_4" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="2.5" lower="-0.24" upper="0.24" />
+    </joint>
+  </robot>

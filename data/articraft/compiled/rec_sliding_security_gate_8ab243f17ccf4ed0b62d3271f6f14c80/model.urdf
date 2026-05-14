@@ -1,0 +1,681 @@
+<robot name="cost_optimized_sliding_security_gate">
+  <link name="track_frame">
+    <visual name="floor_sill">
+      <origin xyz="0.5 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="3.55 0.3 0.04" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail">
+      <origin xyz="0.5 0 0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="3.35 0.055 0.045" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="front_track_lip">
+      <origin xyz="0.5 -0.078 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="3.35 0.026 0.06" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="rear_track_lip">
+      <origin xyz="0.5 0.078 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="3.35 0.026 0.06" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="latch_post">
+      <origin xyz="-1.28 0 0.875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.16 1.75" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="end_post">
+      <origin xyz="2.25 0 0.875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.16 1.75" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="top_channel_web">
+      <origin xyz="0.5 0 1.755" rpy="0 0 0" />
+      <geometry>
+        <box size="3.55 0.2 0.035" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="front_top_lip">
+      <origin xyz="0.5 -0.0825 1.656" rpy="0 0 0" />
+      <geometry>
+        <box size="3.55 0.035 0.166" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="rear_top_lip">
+      <origin xyz="0.5 0.0825 1.656" rpy="0 0 0" />
+      <geometry>
+        <box size="3.55 0.035 0.166" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="top_clamp_0">
+      <origin xyz="-1.28 -0.106 1.665" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.21" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="top_clamp_0_bolt_0">
+      <origin xyz="-1.28 -0.118 1.605" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="zinc_plated_hardware">
+        <color rgba="0.86 0.78 0.5 1" />
+        </material>
+      </visual>
+    <visual name="top_clamp_0_bolt_1">
+      <origin xyz="-1.28 -0.118 1.725" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="zinc_plated_hardware">
+        <color rgba="0.86 0.78 0.5 1" />
+        </material>
+      </visual>
+    <visual name="top_clamp_1">
+      <origin xyz="2.25 -0.106 1.665" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.21" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="top_clamp_1_bolt_0">
+      <origin xyz="2.25 -0.118 1.605" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="zinc_plated_hardware">
+        <color rgba="0.86 0.78 0.5 1" />
+        </material>
+      </visual>
+    <visual name="top_clamp_1_bolt_1">
+      <origin xyz="2.25 -0.118 1.725" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="zinc_plated_hardware">
+        <color rgba="0.86 0.78 0.5 1" />
+        </material>
+      </visual>
+    <visual name="closed_stop">
+      <origin xyz="-1.075 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.18 0.19" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="open_stop">
+      <origin xyz="2.16 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.18 0.19" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="receiver_upper_jaw">
+      <origin xyz="-1.1575 -0.065 1.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.08 0.06" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="receiver_lower_jaw">
+      <origin xyz="-1.1575 -0.065 0.775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.08 0.06" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="receiver_upper_bolt">
+      <origin xyz="-1.185 -0.111 1.125" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      <material name="zinc_plated_hardware">
+        <color rgba="0.86 0.78 0.5 1" />
+        </material>
+      </visual>
+    <visual name="receiver_lower_bolt">
+      <origin xyz="-1.185 -0.111 0.775" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      <material name="zinc_plated_hardware">
+        <color rgba="0.86 0.78 0.5 1" />
+        </material>
+      </visual>
+    <collision name="floor_sill">
+      <origin xyz="0.5 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="3.55 0.3 0.04" />
+        </geometry>
+      </collision>
+    <collision name="bottom_rail">
+      <origin xyz="0.5 0 0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="3.35 0.055 0.045" />
+        </geometry>
+      </collision>
+    <collision name="front_track_lip">
+      <origin xyz="0.5 -0.078 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="3.35 0.026 0.06" />
+        </geometry>
+      </collision>
+    <collision name="rear_track_lip">
+      <origin xyz="0.5 0.078 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="3.35 0.026 0.06" />
+        </geometry>
+      </collision>
+    <collision name="latch_post">
+      <origin xyz="-1.28 0 0.875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.16 1.75" />
+        </geometry>
+      </collision>
+    <collision name="end_post">
+      <origin xyz="2.25 0 0.875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.16 1.75" />
+        </geometry>
+      </collision>
+    <collision name="top_channel_web">
+      <origin xyz="0.5 0 1.755" rpy="0 0 0" />
+      <geometry>
+        <box size="3.55 0.2 0.035" />
+        </geometry>
+      </collision>
+    <collision name="front_top_lip">
+      <origin xyz="0.5 -0.0825 1.656" rpy="0 0 0" />
+      <geometry>
+        <box size="3.55 0.035 0.166" />
+        </geometry>
+      </collision>
+    <collision name="rear_top_lip">
+      <origin xyz="0.5 0.0825 1.656" rpy="0 0 0" />
+      <geometry>
+        <box size="3.55 0.035 0.166" />
+        </geometry>
+      </collision>
+    <collision name="top_clamp_0">
+      <origin xyz="-1.28 -0.106 1.665" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.21" />
+        </geometry>
+      </collision>
+    <collision name="top_clamp_0_bolt_0">
+      <origin xyz="-1.28 -0.118 1.605" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="top_clamp_0_bolt_1">
+      <origin xyz="-1.28 -0.118 1.725" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="top_clamp_1">
+      <origin xyz="2.25 -0.106 1.665" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.21" />
+        </geometry>
+      </collision>
+    <collision name="top_clamp_1_bolt_0">
+      <origin xyz="2.25 -0.118 1.605" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="top_clamp_1_bolt_1">
+      <origin xyz="2.25 -0.118 1.725" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="closed_stop">
+      <origin xyz="-1.075 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.18 0.19" />
+        </geometry>
+      </collision>
+    <collision name="open_stop">
+      <origin xyz="2.16 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.18 0.19" />
+        </geometry>
+      </collision>
+    <collision name="receiver_upper_jaw">
+      <origin xyz="-1.1575 -0.065 1.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.08 0.06" />
+        </geometry>
+      </collision>
+    <collision name="receiver_lower_jaw">
+      <origin xyz="-1.1575 -0.065 0.775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.08 0.06" />
+        </geometry>
+      </collision>
+    <collision name="receiver_upper_bolt">
+      <origin xyz="-1.185 -0.111 1.125" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="receiver_lower_bolt">
+      <origin xyz="-1.185 -0.111 0.775" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gate_leaf">
+    <visual name="bottom_tube">
+      <origin xyz="0 0 0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="2 0.08 0.08" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="top_tube">
+      <origin xyz="0 0 1.485" rpy="0 0 0" />
+      <geometry>
+        <box size="2 0.08 0.075" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="leading_upright">
+      <origin xyz="-0.96 0 0.885" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.08 1.24" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="trailing_upright">
+      <origin xyz="0.96 0 0.885" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.08 1.24" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="picket_0">
+      <origin xyz="-0.64 0 0.895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.045 1.2" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="picket_1">
+      <origin xyz="-0.32 0 0.895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.045 1.2" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="picket_2">
+      <origin xyz="0 0 0.895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.045 1.2" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="picket_3">
+      <origin xyz="0.32 0 0.895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.045 1.2" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="picket_4">
+      <origin xyz="0.64 0 0.895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.045 1.2" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="diagonal_brace">
+      <origin xyz="0 0 0.9" rpy="0 -0.54042 0" />
+      <geometry>
+        <box size="1.89 0.035 0.035" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.02 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="top_guide_fin">
+      <origin xyz="0 0 1.595" rpy="0 0 0" />
+      <geometry>
+        <box size="1.85 0.036 0.18" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="roller_0">
+      <origin xyz="-0.68 0 0.165" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.05" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="roller_saddle_0">
+      <origin xyz="-0.68 0 0.243" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.13 0.028" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="roller_axle_0">
+      <origin xyz="-0.68 0 0.165" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.15" />
+        </geometry>
+      <material name="zinc_plated_hardware">
+        <color rgba="0.86 0.78 0.5 1" />
+        </material>
+      </visual>
+    <visual name="roller_1">
+      <origin xyz="0.68 0 0.165" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.05" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="roller_saddle_1">
+      <origin xyz="0.68 0 0.243" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.13 0.028" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="roller_axle_1">
+      <origin xyz="0.68 0 0.165" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.15" />
+        </geometry>
+      <material name="zinc_plated_hardware">
+        <color rgba="0.86 0.78 0.5 1" />
+        </material>
+      </visual>
+    <visual name="latch_mount">
+      <origin xyz="-0.84 -0.045 0.95" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.014 0.2" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="latch_mount_bolt_0">
+      <origin xyz="-0.765 -0.057 0.895" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      <material name="zinc_plated_hardware">
+        <color rgba="0.86 0.78 0.5 1" />
+        </material>
+      </visual>
+    <visual name="latch_mount_bolt_1">
+      <origin xyz="-0.765 -0.057 1.005" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      <material name="zinc_plated_hardware">
+        <color rgba="0.86 0.78 0.5 1" />
+        </material>
+      </visual>
+    <collision name="bottom_tube">
+      <origin xyz="0 0 0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="2 0.08 0.08" />
+        </geometry>
+      </collision>
+    <collision name="top_tube">
+      <origin xyz="0 0 1.485" rpy="0 0 0" />
+      <geometry>
+        <box size="2 0.08 0.075" />
+        </geometry>
+      </collision>
+    <collision name="leading_upright">
+      <origin xyz="-0.96 0 0.885" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.08 1.24" />
+        </geometry>
+      </collision>
+    <collision name="trailing_upright">
+      <origin xyz="0.96 0 0.885" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.08 1.24" />
+        </geometry>
+      </collision>
+    <collision name="picket_0">
+      <origin xyz="-0.64 0 0.895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.045 1.2" />
+        </geometry>
+      </collision>
+    <collision name="picket_1">
+      <origin xyz="-0.32 0 0.895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.045 1.2" />
+        </geometry>
+      </collision>
+    <collision name="picket_2">
+      <origin xyz="0 0 0.895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.045 1.2" />
+        </geometry>
+      </collision>
+    <collision name="picket_3">
+      <origin xyz="0.32 0 0.895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.045 1.2" />
+        </geometry>
+      </collision>
+    <collision name="picket_4">
+      <origin xyz="0.64 0 0.895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.045 1.2" />
+        </geometry>
+      </collision>
+    <collision name="diagonal_brace">
+      <origin xyz="0 0 0.9" rpy="0 -0.54042 0" />
+      <geometry>
+        <box size="1.89 0.035 0.035" />
+        </geometry>
+      </collision>
+    <collision name="top_guide_fin">
+      <origin xyz="0 0 1.595" rpy="0 0 0" />
+      <geometry>
+        <box size="1.85 0.036 0.18" />
+        </geometry>
+      </collision>
+    <collision name="roller_0">
+      <origin xyz="-0.68 0 0.165" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="roller_saddle_0">
+      <origin xyz="-0.68 0 0.243" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.13 0.028" />
+        </geometry>
+      </collision>
+    <collision name="roller_axle_0">
+      <origin xyz="-0.68 0 0.165" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.15" />
+        </geometry>
+      </collision>
+    <collision name="roller_1">
+      <origin xyz="0.68 0 0.165" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="roller_saddle_1">
+      <origin xyz="0.68 0 0.243" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.13 0.028" />
+        </geometry>
+      </collision>
+    <collision name="roller_axle_1">
+      <origin xyz="0.68 0 0.165" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.15" />
+        </geometry>
+      </collision>
+    <collision name="latch_mount">
+      <origin xyz="-0.84 -0.045 0.95" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.014 0.2" />
+        </geometry>
+      </collision>
+    <collision name="latch_mount_bolt_0">
+      <origin xyz="-0.765 -0.057 0.895" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="latch_mount_bolt_1">
+      <origin xyz="-0.765 -0.057 1.005" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="latch_handle">
+    <visual name="pivot_disk">
+      <origin xyz="0 -0.009 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.018" />
+        </geometry>
+      <material name="zinc_plated_hardware">
+        <color rgba="0.86 0.78 0.5 1" />
+        </material>
+      </visual>
+    <visual name="latch_tongue">
+      <origin xyz="-0.1325 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.022 0.032" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="pull_tab">
+      <origin xyz="0.055 -0.022 -0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.026 0.26" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.64 0.61 1" />
+        </material>
+      </visual>
+    <collision name="pivot_disk">
+      <origin xyz="0 -0.009 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="latch_tongue">
+      <origin xyz="-0.1325 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.022 0.032" />
+        </geometry>
+      </collision>
+    <collision name="pull_tab">
+      <origin xyz="0.055 -0.022 -0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.026 0.26" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="track_to_leaf" type="prismatic">
+    <parent link="track_frame" />
+    <child link="gate_leaf" />
+    <axis xyz="1 0 0" />
+    <limit effort="600" velocity="0.55" lower="0" upper="1.05" />
+    </joint>
+  <joint name="leaf_to_latch" type="revolute">
+    <origin xyz="-0.84 -0.052 0.95" rpy="0 0 0" />
+    <parent link="gate_leaf" />
+    <child link="latch_handle" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="2" lower="0" upper="0.35" />
+    </joint>
+  </robot>

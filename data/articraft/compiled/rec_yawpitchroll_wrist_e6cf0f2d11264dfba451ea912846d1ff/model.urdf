@@ -1,0 +1,541 @@
+<robot name="three_axis_wrist">
+  <material name="dark_housing">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="satin_steel">
+    <color rgba="0.58 0.6 0.62 1" />
+    </material>
+  <material name="anodized_blue">
+    <color rgba="0.18 0.28 0.42 1" />
+    </material>
+  <material name="pale_aluminum">
+    <color rgba="0.72 0.74 0.75 1" />
+    </material>
+  <material name="black_bearing">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="bolt_black">
+    <color rgba="0.02 0.02 0.022 1" />
+    </material>
+  <link name="base">
+    <visual name="base_flange">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_flange_mesh.obj" />
+        </geometry>
+      <material name="dark_housing">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="base_bearing">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_bearing_mesh.obj" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_0">
+      <origin xyz="0.129 0 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      <material name="bolt_black">
+        <color rgba="0.02 0.02 0.022 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_1">
+      <origin xyz="0.0645 0.111717 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      <material name="bolt_black">
+        <color rgba="0.02 0.02 0.022 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_2">
+      <origin xyz="-0.0645 0.111717 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      <material name="bolt_black">
+        <color rgba="0.02 0.02 0.022 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_3">
+      <origin xyz="-0.129 1.57979e-17 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      <material name="bolt_black">
+        <color rgba="0.02 0.02 0.022 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_4">
+      <origin xyz="-0.0645 -0.111717 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      <material name="bolt_black">
+        <color rgba="0.02 0.02 0.022 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_5">
+      <origin xyz="0.0645 -0.111717 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      <material name="bolt_black">
+        <color rgba="0.02 0.02 0.022 1" />
+        </material>
+      </visual>
+    <collision name="base_flange">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_flange_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_bearing">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_bearing_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_0">
+      <origin xyz="0.129 0 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_1">
+      <origin xyz="0.0645 0.111717 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_2">
+      <origin xyz="-0.0645 0.111717 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_3">
+      <origin xyz="-0.129 1.57979e-17 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_4">
+      <origin xyz="-0.0645 -0.111717 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_5">
+      <origin xyz="0.0645 -0.111717 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="yaw_carrier">
+    <visual name="yaw_race">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/yaw_race_mesh.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.58 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="side_yoke_pos">
+      <origin xyz="0 0.095 0.082" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.018 0.15" />
+        </geometry>
+      <material name="anodized_blue">
+        <color rgba="0.18 0.28 0.42 1" />
+        </material>
+      </visual>
+    <visual name="yoke_foot_pos">
+      <origin xyz="0 0.055 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.075 0.022" />
+        </geometry>
+      <material name="anodized_blue">
+        <color rgba="0.18 0.28 0.42 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bearing_pos">
+      <origin xyz="0 0.083 0.13" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/yaw_bearing_pos_mesh.obj" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_pos">
+      <origin xyz="0 0.095 0.16" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.038" />
+        </geometry>
+      <material name="bolt_black">
+        <color rgba="0.02 0.02 0.022 1" />
+        </material>
+      </visual>
+    <visual name="side_yoke_neg">
+      <origin xyz="0 -0.095 0.082" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.018 0.15" />
+        </geometry>
+      <material name="anodized_blue">
+        <color rgba="0.18 0.28 0.42 1" />
+        </material>
+      </visual>
+    <visual name="yoke_foot_neg">
+      <origin xyz="0 -0.055 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.075 0.022" />
+        </geometry>
+      <material name="anodized_blue">
+        <color rgba="0.18 0.28 0.42 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bearing_neg">
+      <origin xyz="0 -0.083 0.13" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/yaw_bearing_neg_mesh.obj" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_neg">
+      <origin xyz="0 -0.095 0.16" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.038" />
+        </geometry>
+      <material name="bolt_black">
+        <color rgba="0.02 0.02 0.022 1" />
+        </material>
+      </visual>
+    <collision name="yaw_race">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/yaw_race_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_yoke_pos">
+      <origin xyz="0 0.095 0.082" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.018 0.15" />
+        </geometry>
+      </collision>
+    <collision name="yoke_foot_pos">
+      <origin xyz="0 0.055 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.075 0.022" />
+        </geometry>
+      </collision>
+    <collision name="yaw_bearing_pos">
+      <origin xyz="0 0.083 0.13" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/yaw_bearing_pos_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap_pos">
+      <origin xyz="0 0.095 0.16" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.038" />
+        </geometry>
+      </collision>
+    <collision name="side_yoke_neg">
+      <origin xyz="0 -0.095 0.082" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.018 0.15" />
+        </geometry>
+      </collision>
+    <collision name="yoke_foot_neg">
+      <origin xyz="0 -0.055 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.075 0.022" />
+        </geometry>
+      </collision>
+    <collision name="yaw_bearing_neg">
+      <origin xyz="0 -0.083 0.13" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/yaw_bearing_neg_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap_neg">
+      <origin xyz="0 -0.095 0.16" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.038" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pitch_yoke">
+    <visual name="roll_housing">
+      <geometry>
+        <mesh filename="assets/meshes/roll_housing_mesh.obj" />
+        </geometry>
+      <material name="pale_aluminum">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    <visual name="upper_web_pos">
+      <origin xyz="0 0.046 0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.044" />
+        </geometry>
+      <material name="pale_aluminum">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    <visual name="lower_web_pos">
+      <origin xyz="0 0.046 -0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.044" />
+        </geometry>
+      <material name="pale_aluminum">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    <visual name="pitch_trunnion_pos">
+      <origin xyz="0 0.061 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.026" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.58 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_collar_pos">
+      <origin xyz="0 0.047 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.006" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="upper_web_neg">
+      <origin xyz="0 -0.046 0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.044" />
+        </geometry>
+      <material name="pale_aluminum">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    <visual name="lower_web_neg">
+      <origin xyz="0 -0.046 -0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.044" />
+        </geometry>
+      <material name="pale_aluminum">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    <visual name="pitch_trunnion_neg">
+      <origin xyz="0 -0.061 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.026" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.58 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_collar_neg">
+      <origin xyz="0 -0.047 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.006" />
+        </geometry>
+      <material name="black_bearing">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="roll_housing">
+      <geometry>
+        <mesh filename="assets/meshes/roll_housing_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_web_pos">
+      <origin xyz="0 0.046 0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.044" />
+        </geometry>
+      </collision>
+    <collision name="lower_web_pos">
+      <origin xyz="0 0.046 -0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.044" />
+        </geometry>
+      </collision>
+    <collision name="pitch_trunnion_pos">
+      <origin xyz="0 0.061 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_collar_pos">
+      <origin xyz="0 0.047 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="upper_web_neg">
+      <origin xyz="0 -0.046 0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.044" />
+        </geometry>
+      </collision>
+    <collision name="lower_web_neg">
+      <origin xyz="0 -0.046 -0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.044" />
+        </geometry>
+      </collision>
+    <collision name="pitch_trunnion_neg">
+      <origin xyz="0 -0.061 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_collar_neg">
+      <origin xyz="0 -0.047 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="roll_flange">
+    <visual name="roll_shaft">
+      <origin xyz="0.03 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.105" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.58 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="tool_face">
+      <origin xyz="0.0925 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.02" />
+        </geometry>
+      <material name="pale_aluminum">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    <visual name="pilot_boss">
+      <origin xyz="0.1095 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.014" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.58 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="tool_bolt_0">
+      <origin xyz="0.1055 0.037 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      <material name="bolt_black">
+        <color rgba="0.02 0.02 0.022 1" />
+        </material>
+      </visual>
+    <visual name="tool_bolt_1">
+      <origin xyz="0.1055 2.2656e-18 0.037" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      <material name="bolt_black">
+        <color rgba="0.02 0.02 0.022 1" />
+        </material>
+      </visual>
+    <visual name="tool_bolt_2">
+      <origin xyz="0.1055 -0.037 4.53119e-18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      <material name="bolt_black">
+        <color rgba="0.02 0.02 0.022 1" />
+        </material>
+      </visual>
+    <visual name="tool_bolt_3">
+      <origin xyz="0.1055 -6.79679e-18 -0.037" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      <material name="bolt_black">
+        <color rgba="0.02 0.02 0.022 1" />
+        </material>
+      </visual>
+    <collision name="roll_shaft">
+      <origin xyz="0.03 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.105" />
+        </geometry>
+      </collision>
+    <collision name="tool_face">
+      <origin xyz="0.0925 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="pilot_boss">
+      <origin xyz="0.1095 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="tool_bolt_0">
+      <origin xyz="0.1055 0.037 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="tool_bolt_1">
+      <origin xyz="0.1055 2.2656e-18 0.037" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="tool_bolt_2">
+      <origin xyz="0.1055 -0.037 4.53119e-18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="tool_bolt_3">
+      <origin xyz="0.1055 -6.79679e-18 -0.037" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="yaw" type="continuous">
+    <origin xyz="0 0 0.054" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="yaw_carrier" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="2.5" />
+    </joint>
+  <joint name="pitch" type="revolute">
+    <origin xyz="0 0 0.13" rpy="0 0 0" />
+    <parent link="yaw_carrier" />
+    <child link="pitch_yoke" />
+    <axis xyz="0 -1 0" />
+    <limit effort="9" velocity="2" lower="-0.95" upper="0.95" />
+    </joint>
+  <joint name="roll" type="continuous">
+    <parent link="pitch_yoke" />
+    <child link="roll_flange" />
+    <axis xyz="1 0 0" />
+    <limit effort="6" velocity="4" />
+    </joint>
+  </robot>

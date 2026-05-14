@@ -1,0 +1,1056 @@
+<robot name="matte_pocket_lighter">
+  <material name="matte_black">
+    <color rgba="0.025 0.026 0.027 1" />
+    </material>
+  <material name="worn_edge">
+    <color rgba="0.12 0.12 0.12 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.68 0.7 0.7 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.2 0.21 0.22 1" />
+    </material>
+  <material name="black_cavity">
+    <color rgba="0.002 0.002 0.002 1" />
+    </material>
+  <material name="wick_fiber">
+    <color rgba="0.76 0.68 0.54 1" />
+    </material>
+  <material name="warm_brass">
+    <color rgba="0.72 0.57 0.3 1" />
+    </material>
+  <link name="outer_case">
+    <inertial>
+      <origin xyz="0 0 0.0295" rpy="0 0 0" />
+      <mass value="0.05" />
+      <inertia ixx="1.53208e-05" ixy="0" ixz="0" iyy="2.05208e-05" iyz="0" izz="6.83333e-06" />
+      </inertial>
+    <visual name="lower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lower_shell.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.025 0.026 0.027 1" />
+        </material>
+      </visual>
+    <visual name="front_rim">
+      <origin xyz="0 0.00685 0.0384" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.00045 0.001" />
+        </geometry>
+      <material name="worn_edge">
+        <color rgba="0.12 0.12 0.12 1" />
+        </material>
+      </visual>
+    <visual name="rear_rim">
+      <origin xyz="0 -0.00685 0.0384" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.00045 0.001" />
+        </geometry>
+      <material name="worn_edge">
+        <color rgba="0.12 0.12 0.12 1" />
+        </material>
+      </visual>
+    <visual name="side_rim">
+      <origin xyz="0.01885 0 0.0384" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00045 0.012 0.001" />
+        </geometry>
+      <material name="worn_edge">
+        <color rgba="0.12 0.12 0.12 1" />
+        </material>
+      </visual>
+    <visual name="case_hinge_leaf">
+      <origin xyz="-0.0204 -0.0046 0.0455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.0008 0.027" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.025 0.026 0.027 1" />
+        </material>
+      </visual>
+    <visual name="case_hinge_bridge_0">
+      <origin xyz="-0.0204 -0.00225 0.0424" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0036 0.005 0.0072" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.025 0.026 0.027 1" />
+        </material>
+      </visual>
+    <visual name="case_hinge_bridge_1">
+      <origin xyz="-0.0204 -0.00225 0.0558" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0036 0.005 0.0068" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.025 0.026 0.027 1" />
+        </material>
+      </visual>
+    <visual name="case_hinge_barrel_0">
+      <origin xyz="-0.0218 0 0.0428" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00135" length="0.0064" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="case_hinge_barrel_1">
+      <origin xyz="-0.0218 0 0.0554" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00135" length="0.0064" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <collision name="lower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lower_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_rim">
+      <origin xyz="0 0.00685 0.0384" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.00045 0.001" />
+        </geometry>
+      </collision>
+    <collision name="rear_rim">
+      <origin xyz="0 -0.00685 0.0384" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.00045 0.001" />
+        </geometry>
+      </collision>
+    <collision name="side_rim">
+      <origin xyz="0.01885 0 0.0384" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00045 0.012 0.001" />
+        </geometry>
+      </collision>
+    <collision name="case_hinge_leaf">
+      <origin xyz="-0.0204 -0.0046 0.0455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.0008 0.027" />
+        </geometry>
+      </collision>
+    <collision name="case_hinge_bridge_0">
+      <origin xyz="-0.0204 -0.00225 0.0424" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0036 0.005 0.0072" />
+        </geometry>
+      </collision>
+    <collision name="case_hinge_bridge_1">
+      <origin xyz="-0.0204 -0.00225 0.0558" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0036 0.005 0.0068" />
+        </geometry>
+      </collision>
+    <collision name="case_hinge_barrel_0">
+      <origin xyz="-0.0218 0 0.0428" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00135" length="0.0064" />
+        </geometry>
+      </collision>
+    <collision name="case_hinge_barrel_1">
+      <origin xyz="-0.0218 0 0.0554" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00135" length="0.0064" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <inertial>
+      <origin xyz="0.019 0 0.01" rpy="0 0 0" />
+      <mass value="0.018" />
+      <inertia ixx="8.94e-07" ixy="0" ixz="0" iyy="2.766e-06" iyz="0" izz="2.46e-06" />
+      </inertial>
+    <visual name="lid_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lid_shell.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.025 0.026 0.027 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_leaf">
+      <origin xyz="-0.000538983 0.00135257 0.0101" rpy="0 0 1.95" />
+      <geometry>
+        <box size="0.0036 0.0038 0.0054" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.025 0.026 0.027 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_barrel">
+      <origin xyz="0 0 0.0101" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00125" length="0.0052" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <collision name="lid_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lid_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_leaf">
+      <origin xyz="-0.000538983 0.00135257 0.0101" rpy="0 0 1.95" />
+      <geometry>
+        <box size="0.0036 0.0038 0.0054" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_barrel">
+      <origin xyz="0 0 0.0101" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00125" length="0.0052" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="insert">
+    <inertial>
+      <origin xyz="0 0 0.0285" rpy="0 0 0" />
+      <mass value="0.025" />
+      <inertia ixx="6.97708e-06" ixy="0" ixz="0" iyy="8.77083e-06" iyz="0" izz="2.21042e-06" />
+      </inertial>
+    <visual name="insert_body">
+      <geometry>
+        <mesh filename="assets/meshes/insert_body.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="insert_lip">
+      <origin xyz="0 0 0.0374" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0322 0.0108 0.0012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="front_windshield">
+      <origin xyz="-0.003 0.005 0.0463" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.00075 0.017" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rear_windshield">
+      <origin xyz="-0.003 -0.005 0.0463" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.00075 0.017" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="chimney_side">
+      <origin xyz="-0.012 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.01 0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="vent_0_0_0">
+      <origin xyz="-0.0085 0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_0_0_1">
+      <origin xyz="-0.004 0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_0_0_2">
+      <origin xyz="0.0005 0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_0_0_3">
+      <origin xyz="0.005 0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_0_1_0">
+      <origin xyz="-0.0085 0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_0_1_1">
+      <origin xyz="-0.004 0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_0_1_2">
+      <origin xyz="0.0005 0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_0_1_3">
+      <origin xyz="0.005 0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_0_2_0">
+      <origin xyz="-0.0085 0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_0_2_1">
+      <origin xyz="-0.004 0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_0_2_2">
+      <origin xyz="0.0005 0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_0_2_3">
+      <origin xyz="0.005 0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_1_0_0">
+      <origin xyz="-0.0085 -0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_1_0_1">
+      <origin xyz="-0.004 -0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_1_0_2">
+      <origin xyz="0.0005 -0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_1_0_3">
+      <origin xyz="0.005 -0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_1_1_0">
+      <origin xyz="-0.0085 -0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_1_1_1">
+      <origin xyz="-0.004 -0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_1_1_2">
+      <origin xyz="0.0005 -0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_1_1_3">
+      <origin xyz="0.005 -0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_1_2_0">
+      <origin xyz="-0.0085 -0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_1_2_1">
+      <origin xyz="-0.004 -0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_1_2_2">
+      <origin xyz="0.0005 -0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="vent_1_2_3">
+      <origin xyz="0.005 -0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="wick_opening">
+      <origin xyz="-0.006 0 0.03815" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00225" length="0.00045" />
+        </geometry>
+      <material name="black_cavity">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="wick">
+      <origin xyz="-0.006 0 0.0423" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00105" length="0.0085" />
+        </geometry>
+      <material name="wick_fiber">
+        <color rgba="0.76 0.68 0.54 1" />
+        </material>
+      </visual>
+    <visual name="flint_tube">
+      <origin xyz="0.0065 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0012" length="0.012" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.72 0.57 0.3 1" />
+        </material>
+      </visual>
+    <visual name="front_wheel_yoke">
+      <origin xyz="0.009 0.00545 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0042 0.0008 0.016" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rear_wheel_yoke">
+      <origin xyz="0.009 -0.00545 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0042 0.0008 0.016" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <collision name="insert_body">
+      <geometry>
+        <mesh filename="assets/meshes/insert_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="insert_lip">
+      <origin xyz="0 0 0.0374" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0322 0.0108 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="front_windshield">
+      <origin xyz="-0.003 0.005 0.0463" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.00075 0.017" />
+        </geometry>
+      </collision>
+    <collision name="rear_windshield">
+      <origin xyz="-0.003 -0.005 0.0463" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.00075 0.017" />
+        </geometry>
+      </collision>
+    <collision name="chimney_side">
+      <origin xyz="-0.012 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.01 0.014" />
+        </geometry>
+      </collision>
+    <collision name="vent_0_0_0">
+      <origin xyz="-0.0085 0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_0_0_1">
+      <origin xyz="-0.004 0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_0_0_2">
+      <origin xyz="0.0005 0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_0_0_3">
+      <origin xyz="0.005 0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_0_1_0">
+      <origin xyz="-0.0085 0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_0_1_1">
+      <origin xyz="-0.004 0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_0_1_2">
+      <origin xyz="0.0005 0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_0_1_3">
+      <origin xyz="0.005 0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_0_2_0">
+      <origin xyz="-0.0085 0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_0_2_1">
+      <origin xyz="-0.004 0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_0_2_2">
+      <origin xyz="0.0005 0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_0_2_3">
+      <origin xyz="0.005 0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_1_0_0">
+      <origin xyz="-0.0085 -0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_1_0_1">
+      <origin xyz="-0.004 -0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_1_0_2">
+      <origin xyz="0.0005 -0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_1_0_3">
+      <origin xyz="0.005 -0.00542 0.0426" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_1_1_0">
+      <origin xyz="-0.0085 -0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_1_1_1">
+      <origin xyz="-0.004 -0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_1_1_2">
+      <origin xyz="0.0005 -0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_1_1_3">
+      <origin xyz="0.005 -0.00542 0.0472" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_1_2_0">
+      <origin xyz="-0.0085 -0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_1_2_1">
+      <origin xyz="-0.004 -0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_1_2_2">
+      <origin xyz="0.0005 -0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="vent_1_2_3">
+      <origin xyz="0.005 -0.00542 0.0518" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00055" length="0.0003" />
+        </geometry>
+      </collision>
+    <collision name="wick_opening">
+      <origin xyz="-0.006 0 0.03815" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00225" length="0.00045" />
+        </geometry>
+      </collision>
+    <collision name="wick">
+      <origin xyz="-0.006 0 0.0423" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00105" length="0.0085" />
+        </geometry>
+      </collision>
+    <collision name="flint_tube">
+      <origin xyz="0.0065 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0012" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="front_wheel_yoke">
+      <origin xyz="0.009 0.00545 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0042 0.0008 0.016" />
+        </geometry>
+      </collision>
+    <collision name="rear_wheel_yoke">
+      <origin xyz="0.009 -0.00545 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0042 0.0008 0.016" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="striker_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <mass value="0.002" />
+      <inertia ixx="1.65267e-08" ixy="0" ixz="0" iyy="1.65267e-08" iyz="0" izz="1.764e-08" />
+      </inertial>
+    <visual name="wheel_core">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.0068" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_0">
+      <origin xyz="0.00435 0 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_1">
+      <origin xyz="0.00408766 0 0.00148779" rpy="0 -0.349066 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_2">
+      <origin xyz="0.00333229 0 0.00279613" rpy="0 -0.698132 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_3">
+      <origin xyz="0.002175 0 0.00376721" rpy="0 -1.0472 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_4">
+      <origin xyz="0.00075537 0 0.00428391" rpy="0 -1.39626 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_5">
+      <origin xyz="-0.00075537 0 0.00428391" rpy="0 -1.74533 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_6">
+      <origin xyz="-0.002175 0 0.00376721" rpy="0 -2.0944 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_7">
+      <origin xyz="-0.00333229 0 0.00279613" rpy="0 -2.44346 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_8">
+      <origin xyz="-0.00408766 0 0.00148779" rpy="0 -2.79253 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_9">
+      <origin xyz="-0.00435 0 5.32721e-19" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_10">
+      <origin xyz="-0.00408766 0 -0.00148779" rpy="0 -3.49066 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_11">
+      <origin xyz="-0.00333229 0 -0.00279613" rpy="0 -3.83972 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_12">
+      <origin xyz="-0.002175 0 -0.00376721" rpy="0 -4.18879 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_13">
+      <origin xyz="-0.00075537 0 -0.00428391" rpy="0 -4.53786 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_14">
+      <origin xyz="0.00075537 0 -0.00428391" rpy="0 -4.88692 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_15">
+      <origin xyz="0.002175 0 -0.00376721" rpy="0 -5.23599 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_16">
+      <origin xyz="0.00333229 0 -0.00279613" rpy="0 -5.58505 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tooth_17">
+      <origin xyz="0.00408766 0 -0.00148779" rpy="0 -5.93412 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="wheel_axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00075" length="0.011" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.72 0.57 0.3 1" />
+        </material>
+      </visual>
+    <collision name="wheel_core">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.0068" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_0">
+      <origin xyz="0.00435 0 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_1">
+      <origin xyz="0.00408766 0 0.00148779" rpy="0 -0.349066 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_2">
+      <origin xyz="0.00333229 0 0.00279613" rpy="0 -0.698132 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_3">
+      <origin xyz="0.002175 0 0.00376721" rpy="0 -1.0472 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_4">
+      <origin xyz="0.00075537 0 0.00428391" rpy="0 -1.39626 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_5">
+      <origin xyz="-0.00075537 0 0.00428391" rpy="0 -1.74533 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_6">
+      <origin xyz="-0.002175 0 0.00376721" rpy="0 -2.0944 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_7">
+      <origin xyz="-0.00333229 0 0.00279613" rpy="0 -2.44346 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_8">
+      <origin xyz="-0.00408766 0 0.00148779" rpy="0 -2.79253 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_9">
+      <origin xyz="-0.00435 0 5.32721e-19" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_10">
+      <origin xyz="-0.00408766 0 -0.00148779" rpy="0 -3.49066 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_11">
+      <origin xyz="-0.00333229 0 -0.00279613" rpy="0 -3.83972 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_12">
+      <origin xyz="-0.002175 0 -0.00376721" rpy="0 -4.18879 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_13">
+      <origin xyz="-0.00075537 0 -0.00428391" rpy="0 -4.53786 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_14">
+      <origin xyz="0.00075537 0 -0.00428391" rpy="0 -4.88692 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_15">
+      <origin xyz="0.002175 0 -0.00376721" rpy="0 -5.23599 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_16">
+      <origin xyz="0.00333229 0 -0.00279613" rpy="0 -5.58505 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_tooth_17">
+      <origin xyz="0.00408766 0 -0.00148779" rpy="0 -5.93412 0" />
+      <geometry>
+        <box size="0.00105 0.0074 0.00085" />
+        </geometry>
+      </collision>
+    <collision name="wheel_axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.00075" length="0.011" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="lid_hinge" type="revolute">
+    <origin xyz="-0.0218 0 0.039" rpy="0 0 0" />
+    <parent link="outer_case" />
+    <child link="lid" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.35" velocity="5" lower="-1.95" upper="0.15" />
+    </joint>
+  <joint name="insert_slide" type="prismatic">
+    <origin xyz="0 0 0.0014" rpy="0 0 0" />
+    <parent link="outer_case" />
+    <child link="insert" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="0.18" lower="0" upper="0.024" />
+    </joint>
+  <joint name="striker_spin" type="continuous">
+    <origin xyz="0.009 0 0.051" rpy="0 0 0" />
+    <parent link="insert" />
+    <child link="striker_wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.04" velocity="40" />
+    </joint>
+  </robot>

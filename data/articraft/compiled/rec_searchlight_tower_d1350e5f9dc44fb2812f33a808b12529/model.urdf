@@ -1,0 +1,401 @@
+<robot name="premium_searchlight_tower">
+  <material name="painted_metal">
+    <color rgba="0.8 0.82 0.82 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <material name="satin_black">
+    <color rgba="0.03 0.032 0.034 1" />
+    </material>
+  <material name="graphite_polymer">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.64 0.66 0.68 1" />
+    </material>
+  <material name="smoked_glass">
+    <color rgba="0.54 0.72 0.88 0.46" />
+    </material>
+  <material name="warm_emitter">
+    <color rgba="1 0.8 0.44 1" />
+    </material>
+  <link name="base_tower">
+    <inertial>
+      <origin xyz="0 0 0.68" rpy="0 0 0" />
+      <mass value="7.5" />
+      <inertia ixx="1.3083" ixy="0" ixz="0" iyy="1.3083" iyz="0" izz="0.304594" />
+      </inertial>
+    <visual name="elastomer_foot">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.285" length="0.035" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.03 0.032 0.034 1" />
+        </material>
+      </visual>
+    <visual name="tower_shroud">
+      <geometry>
+        <mesh filename="assets/meshes/tower_shroud.obj" />
+        </geometry>
+      <material name="painted_metal">
+        <color rgba="0.8 0.82 0.82 1" />
+        </material>
+      </visual>
+    <visual name="base_edge_bead">
+      <origin xyz="0 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_edge_bead.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="top_collar">
+      <origin xyz="0 0 1.3375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.106" length="0.045" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="rear_cable_chase">
+      <origin xyz="-0.064 0 0.76" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.052 0.72" />
+        </geometry>
+      <material name="graphite_polymer">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="cable_grommet">
+      <origin xyz="-0.27 0 0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.016" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.03 0.032 0.034 1" />
+        </material>
+      </visual>
+    <collision name="elastomer_foot">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.285" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="tower_shroud">
+      <geometry>
+        <mesh filename="assets/meshes/tower_shroud.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_edge_bead">
+      <origin xyz="0 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_edge_bead.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_collar">
+      <origin xyz="0 0 1.3375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.106" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="rear_cable_chase">
+      <origin xyz="-0.064 0 0.76" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.052 0.72" />
+        </geometry>
+      </collision>
+    <collision name="cable_grommet">
+      <origin xyz="-0.27 0 0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.016" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pan_yoke">
+    <inertial>
+      <origin xyz="0 0 0.38" rpy="0 0 0" />
+      <mass value="2.6" />
+      <inertia ixx="0.193093" ixy="0" ixz="0" iyy="0.137627" iyz="0" izz="0.0804267" />
+      </inertial>
+    <visual name="pan_turntable">
+      <origin xyz="0 0 0.0425" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.112" length="0.085" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="pan_neck">
+      <origin xyz="0 0 0.17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.17" />
+        </geometry>
+      <material name="painted_metal">
+        <color rgba="0.8 0.82 0.82 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_yoke">
+      <origin xyz="0 0 0.26" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/trunnion_yoke.obj" />
+        </geometry>
+      <material name="painted_metal">
+        <color rgba="0.8 0.82 0.82 1" />
+        </material>
+      </visual>
+    <visual name="polymer_saddle_trim">
+      <origin xyz="0 0 0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.41 0.032" />
+        </geometry>
+      <material name="graphite_polymer">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <collision name="pan_turntable">
+      <origin xyz="0 0 0.0425" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.112" length="0.085" />
+        </geometry>
+      </collision>
+    <collision name="pan_neck">
+      <origin xyz="0 0 0.17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.17" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_yoke">
+      <origin xyz="0 0 0.26" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/trunnion_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="polymer_saddle_trim">
+      <origin xyz="0 0 0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.41 0.032" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="spotlight_head">
+    <inertial>
+      <origin xyz="0.045 0 0" rpy="0 1.5708 0" />
+      <mass value="2.2" />
+      <inertia ixx="0.0903283" ixy="0" ixz="0" iyy="0.0903283" iyz="0" izz="0.03971" />
+      </inertial>
+    <visual name="head_shell">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/head_shell.obj" />
+        </geometry>
+      <material name="painted_metal">
+        <color rgba="0.8 0.82 0.82 1" />
+        </material>
+      </visual>
+    <visual name="front_bezel">
+      <origin xyz="0.35 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bezel_ring.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0.342 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.148" length="0.014" />
+        </geometry>
+      <material name="smoked_glass">
+        <color rgba="0.54 0.72 0.88 0.46" />
+        </material>
+      </visual>
+    <visual name="lens_gasket">
+      <origin xyz="0.34 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lens_gasket.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.03 0.032 0.034 1" />
+        </material>
+      </visual>
+    <visual name="reflector_bowl">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/reflector_bowl.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="led_emitter">
+      <origin xyz="0.19 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.028" />
+        </geometry>
+      <material name="warm_emitter">
+        <color rgba="1 0.8 0.44 1" />
+        </material>
+      </visual>
+    <visual name="light_carrier">
+      <origin xyz="-0.01 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.48" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="rear_cap">
+      <origin xyz="-0.264 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.035" />
+        </geometry>
+      <material name="graphite_polymer">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rear_seam_bead">
+      <origin xyz="-0.246 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_seam_bead.obj" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.59" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_cap_0">
+      <origin xyz="0 0.284 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.028" />
+        </geometry>
+      <material name="graphite_polymer">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_cap_1">
+      <origin xyz="0 -0.284 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.028" />
+        </geometry>
+      <material name="graphite_polymer">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="top_heat_spine">
+      <origin xyz="-0.06 0 0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.03 0.02" />
+        </geometry>
+      <material name="graphite_polymer">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <collision name="head_shell">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/head_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_bezel">
+      <origin xyz="0.35 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bezel_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_lens">
+      <origin xyz="0.342 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.148" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="lens_gasket">
+      <origin xyz="0.34 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lens_gasket.obj" />
+        </geometry>
+      </collision>
+    <collision name="reflector_bowl">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/reflector_bowl.obj" />
+        </geometry>
+      </collision>
+    <collision name="led_emitter">
+      <origin xyz="0.19 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.028" />
+        </geometry>
+      </collision>
+    <collision name="light_carrier">
+      <origin xyz="-0.01 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.48" />
+        </geometry>
+      </collision>
+    <collision name="rear_cap">
+      <origin xyz="-0.264 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="rear_seam_bead">
+      <origin xyz="-0.246 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_seam_bead.obj" />
+        </geometry>
+      </collision>
+    <collision name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.59" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_cap_0">
+      <origin xyz="0 0.284 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_cap_1">
+      <origin xyz="0 -0.284 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="top_heat_spine">
+      <origin xyz="-0.06 0 0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.03 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="pan_axis" type="continuous">
+    <origin xyz="0 0 1.36" rpy="0 0 0" />
+    <parent link="base_tower" />
+    <child link="pan_yoke" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.5" />
+    </joint>
+  <joint name="tilt_axis" type="revolute">
+    <origin xyz="0 0 0.6" rpy="0 0 0" />
+    <parent link="pan_yoke" />
+    <child link="spotlight_head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="9" velocity="1.2" lower="-0.45" upper="0.75" />
+    </joint>
+  </robot>

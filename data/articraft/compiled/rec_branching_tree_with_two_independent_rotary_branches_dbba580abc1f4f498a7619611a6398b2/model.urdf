@@ -1,0 +1,535 @@
+<robot name="independent_branching_hinge_mechanism">
+  <link name="base">
+    <visual name="floor_plate">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.5 0.05" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.56 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_0">
+      <origin xyz="-0.155 -0.205 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.06 0.012" />
+        </geometry>
+      <material name="black_rubber_grips">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_1">
+      <origin xyz="-0.155 0.205 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.06 0.012" />
+        </geometry>
+      <material name="black_rubber_grips">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_2">
+      <origin xyz="0.155 -0.205 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.06 0.012" />
+        </geometry>
+      <material name="black_rubber_grips">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_3">
+      <origin xyz="0.155 0.205 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.06 0.012" />
+        </geometry>
+      <material name="black_rubber_grips">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="central_riser">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.12" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.56 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="branch_manifold">
+      <origin xyz="0 0 0.105" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.36" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.56 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="branch_0_lower_pin">
+      <origin xyz="0 0.16 0.095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.09" />
+        </geometry>
+      <material name="dark_bushings">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="branch_1_lower_pin">
+      <origin xyz="0 -0.16 0.095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.09" />
+        </geometry>
+      <material name="dark_bushings">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="branch_0_socket_block">
+      <origin xyz="0 0.16 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.044 0.025" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.56 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="branch_1_socket_block">
+      <origin xyz="0 -0.16 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.044 0.025" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.56 0.58 0.6 1" />
+        </material>
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.5 0.05" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_0">
+      <origin xyz="-0.155 -0.205 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.06 0.012" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_1">
+      <origin xyz="-0.155 0.205 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.06 0.012" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_2">
+      <origin xyz="0.155 -0.205 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.06 0.012" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_3">
+      <origin xyz="0.155 0.205 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.06 0.012" />
+        </geometry>
+      </collision>
+    <collision name="central_riser">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="branch_manifold">
+      <origin xyz="0 0 0.105" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.36" />
+        </geometry>
+      </collision>
+    <collision name="branch_0_lower_pin">
+      <origin xyz="0 0.16 0.095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="branch_1_lower_pin">
+      <origin xyz="0 -0.16 0.095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="branch_0_socket_block">
+      <origin xyz="0 0.16 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.044 0.025" />
+        </geometry>
+      </collision>
+    <collision name="branch_1_socket_block">
+      <origin xyz="0 -0.16 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.044 0.025" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="branch_0_arm">
+    <visual name="proximal_boss">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.035" />
+        </geometry>
+      <material name="dark_bushings">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="web_beam">
+      <origin xyz="0.14 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.038 0.035" />
+        </geometry>
+      <material name="blue_branch_arm">
+        <color rgba="0.05 0.22 0.72 1" />
+        </material>
+      </visual>
+    <visual name="distal_boss">
+      <origin xyz="0.28 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.035" />
+        </geometry>
+      <material name="dark_bushings">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="side_rib_a">
+      <origin xyz="0.16 0.023 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.01 0.039" />
+        </geometry>
+      <material name="polished_pin_faces">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="side_rib_b">
+      <origin xyz="0.16 -0.023 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.01 0.039" />
+        </geometry>
+      <material name="polished_pin_faces">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <collision name="proximal_boss">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="web_beam">
+      <origin xyz="0.14 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.038 0.035" />
+        </geometry>
+      </collision>
+    <collision name="distal_boss">
+      <origin xyz="0.28 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="side_rib_a">
+      <origin xyz="0.16 0.023 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.01 0.039" />
+        </geometry>
+      </collision>
+    <collision name="side_rib_b">
+      <origin xyz="0.16 -0.023 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.01 0.039" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="branch_0_forearm">
+    <visual name="proximal_boss">
+      <origin xyz="0 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.035" />
+        </geometry>
+      <material name="dark_bushings">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="web_beam">
+      <origin xyz="0.1175 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.038 0.035" />
+        </geometry>
+      <material name="blue_branch_arm">
+        <color rgba="0.05 0.22 0.72 1" />
+        </material>
+      </visual>
+    <visual name="distal_boss">
+      <origin xyz="0.235 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.035" />
+        </geometry>
+      <material name="dark_bushings">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="side_rib_a">
+      <origin xyz="0.1375 0.023 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.01 0.039" />
+        </geometry>
+      <material name="polished_pin_faces">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="side_rib_b">
+      <origin xyz="0.1375 -0.023 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.01 0.039" />
+        </geometry>
+      <material name="polished_pin_faces">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="end_grip">
+      <origin xyz="0.26 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.032" />
+        </geometry>
+      <material name="black_rubber_grips">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="proximal_boss">
+      <origin xyz="0 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="web_beam">
+      <origin xyz="0.1175 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.038 0.035" />
+        </geometry>
+      </collision>
+    <collision name="distal_boss">
+      <origin xyz="0.235 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="side_rib_a">
+      <origin xyz="0.1375 0.023 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.01 0.039" />
+        </geometry>
+      </collision>
+    <collision name="side_rib_b">
+      <origin xyz="0.1375 -0.023 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.01 0.039" />
+        </geometry>
+      </collision>
+    <collision name="end_grip">
+      <origin xyz="0.26 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.032" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="branch_1_arm">
+    <visual name="proximal_boss">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.035" />
+        </geometry>
+      <material name="dark_bushings">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="web_beam">
+      <origin xyz="0.14 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.038 0.035" />
+        </geometry>
+      <material name="orange_branch_arm">
+        <color rgba="0.88 0.36 0.06 1" />
+        </material>
+      </visual>
+    <visual name="distal_boss">
+      <origin xyz="0.28 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.035" />
+        </geometry>
+      <material name="dark_bushings">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="side_rib_a">
+      <origin xyz="0.16 0.023 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.01 0.039" />
+        </geometry>
+      <material name="polished_pin_faces">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="side_rib_b">
+      <origin xyz="0.16 -0.023 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.01 0.039" />
+        </geometry>
+      <material name="polished_pin_faces">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <collision name="proximal_boss">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="web_beam">
+      <origin xyz="0.14 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.038 0.035" />
+        </geometry>
+      </collision>
+    <collision name="distal_boss">
+      <origin xyz="0.28 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="side_rib_a">
+      <origin xyz="0.16 0.023 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.01 0.039" />
+        </geometry>
+      </collision>
+    <collision name="side_rib_b">
+      <origin xyz="0.16 -0.023 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.01 0.039" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="branch_1_forearm">
+    <visual name="proximal_boss">
+      <origin xyz="0 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.035" />
+        </geometry>
+      <material name="dark_bushings">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="web_beam">
+      <origin xyz="0.1175 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.038 0.035" />
+        </geometry>
+      <material name="orange_branch_arm">
+        <color rgba="0.88 0.36 0.06 1" />
+        </material>
+      </visual>
+    <visual name="distal_boss">
+      <origin xyz="0.235 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.035" />
+        </geometry>
+      <material name="dark_bushings">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="side_rib_a">
+      <origin xyz="0.1375 0.023 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.01 0.039" />
+        </geometry>
+      <material name="polished_pin_faces">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="side_rib_b">
+      <origin xyz="0.1375 -0.023 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.01 0.039" />
+        </geometry>
+      <material name="polished_pin_faces">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="end_grip">
+      <origin xyz="0.26 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.032" />
+        </geometry>
+      <material name="black_rubber_grips">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="proximal_boss">
+      <origin xyz="0 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="web_beam">
+      <origin xyz="0.1175 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.038 0.035" />
+        </geometry>
+      </collision>
+    <collision name="distal_boss">
+      <origin xyz="0.235 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="side_rib_a">
+      <origin xyz="0.1375 0.023 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.01 0.039" />
+        </geometry>
+      </collision>
+    <collision name="side_rib_b">
+      <origin xyz="0.1375 -0.023 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.01 0.039" />
+        </geometry>
+      </collision>
+    <collision name="end_grip">
+      <origin xyz="0.26 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.032" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="branch_0_shoulder" type="revolute">
+    <origin xyz="0 0.16 0.14" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="branch_0_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="24" velocity="2" lower="0" upper="1.15" />
+    </joint>
+  <joint name="branch_0_elbow" type="revolute">
+    <origin xyz="0.28 0 0" rpy="0 0 0" />
+    <parent link="branch_0_arm" />
+    <child link="branch_0_forearm" />
+    <axis xyz="0 0 1" />
+    <limit effort="16" velocity="2.4" lower="0" upper="1.45" />
+    </joint>
+  <joint name="branch_1_shoulder" type="revolute">
+    <origin xyz="0 -0.16 0.14" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="branch_1_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="24" velocity="2" lower="-1.15" upper="0" />
+    </joint>
+  <joint name="branch_1_elbow" type="revolute">
+    <origin xyz="0.28 0 0" rpy="0 0 0" />
+    <parent link="branch_1_arm" />
+    <child link="branch_1_forearm" />
+    <axis xyz="0 0 1" />
+    <limit effort="16" velocity="2.4" lower="-1.45" upper="0" />
+    </joint>
+  </robot>

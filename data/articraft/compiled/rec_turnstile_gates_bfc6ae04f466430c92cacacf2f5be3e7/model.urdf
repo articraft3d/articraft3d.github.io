@@ -1,0 +1,841 @@
+<robot name="weatherproof_turnstile_gate">
+  <material name="sealed_concrete">
+    <color rgba="0.48 0.5 0.48 1" />
+    </material>
+  <material name="hot_dip_galvanized">
+    <color rgba="0.62 0.66 0.66 1" />
+    </material>
+  <material name="brushed_stainless">
+    <color rgba="0.78 0.79 0.76 1" />
+    </material>
+  <material name="dark_bearing_housing">
+    <color rgba="0.16 0.17 0.17 1" />
+    </material>
+  <material name="black_epdm_seal">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <material name="yellow_safety_caps">
+    <color rgba="0.96 0.78 0.1 1" />
+    </material>
+  <link name="central_post">
+    <inertial>
+      <origin xyz="0 0 0.75" rpy="0 0 0" />
+      <mass value="82" />
+      <inertia ixx="17.22" ixy="0" ixz="0" iyy="17.22" iyz="0" izz="3.69" />
+      </inertial>
+    <visual name="concrete_pad">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.86 0.08" />
+        </geometry>
+      <material name="sealed_concrete">
+        <color rgba="0.48 0.5 0.48 1" />
+        </material>
+      </visual>
+    <visual name="base_plate">
+      <origin xyz="0 0 0.097" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.29" length="0.035" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="sealed_post">
+      <origin xyz="0 0 0.585" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.99" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="base_boot">
+      <origin xyz="0 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.04" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="welded_flange">
+      <origin xyz="0 0 0.165" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.15" length="0.04" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_body">
+      <origin xyz="0 0 1.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.118" length="0.075" />
+        </geometry>
+      <material name="dark_bearing_housing">
+        <color rgba="0.16 0.17 0.17 1" />
+        </material>
+      </visual>
+    <visual name="bearing_core">
+      <origin xyz="0 0 1.122" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.132" length="0.055" />
+        </geometry>
+      <material name="dark_bearing_housing">
+        <color rgba="0.16 0.17 0.17 1" />
+        </material>
+      </visual>
+    <visual name="upper_epdm_seal">
+      <origin xyz="0 0 1.141" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.128" length="0.018" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="supported_spindle">
+      <origin xyz="0 0 1.26" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.38" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="drip_shelf">
+      <origin xyz="0 0 1.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.02" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="flange_gusset_0">
+      <origin xyz="0.131 0 0.151" rpy="0 2.35619 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.110309" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="flange_gusset_1">
+      <origin xyz="8.02144e-18 0.131 0.151" rpy="0 2.35619 1.5708" />
+      <geometry>
+        <cylinder radius="0.014" length="0.110309" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="flange_gusset_2">
+      <origin xyz="-0.131 1.60429e-17 0.151" rpy="0 2.35619 3.14159" />
+      <geometry>
+        <cylinder radius="0.014" length="0.110309" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="flange_gusset_3">
+      <origin xyz="-2.40643e-17 -0.131 0.151" rpy="0 2.35619 -1.5708" />
+      <geometry>
+        <cylinder radius="0.014" length="0.110309" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="anchor_washer_0">
+      <origin xyz="0.225 0 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_0">
+      <origin xyz="0.225 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_washer_1">
+      <origin xyz="0.159099 0.159099 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_1">
+      <origin xyz="0.159099 0.159099 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_washer_2">
+      <origin xyz="1.37773e-17 0.225 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_2">
+      <origin xyz="1.37773e-17 0.225 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_washer_3">
+      <origin xyz="-0.159099 0.159099 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_3">
+      <origin xyz="-0.159099 0.159099 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_washer_4">
+      <origin xyz="-0.225 2.75546e-17 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_4">
+      <origin xyz="-0.225 2.75546e-17 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_washer_5">
+      <origin xyz="-0.159099 -0.159099 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_5">
+      <origin xyz="-0.159099 -0.159099 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_washer_6">
+      <origin xyz="-4.13318e-17 -0.225 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_6">
+      <origin xyz="-4.13318e-17 -0.225 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_washer_7">
+      <origin xyz="0.159099 -0.159099 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_7">
+      <origin xyz="0.159099 -0.159099 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <collision name="concrete_pad">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.86 0.08" />
+        </geometry>
+      </collision>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.097" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.29" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="sealed_post">
+      <origin xyz="0 0 0.585" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.99" />
+        </geometry>
+      </collision>
+    <collision name="base_boot">
+      <origin xyz="0 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="welded_flange">
+      <origin xyz="0 0 0.165" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.15" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_body">
+      <origin xyz="0 0 1.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.118" length="0.075" />
+        </geometry>
+      </collision>
+    <collision name="bearing_core">
+      <origin xyz="0 0 1.122" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.132" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="upper_epdm_seal">
+      <origin xyz="0 0 1.141" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.128" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="supported_spindle">
+      <origin xyz="0 0 1.26" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="drip_shelf">
+      <origin xyz="0 0 1.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="flange_gusset_0">
+      <origin xyz="0.131 0 0.151" rpy="0 2.35619 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.110309" />
+        </geometry>
+      </collision>
+    <collision name="flange_gusset_1">
+      <origin xyz="8.02144e-18 0.131 0.151" rpy="0 2.35619 1.5708" />
+      <geometry>
+        <cylinder radius="0.014" length="0.110309" />
+        </geometry>
+      </collision>
+    <collision name="flange_gusset_2">
+      <origin xyz="-0.131 1.60429e-17 0.151" rpy="0 2.35619 3.14159" />
+      <geometry>
+        <cylinder radius="0.014" length="0.110309" />
+        </geometry>
+      </collision>
+    <collision name="flange_gusset_3">
+      <origin xyz="-2.40643e-17 -0.131 0.151" rpy="0 2.35619 -1.5708" />
+      <geometry>
+        <cylinder radius="0.014" length="0.110309" />
+        </geometry>
+      </collision>
+    <collision name="anchor_washer_0">
+      <origin xyz="0.225 0 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_0">
+      <origin xyz="0.225 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="anchor_washer_1">
+      <origin xyz="0.159099 0.159099 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_1">
+      <origin xyz="0.159099 0.159099 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="anchor_washer_2">
+      <origin xyz="1.37773e-17 0.225 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_2">
+      <origin xyz="1.37773e-17 0.225 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="anchor_washer_3">
+      <origin xyz="-0.159099 0.159099 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_3">
+      <origin xyz="-0.159099 0.159099 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="anchor_washer_4">
+      <origin xyz="-0.225 2.75546e-17 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_4">
+      <origin xyz="-0.225 2.75546e-17 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="anchor_washer_5">
+      <origin xyz="-0.159099 -0.159099 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_5">
+      <origin xyz="-0.159099 -0.159099 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="anchor_washer_6">
+      <origin xyz="-4.13318e-17 -0.225 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_6">
+      <origin xyz="-4.13318e-17 -0.225 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="anchor_washer_7">
+      <origin xyz="0.159099 -0.159099 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_7">
+      <origin xyz="0.159099 -0.159099 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotor">
+    <inertial>
+      <origin xyz="0 0 -0.02" rpy="0 0 0" />
+      <mass value="28" />
+      <inertia ixx="7.30333" ixy="0" ixz="0" iyy="7.30333" iyz="0" izz="12.635" />
+      </inertial>
+    <visual name="lower_thrust_ring">
+      <geometry>
+        <mesh filename="assets/meshes/lower_thrust_ring_mesh.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="rotating_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/rotating_sleeve_mesh.obj" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="rotating_seal_band">
+      <geometry>
+        <mesh filename="assets/meshes/rotating_seal_band_mesh.obj" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="drip_skirt">
+      <geometry>
+        <mesh filename="assets/meshes/drip_skirt_mesh.obj" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="rain_cap">
+      <origin xyz="0 0 0.356" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.172" length="0.042" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="lower_hub_ring">
+      <geometry>
+        <mesh filename="assets/meshes/lower_hub_ring_mesh.obj" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="upper_arm_0">
+      <origin xyz="0.5185 0 0.13" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.853" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="lower_arm_0">
+      <origin xyz="0.5285 0 -0.22" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.833" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="end_upright_0">
+      <origin xyz="0.92 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.386" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="diagonal_brace_0">
+      <origin xyz="0.51 0 -0.045" rpy="0 0.876058 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.546717" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_safety_cap_0">
+      <origin xyz="0.97 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.038" />
+        </geometry>
+      <material name="yellow_safety_caps">
+        <color rgba="0.96 0.78 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lower_safety_cap_0">
+      <origin xyz="0.97 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      <material name="yellow_safety_caps">
+        <color rgba="0.96 0.78 0.1 1" />
+        </material>
+      </visual>
+    <visual name="upper_arm_1">
+      <origin xyz="-0.25925 0.449034 0.13" rpy="0 1.5708 2.0944" />
+      <geometry>
+        <cylinder radius="0.026" length="0.853" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="lower_arm_1">
+      <origin xyz="-0.26425 0.457694 -0.22" rpy="0 1.5708 2.0944" />
+      <geometry>
+        <cylinder radius="0.024" length="0.833" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="end_upright_1">
+      <origin xyz="-0.46 0.796743 -0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.386" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="diagonal_brace_1">
+      <origin xyz="-0.255 0.441673 -0.045" rpy="0 0.876058 2.0944" />
+      <geometry>
+        <cylinder radius="0.011" length="0.546717" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_safety_cap_1">
+      <origin xyz="-0.485 0.840045 0.13" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.038" />
+        </geometry>
+      <material name="yellow_safety_caps">
+        <color rgba="0.96 0.78 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lower_safety_cap_1">
+      <origin xyz="-0.485 0.840045 -0.22" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      <material name="yellow_safety_caps">
+        <color rgba="0.96 0.78 0.1 1" />
+        </material>
+      </visual>
+    <visual name="upper_arm_2">
+      <origin xyz="-0.25925 -0.449034 0.13" rpy="0 1.5708 -2.0944" />
+      <geometry>
+        <cylinder radius="0.026" length="0.853" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="lower_arm_2">
+      <origin xyz="-0.26425 -0.457694 -0.22" rpy="0 1.5708 -2.0944" />
+      <geometry>
+        <cylinder radius="0.024" length="0.833" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="end_upright_2">
+      <origin xyz="-0.46 -0.796743 -0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.386" />
+        </geometry>
+      <material name="hot_dip_galvanized">
+        <color rgba="0.62 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="diagonal_brace_2">
+      <origin xyz="-0.255 -0.441673 -0.045" rpy="0 0.876058 -2.0944" />
+      <geometry>
+        <cylinder radius="0.011" length="0.546717" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.78 0.79 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_safety_cap_2">
+      <origin xyz="-0.485 -0.840045 0.13" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.038" />
+        </geometry>
+      <material name="yellow_safety_caps">
+        <color rgba="0.96 0.78 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lower_safety_cap_2">
+      <origin xyz="-0.485 -0.840045 -0.22" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      <material name="yellow_safety_caps">
+        <color rgba="0.96 0.78 0.1 1" />
+        </material>
+      </visual>
+    <collision name="lower_thrust_ring">
+      <geometry>
+        <mesh filename="assets/meshes/lower_thrust_ring_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="rotating_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/rotating_sleeve_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="rotating_seal_band">
+      <geometry>
+        <mesh filename="assets/meshes/rotating_seal_band_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="drip_skirt">
+      <geometry>
+        <mesh filename="assets/meshes/drip_skirt_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="rain_cap">
+      <origin xyz="0 0 0.356" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.172" length="0.042" />
+        </geometry>
+      </collision>
+    <collision name="lower_hub_ring">
+      <geometry>
+        <mesh filename="assets/meshes/lower_hub_ring_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_arm_0">
+      <origin xyz="0.5185 0 0.13" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.853" />
+        </geometry>
+      </collision>
+    <collision name="lower_arm_0">
+      <origin xyz="0.5285 0 -0.22" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.833" />
+        </geometry>
+      </collision>
+    <collision name="end_upright_0">
+      <origin xyz="0.92 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.386" />
+        </geometry>
+      </collision>
+    <collision name="diagonal_brace_0">
+      <origin xyz="0.51 0 -0.045" rpy="0 0.876058 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.546717" />
+        </geometry>
+      </collision>
+    <collision name="upper_safety_cap_0">
+      <origin xyz="0.97 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.038" />
+        </geometry>
+      </collision>
+    <collision name="lower_safety_cap_0">
+      <origin xyz="0.97 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      </collision>
+    <collision name="upper_arm_1">
+      <origin xyz="-0.25925 0.449034 0.13" rpy="0 1.5708 2.0944" />
+      <geometry>
+        <cylinder radius="0.026" length="0.853" />
+        </geometry>
+      </collision>
+    <collision name="lower_arm_1">
+      <origin xyz="-0.26425 0.457694 -0.22" rpy="0 1.5708 2.0944" />
+      <geometry>
+        <cylinder radius="0.024" length="0.833" />
+        </geometry>
+      </collision>
+    <collision name="end_upright_1">
+      <origin xyz="-0.46 0.796743 -0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.386" />
+        </geometry>
+      </collision>
+    <collision name="diagonal_brace_1">
+      <origin xyz="-0.255 0.441673 -0.045" rpy="0 0.876058 2.0944" />
+      <geometry>
+        <cylinder radius="0.011" length="0.546717" />
+        </geometry>
+      </collision>
+    <collision name="upper_safety_cap_1">
+      <origin xyz="-0.485 0.840045 0.13" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.038" />
+        </geometry>
+      </collision>
+    <collision name="lower_safety_cap_1">
+      <origin xyz="-0.485 0.840045 -0.22" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      </collision>
+    <collision name="upper_arm_2">
+      <origin xyz="-0.25925 -0.449034 0.13" rpy="0 1.5708 -2.0944" />
+      <geometry>
+        <cylinder radius="0.026" length="0.853" />
+        </geometry>
+      </collision>
+    <collision name="lower_arm_2">
+      <origin xyz="-0.26425 -0.457694 -0.22" rpy="0 1.5708 -2.0944" />
+      <geometry>
+        <cylinder radius="0.024" length="0.833" />
+        </geometry>
+      </collision>
+    <collision name="end_upright_2">
+      <origin xyz="-0.46 -0.796743 -0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.386" />
+        </geometry>
+      </collision>
+    <collision name="diagonal_brace_2">
+      <origin xyz="-0.255 -0.441673 -0.045" rpy="0 0.876058 -2.0944" />
+      <geometry>
+        <cylinder radius="0.011" length="0.546717" />
+        </geometry>
+      </collision>
+    <collision name="upper_safety_cap_2">
+      <origin xyz="-0.485 -0.840045 0.13" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.038" />
+        </geometry>
+      </collision>
+    <collision name="lower_safety_cap_2">
+      <origin xyz="-0.485 -0.840045 -0.22" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="spindle_rotation" type="continuous">
+    <origin xyz="0 0 1.15" rpy="0 0 0" />
+    <parent link="central_post" />
+    <child link="rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="1" />
+    </joint>
+  </robot>

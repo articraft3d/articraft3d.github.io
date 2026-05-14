@@ -1,0 +1,483 @@
+<robot name="streaming_remote">
+  <material name="soft_black_plastic">
+    <color rgba="0.025 0.026 0.028 1" />
+    </material>
+  <material name="matte_graphite">
+    <color rgba="0.055 0.058 0.062 1" />
+    </material>
+  <material name="rubber_button">
+    <color rgba="0.105 0.108 0.112 1" />
+    </material>
+  <material name="navigation_black">
+    <color rgba="0.015 0.015 0.017 1" />
+    </material>
+  <material name="button_mark_white">
+    <color rgba="0.88 0.9 0.92 1" />
+    </material>
+  <material name="power_red">
+    <color rgba="0.68 0.05 0.04 1" />
+    </material>
+  <material name="battery_door_satin">
+    <color rgba="0.045 0.047 0.05 1" />
+    </material>
+  <material name="ir_window">
+    <color rgba="0.1 0.02 0.018 0.55" />
+    </material>
+  <link name="housing">
+    <inertial>
+      <mass value="0.085" />
+      <inertia ixx="0.000269422" ixy="0" ixz="0" iyy="1.78217e-05" iyz="0" izz="0.000281577" />
+      </inertial>
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/remote_body.obj" />
+        </geometry>
+      <material name="soft_black_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="front_inset">
+      <origin xyz="0 0.001 0.0094" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_inset.obj" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.055 0.058 0.062 1" />
+        </material>
+      </visual>
+    <visual name="ir_window">
+      <origin xyz="0 0.083 0.00925" rpy="0 0 0" />
+      <geometry>
+        <box size="0.023 0.006 0.001" />
+        </geometry>
+      <material name="ir_window">
+        <color rgba="0.1 0.02 0.018 0.55" />
+        </material>
+      </visual>
+    <visual name="battery_rail_0">
+      <origin xyz="-0.017 -0.032 -0.0101" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.086 0.0022" />
+        </geometry>
+      <material name="battery_door_satin">
+        <color rgba="0.045 0.047 0.05 1" />
+        </material>
+      </visual>
+    <visual name="battery_rail_1">
+      <origin xyz="0.017 -0.032 -0.0101" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.086 0.0022" />
+        </geometry>
+      <material name="battery_door_satin">
+        <color rgba="0.045 0.047 0.05 1" />
+        </material>
+      </visual>
+    <visual name="door_stop_lip">
+      <origin xyz="0 0.019 -0.0096" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.004 0.0012" />
+        </geometry>
+      <material name="battery_door_satin">
+        <color rgba="0.045 0.047 0.05 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/remote_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_inset">
+      <origin xyz="0 0.001 0.0094" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_inset.obj" />
+        </geometry>
+      </collision>
+    <collision name="ir_window">
+      <origin xyz="0 0.083 0.00925" rpy="0 0 0" />
+      <geometry>
+        <box size="0.023 0.006 0.001" />
+        </geometry>
+      </collision>
+    <collision name="battery_rail_0">
+      <origin xyz="-0.017 -0.032 -0.0101" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.086 0.0022" />
+        </geometry>
+      </collision>
+    <collision name="battery_rail_1">
+      <origin xyz="0.017 -0.032 -0.0101" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.086 0.0022" />
+        </geometry>
+      </collision>
+    <collision name="door_stop_lip">
+      <origin xyz="0 0.019 -0.0096" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.004 0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="nav_pad">
+    <inertial>
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <mass value="0.004" />
+      <inertia ixx="2.7525e-07" ixy="0" ixz="0" iyy="2.7525e-07" iyz="0" izz="5.445e-07" />
+      </inertial>
+    <visual name="nav_ring">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/navigation_ring.obj" />
+        </geometry>
+      <material name="navigation_black">
+        <color rgba="0.015 0.015 0.017 1" />
+        </material>
+      </visual>
+    <visual name="up_mark">
+      <origin xyz="0 0.0108 0.0033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.0012 0.0006" />
+        </geometry>
+      <material name="button_mark_white">
+        <color rgba="0.88 0.9 0.92 1" />
+        </material>
+      </visual>
+    <visual name="down_mark">
+      <origin xyz="0 -0.0108 0.0033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.0012 0.0006" />
+        </geometry>
+      <material name="button_mark_white">
+        <color rgba="0.88 0.9 0.92 1" />
+        </material>
+      </visual>
+    <visual name="side_mark_0">
+      <origin xyz="-0.0108 0 0.0033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0012 0.004 0.0006" />
+        </geometry>
+      <material name="button_mark_white">
+        <color rgba="0.88 0.9 0.92 1" />
+        </material>
+      </visual>
+    <visual name="side_mark_1">
+      <origin xyz="0.0108 0 0.0033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0012 0.004 0.0006" />
+        </geometry>
+      <material name="button_mark_white">
+        <color rgba="0.88 0.9 0.92 1" />
+        </material>
+      </visual>
+    <collision name="nav_ring">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/navigation_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="up_mark">
+      <origin xyz="0 0.0108 0.0033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.0012 0.0006" />
+        </geometry>
+      </collision>
+    <collision name="down_mark">
+      <origin xyz="0 -0.0108 0.0033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.0012 0.0006" />
+        </geometry>
+      </collision>
+    <collision name="side_mark_0">
+      <origin xyz="-0.0108 0 0.0033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0012 0.004 0.0006" />
+        </geometry>
+      </collision>
+    <collision name="side_mark_1">
+      <origin xyz="0.0108 0 0.0033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0012 0.004 0.0006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="center_button">
+    <inertial>
+      <origin xyz="0 0 0.0016" rpy="0 0 0" />
+      <mass value="0.002" />
+      <inertia ixx="3.13517e-08" ixy="0" ixz="0" iyy="3.13517e-08" iyz="0" izz="5.929e-08" />
+      </inertial>
+    <visual name="center_disc">
+      <origin xyz="0 0 0.0016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0077" length="0.0032" />
+        </geometry>
+      <material name="rubber_button">
+        <color rgba="0.105 0.108 0.112 1" />
+        </material>
+      </visual>
+    <collision name="center_disc">
+      <origin xyz="0 0 0.0016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0077" length="0.0032" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="power_button">
+    <inertial>
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <mass value="0.0018" />
+      <inertia ixx="1.39905e-08" ixy="0" ixz="0" iyy="1.39905e-08" iyz="0" izz="2.5281e-08" />
+      </inertial>
+    <visual name="power_cap">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0053" length="0.003" />
+        </geometry>
+      <material name="power_red">
+        <color rgba="0.68 0.05 0.04 1" />
+        </material>
+      </visual>
+    <collision name="power_cap">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0053" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="back_button">
+    <inertial>
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <mass value="0.0018" />
+      <inertia ixx="1.0872e-08" ixy="0" ixz="0" iyy="1.0872e-08" iyz="0" izz="1.9044e-08" />
+      </inertial>
+    <visual name="back_cap">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.003" />
+        </geometry>
+      <material name="rubber_button">
+        <color rgba="0.105 0.108 0.112 1" />
+        </material>
+      </visual>
+    <collision name="back_cap">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="home_button">
+    <inertial>
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <mass value="0.0018" />
+      <inertia ixx="1.0872e-08" ixy="0" ixz="0" iyy="1.0872e-08" iyz="0" izz="1.9044e-08" />
+      </inertial>
+    <visual name="home_cap">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.003" />
+        </geometry>
+      <material name="rubber_button">
+        <color rgba="0.105 0.108 0.112 1" />
+        </material>
+      </visual>
+    <collision name="home_cap">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="play_button">
+    <inertial>
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <mass value="0.0018" />
+      <inertia ixx="1.4472e-08" ixy="0" ixz="0" iyy="1.4472e-08" iyz="0" izz="2.6244e-08" />
+      </inertial>
+    <visual name="play_cap">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0054" length="0.003" />
+        </geometry>
+      <material name="rubber_button">
+        <color rgba="0.105 0.108 0.112 1" />
+        </material>
+      </visual>
+    <collision name="play_cap">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0054" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="app_button">
+    <inertial>
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <mass value="0.0018" />
+      <inertia ixx="1.30545e-08" ixy="0" ixz="0" iyy="1.30545e-08" iyz="0" izz="2.3409e-08" />
+      </inertial>
+    <visual name="app_cap">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0051" length="0.003" />
+        </geometry>
+      <material name="rubber_button">
+        <color rgba="0.105 0.108 0.112 1" />
+        </material>
+      </visual>
+    <collision name="app_cap">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0051" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="side_rocker">
+    <inertial>
+      <origin xyz="0.004 0 0" rpy="0 0 0" />
+      <mass value="0.0035" />
+      <inertia ixx="3.55833e-07" ixy="0" ixz="0" iyy="3.73333e-08" iyz="0" izz="3.55833e-07" />
+      </inertial>
+    <visual name="rocker_cap">
+      <origin xyz="0.002 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_volume_rocker.obj" />
+        </geometry>
+      <material name="rubber_button">
+        <color rgba="0.105 0.108 0.112 1" />
+        </material>
+      </visual>
+    <visual name="plus_mark">
+      <origin xyz="0.0044 0.0085 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.006 0.0009" />
+        </geometry>
+      <material name="button_mark_white">
+        <color rgba="0.88 0.9 0.92 1" />
+        </material>
+      </visual>
+    <visual name="minus_mark">
+      <origin xyz="0.0044 -0.0085 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.006 0.0009" />
+        </geometry>
+      <material name="button_mark_white">
+        <color rgba="0.88 0.9 0.92 1" />
+        </material>
+      </visual>
+    <collision name="rocker_cap">
+      <origin xyz="0.002 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_volume_rocker.obj" />
+        </geometry>
+      </collision>
+    <collision name="plus_mark">
+      <origin xyz="0.0044 0.0085 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.006 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="minus_mark">
+      <origin xyz="0.0044 -0.0085 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.006 0.0009" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="battery_door">
+    <inertial>
+      <mass value="0.006" />
+      <inertia ixx="2.52338e-06" ixy="0" ixz="0" iyy="3.81005e-07" iyz="0" izz="2.89862e-06" />
+      </inertial>
+    <visual name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/battery_door_panel.obj" />
+        </geometry>
+      <material name="battery_door_satin">
+        <color rgba="0.045 0.047 0.05 1" />
+        </material>
+      </visual>
+    <visual name="thumb_dimple">
+      <origin xyz="0 -0.015 -0.0016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.0008" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.055 0.058 0.062 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/battery_door_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="thumb_dimple">
+      <origin xyz="0 -0.015 -0.0016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.0008" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="housing_to_nav_pad" type="prismatic">
+    <origin xyz="0 0.025 0.0098" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="nav_pad" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.08" lower="0" upper="0.0018" />
+    </joint>
+  <joint name="housing_to_center_button" type="prismatic">
+    <origin xyz="0 0.025 0.0098" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="center_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1.8" velocity="0.08" lower="0" upper="0.0016" />
+    </joint>
+  <joint name="housing_to_power_button" type="prismatic">
+    <origin xyz="0 0.064 0.0098" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="power_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1.2" velocity="0.08" lower="0" upper="0.0016" />
+    </joint>
+  <joint name="housing_to_back_button" type="prismatic">
+    <origin xyz="-0.0105 -0.005 0.0098" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="back_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1.2" velocity="0.08" lower="0" upper="0.0017" />
+    </joint>
+  <joint name="housing_to_home_button" type="prismatic">
+    <origin xyz="0.0105 -0.005 0.0098" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="home_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1.2" velocity="0.08" lower="0" upper="0.0017" />
+    </joint>
+  <joint name="housing_to_play_button" type="prismatic">
+    <origin xyz="0 -0.026 0.0098" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="play_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1.2" velocity="0.08" lower="0" upper="0.0018" />
+    </joint>
+  <joint name="housing_to_app_button" type="prismatic">
+    <origin xyz="0 -0.049 0.0098" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="app_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1.2" velocity="0.08" lower="0" upper="0.0017" />
+    </joint>
+  <joint name="housing_to_side_rocker" type="revolute">
+    <origin xyz="0.02255 0.008 0" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="side_rocker" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.45" velocity="2.5" lower="-0.23" upper="0.23" />
+    </joint>
+  <joint name="housing_to_battery_door" type="prismatic">
+    <origin xyz="0 -0.03 -0.0102" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="battery_door" />
+    <axis xyz="0 -1 0" />
+    <limit effort="4" velocity="0.12" lower="0" upper="0.032" />
+    </joint>
+  </robot>

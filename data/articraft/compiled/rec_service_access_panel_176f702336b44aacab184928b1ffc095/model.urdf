@@ -1,0 +1,817 @@
+<robot name="field_service_access_panel">
+  <material name="powder_coated_frame">
+    <color rgba="0.16 0.18 0.18 1" />
+    </material>
+  <material name="safety_yellow_door">
+    <color rgba="0.95 0.64 0.12 1" />
+    </material>
+  <material name="dark_zinc_hardware">
+    <color rgba="0.23 0.24 0.25 1" />
+    </material>
+  <material name="worn_bright_steel">
+    <color rgba="0.68 0.7 0.7 1" />
+    </material>
+  <material name="black_replaceable_rubber">
+    <color rgba="0.035 0.035 0.032 1" />
+    </material>
+  <material name="oiled_bronze_wear">
+    <color rgba="0.68 0.48 0.2 1" />
+    </material>
+  <material name="red_latch_handle">
+    <color rgba="0.78 0.08 0.06 1" />
+    </material>
+  <link name="frame">
+    <visual name="frame_shell">
+      <geometry>
+        <mesh filename="assets/meshes/service_frame_bezel.obj" />
+        </geometry>
+      <material name="powder_coated_frame">
+        <color rgba="0.16 0.18 0.18 1" />
+        </material>
+      </visual>
+    <visual name="top_gasket">
+      <origin xyz="0 0.492 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.035 0.014" />
+        </geometry>
+      <material name="black_replaceable_rubber">
+        <color rgba="0.035 0.035 0.032 1" />
+        </material>
+      </visual>
+    <visual name="bottom_gasket">
+      <origin xyz="0 -0.492 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.035 0.014" />
+        </geometry>
+      <material name="black_replaceable_rubber">
+        <color rgba="0.035 0.035 0.032 1" />
+        </material>
+      </visual>
+    <visual name="hinge_gasket">
+      <origin xyz="-0.378 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.98 0.014" />
+        </geometry>
+      <material name="black_replaceable_rubber">
+        <color rgba="0.035 0.035 0.032 1" />
+        </material>
+      </visual>
+    <visual name="latch_gasket">
+      <origin xyz="0.378 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.98 0.014" />
+        </geometry>
+      <material name="black_replaceable_rubber">
+        <color rgba="0.035 0.035 0.032 1" />
+        </material>
+      </visual>
+    <visual name="hinge_rail">
+      <origin xyz="-0.505 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.16 0.08" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="latch_rail">
+      <origin xyz="0.505 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 1.06 0.12" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="keeper_base">
+      <origin xyz="0.505 0 0.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.18 0.05" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="striker_post">
+      <origin xyz="0.49 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.13 0.045" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="frame_leaf_0">
+      <origin xyz="-0.48 -0.4 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.18 0.012" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="frame_knuckle_0">
+      <origin xyz="-0.43 -0.4 0.105" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.16" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="frame_leaf_1">
+      <origin xyz="-0.48 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.18 0.012" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="frame_knuckle_1">
+      <origin xyz="-0.43 0 0.105" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.16" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="frame_leaf_2">
+      <origin xyz="-0.48 0.4 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.18 0.012" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="frame_knuckle_2">
+      <origin xyz="-0.43 0.4 0.105" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.16" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="strike_wear_pad_0">
+      <origin xyz="0.475 -0.34 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.105 0.01" />
+        </geometry>
+      <material name="oiled_bronze_wear">
+        <color rgba="0.68 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="strike_wear_pad_1">
+      <origin xyz="0.475 0.34 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.105 0.01" />
+        </geometry>
+      <material name="oiled_bronze_wear">
+        <color rgba="0.68 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="frame_bolt_0">
+      <origin xyz="-0.505 -0.54 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="frame_bolt_1">
+      <origin xyz="-0.505 0.54 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="frame_bolt_2">
+      <origin xyz="0.505 -0.47 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="frame_bolt_3">
+      <origin xyz="0.505 0.47 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="frame_bolt_4">
+      <origin xyz="-0.28 0.585 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="frame_bolt_5">
+      <origin xyz="0.28 0.585 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="frame_bolt_6">
+      <origin xyz="-0.28 -0.585 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="frame_bolt_7">
+      <origin xyz="0.28 -0.585 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <collision name="frame_shell">
+      <geometry>
+        <mesh filename="assets/meshes/service_frame_bezel.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_gasket">
+      <origin xyz="0 0.492 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.035 0.014" />
+        </geometry>
+      </collision>
+    <collision name="bottom_gasket">
+      <origin xyz="0 -0.492 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.035 0.014" />
+        </geometry>
+      </collision>
+    <collision name="hinge_gasket">
+      <origin xyz="-0.378 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.98 0.014" />
+        </geometry>
+      </collision>
+    <collision name="latch_gasket">
+      <origin xyz="0.378 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.98 0.014" />
+        </geometry>
+      </collision>
+    <collision name="hinge_rail">
+      <origin xyz="-0.505 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.16 0.08" />
+        </geometry>
+      </collision>
+    <collision name="latch_rail">
+      <origin xyz="0.505 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 1.06 0.12" />
+        </geometry>
+      </collision>
+    <collision name="keeper_base">
+      <origin xyz="0.505 0 0.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.18 0.05" />
+        </geometry>
+      </collision>
+    <collision name="striker_post">
+      <origin xyz="0.49 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.13 0.045" />
+        </geometry>
+      </collision>
+    <collision name="frame_leaf_0">
+      <origin xyz="-0.48 -0.4 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.18 0.012" />
+        </geometry>
+      </collision>
+    <collision name="frame_knuckle_0">
+      <origin xyz="-0.43 -0.4 0.105" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="frame_leaf_1">
+      <origin xyz="-0.48 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.18 0.012" />
+        </geometry>
+      </collision>
+    <collision name="frame_knuckle_1">
+      <origin xyz="-0.43 0 0.105" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="frame_leaf_2">
+      <origin xyz="-0.48 0.4 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.18 0.012" />
+        </geometry>
+      </collision>
+    <collision name="frame_knuckle_2">
+      <origin xyz="-0.43 0.4 0.105" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="strike_wear_pad_0">
+      <origin xyz="0.475 -0.34 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.105 0.01" />
+        </geometry>
+      </collision>
+    <collision name="strike_wear_pad_1">
+      <origin xyz="0.475 0.34 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.105 0.01" />
+        </geometry>
+      </collision>
+    <collision name="frame_bolt_0">
+      <origin xyz="-0.505 -0.54 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="frame_bolt_1">
+      <origin xyz="-0.505 0.54 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="frame_bolt_2">
+      <origin xyz="0.505 -0.47 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="frame_bolt_3">
+      <origin xyz="0.505 0.47 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="frame_bolt_4">
+      <origin xyz="-0.28 0.585 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="frame_bolt_5">
+      <origin xyz="0.28 0.585 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="frame_bolt_6">
+      <origin xyz="-0.28 -0.585 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="frame_bolt_7">
+      <origin xyz="0.28 -0.585 0.042" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="door">
+    <visual name="door_slab">
+      <geometry>
+        <mesh filename="assets/meshes/service_door_slab.obj" />
+        </geometry>
+      <material name="safety_yellow_door">
+        <color rgba="0.95 0.64 0.12 1" />
+        </material>
+      </visual>
+    <visual name="top_wear_strip">
+      <origin xyz="0.455 0.5 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.035 0.012" />
+        </geometry>
+      <material name="black_replaceable_rubber">
+        <color rgba="0.035 0.035 0.032 1" />
+        </material>
+      </visual>
+    <visual name="bottom_wear_strip">
+      <origin xyz="0.455 -0.5 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.035 0.012" />
+        </geometry>
+      <material name="black_replaceable_rubber">
+        <color rgba="0.035 0.035 0.032 1" />
+        </material>
+      </visual>
+    <visual name="hinge_wear_strip">
+      <origin xyz="0.09 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.9 0.012" />
+        </geometry>
+      <material name="black_replaceable_rubber">
+        <color rgba="0.035 0.035 0.032 1" />
+        </material>
+      </visual>
+    <visual name="latch_wear_strip">
+      <origin xyz="0.79 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.9 0.012" />
+        </geometry>
+      <material name="black_replaceable_rubber">
+        <color rgba="0.035 0.035 0.032 1" />
+        </material>
+      </visual>
+    <visual name="front_bushing">
+      <origin xyz="0.72 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_latch_bushing.obj" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rear_bushing">
+      <origin xyz="0.72 0 -0.0235" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_latch_bushing.obj" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="door_leaf_0">
+      <origin xyz="0.045 -0.2 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.22 0.012" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="door_knuckle_0">
+      <origin xyz="0 -0.2 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.22" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="door_leaf_1">
+      <origin xyz="0.045 0.2 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.22 0.012" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="door_knuckle_1">
+      <origin xyz="0 0.2 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.22" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="door_fastener_0">
+      <origin xyz="0.13 0.46 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="door_fastener_1">
+      <origin xyz="0.43 0.46 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="door_fastener_2">
+      <origin xyz="0.73 0.46 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="door_fastener_3">
+      <origin xyz="0.13 -0.46 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="door_fastener_4">
+      <origin xyz="0.43 -0.46 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="door_fastener_5">
+      <origin xyz="0.73 -0.46 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="door_fastener_6">
+      <origin xyz="0.09 0.26 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="door_fastener_7">
+      <origin xyz="0.09 -0.26 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="door_fastener_8">
+      <origin xyz="0.79 0.26 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="door_fastener_9">
+      <origin xyz="0.79 -0.26 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <collision name="door_slab">
+      <geometry>
+        <mesh filename="assets/meshes/service_door_slab.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_wear_strip">
+      <origin xyz="0.455 0.5 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.035 0.012" />
+        </geometry>
+      </collision>
+    <collision name="bottom_wear_strip">
+      <origin xyz="0.455 -0.5 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.035 0.012" />
+        </geometry>
+      </collision>
+    <collision name="hinge_wear_strip">
+      <origin xyz="0.09 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.9 0.012" />
+        </geometry>
+      </collision>
+    <collision name="latch_wear_strip">
+      <origin xyz="0.79 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.9 0.012" />
+        </geometry>
+      </collision>
+    <collision name="front_bushing">
+      <origin xyz="0.72 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_latch_bushing.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_bushing">
+      <origin xyz="0.72 0 -0.0235" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_latch_bushing.obj" />
+        </geometry>
+      </collision>
+    <collision name="door_leaf_0">
+      <origin xyz="0.045 -0.2 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.22 0.012" />
+        </geometry>
+      </collision>
+    <collision name="door_knuckle_0">
+      <origin xyz="0 -0.2 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="door_leaf_1">
+      <origin xyz="0.045 0.2 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.22 0.012" />
+        </geometry>
+      </collision>
+    <collision name="door_knuckle_1">
+      <origin xyz="0 0.2 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="door_fastener_0">
+      <origin xyz="0.13 0.46 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="door_fastener_1">
+      <origin xyz="0.43 0.46 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="door_fastener_2">
+      <origin xyz="0.73 0.46 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="door_fastener_3">
+      <origin xyz="0.13 -0.46 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="door_fastener_4">
+      <origin xyz="0.43 -0.46 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="door_fastener_5">
+      <origin xyz="0.73 -0.46 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="door_fastener_6">
+      <origin xyz="0.09 0.26 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="door_fastener_7">
+      <origin xyz="0.09 -0.26 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="door_fastener_8">
+      <origin xyz="0.79 0.26 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="door_fastener_9">
+      <origin xyz="0.79 -0.26 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="latch">
+    <visual name="latch_shaft">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.05" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="front_hub">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.025" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="handle_lever">
+      <origin xyz="0 -0.095 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.245 0.026" />
+        </geometry>
+      <material name="red_latch_handle">
+        <color rgba="0.78 0.08 0.06 1" />
+        </material>
+      </visual>
+    <visual name="handle_grip">
+      <origin xyz="0 -0.205 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.135" />
+        </geometry>
+      <material name="black_replaceable_rubber">
+        <color rgba="0.035 0.035 0.032 1" />
+        </material>
+      </visual>
+    <visual name="cam_dog">
+      <origin xyz="0.085 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.045 0.024" />
+        </geometry>
+      <material name="worn_bright_steel">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="cam_hub">
+      <geometry>
+        <box size="0.048 0.06 0.018" />
+        </geometry>
+      <material name="dark_zinc_hardware">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <collision name="latch_shaft">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="front_hub">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="handle_lever">
+      <origin xyz="0 -0.095 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.245 0.026" />
+        </geometry>
+      </collision>
+    <collision name="handle_grip">
+      <origin xyz="0 -0.205 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.135" />
+        </geometry>
+      </collision>
+    <collision name="cam_dog">
+      <origin xyz="0.085 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.045 0.024" />
+        </geometry>
+      </collision>
+    <collision name="cam_hub">
+      <geometry>
+        <box size="0.048 0.06 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="door_hinge" type="revolute">
+    <origin xyz="-0.43 0 0.105" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="door" />
+    <axis xyz="0 -1 0" />
+    <limit effort="70" velocity="1" lower="0" upper="1.8326" />
+    </joint>
+  <joint name="latch_turn" type="revolute">
+    <origin xyz="0.72 0 0.045" rpy="0 0 0" />
+    <parent link="door" />
+    <child link="latch" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="3" lower="0" upper="1.5708" />
+    </joint>
+  </robot>

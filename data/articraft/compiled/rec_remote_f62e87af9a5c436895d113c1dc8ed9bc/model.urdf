@@ -1,0 +1,894 @@
+<robot name="dj_midi_pad_controller">
+  <material name="matte_black">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="charcoal_panel">
+    <color rgba="0.055 0.06 0.066 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.1 0.105 0.11 1" />
+    </material>
+  <material name="frosted_pad">
+    <color rgba="0.72 0.74 0.7 1" />
+    </material>
+  <material name="knob_grey">
+    <color rgba="0.18 0.19 0.2 1" />
+    </material>
+  <material name="white_print">
+    <color rgba="0.88 0.9 0.86 1" />
+    </material>
+  <material name="status_blue">
+    <color rgba="0.12 0.55 1 1" />
+    </material>
+  <link name="housing">
+    <visual name="housing_body">
+      <geometry>
+        <mesh filename="assets/meshes/housing_body.obj" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="top_plate">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_plate.obj" />
+        </geometry>
+      <material name="charcoal_panel" />
+      </visual>
+    <visual name="encoder_strip">
+      <origin xyz="0 -0.105 0.0216" rpy="0 0 0" />
+      <geometry>
+        <box size="0.325 0.05 0.0012" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="led_0">
+      <origin xyz="-0.078 0.133 0.02115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0007" />
+        </geometry>
+      <material name="status_blue" />
+      </visual>
+    <visual name="led_1">
+      <origin xyz="-0.026 0.133 0.02115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0007" />
+        </geometry>
+      <material name="status_blue" />
+      </visual>
+    <visual name="led_2">
+      <origin xyz="0.026 0.133 0.02115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0007" />
+        </geometry>
+      <material name="status_blue" />
+      </visual>
+    <visual name="led_3">
+      <origin xyz="0.078 0.133 0.02115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0007" />
+        </geometry>
+      <material name="status_blue" />
+      </visual>
+    <visual name="encoder_bushing_0">
+      <origin xyz="-0.108 -0.105 0.0204" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.0012" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <visual name="label_0">
+      <origin xyz="-0.108 -0.131 0.02135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.002 0.0007" />
+        </geometry>
+      <material name="white_print" />
+      </visual>
+    <visual name="encoder_bushing_1">
+      <origin xyz="-0.036 -0.105 0.0204" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.0012" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <visual name="label_1">
+      <origin xyz="-0.036 -0.131 0.02135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.002 0.0007" />
+        </geometry>
+      <material name="white_print" />
+      </visual>
+    <visual name="encoder_bushing_2">
+      <origin xyz="0.036 -0.105 0.0204" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.0012" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <visual name="label_2">
+      <origin xyz="0.036 -0.131 0.02135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.002 0.0007" />
+        </geometry>
+      <material name="white_print" />
+      </visual>
+    <visual name="encoder_bushing_3">
+      <origin xyz="0.108 -0.105 0.0204" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.0012" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <visual name="label_3">
+      <origin xyz="0.108 -0.131 0.02135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.002 0.0007" />
+        </geometry>
+      <material name="white_print" />
+      </visual>
+    <collision name="housing_body">
+      <geometry>
+        <mesh filename="assets/meshes/housing_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_plate">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="encoder_strip">
+      <origin xyz="0 -0.105 0.0216" rpy="0 0 0" />
+      <geometry>
+        <box size="0.325 0.05 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="led_0">
+      <origin xyz="-0.078 0.133 0.02115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0007" />
+        </geometry>
+      </collision>
+    <collision name="led_1">
+      <origin xyz="-0.026 0.133 0.02115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0007" />
+        </geometry>
+      </collision>
+    <collision name="led_2">
+      <origin xyz="0.026 0.133 0.02115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0007" />
+        </geometry>
+      </collision>
+    <collision name="led_3">
+      <origin xyz="0.078 0.133 0.02115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.003 0.0007" />
+        </geometry>
+      </collision>
+    <collision name="encoder_bushing_0">
+      <origin xyz="-0.108 -0.105 0.0204" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.0012" />
+        </geometry>
+      </collision>
+    <collision name="label_0">
+      <origin xyz="-0.108 -0.131 0.02135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.002 0.0007" />
+        </geometry>
+      </collision>
+    <collision name="encoder_bushing_1">
+      <origin xyz="-0.036 -0.105 0.0204" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.0012" />
+        </geometry>
+      </collision>
+    <collision name="label_1">
+      <origin xyz="-0.036 -0.131 0.02135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.002 0.0007" />
+        </geometry>
+      </collision>
+    <collision name="encoder_bushing_2">
+      <origin xyz="0.036 -0.105 0.0204" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.0012" />
+        </geometry>
+      </collision>
+    <collision name="label_2">
+      <origin xyz="0.036 -0.131 0.02135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.002 0.0007" />
+        </geometry>
+      </collision>
+    <collision name="encoder_bushing_3">
+      <origin xyz="0.108 -0.105 0.0204" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.0012" />
+        </geometry>
+      </collision>
+    <collision name="label_3">
+      <origin xyz="0.108 -0.131 0.02135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.002 0.0007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_0_0">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_0_1">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_0_2">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_0_3">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_1_0">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_1_1">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_1_2">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_1_3">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_2_0">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_2_1">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_2_2">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_2_3">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_3_0">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_3_1">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_3_2">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_3_3">
+    <visual name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      <material name="frosted_pad" />
+      </visual>
+    <visual name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="pad_cap">
+      <geometry>
+        <mesh filename="assets/meshes/trigger_pad_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_plunger">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="encoder_0">
+    <visual name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/encoder_knob.obj" />
+        </geometry>
+      <material name="knob_grey" />
+      </visual>
+    <visual name="indicator_line">
+      <origin xyz="0.0045 0 0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0022 0.001" />
+        </geometry>
+      <material name="white_print" />
+      </visual>
+    <collision name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/encoder_knob.obj" />
+        </geometry>
+      </collision>
+    <collision name="indicator_line">
+      <origin xyz="0.0045 0 0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0022 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="encoder_1">
+    <visual name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/encoder_knob.obj" />
+        </geometry>
+      <material name="knob_grey" />
+      </visual>
+    <visual name="indicator_line">
+      <origin xyz="0.0045 0 0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0022 0.001" />
+        </geometry>
+      <material name="white_print" />
+      </visual>
+    <collision name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/encoder_knob.obj" />
+        </geometry>
+      </collision>
+    <collision name="indicator_line">
+      <origin xyz="0.0045 0 0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0022 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="encoder_2">
+    <visual name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/encoder_knob.obj" />
+        </geometry>
+      <material name="knob_grey" />
+      </visual>
+    <visual name="indicator_line">
+      <origin xyz="0.0045 0 0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0022 0.001" />
+        </geometry>
+      <material name="white_print" />
+      </visual>
+    <collision name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/encoder_knob.obj" />
+        </geometry>
+      </collision>
+    <collision name="indicator_line">
+      <origin xyz="0.0045 0 0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0022 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="encoder_3">
+    <visual name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/encoder_knob.obj" />
+        </geometry>
+      <material name="knob_grey" />
+      </visual>
+    <visual name="indicator_line">
+      <origin xyz="0.0045 0 0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0022 0.001" />
+        </geometry>
+      <material name="white_print" />
+      </visual>
+    <collision name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/encoder_knob.obj" />
+        </geometry>
+      </collision>
+    <collision name="indicator_line">
+      <origin xyz="0.0045 0 0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0022 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="housing_to_pad_0_0" type="prismatic">
+    <origin xyz="-0.078 0.113 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_0_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_0_1" type="prismatic">
+    <origin xyz="-0.026 0.113 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_0_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_0_2" type="prismatic">
+    <origin xyz="0.026 0.113 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_0_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_0_3" type="prismatic">
+    <origin xyz="0.078 0.113 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_0_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_1_0" type="prismatic">
+    <origin xyz="-0.078 0.061 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_1_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_1_1" type="prismatic">
+    <origin xyz="-0.026 0.061 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_1_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_1_2" type="prismatic">
+    <origin xyz="0.026 0.061 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_1_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_1_3" type="prismatic">
+    <origin xyz="0.078 0.061 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_1_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_2_0" type="prismatic">
+    <origin xyz="-0.078 0.009 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_2_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_2_1" type="prismatic">
+    <origin xyz="-0.026 0.009 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_2_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_2_2" type="prismatic">
+    <origin xyz="0.026 0.009 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_2_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_2_3" type="prismatic">
+    <origin xyz="0.078 0.009 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_2_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_3_0" type="prismatic">
+    <origin xyz="-0.078 -0.043 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_3_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_3_1" type="prismatic">
+    <origin xyz="-0.026 -0.043 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_3_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_3_2" type="prismatic">
+    <origin xyz="0.026 -0.043 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_3_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_pad_3_3" type="prismatic">
+    <origin xyz="0.078 -0.043 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="pad_3_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.08" lower="-0.005" upper="0" />
+    <dynamics damping="0.35" friction="0.08" />
+    </joint>
+  <joint name="housing_to_encoder_0" type="continuous">
+    <origin xyz="-0.108 -0.105 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="encoder_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.8" velocity="18" />
+    </joint>
+  <joint name="housing_to_encoder_1" type="continuous">
+    <origin xyz="-0.036 -0.105 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="encoder_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.8" velocity="18" />
+    </joint>
+  <joint name="housing_to_encoder_2" type="continuous">
+    <origin xyz="0.036 -0.105 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="encoder_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.8" velocity="18" />
+    </joint>
+  <joint name="housing_to_encoder_3" type="continuous">
+    <origin xyz="0.108 -0.105 0.021" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="encoder_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.8" velocity="18" />
+    </joint>
+  </robot>

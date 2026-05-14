@@ -1,0 +1,515 @@
+<robot name="hotel_wall_safe">
+  <material name="powder_coated_steel">
+    <color rgba="0.22 0.23 0.23 1" />
+    </material>
+  <material name="charcoal_door">
+    <color rgba="0.055 0.06 0.065 1" />
+    </material>
+  <material name="dark_interior">
+    <color rgba="0.1 0.105 0.11 1" />
+    </material>
+  <material name="brushed_chrome">
+    <color rgba="0.72 0.7 0.66 1" />
+    </material>
+  <material name="black_knurled_plastic">
+    <color rgba="0.015 0.015 0.018 1" />
+    </material>
+  <material name="engraved_white_marks">
+    <color rgba="0.9 0.88 0.8 1" />
+    </material>
+  <link name="body">
+    <visual name="safe_shell">
+      <geometry>
+        <mesh filename="assets/meshes/safe_shell.obj" />
+        </geometry>
+      <material name="powder_coated_steel">
+        <color rgba="0.22 0.23 0.23 1" />
+        </material>
+      </visual>
+    <visual name="storage_shelf">
+      <origin xyz="0 0.145 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.425 0.26 0.012" />
+        </geometry>
+      <material name="dark_interior">
+        <color rgba="0.1 0.105 0.11 1" />
+        </material>
+      </visual>
+    <visual name="runner_0">
+      <origin xyz="-0.185 0.135 -0.096" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.24 0.016" />
+        </geometry>
+      <material name="dark_interior">
+        <color rgba="0.1 0.105 0.11 1" />
+        </material>
+      </visual>
+    <visual name="runner_1">
+      <origin xyz="0.185 0.135 -0.096" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.24 0.016" />
+        </geometry>
+      <material name="dark_interior">
+        <color rgba="0.1 0.105 0.11 1" />
+        </material>
+      </visual>
+    <visual name="hinge_pin">
+      <origin xyz="0.205 -0.05 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.305" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="hinge_bracket_0">
+      <origin xyz="0.225 -0.04 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.01 0.024" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="hinge_bracket_1">
+      <origin xyz="0.225 -0.04 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.01 0.024" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <collision name="safe_shell">
+      <geometry>
+        <mesh filename="assets/meshes/safe_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="storage_shelf">
+      <origin xyz="0 0.145 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.425 0.26 0.012" />
+        </geometry>
+      </collision>
+    <collision name="runner_0">
+      <origin xyz="-0.185 0.135 -0.096" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.24 0.016" />
+        </geometry>
+      </collision>
+    <collision name="runner_1">
+      <origin xyz="0.185 0.135 -0.096" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.24 0.016" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pin">
+      <origin xyz="0.205 -0.05 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.305" />
+        </geometry>
+      </collision>
+    <collision name="hinge_bracket_0">
+      <origin xyz="0.225 -0.04 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.01 0.024" />
+        </geometry>
+      </collision>
+    <collision name="hinge_bracket_1">
+      <origin xyz="0.225 -0.04 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.01 0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="door">
+    <visual name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/door_panel.obj" />
+        </geometry>
+      <material name="charcoal_door">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="dial_boss">
+      <origin xyz="-0.213 -0.029 0.05" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="handle_boss">
+      <origin xyz="-0.213 -0.029 -0.055" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.006" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="door_knuckle_bottom">
+      <origin xyz="0 0 -0.104" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.052" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="door_knuckle_middle">
+      <geometry>
+        <cylinder radius="0.016" length="0.06" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="door_knuckle_top">
+      <origin xyz="0 0 0.104" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.052" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/door_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="dial_boss">
+      <origin xyz="-0.213 -0.029 0.05" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="handle_boss">
+      <origin xyz="-0.213 -0.029 -0.055" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="door_knuckle_bottom">
+      <origin xyz="0 0 -0.104" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="door_knuckle_middle">
+      <geometry>
+        <cylinder radius="0.016" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="door_knuckle_top">
+      <origin xyz="0 0 0.104" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.052" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dial">
+    <visual name="dial_body">
+      <origin xyz="0 -0.009 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.018" />
+        </geometry>
+      <material name="black_knurled_plastic">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="dial_cap">
+      <origin xyz="0 -0.021 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="dial_tick_0">
+      <origin xyz="0.037 -0.019 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.006 0.014" />
+        </geometry>
+      <material name="engraved_white_marks">
+        <color rgba="0.9 0.88 0.8 1" />
+        </material>
+      </visual>
+    <visual name="dial_tick_1">
+      <origin xyz="0.0320429 -0.019 0.0185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      <material name="engraved_white_marks">
+        <color rgba="0.9 0.88 0.8 1" />
+        </material>
+      </visual>
+    <visual name="dial_tick_2">
+      <origin xyz="0.0185 -0.019 0.0320429" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      <material name="engraved_white_marks">
+        <color rgba="0.9 0.88 0.8 1" />
+        </material>
+      </visual>
+    <visual name="dial_tick_3">
+      <origin xyz="2.2656e-18 -0.019 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.006 0.014" />
+        </geometry>
+      <material name="engraved_white_marks">
+        <color rgba="0.9 0.88 0.8 1" />
+        </material>
+      </visual>
+    <visual name="dial_tick_4">
+      <origin xyz="-0.0185 -0.019 0.0320429" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      <material name="engraved_white_marks">
+        <color rgba="0.9 0.88 0.8 1" />
+        </material>
+      </visual>
+    <visual name="dial_tick_5">
+      <origin xyz="-0.0320429 -0.019 0.0185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      <material name="engraved_white_marks">
+        <color rgba="0.9 0.88 0.8 1" />
+        </material>
+      </visual>
+    <visual name="dial_tick_6">
+      <origin xyz="-0.037 -0.019 4.53119e-18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.006 0.014" />
+        </geometry>
+      <material name="engraved_white_marks">
+        <color rgba="0.9 0.88 0.8 1" />
+        </material>
+      </visual>
+    <visual name="dial_tick_7">
+      <origin xyz="-0.0320429 -0.019 -0.0185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      <material name="engraved_white_marks">
+        <color rgba="0.9 0.88 0.8 1" />
+        </material>
+      </visual>
+    <visual name="dial_tick_8">
+      <origin xyz="-0.0185 -0.019 -0.0320429" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      <material name="engraved_white_marks">
+        <color rgba="0.9 0.88 0.8 1" />
+        </material>
+      </visual>
+    <visual name="dial_tick_9">
+      <origin xyz="-6.79679e-18 -0.019 -0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.006 0.014" />
+        </geometry>
+      <material name="engraved_white_marks">
+        <color rgba="0.9 0.88 0.8 1" />
+        </material>
+      </visual>
+    <visual name="dial_tick_10">
+      <origin xyz="0.0185 -0.019 -0.0320429" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      <material name="engraved_white_marks">
+        <color rgba="0.9 0.88 0.8 1" />
+        </material>
+      </visual>
+    <visual name="dial_tick_11">
+      <origin xyz="0.0320429 -0.019 -0.0185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      <material name="engraved_white_marks">
+        <color rgba="0.9 0.88 0.8 1" />
+        </material>
+      </visual>
+    <collision name="dial_body">
+      <origin xyz="0 -0.009 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="dial_cap">
+      <origin xyz="0 -0.021 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="dial_tick_0">
+      <origin xyz="0.037 -0.019 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.006 0.014" />
+        </geometry>
+      </collision>
+    <collision name="dial_tick_1">
+      <origin xyz="0.0320429 -0.019 0.0185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      </collision>
+    <collision name="dial_tick_2">
+      <origin xyz="0.0185 -0.019 0.0320429" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      </collision>
+    <collision name="dial_tick_3">
+      <origin xyz="2.2656e-18 -0.019 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.006 0.014" />
+        </geometry>
+      </collision>
+    <collision name="dial_tick_4">
+      <origin xyz="-0.0185 -0.019 0.0320429" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      </collision>
+    <collision name="dial_tick_5">
+      <origin xyz="-0.0320429 -0.019 0.0185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      </collision>
+    <collision name="dial_tick_6">
+      <origin xyz="-0.037 -0.019 4.53119e-18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.006 0.014" />
+        </geometry>
+      </collision>
+    <collision name="dial_tick_7">
+      <origin xyz="-0.0320429 -0.019 -0.0185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      </collision>
+    <collision name="dial_tick_8">
+      <origin xyz="-0.0185 -0.019 -0.0320429" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      </collision>
+    <collision name="dial_tick_9">
+      <origin xyz="-6.79679e-18 -0.019 -0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.006 0.014" />
+        </geometry>
+      </collision>
+    <collision name="dial_tick_10">
+      <origin xyz="0.0185 -0.019 -0.0320429" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      </collision>
+    <collision name="dial_tick_11">
+      <origin xyz="0.0320429 -0.019 -0.0185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.006 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="handle">
+    <visual name="handle_hub">
+      <origin xyz="0 -0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.024" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="handle_spoke">
+      <origin xyz="0.052 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.022 0.024" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="handle_tip">
+      <origin xyz="0.11 -0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.026" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <collision name="handle_hub">
+      <origin xyz="0 -0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="handle_spoke">
+      <origin xyz="0.052 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.022 0.024" />
+        </geometry>
+      </collision>
+    <collision name="handle_tip">
+      <origin xyz="0.11 -0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tray">
+    <visual name="tray_pan">
+      <geometry>
+        <mesh filename="assets/meshes/document_tray.obj" />
+        </geometry>
+      <material name="powder_coated_steel">
+        <color rgba="0.22 0.23 0.23 1" />
+        </material>
+      </visual>
+    <collision name="tray_pan">
+      <geometry>
+        <mesh filename="assets/meshes/document_tray.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="door_hinge" type="revolute">
+    <origin xyz="0.205 -0.05 0" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="door" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="1.2" lower="0" upper="1.75" />
+    </joint>
+  <joint name="dial_spin" type="continuous">
+    <origin xyz="-0.213 -0.032 0.05" rpy="0 0 0" />
+    <parent link="door" />
+    <child link="dial" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.4" velocity="8" />
+    </joint>
+  <joint name="handle_turn" type="revolute">
+    <origin xyz="-0.213 -0.032 -0.055" rpy="0 0 0" />
+    <parent link="door" />
+    <child link="handle" />
+    <axis xyz="0 -1 0" />
+    <limit effort="6" velocity="4" lower="0" upper="1.5708" />
+    </joint>
+  <joint name="tray_slide" type="prismatic">
+    <origin xyz="0 0.135 -0.085" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="tray" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="0.25" lower="0" upper="0.16" />
+    </joint>
+  </robot>

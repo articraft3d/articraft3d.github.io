@@ -1,0 +1,429 @@
+<robot name="telescoping_cctv_mast">
+  <material name="dark_galvanized_metal">
+    <color rgba="0.12 0.13 0.13 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.62 0.64 0.62 1" />
+    </material>
+  <material name="rubberized_ballast_gray">
+    <color rgba="0.18 0.19 0.2 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="powder_coated_camera_white">
+    <color rgba="0.88 0.88 0.84 1" />
+    </material>
+  <material name="dark_lens_glass">
+    <color rgba="0.03 0.05 0.08 0.82" />
+    </material>
+  <link name="ballast_base">
+    <visual name="ballast_slab">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.56 0.12" />
+        </geometry>
+      <material name="rubberized_ballast_gray">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="welded_flange">
+      <origin xyz="0 0 0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.035" />
+        </geometry>
+      <material name="dark_galvanized_metal">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <visual name="outer_sleeve">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/outer_sleeve.obj" />
+        </geometry>
+      <material name="dark_galvanized_metal">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_0">
+      <origin xyz="-0.32 -0.2 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.026" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_1">
+      <origin xyz="-0.32 0.2 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.026" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_2">
+      <origin xyz="0.32 -0.2 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.026" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_3">
+      <origin xyz="0.32 0.2 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.026" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="clamp_boss">
+      <origin xyz="0 -0.07 0.905" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.03 0.045" />
+        </geometry>
+      <material name="dark_galvanized_metal">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <visual name="clamp_screw">
+      <origin xyz="0 -0.09 0.905" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.04" />
+        </geometry>
+      <material name="dark_galvanized_metal">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <visual name="clamp_knob">
+      <origin xyz="0 -0.115 0.905" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.045" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <collision name="ballast_slab">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.56 0.12" />
+        </geometry>
+      </collision>
+    <collision name="welded_flange">
+      <origin xyz="0 0 0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="outer_sleeve">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/outer_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_0">
+      <origin xyz="-0.32 -0.2 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_1">
+      <origin xyz="-0.32 0.2 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_2">
+      <origin xyz="0.32 -0.2 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_3">
+      <origin xyz="0.32 0.2 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="clamp_boss">
+      <origin xyz="0 -0.07 0.905" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.03 0.045" />
+        </geometry>
+      </collision>
+    <collision name="clamp_screw">
+      <origin xyz="0 -0.09 0.905" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="clamp_knob">
+      <origin xyz="0 -0.115 0.905" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="middle_stage">
+    <visual name="middle_tube">
+      <origin xyz="0 0 -0.65" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/middle_tube.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="middle_stop_collar">
+      <geometry>
+        <mesh filename="assets/meshes/middle_stop_collar.obj" />
+        </geometry>
+      <material name="dark_galvanized_metal">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <collision name="middle_tube">
+      <origin xyz="0 0 -0.65" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/middle_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="middle_stop_collar">
+      <geometry>
+        <mesh filename="assets/meshes/middle_stop_collar.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_stage">
+    <visual name="upper_pole">
+      <origin xyz="0 0 -0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="1.05" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="upper_stop_collar">
+      <geometry>
+        <mesh filename="assets/meshes/upper_stop_collar.obj" />
+        </geometry>
+      <material name="dark_galvanized_metal">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <visual name="pan_cap">
+      <origin xyz="0 0 0.515" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.04" />
+        </geometry>
+      <material name="dark_galvanized_metal">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <collision name="upper_pole">
+      <origin xyz="0 0 -0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="1.05" />
+        </geometry>
+      </collision>
+    <collision name="upper_stop_collar">
+      <geometry>
+        <mesh filename="assets/meshes/upper_stop_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="pan_cap">
+      <origin xyz="0 0 0.515" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pan_yoke">
+    <visual name="turntable">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.035" />
+        </geometry>
+      <material name="dark_galvanized_metal">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <visual name="yoke_stem">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.08" />
+        </geometry>
+      <material name="dark_galvanized_metal">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.205 0.03" />
+        </geometry>
+      <material name="dark_galvanized_metal">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_0">
+      <origin xyz="0 -0.085 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.018 0.12" />
+        </geometry>
+      <material name="dark_galvanized_metal">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_1">
+      <origin xyz="0 0.085 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.018 0.12" />
+        </geometry>
+      <material name="dark_galvanized_metal">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <collision name="turntable">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="yoke_stem">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.205 0.03" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_0">
+      <origin xyz="0 -0.085 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.018 0.12" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_1">
+      <origin xyz="0 0.085 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.018 0.12" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="camera_head">
+    <visual name="camera_body">
+      <origin xyz="0.08 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.13 0.1" />
+        </geometry>
+      <material name="powder_coated_camera_white">
+        <color rgba="0.88 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="sun_hood">
+      <origin xyz="0.08 0 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.285 0.165 0.014" />
+        </geometry>
+      <material name="powder_coated_camera_white">
+        <color rgba="0.88 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.152" />
+        </geometry>
+      <material name="dark_galvanized_metal">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <visual name="lens_barrel">
+      <origin xyz="0.23 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.06" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_glass">
+      <origin xyz="0.265 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.01" />
+        </geometry>
+      <material name="dark_lens_glass">
+        <color rgba="0.03 0.05 0.08 0.82" />
+        </material>
+      </visual>
+    <collision name="camera_body">
+      <origin xyz="0.08 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.13 0.1" />
+        </geometry>
+      </collision>
+    <collision name="sun_hood">
+      <origin xyz="0.08 0 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.285 0.165 0.014" />
+        </geometry>
+      </collision>
+    <collision name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.152" />
+        </geometry>
+      </collision>
+    <collision name="lens_barrel">
+      <origin xyz="0.23 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="front_glass">
+      <origin xyz="0.265 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_middle" type="prismatic">
+    <origin xyz="0 0 0.95" rpy="0 0 0" />
+    <parent link="ballast_base" />
+    <child link="middle_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.18" lower="0" upper="0.55" />
+    </joint>
+  <joint name="middle_to_upper" type="prismatic">
+    <origin xyz="0 0 0.75" rpy="0 0 0" />
+    <parent link="middle_stage" />
+    <child link="upper_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="0.16" lower="0" upper="0.45" />
+    </joint>
+  <joint name="upper_to_pan" type="revolute">
+    <origin xyz="0 0 0.535" rpy="0 0 0" />
+    <parent link="upper_stage" />
+    <child link="pan_yoke" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="pan_to_camera" type="revolute">
+    <origin xyz="0 0 0.2" rpy="0 0 0" />
+    <parent link="pan_yoke" />
+    <child link="camera_head" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="1" lower="-0.45" upper="0.8" />
+    </joint>
+  </robot>

@@ -1,0 +1,435 @@
+<robot name="staggered_rotary_assembly">
+  <material name="brushed_aluminum">
+    <color rgba="0.7 0.72 0.74 1" />
+    </material>
+  <material name="dark_anodized">
+    <color rgba="0.08 0.09 0.11 1" />
+    </material>
+  <material name="motor_black">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="bearing_steel">
+    <color rgba="0.46 0.47 0.48 1" />
+    </material>
+  <material name="accent_blue">
+    <color rgba="0.1 0.28 0.58 1" />
+    </material>
+  <material name="fastener_dark">
+    <color rgba="0.02 0.02 0.025 1" />
+    </material>
+  <link name="base">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.32 0.04" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="fixed_pedestal">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.1" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="base_motor">
+      <origin xyz="0.145 0 0.092" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.135" />
+        </geometry>
+      <material name="motor_black" />
+      </visual>
+    <visual name="base_gearbox">
+      <origin xyz="0.085 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.105 0.07" />
+        </geometry>
+      <material name="motor_black" />
+      </visual>
+    <visual name="base_bolt_0">
+      <origin xyz="-0.165 -0.105 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.007" />
+        </geometry>
+      <material name="fastener_dark" />
+      </visual>
+    <visual name="base_bolt_1">
+      <origin xyz="-0.165 0.105 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.007" />
+        </geometry>
+      <material name="fastener_dark" />
+      </visual>
+    <visual name="base_bolt_2">
+      <origin xyz="0.165 -0.105 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.007" />
+        </geometry>
+      <material name="fastener_dark" />
+      </visual>
+    <visual name="base_bolt_3">
+      <origin xyz="0.165 0.105 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.007" />
+        </geometry>
+      <material name="fastener_dark" />
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.32 0.04" />
+        </geometry>
+      </collision>
+    <collision name="fixed_pedestal">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="base_motor">
+      <origin xyz="0.145 0 0.092" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.135" />
+        </geometry>
+      </collision>
+    <collision name="base_gearbox">
+      <origin xyz="0.085 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.105 0.07" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_0">
+      <origin xyz="-0.165 -0.105 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_1">
+      <origin xyz="-0.165 0.105 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_2">
+      <origin xyz="0.165 -0.105 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_3">
+      <origin xyz="0.165 0.105 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="yaw_carrier">
+    <visual name="yaw_platter">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.036" />
+        </geometry>
+      <material name="bearing_steel" />
+      </visual>
+    <visual name="yoke_foot">
+      <origin xyz="0.092 0 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.135 0.03" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="shoulder_yoke">
+      <origin xyz="0.16 0 0.035" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/shoulder_yoke.obj" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="shoulder_actuator">
+      <origin xyz="0.045 0 0.103" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.09 0.075" />
+        </geometry>
+      <material name="motor_black" />
+      </visual>
+    <visual name="shoulder_output_collar">
+      <origin xyz="0.16 -0.095 0.14" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.058" />
+        </geometry>
+      <material name="accent_blue" />
+      </visual>
+    <visual name="shoulder_drive_bridge">
+      <origin xyz="0.087 0 0.103" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.09 0.055" />
+        </geometry>
+      <material name="motor_black" />
+      </visual>
+    <collision name="yaw_platter">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.036" />
+        </geometry>
+      </collision>
+    <collision name="yoke_foot">
+      <origin xyz="0.092 0 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.135 0.03" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_yoke">
+      <origin xyz="0.16 0 0.035" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/shoulder_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_actuator">
+      <origin xyz="0.045 0 0.103" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.09 0.075" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_output_collar">
+      <origin xyz="0.16 -0.095 0.14" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_drive_bridge">
+      <origin xyz="0.087 0 0.103" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.09 0.055" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shoulder_link">
+    <visual name="upper_machined_link">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_machined_link.obj" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="shoulder_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.072" />
+        </geometry>
+      <material name="bearing_steel" />
+      </visual>
+    <visual name="elbow_yoke">
+      <origin xyz="0.3 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/elbow_yoke.obj" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="elbow_actuator">
+      <origin xyz="0.21 -0.045 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.046 0.07" />
+        </geometry>
+      <material name="motor_black" />
+      </visual>
+    <visual name="elbow_drive_collar">
+      <origin xyz="0.3 -0.0625 0.064" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.052" />
+        </geometry>
+      <material name="accent_blue" />
+      </visual>
+    <visual name="elbow_drive_bridge">
+      <origin xyz="0.247 -0.045 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.046 0.046" />
+        </geometry>
+      <material name="motor_black" />
+      </visual>
+    <collision name="upper_machined_link">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_machined_link.obj" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.072" />
+        </geometry>
+      </collision>
+    <collision name="elbow_yoke">
+      <origin xyz="0.3 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/elbow_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="elbow_actuator">
+      <origin xyz="0.21 -0.045 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.046 0.07" />
+        </geometry>
+      </collision>
+    <collision name="elbow_drive_collar">
+      <origin xyz="0.3 -0.0625 0.064" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="elbow_drive_bridge">
+      <origin xyz="0.247 -0.045 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.046 0.046" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="forearm_link">
+    <visual name="forearm_machined_link">
+      <origin xyz="0.07 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/forearm_machined_link.obj" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="elbow_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.072" />
+        </geometry>
+      <material name="bearing_steel" />
+      </visual>
+    <visual name="wrist_mount_face">
+      <origin xyz="0.24 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.02" />
+        </geometry>
+      <material name="bearing_steel" />
+      </visual>
+    <visual name="wrist_actuator">
+      <origin xyz="0.155 0.042 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.044 0.064" />
+        </geometry>
+      <material name="motor_black" />
+      </visual>
+    <visual name="wrist_drive_collar">
+      <origin xyz="0.21 0.024 -0.012" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.046" />
+        </geometry>
+      <material name="accent_blue" />
+      </visual>
+    <collision name="forearm_machined_link">
+      <origin xyz="0.07 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/forearm_machined_link.obj" />
+        </geometry>
+      </collision>
+    <collision name="elbow_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.072" />
+        </geometry>
+      </collision>
+    <collision name="wrist_mount_face">
+      <origin xyz="0.24 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="wrist_actuator">
+      <origin xyz="0.155 0.042 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.044 0.064" />
+        </geometry>
+      </collision>
+    <collision name="wrist_drive_collar">
+      <origin xyz="0.21 0.024 -0.012" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.046" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist_rotor">
+    <visual name="wrist_flange">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.024" />
+        </geometry>
+      <material name="bearing_steel" />
+      </visual>
+    <visual name="output_saddle">
+      <origin xyz="0.06 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.05 0.03" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="flange_bolt_0">
+      <origin xyz="0.025 0.03 0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.012" />
+        </geometry>
+      <material name="fastener_dark" />
+      </visual>
+    <visual name="flange_bolt_1">
+      <origin xyz="0.025 -0.03 0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.012" />
+        </geometry>
+      <material name="fastener_dark" />
+      </visual>
+    <collision name="wrist_flange">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="output_saddle">
+      <origin xyz="0.06 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.05 0.03" />
+        </geometry>
+      </collision>
+    <collision name="flange_bolt_0">
+      <origin xyz="0.025 0.03 0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="flange_bolt_1">
+      <origin xyz="0.025 -0.03 0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_yaw" type="revolute">
+    <origin xyz="0 0 0.14" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="yaw_carrier" />
+    <axis xyz="0 0 1" />
+    <limit effort="60" velocity="1.2" lower="-2.8" upper="2.8" />
+    </joint>
+  <joint name="yaw_to_shoulder" type="revolute">
+    <origin xyz="0.16 0 0.14" rpy="0 0 0" />
+    <parent link="yaw_carrier" />
+    <child link="shoulder_link" />
+    <axis xyz="0 1 0" />
+    <limit effort="45" velocity="1.1" lower="-1.15" upper="1.2" />
+    </joint>
+  <joint name="shoulder_to_forearm" type="revolute">
+    <origin xyz="0.3 0 0.064" rpy="0 0 0" />
+    <parent link="shoulder_link" />
+    <child link="forearm_link" />
+    <axis xyz="0 1 0" />
+    <limit effort="34" velocity="1.4" lower="-1.35" upper="1.35" />
+    </joint>
+  <joint name="forearm_to_wrist" type="revolute">
+    <origin xyz="0.24 0 0.028" rpy="0 0 0" />
+    <parent link="forearm_link" />
+    <child link="wrist_rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="16" velocity="2.2" lower="-2.7" upper="2.7" />
+    </joint>
+  </robot>

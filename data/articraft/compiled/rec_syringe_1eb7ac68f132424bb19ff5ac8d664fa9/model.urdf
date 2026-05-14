@@ -1,0 +1,118 @@
+<robot name="premium_clinical_syringe">
+  <material name="clear_polycarbonate">
+    <color rgba="0.66 0.87 0.96 0.42" />
+    </material>
+  <material name="frosted_satin">
+    <color rgba="0.83 0.86 0.88 1" />
+    </material>
+  <material name="dose_ink">
+    <color rgba="0.035 0.045 0.05 1" />
+    </material>
+  <material name="matte_graphite">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="satin_plunger_plastic">
+    <color rgba="0.78 0.81 0.84 1" />
+    </material>
+  <link name="barrel">
+    <visual name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.66 0.87 0.96 0.42" />
+        </material>
+      </visual>
+    <visual name="rear_hardware">
+      <geometry>
+        <mesh filename="assets/meshes/rear_hardware.obj" />
+        </geometry>
+      <material name="frosted_satin">
+        <color rgba="0.83 0.86 0.88 1" />
+        </material>
+      </visual>
+    <visual name="seam_bands">
+      <geometry>
+        <mesh filename="assets/meshes/seam_bands.obj" />
+        </geometry>
+      <material name="frosted_satin">
+        <color rgba="0.83 0.86 0.88 1" />
+        </material>
+      </visual>
+    <visual name="graduation_marks">
+      <geometry>
+        <mesh filename="assets/meshes/graduation_marks.obj" />
+        </geometry>
+      <material name="dose_ink">
+        <color rgba="0.035 0.045 0.05 1" />
+        </material>
+      </visual>
+    <collision name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_hardware">
+      <geometry>
+        <mesh filename="assets/meshes/rear_hardware.obj" />
+        </geometry>
+      </collision>
+    <collision name="seam_bands">
+      <geometry>
+        <mesh filename="assets/meshes/seam_bands.obj" />
+        </geometry>
+      </collision>
+    <collision name="graduation_marks">
+      <geometry>
+        <mesh filename="assets/meshes/graduation_marks.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="plunger">
+    <visual name="plunger_rod">
+      <geometry>
+        <mesh filename="assets/meshes/plunger_rod.obj" />
+        </geometry>
+      <material name="satin_plunger_plastic">
+        <color rgba="0.78 0.81 0.84 1" />
+        </material>
+      </visual>
+    <visual name="stopper">
+      <geometry>
+        <mesh filename="assets/meshes/stopper.obj" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="thumb_pad">
+      <geometry>
+        <mesh filename="assets/meshes/thumb_pad.obj" />
+        </geometry>
+      <material name="satin_plunger_plastic">
+        <color rgba="0.78 0.81 0.84 1" />
+        </material>
+      </visual>
+    <collision name="plunger_rod">
+      <geometry>
+        <mesh filename="assets/meshes/plunger_rod.obj" />
+        </geometry>
+      </collision>
+    <collision name="stopper">
+      <geometry>
+        <mesh filename="assets/meshes/stopper.obj" />
+        </geometry>
+      </collision>
+    <collision name="thumb_pad">
+      <geometry>
+        <mesh filename="assets/meshes/thumb_pad.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="barrel_to_plunger" type="prismatic">
+    <parent link="barrel" />
+    <child link="plunger" />
+    <axis xyz="-1 0 0" />
+    <limit effort="18" velocity="0.18" lower="0" upper="0.055" />
+    </joint>
+  </robot>

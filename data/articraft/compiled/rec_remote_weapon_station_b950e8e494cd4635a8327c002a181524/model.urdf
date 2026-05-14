@@ -1,0 +1,479 @@
+<robot name="stabilized_weapon_station">
+  <link name="yaw_base">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="1.05 0.86 0.06" />
+        </geometry>
+      <material name="dark_phosphate">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_drum">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.36" length="0.16" />
+        </geometry>
+      <material name="matte_olive_drab">
+        <color rgba="0.22 0.27 0.19 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bearing">
+      <origin xyz="0 0 0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.43" length="0.08" />
+        </geometry>
+      <material name="worn_bronze_bearing">
+        <color rgba="0.45 0.35 0.16 1" />
+        </material>
+      </visual>
+    <visual name="deck_bolt_0">
+      <origin xyz="0.42 0.32 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      <material name="flat_black_rubber">
+        <color rgba="0.012 0.012 0.01 1" />
+        </material>
+      </visual>
+    <visual name="deck_bolt_1">
+      <origin xyz="-0.42 0.32 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      <material name="flat_black_rubber">
+        <color rgba="0.012 0.012 0.01 1" />
+        </material>
+      </visual>
+    <visual name="deck_bolt_2">
+      <origin xyz="0.42 -0.32 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      <material name="flat_black_rubber">
+        <color rgba="0.012 0.012 0.01 1" />
+        </material>
+      </visual>
+    <visual name="deck_bolt_3">
+      <origin xyz="-0.42 -0.32 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      <material name="flat_black_rubber">
+        <color rgba="0.012 0.012 0.01 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="1.05 0.86 0.06" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_drum">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.36" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="yaw_bearing">
+      <origin xyz="0 0 0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.43" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="deck_bolt_0">
+      <origin xyz="0.42 0.32 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="deck_bolt_1">
+      <origin xyz="-0.42 0.32 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="deck_bolt_2">
+      <origin xyz="0.42 -0.32 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="deck_bolt_3">
+      <origin xyz="-0.42 -0.32 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="turret">
+    <visual name="yaw_skirt">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.1" />
+        </geometry>
+      <material name="matte_olive_drab">
+        <color rgba="0.22 0.27 0.19 1" />
+        </material>
+      </visual>
+    <visual name="armored_shell">
+      <origin xyz="0 0 0.22" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_turret_shell.obj" />
+        </geometry>
+      <material name="matte_olive_drab">
+        <color rgba="0.22 0.27 0.19 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_cheek_0">
+      <origin xyz="0.45 0.37 0.28" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.14 0.25" />
+        </geometry>
+      <material name="matte_olive_drab">
+        <color rgba="0.22 0.27 0.19 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_cheek_1">
+      <origin xyz="0.45 -0.37 0.28" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.14 0.25" />
+        </geometry>
+      <material name="matte_olive_drab">
+        <color rgba="0.22 0.27 0.19 1" />
+        </material>
+      </visual>
+    <visual name="pitch_bearing_0">
+      <origin xyz="0.54 0.4575 0.28" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.035" />
+        </geometry>
+      <material name="worn_bronze_bearing">
+        <color rgba="0.45 0.35 0.16 1" />
+        </material>
+      </visual>
+    <visual name="pitch_bearing_1">
+      <origin xyz="0.54 -0.4575 0.28" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.035" />
+        </geometry>
+      <material name="worn_bronze_bearing">
+        <color rgba="0.45 0.35 0.16 1" />
+        </material>
+      </visual>
+    <visual name="side_access_panel">
+      <origin xyz="-0.18 0.335 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.05 0.13" />
+        </geometry>
+      <material name="dark_phosphate">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="top_hatch">
+      <origin xyz="-0.1 0 0.397" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.18 0.035" />
+        </geometry>
+      <material name="dark_phosphate">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="sensor_pylon">
+      <origin xyz="0.04 0.29 0.435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.12 0.13" />
+        </geometry>
+      <material name="matte_olive_drab">
+        <color rgba="0.22 0.27 0.19 1" />
+        </material>
+      </visual>
+    <visual name="sensor_pod_body">
+      <origin xyz="0.1 0.29 0.555" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.29" />
+        </geometry>
+      <material name="dark_phosphate">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="sensor_pod_rear">
+      <origin xyz="-0.045 0.29 0.555" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.115" />
+        </geometry>
+      <material name="dark_phosphate">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="sensor_pod_nose">
+      <origin xyz="0.245 0.29 0.555" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.115" />
+        </geometry>
+      <material name="dark_phosphate">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="sensor_lens">
+      <origin xyz="0.358 0.29 0.555" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.014" />
+        </geometry>
+      <material name="smoked_sensor_glass">
+        <color rgba="0.02 0.05 0.075 0.86" />
+        </material>
+      </visual>
+    <collision name="yaw_skirt">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="armored_shell">
+      <origin xyz="0 0 0.22" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_turret_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_cheek_0">
+      <origin xyz="0.45 0.37 0.28" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.14 0.25" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_cheek_1">
+      <origin xyz="0.45 -0.37 0.28" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.14 0.25" />
+        </geometry>
+      </collision>
+    <collision name="pitch_bearing_0">
+      <origin xyz="0.54 0.4575 0.28" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="pitch_bearing_1">
+      <origin xyz="0.54 -0.4575 0.28" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="side_access_panel">
+      <origin xyz="-0.18 0.335 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.05 0.13" />
+        </geometry>
+      </collision>
+    <collision name="top_hatch">
+      <origin xyz="-0.1 0 0.397" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.18 0.035" />
+        </geometry>
+      </collision>
+    <collision name="sensor_pylon">
+      <origin xyz="0.04 0.29 0.435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.12 0.13" />
+        </geometry>
+      </collision>
+    <collision name="sensor_pod_body">
+      <origin xyz="0.1 0.29 0.555" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.29" />
+        </geometry>
+      </collision>
+    <collision name="sensor_pod_rear">
+      <origin xyz="-0.045 0.29 0.555" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.115" />
+        </geometry>
+      </collision>
+    <collision name="sensor_pod_nose">
+      <origin xyz="0.245 0.29 0.555" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.115" />
+        </geometry>
+      </collision>
+    <collision name="sensor_lens">
+      <origin xyz="0.358 0.29 0.555" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cradle">
+    <visual name="trunnion_tube">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.6" />
+        </geometry>
+      <material name="worn_bronze_bearing">
+        <color rgba="0.45 0.35 0.16 1" />
+        </material>
+      </visual>
+    <visual name="cradle_block">
+      <origin xyz="0.13 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.22 0.14" />
+        </geometry>
+      <material name="matte_olive_drab">
+        <color rgba="0.22 0.27 0.19 1" />
+        </material>
+      </visual>
+    <visual name="lower_slide">
+      <origin xyz="0.39 0 -0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.12 0.085" />
+        </geometry>
+      <material name="matte_olive_drab">
+        <color rgba="0.22 0.27 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slide_web">
+      <origin xyz="0.24 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.08 0.1" />
+        </geometry>
+      <material name="matte_olive_drab">
+        <color rgba="0.22 0.27 0.19 1" />
+        </material>
+      </visual>
+    <visual name="barrel">
+      <origin xyz="0.56 0 0.025" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.82" />
+        </geometry>
+      <material name="dark_phosphate">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="muzzle">
+      <origin xyz="0.99 0 0.025" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.13" />
+        </geometry>
+      <material name="flat_black_rubber">
+        <color rgba="0.012 0.012 0.01 1" />
+        </material>
+      </visual>
+    <visual name="guard_hinge_mount">
+      <origin xyz="0.18 -0.18 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.14 0.06" />
+        </geometry>
+      <material name="matte_olive_drab">
+        <color rgba="0.22 0.27 0.19 1" />
+        </material>
+      </visual>
+    <collision name="trunnion_tube">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.6" />
+        </geometry>
+      </collision>
+    <collision name="cradle_block">
+      <origin xyz="0.13 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.22 0.14" />
+        </geometry>
+      </collision>
+    <collision name="lower_slide">
+      <origin xyz="0.39 0 -0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.12 0.085" />
+        </geometry>
+      </collision>
+    <collision name="slide_web">
+      <origin xyz="0.24 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.08 0.1" />
+        </geometry>
+      </collision>
+    <collision name="barrel">
+      <origin xyz="0.56 0 0.025" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.82" />
+        </geometry>
+      </collision>
+    <collision name="muzzle">
+      <origin xyz="0.99 0 0.025" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.13" />
+        </geometry>
+      </collision>
+    <collision name="guard_hinge_mount">
+      <origin xyz="0.18 -0.18 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.14 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="guard_arm">
+    <visual name="hinge_barrel">
+      <geometry>
+        <cylinder radius="0.03" length="0.11" />
+        </geometry>
+      <material name="worn_bronze_bearing">
+        <color rgba="0.45 0.35 0.16 1" />
+        </material>
+      </visual>
+    <visual name="arm_bar">
+      <origin xyz="0.322 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.59 0.035 0.04" />
+        </geometry>
+      <material name="matte_olive_drab">
+        <color rgba="0.22 0.27 0.19 1" />
+        </material>
+      </visual>
+    <visual name="rounded_tip">
+      <origin xyz="0.625 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.06" />
+        </geometry>
+      <material name="flat_black_rubber">
+        <color rgba="0.012 0.012 0.01 1" />
+        </material>
+      </visual>
+    <collision name="hinge_barrel">
+      <geometry>
+        <cylinder radius="0.03" length="0.11" />
+        </geometry>
+      </collision>
+    <collision name="arm_bar">
+      <origin xyz="0.322 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.59 0.035 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rounded_tip">
+      <origin xyz="0.625 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="yaw" type="continuous">
+    <origin xyz="0 0 0.29" rpy="0 0 0" />
+    <parent link="yaw_base" />
+    <child link="turret" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="1" />
+    </joint>
+  <joint name="pitch" type="revolute">
+    <origin xyz="0.54 0 0.28" rpy="0 0 0" />
+    <parent link="turret" />
+    <child link="cradle" />
+    <axis xyz="0 -1 0" />
+    <limit effort="85" velocity="1.2" lower="-0.35" upper="0.55" />
+    </joint>
+  <joint name="guard_hinge" type="revolute">
+    <origin xyz="0.18 -0.28 0.03" rpy="0 0 0" />
+    <parent link="cradle" />
+    <child link="guard_arm" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="2.2" lower="0" upper="1.35" />
+    </joint>
+  </robot>

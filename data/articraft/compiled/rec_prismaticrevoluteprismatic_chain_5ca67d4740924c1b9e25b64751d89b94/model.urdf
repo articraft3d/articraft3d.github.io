@@ -1,0 +1,451 @@
+<robot name="prp_inspection_rig">
+  <link name="base">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.96 0.34 0.055" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rail_0">
+      <origin xyz="0 -0.105 0.0765" rpy="0 0 0" />
+      <geometry>
+        <box size="0.84 0.032 0.045" />
+        </geometry>
+      <material name="hardened_steel">
+        <color rgba="0.62 0.64 0.66 1" />
+        </material>
+      </visual>
+    <visual name="rail_1">
+      <origin xyz="0 0.105 0.0765" rpy="0 0 0" />
+      <geometry>
+        <box size="0.84 0.032 0.045" />
+        </geometry>
+      <material name="hardened_steel">
+        <color rgba="0.62 0.64 0.66 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_0">
+      <origin xyz="-0.44 0 0.0865" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.29 0.065" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_1">
+      <origin xyz="0.44 0 0.0865" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.29 0.065" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="scale_strip">
+      <origin xyz="0 -0.172 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.01 0.006" />
+        </geometry>
+      <material name="orange_markings">
+        <color rgba="1 0.48 0.08 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.96 0.34 0.055" />
+        </geometry>
+      </collision>
+    <collision name="rail_0">
+      <origin xyz="0 -0.105 0.0765" rpy="0 0 0" />
+      <geometry>
+        <box size="0.84 0.032 0.045" />
+        </geometry>
+      </collision>
+    <collision name="rail_1">
+      <origin xyz="0 0.105 0.0765" rpy="0 0 0" />
+      <geometry>
+        <box size="0.84 0.032 0.045" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_0">
+      <origin xyz="-0.44 0 0.0865" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.29 0.065" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_1">
+      <origin xyz="0.44 0 0.0865" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.29 0.065" />
+        </geometry>
+      </collision>
+    <collision name="scale_strip">
+      <origin xyz="0 -0.172 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.01 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carriage">
+    <visual name="table">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.255 0.035" />
+        </geometry>
+      <material name="blue_anodized">
+        <color rgba="0.04 0.22 0.62 1" />
+        </material>
+      </visual>
+    <visual name="side_guard_0">
+      <origin xyz="0 -0.133 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.018 0.055" />
+        </geometry>
+      <material name="blue_anodized">
+        <color rgba="0.04 0.22 0.62 1" />
+        </material>
+      </visual>
+    <visual name="side_guard_1">
+      <origin xyz="0 0.133 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.018 0.055" />
+        </geometry>
+      <material name="blue_anodized">
+        <color rgba="0.04 0.22 0.62 1" />
+        </material>
+      </visual>
+    <visual name="pedestal">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.105 0.07" />
+        </geometry>
+      <material name="blue_anodized">
+        <color rgba="0.04 0.22 0.62 1" />
+        </material>
+      </visual>
+    <visual name="hinge_lug_0">
+      <origin xyz="0 -0.075 0.092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.024 0.116" />
+        </geometry>
+      <material name="blue_anodized">
+        <color rgba="0.04 0.22 0.62 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_0">
+      <origin xyz="0 -0.075 0.145" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.043" />
+        </geometry>
+      <material name="brass_bearing">
+        <color rgba="0.8 0.58 0.24 1" />
+        </material>
+      </visual>
+    <visual name="hinge_lug_1">
+      <origin xyz="0 0.075 0.092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.024 0.116" />
+        </geometry>
+      <material name="blue_anodized">
+        <color rgba="0.04 0.22 0.62 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_1">
+      <origin xyz="0 0.075 0.145" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.043" />
+        </geometry>
+      <material name="brass_bearing">
+        <color rgba="0.8 0.58 0.24 1" />
+        </material>
+      </visual>
+    <visual name="hinge_pin">
+      <origin xyz="0 0 0.145" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.225" />
+        </geometry>
+      <material name="hardened_steel">
+        <color rgba="0.62 0.64 0.66 1" />
+        </material>
+      </visual>
+    <collision name="table">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.255 0.035" />
+        </geometry>
+      </collision>
+    <collision name="side_guard_0">
+      <origin xyz="0 -0.133 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.018 0.055" />
+        </geometry>
+      </collision>
+    <collision name="side_guard_1">
+      <origin xyz="0 0.133 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.018 0.055" />
+        </geometry>
+      </collision>
+    <collision name="pedestal">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.105 0.07" />
+        </geometry>
+      </collision>
+    <collision name="hinge_lug_0">
+      <origin xyz="0 -0.075 0.092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.024 0.116" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_0">
+      <origin xyz="0 -0.075 0.145" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.043" />
+        </geometry>
+      </collision>
+    <collision name="hinge_lug_1">
+      <origin xyz="0 0.075 0.092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.024 0.116" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_1">
+      <origin xyz="0 0.075 0.145" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.043" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pin">
+      <origin xyz="0 0 0.145" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.225" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pivot_frame">
+    <visual name="central_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.078" />
+        </geometry>
+      <material name="brass_bearing">
+        <color rgba="0.8 0.58 0.24 1" />
+        </material>
+      </visual>
+    <visual name="hub_web">
+      <origin xyz="0.026 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.088 0.016" />
+        </geometry>
+      <material name="blue_anodized">
+        <color rgba="0.04 0.22 0.62 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_0">
+      <origin xyz="0.17 -0.04 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.018 0.03" />
+        </geometry>
+      <material name="blue_anodized">
+        <color rgba="0.04 0.22 0.62 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="0.17 0.04 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.018 0.03" />
+        </geometry>
+      <material name="blue_anodized">
+        <color rgba="0.04 0.22 0.62 1" />
+        </material>
+      </visual>
+    <visual name="cross_brace">
+      <origin xyz="0.205 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.09 0.034" />
+        </geometry>
+      <material name="blue_anodized">
+        <color rgba="0.04 0.22 0.62 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_top">
+      <origin xyz="0.38 0 0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.09 0.018" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_bottom">
+      <origin xyz="0.38 0 -0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.09 0.018" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_side_0">
+      <origin xyz="0.38 -0.045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.018 0.078" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_side_1">
+      <origin xyz="0.38 0.045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.018 0.078" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="central_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.078" />
+        </geometry>
+      </collision>
+    <collision name="hub_web">
+      <origin xyz="0.026 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.088 0.016" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_0">
+      <origin xyz="0.17 -0.04 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.018 0.03" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_1">
+      <origin xyz="0.17 0.04 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.018 0.03" />
+        </geometry>
+      </collision>
+    <collision name="cross_brace">
+      <origin xyz="0.205 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.09 0.034" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_top">
+      <origin xyz="0.38 0 0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.09 0.018" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_bottom">
+      <origin xyz="0.38 0 -0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.09 0.018" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_side_0">
+      <origin xyz="0.38 -0.045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.018 0.078" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_side_1">
+      <origin xyz="0.38 0.045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.018 0.078" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="nose">
+    <visual name="slide_bar">
+      <origin xyz="0.145 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.028 0.06" />
+        </geometry>
+      <material name="hardened_steel">
+        <color rgba="0.62 0.64 0.66 1" />
+        </material>
+      </visual>
+    <visual name="front_collar">
+      <origin xyz="0.33 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.035" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="probe_tip">
+      <origin xyz="0.372 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.055" />
+        </geometry>
+      <material name="hardened_steel">
+        <color rgba="0.62 0.64 0.66 1" />
+        </material>
+      </visual>
+    <visual name="probe_lens">
+      <origin xyz="0.408 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.014" />
+        </geometry>
+      <material name="smoked_lens">
+        <color rgba="0.02 0.1 0.16 0.85" />
+        </material>
+      </visual>
+    <collision name="slide_bar">
+      <origin xyz="0.145 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.028 0.06" />
+        </geometry>
+      </collision>
+    <collision name="front_collar">
+      <origin xyz="0.33 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="probe_tip">
+      <origin xyz="0.372 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="probe_lens">
+      <origin xyz="0.408 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_slide" type="prismatic">
+    <origin xyz="-0.3 0 0.099" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="90" velocity="0.35" lower="0" upper="0.5" />
+    </joint>
+  <joint name="hinge" type="revolute">
+    <origin xyz="0 0 0.145" rpy="0 0 0" />
+    <parent link="carriage" />
+    <child link="pivot_frame" />
+    <axis xyz="0 -1 0" />
+    <limit effort="28" velocity="1.2" lower="-0.45" upper="1.05" />
+    </joint>
+  <joint name="nose_slide" type="prismatic">
+    <origin xyz="0.31 0 0" rpy="0 0 0" />
+    <parent link="pivot_frame" />
+    <child link="nose" />
+    <axis xyz="1 0 0" />
+    <limit effort="22" velocity="0.22" lower="0" upper="0.14" />
+    </joint>
+  </robot>

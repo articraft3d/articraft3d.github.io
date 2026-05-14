@@ -1,0 +1,1012 @@
+<robot name="compact_robot_pinch_hand">
+  <material name="machined_aluminum">
+    <color rgba="0.72 0.76 0.77 1" />
+    </material>
+  <material name="dark_anodized">
+    <color rgba="0.07 0.08 0.09 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.58 0.6 0.62 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.015 0.014 0.013 1" />
+    </material>
+  <material name="saddle_insert">
+    <color rgba="0.18 0.2 0.22 1" />
+    </material>
+  <material name="warning_blue">
+    <color rgba="0.08 0.22 0.55 1" />
+    </material>
+  <link name="palm">
+    <visual name="palm_body">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.136 0.15 0.044" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="saddle_pad">
+      <origin xyz="-0.01 0 0.0455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.072 0.003" />
+        </geometry>
+      <material name="saddle_insert" />
+      </visual>
+    <visual name="rear_cover_line">
+      <origin xyz="-0.064 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.118 0.03" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="saddle_seam_0">
+      <origin xyz="-0.01 0.038 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.003 0.004" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="saddle_seam_1">
+      <origin xyz="-0.01 -0.038 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.003 0.004" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="palm_screw_0">
+      <origin xyz="-0.028 -0.055 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.002" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="palm_screw_1">
+      <origin xyz="-0.028 0.055 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.002" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="palm_body">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.136 0.15 0.044" />
+        </geometry>
+      </collision>
+    <collision name="saddle_pad">
+      <origin xyz="-0.01 0 0.0455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.072 0.003" />
+        </geometry>
+      </collision>
+    <collision name="rear_cover_line">
+      <origin xyz="-0.064 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.118 0.03" />
+        </geometry>
+      </collision>
+    <collision name="saddle_seam_0">
+      <origin xyz="-0.01 0.038 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.003 0.004" />
+        </geometry>
+      </collision>
+    <collision name="saddle_seam_1">
+      <origin xyz="-0.01 -0.038 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.003 0.004" />
+        </geometry>
+      </collision>
+    <collision name="palm_screw_0">
+      <origin xyz="-0.028 -0.055 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="palm_screw_1">
+      <origin xyz="-0.028 0.055 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="long_support">
+    <visual name="mount_block">
+      <origin xyz="-0.0155 0 -0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.038 0.038" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="side_cheek_0">
+      <origin xyz="-0.006 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="side_cheek_1">
+      <origin xyz="-0.006 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="upper_ear">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="lower_ear">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="root_stop">
+      <origin xyz="-0.019 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.026 0.006" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="cap_screw_0">
+      <origin xyz="-0.025 0.01 -0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.002" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="cap_screw_1">
+      <origin xyz="-0.025 -0.01 -0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.002" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="mount_block">
+      <origin xyz="-0.0155 0 -0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.038 0.038" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_0">
+      <origin xyz="-0.006 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_1">
+      <origin xyz="-0.006 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="upper_ear">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="lower_ear">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="root_stop">
+      <origin xyz="-0.019 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.026 0.006" />
+        </geometry>
+      </collision>
+    <collision name="cap_screw_0">
+      <origin xyz="-0.025 0.01 -0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="cap_screw_1">
+      <origin xyz="-0.025 -0.01 -0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="hook_support">
+    <visual name="mount_block">
+      <origin xyz="-0.0155 0 -0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.038 0.038" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="side_cheek_0">
+      <origin xyz="-0.006 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="side_cheek_1">
+      <origin xyz="-0.006 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="upper_ear">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="lower_ear">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="root_stop">
+      <origin xyz="-0.019 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.026 0.006" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="cap_screw_0">
+      <origin xyz="-0.025 0.01 -0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.002" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="cap_screw_1">
+      <origin xyz="-0.025 -0.01 -0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.002" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="mount_block">
+      <origin xyz="-0.0155 0 -0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.038 0.038" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_0">
+      <origin xyz="-0.006 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_1">
+      <origin xyz="-0.006 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="upper_ear">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="lower_ear">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="root_stop">
+      <origin xyz="-0.019 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.026 0.006" />
+        </geometry>
+      </collision>
+    <collision name="cap_screw_0">
+      <origin xyz="-0.025 0.01 -0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="cap_screw_1">
+      <origin xyz="-0.025 -0.01 -0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="long_proximal">
+    <visual name="proximal_barrel">
+      <geometry>
+        <cylinder radius="0.011" length="0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="tapered_web">
+      <origin xyz="0.0335 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.047 0.014 0.011" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="clevis_bridge">
+      <origin xyz="0.054 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.006" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="distal_cheek_0">
+      <origin xyz="0.069 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="distal_cheek_1">
+      <origin xyz="0.069 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="upper_ear">
+      <origin xyz="0.075 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="lower_ear">
+      <origin xyz="0.075 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="proximal_barrel">
+      <geometry>
+        <cylinder radius="0.011" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="tapered_web">
+      <origin xyz="0.0335 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.047 0.014 0.011" />
+        </geometry>
+      </collision>
+    <collision name="clevis_bridge">
+      <origin xyz="0.054 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.006" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_0">
+      <origin xyz="0.069 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_1">
+      <origin xyz="0.069 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="upper_ear">
+      <origin xyz="0.075 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="lower_ear">
+      <origin xyz="0.075 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="long_middle">
+    <visual name="proximal_barrel">
+      <geometry>
+        <cylinder radius="0.011" length="0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="tapered_web">
+      <origin xyz="0.026 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.014 0.011" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="clevis_bridge">
+      <origin xyz="0.039 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.006" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="distal_cheek_0">
+      <origin xyz="0.054 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="distal_cheek_1">
+      <origin xyz="0.054 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="upper_ear">
+      <origin xyz="0.06 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="lower_ear">
+      <origin xyz="0.06 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="proximal_barrel">
+      <geometry>
+        <cylinder radius="0.011" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="tapered_web">
+      <origin xyz="0.026 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.014 0.011" />
+        </geometry>
+      </collision>
+    <collision name="clevis_bridge">
+      <origin xyz="0.039 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.006" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_0">
+      <origin xyz="0.054 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_1">
+      <origin xyz="0.054 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="upper_ear">
+      <origin xyz="0.06 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="lower_ear">
+      <origin xyz="0.06 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="long_tip">
+    <visual name="proximal_barrel">
+      <geometry>
+        <cylinder radius="0.011" length="0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="tapered_web">
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.012 0.011" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="clevis_bridge">
+      <origin xyz="0.027 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.006" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="distal_cheek_0">
+      <origin xyz="0.042 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="distal_cheek_1">
+      <origin xyz="0.042 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="upper_ear">
+      <origin xyz="0.048 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="lower_ear">
+      <origin xyz="0.048 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="fingertip_pad">
+      <origin xyz="0.066 -0.004 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.018 0.012" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="pad_screw_0">
+      <origin xyz="0.06 -0.004 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.002" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="pad_screw_1">
+      <origin xyz="0.072 -0.004 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.002" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="proximal_barrel">
+      <geometry>
+        <cylinder radius="0.011" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="tapered_web">
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.012 0.011" />
+        </geometry>
+      </collision>
+    <collision name="clevis_bridge">
+      <origin xyz="0.027 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.006" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_0">
+      <origin xyz="0.042 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_1">
+      <origin xyz="0.042 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="upper_ear">
+      <origin xyz="0.048 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="lower_ear">
+      <origin xyz="0.048 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="fingertip_pad">
+      <origin xyz="0.066 -0.004 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.018 0.012" />
+        </geometry>
+      </collision>
+    <collision name="pad_screw_0">
+      <origin xyz="0.06 -0.004 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="pad_screw_1">
+      <origin xyz="0.072 -0.004 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="hook_proximal">
+    <visual name="proximal_barrel">
+      <geometry>
+        <cylinder radius="0.011" length="0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="tapered_web">
+      <origin xyz="0.025 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.013 0.011" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="clevis_bridge">
+      <origin xyz="0.037 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.006" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="distal_cheek_0">
+      <origin xyz="0.052 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="distal_cheek_1">
+      <origin xyz="0.052 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="upper_ear">
+      <origin xyz="0.058 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="lower_ear">
+      <origin xyz="0.058 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="proximal_barrel">
+      <geometry>
+        <cylinder radius="0.011" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="tapered_web">
+      <origin xyz="0.025 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.013 0.011" />
+        </geometry>
+      </collision>
+    <collision name="clevis_bridge">
+      <origin xyz="0.037 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.006" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_0">
+      <origin xyz="0.052 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_1">
+      <origin xyz="0.052 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="upper_ear">
+      <origin xyz="0.058 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="lower_ear">
+      <origin xyz="0.058 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="hook_middle">
+    <visual name="proximal_barrel">
+      <geometry>
+        <cylinder radius="0.011" length="0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="tapered_web">
+      <origin xyz="0.019 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.011" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="clevis_bridge">
+      <origin xyz="0.025 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.006" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="distal_cheek_0">
+      <origin xyz="0.04 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="distal_cheek_1">
+      <origin xyz="0.04 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="upper_ear">
+      <origin xyz="0.046 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="lower_ear">
+      <origin xyz="0.046 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="proximal_barrel">
+      <geometry>
+        <cylinder radius="0.011" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="tapered_web">
+      <origin xyz="0.019 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.011" />
+        </geometry>
+      </collision>
+    <collision name="clevis_bridge">
+      <origin xyz="0.025 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.006" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_0">
+      <origin xyz="0.04 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_1">
+      <origin xyz="0.04 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="upper_ear">
+      <origin xyz="0.046 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="lower_ear">
+      <origin xyz="0.046 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="hook_tip">
+    <visual name="proximal_barrel">
+      <geometry>
+        <cylinder radius="0.011" length="0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="tapered_web">
+      <origin xyz="0.012 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.011 0.011" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="clevis_bridge">
+      <origin xyz="0.011 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.006" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="distal_cheek_0">
+      <origin xyz="0.026 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="distal_cheek_1">
+      <origin xyz="0.026 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="upper_ear">
+      <origin xyz="0.032 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="lower_ear">
+      <origin xyz="0.032 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="hook_pad">
+      <origin xyz="0.042 0.01 0" rpy="0 0 0.45" />
+      <geometry>
+        <box size="0.026 0.018 0.012" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="hook_lip">
+      <origin xyz="0.032 0.024 0" rpy="0 0 1.05" />
+      <geometry>
+        <box size="0.016 0.02 0.012" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="pad_screw_0">
+      <origin xyz="0.038 0.012 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.002" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="pad_screw_1">
+      <origin xyz="0.048 0.016 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.002" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="proximal_barrel">
+      <geometry>
+        <cylinder radius="0.011" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="tapered_web">
+      <origin xyz="0.012 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.011 0.011" />
+        </geometry>
+      </collision>
+    <collision name="clevis_bridge">
+      <origin xyz="0.011 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.006" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_0">
+      <origin xyz="0.026 0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_1">
+      <origin xyz="0.026 -0.0155 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      </collision>
+    <collision name="upper_ear">
+      <origin xyz="0.032 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="lower_ear">
+      <origin xyz="0.032 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="hook_pad">
+      <origin xyz="0.042 0.01 0" rpy="0 0 0.45" />
+      <geometry>
+        <box size="0.026 0.018 0.012" />
+        </geometry>
+      </collision>
+    <collision name="hook_lip">
+      <origin xyz="0.032 0.024 0" rpy="0 0 1.05" />
+      <geometry>
+        <box size="0.016 0.02 0.012" />
+        </geometry>
+      </collision>
+    <collision name="pad_screw_0">
+      <origin xyz="0.038 0.012 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="pad_screw_1">
+      <origin xyz="0.048 0.016 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="palm_to_long_support" type="fixed">
+    <origin xyz="0.092 0.05 0.07" rpy="0 0 0" />
+    <parent link="palm" />
+    <child link="long_support" />
+    </joint>
+  <joint name="palm_to_hook_support" type="fixed">
+    <origin xyz="0.092 -0.05 0.07" rpy="0 0 0" />
+    <parent link="palm" />
+    <child link="hook_support" />
+    </joint>
+  <joint name="long_root" type="revolute">
+    <parent link="long_support" />
+    <child link="long_proximal" />
+    <axis xyz="0 0 -1" />
+    <limit effort="18" velocity="2.5" lower="0" upper="0.28" />
+    </joint>
+  <joint name="long_middle_joint" type="revolute">
+    <origin xyz="0.075 0 0" rpy="0 0 0" />
+    <parent link="long_proximal" />
+    <child link="long_middle" />
+    <axis xyz="0 0 -1" />
+    <limit effort="12" velocity="2.7" lower="0" upper="0.23" />
+    </joint>
+  <joint name="long_tip_joint" type="revolute">
+    <origin xyz="0.06 0 0" rpy="0 0 0" />
+    <parent link="long_middle" />
+    <child link="long_tip" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="3" lower="0" upper="0.18" />
+    </joint>
+  <joint name="hook_root" type="revolute">
+    <parent link="hook_support" />
+    <child link="hook_proximal" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="2.5" lower="0" upper="0.35" />
+    </joint>
+  <joint name="hook_middle_joint" type="revolute">
+    <origin xyz="0.058 0 0" rpy="0 0 0" />
+    <parent link="hook_proximal" />
+    <child link="hook_middle" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="2.7" lower="0" upper="0.35" />
+    </joint>
+  <joint name="hook_tip_joint" type="revolute">
+    <origin xyz="0.046 0 0" rpy="0 0 0" />
+    <parent link="hook_middle" />
+    <child link="hook_tip" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="3" lower="0" upper="0.45" />
+    </joint>
+  </robot>

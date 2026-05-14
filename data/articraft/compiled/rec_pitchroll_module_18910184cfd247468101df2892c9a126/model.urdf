@@ -1,0 +1,710 @@
+<robot name="compact_two_axis_instrument_head">
+  <material name="dark_anodized">
+    <color rgba="0.07 0.08 0.09 1" />
+    </material>
+  <material name="bead_blasted">
+    <color rgba="0.66 0.68 0.7 1" />
+    </material>
+  <material name="satin_black">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="bearing_steel">
+    <color rgba="0.36 0.38 0.4 1" />
+    </material>
+  <material name="cover_gray">
+    <color rgba="0.24 0.25 0.27 1" />
+    </material>
+  <material name="warning_orange">
+    <color rgba="0.95 0.42 0.09 1" />
+    </material>
+  <link name="pedestal">
+    <inertial>
+      <origin xyz="0 0 0.365" rpy="0 0 0" />
+      <mass value="5.8" />
+      <inertia ixx="0.290242" ixy="0" ixz="0" iyy="0.323737" iyz="0" izz="0.0988417" />
+      </inertial>
+    <visual name="round_base">
+      <origin xyz="0 0 0.021" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.042" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="short_pedestal">
+      <origin xyz="0 0 0.224" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.365" />
+        </geometry>
+      <material name="bead_blasted">
+        <color rgba="0.66 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="low_crosshead">
+      <origin xyz="0 0 0.408" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.095 0.04" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_pillar">
+      <origin xyz="0.19 0 0.4515" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.094 0.047" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="front_roll_bearing">
+      <origin xyz="0.19 0 0.675" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_roll_bearing.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_cover">
+      <origin xyz="0.221 0 0.675" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_bearing_cover.obj" />
+        </geometry>
+      <material name="cover_gray">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="rear_bearing_pillar">
+      <origin xyz="-0.19 0 0.4515" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.094 0.047" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="rear_roll_bearing">
+      <origin xyz="-0.19 0 0.675" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_roll_bearing.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="rear_bearing_cover">
+      <origin xyz="-0.221 0 0.675" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_bearing_cover.obj" />
+        </geometry>
+      <material name="cover_gray">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="service_cover">
+      <origin xyz="0 0.055 0.355" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.016 0.04" />
+        </geometry>
+      <material name="cover_gray">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="index_mark">
+      <origin xyz="0.07 0.057 0.374" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.018 0.018" />
+        </geometry>
+      <material name="warning_orange">
+        <color rgba="0.95 0.42 0.09 1" />
+        </material>
+      </visual>
+    <collision name="round_base">
+      <origin xyz="0 0 0.021" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.042" />
+        </geometry>
+      </collision>
+    <collision name="short_pedestal">
+      <origin xyz="0 0 0.224" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.365" />
+        </geometry>
+      </collision>
+    <collision name="low_crosshead">
+      <origin xyz="0 0 0.408" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.095 0.04" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_pillar">
+      <origin xyz="0.19 0 0.4515" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.094 0.047" />
+        </geometry>
+      </collision>
+    <collision name="front_roll_bearing">
+      <origin xyz="0.19 0 0.675" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_roll_bearing.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_cover">
+      <origin xyz="0.221 0 0.675" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_bearing_cover.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_bearing_pillar">
+      <origin xyz="-0.19 0 0.4515" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.094 0.047" />
+        </geometry>
+      </collision>
+    <collision name="rear_roll_bearing">
+      <origin xyz="-0.19 0 0.675" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_roll_bearing.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_bearing_cover">
+      <origin xyz="-0.221 0 0.675" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_bearing_cover.obj" />
+        </geometry>
+      </collision>
+    <collision name="service_cover">
+      <origin xyz="0 0.055 0.355" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.016 0.04" />
+        </geometry>
+      </collision>
+    <collision name="index_mark">
+      <origin xyz="0.07 0.057 0.374" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.018 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="roll_ring">
+    <inertial>
+      <mass value="2.4" />
+      <inertia ixx="0.045635" ixy="0" ixz="0" iyy="0.045635" iyz="0" izz="0.06627" />
+      </inertial>
+    <visual name="machined_ring">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_ring_annulus.obj" />
+        </geometry>
+      <material name="bead_blasted">
+        <color rgba="0.66 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="front_roll_hub">
+      <origin xyz="0.047 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_hub_annulus.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="front_roll_cap">
+      <origin xyz="0.072 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_cap_annulus.obj" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="front_roll_journal">
+      <origin xyz="0.123 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_journal_annulus.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="rear_roll_hub">
+      <origin xyz="-0.047 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_hub_annulus.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="rear_roll_cap">
+      <origin xyz="-0.072 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_cap_annulus.obj" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="rear_roll_journal">
+      <origin xyz="-0.123 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_journal_annulus.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="side_0_pitch_boss">
+      <origin xyz="0 0.147 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.058" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="side_0_trunnion_cap">
+      <origin xyz="0 0.183 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.063" length="0.014" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="side_1_pitch_boss">
+      <origin xyz="0 -0.147 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.058" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="side_1_trunnion_cap">
+      <origin xyz="0 -0.183 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.063" length="0.014" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="upper_face_cover">
+      <origin xyz="0.038 0 0.166" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.086 0.028" />
+        </geometry>
+      <material name="cover_gray">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="lower_face_cover">
+      <origin xyz="0.038 0 -0.166" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.086 0.028" />
+        </geometry>
+      <material name="cover_gray">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="side_0_roll_stop">
+      <origin xyz="-0.038 0.09 -0.168" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.038 0.018" />
+        </geometry>
+      <material name="warning_orange">
+        <color rgba="0.95 0.42 0.09 1" />
+        </material>
+      </visual>
+    <visual name="side_1_roll_stop">
+      <origin xyz="-0.038 -0.09 -0.168" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.038 0.018" />
+        </geometry>
+      <material name="warning_orange">
+        <color rgba="0.95 0.42 0.09 1" />
+        </material>
+      </visual>
+    <collision name="machined_ring">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_ring_annulus.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_roll_hub">
+      <origin xyz="0.047 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_hub_annulus.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_roll_cap">
+      <origin xyz="0.072 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_cap_annulus.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_roll_journal">
+      <origin xyz="0.123 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_journal_annulus.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_roll_hub">
+      <origin xyz="-0.047 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_hub_annulus.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_roll_cap">
+      <origin xyz="-0.072 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_cap_annulus.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_roll_journal">
+      <origin xyz="-0.123 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_journal_annulus.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_0_pitch_boss">
+      <origin xyz="0 0.147 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="side_0_trunnion_cap">
+      <origin xyz="0 0.183 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.063" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="side_1_pitch_boss">
+      <origin xyz="0 -0.147 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="side_1_trunnion_cap">
+      <origin xyz="0 -0.183 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.063" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="upper_face_cover">
+      <origin xyz="0.038 0 0.166" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.086 0.028" />
+        </geometry>
+      </collision>
+    <collision name="lower_face_cover">
+      <origin xyz="0.038 0 -0.166" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.086 0.028" />
+        </geometry>
+      </collision>
+    <collision name="side_0_roll_stop">
+      <origin xyz="-0.038 0.09 -0.168" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.038 0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_1_roll_stop">
+      <origin xyz="-0.038 -0.09 -0.168" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.038 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pitch_cradle">
+    <inertial>
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <mass value="1.15" />
+      <inertia ixx="0.0101895" ixy="0" ixz="0" iyy="0.00472698" iyz="0" izz="0.00799729" />
+      </inertial>
+    <visual name="pitch_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.23" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="side_0_shaft_cap">
+      <origin xyz="0 0.128 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.026" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="side_0_cheek">
+      <origin xyz="0.02 0.09344 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.016 0.158" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="side_1_shaft_cap">
+      <origin xyz="0 -0.128 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.026" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="side_1_cheek">
+      <origin xyz="0.02 -0.09344 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.016 0.158" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="upper_bridge">
+      <origin xyz="0.022 0 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.21 0.02" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="lower_bridge">
+      <origin xyz="0.022 0 -0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.21 0.02" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="tool_mount">
+      <origin xyz="0.042 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.18 0.09" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="cable_cover">
+      <origin xyz="-0.018 0 -0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.118 0.03" />
+        </geometry>
+      <material name="cover_gray">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="pitch_stop_flag">
+      <origin xyz="-0.01 0 0.099" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.025 0.032" />
+        </geometry>
+      <material name="warning_orange">
+        <color rgba="0.95 0.42 0.09 1" />
+        </material>
+      </visual>
+    <collision name="pitch_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.23" />
+        </geometry>
+      </collision>
+    <collision name="side_0_shaft_cap">
+      <origin xyz="0 0.128 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="side_0_cheek">
+      <origin xyz="0.02 0.09344 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.016 0.158" />
+        </geometry>
+      </collision>
+    <collision name="side_1_shaft_cap">
+      <origin xyz="0 -0.128 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="side_1_cheek">
+      <origin xyz="0.02 -0.09344 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.016 0.158" />
+        </geometry>
+      </collision>
+    <collision name="upper_bridge">
+      <origin xyz="0.022 0 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.21 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lower_bridge">
+      <origin xyz="0.022 0 -0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.21 0.02" />
+        </geometry>
+      </collision>
+    <collision name="tool_mount">
+      <origin xyz="0.042 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.18 0.09" />
+        </geometry>
+      </collision>
+    <collision name="cable_cover">
+      <origin xyz="-0.018 0 -0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.118 0.03" />
+        </geometry>
+      </collision>
+    <collision name="pitch_stop_flag">
+      <origin xyz="-0.01 0 0.099" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.025 0.032" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tool_plate">
+    <inertial>
+      <origin xyz="0.065 0 0" rpy="0 0 0" />
+      <mass value="0.45" />
+      <inertia ixx="0.00125719" ixy="0" ixz="0" iyy="0.000548437" iyz="0" izz="0.00097875" />
+      </inertial>
+    <visual name="standoff_n_n">
+      <origin xyz="0.045 -0.048 -0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.09" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="standoff_n_p">
+      <origin xyz="0.045 -0.048 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.09" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="standoff_p_n">
+      <origin xyz="0.045 0.048 -0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.09" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="standoff_p_p">
+      <origin xyz="0.045 0.048 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.09" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="tool_face">
+      <origin xyz="0.067 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.138 0.094" />
+        </geometry>
+      <material name="bead_blasted">
+        <color rgba="0.66 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="sensor_slot">
+      <origin xyz="0.076 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.08 0.012" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="tool_boss">
+      <origin xyz="0.0785 0 -0.018" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.009" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="standoff_n_n">
+      <origin xyz="0.045 -0.048 -0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="standoff_n_p">
+      <origin xyz="0.045 -0.048 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="standoff_p_n">
+      <origin xyz="0.045 0.048 -0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="standoff_p_p">
+      <origin xyz="0.045 0.048 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="tool_face">
+      <origin xyz="0.067 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.138 0.094" />
+        </geometry>
+      </collision>
+    <collision name="sensor_slot">
+      <origin xyz="0.076 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.08 0.012" />
+        </geometry>
+      </collision>
+    <collision name="tool_boss">
+      <origin xyz="0.0785 0 -0.018" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.009" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="roll_axis" type="revolute">
+    <origin xyz="0 0 0.675" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="roll_ring" />
+    <axis xyz="1 0 0" />
+    <limit effort="22" velocity="1.2" lower="-1.22173" upper="1.22173" />
+    </joint>
+  <joint name="pitch_axis" type="revolute">
+    <parent link="roll_ring" />
+    <child link="pitch_cradle" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="1.4" lower="-0.523599" upper="0.523599" />
+    </joint>
+  <joint name="plate_mount" type="fixed">
+    <origin xyz="0.05 0 0" rpy="0 0 0" />
+    <parent link="pitch_cradle" />
+    <child link="tool_plate" />
+    </joint>
+  </robot>

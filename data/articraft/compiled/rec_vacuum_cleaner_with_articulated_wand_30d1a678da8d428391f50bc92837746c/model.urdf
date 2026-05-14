@@ -1,0 +1,694 @@
+<robot name="field_service_vacuum">
+  <material name="powder_coated_yellow">
+    <color rgba="0.95 0.68 0.08 1" />
+    </material>
+  <material name="dark_composite">
+    <color rgba="0.08 0.09 0.09 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.01 0.01 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.62 0.62 0.58 1" />
+    </material>
+  <material name="service_blue_gasket">
+    <color rgba="0.05 0.25 0.55 1" />
+    </material>
+  <material name="red_switch">
+    <color rgba="0.75 0.04 0.02 1" />
+    </material>
+  <link name="body">
+    <visual name="skid_chassis">
+      <origin xyz="-0.1 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.42 0.08" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="tank_shell">
+      <origin xyz="-0.12 0 0.27" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.19" length="0.58" />
+        </geometry>
+      <material name="powder_coated_yellow">
+        <color rgba="0.95 0.68 0.08 1" />
+        </material>
+      </visual>
+    <visual name="tank_cradle">
+      <origin xyz="-0.12 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.26 0.08" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="service_deck">
+      <origin xyz="-0.2 0 0.515" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.32 0.045" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="deck_rib">
+      <origin xyz="-0.2 0 0.475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.26 0.09" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="intake_collar">
+      <origin xyz="0.23 0 0.32" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.12" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="wheel_0">
+      <origin xyz="-0.32 0.235 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.055" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="wheel_1">
+      <origin xyz="-0.32 -0.235 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.055" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="wheel_axle">
+      <origin xyz="-0.32 0 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.56" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_0">
+      <origin xyz="-0.08 0.19 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.08 0.025" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="-0.08 -0.19 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.08 0.025" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_mount">
+      <origin xyz="-0.43 0 0.5225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.2 0.03" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="switch_bezel">
+      <origin xyz="0.03 0 0.5375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.025" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <collision name="skid_chassis">
+      <origin xyz="-0.1 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.42 0.08" />
+        </geometry>
+      </collision>
+    <collision name="tank_shell">
+      <origin xyz="-0.12 0 0.27" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.19" length="0.58" />
+        </geometry>
+      </collision>
+    <collision name="tank_cradle">
+      <origin xyz="-0.12 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.26 0.08" />
+        </geometry>
+      </collision>
+    <collision name="service_deck">
+      <origin xyz="-0.2 0 0.515" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.32 0.045" />
+        </geometry>
+      </collision>
+    <collision name="deck_rib">
+      <origin xyz="-0.2 0 0.475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.26 0.09" />
+        </geometry>
+      </collision>
+    <collision name="intake_collar">
+      <origin xyz="0.23 0 0.32" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="wheel_0">
+      <origin xyz="-0.32 0.235 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="wheel_1">
+      <origin xyz="-0.32 -0.235 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="wheel_axle">
+      <origin xyz="-0.32 0 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.56" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_0">
+      <origin xyz="-0.08 0.19 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.08 0.025" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_1">
+      <origin xyz="-0.08 -0.19 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.08 0.025" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_mount">
+      <origin xyz="-0.43 0 0.5225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.2 0.03" />
+        </geometry>
+      </collision>
+    <collision name="switch_bezel">
+      <origin xyz="0.03 0 0.5375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.025" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="filter_door">
+    <visual name="door_panel">
+      <origin xyz="0.185 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.37 0.28 0.02" />
+        </geometry>
+      <material name="powder_coated_yellow">
+        <color rgba="0.95 0.68 0.08 1" />
+        </material>
+      </visual>
+    <visual name="seal_gasket">
+      <origin xyz="0.19 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.235 0.006" />
+        </geometry>
+      <material name="service_blue_gasket">
+        <color rgba="0.05 0.25 0.55 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0.018" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.34" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <origin xyz="0.185 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.37 0.28 0.02" />
+        </geometry>
+      </collision>
+    <collision name="seal_gasket">
+      <origin xyz="0.19 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.235 0.006" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0.018" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.34" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="power_switch">
+    <visual name="rocker_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.04 0.014" />
+        </geometry>
+      <material name="red_switch">
+        <color rgba="0.75 0.04 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rocker_pin">
+      <origin xyz="0 0 0.01" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.05" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <collision name="rocker_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.04 0.014" />
+        </geometry>
+      </collision>
+    <collision name="rocker_pin">
+      <origin xyz="0 0 0.01" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.05" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="latch_0">
+    <visual name="latch_boss">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="latch_paddle">
+      <origin xyz="0.041 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.024 0.012" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <collision name="latch_boss">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="latch_paddle">
+      <origin xyz="0.041 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.024 0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="latch_1">
+    <visual name="latch_boss">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="latch_paddle">
+      <origin xyz="0.041 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.024 0.012" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <collision name="latch_boss">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="latch_paddle">
+      <origin xyz="0.041 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.024 0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wand_base">
+    <visual name="base_tube">
+      <origin xyz="0.115 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.23" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="base_collar">
+      <origin xyz="0.025 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.05" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="elbow_collar">
+      <origin xyz="0.215 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.053" length="0.04" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="service_grip">
+      <origin xyz="0.11 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.055 0.045" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <collision name="base_tube">
+      <origin xyz="0.115 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.23" />
+        </geometry>
+      </collision>
+    <collision name="base_collar">
+      <origin xyz="0.025 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="elbow_collar">
+      <origin xyz="0.215 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.053" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="service_grip">
+      <origin xyz="0.11 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.055 0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wand_mid">
+    <visual name="outer_tube">
+      <origin xyz="0.23 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.46" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="mid_collar">
+      <origin xyz="0.025 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.05" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="outer_sleeve">
+      <origin xyz="0.52 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.14" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="lock_clamp">
+      <origin xyz="0.515 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.05 0.036" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <collision name="outer_tube">
+      <origin xyz="0.23 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.46" />
+        </geometry>
+      </collision>
+    <collision name="mid_collar">
+      <origin xyz="0.025 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="outer_sleeve">
+      <origin xyz="0.52 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.14" />
+        </geometry>
+      </collision>
+    <collision name="lock_clamp">
+      <origin xyz="0.515 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.05 0.036" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wand_tip">
+    <visual name="inner_tube">
+      <origin xyz="0.1225 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.895" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="lock_button">
+      <origin xyz="0.08 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.026 0.018" />
+        </geometry>
+      <material name="red_switch">
+        <color rgba="0.75 0.04 0.02 1" />
+        </material>
+      </visual>
+    <visual name="tip_end_collar">
+      <origin xyz="0.595 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.06" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <collision name="inner_tube">
+      <origin xyz="0.1225 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.895" />
+        </geometry>
+      </collision>
+    <collision name="lock_button">
+      <origin xyz="0.08 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.026 0.018" />
+        </geometry>
+      </collision>
+    <collision name="tip_end_collar">
+      <origin xyz="0.595 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="floor_nozzle">
+    <visual name="nozzle_housing">
+      <origin xyz="0.285 0 -0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.2 0.075" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="wear_plate">
+      <origin xyz="0.295 0 -0.113" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.145 0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="front_bumper">
+      <origin xyz="0.55 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.225 0.055" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_0">
+      <origin xyz="-0.015 0.092 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.018 0.12" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_1">
+      <origin xyz="-0.015 -0.092 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.018 0.12" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.235" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="brush_strip">
+      <origin xyz="0.295 0 -0.119" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.03 0.018" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <collision name="nozzle_housing">
+      <origin xyz="0.285 0 -0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.2 0.075" />
+        </geometry>
+      </collision>
+    <collision name="wear_plate">
+      <origin xyz="0.295 0 -0.113" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.145 0.014" />
+        </geometry>
+      </collision>
+    <collision name="front_bumper">
+      <origin xyz="0.55 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.225 0.055" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_0">
+      <origin xyz="-0.015 0.092 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.018 0.12" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_1">
+      <origin xyz="-0.015 -0.092 -0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.018 0.12" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.235" />
+        </geometry>
+      </collision>
+    <collision name="brush_strip">
+      <origin xyz="0.295 0 -0.119" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.03 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="filter_door_to_latch_0" type="revolute">
+    <origin xyz="0.25 -0.085 0.02" rpy="0 0 0" />
+    <parent link="filter_door" />
+    <child link="latch_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="4" lower="-0.7" upper="0.7" />
+    </joint>
+  <joint name="filter_door_to_latch_1" type="revolute">
+    <origin xyz="0.25 0.085 0.02" rpy="0 0 0" />
+    <parent link="filter_door" />
+    <child link="latch_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="4" lower="-0.7" upper="0.7" />
+    </joint>
+  <joint name="body_to_filter_door" type="revolute">
+    <origin xyz="-0.42 0 0.5375" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="filter_door" />
+    <axis xyz="0 -1 0" />
+    <limit effort="6" velocity="2" lower="0" upper="1.35" />
+    </joint>
+  <joint name="body_to_power_switch" type="revolute">
+    <origin xyz="0.03 0 0.55" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="power_switch" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="5" lower="-0.25" upper="0.25" />
+    </joint>
+  <joint name="body_to_wand_base" type="revolute">
+    <origin xyz="0.29 0 0.32" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="wand_base" />
+    <axis xyz="0 0 1" />
+    <limit effort="20" velocity="1.6" lower="-0.65" upper="0.65" />
+    </joint>
+  <joint name="wand_base_to_wand_mid" type="revolute">
+    <origin xyz="0.24 0 0" rpy="0 0.16 0" />
+    <parent link="wand_base" />
+    <child link="wand_mid" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="1.2" lower="-0.25" upper="0.55" />
+    </joint>
+  <joint name="wand_mid_to_wand_tip" type="prismatic">
+    <origin xyz="0.58 0 0" rpy="0 0 0" />
+    <parent link="wand_mid" />
+    <child link="wand_tip" />
+    <axis xyz="1 0 0" />
+    <limit effort="80" velocity="0.35" lower="0" upper="0.22" />
+    </joint>
+  <joint name="wand_tip_to_floor_nozzle" type="revolute">
+    <origin xyz="0.625 0 0" rpy="0 -0.16 0" />
+    <parent link="wand_tip" />
+    <child link="floor_nozzle" />
+    <axis xyz="0 1 0" />
+    <limit effort="16" velocity="1.5" lower="-0.55" upper="0.65" />
+    </joint>
+  </robot>

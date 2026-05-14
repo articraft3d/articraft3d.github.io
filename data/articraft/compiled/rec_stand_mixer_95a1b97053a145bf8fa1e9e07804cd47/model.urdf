@@ -1,0 +1,458 @@
+<robot name="pastel_stand_mixer">
+  <material name="pastel_mint">
+    <color rgba="0.62 0.84 0.78 1" />
+    </material>
+  <material name="mint_shadow">
+    <color rgba="0.46 0.68 0.63 1" />
+    </material>
+  <material name="cream">
+    <color rgba="0.93 0.88 0.78 1" />
+    </material>
+  <material name="stainless">
+    <color rgba="0.76 0.76 0.74 1" />
+    </material>
+  <material name="dark_slot">
+    <color rgba="0.16 0.18 0.18 1" />
+    </material>
+  <material name="warm_label">
+    <color rgba="0.96 0.78 0.62 1" />
+    </material>
+  <link name="base">
+    <visual name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/base_shell.obj" />
+        </geometry>
+      <material name="pastel_mint">
+        <color rgba="0.62 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rear_pedestal">
+      <geometry>
+        <mesh filename="assets/meshes/rear_pedestal.obj" />
+        </geometry>
+      <material name="pastel_mint">
+        <color rgba="0.62 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="slide_rail_0">
+      <origin xyz="0.055 0.127 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.018 0.01" />
+        </geometry>
+      <material name="mint_shadow">
+        <color rgba="0.46 0.68 0.63 1" />
+        </material>
+      </visual>
+    <visual name="slide_rail_1">
+      <origin xyz="0.055 -0.127 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.018 0.01" />
+        </geometry>
+      <material name="mint_shadow">
+        <color rgba="0.46 0.68 0.63 1" />
+        </material>
+      </visual>
+    <visual name="lock_slot">
+      <origin xyz="0.303 0.083 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.062 0.004" />
+        </geometry>
+      <material name="dark_slot">
+        <color rgba="0.16 0.18 0.18 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_0">
+      <origin xyz="-0.18 0.105 0.36" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.05" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.76 0.76 0.74 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_1">
+      <origin xyz="-0.18 -0.105 0.36" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.05" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.76 0.76 0.74 1" />
+        </material>
+      </visual>
+    <visual name="hinge_cap_0">
+      <origin xyz="-0.18 0.145 0.36" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.03" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.76 0.76 0.74 1" />
+        </material>
+      </visual>
+    <visual name="hinge_cap_1">
+      <origin xyz="-0.18 -0.145 0.36" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.03" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.76 0.76 0.74 1" />
+        </material>
+      </visual>
+    <collision name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/base_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_pedestal">
+      <geometry>
+        <mesh filename="assets/meshes/rear_pedestal.obj" />
+        </geometry>
+      </collision>
+    <collision name="slide_rail_0">
+      <origin xyz="0.055 0.127 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.018 0.01" />
+        </geometry>
+      </collision>
+    <collision name="slide_rail_1">
+      <origin xyz="0.055 -0.127 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.018 0.01" />
+        </geometry>
+      </collision>
+    <collision name="lock_slot">
+      <origin xyz="0.303 0.083 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.062 0.004" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_0">
+      <origin xyz="-0.18 0.105 0.36" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_1">
+      <origin xyz="-0.18 -0.105 0.36" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="hinge_cap_0">
+      <origin xyz="-0.18 0.145 0.36" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="hinge_cap_1">
+      <origin xyz="-0.18 -0.145 0.36" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bowl_carriage">
+    <visual name="carriage_plate">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.205 0.028" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.93 0.88 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bowl_lug_0">
+      <origin xyz="-0.08 0.088 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.03 0.034" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.93 0.88 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bowl_lug_1">
+      <origin xyz="-0.08 -0.088 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.03 0.034" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.93 0.88 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bowl_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bowl_shell.obj" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.76 0.76 0.74 1" />
+        </material>
+      </visual>
+    <visual name="rolled_rim">
+      <geometry>
+        <mesh filename="assets/meshes/rolled_rim.obj" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.76 0.76 0.74 1" />
+        </material>
+      </visual>
+    <collision name="carriage_plate">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.205 0.028" />
+        </geometry>
+      </collision>
+    <collision name="bowl_lug_0">
+      <origin xyz="-0.08 0.088 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.03 0.034" />
+        </geometry>
+      </collision>
+    <collision name="bowl_lug_1">
+      <origin xyz="-0.08 -0.088 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.03 0.034" />
+        </geometry>
+      </collision>
+    <collision name="bowl_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bowl_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="rolled_rim">
+      <geometry>
+        <mesh filename="assets/meshes/rolled_rim.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="head">
+    <visual name="head_body">
+      <geometry>
+        <mesh filename="assets/meshes/head_body.obj" />
+        </geometry>
+      <material name="pastel_mint">
+        <color rgba="0.62 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="hinge_neck">
+      <origin xyz="0.035 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.078 0.082" />
+        </geometry>
+      <material name="pastel_mint">
+        <color rgba="0.62 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.11" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.76 0.76 0.74 1" />
+        </material>
+      </visual>
+    <visual name="tool_socket">
+      <geometry>
+        <mesh filename="assets/meshes/tool_socket.obj" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.76 0.76 0.74 1" />
+        </material>
+      </visual>
+    <visual name="tool_boss">
+      <origin xyz="0.255 0 -0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.026" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.76 0.76 0.74 1" />
+        </material>
+      </visual>
+    <visual name="pastel_badge">
+      <origin xyz="0.205 -0.118 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.02 0.016" />
+        </geometry>
+      <material name="warm_label">
+        <color rgba="0.96 0.78 0.62 1" />
+        </material>
+      </visual>
+    <collision name="head_body">
+      <geometry>
+        <mesh filename="assets/meshes/head_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="hinge_neck">
+      <origin xyz="0.035 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.078 0.082" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.11" />
+        </geometry>
+      </collision>
+    <collision name="tool_socket">
+      <geometry>
+        <mesh filename="assets/meshes/tool_socket.obj" />
+        </geometry>
+      </collision>
+    <collision name="tool_boss">
+      <origin xyz="0.255 0 -0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="pastel_badge">
+      <origin xyz="0.205 -0.118 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.02 0.016" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="hook">
+    <visual name="hook_collar">
+      <origin xyz="0 0 -0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.032" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.76 0.76 0.74 1" />
+        </material>
+      </visual>
+    <visual name="hook_shaft">
+      <origin xyz="0 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.075" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.76 0.76 0.74 1" />
+        </material>
+      </visual>
+    <visual name="hook_tube">
+      <geometry>
+        <mesh filename="assets/meshes/hook_tube.obj" />
+        </geometry>
+      <material name="stainless">
+        <color rgba="0.76 0.76 0.74 1" />
+        </material>
+      </visual>
+    <collision name="hook_collar">
+      <origin xyz="0 0 -0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="hook_shaft">
+      <origin xyz="0 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.075" />
+        </geometry>
+      </collision>
+    <collision name="hook_tube">
+      <geometry>
+        <mesh filename="assets/meshes/hook_tube.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="speed_selector">
+    <visual name="selector_knob">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.025" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.93 0.88 0.78 1" />
+        </material>
+      </visual>
+    <visual name="selector_mark">
+      <origin xyz="0 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.034 0.004" />
+        </geometry>
+      <material name="warm_label">
+        <color rgba="0.96 0.78 0.62 1" />
+        </material>
+      </visual>
+    <collision name="selector_knob">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="selector_mark">
+      <origin xyz="0 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.034 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="head_lock">
+    <visual name="lock_tab">
+      <origin xyz="0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.048 0.02" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.93 0.88 0.78 1" />
+        </material>
+      </visual>
+    <visual name="lock_grip">
+      <origin xyz="0.019 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.018 0.026" />
+        </geometry>
+      <material name="warm_label">
+        <color rgba="0.96 0.78 0.62 1" />
+        </material>
+      </visual>
+    <collision name="lock_tab">
+      <origin xyz="0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.048 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lock_grip">
+      <origin xyz="0.019 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.018 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="bowl_slide" type="prismatic">
+    <origin xyz="0.06 0 0.08" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="bowl_carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="60" velocity="0.18" lower="-0.035" upper="0.035" />
+    </joint>
+  <joint name="head_tilt" type="revolute">
+    <origin xyz="-0.18 0 0.36" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="25" velocity="1.2" lower="0" upper="0.72" />
+    </joint>
+  <joint name="hook_spin" type="continuous">
+    <origin xyz="0.255 0 -0.045" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="hook" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="30" />
+    </joint>
+  <joint name="speed_select" type="revolute">
+    <origin xyz="0.2995 0 0.05" rpy="0 1.5708 0" />
+    <parent link="base" />
+    <child link="speed_selector" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.2" velocity="3" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="head_lock_slide" type="prismatic">
+    <origin xyz="0.3 0.083 0.04" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="head_lock" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="0.08" lower="-0.018" upper="0.018" />
+    </joint>
+  </robot>

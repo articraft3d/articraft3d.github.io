@@ -1,0 +1,173 @@
+<robot name="premium_screwcap_bottle">
+  <material name="frosted_glass">
+    <color rgba="0.82 0.88 0.86 0.54" />
+    </material>
+  <material name="satin_label">
+    <color rgba="0.92 0.9 0.84 0.44" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.72 0.68 0.58 1" />
+    </material>
+  <material name="satin_neck">
+    <color rgba="0.78 0.84 0.82 0.78" />
+    </material>
+  <material name="matte_cap">
+    <color rgba="0.035 0.037 0.041 1" />
+    </material>
+  <material name="satin_cap_top">
+    <color rgba="0.12 0.125 0.13 1" />
+    </material>
+  <link name="bottle">
+    <inertial>
+      <origin xyz="0 0 0.108" rpy="0 0 0" />
+      <mass value="0.26" />
+      <inertia ixx="0.00113107" ixy="0" ixz="0" iyy="0.00113107" iyz="0" izz="0.00024037" />
+      </inertial>
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      <material name="frosted_glass">
+        <color rgba="0.82 0.88 0.86 0.54" />
+        </material>
+      </visual>
+    <visual name="label_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/label_sleeve.obj" />
+        </geometry>
+      <material name="satin_label">
+        <color rgba="0.92 0.9 0.84 0.44" />
+        </material>
+      </visual>
+    <visual name="metal_collar">
+      <geometry>
+        <mesh filename="assets/meshes/metal_collar.obj" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.68 0.58 1" />
+        </material>
+      </visual>
+    <visual name="neck_land">
+      <geometry>
+        <mesh filename="assets/meshes/neck_land.obj" />
+        </geometry>
+      <material name="satin_neck">
+        <color rgba="0.78 0.84 0.82 0.78" />
+        </material>
+      </visual>
+    <visual name="neck_thread">
+      <geometry>
+        <mesh filename="assets/meshes/neck_thread.obj" />
+        </geometry>
+      <material name="satin_neck">
+        <color rgba="0.78 0.84 0.82 0.78" />
+        </material>
+      </visual>
+    <visual name="base_punt">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_punt.obj" />
+        </geometry>
+      <material name="frosted_glass">
+        <color rgba="0.82 0.88 0.86 0.54" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="label_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/label_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="metal_collar">
+      <geometry>
+        <mesh filename="assets/meshes/metal_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="neck_land">
+      <geometry>
+        <mesh filename="assets/meshes/neck_land.obj" />
+        </geometry>
+      </collision>
+    <collision name="neck_thread">
+      <geometry>
+        <mesh filename="assets/meshes/neck_thread.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_punt">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_punt.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cap">
+    <inertial>
+      <origin xyz="0 0 0.0235" rpy="0 0 0" />
+      <mass value="0.032" />
+      <inertia ixx="1.04987e-05" ixy="0" ixz="0" iyy="1.04987e-05" iyz="0" izz="9.216e-06" />
+      </inertial>
+    <visual name="cap_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cap_shell.obj" />
+        </geometry>
+      <material name="matte_cap">
+        <color rgba="0.035 0.037 0.041 1" />
+        </material>
+      </visual>
+    <visual name="grip_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/grip_sleeve.obj" />
+        </geometry>
+      <material name="matte_cap">
+        <color rgba="0.035 0.037 0.041 1" />
+        </material>
+      </visual>
+    <visual name="cap_thread">
+      <geometry>
+        <mesh filename="assets/meshes/cap_thread.obj" />
+        </geometry>
+      <material name="satin_cap_top">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="top_insert">
+      <geometry>
+        <mesh filename="assets/meshes/top_insert.obj" />
+        </geometry>
+      <material name="satin_cap_top">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <collision name="cap_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cap_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="grip_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/grip_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="cap_thread">
+      <geometry>
+        <mesh filename="assets/meshes/cap_thread.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_insert">
+      <geometry>
+        <mesh filename="assets/meshes/top_insert.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="neck_to_cap" type="revolute">
+    <origin xyz="0 0 0.1866" rpy="0 0 0" />
+    <parent link="bottle" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.4" velocity="4.5" lower="0" upper="10.9956" />
+    </joint>
+  </robot>

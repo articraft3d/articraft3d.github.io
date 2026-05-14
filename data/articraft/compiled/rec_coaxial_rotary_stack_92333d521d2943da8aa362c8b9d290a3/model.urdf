@@ -1,0 +1,793 @@
+<robot name="drum_rotary_indexing_head">
+  <material name="dark_steel">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="satin_steel">
+    <color rgba="0.58 0.6 0.62 1" />
+    </material>
+  <material name="gunmetal">
+    <color rgba="0.28 0.3 0.32 1" />
+    </material>
+  <material name="parkerized">
+    <color rgba="0.18 0.19 0.21 1" />
+    </material>
+  <material name="brass">
+    <color rgba="0.78 0.62 0.28 1" />
+    </material>
+  <material name="red_index_mark">
+    <color rgba="0.8 0.04 0.02 1" />
+    </material>
+  <link name="core">
+    <visual name="vertical_shaft">
+      <origin xyz="0 0 0.235" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.47" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing">
+      <origin xyz="0 0 0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.015" />
+        </geometry>
+      <material name="parkerized">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="lower_spacer">
+      <origin xyz="0 0 0.1435" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.017" />
+        </geometry>
+      <material name="parkerized">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="upper_spacer">
+      <origin xyz="0 0 0.264" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.112" length="0.012" />
+        </geometry>
+      <material name="parkerized">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="top_retainer">
+      <origin xyz="0 0 0.438" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.02" />
+        </geometry>
+      <material name="parkerized">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <collision name="vertical_shaft">
+      <origin xyz="0 0 0.235" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.47" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing">
+      <origin xyz="0 0 0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="lower_spacer">
+      <origin xyz="0 0 0.1435" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.017" />
+        </geometry>
+      </collision>
+    <collision name="upper_spacer">
+      <origin xyz="0 0 0.264" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.112" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="top_retainer">
+      <origin xyz="0 0 0.438" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="base">
+    <visual name="base_drum">
+      <geometry>
+        <mesh filename="assets/meshes/base_stepped_drum.obj" />
+        </geometry>
+      <material name="gunmetal">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_0">
+      <origin xyz="0.292 0 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_1">
+      <origin xyz="0.28205 0.0755752 0.033" rpy="0 0 0.261799" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_2">
+      <origin xyz="0.252879 0.146 0.033" rpy="0 0 0.523599" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_3">
+      <origin xyz="0.206475 0.206475 0.033" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_4">
+      <origin xyz="0.146 0.252879 0.033" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_5">
+      <origin xyz="0.0755752 0.28205 0.033" rpy="0 0 1.309" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_6">
+      <origin xyz="1.78798e-17 0.292 0.033" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_7">
+      <origin xyz="-0.0755752 0.28205 0.033" rpy="0 0 1.8326" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_8">
+      <origin xyz="-0.146 0.252879 0.033" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_9">
+      <origin xyz="-0.206475 0.206475 0.033" rpy="0 0 2.35619" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_10">
+      <origin xyz="-0.252879 0.146 0.033" rpy="0 0 2.61799" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_11">
+      <origin xyz="-0.28205 0.0755752 0.033" rpy="0 0 2.87979" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_12">
+      <origin xyz="-0.292 3.57597e-17 0.033" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_13">
+      <origin xyz="-0.28205 -0.0755752 0.033" rpy="0 0 3.40339" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_14">
+      <origin xyz="-0.252879 -0.146 0.033" rpy="0 0 3.66519" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_15">
+      <origin xyz="-0.206475 -0.206475 0.033" rpy="0 0 3.92699" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_16">
+      <origin xyz="-0.146 -0.252879 0.033" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_17">
+      <origin xyz="-0.0755752 -0.28205 0.033" rpy="0 0 4.45059" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_18">
+      <origin xyz="-5.36395e-17 -0.292 0.033" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_19">
+      <origin xyz="0.0755752 -0.28205 0.033" rpy="0 0 4.97419" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_20">
+      <origin xyz="0.146 -0.252879 0.033" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_21">
+      <origin xyz="0.206475 -0.206475 0.033" rpy="0 0 5.49779" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_22">
+      <origin xyz="0.252879 -0.146 0.033" rpy="0 0 5.75959" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_tick_23">
+      <origin xyz="0.28205 -0.0755752 0.033" rpy="0 0 6.02139" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_0">
+      <origin xyz="0.194015 0.0803635 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_1">
+      <origin xyz="0.0803635 0.194015 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_2">
+      <origin xyz="-0.0803635 0.194015 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_3">
+      <origin xyz="-0.194015 0.0803635 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_4">
+      <origin xyz="-0.194015 -0.0803635 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_5">
+      <origin xyz="-0.0803635 -0.194015 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_6">
+      <origin xyz="0.0803635 -0.194015 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_7">
+      <origin xyz="0.194015 -0.0803635 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="base_index_lug">
+      <origin xyz="0.352 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.02 0.014" />
+        </geometry>
+      <material name="red_index_mark">
+        <color rgba="0.8 0.04 0.02 1" />
+        </material>
+      </visual>
+    <collision name="base_drum">
+      <geometry>
+        <mesh filename="assets/meshes/base_stepped_drum.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_0">
+      <origin xyz="0.292 0 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_1">
+      <origin xyz="0.28205 0.0755752 0.033" rpy="0 0 0.261799" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_2">
+      <origin xyz="0.252879 0.146 0.033" rpy="0 0 0.523599" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_3">
+      <origin xyz="0.206475 0.206475 0.033" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_4">
+      <origin xyz="0.146 0.252879 0.033" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_5">
+      <origin xyz="0.0755752 0.28205 0.033" rpy="0 0 1.309" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_6">
+      <origin xyz="1.78798e-17 0.292 0.033" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_7">
+      <origin xyz="-0.0755752 0.28205 0.033" rpy="0 0 1.8326" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_8">
+      <origin xyz="-0.146 0.252879 0.033" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_9">
+      <origin xyz="-0.206475 0.206475 0.033" rpy="0 0 2.35619" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_10">
+      <origin xyz="-0.252879 0.146 0.033" rpy="0 0 2.61799" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_11">
+      <origin xyz="-0.28205 0.0755752 0.033" rpy="0 0 2.87979" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_12">
+      <origin xyz="-0.292 3.57597e-17 0.033" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_13">
+      <origin xyz="-0.28205 -0.0755752 0.033" rpy="0 0 3.40339" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_14">
+      <origin xyz="-0.252879 -0.146 0.033" rpy="0 0 3.66519" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_15">
+      <origin xyz="-0.206475 -0.206475 0.033" rpy="0 0 3.92699" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_16">
+      <origin xyz="-0.146 -0.252879 0.033" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_17">
+      <origin xyz="-0.0755752 -0.28205 0.033" rpy="0 0 4.45059" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_18">
+      <origin xyz="-5.36395e-17 -0.292 0.033" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_19">
+      <origin xyz="0.0755752 -0.28205 0.033" rpy="0 0 4.97419" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_20">
+      <origin xyz="0.146 -0.252879 0.033" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_21">
+      <origin xyz="0.206475 -0.206475 0.033" rpy="0 0 5.49779" />
+      <geometry>
+        <box size="0.046 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_22">
+      <origin xyz="0.252879 -0.146 0.033" rpy="0 0 5.75959" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_tick_23">
+      <origin xyz="0.28205 -0.0755752 0.033" rpy="0 0 6.02139" />
+      <geometry>
+        <box size="0.03 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_0">
+      <origin xyz="0.194015 0.0803635 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_1">
+      <origin xyz="0.0803635 0.194015 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_2">
+      <origin xyz="-0.0803635 0.194015 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_3">
+      <origin xyz="-0.194015 0.0803635 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_4">
+      <origin xyz="-0.194015 -0.0803635 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_5">
+      <origin xyz="-0.0803635 -0.194015 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_6">
+      <origin xyz="0.0803635 -0.194015 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_7">
+      <origin xyz="0.194015 -0.0803635 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="base_index_lug">
+      <origin xyz="0.352 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.02 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="collar">
+    <visual name="collar_ring">
+      <geometry>
+        <mesh filename="assets/meshes/collar_stepped_ring.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.58 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="collar_bolt_0">
+      <origin xyz="0.138564 0.08 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="collar_bolt_1">
+      <origin xyz="9.79717e-18 0.16 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="collar_bolt_2">
+      <origin xyz="-0.138564 0.08 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="collar_bolt_3">
+      <origin xyz="-0.138564 -0.08 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="collar_bolt_4">
+      <origin xyz="-2.93915e-17 -0.16 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="collar_bolt_5">
+      <origin xyz="0.138564 -0.08 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="collar_index_lug">
+      <origin xyz="0.214 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.042 0.014 0.012" />
+        </geometry>
+      <material name="red_index_mark">
+        <color rgba="0.8 0.04 0.02 1" />
+        </material>
+      </visual>
+    <collision name="collar_ring">
+      <geometry>
+        <mesh filename="assets/meshes/collar_stepped_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="collar_bolt_0">
+      <origin xyz="0.138564 0.08 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="collar_bolt_1">
+      <origin xyz="9.79717e-18 0.16 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="collar_bolt_2">
+      <origin xyz="-0.138564 0.08 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="collar_bolt_3">
+      <origin xyz="-0.138564 -0.08 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="collar_bolt_4">
+      <origin xyz="-2.93915e-17 -0.16 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="collar_bolt_5">
+      <origin xyz="0.138564 -0.08 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="collar_index_lug">
+      <origin xyz="0.214 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.042 0.014 0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="nose">
+    <visual name="tooling_nose">
+      <geometry>
+        <mesh filename="assets/meshes/nose_tapered_tooling.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.58 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="nose_drive_key">
+      <origin xyz="0.077 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.033 0.012 0.054" />
+        </geometry>
+      <material name="red_index_mark">
+        <color rgba="0.8 0.04 0.02 1" />
+        </material>
+      </visual>
+    <visual name="tool_socket_lip">
+      <origin xyz="0 0 0.081" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tool_socket_lip.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <collision name="tooling_nose">
+      <geometry>
+        <mesh filename="assets/meshes/nose_tapered_tooling.obj" />
+        </geometry>
+      </collision>
+    <collision name="nose_drive_key">
+      <origin xyz="0.077 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.033 0.012 0.054" />
+        </geometry>
+      </collision>
+    <collision name="tool_socket_lip">
+      <origin xyz="0 0 0.081" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tool_socket_lip.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="core_to_base" type="revolute">
+    <origin xyz="0 0 0.075" rpy="0 0 0" />
+    <parent link="core" />
+    <child link="base" />
+    <axis xyz="0 0 1" />
+    <limit effort="250" velocity="1.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="core_to_collar" type="revolute">
+    <origin xyz="0 0 0.207" rpy="0 0 0" />
+    <parent link="core" />
+    <child link="collar" />
+    <axis xyz="0 0 1" />
+    <limit effort="180" velocity="1.5" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="core_to_nose" type="revolute">
+    <origin xyz="0 0 0.342" rpy="0 0 0" />
+    <parent link="core" />
+    <child link="nose" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

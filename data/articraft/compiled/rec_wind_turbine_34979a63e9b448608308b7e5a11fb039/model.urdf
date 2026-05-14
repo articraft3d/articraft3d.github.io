@@ -1,0 +1,625 @@
+<robot name="desktop_foldable_wind_turbine">
+  <material name="satin_white">
+    <color rgba="0.92 0.94 0.92 1" />
+    </material>
+  <material name="graphite">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.58 0.61 0.62 1" />
+    </material>
+  <material name="muted_blue">
+    <color rgba="0.18 0.36 0.62 1" />
+    </material>
+  <material name="translucent_guard">
+    <color rgba="0.72 0.86 0.95 0.42" />
+    </material>
+  <link name="base">
+    <visual name="weighted_plate">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.18 0.025" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="hinge_cheek_0">
+      <origin xyz="0.13 0.041 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.012 0.07" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="hinge_cheek_1">
+      <origin xyz="0.13 -0.041 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.012 0.07" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="hinge_foot">
+      <origin xyz="0.13 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.09 0.014" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="stow_cradle_pad">
+      <origin xyz="-0.118 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.078 0.012" />
+        </geometry>
+      <material name="muted_blue">
+        <color rgba="0.18 0.36 0.62 1" />
+        </material>
+      </visual>
+    <visual name="cradle_post_0">
+      <origin xyz="-0.15 0.043 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.018 0.06" />
+        </geometry>
+      <material name="muted_blue">
+        <color rgba="0.18 0.36 0.62 1" />
+        </material>
+      </visual>
+    <visual name="cradle_post_1">
+      <origin xyz="-0.15 -0.043 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.018 0.06" />
+        </geometry>
+      <material name="muted_blue">
+        <color rgba="0.18 0.36 0.62 1" />
+        </material>
+      </visual>
+    <collision name="weighted_plate">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.18 0.025" />
+        </geometry>
+      </collision>
+    <collision name="hinge_cheek_0">
+      <origin xyz="0.13 0.041 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.012 0.07" />
+        </geometry>
+      </collision>
+    <collision name="hinge_cheek_1">
+      <origin xyz="0.13 -0.041 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.012 0.07" />
+        </geometry>
+      </collision>
+    <collision name="hinge_foot">
+      <origin xyz="0.13 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.09 0.014" />
+        </geometry>
+      </collision>
+    <collision name="stow_cradle_pad">
+      <origin xyz="-0.118 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.078 0.012" />
+        </geometry>
+      </collision>
+    <collision name="cradle_post_0">
+      <origin xyz="-0.15 0.043 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.018 0.06" />
+        </geometry>
+      </collision>
+    <collision name="cradle_post_1">
+      <origin xyz="-0.15 -0.043 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.018 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tower">
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.07" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="mast">
+      <origin xyz="0 0 0.17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.34" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="top_bearing">
+      <origin xyz="0 0 0.341" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.018" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="lower_clamp">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.034 0.018" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="mast">
+      <origin xyz="0 0 0.17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.34" />
+        </geometry>
+      </collision>
+    <collision name="top_bearing">
+      <origin xyz="0 0 0.341" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="lower_clamp">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.034 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="nacelle">
+    <visual name="yaw_collar">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.024" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="generator_body">
+      <geometry>
+        <mesh filename="assets/meshes/nacelle_body.obj" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="bearing_arm_0">
+      <origin xyz="0.112 0.017 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.006" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="bearing_arm_1">
+      <origin xyz="0.112 -0.017 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.006" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="nose_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/nose_bearing_ring.obj" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="guard_hoop">
+      <geometry>
+        <mesh filename="assets/meshes/rotor_guard_ring.obj" />
+        </geometry>
+      <material name="translucent_guard">
+        <color rgba="0.72 0.86 0.95 0.42" />
+        </material>
+      </visual>
+    <visual name="guard_spoke_0">
+      <origin xyz="0.13 0.109 0.037" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.178" />
+        </geometry>
+      <material name="translucent_guard">
+        <color rgba="0.72 0.86 0.95 0.42" />
+        </material>
+      </visual>
+    <visual name="guard_spoke_1">
+      <origin xyz="0.13 -0.109 0.037" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.178" />
+        </geometry>
+      <material name="translucent_guard">
+        <color rgba="0.72 0.86 0.95 0.42" />
+        </material>
+      </visual>
+    <visual name="tail_fin">
+      <origin xyz="-0.006 0 0.066" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.026 0.06" />
+        </geometry>
+      <material name="muted_blue">
+        <color rgba="0.18 0.36 0.62 1" />
+        </material>
+      </visual>
+    <collision name="yaw_collar">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="generator_body">
+      <geometry>
+        <mesh filename="assets/meshes/nacelle_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_arm_0">
+      <origin xyz="0.112 0.017 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="bearing_arm_1">
+      <origin xyz="0.112 -0.017 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="nose_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/nose_bearing_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="guard_hoop">
+      <geometry>
+        <mesh filename="assets/meshes/rotor_guard_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="guard_spoke_0">
+      <origin xyz="0.13 0.109 0.037" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.178" />
+        </geometry>
+      </collision>
+    <collision name="guard_spoke_1">
+      <origin xyz="0.13 -0.109 0.037" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.178" />
+        </geometry>
+      </collision>
+    <collision name="tail_fin">
+      <origin xyz="-0.006 0 0.066" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.026 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="hub">
+    <visual name="hub_drum">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.034" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="drive_shaft">
+      <origin xyz="-0.022 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.03" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="spinner_cap">
+      <origin xyz="0.026 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="root_lug_0">
+      <origin xyz="0 2.32683e-18 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.018" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="root_lug_1">
+      <origin xyz="0 -0.032909 -0.019" rpy="2.0944 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.018" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="root_lug_2">
+      <origin xyz="0 0.032909 -0.019" rpy="4.18879 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.018" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <collision name="hub_drum">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="drive_shaft">
+      <origin xyz="-0.022 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="spinner_cap">
+      <origin xyz="0.026 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="root_lug_0">
+      <origin xyz="0 2.32683e-18 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="root_lug_1">
+      <origin xyz="0 -0.032909 -0.019" rpy="2.0944 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="root_lug_2">
+      <origin xyz="0 0.032909 -0.019" rpy="4.18879 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_0">
+    <visual name="root_barrel">
+      <geometry>
+        <cylinder radius="0.0085" length="0.024" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="root_plug">
+      <origin xyz="0 0.008 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.026" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="airfoil">
+      <geometry>
+        <mesh filename="assets/meshes/blade_airfoil_0.obj" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="pitch_mark">
+      <origin xyz="0 0.019 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.012 0.02" />
+        </geometry>
+      <material name="muted_blue">
+        <color rgba="0.18 0.36 0.62 1" />
+        </material>
+      </visual>
+    <collision name="root_barrel">
+      <geometry>
+        <cylinder radius="0.0085" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="root_plug">
+      <origin xyz="0 0.008 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="airfoil">
+      <geometry>
+        <mesh filename="assets/meshes/blade_airfoil_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="pitch_mark">
+      <origin xyz="0 0.019 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.012 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_1">
+    <visual name="root_barrel">
+      <geometry>
+        <cylinder radius="0.0085" length="0.024" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="root_plug">
+      <origin xyz="0 0.008 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.026" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="airfoil">
+      <geometry>
+        <mesh filename="assets/meshes/blade_airfoil_1.obj" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="pitch_mark">
+      <origin xyz="0 0.019 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.012 0.02" />
+        </geometry>
+      <material name="muted_blue">
+        <color rgba="0.18 0.36 0.62 1" />
+        </material>
+      </visual>
+    <collision name="root_barrel">
+      <geometry>
+        <cylinder radius="0.0085" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="root_plug">
+      <origin xyz="0 0.008 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="airfoil">
+      <geometry>
+        <mesh filename="assets/meshes/blade_airfoil_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="pitch_mark">
+      <origin xyz="0 0.019 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.012 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_2">
+    <visual name="root_barrel">
+      <geometry>
+        <cylinder radius="0.0085" length="0.024" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="root_plug">
+      <origin xyz="0 0.008 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.026" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <visual name="airfoil">
+      <geometry>
+        <mesh filename="assets/meshes/blade_airfoil_2.obj" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="pitch_mark">
+      <origin xyz="0 0.019 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.012 0.02" />
+        </geometry>
+      <material name="muted_blue">
+        <color rgba="0.18 0.36 0.62 1" />
+        </material>
+      </visual>
+    <collision name="root_barrel">
+      <geometry>
+        <cylinder radius="0.0085" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="root_plug">
+      <origin xyz="0 0.008 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="airfoil">
+      <geometry>
+        <mesh filename="assets/meshes/blade_airfoil_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="pitch_mark">
+      <origin xyz="0 0.019 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.012 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_tower" type="revolute">
+    <origin xyz="0.13 0 0.065" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="tower" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="0.7" lower="0" upper="1.32" />
+    </joint>
+  <joint name="tower_to_nacelle" type="revolute">
+    <origin xyz="0 0 0.35" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="nacelle" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="0.8" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="nacelle_to_hub" type="continuous">
+    <origin xyz="0.148 0 0.037" rpy="0 0 0" />
+    <parent link="nacelle" />
+    <child link="hub" />
+    <axis xyz="1 0 0" />
+    <limit effort="2" velocity="30" />
+    </joint>
+  <joint name="hub_to_blade_0" type="revolute">
+    <origin xyz="0 3.36778e-18 0.055" rpy="1.5708 0 0" />
+    <parent link="hub" />
+    <child link="blade_0" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1.6" velocity="1.4" lower="0" upper="1.38" />
+    </joint>
+  <joint name="hub_to_blade_1" type="revolute">
+    <origin xyz="0 -0.0476314 -0.0275" rpy="3.66519 0 0" />
+    <parent link="hub" />
+    <child link="blade_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1.6" velocity="1.4" lower="0" upper="1.38" />
+    </joint>
+  <joint name="hub_to_blade_2" type="revolute">
+    <origin xyz="0 0.0476314 -0.0275" rpy="5.75959 0 0" />
+    <parent link="hub" />
+    <child link="blade_2" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1.6" velocity="1.4" lower="0" upper="1.38" />
+    </joint>
+  </robot>

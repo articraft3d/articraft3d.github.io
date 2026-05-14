@@ -1,0 +1,791 @@
+<robot name="deluxe_food_processor">
+  <material name="satin_white">
+    <color rgba="0.86 0.84 0.78 1" />
+    </material>
+  <material name="dark_control_band">
+    <color rgba="0.035 0.038 0.042 1" />
+    </material>
+  <material name="clear_polycarbonate">
+    <color rgba="0.7 0.9 1 0.36" />
+    </material>
+  <material name="smoked_clear_lid">
+    <color rgba="0.52 0.7 0.86 0.42" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.74 0.75 0.72 1" />
+    </material>
+  <material name="white_markings">
+    <color rgba="0.97 0.97 0.93 1" />
+    </material>
+  <material name="blue_rocker">
+    <color rgba="0.05 0.2 0.45 1" />
+    </material>
+  <material name="gray_rocker">
+    <color rgba="0.18 0.19 0.2 1" />
+    </material>
+  <link name="processor_body">
+    <visual name="rounded_base">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.34 0.16" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="control_band">
+      <origin xyz="0 -0.174 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.014 0.088" />
+        </geometry>
+      <material name="dark_control_band">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="dial_tick">
+      <origin xyz="-0.09 -0.183 0.127" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.006 0.01" />
+        </geometry>
+      <material name="white_markings">
+        <color rgba="0.97 0.97 0.93 1" />
+        </material>
+      </visual>
+    <visual name="low_tick">
+      <origin xyz="-0.128 -0.183 0.088" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.03" />
+        </geometry>
+      <material name="white_markings">
+        <color rgba="0.97 0.97 0.93 1" />
+        </material>
+      </visual>
+    <visual name="high_tick">
+      <origin xyz="-0.052 -0.183 0.088" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.03" />
+        </geometry>
+      <material name="white_markings">
+        <color rgba="0.97 0.97 0.93 1" />
+        </material>
+      </visual>
+    <visual name="bowl_saddle">
+      <origin xyz="0 0.02 0.176" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.122" length="0.032" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bowl_shell">
+      <origin xyz="0 0.02 0.16" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bowl_shell.obj" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.7 0.9 1 0.36" />
+        </material>
+      </visual>
+    <visual name="center_spindle">
+      <origin xyz="0 0.02 0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.055" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="lower_handle_lug">
+      <origin xyz="0.182 0.105 0.302" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.07 0.034" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.7 0.9 1 0.36" />
+        </material>
+      </visual>
+    <visual name="upper_handle_lug">
+      <origin xyz="0.184 0.105 0.384" rpy="0 0 0" />
+      <geometry>
+        <box size="0.104 0.07 0.034" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.7 0.9 1 0.36" />
+        </material>
+      </visual>
+    <visual name="broad_handle_grip">
+      <origin xyz="0.24 0.105 0.343" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.082 0.118" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.7 0.9 1 0.36" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_mount_0">
+      <origin xyz="-0.088 0.16 0.403" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.026 0.04" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_mount_1">
+      <origin xyz="0.088 0.16 0.403" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.026 0.04" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_knuckle_0">
+      <origin xyz="-0.088 0.17 0.425" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.06" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_knuckle_1">
+      <origin xyz="0.088 0.17 0.425" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.06" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_pin">
+      <origin xyz="0 0.17 0.425" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.21" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.74 0.75 0.72 1" />
+        </material>
+      </visual>
+    <visual name="latch_boss_0">
+      <origin xyz="0.152 0.02 0.31" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.036" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="latch_boss_1">
+      <origin xyz="-0.152 0.02 0.31" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.036" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="rounded_base">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.34 0.16" />
+        </geometry>
+      </collision>
+    <collision name="control_band">
+      <origin xyz="0 -0.174 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.014 0.088" />
+        </geometry>
+      </collision>
+    <collision name="dial_tick">
+      <origin xyz="-0.09 -0.183 0.127" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.006 0.01" />
+        </geometry>
+      </collision>
+    <collision name="low_tick">
+      <origin xyz="-0.128 -0.183 0.088" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.03" />
+        </geometry>
+      </collision>
+    <collision name="high_tick">
+      <origin xyz="-0.052 -0.183 0.088" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.03" />
+        </geometry>
+      </collision>
+    <collision name="bowl_saddle">
+      <origin xyz="0 0.02 0.176" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.122" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="bowl_shell">
+      <origin xyz="0 0.02 0.16" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bowl_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="center_spindle">
+      <origin xyz="0 0.02 0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="lower_handle_lug">
+      <origin xyz="0.182 0.105 0.302" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.07 0.034" />
+        </geometry>
+      </collision>
+    <collision name="upper_handle_lug">
+      <origin xyz="0.184 0.105 0.384" rpy="0 0 0" />
+      <geometry>
+        <box size="0.104 0.07 0.034" />
+        </geometry>
+      </collision>
+    <collision name="broad_handle_grip">
+      <origin xyz="0.24 0.105 0.343" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.082 0.118" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_mount_0">
+      <origin xyz="-0.088 0.16 0.403" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_mount_1">
+      <origin xyz="0.088 0.16 0.403" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_knuckle_0">
+      <origin xyz="-0.088 0.17 0.425" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_knuckle_1">
+      <origin xyz="0.088 0.17 0.425" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_pin">
+      <origin xyz="0 0.17 0.425" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.21" />
+        </geometry>
+      </collision>
+    <collision name="latch_boss_0">
+      <origin xyz="0.152 0.02 0.31" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.036" />
+        </geometry>
+      </collision>
+    <collision name="latch_boss_1">
+      <origin xyz="-0.152 0.02 0.31" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.036" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="lid_window">
+      <origin xyz="0 -0.174 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.158" length="0.018" />
+        </geometry>
+      <material name="smoked_clear_lid">
+        <color rgba="0.52 0.7 0.86 0.42" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_knuckle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.09" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf">
+      <origin xyz="0 -0.036 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.05 0.012" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="chute_side_0">
+      <origin xyz="0.038 -0.215 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.076 0.14" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.7 0.9 1 0.36" />
+        </material>
+      </visual>
+    <visual name="chute_side_1">
+      <origin xyz="-0.038 -0.215 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.076 0.14" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.7 0.9 1 0.36" />
+        </material>
+      </visual>
+    <visual name="chute_wall_rear">
+      <origin xyz="0 -0.185 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.018 0.14" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.7 0.9 1 0.36" />
+        </material>
+      </visual>
+    <visual name="chute_wall_front">
+      <origin xyz="0 -0.245 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.018 0.14" />
+        </geometry>
+      <material name="clear_polycarbonate">
+        <color rgba="0.7 0.9 1 0.36" />
+        </material>
+      </visual>
+    <visual name="chute_base_gasket">
+      <origin xyz="0 -0.215 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.108 0.014" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="lid_window">
+      <origin xyz="0 -0.174 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.158" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_knuckle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="hinge_leaf">
+      <origin xyz="0 -0.036 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.05 0.012" />
+        </geometry>
+      </collision>
+    <collision name="chute_side_0">
+      <origin xyz="0.038 -0.215 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.076 0.14" />
+        </geometry>
+      </collision>
+    <collision name="chute_side_1">
+      <origin xyz="-0.038 -0.215 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.076 0.14" />
+        </geometry>
+      </collision>
+    <collision name="chute_wall_rear">
+      <origin xyz="0 -0.185 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.018 0.14" />
+        </geometry>
+      </collision>
+    <collision name="chute_wall_front">
+      <origin xyz="0 -0.245 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.018 0.14" />
+        </geometry>
+      </collision>
+    <collision name="chute_base_gasket">
+      <origin xyz="0 -0.215 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.108 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="feed_pusher">
+    <visual name="pusher_shaft">
+      <origin xyz="0 0 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.032 0.135" />
+        </geometry>
+      <material name="pusher_plastic">
+        <color rgba="0.88 0.92 0.94 1" />
+        </material>
+      </visual>
+    <visual name="pusher_neck">
+      <origin xyz="0 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.026 0.03" />
+        </geometry>
+      <material name="pusher_plastic">
+        <color rgba="0.88 0.92 0.94 1" />
+        </material>
+      </visual>
+    <visual name="pusher_cap">
+      <origin xyz="0 0 0.178" rpy="0 0 0" />
+      <geometry>
+        <box size="0.102 0.086 0.026" />
+        </geometry>
+      <material name="pusher_plastic">
+        <color rgba="0.88 0.92 0.94 1" />
+        </material>
+      </visual>
+    <collision name="pusher_shaft">
+      <origin xyz="0 0 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.032 0.135" />
+        </geometry>
+      </collision>
+    <collision name="pusher_neck">
+      <origin xyz="0 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.026 0.03" />
+        </geometry>
+      </collision>
+    <collision name="pusher_cap">
+      <origin xyz="0 0 0.178" rpy="0 0 0" />
+      <geometry>
+        <box size="0.102 0.086 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cutting_blade">
+    <visual name="blade_hub">
+      <geometry>
+        <cylinder radius="0.024" length="0.03" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.74 0.75 0.72 1" />
+        </material>
+      </visual>
+    <visual name="blade_rotor">
+      <origin xyz="0.048 0 0.012" rpy="0 0 0.22" />
+      <geometry>
+        <box size="0.118 0.03 0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.74 0.75 0.72 1" />
+        </material>
+      </visual>
+    <visual name="blade_tail">
+      <origin xyz="-0.048 0 -0.002" rpy="0 0 3.36159" />
+      <geometry>
+        <box size="0.118 0.03 0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.74 0.75 0.72 1" />
+        </material>
+      </visual>
+    <collision name="blade_hub">
+      <geometry>
+        <cylinder radius="0.024" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="blade_rotor">
+      <origin xyz="0.048 0 0.012" rpy="0 0 0.22" />
+      <geometry>
+        <box size="0.118 0.03 0.006" />
+        </geometry>
+      </collision>
+    <collision name="blade_tail">
+      <origin xyz="-0.048 0 -0.002" rpy="0 0 3.36159" />
+      <geometry>
+        <box size="0.118 0.03 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="side_latch_0">
+    <visual name="latch_pivot_hub">
+      <origin xyz="0.009 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="latch_arm">
+      <origin xyz="0.014 0 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.036 0.136" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="lid_hook">
+      <origin xyz="-0.006 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 0.02" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="latch_pivot_hub">
+      <origin xyz="0.009 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="latch_arm">
+      <origin xyz="0.014 0 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.036 0.136" />
+        </geometry>
+      </collision>
+    <collision name="lid_hook">
+      <origin xyz="-0.006 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="side_latch_1">
+    <visual name="latch_pivot_hub">
+      <origin xyz="-0.009 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="latch_arm">
+      <origin xyz="-0.014 0 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.036 0.136" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="lid_hook">
+      <origin xyz="0.006 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 0.02" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="latch_pivot_hub">
+      <origin xyz="-0.009 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="latch_arm">
+      <origin xyz="-0.014 0 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.036 0.136" />
+        </geometry>
+      </collision>
+    <collision name="lid_hook">
+      <origin xyz="0.006 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="selector_dial">
+    <visual name="dial_cap">
+      <origin xyz="0 -0.013 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.026" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="dial_pointer">
+      <origin xyz="0 -0.027 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.003 0.05" />
+        </geometry>
+      <material name="white_markings">
+        <color rgba="0.97 0.97 0.93 1" />
+        </material>
+      </visual>
+    <collision name="dial_cap">
+      <origin xyz="0 -0.013 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="dial_pointer">
+      <origin xyz="0 -0.027 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.003 0.05" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rocker_button_0">
+    <visual name="button_pad">
+      <origin xyz="0 -0.009 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.018 0.04" />
+        </geometry>
+      <material name="blue_rocker">
+        <color rgba="0.05 0.2 0.45 1" />
+        </material>
+      </visual>
+    <visual name="upper_mark">
+      <origin xyz="0 -0.019 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.002 0.004" />
+        </geometry>
+      <material name="white_markings">
+        <color rgba="0.97 0.97 0.93 1" />
+        </material>
+      </visual>
+    <visual name="lower_mark">
+      <origin xyz="0 -0.019 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.002 0.004" />
+        </geometry>
+      <material name="white_markings">
+        <color rgba="0.97 0.97 0.93 1" />
+        </material>
+      </visual>
+    <collision name="button_pad">
+      <origin xyz="0 -0.009 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.018 0.04" />
+        </geometry>
+      </collision>
+    <collision name="upper_mark">
+      <origin xyz="0 -0.019 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="lower_mark">
+      <origin xyz="0 -0.019 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.002 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rocker_button_1">
+    <visual name="button_pad">
+      <origin xyz="0 -0.009 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.018 0.04" />
+        </geometry>
+      <material name="gray_rocker">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="upper_mark">
+      <origin xyz="0 -0.019 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.002 0.004" />
+        </geometry>
+      <material name="white_markings">
+        <color rgba="0.97 0.97 0.93 1" />
+        </material>
+      </visual>
+    <visual name="lower_mark">
+      <origin xyz="0 -0.019 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.002 0.004" />
+        </geometry>
+      <material name="white_markings">
+        <color rgba="0.97 0.97 0.93 1" />
+        </material>
+      </visual>
+    <collision name="button_pad">
+      <origin xyz="0 -0.009 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.018 0.04" />
+        </geometry>
+      </collision>
+    <collision name="upper_mark">
+      <origin xyz="0 -0.019 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="lower_mark">
+      <origin xyz="0 -0.019 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.002 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_lid" type="revolute">
+    <origin xyz="0 0.17 0.425" rpy="0 0 0" />
+    <parent link="processor_body" />
+    <child link="lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="18" velocity="1.8" lower="0" upper="1.3" />
+    </joint>
+  <joint name="lid_to_feed_pusher" type="prismatic">
+    <origin xyz="0 -0.215 0.027" rpy="0 0 0" />
+    <parent link="lid" />
+    <child link="feed_pusher" />
+    <axis xyz="0 0 1" />
+    <limit effort="20" velocity="0.25" lower="0" upper="0.09" />
+    </joint>
+  <joint name="spindle_to_blade" type="continuous">
+    <origin xyz="0 0.02 0.247" rpy="0 0 0" />
+    <parent link="processor_body" />
+    <child link="cutting_blade" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="40" />
+    </joint>
+  <joint name="body_to_side_latch_0" type="revolute">
+    <origin xyz="0.17 0.02 0.31" rpy="0 0 0" />
+    <parent link="processor_body" />
+    <child link="side_latch_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="2.5" lower="0" upper="0.7" />
+    </joint>
+  <joint name="body_to_side_latch_1" type="revolute">
+    <origin xyz="-0.17 0.02 0.31" rpy="0 0 0" />
+    <parent link="processor_body" />
+    <child link="side_latch_1" />
+    <axis xyz="0 -1 0" />
+    <limit effort="5" velocity="2.5" lower="0" upper="0.7" />
+    </joint>
+  <joint name="band_to_selector_dial" type="continuous">
+    <origin xyz="-0.09 -0.181 0.084" rpy="0 0 0" />
+    <parent link="processor_body" />
+    <child link="selector_dial" />
+    <axis xyz="0 -1 0" />
+    <limit effort="1" velocity="8" />
+    </joint>
+  <joint name="band_to_rocker_button_0" type="revolute">
+    <origin xyz="0.06 -0.181 0.084" rpy="0 0 0" />
+    <parent link="processor_body" />
+    <child link="rocker_button_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="1.5" velocity="4" lower="-0.24" upper="0.24" />
+    </joint>
+  <joint name="band_to_rocker_button_1" type="revolute">
+    <origin xyz="0.135 -0.181 0.084" rpy="0 0 0" />
+    <parent link="processor_body" />
+    <child link="rocker_button_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="1.5" velocity="4" lower="-0.24" upper="0.24" />
+    </joint>
+  </robot>

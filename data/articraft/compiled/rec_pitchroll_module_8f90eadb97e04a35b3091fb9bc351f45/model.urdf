@@ -1,0 +1,329 @@
+<robot name="bridge_pitch_roll_module">
+  <material name="frame_dark">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="outer_blue">
+    <color rgba="0.05 0.2 0.42 1" />
+    </material>
+  <material name="cradle_silver">
+    <color rgba="0.72 0.75 0.76 1" />
+    </material>
+  <material name="bearing_bronze">
+    <color rgba="0.76 0.54 0.25 1" />
+    </material>
+  <material name="axis_black">
+    <color rgba="0.02 0.02 0.022 1" />
+    </material>
+  <link name="rear_frame">
+    <visual name="base_plate">
+      <origin xyz="-0.055 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.46 0.035" />
+        </geometry>
+      <material name="frame_dark" />
+      </visual>
+    <visual name="rear_post_0">
+      <origin xyz="-0.13 -0.185 0.2375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.035 0.445" />
+        </geometry>
+      <material name="frame_dark" />
+      </visual>
+    <visual name="rear_post_1">
+      <origin xyz="-0.13 0.185 0.2375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.035 0.445" />
+        </geometry>
+      <material name="frame_dark" />
+      </visual>
+    <visual name="top_bridge">
+      <origin xyz="-0.13 0 0.465" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.405 0.045" />
+        </geometry>
+      <material name="frame_dark" />
+      </visual>
+    <visual name="bearing_arm_0">
+      <origin xyz="-0.085 -0.168 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.032 0.032" />
+        </geometry>
+      <material name="frame_dark" />
+      </visual>
+    <visual name="pitch_bearing_0">
+      <origin xyz="0 -0.168 0.36" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pitch_bearing_0.obj" />
+        </geometry>
+      <material name="bearing_bronze" />
+      </visual>
+    <visual name="bearing_arm_1">
+      <origin xyz="-0.085 0.168 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.032 0.032" />
+        </geometry>
+      <material name="frame_dark" />
+      </visual>
+    <visual name="pitch_bearing_1">
+      <origin xyz="0 0.168 0.36" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pitch_bearing_1.obj" />
+        </geometry>
+      <material name="bearing_bronze" />
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="-0.055 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.46 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rear_post_0">
+      <origin xyz="-0.13 -0.185 0.2375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.035 0.445" />
+        </geometry>
+      </collision>
+    <collision name="rear_post_1">
+      <origin xyz="-0.13 0.185 0.2375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.035 0.445" />
+        </geometry>
+      </collision>
+    <collision name="top_bridge">
+      <origin xyz="-0.13 0 0.465" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.405 0.045" />
+        </geometry>
+      </collision>
+    <collision name="bearing_arm_0">
+      <origin xyz="-0.085 -0.168 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.032 0.032" />
+        </geometry>
+      </collision>
+    <collision name="pitch_bearing_0">
+      <origin xyz="0 -0.168 0.36" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pitch_bearing_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_arm_1">
+      <origin xyz="-0.085 0.168 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.032 0.032" />
+        </geometry>
+      </collision>
+    <collision name="pitch_bearing_1">
+      <origin xyz="0 0.168 0.36" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pitch_bearing_1.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="outer_ring">
+    <visual name="ring_torus">
+      <geometry>
+        <mesh filename="assets/meshes/outer_ring_torus.obj" />
+        </geometry>
+      <material name="outer_blue" />
+      </visual>
+    <visual name="pitch_trunnion_0">
+      <origin xyz="0 -0.158 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.055" />
+        </geometry>
+      <material name="axis_black" />
+      </visual>
+    <visual name="pitch_trunnion_1">
+      <origin xyz="0 0.158 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.055" />
+        </geometry>
+      <material name="axis_black" />
+      </visual>
+    <visual name="side_hub_0">
+      <origin xyz="0 -0.126 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.016" />
+        </geometry>
+      <material name="outer_blue" />
+      </visual>
+    <visual name="side_hub_1">
+      <origin xyz="0 0.126 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.016" />
+        </geometry>
+      <material name="outer_blue" />
+      </visual>
+    <visual name="roll_bearing_0">
+      <origin xyz="-0.014 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_bearing_0.obj" />
+        </geometry>
+      <material name="bearing_bronze" />
+      </visual>
+    <visual name="roll_spoke_0_0">
+      <origin xyz="-0.014 0 -0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.096" />
+        </geometry>
+      <material name="outer_blue" />
+      </visual>
+    <visual name="roll_spoke_0_1">
+      <origin xyz="-0.014 0 0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.096" />
+        </geometry>
+      <material name="outer_blue" />
+      </visual>
+    <visual name="roll_bearing_1">
+      <origin xyz="0.014 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_bearing_1.obj" />
+        </geometry>
+      <material name="bearing_bronze" />
+      </visual>
+    <visual name="roll_spoke_1_0">
+      <origin xyz="0.014 0 -0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.096" />
+        </geometry>
+      <material name="outer_blue" />
+      </visual>
+    <visual name="roll_spoke_1_1">
+      <origin xyz="0.014 0 0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.096" />
+        </geometry>
+      <material name="outer_blue" />
+      </visual>
+    <collision name="ring_torus">
+      <geometry>
+        <mesh filename="assets/meshes/outer_ring_torus.obj" />
+        </geometry>
+      </collision>
+    <collision name="pitch_trunnion_0">
+      <origin xyz="0 -0.158 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="pitch_trunnion_1">
+      <origin xyz="0 0.158 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="side_hub_0">
+      <origin xyz="0 -0.126 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="side_hub_1">
+      <origin xyz="0 0.126 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="roll_bearing_0">
+      <origin xyz="-0.014 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_bearing_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="roll_spoke_0_0">
+      <origin xyz="-0.014 0 -0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.096" />
+        </geometry>
+      </collision>
+    <collision name="roll_spoke_0_1">
+      <origin xyz="-0.014 0 0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.096" />
+        </geometry>
+      </collision>
+    <collision name="roll_bearing_1">
+      <origin xyz="0.014 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_bearing_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="roll_spoke_1_0">
+      <origin xyz="0.014 0 -0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.096" />
+        </geometry>
+      </collision>
+    <collision name="roll_spoke_1_1">
+      <origin xyz="0.014 0 0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.096" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="inner_cradle">
+    <visual name="cradle_frame">
+      <geometry>
+        <mesh filename="assets/meshes/inner_cradle_frame.obj" />
+        </geometry>
+      <material name="cradle_silver" />
+      </visual>
+    <visual name="roll_axle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.08" />
+        </geometry>
+      <material name="axis_black" />
+      </visual>
+    <visual name="central_hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.02" />
+        </geometry>
+      <material name="cradle_silver" />
+      </visual>
+    <visual name="hub_spoke">
+      <geometry>
+        <box size="0.018 0.09 0.012" />
+        </geometry>
+      <material name="cradle_silver" />
+      </visual>
+    <collision name="cradle_frame">
+      <geometry>
+        <mesh filename="assets/meshes/inner_cradle_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="roll_axle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="central_hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="hub_spoke">
+      <geometry>
+        <box size="0.018 0.09 0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="pitch_axis" type="revolute">
+    <origin xyz="0 0 0.36" rpy="0 0 0" />
+    <parent link="rear_frame" />
+    <child link="outer_ring" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="1.8" lower="-0.55" upper="0.55" />
+    </joint>
+  <joint name="roll_axis" type="revolute">
+    <parent link="outer_ring" />
+    <child link="inner_cradle" />
+    <axis xyz="1 0 0" />
+    <limit effort="6" velocity="2" lower="-0.7" upper="0.7" />
+    </joint>
+  </robot>

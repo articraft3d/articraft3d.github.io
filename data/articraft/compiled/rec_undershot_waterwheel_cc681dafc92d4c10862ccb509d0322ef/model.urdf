@@ -1,0 +1,958 @@
+<robot name="compact_undershot_waterwheel">
+  <link name="base">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.18 0.014" />
+        </geometry>
+      <material name="smoked_clear_acrylic">
+        <color rgba="0.45 0.68 0.72 0.38" />
+        </material>
+      </visual>
+    <visual name="water_strip">
+      <origin xyz="-0.005 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.086 0.004" />
+        </geometry>
+      <material name="shallow_water">
+        <color rgba="0.1 0.45 0.85 0.42" />
+        </material>
+      </visual>
+    <visual name="side_lip_0">
+      <origin xyz="0 0.086 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.008 0.022" />
+        </geometry>
+      <material name="smoked_clear_acrylic">
+        <color rgba="0.45 0.68 0.72 0.38" />
+        </material>
+      </visual>
+    <visual name="side_lip_1">
+      <origin xyz="0 -0.086 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.008 0.022" />
+        </geometry>
+      <material name="smoked_clear_acrylic">
+        <color rgba="0.45 0.68 0.72 0.38" />
+        </material>
+      </visual>
+    <visual name="end_lip_0">
+      <origin xyz="0.146 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.18 0.022" />
+        </geometry>
+      <material name="smoked_clear_acrylic">
+        <color rgba="0.45 0.68 0.72 0.38" />
+        </material>
+      </visual>
+    <visual name="end_lip_1">
+      <origin xyz="-0.146 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.18 0.022" />
+        </geometry>
+      <material name="smoked_clear_acrylic">
+        <color rgba="0.45 0.68 0.72 0.38" />
+        </material>
+      </visual>
+    <visual name="foot_pad_0">
+      <origin xyz="-0.096 0.064 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.022 0.008" />
+        </geometry>
+      <material name="soft_feet">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_1">
+      <origin xyz="0.096 0.064 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.022 0.008" />
+        </geometry>
+      <material name="soft_feet">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_2">
+      <origin xyz="-0.096 -0.064 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.022 0.008" />
+        </geometry>
+      <material name="soft_feet">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_3">
+      <origin xyz="0.096 -0.064 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.022 0.008" />
+        </geometry>
+      <material name="soft_feet">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="chute_pin">
+      <origin xyz="-0.158 0 0.031" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.124" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="chute_tab_0">
+      <origin xyz="-0.151 0.058 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.012 0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="chute_tab_1">
+      <origin xyz="-0.151 -0.058 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.012 0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.6 0.62 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.18 0.014" />
+        </geometry>
+      </collision>
+    <collision name="water_strip">
+      <origin xyz="-0.005 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.086 0.004" />
+        </geometry>
+      </collision>
+    <collision name="side_lip_0">
+      <origin xyz="0 0.086 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.008 0.022" />
+        </geometry>
+      </collision>
+    <collision name="side_lip_1">
+      <origin xyz="0 -0.086 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.008 0.022" />
+        </geometry>
+      </collision>
+    <collision name="end_lip_0">
+      <origin xyz="0.146 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.18 0.022" />
+        </geometry>
+      </collision>
+    <collision name="end_lip_1">
+      <origin xyz="-0.146 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.18 0.022" />
+        </geometry>
+      </collision>
+    <collision name="foot_pad_0">
+      <origin xyz="-0.096 0.064 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.022 0.008" />
+        </geometry>
+      </collision>
+    <collision name="foot_pad_1">
+      <origin xyz="0.096 0.064 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.022 0.008" />
+        </geometry>
+      </collision>
+    <collision name="foot_pad_2">
+      <origin xyz="-0.096 -0.064 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.022 0.008" />
+        </geometry>
+      </collision>
+    <collision name="foot_pad_3">
+      <origin xyz="0.096 -0.064 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.022 0.008" />
+        </geometry>
+      </collision>
+    <collision name="chute_pin">
+      <origin xyz="-0.158 0 0.031" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.124" />
+        </geometry>
+      </collision>
+    <collision name="chute_tab_0">
+      <origin xyz="-0.151 0.058 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.012 0.018" />
+        </geometry>
+      </collision>
+    <collision name="chute_tab_1">
+      <origin xyz="-0.151 -0.058 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.012 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="side_frame">
+    <visual name="bottom_rail_0">
+      <origin xyz="0 0.064 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.012 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="front_mount_0">
+      <origin xyz="-0.096 0.064 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.027" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="rear_mount_0">
+      <origin xyz="0.096 0.064 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.027" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="front_strut_0">
+      <origin xyz="-0.057 0.064 0.0745" rpy="0 -0.709681 0" />
+      <geometry>
+        <box size="0.102825 0.012 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="rear_strut_0">
+      <origin xyz="0.057 0.064 0.0745" rpy="0 -2.43191 0" />
+      <geometry>
+        <box size="0.102825 0.012 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_block_0">
+      <origin xyz="-0.024 0.064 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.012 0.024" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="rear_bearing_block_0">
+      <origin xyz="0.024 0.064 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.012 0.024" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="bearing_0">
+      <origin xyz="0 0.0576 0.118" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.02" />
+        </geometry>
+      <material name="graphite_bearings">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="guard_post_0">
+      <origin xyz="0 0.064 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.074" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail_1">
+      <origin xyz="0 -0.064 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.012 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="front_mount_1">
+      <origin xyz="-0.096 -0.064 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.027" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="rear_mount_1">
+      <origin xyz="0.096 -0.064 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.027" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="front_strut_1">
+      <origin xyz="-0.057 -0.064 0.0745" rpy="0 -0.709681 0" />
+      <geometry>
+        <box size="0.102825 0.012 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="rear_strut_1">
+      <origin xyz="0.057 -0.064 0.0745" rpy="0 -2.43191 0" />
+      <geometry>
+        <box size="0.102825 0.012 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_block_1">
+      <origin xyz="-0.024 -0.064 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.012 0.024" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="rear_bearing_block_1">
+      <origin xyz="0.024 -0.064 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.012 0.024" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="bearing_1">
+      <origin xyz="0 -0.0576 0.118" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.02" />
+        </geometry>
+      <material name="graphite_bearings">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="guard_post_1">
+      <origin xyz="0 -0.064 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.074" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="front_crossbar">
+      <origin xyz="-0.096 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.14 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="rear_crossbar">
+      <origin xyz="0.096 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.14 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="top_guard">
+      <origin xyz="0 0 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.14 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <collision name="bottom_rail_0">
+      <origin xyz="0 0.064 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.012 0.01" />
+        </geometry>
+      </collision>
+    <collision name="front_mount_0">
+      <origin xyz="-0.096 0.064 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.027" />
+        </geometry>
+      </collision>
+    <collision name="rear_mount_0">
+      <origin xyz="0.096 0.064 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.027" />
+        </geometry>
+      </collision>
+    <collision name="front_strut_0">
+      <origin xyz="-0.057 0.064 0.0745" rpy="0 -0.709681 0" />
+      <geometry>
+        <box size="0.102825 0.012 0.01" />
+        </geometry>
+      </collision>
+    <collision name="rear_strut_0">
+      <origin xyz="0.057 0.064 0.0745" rpy="0 -2.43191 0" />
+      <geometry>
+        <box size="0.102825 0.012 0.01" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_block_0">
+      <origin xyz="-0.024 0.064 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.012 0.024" />
+        </geometry>
+      </collision>
+    <collision name="rear_bearing_block_0">
+      <origin xyz="0.024 0.064 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.012 0.024" />
+        </geometry>
+      </collision>
+    <collision name="bearing_0">
+      <origin xyz="0 0.0576 0.118" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="guard_post_0">
+      <origin xyz="0 0.064 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.074" />
+        </geometry>
+      </collision>
+    <collision name="bottom_rail_1">
+      <origin xyz="0 -0.064 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.012 0.01" />
+        </geometry>
+      </collision>
+    <collision name="front_mount_1">
+      <origin xyz="-0.096 -0.064 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.027" />
+        </geometry>
+      </collision>
+    <collision name="rear_mount_1">
+      <origin xyz="0.096 -0.064 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.027" />
+        </geometry>
+      </collision>
+    <collision name="front_strut_1">
+      <origin xyz="-0.057 -0.064 0.0745" rpy="0 -0.709681 0" />
+      <geometry>
+        <box size="0.102825 0.012 0.01" />
+        </geometry>
+      </collision>
+    <collision name="rear_strut_1">
+      <origin xyz="0.057 -0.064 0.0745" rpy="0 -2.43191 0" />
+      <geometry>
+        <box size="0.102825 0.012 0.01" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_block_1">
+      <origin xyz="-0.024 -0.064 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.012 0.024" />
+        </geometry>
+      </collision>
+    <collision name="rear_bearing_block_1">
+      <origin xyz="0.024 -0.064 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.012 0.024" />
+        </geometry>
+      </collision>
+    <collision name="bearing_1">
+      <origin xyz="0 -0.0576 0.118" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="guard_post_1">
+      <origin xyz="0 -0.064 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.074" />
+        </geometry>
+      </collision>
+    <collision name="front_crossbar">
+      <origin xyz="-0.096 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.14 0.01" />
+        </geometry>
+      </collision>
+    <collision name="rear_crossbar">
+      <origin xyz="0.096 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.14 0.01" />
+        </geometry>
+      </collision>
+    <collision name="top_guard">
+      <origin xyz="0 0 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.14 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wheel">
+    <visual name="axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.15" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.074" />
+        </geometry>
+      <material name="dark_endgrain">
+        <color rgba="0.38 0.22 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rim_0">
+      <origin xyz="0 0.04 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rim.obj" />
+        </geometry>
+      <material name="dark_endgrain">
+        <color rgba="0.38 0.22 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rim_1">
+      <origin xyz="0 -0.04 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rim.obj" />
+        </geometry>
+      <material name="dark_endgrain">
+        <color rgba="0.38 0.22 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0">
+      <origin xyz="0.046 0 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1">
+      <origin xyz="0.0325269 0 0.0325269" rpy="0 -0.785398 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="spoke_2">
+      <origin xyz="2.81669e-18 0 0.046" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="spoke_3">
+      <origin xyz="-0.0325269 0 0.0325269" rpy="0 -2.35619 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="spoke_4">
+      <origin xyz="-0.046 0 5.63338e-18" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="spoke_5">
+      <origin xyz="-0.0325269 0 -0.0325269" rpy="0 -3.92699 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="spoke_6">
+      <origin xyz="-8.45006e-18 0 -0.046" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="spoke_7">
+      <origin xyz="0.0325269 0 -0.0325269" rpy="0 -5.49779 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="paddle_0">
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="paddle_1">
+      <origin xyz="0.069282 0 0.04" rpy="0 1.0472 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="paddle_2">
+      <origin xyz="0.04 0 0.069282" rpy="0 0.523599 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="paddle_3">
+      <origin xyz="4.89859e-18 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="paddle_4">
+      <origin xyz="-0.04 0 0.069282" rpy="0 -0.523599 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="paddle_5">
+      <origin xyz="-0.069282 0 0.04" rpy="0 -1.0472 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="paddle_6">
+      <origin xyz="-0.08 0 9.79717e-18" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="paddle_7">
+      <origin xyz="-0.069282 0 -0.04" rpy="0 -2.0944 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="paddle_8">
+      <origin xyz="-0.04 0 -0.069282" rpy="0 -2.61799 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="paddle_9">
+      <origin xyz="-1.46958e-17 0 -0.08" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="paddle_10">
+      <origin xyz="0.04 0 -0.069282" rpy="0 -3.66519 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <visual name="paddle_11">
+      <origin xyz="0.069282 0 -0.04" rpy="0 -4.18879 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      <material name="sealed_bamboo">
+        <color rgba="0.72 0.46 0.22 1" />
+        </material>
+      </visual>
+    <collision name="axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.15" />
+        </geometry>
+      </collision>
+    <collision name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.074" />
+        </geometry>
+      </collision>
+    <collision name="rim_0">
+      <origin xyz="0 0.04 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="rim_1">
+      <origin xyz="0 -0.04 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_0">
+      <origin xyz="0.046 0 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      </collision>
+    <collision name="spoke_1">
+      <origin xyz="0.0325269 0 0.0325269" rpy="0 -0.785398 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      </collision>
+    <collision name="spoke_2">
+      <origin xyz="2.81669e-18 0 0.046" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      </collision>
+    <collision name="spoke_3">
+      <origin xyz="-0.0325269 0 0.0325269" rpy="0 -2.35619 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      </collision>
+    <collision name="spoke_4">
+      <origin xyz="-0.046 0 5.63338e-18" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      </collision>
+    <collision name="spoke_5">
+      <origin xyz="-0.0325269 0 -0.0325269" rpy="0 -3.92699 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      </collision>
+    <collision name="spoke_6">
+      <origin xyz="-8.45006e-18 0 -0.046" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      </collision>
+    <collision name="spoke_7">
+      <origin xyz="0.0325269 0 -0.0325269" rpy="0 -5.49779 0" />
+      <geometry>
+        <box size="0.06 0.082 0.005" />
+        </geometry>
+      </collision>
+    <collision name="paddle_0">
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle_1">
+      <origin xyz="0.069282 0 0.04" rpy="0 1.0472 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle_2">
+      <origin xyz="0.04 0 0.069282" rpy="0 0.523599 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle_3">
+      <origin xyz="4.89859e-18 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle_4">
+      <origin xyz="-0.04 0 0.069282" rpy="0 -0.523599 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle_5">
+      <origin xyz="-0.069282 0 0.04" rpy="0 -1.0472 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle_6">
+      <origin xyz="-0.08 0 9.79717e-18" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle_7">
+      <origin xyz="-0.069282 0 -0.04" rpy="0 -2.0944 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle_8">
+      <origin xyz="-0.04 0 -0.069282" rpy="0 -2.61799 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle_9">
+      <origin xyz="-1.46958e-17 0 -0.08" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle_10">
+      <origin xyz="0.04 0 -0.069282" rpy="0 -3.66519 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      </collision>
+    <collision name="paddle_11">
+      <origin xyz="0.069282 0 -0.04" rpy="0 -4.18879 0" />
+      <geometry>
+        <box size="0.024 0.088 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="inlet_chute">
+    <visual name="chute_knuckle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.106" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="chute_panel">
+      <origin xyz="-0.035 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.1 0.006" />
+        </geometry>
+      <material name="smoked_clear_acrylic">
+        <color rgba="0.45 0.68 0.72 0.38" />
+        </material>
+      </visual>
+    <visual name="chute_lip_0">
+      <origin xyz="-0.035 0.053 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.006 0.014" />
+        </geometry>
+      <material name="smoked_clear_acrylic">
+        <color rgba="0.45 0.68 0.72 0.38" />
+        </material>
+      </visual>
+    <visual name="chute_lip_1">
+      <origin xyz="-0.035 -0.053 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.006 0.014" />
+        </geometry>
+      <material name="smoked_clear_acrylic">
+        <color rgba="0.45 0.68 0.72 0.38" />
+        </material>
+      </visual>
+    <collision name="chute_knuckle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.106" />
+        </geometry>
+      </collision>
+    <collision name="chute_panel">
+      <origin xyz="-0.035 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.1 0.006" />
+        </geometry>
+      </collision>
+    <collision name="chute_lip_0">
+      <origin xyz="-0.035 0.053 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.006 0.014" />
+        </geometry>
+      </collision>
+    <collision name="chute_lip_1">
+      <origin xyz="-0.035 -0.053 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.006 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_frame" type="fixed">
+    <parent link="base" />
+    <child link="side_frame" />
+    </joint>
+  <joint name="frame_to_wheel" type="continuous">
+    <origin xyz="0 0 0.118" rpy="0 0 0" />
+    <parent link="side_frame" />
+    <child link="wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.35" velocity="18" />
+    </joint>
+  <joint name="base_to_chute" type="revolute">
+    <origin xyz="-0.158 0 0.031" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="inlet_chute" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.25" velocity="2" lower="0" upper="1.2" />
+    </joint>
+  </robot>

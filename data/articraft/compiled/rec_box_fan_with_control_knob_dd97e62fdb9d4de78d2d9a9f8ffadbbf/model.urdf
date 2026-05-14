@@ -1,0 +1,443 @@
+<robot name="wall_mount_oscillating_box_fan">
+  <link name="wall_bracket">
+    <visual name="wall_plate">
+      <origin xyz="0 -0.24 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.03 0.56" />
+        </geometry>
+      <material name="satin_black_metal">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <visual name="support_arm">
+      <origin xyz="0 -0.125 -0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.2 0.046" />
+        </geometry>
+      <material name="satin_black_metal">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <visual name="pivot_pin">
+      <geometry>
+        <cylinder radius="0.031" length="0.25" />
+        </geometry>
+      <material name="satin_black_metal">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <visual name="upper_pin_cap">
+      <origin xyz="0 0 0.131" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      <material name="satin_black_metal">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <visual name="lower_pin_cap">
+      <origin xyz="0 0 -0.131" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      <material name="satin_black_metal">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_0_0">
+      <origin xyz="-0.052 -0.22 -0.205" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      <material name="dark_motor_hub">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_0_1">
+      <origin xyz="-0.052 -0.22 0.205" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      <material name="dark_motor_hub">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_1_0">
+      <origin xyz="0.052 -0.22 -0.205" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      <material name="dark_motor_hub">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_1_1">
+      <origin xyz="0.052 -0.22 0.205" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      <material name="dark_motor_hub">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <collision name="wall_plate">
+      <origin xyz="0 -0.24 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.03 0.56" />
+        </geometry>
+      </collision>
+    <collision name="support_arm">
+      <origin xyz="0 -0.125 -0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.2 0.046" />
+        </geometry>
+      </collision>
+    <collision name="pivot_pin">
+      <geometry>
+        <cylinder radius="0.031" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="upper_pin_cap">
+      <origin xyz="0 0 0.131" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="lower_pin_cap">
+      <origin xyz="0 0 -0.131" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="screw_head_0_0">
+      <origin xyz="-0.052 -0.22 -0.205" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="screw_head_0_1">
+      <origin xyz="-0.052 -0.22 0.205" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="screw_head_1_0">
+      <origin xyz="0.052 -0.22 -0.205" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="screw_head_1_1">
+      <origin xyz="0.052 -0.22 0.205" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="housing">
+    <visual name="pivot_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/pivot_sleeve.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.86 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rear_neck">
+      <origin xyz="0 0.095 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.13 0.06" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.86 0.78 1" />
+        </material>
+      </visual>
+    <visual name="side_frame_0">
+      <origin xyz="-0.307 0.202 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.124 0.682" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.86 0.78 1" />
+        </material>
+      </visual>
+    <visual name="side_frame_1">
+      <origin xyz="0.307 0.202 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.124 0.682" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.86 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_frame">
+      <origin xyz="0 0.202 0.307" rpy="0 0 0" />
+      <geometry>
+        <box size="0.682 0.124 0.066" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.86 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bottom_frame">
+      <origin xyz="0 0.202 -0.307" rpy="0 0 0" />
+      <geometry>
+        <box size="0.682 0.124 0.066" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.86 0.78 1" />
+        </material>
+      </visual>
+    <visual name="motor_pod">
+      <origin xyz="0 0.126 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.062" />
+        </geometry>
+      <material name="dark_motor_hub">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_x">
+      <origin xyz="0 0.132 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.57 0.03 0.026" />
+        </geometry>
+      <material name="dark_motor_hub">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_z">
+      <origin xyz="0 0.132 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.03 0.57" />
+        </geometry>
+      <material name="dark_motor_hub">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="front_bezel">
+      <origin xyz="0 0.264 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bezel.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.86 0.78 1" />
+        </material>
+      </visual>
+    <visual name="front_grille">
+      <geometry>
+        <mesh filename="assets/meshes/front_grille.obj" />
+        </geometry>
+      <material name="zinc_wire">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="dial_plate">
+      <origin xyz="0.222 0.268 -0.236" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.007" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.86 0.78 1" />
+        </material>
+      </visual>
+    <visual name="tick_low">
+      <origin xyz="0.186555 0.272 -0.197952" rpy="0 -0.75 0" />
+      <geometry>
+        <box size="0.006 0.006 0.023" />
+        </geometry>
+      <material name="white_indicator_mark">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="tick_mid">
+      <origin xyz="0.222 0.272 -0.184" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.006 0.023" />
+        </geometry>
+      <material name="white_indicator_mark">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="tick_high">
+      <origin xyz="0.257445 0.272 -0.197952" rpy="0 0.75 0" />
+      <geometry>
+        <box size="0.006 0.006 0.023" />
+        </geometry>
+      <material name="white_indicator_mark">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <collision name="pivot_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/pivot_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_neck">
+      <origin xyz="0 0.095 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.13 0.06" />
+        </geometry>
+      </collision>
+    <collision name="side_frame_0">
+      <origin xyz="-0.307 0.202 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.124 0.682" />
+        </geometry>
+      </collision>
+    <collision name="side_frame_1">
+      <origin xyz="0.307 0.202 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.124 0.682" />
+        </geometry>
+      </collision>
+    <collision name="top_frame">
+      <origin xyz="0 0.202 0.307" rpy="0 0 0" />
+      <geometry>
+        <box size="0.682 0.124 0.066" />
+        </geometry>
+      </collision>
+    <collision name="bottom_frame">
+      <origin xyz="0 0.202 -0.307" rpy="0 0 0" />
+      <geometry>
+        <box size="0.682 0.124 0.066" />
+        </geometry>
+      </collision>
+    <collision name="motor_pod">
+      <origin xyz="0 0.126 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.062" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_x">
+      <origin xyz="0 0.132 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.57 0.03 0.026" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_z">
+      <origin xyz="0 0.132 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.03 0.57" />
+        </geometry>
+      </collision>
+    <collision name="front_bezel">
+      <origin xyz="0 0.264 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bezel.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_grille">
+      <geometry>
+        <mesh filename="assets/meshes/front_grille.obj" />
+        </geometry>
+      </collision>
+    <collision name="dial_plate">
+      <origin xyz="0.222 0.268 -0.236" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="tick_low">
+      <origin xyz="0.186555 0.272 -0.197952" rpy="0 -0.75 0" />
+      <geometry>
+        <box size="0.006 0.006 0.023" />
+        </geometry>
+      </collision>
+    <collision name="tick_mid">
+      <origin xyz="0.222 0.272 -0.184" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.006 0.023" />
+        </geometry>
+      </collision>
+    <collision name="tick_high">
+      <origin xyz="0.257445 0.272 -0.197952" rpy="0 0.75 0" />
+      <geometry>
+        <box size="0.006 0.006 0.023" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller">
+    <visual name="rotor">
+      <geometry>
+        <mesh filename="assets/meshes/four_blade_propeller.obj" />
+        </geometry>
+      <material name="translucent_smoke_blade">
+        <color rgba="0.18 0.27 0.34 0.72" />
+        </material>
+      </visual>
+    <visual name="axle_stub">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.07" />
+        </geometry>
+      <material name="dark_motor_hub">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <collision name="rotor">
+      <geometry>
+        <mesh filename="assets/meshes/four_blade_propeller.obj" />
+        </geometry>
+      </collision>
+    <collision name="axle_stub">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="speed_knob">
+    <visual name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/speed_knob.obj" />
+        </geometry>
+      <material name="charcoal_knob">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="pointer_mark">
+      <origin xyz="0 0.01 0.0285" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.028 0.0016" />
+        </geometry>
+      <material name="white_indicator_mark">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <collision name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/speed_knob.obj" />
+        </geometry>
+      </collision>
+    <collision name="pointer_mark">
+      <origin xyz="0 0.01 0.0285" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.028 0.0016" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="pan_joint" type="revolute">
+    <parent link="wall_bracket" />
+    <child link="housing" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="0.8" lower="-0.78" upper="0.78" />
+    <dynamics damping="0.15" friction="0.04" />
+    </joint>
+  <joint name="propeller_axle" type="continuous">
+    <origin xyz="0 0.202 0" rpy="-1.5708 0 0" />
+    <parent link="housing" />
+    <child link="propeller" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.4" velocity="95" />
+    <dynamics damping="0.01" friction="0.002" />
+    </joint>
+  <joint name="speed_selector" type="revolute">
+    <origin xyz="0.222 0.272 -0.236" rpy="-1.5708 0 0" />
+    <parent link="housing" />
+    <child link="speed_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="2" lower="-0.85" upper="0.85" />
+    <dynamics damping="0.04" friction="0.03" />
+    </joint>
+  </robot>

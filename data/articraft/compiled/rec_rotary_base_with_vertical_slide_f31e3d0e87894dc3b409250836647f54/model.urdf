@@ -1,0 +1,397 @@
+<robot name="pedestal_rotary_lift">
+  <material name="dark_steel">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="blue_steel">
+    <color rgba="0.06 0.2 0.48 1" />
+    </material>
+  <material name="zinc_plated">
+    <color rgba="0.62 0.66 0.68 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.015 0.015 0.014 1" />
+    </material>
+  <material name="safety_orange">
+    <color rgba="0.92 0.38 0.06 1" />
+    </material>
+  <link name="foot">
+    <visual name="floor_disk">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.38" length="0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_column">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.112" length="0.16" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="bearing_housing">
+      <origin xyz="0 0 0.2025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.185" length="0.035" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_0">
+      <origin xyz="0.24 0 0.061" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.014" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_1">
+      <origin xyz="-0.24 0 0.061" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.014" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_2">
+      <origin xyz="0 0.24 0.061" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.014" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_3">
+      <origin xyz="0 -0.24 0.061" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.014" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <collision name="floor_disk">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.38" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_column">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.112" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="bearing_housing">
+      <origin xyz="0 0 0.2025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.185" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_0">
+      <origin xyz="0.24 0 0.061" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_1">
+      <origin xyz="-0.24 0 0.061" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_2">
+      <origin xyz="0 0.24 0.061" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_3">
+      <origin xyz="0 -0.24 0.061" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="platform">
+    <visual name="turntable_disk">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.07" />
+        </geometry>
+      <material name="blue_steel">
+        <color rgba="0.06 0.2 0.48 1" />
+        </material>
+      </visual>
+    <visual name="rotary_cap">
+      <origin xyz="0 0 0.0875" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.035" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="guide_foot">
+      <origin xyz="0 -0.01 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.18 0.06" />
+        </geometry>
+      <material name="blue_steel">
+        <color rgba="0.06 0.2 0.48 1" />
+        </material>
+      </visual>
+    <visual name="rail_0">
+      <origin xyz="-0.11 -0.06 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.07 0.78" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="rail_1">
+      <origin xyz="0.11 -0.06 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.07 0.78" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="rear_spine">
+      <origin xyz="0 0.062 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.055 0.78" />
+        </geometry>
+      <material name="blue_steel">
+        <color rgba="0.06 0.2 0.48 1" />
+        </material>
+      </visual>
+    <visual name="top_bridge">
+      <origin xyz="0 -0.015 0.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.15 0.06" />
+        </geometry>
+      <material name="blue_steel">
+        <color rgba="0.06 0.2 0.48 1" />
+        </material>
+      </visual>
+    <visual name="lower_stop">
+      <origin xyz="0 -0.102 0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.018 0.03" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="upper_stop">
+      <origin xyz="0 -0.102 0.835" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.018 0.03" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="turntable_disk">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="rotary_cap">
+      <origin xyz="0 0 0.0875" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="guide_foot">
+      <origin xyz="0 -0.01 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.18 0.06" />
+        </geometry>
+      </collision>
+    <collision name="rail_0">
+      <origin xyz="-0.11 -0.06 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.07 0.78" />
+        </geometry>
+      </collision>
+    <collision name="rail_1">
+      <origin xyz="0.11 -0.06 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.07 0.78" />
+        </geometry>
+      </collision>
+    <collision name="rear_spine">
+      <origin xyz="0 0.062 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.055 0.78" />
+        </geometry>
+      </collision>
+    <collision name="top_bridge">
+      <origin xyz="0 -0.015 0.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.15 0.06" />
+        </geometry>
+      </collision>
+    <collision name="lower_stop">
+      <origin xyz="0 -0.102 0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.018 0.03" />
+        </geometry>
+      </collision>
+    <collision name="upper_stop">
+      <origin xyz="0 -0.102 0.835" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.018 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_plate">
+    <visual name="plate_panel">
+      <origin xyz="0 -0.035 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.035 0.23" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="0.92 0.38 0.06 1" />
+        </material>
+      </visual>
+    <visual name="shoe_0">
+      <origin xyz="-0.11 -0.011 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.022 0.26" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="shoe_1">
+      <origin xyz="0.11 -0.011 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.022 0.26" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="grip_bar">
+      <origin xyz="0 -0.059 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.012 0.03" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="face_bolt_0">
+      <origin xyz="-0.075 -0.057 -0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="face_bolt_1">
+      <origin xyz="0.075 -0.057 -0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="face_bolt_2">
+      <origin xyz="-0.075 -0.057 0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="face_bolt_3">
+      <origin xyz="0.075 -0.057 0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="zinc_plated">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <collision name="plate_panel">
+      <origin xyz="0 -0.035 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.035 0.23" />
+        </geometry>
+      </collision>
+    <collision name="shoe_0">
+      <origin xyz="-0.11 -0.011 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.022 0.26" />
+        </geometry>
+      </collision>
+    <collision name="shoe_1">
+      <origin xyz="0.11 -0.011 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.022 0.26" />
+        </geometry>
+      </collision>
+    <collision name="grip_bar">
+      <origin xyz="0 -0.059 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.012 0.03" />
+        </geometry>
+      </collision>
+    <collision name="face_bolt_0">
+      <origin xyz="-0.075 -0.057 -0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="face_bolt_1">
+      <origin xyz="0.075 -0.057 -0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="face_bolt_2">
+      <origin xyz="-0.075 -0.057 0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="face_bolt_3">
+      <origin xyz="0.075 -0.057 0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="foot_to_platform" type="revolute">
+    <origin xyz="0 0 0.22" rpy="0 0 0" />
+    <parent link="foot" />
+    <child link="platform" />
+    <axis xyz="0 0 1" />
+    <limit effort="90" velocity="1.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="platform_to_front_plate" type="prismatic">
+    <origin xyz="0 -0.095 0.31" rpy="0 0 0" />
+    <parent link="platform" />
+    <child link="front_plate" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.25" lower="0" upper="0.32" />
+    </joint>
+  </robot>

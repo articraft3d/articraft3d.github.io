@@ -1,0 +1,622 @@
+<robot name="service_yoke_spotlight">
+  <material name="dark_cast_metal">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <material name="black_wrinkle_paint">
+    <color rgba="0.025 0.028 0.03 1" />
+    </material>
+  <material name="service_blue_enamel">
+    <color rgba="0.06 0.12 0.18 1" />
+    </material>
+  <material name="brushed_wear_steel">
+    <color rgba="0.62 0.6 0.55 1" />
+    </material>
+  <material name="replaceable_rubber">
+    <color rgba="0.015 0.014 0.013 1" />
+    </material>
+  <material name="ribbed_glass">
+    <color rgba="0.65 0.85 1 0.38" />
+    </material>
+  <material name="warm_reflector">
+    <color rgba="0.92 0.78 0.48 1" />
+    </material>
+  <material name="service_yellow">
+    <color rgba="0.95 0.7 0.08 1" />
+    </material>
+  <link name="stand_yoke">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.56 0.06" />
+        </geometry>
+      <material name="dark_cast_metal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="skid_pad_0">
+      <origin xyz="-0.3 -0.19 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.13 0.02" />
+        </geometry>
+      <material name="replaceable_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="skid_pad_1">
+      <origin xyz="-0.3 0.19 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.13 0.02" />
+        </geometry>
+      <material name="replaceable_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="skid_pad_2">
+      <origin xyz="0.3 -0.19 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.13 0.02" />
+        </geometry>
+      <material name="replaceable_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="skid_pad_3">
+      <origin xyz="0.3 0.19 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.13 0.02" />
+        </geometry>
+      <material name="replaceable_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="service_turntable">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.04" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="welded_mast">
+      <origin xyz="0 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.44" />
+        </geometry>
+      <material name="dark_cast_metal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="front_gusset">
+      <origin xyz="0 -0.08 0.27" rpy="0.314159 0 0" />
+      <geometry>
+        <box size="0.34 0.06 0.28" />
+        </geometry>
+      <material name="dark_cast_metal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="rear_gusset">
+      <origin xyz="0 0.08 0.27" rpy="-0.314159 0 0" />
+      <geometry>
+        <box size="0.34 0.06 0.28" />
+        </geometry>
+      <material name="dark_cast_metal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_yoke">
+      <origin xyz="0 0 0.5" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/chunky_trunnion_yoke.obj" />
+        </geometry>
+      <material name="dark_cast_metal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="front_service_rail">
+      <origin xyz="0 -0.09 0.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.035 0.04" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="rear_service_rail">
+      <origin xyz="0 0.09 0.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.035 0.04" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.56 0.06" />
+        </geometry>
+      </collision>
+    <collision name="skid_pad_0">
+      <origin xyz="-0.3 -0.19 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.13 0.02" />
+        </geometry>
+      </collision>
+    <collision name="skid_pad_1">
+      <origin xyz="-0.3 0.19 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.13 0.02" />
+        </geometry>
+      </collision>
+    <collision name="skid_pad_2">
+      <origin xyz="0.3 -0.19 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.13 0.02" />
+        </geometry>
+      </collision>
+    <collision name="skid_pad_3">
+      <origin xyz="0.3 0.19 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.13 0.02" />
+        </geometry>
+      </collision>
+    <collision name="service_turntable">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="welded_mast">
+      <origin xyz="0 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.44" />
+        </geometry>
+      </collision>
+    <collision name="front_gusset">
+      <origin xyz="0 -0.08 0.27" rpy="0.314159 0 0" />
+      <geometry>
+        <box size="0.34 0.06 0.28" />
+        </geometry>
+      </collision>
+    <collision name="rear_gusset">
+      <origin xyz="0 0.08 0.27" rpy="-0.314159 0 0" />
+      <geometry>
+        <box size="0.34 0.06 0.28" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_yoke">
+      <origin xyz="0 0 0.5" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/chunky_trunnion_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_service_rail">
+      <origin xyz="0 -0.09 0.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.035 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_service_rail">
+      <origin xyz="0 0.09 0.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.035 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="spotlight_can">
+    <visual name="can_shell">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tapered_spotlight_can.obj" />
+        </geometry>
+      <material name="service_blue_enamel">
+        <color rgba="0.06 0.12 0.18 1" />
+        </material>
+      </visual>
+    <visual name="reflector_bowl">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/deep_reflector_bowl.obj" />
+        </geometry>
+      <material name="warm_reflector">
+        <color rgba="0.92 0.78 0.48 1" />
+        </material>
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0 0.314 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.202" length="0.012" />
+        </geometry>
+      <material name="ribbed_glass">
+        <color rgba="0.65 0.85 1 0.38" />
+        </material>
+      </visual>
+    <visual name="side_boss_0">
+      <origin xyz="0.223 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.05" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="side_boss_1">
+      <origin xyz="-0.223 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.05" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="handle_post_0">
+      <origin xyz="0 -0.14 0.238" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.09" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="handle_post_1">
+      <origin xyz="0 0.12 0.246" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.09" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="top_service_handle">
+      <origin xyz="0 -0.01 0.29" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.28" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_bridge">
+      <origin xyz="0 -0.302 0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.03 0.035" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_leaf_0">
+      <origin xyz="-0.105 -0.323 0.178" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.018 0.035" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_leaf_1">
+      <origin xyz="0.105 -0.323 0.178" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.018 0.035" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_knuckle_0">
+      <origin xyz="-0.105 -0.335 0.183" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.075" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_knuckle_1">
+      <origin xyz="0.105 -0.335 0.183" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.075" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_pin">
+      <origin xyz="0 -0.335 0.183" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.245" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <collision name="can_shell">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tapered_spotlight_can.obj" />
+        </geometry>
+      </collision>
+    <collision name="reflector_bowl">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/deep_reflector_bowl.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_lens">
+      <origin xyz="0 0.314 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.202" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="side_boss_0">
+      <origin xyz="0.223 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="side_boss_1">
+      <origin xyz="-0.223 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="handle_post_0">
+      <origin xyz="0 -0.14 0.238" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="handle_post_1">
+      <origin xyz="0 0.12 0.246" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="top_service_handle">
+      <origin xyz="0 -0.01 0.29" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.28" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_bridge">
+      <origin xyz="0 -0.302 0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.03 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_leaf_0">
+      <origin xyz="-0.105 -0.323 0.178" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.018 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_leaf_1">
+      <origin xyz="0.105 -0.323 0.178" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.018 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_knuckle_0">
+      <origin xyz="-0.105 -0.335 0.183" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.075" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_knuckle_1">
+      <origin xyz="0.105 -0.335 0.183" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.075" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_pin">
+      <origin xyz="0 -0.335 0.183" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.245" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rear_hatch">
+    <visual name="hatch_panel">
+      <origin xyz="0 -0.025 -0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.02 0.19" />
+        </geometry>
+      <material name="black_wrinkle_paint">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <visual name="hatch_hinge_leaf">
+      <origin xyz="0 -0.019 -0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.016 0.032" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="hatch_knuckle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.09" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="quarter_turn_latch">
+      <origin xyz="0 -0.036 -0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.012 0.03" />
+        </geometry>
+      <material name="service_yellow">
+        <color rgba="0.95 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="service_gasket">
+      <origin xyz="0 -0.039 -0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.008 0.155" />
+        </geometry>
+      <material name="replaceable_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <collision name="hatch_panel">
+      <origin xyz="0 -0.025 -0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.02 0.19" />
+        </geometry>
+      </collision>
+    <collision name="hatch_hinge_leaf">
+      <origin xyz="0 -0.019 -0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.016 0.032" />
+        </geometry>
+      </collision>
+    <collision name="hatch_knuckle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="quarter_turn_latch">
+      <origin xyz="0 -0.036 -0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.012 0.03" />
+        </geometry>
+      </collision>
+    <collision name="service_gasket">
+      <origin xyz="0 -0.039 -0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.008 0.155" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tilt_lock_0">
+    <visual name="threaded_stem">
+      <origin xyz="0.059 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.118" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="friction_washer">
+      <origin xyz="0.117 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.012" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="lobed_knob">
+      <origin xyz="0.123 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lobed_lock_knob.obj" />
+        </geometry>
+      <material name="black_wrinkle_paint">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <collision name="threaded_stem">
+      <origin xyz="0.059 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.118" />
+        </geometry>
+      </collision>
+    <collision name="friction_washer">
+      <origin xyz="0.117 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="lobed_knob">
+      <origin xyz="0.123 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lobed_lock_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tilt_lock_1">
+    <visual name="threaded_stem">
+      <origin xyz="-0.059 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.118" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="friction_washer">
+      <origin xyz="-0.117 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.012" />
+        </geometry>
+      <material name="brushed_wear_steel">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="lobed_knob">
+      <origin xyz="-0.123 0 0" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lobed_lock_knob.obj" />
+        </geometry>
+      <material name="black_wrinkle_paint">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <collision name="threaded_stem">
+      <origin xyz="-0.059 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.118" />
+        </geometry>
+      </collision>
+    <collision name="friction_washer">
+      <origin xyz="-0.117 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="lobed_knob">
+      <origin xyz="-0.123 0 0" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lobed_lock_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="can_to_tilt_lock_0" type="continuous">
+    <origin xyz="0.248 0 0" rpy="0 0 0" />
+    <parent link="spotlight_can" />
+    <child link="tilt_lock_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="3" velocity="4" />
+    <dynamics damping="0.05" friction="0.6" />
+    </joint>
+  <joint name="can_to_tilt_lock_1" type="continuous">
+    <origin xyz="-0.248 0 0" rpy="0 0 0" />
+    <parent link="spotlight_can" />
+    <child link="tilt_lock_1" />
+    <axis xyz="-1 0 0" />
+    <limit effort="3" velocity="4" />
+    <dynamics damping="0.05" friction="0.6" />
+    </joint>
+  <joint name="can_to_yoke" type="revolute">
+    <origin xyz="0 0 0.93" rpy="0 0 0" />
+    <parent link="stand_yoke" />
+    <child link="spotlight_can" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="0.8" lower="-0.733038" upper="1.01229" />
+    <dynamics damping="0.8" friction="4" />
+    </joint>
+  <joint name="can_to_rear_hatch" type="revolute">
+    <origin xyz="0 -0.335 0.183" rpy="0 0 0" />
+    <parent link="spotlight_can" />
+    <child link="rear_hatch" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="1" lower="0" upper="1.8326" />
+    </joint>
+  </robot>

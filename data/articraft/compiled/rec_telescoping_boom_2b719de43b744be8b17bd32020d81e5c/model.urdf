@@ -1,0 +1,426 @@
+<robot name="bridge_backed_telescoping_reach_arm">
+  <material name="dark_steel">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.015 0.015 0.012 1" />
+    </material>
+  <material name="brushed_outer">
+    <color rgba="0.62 0.66 0.68 1" />
+    </material>
+  <material name="brushed_middle">
+    <color rgba="0.76 0.78 0.78 1" />
+    </material>
+  <material name="brushed_inner">
+    <color rgba="0.86 0.87 0.86 1" />
+    </material>
+  <material name="plain_tip">
+    <color rgba="0.7 0.71 0.7 1" />
+    </material>
+  <link name="rear_support">
+    <visual name="base_plate">
+      <origin xyz="-0.1 0 -0.65" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.4 0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="rear_post_negative">
+      <origin xyz="-0.11 -0.135 -0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.04 0.62" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="rear_post_positive">
+      <origin xyz="-0.11 0.135 -0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.04 0.62" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="upper_bridge">
+      <origin xyz="-0.1 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.32 0.05" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="lower_bridge">
+      <origin xyz="-0.1 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.32 0.04" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="guide_side_negative">
+      <origin xyz="0.1 -0.105 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.025 0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="guide_side_positive">
+      <origin xyz="0.1 0.105 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.025 0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_lower">
+      <origin xyz="0.1 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.24 0.035" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_upper">
+      <origin xyz="0.1 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.24 0.035" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_wear_pad">
+      <origin xyz="0.275 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.23 0.03" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.012 1" />
+        </material>
+      </visual>
+    <visual name="bridge_liner_lower">
+      <origin xyz="0.08 0 -0.06125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.17 0.0125" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.012 1" />
+        </material>
+      </visual>
+    <visual name="bridge_liner_upper">
+      <origin xyz="0.08 0 0.06125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.17 0.0125" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.012 1" />
+        </material>
+      </visual>
+    <visual name="bridge_liner_negative">
+      <origin xyz="0.08 -0.08625 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.0125 0.11" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.012 1" />
+        </material>
+      </visual>
+    <visual name="bridge_liner_positive">
+      <origin xyz="0.08 0.08625 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.0125 0.11" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.012 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="-0.1 0 -0.65" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.4 0.06" />
+        </geometry>
+      </collision>
+    <collision name="rear_post_negative">
+      <origin xyz="-0.11 -0.135 -0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.04 0.62" />
+        </geometry>
+      </collision>
+    <collision name="rear_post_positive">
+      <origin xyz="-0.11 0.135 -0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.04 0.62" />
+        </geometry>
+      </collision>
+    <collision name="upper_bridge">
+      <origin xyz="-0.1 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.32 0.05" />
+        </geometry>
+      </collision>
+    <collision name="lower_bridge">
+      <origin xyz="-0.1 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.32 0.04" />
+        </geometry>
+      </collision>
+    <collision name="guide_side_negative">
+      <origin xyz="0.1 -0.105 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.025 0.22" />
+        </geometry>
+      </collision>
+    <collision name="guide_side_positive">
+      <origin xyz="0.1 0.105 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.025 0.22" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_lower">
+      <origin xyz="0.1 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.24 0.035" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_upper">
+      <origin xyz="0.1 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.24 0.035" />
+        </geometry>
+      </collision>
+    <collision name="front_wear_pad">
+      <origin xyz="0.275 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.23 0.03" />
+        </geometry>
+      </collision>
+    <collision name="bridge_liner_lower">
+      <origin xyz="0.08 0 -0.06125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.17 0.0125" />
+        </geometry>
+      </collision>
+    <collision name="bridge_liner_upper">
+      <origin xyz="0.08 0 0.06125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.17 0.0125" />
+        </geometry>
+      </collision>
+    <collision name="bridge_liner_negative">
+      <origin xyz="0.08 -0.08625 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.0125 0.11" />
+        </geometry>
+      </collision>
+    <collision name="bridge_liner_positive">
+      <origin xyz="0.08 0.08625 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.0125 0.11" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="outer_section">
+    <visual name="outer_tube">
+      <geometry>
+        <mesh filename="assets/meshes/outer_section_tube.obj" />
+        </geometry>
+      <material name="brushed_outer">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <collision name="outer_tube">
+      <geometry>
+        <mesh filename="assets/meshes/outer_section_tube.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="middle_section">
+    <visual name="middle_tube">
+      <geometry>
+        <mesh filename="assets/meshes/middle_section_tube.obj" />
+        </geometry>
+      <material name="brushed_middle">
+        <color rgba="0.76 0.78 0.78 1" />
+        </material>
+      </visual>
+    <visual name="middle_glide_lower">
+      <origin xyz="-0.36 0 -0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.06 0.004" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.012 1" />
+        </material>
+      </visual>
+    <visual name="middle_glide_upper">
+      <origin xyz="-0.36 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.06 0.004" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.012 1" />
+        </material>
+      </visual>
+    <collision name="middle_tube">
+      <geometry>
+        <mesh filename="assets/meshes/middle_section_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="middle_glide_lower">
+      <origin xyz="-0.36 0 -0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.06 0.004" />
+        </geometry>
+      </collision>
+    <collision name="middle_glide_upper">
+      <origin xyz="-0.36 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.06 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="inner_section">
+    <visual name="inner_tube">
+      <geometry>
+        <mesh filename="assets/meshes/inner_section_tube.obj" />
+        </geometry>
+      <material name="brushed_inner">
+        <color rgba="0.86 0.87 0.86 1" />
+        </material>
+      </visual>
+    <visual name="inner_glide_lower">
+      <origin xyz="-0.3 0 -0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.046 0.002" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.012 1" />
+        </material>
+      </visual>
+    <visual name="inner_glide_upper">
+      <origin xyz="-0.3 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.046 0.002" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.012 1" />
+        </material>
+      </visual>
+    <collision name="inner_tube">
+      <geometry>
+        <mesh filename="assets/meshes/inner_section_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="inner_glide_lower">
+      <origin xyz="-0.3 0 -0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.046 0.002" />
+        </geometry>
+      </collision>
+    <collision name="inner_glide_upper">
+      <origin xyz="-0.3 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.046 0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tip_section">
+    <visual name="tip_bar">
+      <origin xyz="-0.03 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.06 0.034" />
+        </geometry>
+      <material name="plain_tip">
+        <color rgba="0.7 0.71 0.7 1" />
+        </material>
+      </visual>
+    <visual name="plain_tip_face">
+      <origin xyz="0.244 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.064 0.038" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tip_glide_lower">
+      <origin xyz="-0.25 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.034 0.002" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tip_glide_upper">
+      <origin xyz="-0.25 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.034 0.002" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.012 1" />
+        </material>
+      </visual>
+    <collision name="tip_bar">
+      <origin xyz="-0.03 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.06 0.034" />
+        </geometry>
+      </collision>
+    <collision name="plain_tip_face">
+      <origin xyz="0.244 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.064 0.038" />
+        </geometry>
+      </collision>
+    <collision name="tip_glide_lower">
+      <origin xyz="-0.25 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.034 0.002" />
+        </geometry>
+      </collision>
+    <collision name="tip_glide_upper">
+      <origin xyz="-0.25 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.034 0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="support_to_outer" type="prismatic">
+    <parent link="rear_support" />
+    <child link="outer_section" />
+    <axis xyz="1 0 0" />
+    <limit effort="130" velocity="0.3" lower="0" upper="0.18" />
+    </joint>
+  <joint name="outer_to_middle" type="prismatic">
+    <origin xyz="0.7 0 0" rpy="0 0 0" />
+    <parent link="outer_section" />
+    <child link="middle_section" />
+    <axis xyz="1 0 0" />
+    <limit effort="95" velocity="0.28" lower="0" upper="0.28" />
+    </joint>
+  <joint name="middle_to_inner" type="prismatic">
+    <origin xyz="0.32 0 0" rpy="0 0 0" />
+    <parent link="middle_section" />
+    <child link="inner_section" />
+    <axis xyz="1 0 0" />
+    <limit effort="70" velocity="0.26" lower="0" upper="0.23" />
+    </joint>
+  <joint name="inner_to_tip" type="prismatic">
+    <origin xyz="0.27 0 0" rpy="0 0 0" />
+    <parent link="inner_section" />
+    <child link="tip_section" />
+    <axis xyz="1 0 0" />
+    <limit effort="45" velocity="0.22" lower="0" upper="0.18" />
+    </joint>
+  </robot>

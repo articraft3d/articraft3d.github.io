@@ -1,0 +1,418 @@
+<robot name="bakery_prep_stand_mixer">
+  <material name="warm_cream_enamel">
+    <color rgba="0.86 0.78 0.62 1" />
+    </material>
+  <material name="shadowed_cream">
+    <color rgba="0.64 0.56 0.43 1" />
+    </material>
+  <material name="brushed_stainless_steel">
+    <color rgba="0.72 0.74 0.73 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.025 0.024 0.022 1" />
+    </material>
+  <material name="red_release">
+    <color rgba="0.62 0.08 0.045 1" />
+    </material>
+  <link name="base">
+    <visual name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/base_shell.obj" />
+        </geometry>
+      <material name="warm_cream_enamel">
+        <color rgba="0.86 0.78 0.62 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_shell">
+      <origin xyz="0 -0.24 0.355" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_shell.obj" />
+        </geometry>
+      <material name="warm_cream_enamel">
+        <color rgba="0.86 0.78 0.62 1" />
+        </material>
+      </visual>
+    <visual name="reinforced_throat">
+      <origin xyz="0 -0.16 0.185" rpy="-0.174533 0 0" />
+      <geometry>
+        <box size="0.24 0.18 0.16" />
+        </geometry>
+      <material name="shadowed_cream">
+        <color rgba="0.64 0.56 0.43 1" />
+        </material>
+      </visual>
+    <visual name="slide_rail_0">
+      <origin xyz="-0.12 0.14 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.44 0.03" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="slide_rail_1">
+      <origin xyz="0.12 0.14 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.44 0.03" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 -0.26 0.62" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.3" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <collision name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/base_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_shell">
+      <origin xyz="0 -0.24 0.355" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="reinforced_throat">
+      <origin xyz="0 -0.16 0.185" rpy="-0.174533 0 0" />
+      <geometry>
+        <box size="0.24 0.18 0.16" />
+        </geometry>
+      </collision>
+    <collision name="slide_rail_0">
+      <origin xyz="-0.12 0.14 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.44 0.03" />
+        </geometry>
+      </collision>
+    <collision name="slide_rail_1">
+      <origin xyz="0.12 0.14 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.44 0.03" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 -0.26 0.62" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.3" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bowl_carriage">
+    <visual name="slide_plate">
+      <origin xyz="0 0.02 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.32 0.024" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="front_crossbar">
+      <origin xyz="0 0.17 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.03 0.04" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="side_yoke_0">
+      <origin xyz="-0.155 0.035 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.075 0.112" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="side_yoke_1">
+      <origin xyz="0.155 0.035 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.075 0.112" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="saddle_ring">
+      <origin xyz="0 0.035 0.034" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bowl_saddle_ring.obj" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="large_bowl">
+      <origin xyz="0 0.035 0.024" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/large_bowl_shell.obj" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <collision name="slide_plate">
+      <origin xyz="0 0.02 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.32 0.024" />
+        </geometry>
+      </collision>
+    <collision name="front_crossbar">
+      <origin xyz="0 0.17 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.03 0.04" />
+        </geometry>
+      </collision>
+    <collision name="side_yoke_0">
+      <origin xyz="-0.155 0.035 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.075 0.112" />
+        </geometry>
+      </collision>
+    <collision name="side_yoke_1">
+      <origin xyz="0.155 0.035 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.075 0.112" />
+        </geometry>
+      </collision>
+    <collision name="saddle_ring">
+      <origin xyz="0 0.035 0.034" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bowl_saddle_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="large_bowl">
+      <origin xyz="0 0.035 0.024" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/large_bowl_shell.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tilt_head">
+    <visual name="hinge_lug_0">
+      <origin xyz="-0.18 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.06" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_0">
+      <origin xyz="-0.19 0.055 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.095 0.06" />
+        </geometry>
+      <material name="warm_cream_enamel">
+        <color rgba="0.86 0.78 0.62 1" />
+        </material>
+      </visual>
+    <visual name="hinge_lug_1">
+      <origin xyz="0.18 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.06" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_1">
+      <origin xyz="0.19 0.055 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.095 0.06" />
+        </geometry>
+      <material name="warm_cream_enamel">
+        <color rgba="0.86 0.78 0.62 1" />
+        </material>
+      </visual>
+    <visual name="rear_bridge">
+      <origin xyz="0 0.12 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.055 0.05" />
+        </geometry>
+      <material name="warm_cream_enamel">
+        <color rgba="0.86 0.78 0.62 1" />
+        </material>
+      </visual>
+    <visual name="head_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tilt_head_shell.obj" />
+        </geometry>
+      <material name="warm_cream_enamel">
+        <color rgba="0.86 0.78 0.62 1" />
+        </material>
+      </visual>
+    <visual name="planetary_socket">
+      <origin xyz="0 0.39 -0.15" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.05" />
+        </geometry>
+      <material name="shadowed_cream">
+        <color rgba="0.64 0.56 0.43 1" />
+        </material>
+      </visual>
+    <collision name="hinge_lug_0">
+      <origin xyz="-0.18 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_0">
+      <origin xyz="-0.19 0.055 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.095 0.06" />
+        </geometry>
+      </collision>
+    <collision name="hinge_lug_1">
+      <origin xyz="0.18 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_1">
+      <origin xyz="0.19 0.055 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.095 0.06" />
+        </geometry>
+      </collision>
+    <collision name="rear_bridge">
+      <origin xyz="0 0.12 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.055 0.05" />
+        </geometry>
+      </collision>
+    <collision name="head_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tilt_head_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="planetary_socket">
+      <origin xyz="0 0.39 -0.15" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.05" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dough_hook">
+    <visual name="drive_coupling">
+      <origin xyz="0 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.06" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <visual name="c_hook">
+      <geometry>
+        <mesh filename="assets/meshes/c_hook_tube.obj" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.74 0.73 1" />
+        </material>
+      </visual>
+    <collision name="drive_coupling">
+      <origin xyz="0 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="c_hook">
+      <geometry>
+        <mesh filename="assets/meshes/c_hook_tube.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="speed_selector">
+    <visual name="selector_knob">
+      <origin xyz="0.009 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/speed_selector_knob.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <visual name="selector_pointer">
+      <origin xyz="0.017 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.012 0.072" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    <collision name="selector_knob">
+      <origin xyz="0.009 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/speed_selector_knob.obj" />
+        </geometry>
+      </collision>
+    <collision name="selector_pointer">
+      <origin xyz="0.017 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.012 0.072" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lock_release">
+    <visual name="release_button">
+      <origin xyz="0 0.013 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.026 0.032" />
+        </geometry>
+      <material name="red_release">
+        <color rgba="0.62 0.08 0.045 1" />
+        </material>
+      </visual>
+    <collision name="release_button">
+      <origin xyz="0 0.013 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.026 0.032" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="bowl_slide" type="prismatic">
+    <origin xyz="0 0.1 0.16" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="bowl_carriage" />
+    <axis xyz="0 1 0" />
+    <limit effort="140" velocity="0.18" lower="0" upper="0.08" />
+    </joint>
+  <joint name="head_hinge" type="revolute">
+    <origin xyz="0 -0.26 0.62" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="tilt_head" />
+    <axis xyz="1 0 0" />
+    <limit effort="85" velocity="1.1" lower="0" upper="1.05" />
+    </joint>
+  <joint name="hook_spin" type="continuous">
+    <origin xyz="0 0.39 -0.175" rpy="0 0 0" />
+    <parent link="tilt_head" />
+    <child link="dough_hook" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="18" />
+    </joint>
+  <joint name="speed_pivot" type="revolute">
+    <origin xyz="0.1247 -0.2 0.35" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="speed_selector" />
+    <axis xyz="1 0 0" />
+    <limit effort="1.2" velocity="2.5" lower="-0.55" upper="0.55" />
+    </joint>
+  <joint name="lock_release_slide" type="prismatic">
+    <origin xyz="0 0.38 0.075" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="lock_release" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="0.12" lower="0" upper="0.025" />
+    </joint>
+  </robot>

@@ -1,0 +1,311 @@
+<robot name="compact_service_shuttle">
+  <material name="charcoal_powder_coat">
+    <color rgba="0.07 0.08 0.09 1" />
+    </material>
+  <material name="dark_cast_aluminum">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.62 0.65 0.66 1" />
+    </material>
+  <material name="blue_gray_anodized">
+    <color rgba="0.22 0.28 0.34 1" />
+    </material>
+  <material name="satin_spindle_steel">
+    <color rgba="0.74 0.76 0.75 1" />
+    </material>
+  <material name="blackened_tool_steel">
+    <color rgba="0.035 0.035 0.038 1" />
+    </material>
+  <material name="service_blue">
+    <color rgba="0 0.28 0.72 1" />
+    </material>
+  <link name="body">
+    <visual name="base_pan">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.25 0.05" />
+        </geometry>
+      <material name="charcoal_powder_coat">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="raised_deck">
+      <origin xyz="0 0 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.18 0.035" />
+        </geometry>
+      <material name="dark_cast_aluminum">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rail_0">
+      <origin xyz="0 -0.06 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.024 0.03" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="rail_1">
+      <origin xyz="0 0.06 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.024 0.03" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_0">
+      <origin xyz="-0.285 0 0.1125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.18 0.055" />
+        </geometry>
+      <material name="blackened_tool_steel">
+        <color rgba="0.035 0.035 0.038 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_1">
+      <origin xyz="0.285 0 0.1125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.18 0.055" />
+        </geometry>
+      <material name="blackened_tool_steel">
+        <color rgba="0.035 0.035 0.038 1" />
+        </material>
+      </visual>
+    <visual name="service_panel">
+      <origin xyz="-0.06 0.124 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.006 0.03" />
+        </geometry>
+      <material name="service_blue">
+        <color rgba="0 0.28 0.72 1" />
+        </material>
+      </visual>
+    <collision name="base_pan">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.25 0.05" />
+        </geometry>
+      </collision>
+    <collision name="raised_deck">
+      <origin xyz="0 0 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.18 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rail_0">
+      <origin xyz="0 -0.06 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.024 0.03" />
+        </geometry>
+      </collision>
+    <collision name="rail_1">
+      <origin xyz="0 0.06 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.024 0.03" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_0">
+      <origin xyz="-0.285 0 0.1125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.18 0.055" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_1">
+      <origin xyz="0.285 0 0.1125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.18 0.055" />
+        </geometry>
+      </collision>
+    <collision name="service_panel">
+      <origin xyz="-0.06 0.124 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.006 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carriage">
+    <visual name="carriage_block">
+      <geometry>
+        <box size="0.22 0.155 0.07" />
+        </geometry>
+      <material name="blue_gray_anodized">
+        <color rgba="0.22 0.28 0.34 1" />
+        </material>
+      </visual>
+    <visual name="top_cover">
+      <origin xyz="-0.025 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.105 0.025" />
+        </geometry>
+      <material name="blue_gray_anodized">
+        <color rgba="0.22 0.28 0.34 1" />
+        </material>
+      </visual>
+    <visual name="travel_mark">
+      <origin xyz="-0.03 0.052 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.006 0.011" />
+        </geometry>
+      <material name="service_blue">
+        <color rgba="0 0.28 0.72 1" />
+        </material>
+      </visual>
+    <visual name="bearing_top">
+      <origin xyz="0.128 0 0.089" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.116 0.014" />
+        </geometry>
+      <material name="blue_gray_anodized">
+        <color rgba="0.22 0.28 0.34 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bottom">
+      <origin xyz="0.128 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.116 0.014" />
+        </geometry>
+      <material name="blue_gray_anodized">
+        <color rgba="0.22 0.28 0.34 1" />
+        </material>
+      </visual>
+    <visual name="bearing_side_0">
+      <origin xyz="0.128 -0.029 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.014 0.076" />
+        </geometry>
+      <material name="blue_gray_anodized">
+        <color rgba="0.22 0.28 0.34 1" />
+        </material>
+      </visual>
+    <visual name="bearing_side_1">
+      <origin xyz="0.128 0.029 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.014 0.076" />
+        </geometry>
+      <material name="blue_gray_anodized">
+        <color rgba="0.22 0.28 0.34 1" />
+        </material>
+      </visual>
+    <collision name="carriage_block">
+      <geometry>
+        <box size="0.22 0.155 0.07" />
+        </geometry>
+      </collision>
+    <collision name="top_cover">
+      <origin xyz="-0.025 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.105 0.025" />
+        </geometry>
+      </collision>
+    <collision name="travel_mark">
+      <origin xyz="-0.03 0.052 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.006 0.011" />
+        </geometry>
+      </collision>
+    <collision name="bearing_top">
+      <origin xyz="0.128 0 0.089" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.116 0.014" />
+        </geometry>
+      </collision>
+    <collision name="bearing_bottom">
+      <origin xyz="0.128 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.116 0.014" />
+        </geometry>
+      </collision>
+    <collision name="bearing_side_0">
+      <origin xyz="0.128 -0.029 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.014 0.076" />
+        </geometry>
+      </collision>
+    <collision name="bearing_side_1">
+      <origin xyz="0.128 0.029 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.014 0.076" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="spindle">
+    <visual name="shaft">
+      <origin xyz="0.035 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.15" />
+        </geometry>
+      <material name="blackened_tool_steel">
+        <color rgba="0.035 0.035 0.038 1" />
+        </material>
+      </visual>
+    <visual name="cartridge">
+      <origin xyz="0.038 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="satin_spindle_steel">
+        <color rgba="0.74 0.76 0.75 1" />
+        </material>
+      </visual>
+    <visual name="index_mark">
+      <origin xyz="0.048 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.008 0.006" />
+        </geometry>
+      <material name="service_blue">
+        <color rgba="0 0.28 0.72 1" />
+        </material>
+      </visual>
+    <visual name="tip">
+      <origin xyz="0.104 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spindle_tip.obj" />
+        </geometry>
+      <material name="blackened_tool_steel">
+        <color rgba="0.035 0.035 0.038 1" />
+        </material>
+      </visual>
+    <collision name="shaft">
+      <origin xyz="0.035 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.15" />
+        </geometry>
+      </collision>
+    <collision name="cartridge">
+      <origin xyz="0.038 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="index_mark">
+      <origin xyz="0.048 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.008 0.006" />
+        </geometry>
+      </collision>
+    <collision name="tip">
+      <origin xyz="0.104 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spindle_tip.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_carriage" type="prismatic">
+    <origin xyz="-0.12 0 0.15" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="80" velocity="0.35" lower="0" upper="0.22" />
+    </joint>
+  <joint name="carriage_to_spindle" type="revolute">
+    <origin xyz="0.128 0 0.06" rpy="0 0 0" />
+    <parent link="carriage" />
+    <child link="spindle" />
+    <axis xyz="1 0 0" />
+    <limit effort="2" velocity="40" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

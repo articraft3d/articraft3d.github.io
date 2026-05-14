@@ -1,0 +1,812 @@
+<robot name="detailed_canister_vacuum">
+  <material name="deep_blue_shell">
+    <color rgba="0.04 0.08 0.13 1" />
+    </material>
+  <material name="soft_black">
+    <color rgba="0.01 0.011 0.012 1" />
+    </material>
+  <material name="dark_grey_plastic">
+    <color rgba="0.1 0.11 0.115 1" />
+    </material>
+  <material name="matte_rubber">
+    <color rgba="0.015 0.014 0.013 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.73 0.74 0.72 1" />
+    </material>
+  <material name="blue_trim">
+    <color rgba="0.05 0.28 0.65 1" />
+    </material>
+  <material name="smoked_clear_bin">
+    <color rgba="0.53 0.72 0.83 0.46" />
+    </material>
+  <material name="red_release">
+    <color rgba="0.85 0.05 0.025 1" />
+    </material>
+  <link name="body">
+    <visual name="rounded_shell">
+      <geometry>
+        <mesh filename="assets/meshes/canister_rounded_shell.obj" />
+        </geometry>
+      <material name="deep_blue_shell">
+        <color rgba="0.04 0.08 0.13 1" />
+        </material>
+      </visual>
+    <visual name="clear_dust_bin">
+      <origin xyz="0.085 0 0.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.23" />
+        </geometry>
+      <material name="smoked_clear_bin">
+        <color rgba="0.53 0.72 0.83 0.46" />
+        </material>
+      </visual>
+    <visual name="bin_rear_cap">
+      <origin xyz="-0.04 0 0.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.111" length="0.02" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="hose_socket">
+      <origin xyz="0.292 0 0.205" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.084" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="socket_gasket">
+      <origin xyz="0.337 0 0.205" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.068" length="0.012" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="carry_handle">
+      <geometry>
+        <mesh filename="assets/meshes/body_carry_handle.obj" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="side_exhaust_grille">
+      <origin xyz="0.015 -0.187 0.21" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_exhaust_grille.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="power_button_well">
+      <origin xyz="-0.08 0 0.35" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.008" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="rear_wheel_0">
+      <origin xyz="-0.195 0.183 0.079" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_tire.obj" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="wheel_hub_0">
+      <origin xyz="-0.195 0.183 0.079" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.046" />
+        </geometry>
+      <material name="blue_trim">
+        <color rgba="0.05 0.28 0.65 1" />
+        </material>
+      </visual>
+    <visual name="rear_wheel_1">
+      <origin xyz="-0.195 -0.183 0.079" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_tire.obj" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="wheel_hub_1">
+      <origin xyz="-0.195 -0.183 0.079" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.046" />
+        </geometry>
+      <material name="blue_trim">
+        <color rgba="0.05 0.28 0.65 1" />
+        </material>
+      </visual>
+    <visual name="front_caster_wheel">
+      <origin xyz="0.21 0 0.031" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.06" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="caster_fork">
+      <origin xyz="0.21 0 0.072" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.09 0.03" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <collision name="rounded_shell">
+      <geometry>
+        <mesh filename="assets/meshes/canister_rounded_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="clear_dust_bin">
+      <origin xyz="0.085 0 0.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.23" />
+        </geometry>
+      </collision>
+    <collision name="bin_rear_cap">
+      <origin xyz="-0.04 0 0.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.111" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="hose_socket">
+      <origin xyz="0.292 0 0.205" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.084" />
+        </geometry>
+      </collision>
+    <collision name="socket_gasket">
+      <origin xyz="0.337 0 0.205" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.068" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="carry_handle">
+      <geometry>
+        <mesh filename="assets/meshes/body_carry_handle.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_exhaust_grille">
+      <origin xyz="0.015 -0.187 0.21" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_exhaust_grille.obj" />
+        </geometry>
+      </collision>
+    <collision name="power_button_well">
+      <origin xyz="-0.08 0 0.35" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="rear_wheel_0">
+      <origin xyz="-0.195 0.183 0.079" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="wheel_hub_0">
+      <origin xyz="-0.195 0.183 0.079" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.046" />
+        </geometry>
+      </collision>
+    <collision name="rear_wheel_1">
+      <origin xyz="-0.195 -0.183 0.079" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="wheel_hub_1">
+      <origin xyz="-0.195 -0.183 0.079" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.046" />
+        </geometry>
+      </collision>
+    <collision name="front_caster_wheel">
+      <origin xyz="0.21 0 0.031" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="caster_fork">
+      <origin xyz="0.21 0 0.072" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.09 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="power_button">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.02" />
+        </geometry>
+      <material name="red_release">
+        <color rgba="0.85 0.05 0.025 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="hose">
+    <visual name="body_coupler">
+      <origin xyz="0.049 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.08" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="corrugated_tube">
+      <geometry>
+        <mesh filename="assets/meshes/flexible_hose_tube.obj" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="hose_ridge_0">
+      <origin xyz="0.115 0 0.11" rpy="0 0.32 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="hose_ridge_1">
+      <origin xyz="0.145 0 0.198" rpy="0 0.32 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="hose_ridge_2">
+      <origin xyz="0.195 0 0.3" rpy="0 0.5 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="hose_ridge_3">
+      <origin xyz="0.245 0 0.39" rpy="0 0.5 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="hose_ridge_4">
+      <origin xyz="0.3 0 0.485" rpy="0 0.5 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="hose_ridge_5">
+      <origin xyz="0.365 0 0.565" rpy="0 0.8 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="hose_ridge_6">
+      <origin xyz="0.44 0 0.615" rpy="0 1.05 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="hose_ridge_7">
+      <origin xyz="0.505 0 0.648" rpy="0 1.18 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="handle_coupler">
+      <origin xyz="0.512 0 0.646" rpy="0 1.12 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.06" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <collision name="body_coupler">
+      <origin xyz="0.049 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="corrugated_tube">
+      <geometry>
+        <mesh filename="assets/meshes/flexible_hose_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="hose_ridge_0">
+      <origin xyz="0.115 0 0.11" rpy="0 0.32 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      </collision>
+    <collision name="hose_ridge_1">
+      <origin xyz="0.145 0 0.198" rpy="0 0.32 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      </collision>
+    <collision name="hose_ridge_2">
+      <origin xyz="0.195 0 0.3" rpy="0 0.5 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      </collision>
+    <collision name="hose_ridge_3">
+      <origin xyz="0.245 0 0.39" rpy="0 0.5 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      </collision>
+    <collision name="hose_ridge_4">
+      <origin xyz="0.3 0 0.485" rpy="0 0.5 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      </collision>
+    <collision name="hose_ridge_5">
+      <origin xyz="0.365 0 0.565" rpy="0 0.8 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      </collision>
+    <collision name="hose_ridge_6">
+      <origin xyz="0.44 0 0.615" rpy="0 1.05 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      </collision>
+    <collision name="hose_ridge_7">
+      <origin xyz="0.505 0 0.648" rpy="0 1.18 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hose_ridge.obj" />
+        </geometry>
+      </collision>
+    <collision name="handle_coupler">
+      <origin xyz="0.512 0 0.646" rpy="0 1.12 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="handle">
+    <visual name="hose_receiver">
+      <origin xyz="0.038 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.075" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="wand_socket">
+      <geometry>
+        <mesh filename="assets/meshes/angled_wand_socket.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="grip_loop">
+      <geometry>
+        <mesh filename="assets/meshes/ergonomic_handle_loop.obj" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rubber_grip_pad">
+      <origin xyz="0.095 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.034 0.04" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <collision name="hose_receiver">
+      <origin xyz="0.038 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.075" />
+        </geometry>
+      </collision>
+    <collision name="wand_socket">
+      <geometry>
+        <mesh filename="assets/meshes/angled_wand_socket.obj" />
+        </geometry>
+      </collision>
+    <collision name="grip_loop">
+      <geometry>
+        <mesh filename="assets/meshes/ergonomic_handle_loop.obj" />
+        </geometry>
+      </collision>
+    <collision name="rubber_grip_pad">
+      <origin xyz="0.095 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.034 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="trigger">
+    <visual name="trigger_paddle">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.022 0.012" />
+        </geometry>
+      <material name="red_release">
+        <color rgba="0.85 0.05 0.025 1" />
+        </material>
+      </visual>
+    <collision name="trigger_paddle">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.022 0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_wand">
+    <visual name="upper_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/upper_wand_hollow_sleeve.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.73 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="upper_socket_collar">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.045" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="telescoping_lock_collar">
+      <origin xyz="0 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/telescoping_lock_collar_mesh.obj" />
+        </geometry>
+      <material name="blue_trim">
+        <color rgba="0.05 0.28 0.65 1" />
+        </material>
+      </visual>
+    <visual name="lock_release_button">
+      <origin xyz="0.024 0 0.312" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.01 0.028" />
+        </geometry>
+      <material name="red_release">
+        <color rgba="0.85 0.05 0.025 1" />
+        </material>
+      </visual>
+    <collision name="upper_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/upper_wand_hollow_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_socket_collar">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="telescoping_lock_collar">
+      <origin xyz="0 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/telescoping_lock_collar_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="lock_release_button">
+      <origin xyz="0.024 0 0.312" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.01 0.028" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_wand">
+    <visual name="lower_tube">
+      <origin xyz="0 0 0.1225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0145" length="0.605" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.73 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="lower_slide_collar">
+      <origin xyz="0 0 0.091" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.055" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="floor_connector_pin">
+      <origin xyz="0 0 0.438" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.055" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <collision name="lower_tube">
+      <origin xyz="0 0 0.1225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0145" length="0.605" />
+        </geometry>
+      </collision>
+    <collision name="lower_slide_collar">
+      <origin xyz="0 0 0.091" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="floor_connector_pin">
+      <origin xyz="0 0 0.438" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.055" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="floor_head">
+    <visual name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.175" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="pivot_cheek_0">
+      <origin xyz="0.018 0.064 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.022 0.066" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="pivot_cheek_1">
+      <origin xyz="0.018 -0.064 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.022 0.066" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_shell">
+      <origin xyz="0.22 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/floor_head_rounded_nozzle.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.1 0.11 0.115 1" />
+        </material>
+      </visual>
+    <visual name="front_bumper">
+      <origin xyz="0.225 0.15 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.02 0.026" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_bumper">
+      <origin xyz="0.225 -0.15 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.02 0.026" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="transparent_brush_window">
+      <origin xyz="0.227 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.238 0.01" />
+        </geometry>
+      <material name="blue_trim">
+        <color rgba="0.05 0.28 0.65 1" />
+        </material>
+      </visual>
+    <visual name="suction_slot_plate">
+      <origin xyz="0.23 0 -0.048" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/nozzle_suction_slot_plate.obj" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="brush_roll">
+      <origin xyz="0.195 0 -0.051" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.28" />
+        </geometry>
+      <material name="blue_trim">
+        <color rgba="0.05 0.28 0.65 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_wheel_0">
+      <origin xyz="0.04 0.117 -0.029" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.03" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_wheel_1">
+      <origin xyz="0.04 -0.117 -0.029" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.03" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <collision name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.175" />
+        </geometry>
+      </collision>
+    <collision name="pivot_cheek_0">
+      <origin xyz="0.018 0.064 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.022 0.066" />
+        </geometry>
+      </collision>
+    <collision name="pivot_cheek_1">
+      <origin xyz="0.018 -0.064 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.022 0.066" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_shell">
+      <origin xyz="0.22 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/floor_head_rounded_nozzle.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_bumper">
+      <origin xyz="0.225 0.15 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.02 0.026" />
+        </geometry>
+      </collision>
+    <collision name="rear_bumper">
+      <origin xyz="0.225 -0.15 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.02 0.026" />
+        </geometry>
+      </collision>
+    <collision name="transparent_brush_window">
+      <origin xyz="0.227 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.238 0.01" />
+        </geometry>
+      </collision>
+    <collision name="suction_slot_plate">
+      <origin xyz="0.23 0 -0.048" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/nozzle_suction_slot_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="brush_roll">
+      <origin xyz="0.195 0 -0.051" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.28" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_wheel_0">
+      <origin xyz="0.04 0.117 -0.029" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_wheel_1">
+      <origin xyz="0.04 -0.117 -0.029" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_power_button" type="prismatic">
+    <origin xyz="-0.08 0 0.355" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="power_button" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.05" lower="-0.006" upper="0" />
+    </joint>
+  <joint name="body_to_hose" type="revolute">
+    <origin xyz="0.334 0 0.205" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="hose" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="1.2" lower="-0.55" upper="0.55" />
+    </joint>
+  <joint name="hose_to_handle" type="fixed">
+    <origin xyz="0.54 0 0.66" rpy="0 0 0" />
+    <parent link="hose" />
+    <child link="handle" />
+    </joint>
+  <joint name="handle_to_trigger" type="prismatic">
+    <origin xyz="0.06 0 0.035" rpy="0 0 0" />
+    <parent link="handle" />
+    <child link="trigger" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.06" lower="-0.004" upper="0" />
+    </joint>
+  <joint name="handle_to_upper_wand" type="revolute">
+    <origin xyz="0.08 0 -0.12" rpy="0 2.67199 0" />
+    <parent link="handle" />
+    <child link="upper_wand" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="1.3" lower="-0.35" upper="0.45" />
+    </joint>
+  <joint name="upper_to_lower_wand" type="prismatic">
+    <origin xyz="0 0 0.3" rpy="0 0 0" />
+    <parent link="upper_wand" />
+    <child link="lower_wand" />
+    <axis xyz="0 0 1" />
+    <limit effort="50" velocity="0.18" lower="0" upper="0.12" />
+    </joint>
+  <joint name="lower_wand_to_floor_head" type="revolute">
+    <origin xyz="0 0 0.46" rpy="0 -2.67199 0" />
+    <parent link="lower_wand" />
+    <child link="floor_head" />
+    <axis xyz="0 1 0" />
+    <limit effort="14" velocity="1.5" lower="-0.35" upper="0.65" />
+    </joint>
+  </robot>

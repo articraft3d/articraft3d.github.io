@@ -1,0 +1,814 @@
+<robot name="rugged_folding_stick_vacuum">
+  <material name="molded_olive">
+    <color rgba="0.24 0.28 0.2 1" />
+    </material>
+  <material name="graphite_molded">
+    <color rgba="0.055 0.06 0.06 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.011 0.01 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.55 0.56 0.53 1" />
+    </material>
+  <material name="safety_orange">
+    <color rgba="0.95 0.34 0.06 1" />
+    </material>
+  <material name="smoked_clear_window">
+    <color rgba="0.12 0.16 0.18 0.55" />
+    </material>
+  <material name="flex_hose_gray">
+    <color rgba="0.12 0.13 0.12 1" />
+    </material>
+  <link name="upper_assembly">
+    <visual name="upper_wand">
+      <origin xyz="0 0 0.235" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.33" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="reinforced_spine">
+      <origin xyz="0 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.59" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="upper_hinge_collar">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.05" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="motor_collar">
+      <origin xyz="0 0 0.405" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.05" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="motor_body">
+      <origin xyz="0.055 0 0.52" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/slim_motor_capsule.obj" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="battery_pack">
+      <origin xyz="-0.045 0 0.485" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.105 0.09" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="battery_sole">
+      <origin xyz="-0.045 0 0.538" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.095 0.014" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.011 0.01 1" />
+        </material>
+      </visual>
+    <visual name="filter_grille_0">
+      <origin xyz="0.055 0.052 0.52" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_filter_slots.obj" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="filter_grille_1">
+      <origin xyz="0.055 -0.052 0.52" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_filter_slots.obj" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="handle_loop">
+      <geometry>
+        <mesh filename="assets/meshes/rear_handle_loop.obj" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="handle_lower_anchor">
+      <origin xyz="-0.032 0 0.558" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.052 0.038" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="handle_upper_anchor">
+      <origin xyz="0.03 0 0.716" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.05 0.038" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rubber_grip">
+      <origin xyz="-0.141 0 0.68" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.115" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.011 0.01 1" />
+        </material>
+      </visual>
+    <visual name="fold_side_plate_0">
+      <origin xyz="0 0.046 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.017 0.108" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="fold_side_plate_1">
+      <origin xyz="0 -0.046 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.017 0.108" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="fold_bolt_upper_0">
+      <origin xyz="-0.022 0.05382 0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.007" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.56 0.53 1" />
+        </material>
+      </visual>
+    <visual name="fold_bolt_lower_0">
+      <origin xyz="0.024 0.05382 -0.034" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.007" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.56 0.53 1" />
+        </material>
+      </visual>
+    <visual name="fold_bolt_upper_1">
+      <origin xyz="-0.022 -0.05382 0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.007" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.56 0.53 1" />
+        </material>
+      </visual>
+    <visual name="fold_bolt_lower_1">
+      <origin xyz="0.024 -0.05382 -0.034" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.007" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.56 0.53 1" />
+        </material>
+      </visual>
+    <visual name="fold_top_bridge">
+      <origin xyz="0 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.096 0.104 0.024" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="fold_lock_tab">
+      <origin xyz="0.06 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.012 0.04" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="0.95 0.34 0.06 1" />
+        </material>
+      </visual>
+    <visual name="trigger_housing">
+      <origin xyz="-0.105 0.031 0.66" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.014 0.04" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="trigger_housing_side">
+      <origin xyz="-0.105 -0.031 0.66" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.014 0.04" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="trigger_housing_bridge">
+      <origin xyz="-0.105 0 0.684" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.076 0.014" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <collision name="upper_wand">
+      <origin xyz="0 0 0.235" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.33" />
+        </geometry>
+      </collision>
+    <collision name="reinforced_spine">
+      <origin xyz="0 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.59" />
+        </geometry>
+      </collision>
+    <collision name="upper_hinge_collar">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="motor_collar">
+      <origin xyz="0 0 0.405" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="motor_body">
+      <origin xyz="0.055 0 0.52" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/slim_motor_capsule.obj" />
+        </geometry>
+      </collision>
+    <collision name="battery_pack">
+      <origin xyz="-0.045 0 0.485" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.105 0.09" />
+        </geometry>
+      </collision>
+    <collision name="battery_sole">
+      <origin xyz="-0.045 0 0.538" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.095 0.014" />
+        </geometry>
+      </collision>
+    <collision name="filter_grille_0">
+      <origin xyz="0.055 0.052 0.52" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_filter_slots.obj" />
+        </geometry>
+      </collision>
+    <collision name="filter_grille_1">
+      <origin xyz="0.055 -0.052 0.52" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_filter_slots.obj" />
+        </geometry>
+      </collision>
+    <collision name="handle_loop">
+      <geometry>
+        <mesh filename="assets/meshes/rear_handle_loop.obj" />
+        </geometry>
+      </collision>
+    <collision name="handle_lower_anchor">
+      <origin xyz="-0.032 0 0.558" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.052 0.038" />
+        </geometry>
+      </collision>
+    <collision name="handle_upper_anchor">
+      <origin xyz="0.03 0 0.716" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.05 0.038" />
+        </geometry>
+      </collision>
+    <collision name="rubber_grip">
+      <origin xyz="-0.141 0 0.68" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.115" />
+        </geometry>
+      </collision>
+    <collision name="fold_side_plate_0">
+      <origin xyz="0 0.046 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.017 0.108" />
+        </geometry>
+      </collision>
+    <collision name="fold_side_plate_1">
+      <origin xyz="0 -0.046 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.017 0.108" />
+        </geometry>
+      </collision>
+    <collision name="fold_bolt_upper_0">
+      <origin xyz="-0.022 0.05382 0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="fold_bolt_lower_0">
+      <origin xyz="0.024 0.05382 -0.034" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="fold_bolt_upper_1">
+      <origin xyz="-0.022 -0.05382 0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="fold_bolt_lower_1">
+      <origin xyz="0.024 -0.05382 -0.034" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="fold_top_bridge">
+      <origin xyz="0 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.096 0.104 0.024" />
+        </geometry>
+      </collision>
+    <collision name="fold_lock_tab">
+      <origin xyz="0.06 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.012 0.04" />
+        </geometry>
+      </collision>
+    <collision name="trigger_housing">
+      <origin xyz="-0.105 0.031 0.66" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.014 0.04" />
+        </geometry>
+      </collision>
+    <collision name="trigger_housing_side">
+      <origin xyz="-0.105 -0.031 0.66" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.014 0.04" />
+        </geometry>
+      </collision>
+    <collision name="trigger_housing_bridge">
+      <origin xyz="-0.105 0 0.684" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.076 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="trigger">
+    <visual name="trigger_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.058" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.56 0.53 1" />
+        </material>
+      </visual>
+    <visual name="trigger_paddle">
+      <origin xyz="0.018 0 -0.036" rpy="0 -0.18 0" />
+      <geometry>
+        <box size="0.016 0.035 0.07" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="0.95 0.34 0.06 1" />
+        </material>
+      </visual>
+    <collision name="trigger_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="trigger_paddle">
+      <origin xyz="0.018 0 -0.036" rpy="0 -0.18 0" />
+      <geometry>
+        <box size="0.016 0.035 0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_wand">
+    <visual name="main_tube">
+      <origin xyz="0 0 -0.395" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.7" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="front_rib">
+      <origin xyz="0.02 0 -0.395" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.006 0.61" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="rear_rib">
+      <origin xyz="-0.02 0 -0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.56" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="fold_center_lug">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.054 0.07" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="fold_axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.126" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.56 0.53 1" />
+        </material>
+      </visual>
+    <visual name="lower_hinge_collar">
+      <origin xyz="0 0 -0.095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.052" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="neck_collar">
+      <origin xyz="0 0 -0.715" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.052" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="service_conduit">
+      <origin xyz="-0.029 0 -0.41" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.215" />
+        </geometry>
+      <material name="flex_hose_gray">
+        <color rgba="0.12 0.13 0.12 1" />
+        </material>
+      </visual>
+    <visual name="head_fork_cheek_0">
+      <origin xyz="0.03 0.065 -0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.018 0.09" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="head_fork_cheek_1">
+      <origin xyz="0.03 -0.065 -0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.018 0.09" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="head_bolt_upper_0">
+      <origin xyz="0.003 0.07605 -0.76" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.007" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.56 0.53 1" />
+        </material>
+      </visual>
+    <visual name="head_bolt_lower_0">
+      <origin xyz="0.056 0.07605 -0.808" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.007" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.56 0.53 1" />
+        </material>
+      </visual>
+    <visual name="head_bolt_upper_1">
+      <origin xyz="0.003 -0.07605 -0.76" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.007" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.56 0.53 1" />
+        </material>
+      </visual>
+    <visual name="head_bolt_lower_1">
+      <origin xyz="0.056 -0.07605 -0.808" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.007" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.56 0.53 1" />
+        </material>
+      </visual>
+    <visual name="head_fork_bridge">
+      <origin xyz="-0.01 0 -0.74" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.12 0.02" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <collision name="main_tube">
+      <origin xyz="0 0 -0.395" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.7" />
+        </geometry>
+      </collision>
+    <collision name="front_rib">
+      <origin xyz="0.02 0 -0.395" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.006 0.61" />
+        </geometry>
+      </collision>
+    <collision name="rear_rib">
+      <origin xyz="-0.02 0 -0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.56" />
+        </geometry>
+      </collision>
+    <collision name="fold_center_lug">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.054 0.07" />
+        </geometry>
+      </collision>
+    <collision name="fold_axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.126" />
+        </geometry>
+      </collision>
+    <collision name="lower_hinge_collar">
+      <origin xyz="0 0 -0.095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="neck_collar">
+      <origin xyz="0 0 -0.715" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="service_conduit">
+      <origin xyz="-0.029 0 -0.41" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.215" />
+        </geometry>
+      </collision>
+    <collision name="head_fork_cheek_0">
+      <origin xyz="0.03 0.065 -0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.018 0.09" />
+        </geometry>
+      </collision>
+    <collision name="head_fork_cheek_1">
+      <origin xyz="0.03 -0.065 -0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.018 0.09" />
+        </geometry>
+      </collision>
+    <collision name="head_bolt_upper_0">
+      <origin xyz="0.003 0.07605 -0.76" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="head_bolt_lower_0">
+      <origin xyz="0.056 0.07605 -0.808" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="head_bolt_upper_1">
+      <origin xyz="0.003 -0.07605 -0.76" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="head_bolt_lower_1">
+      <origin xyz="0.056 -0.07605 -0.808" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="head_fork_bridge">
+      <origin xyz="-0.01 0 -0.74" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.12 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="floor_head">
+    <visual name="head_axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.152" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.56 0.53 1" />
+        </material>
+      </visual>
+    <visual name="pivot_knuckle">
+      <origin xyz="0.025 0 -0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.062 0.09 0.052" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="head_shell">
+      <origin xyz="0.13 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.315 0.31 0.07" />
+        </geometry>
+      <material name="molded_olive">
+        <color rgba="0.24 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="front_bumper">
+      <origin xyz="0.265 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.34 0.04" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.011 0.01 1" />
+        </material>
+      </visual>
+    <visual name="brush_window">
+      <origin xyz="0.135 0 -0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.248 0.018" />
+        </geometry>
+      <material name="smoked_clear_window">
+        <color rgba="0.12 0.16 0.18 0.55" />
+        </material>
+      </visual>
+    <visual name="brush_roll">
+      <origin xyz="0.155 0 -0.121" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.235" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="0.95 0.34 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rear_wheel_0">
+      <origin xyz="-0.01 0.162 -0.128" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.018" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.011 0.01 1" />
+        </material>
+      </visual>
+    <visual name="rear_wheel_1">
+      <origin xyz="-0.01 -0.162 -0.128" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.018" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.011 0.01 1" />
+        </material>
+      </visual>
+    <visual name="link_anchor_0">
+      <origin xyz="0.04 0.12 -0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.035 0.024" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="link_anchor_1">
+      <origin xyz="0.04 -0.12 -0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.035 0.024" />
+        </geometry>
+      <material name="graphite_molded">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <collision name="head_axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.152" />
+        </geometry>
+      </collision>
+    <collision name="pivot_knuckle">
+      <origin xyz="0.025 0 -0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.062 0.09 0.052" />
+        </geometry>
+      </collision>
+    <collision name="head_shell">
+      <origin xyz="0.13 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.315 0.31 0.07" />
+        </geometry>
+      </collision>
+    <collision name="front_bumper">
+      <origin xyz="0.265 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.34 0.04" />
+        </geometry>
+      </collision>
+    <collision name="brush_window">
+      <origin xyz="0.135 0 -0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.248 0.018" />
+        </geometry>
+      </collision>
+    <collision name="brush_roll">
+      <origin xyz="0.155 0 -0.121" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.235" />
+        </geometry>
+      </collision>
+    <collision name="rear_wheel_0">
+      <origin xyz="-0.01 0.162 -0.128" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_wheel_1">
+      <origin xyz="-0.01 -0.162 -0.128" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="link_anchor_0">
+      <origin xyz="0.04 0.12 -0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.035 0.024" />
+        </geometry>
+      </collision>
+    <collision name="link_anchor_1">
+      <origin xyz="0.04 -0.12 -0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.035 0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="fold_joint" type="revolute">
+    <parent link="upper_assembly" />
+    <child link="lower_wand" />
+    <axis xyz="0 1 0" />
+    <limit effort="45" velocity="1.3" lower="0" upper="1.55" />
+    </joint>
+  <joint name="head_pivot" type="revolute">
+    <origin xyz="0.03 0 -0.785" rpy="0 0 0" />
+    <parent link="lower_wand" />
+    <child link="floor_head" />
+    <axis xyz="0 1 0" />
+    <limit effort="25" velocity="2" lower="-0.55" upper="0.65" />
+    </joint>
+  <joint name="trigger_pivot" type="revolute">
+    <origin xyz="-0.105 0 0.66" rpy="0 0 0" />
+    <parent link="upper_assembly" />
+    <child link="trigger" />
+    <axis xyz="0 1 0" />
+    <limit effort="2" velocity="4" lower="0" upper="0.32" />
+    </joint>
+  </robot>

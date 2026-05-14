@@ -1,0 +1,212 @@
+<robot name="horizontal_axis_wind_turbine">
+  <material name="painted_tower_white">
+    <color rgba="0.88 0.9 0.88 1" />
+    </material>
+  <material name="smooth_nacelle_white">
+    <color rgba="0.95 0.96 0.93 1" />
+    </material>
+  <material name="matte_blade_white">
+    <color rgba="0.97 0.97 0.94 1" />
+    </material>
+  <material name="cast_hub_gray">
+    <color rgba="0.7 0.72 0.7 1" />
+    </material>
+  <material name="dark_bearing_metal">
+    <color rgba="0.18 0.19 0.18 1" />
+    </material>
+  <material name="pale_concrete">
+    <color rgba="0.62 0.62 0.58 1" />
+    </material>
+  <link name="tower">
+    <visual name="foundation">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.62" length="0.22" />
+        </geometry>
+      <material name="pale_concrete">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="tapered_tower">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_tower.obj" />
+        </geometry>
+      <material name="painted_tower_white">
+        <color rgba="0.88 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="yaw_pedestal">
+      <origin xyz="0 0 12.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.2" />
+        </geometry>
+      <material name="dark_bearing_metal">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <collision name="foundation">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.62" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="tapered_tower">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_tower.obj" />
+        </geometry>
+      </collision>
+    <collision name="yaw_pedestal">
+      <origin xyz="0 0 12.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.2" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="nacelle">
+    <visual name="nacelle_shell">
+      <origin xyz="0.25 0 0.34" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/nacelle_shell.obj" />
+        </geometry>
+      <material name="smooth_nacelle_white">
+        <color rgba="0.95 0.96 0.93 1" />
+        </material>
+      </visual>
+    <visual name="yaw_boss">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.2" length="0.16" />
+        </geometry>
+      <material name="dark_bearing_metal">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing">
+      <origin xyz="0.93 0 0.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.18" />
+        </geometry>
+      <material name="dark_bearing_metal">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <collision name="nacelle_shell">
+      <origin xyz="0.25 0 0.34" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/nacelle_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="yaw_boss">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.2" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing">
+      <origin xyz="0.93 0 0.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.18" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotor">
+    <visual name="shaft">
+      <origin xyz="0.04 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.08" />
+        </geometry>
+      <material name="dark_bearing_metal">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="hub_barrel">
+      <origin xyz="0.21 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.34" />
+        </geometry>
+      <material name="cast_hub_gray">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="spinner">
+      <geometry>
+        <mesh filename="assets/meshes/spinner.obj" />
+        </geometry>
+      <material name="cast_hub_gray">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="blade_0">
+      <geometry>
+        <mesh filename="assets/meshes/blade_0.obj" />
+        </geometry>
+      <material name="matte_blade_white">
+        <color rgba="0.97 0.97 0.94 1" />
+        </material>
+      </visual>
+    <visual name="blade_1">
+      <geometry>
+        <mesh filename="assets/meshes/blade_1.obj" />
+        </geometry>
+      <material name="matte_blade_white">
+        <color rgba="0.97 0.97 0.94 1" />
+        </material>
+      </visual>
+    <visual name="blade_2">
+      <geometry>
+        <mesh filename="assets/meshes/blade_2.obj" />
+        </geometry>
+      <material name="matte_blade_white">
+        <color rgba="0.97 0.97 0.94 1" />
+        </material>
+      </visual>
+    <collision name="shaft">
+      <origin xyz="0.04 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="hub_barrel">
+      <origin xyz="0.21 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.34" />
+        </geometry>
+      </collision>
+    <collision name="spinner">
+      <geometry>
+        <mesh filename="assets/meshes/spinner.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_0">
+      <geometry>
+        <mesh filename="assets/meshes/blade_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_1">
+      <geometry>
+        <mesh filename="assets/meshes/blade_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_2">
+      <geometry>
+        <mesh filename="assets/meshes/blade_2.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="tower_to_nacelle" type="revolute">
+    <origin xyz="0 0 12.2" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="nacelle" />
+    <axis xyz="0 0 1" />
+    <limit effort="2500" velocity="0.2" lower="-3.14159" upper="3.14159" />
+    <dynamics damping="3" friction="0.4" />
+    </joint>
+  <joint name="nacelle_to_rotor" type="continuous">
+    <origin xyz="1.02 0 0.34" rpy="0 0 0" />
+    <parent link="nacelle" />
+    <child link="rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="600" velocity="20" />
+    <dynamics damping="0.05" friction="0.01" />
+    </joint>
+  </robot>

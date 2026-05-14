@@ -1,0 +1,771 @@
+<robot name="macro_lens">
+  <material name="satin_black">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.055 0.058 0.06 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.006 0.006 0.007 1" />
+    </material>
+  <material name="anodized_metal">
+    <color rgba="0.58 0.59 0.57 1" />
+    </material>
+  <material name="dark_glass">
+    <color rgba="0.08 0.16 0.18 0.62" />
+    </material>
+  <material name="coated_glass">
+    <color rgba="0.18 0.46 0.5 0.48" />
+    </material>
+  <material name="white_paint">
+    <color rgba="0.86 0.88 0.82 1" />
+    </material>
+  <link name="outer_barrel">
+    <visual name="outer_sleeve">
+      <origin xyz="0.0575 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/outer_sleeve.obj" />
+        </geometry>
+      <material name="satin_black" />
+      </visual>
+    <visual name="rear_ring_stop">
+      <origin xyz="0.03 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_ring_stop.obj" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="front_ring_stop">
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_ring_stop.obj" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="front_bezel">
+      <origin xyz="0.11 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bezel.obj" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="bayonet_mount">
+      <origin xyz="-0.007 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bayonet_mount.obj" />
+        </geometry>
+      <material name="anodized_metal" />
+      </visual>
+    <visual name="rear_glass">
+      <origin xyz="-0.0155 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.003" />
+        </geometry>
+      <material name="dark_glass" />
+      </visual>
+    <visual name="bayonet_lug_0">
+      <origin xyz="-0.017 0 0.0335" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.01 0.021 0.007" />
+        </geometry>
+      <material name="anodized_metal" />
+      </visual>
+    <visual name="bayonet_lug_1">
+      <origin xyz="-0.017 0.0290119 -0.01675" rpy="-2.0944 0 0" />
+      <geometry>
+        <box size="0.01 0.021 0.007" />
+        </geometry>
+      <material name="anodized_metal" />
+      </visual>
+    <visual name="bayonet_lug_2">
+      <origin xyz="-0.017 -0.0290119 -0.01675" rpy="-4.18879 0 0" />
+      <geometry>
+        <box size="0.01 0.021 0.007" />
+        </geometry>
+      <material name="anodized_metal" />
+      </visual>
+    <visual name="locking_pin">
+      <origin xyz="-0.0185 0 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.009" />
+        </geometry>
+      <material name="anodized_metal" />
+      </visual>
+    <collision name="outer_sleeve">
+      <origin xyz="0.0575 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/outer_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_ring_stop">
+      <origin xyz="0.03 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_ring_stop.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_ring_stop">
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_ring_stop.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_bezel">
+      <origin xyz="0.11 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bezel.obj" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_mount">
+      <origin xyz="-0.007 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bayonet_mount.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_glass">
+      <origin xyz="-0.0155 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_lug_0">
+      <origin xyz="-0.017 0 0.0335" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.01 0.021 0.007" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_lug_1">
+      <origin xyz="-0.017 0.0290119 -0.01675" rpy="-2.0944 0 0" />
+      <geometry>
+        <box size="0.01 0.021 0.007" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_lug_2">
+      <origin xyz="-0.017 -0.0290119 -0.01675" rpy="-4.18879 0 0" />
+      <geometry>
+        <box size="0.01 0.021 0.007" />
+        </geometry>
+      </collision>
+    <collision name="locking_pin">
+      <origin xyz="-0.0185 0 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.009" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="focus_ring">
+    <visual name="grip_sleeve">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/grip_sleeve.obj" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="grip_rib_0">
+      <origin xyz="0 0 0.0392" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_1">
+      <origin xyz="0 0.00764754 0.0384468" rpy="-0.19635 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_2">
+      <origin xyz="0 0.0150012 0.0362161" rpy="-0.392699 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_3">
+      <origin xyz="0 0.0217784 0.0325936" rpy="-0.589049 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_4">
+      <origin xyz="0 0.0277186 0.0277186" rpy="-0.785398 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_5">
+      <origin xyz="0 0.0325936 0.0217784" rpy="-0.981748 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_6">
+      <origin xyz="0 0.0362161 0.0150012" rpy="-1.1781 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_7">
+      <origin xyz="0 0.0384468 0.00764754" rpy="-1.37445 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_8">
+      <origin xyz="0 0.0392 2.40031e-18" rpy="-1.5708 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_9">
+      <origin xyz="0 0.0384468 -0.00764754" rpy="-1.76715 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_10">
+      <origin xyz="0 0.0362161 -0.0150012" rpy="-1.9635 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_11">
+      <origin xyz="0 0.0325936 -0.0217784" rpy="-2.15984 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_12">
+      <origin xyz="0 0.0277186 -0.0277186" rpy="-2.35619 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_13">
+      <origin xyz="0 0.0217784 -0.0325936" rpy="-2.55254 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_14">
+      <origin xyz="0 0.0150012 -0.0362161" rpy="-2.74889 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_15">
+      <origin xyz="0 0.00764754 -0.0384468" rpy="-2.94524 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_16">
+      <origin xyz="0 4.80062e-18 -0.0392" rpy="-3.14159 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_17">
+      <origin xyz="0 -0.00764754 -0.0384468" rpy="-3.33794 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_18">
+      <origin xyz="0 -0.0150012 -0.0362161" rpy="-3.53429 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_19">
+      <origin xyz="0 -0.0217784 -0.0325936" rpy="-3.73064 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_20">
+      <origin xyz="0 -0.0277186 -0.0277186" rpy="-3.92699 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_21">
+      <origin xyz="0 -0.0325936 -0.0217784" rpy="-4.12334 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_22">
+      <origin xyz="0 -0.0362161 -0.0150012" rpy="-4.31969 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_23">
+      <origin xyz="0 -0.0384468 -0.00764754" rpy="-4.51604 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_24">
+      <origin xyz="0 -0.0392 -7.20092e-18" rpy="-4.71239 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_25">
+      <origin xyz="0 -0.0384468 0.00764754" rpy="-4.90874 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_26">
+      <origin xyz="0 -0.0362161 0.0150012" rpy="-5.10509 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_27">
+      <origin xyz="0 -0.0325936 0.0217784" rpy="-5.30144 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_28">
+      <origin xyz="0 -0.0277186 0.0277186" rpy="-5.49779 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_29">
+      <origin xyz="0 -0.0217784 0.0325936" rpy="-5.69414 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_30">
+      <origin xyz="0 -0.0150012 0.0362161" rpy="-5.89049 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_rib_31">
+      <origin xyz="0 -0.00764754 0.0384468" rpy="-6.08684 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="focus_mark_0">
+      <origin xyz="-0.012 -0.0128559 0.0363432" rpy="0.34 0 0" />
+      <geometry>
+        <box size="0.01 0.0012 0.0012" />
+        </geometry>
+      <material name="white_paint" />
+      </visual>
+    <visual name="focus_mark_1">
+      <origin xyz="0 0 0.03855" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.013 0.0012 0.0012" />
+        </geometry>
+      <material name="white_paint" />
+      </visual>
+    <visual name="focus_mark_2">
+      <origin xyz="0.012 0.0128559 0.0363432" rpy="-0.34 0 0" />
+      <geometry>
+        <box size="0.016 0.0012 0.0012" />
+        </geometry>
+      <material name="white_paint" />
+      </visual>
+    <collision name="grip_sleeve">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/grip_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_0">
+      <origin xyz="0 0 0.0392" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_1">
+      <origin xyz="0 0.00764754 0.0384468" rpy="-0.19635 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_2">
+      <origin xyz="0 0.0150012 0.0362161" rpy="-0.392699 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_3">
+      <origin xyz="0 0.0217784 0.0325936" rpy="-0.589049 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_4">
+      <origin xyz="0 0.0277186 0.0277186" rpy="-0.785398 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_5">
+      <origin xyz="0 0.0325936 0.0217784" rpy="-0.981748 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_6">
+      <origin xyz="0 0.0362161 0.0150012" rpy="-1.1781 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_7">
+      <origin xyz="0 0.0384468 0.00764754" rpy="-1.37445 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_8">
+      <origin xyz="0 0.0392 2.40031e-18" rpy="-1.5708 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_9">
+      <origin xyz="0 0.0384468 -0.00764754" rpy="-1.76715 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_10">
+      <origin xyz="0 0.0362161 -0.0150012" rpy="-1.9635 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_11">
+      <origin xyz="0 0.0325936 -0.0217784" rpy="-2.15984 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_12">
+      <origin xyz="0 0.0277186 -0.0277186" rpy="-2.35619 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_13">
+      <origin xyz="0 0.0217784 -0.0325936" rpy="-2.55254 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_14">
+      <origin xyz="0 0.0150012 -0.0362161" rpy="-2.74889 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_15">
+      <origin xyz="0 0.00764754 -0.0384468" rpy="-2.94524 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_16">
+      <origin xyz="0 4.80062e-18 -0.0392" rpy="-3.14159 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_17">
+      <origin xyz="0 -0.00764754 -0.0384468" rpy="-3.33794 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_18">
+      <origin xyz="0 -0.0150012 -0.0362161" rpy="-3.53429 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_19">
+      <origin xyz="0 -0.0217784 -0.0325936" rpy="-3.73064 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_20">
+      <origin xyz="0 -0.0277186 -0.0277186" rpy="-3.92699 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_21">
+      <origin xyz="0 -0.0325936 -0.0217784" rpy="-4.12334 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_22">
+      <origin xyz="0 -0.0362161 -0.0150012" rpy="-4.31969 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_23">
+      <origin xyz="0 -0.0384468 -0.00764754" rpy="-4.51604 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_24">
+      <origin xyz="0 -0.0392 -7.20092e-18" rpy="-4.71239 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_25">
+      <origin xyz="0 -0.0384468 0.00764754" rpy="-4.90874 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_26">
+      <origin xyz="0 -0.0362161 0.0150012" rpy="-5.10509 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_27">
+      <origin xyz="0 -0.0325936 0.0217784" rpy="-5.30144 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_28">
+      <origin xyz="0 -0.0277186 0.0277186" rpy="-5.49779 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_29">
+      <origin xyz="0 -0.0217784 0.0325936" rpy="-5.69414 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_30">
+      <origin xyz="0 -0.0150012 0.0362161" rpy="-5.89049 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_31">
+      <origin xyz="0 -0.00764754 0.0384468" rpy="-6.08684 0 0" />
+      <geometry>
+        <box size="0.036 0.0018 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="focus_mark_0">
+      <origin xyz="-0.012 -0.0128559 0.0363432" rpy="0.34 0 0" />
+      <geometry>
+        <box size="0.01 0.0012 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="focus_mark_1">
+      <origin xyz="0 0 0.03855" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.013 0.0012 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="focus_mark_2">
+      <origin xyz="0.012 0.0128559 0.0363432" rpy="-0.34 0 0" />
+      <geometry>
+        <box size="0.016 0.0012 0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="inner_barrel">
+    <visual name="inner_tube">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/inner_tube.obj" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="front_retainer">
+      <origin xyz="0.0645 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_retainer.obj" />
+        </geometry>
+      <material name="satin_black" />
+      </visual>
+    <visual name="front_glass">
+      <origin xyz="0.0625 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0215" length="0.004" />
+        </geometry>
+      <material name="coated_glass" />
+      </visual>
+    <visual name="aperture_glass">
+      <origin xyz="0.044 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      <material name="dark_glass" />
+      </visual>
+    <visual name="extension_groove_0">
+      <origin xyz="-0.03 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/extension_groove_0.obj" />
+        </geometry>
+      <material name="satin_black" />
+      </visual>
+    <visual name="extension_groove_1">
+      <origin xyz="-0.018 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/extension_groove_1.obj" />
+        </geometry>
+      <material name="satin_black" />
+      </visual>
+    <visual name="extension_groove_2">
+      <origin xyz="-0.006 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/extension_groove_2.obj" />
+        </geometry>
+      <material name="satin_black" />
+      </visual>
+    <visual name="extension_groove_3">
+      <origin xyz="0.006 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/extension_groove_3.obj" />
+        </geometry>
+      <material name="satin_black" />
+      </visual>
+    <visual name="guide_bearing">
+      <origin xyz="-0.052 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/guide_bearing.obj" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="aperture_retainer">
+      <origin xyz="0.044 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/aperture_retainer.obj" />
+        </geometry>
+      <material name="satin_black" />
+      </visual>
+    <collision name="inner_tube">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/inner_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_retainer">
+      <origin xyz="0.0645 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_retainer.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_glass">
+      <origin xyz="0.0625 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0215" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="aperture_glass">
+      <origin xyz="0.044 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="extension_groove_0">
+      <origin xyz="-0.03 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/extension_groove_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="extension_groove_1">
+      <origin xyz="-0.018 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/extension_groove_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="extension_groove_2">
+      <origin xyz="-0.006 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/extension_groove_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="extension_groove_3">
+      <origin xyz="0.006 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/extension_groove_3.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_bearing">
+      <origin xyz="-0.052 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/guide_bearing.obj" />
+        </geometry>
+      </collision>
+    <collision name="aperture_retainer">
+      <origin xyz="0.044 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/aperture_retainer.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="focus_rotation" type="revolute">
+    <origin xyz="0.055 0 0" rpy="0 0 0" />
+    <parent link="outer_barrel" />
+    <child link="focus_ring" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.8" velocity="3" lower="0" upper="1.74533" />
+    </joint>
+  <joint name="barrel_extension" type="prismatic">
+    <origin xyz="0.105 0 0" rpy="0 0 0" />
+    <parent link="outer_barrel" />
+    <child link="inner_barrel" />
+    <axis xyz="1 0 0" />
+    <limit effort="5" velocity="0.05" lower="0" upper="0.04" />
+    </joint>
+  </robot>

@@ -1,0 +1,674 @@
+<robot name="rectangular_telescoping_boom">
+  <material name="painted_dark_blue">
+    <color rgba="0.08 0.12 0.16 1" />
+    </material>
+  <material name="powder_coated_outer">
+    <color rgba="0.88 0.57 0.12 1" />
+    </material>
+  <material name="anodized_middle">
+    <color rgba="0.7 0.72 0.74 1" />
+    </material>
+  <material name="brushed_inner">
+    <color rgba="0.52 0.55 0.58 1" />
+    </material>
+  <material name="dark_inner">
+    <color rgba="0.28 0.3 0.32 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.015 0.015 0.014 1" />
+    </material>
+  <material name="white_labels">
+    <color rgba="0.92 0.92 0.86 1" />
+    </material>
+  <link name="support">
+    <visual name="floor_plate">
+      <origin xyz="0.38 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.72 0.08" />
+        </geometry>
+      <material name="painted_dark_blue">
+        <color rgba="0.08 0.12 0.16 1" />
+        </material>
+      </visual>
+    <visual name="side_post_0">
+      <origin xyz="0.25 -0.23 0.555" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.08 0.95" />
+        </geometry>
+      <material name="painted_dark_blue">
+        <color rgba="0.08 0.12 0.16 1" />
+        </material>
+      </visual>
+    <visual name="side_post_1">
+      <origin xyz="0.25 0.23 0.555" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.08 0.95" />
+        </geometry>
+      <material name="painted_dark_blue">
+        <color rgba="0.08 0.12 0.16 1" />
+        </material>
+      </visual>
+    <visual name="saddle_plate">
+      <origin xyz="0.48 0 1.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.46 0.05" />
+        </geometry>
+      <material name="painted_dark_blue">
+        <color rgba="0.08 0.12 0.16 1" />
+        </material>
+      </visual>
+    <visual name="diagonal_brace_0">
+      <origin xyz="0.45 -0.23 0.37" rpy="0 0.55 0" />
+      <geometry>
+        <box size="0.38 0.08 0.56" />
+        </geometry>
+      <material name="painted_dark_blue">
+        <color rgba="0.08 0.12 0.16 1" />
+        </material>
+      </visual>
+    <visual name="diagonal_brace_1">
+      <origin xyz="0.45 0.23 0.37" rpy="0 0.55 0" />
+      <geometry>
+        <box size="0.38 0.08 0.56" />
+        </geometry>
+      <material name="painted_dark_blue">
+        <color rgba="0.08 0.12 0.16 1" />
+        </material>
+      </visual>
+    <visual name="rear_stop">
+      <origin xyz="0.114 0 1.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.58 0.22" />
+        </geometry>
+      <material name="painted_dark_blue">
+        <color rgba="0.08 0.12 0.16 1" />
+        </material>
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0.38 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.72 0.08" />
+        </geometry>
+      </collision>
+    <collision name="side_post_0">
+      <origin xyz="0.25 -0.23 0.555" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.08 0.95" />
+        </geometry>
+      </collision>
+    <collision name="side_post_1">
+      <origin xyz="0.25 0.23 0.555" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.08 0.95" />
+        </geometry>
+      </collision>
+    <collision name="saddle_plate">
+      <origin xyz="0.48 0 1.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.46 0.05" />
+        </geometry>
+      </collision>
+    <collision name="diagonal_brace_0">
+      <origin xyz="0.45 -0.23 0.37" rpy="0 0.55 0" />
+      <geometry>
+        <box size="0.38 0.08 0.56" />
+        </geometry>
+      </collision>
+    <collision name="diagonal_brace_1">
+      <origin xyz="0.45 0.23 0.37" rpy="0 0.55 0" />
+      <geometry>
+        <box size="0.38 0.08 0.56" />
+        </geometry>
+      </collision>
+    <collision name="rear_stop">
+      <origin xyz="0.114 0 1.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.58 0.22" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="outer_box">
+    <visual name="outer_sleeve_top_wall">
+      <origin xyz="0.6 0 0.1175" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.34 0.025" />
+        </geometry>
+      <material name="powder_coated_outer">
+        <color rgba="0.88 0.57 0.12 1" />
+        </material>
+      </visual>
+    <visual name="outer_sleeve_bottom_wall">
+      <origin xyz="0.6 0 -0.1175" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.34 0.025" />
+        </geometry>
+      <material name="powder_coated_outer">
+        <color rgba="0.88 0.57 0.12 1" />
+        </material>
+      </visual>
+    <visual name="outer_sleeve_side_neg">
+      <origin xyz="0.6 -0.1575 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.025 0.26" />
+        </geometry>
+      <material name="powder_coated_outer">
+        <color rgba="0.88 0.57 0.12 1" />
+        </material>
+      </visual>
+    <visual name="outer_sleeve_side_pos">
+      <origin xyz="0.6 0.1575 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.025 0.26" />
+        </geometry>
+      <material name="powder_coated_outer">
+        <color rgba="0.88 0.57 0.12 1" />
+        </material>
+      </visual>
+    <visual name="outer_mouth_collar_top_wall">
+      <origin xyz="1.18 0 0.1175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.37 0.055" />
+        </geometry>
+      <material name="painted_dark_blue">
+        <color rgba="0.08 0.12 0.16 1" />
+        </material>
+      </visual>
+    <visual name="outer_mouth_collar_bottom_wall">
+      <origin xyz="1.18 0 -0.1175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.37 0.055" />
+        </geometry>
+      <material name="painted_dark_blue">
+        <color rgba="0.08 0.12 0.16 1" />
+        </material>
+      </visual>
+    <visual name="outer_mouth_collar_side_neg">
+      <origin xyz="1.18 -0.1575 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.055 0.29" />
+        </geometry>
+      <material name="painted_dark_blue">
+        <color rgba="0.08 0.12 0.16 1" />
+        </material>
+      </visual>
+    <visual name="outer_mouth_collar_side_pos">
+      <origin xyz="1.18 0.1575 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.055 0.29" />
+        </geometry>
+      <material name="painted_dark_blue">
+        <color rgba="0.08 0.12 0.16 1" />
+        </material>
+      </visual>
+    <visual name="scale_mark_0">
+      <origin xyz="0.26 -0.172 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.145" />
+        </geometry>
+      <material name="white_labels">
+        <color rgba="0.92 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="scale_mark_1">
+      <origin xyz="0.56 -0.172 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.115" />
+        </geometry>
+      <material name="white_labels">
+        <color rgba="0.92 0.92 0.86 1" />
+        </material>
+      </visual>
+    <collision name="outer_sleeve_top_wall">
+      <origin xyz="0.6 0 0.1175" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.34 0.025" />
+        </geometry>
+      </collision>
+    <collision name="outer_sleeve_bottom_wall">
+      <origin xyz="0.6 0 -0.1175" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.34 0.025" />
+        </geometry>
+      </collision>
+    <collision name="outer_sleeve_side_neg">
+      <origin xyz="0.6 -0.1575 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.025 0.26" />
+        </geometry>
+      </collision>
+    <collision name="outer_sleeve_side_pos">
+      <origin xyz="0.6 0.1575 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.025 0.26" />
+        </geometry>
+      </collision>
+    <collision name="outer_mouth_collar_top_wall">
+      <origin xyz="1.18 0 0.1175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.37 0.055" />
+        </geometry>
+      </collision>
+    <collision name="outer_mouth_collar_bottom_wall">
+      <origin xyz="1.18 0 -0.1175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.37 0.055" />
+        </geometry>
+      </collision>
+    <collision name="outer_mouth_collar_side_neg">
+      <origin xyz="1.18 -0.1575 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.055 0.29" />
+        </geometry>
+      </collision>
+    <collision name="outer_mouth_collar_side_pos">
+      <origin xyz="1.18 0.1575 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.055 0.29" />
+        </geometry>
+      </collision>
+    <collision name="scale_mark_0">
+      <origin xyz="0.26 -0.172 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.145" />
+        </geometry>
+      </collision>
+    <collision name="scale_mark_1">
+      <origin xyz="0.56 -0.172 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.115" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="middle_box">
+    <visual name="middle_section_top_wall">
+      <origin xyz="-0.15 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.25 0.02" />
+        </geometry>
+      <material name="anodized_middle">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="middle_section_bottom_wall">
+      <origin xyz="-0.15 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.25 0.02" />
+        </geometry>
+      <material name="anodized_middle">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="middle_section_side_neg">
+      <origin xyz="-0.15 -0.115 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.02 0.17" />
+        </geometry>
+      <material name="anodized_middle">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="middle_section_side_pos">
+      <origin xyz="-0.15 0.115 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.02 0.17" />
+        </geometry>
+      <material name="anodized_middle">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="middle_glide_pad">
+      <origin xyz="-0.68 0 0.093" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.075 0.024" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="middle_mouth_collar_top_wall">
+      <origin xyz="0.43 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.285 0.045" />
+        </geometry>
+      <material name="dark_inner">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="middle_mouth_collar_bottom_wall">
+      <origin xyz="0.43 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.285 0.045" />
+        </geometry>
+      <material name="dark_inner">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="middle_mouth_collar_side_neg">
+      <origin xyz="0.43 -0.12 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.045 0.215" />
+        </geometry>
+      <material name="dark_inner">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="middle_mouth_collar_side_pos">
+      <origin xyz="0.43 0.12 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.045 0.215" />
+        </geometry>
+      <material name="dark_inner">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <collision name="middle_section_top_wall">
+      <origin xyz="-0.15 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.25 0.02" />
+        </geometry>
+      </collision>
+    <collision name="middle_section_bottom_wall">
+      <origin xyz="-0.15 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.25 0.02" />
+        </geometry>
+      </collision>
+    <collision name="middle_section_side_neg">
+      <origin xyz="-0.15 -0.115 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.02 0.17" />
+        </geometry>
+      </collision>
+    <collision name="middle_section_side_pos">
+      <origin xyz="-0.15 0.115 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.02 0.17" />
+        </geometry>
+      </collision>
+    <collision name="middle_glide_pad">
+      <origin xyz="-0.68 0 0.093" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.075 0.024" />
+        </geometry>
+      </collision>
+    <collision name="middle_mouth_collar_top_wall">
+      <origin xyz="0.43 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.285 0.045" />
+        </geometry>
+      </collision>
+    <collision name="middle_mouth_collar_bottom_wall">
+      <origin xyz="0.43 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.285 0.045" />
+        </geometry>
+      </collision>
+    <collision name="middle_mouth_collar_side_neg">
+      <origin xyz="0.43 -0.12 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.045 0.215" />
+        </geometry>
+      </collision>
+    <collision name="middle_mouth_collar_side_pos">
+      <origin xyz="0.43 0.12 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.045 0.215" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="inner_box">
+    <visual name="inner_section_top_wall">
+      <origin xyz="-0.15 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.17 0.016" />
+        </geometry>
+      <material name="brushed_inner">
+        <color rgba="0.52 0.55 0.58 1" />
+        </material>
+      </visual>
+    <visual name="inner_section_bottom_wall">
+      <origin xyz="-0.15 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.17 0.016" />
+        </geometry>
+      <material name="brushed_inner">
+        <color rgba="0.52 0.55 0.58 1" />
+        </material>
+      </visual>
+    <visual name="inner_section_side_neg">
+      <origin xyz="-0.15 -0.077 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.016 0.12" />
+        </geometry>
+      <material name="brushed_inner">
+        <color rgba="0.52 0.55 0.58 1" />
+        </material>
+      </visual>
+    <visual name="inner_section_side_pos">
+      <origin xyz="-0.15 0.077 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.016 0.12" />
+        </geometry>
+      <material name="brushed_inner">
+        <color rgba="0.52 0.55 0.58 1" />
+        </material>
+      </visual>
+    <visual name="inner_glide_pad">
+      <origin xyz="-0.58 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.058 0.012" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="inner_mouth_collar_top_wall">
+      <origin xyz="0.335 0 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.215 0.038" />
+        </geometry>
+      <material name="dark_inner">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="inner_mouth_collar_bottom_wall">
+      <origin xyz="0.335 0 -0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.215 0.038" />
+        </geometry>
+      <material name="dark_inner">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="inner_mouth_collar_side_neg">
+      <origin xyz="0.335 -0.0885 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.038 0.16" />
+        </geometry>
+      <material name="dark_inner">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="inner_mouth_collar_side_pos">
+      <origin xyz="0.335 0.0885 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.038 0.16" />
+        </geometry>
+      <material name="dark_inner">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <collision name="inner_section_top_wall">
+      <origin xyz="-0.15 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.17 0.016" />
+        </geometry>
+      </collision>
+    <collision name="inner_section_bottom_wall">
+      <origin xyz="-0.15 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.17 0.016" />
+        </geometry>
+      </collision>
+    <collision name="inner_section_side_neg">
+      <origin xyz="-0.15 -0.077 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.016 0.12" />
+        </geometry>
+      </collision>
+    <collision name="inner_section_side_pos">
+      <origin xyz="-0.15 0.077 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.016 0.12" />
+        </geometry>
+      </collision>
+    <collision name="inner_glide_pad">
+      <origin xyz="-0.58 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.058 0.012" />
+        </geometry>
+      </collision>
+    <collision name="inner_mouth_collar_top_wall">
+      <origin xyz="0.335 0 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.215 0.038" />
+        </geometry>
+      </collision>
+    <collision name="inner_mouth_collar_bottom_wall">
+      <origin xyz="0.335 0 -0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.215 0.038" />
+        </geometry>
+      </collision>
+    <collision name="inner_mouth_collar_side_neg">
+      <origin xyz="0.335 -0.0885 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.038 0.16" />
+        </geometry>
+      </collision>
+    <collision name="inner_mouth_collar_side_pos">
+      <origin xyz="0.335 0.0885 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.038 0.16" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tip_box">
+    <visual name="tip_section_top_wall">
+      <origin xyz="-0.125 0 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.85 0.115 0.012" />
+        </geometry>
+      <material name="dark_inner">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="tip_section_bottom_wall">
+      <origin xyz="-0.125 0 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.85 0.115 0.012" />
+        </geometry>
+      <material name="dark_inner">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="tip_section_side_neg">
+      <origin xyz="-0.125 -0.0515 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.85 0.012 0.07" />
+        </geometry>
+      <material name="dark_inner">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="tip_section_side_pos">
+      <origin xyz="-0.125 0.0515 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.85 0.012 0.07" />
+        </geometry>
+      <material name="dark_inner">
+        <color rgba="0.28 0.3 0.32 1" />
+        </material>
+      </visual>
+    <visual name="tip_glide_pad">
+      <origin xyz="-0.5 0 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.044 0.014" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="end_cap">
+      <origin xyz="0.327 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.145 0.105" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="tip_section_top_wall">
+      <origin xyz="-0.125 0 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.85 0.115 0.012" />
+        </geometry>
+      </collision>
+    <collision name="tip_section_bottom_wall">
+      <origin xyz="-0.125 0 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.85 0.115 0.012" />
+        </geometry>
+      </collision>
+    <collision name="tip_section_side_neg">
+      <origin xyz="-0.125 -0.0515 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.85 0.012 0.07" />
+        </geometry>
+      </collision>
+    <collision name="tip_section_side_pos">
+      <origin xyz="-0.125 0.0515 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.85 0.012 0.07" />
+        </geometry>
+      </collision>
+    <collision name="tip_glide_pad">
+      <origin xyz="-0.5 0 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.044 0.014" />
+        </geometry>
+      </collision>
+    <collision name="end_cap">
+      <origin xyz="0.327 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.145 0.105" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="support_to_outer" type="fixed">
+    <origin xyz="0.15 0 1.16" rpy="0 0 0" />
+    <parent link="support" />
+    <child link="outer_box" />
+    </joint>
+  <joint name="outer_to_middle" type="prismatic">
+    <origin xyz="1.2 0 0" rpy="0 0 0" />
+    <parent link="outer_box" />
+    <child link="middle_box" />
+    <axis xyz="1 0 0" />
+    <limit effort="180" velocity="0.35" lower="0" upper="0.55" />
+    </joint>
+  <joint name="middle_to_inner" type="prismatic">
+    <origin xyz="0.45 0 0" rpy="0 0 0" />
+    <parent link="middle_box" />
+    <child link="inner_box" />
+    <axis xyz="1 0 0" />
+    <limit effort="140" velocity="0.32" lower="0" upper="0.45" />
+    </joint>
+  <joint name="inner_to_tip" type="prismatic">
+    <origin xyz="0.35 0 0" rpy="0 0 0" />
+    <parent link="inner_box" />
+    <child link="tip_box" />
+    <axis xyz="1 0 0" />
+    <limit effort="100" velocity="0.28" lower="0" upper="0.35" />
+    </joint>
+  </robot>

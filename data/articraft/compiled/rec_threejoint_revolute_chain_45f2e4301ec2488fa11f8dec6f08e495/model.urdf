@@ -1,0 +1,315 @@
+<robot name="three_link_task_arm">
+  <link name="base">
+    <visual name="floor_plate">
+      <origin xyz="0 0 -0.64" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.28 0.035" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.45 0.47 0.48 1" />
+        </material>
+      </visual>
+    <visual name="pedestal">
+      <origin xyz="0 0 -0.3675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.535" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.45 0.47 0.48 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_bearing">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.18" />
+        </geometry>
+      <material name="dark_joint">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="fork_cheek_0">
+      <origin xyz="0 0.105 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.24" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.45 0.47 0.48 1" />
+        </material>
+      </visual>
+    <visual name="fork_cheek_1">
+      <origin xyz="0 -0.105 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.24" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.45 0.47 0.48 1" />
+        </material>
+      </visual>
+    <visual name="neck_web_0">
+      <origin xyz="0 0.08 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.03 0.06" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.45 0.47 0.48 1" />
+        </material>
+      </visual>
+    <visual name="neck_web_1">
+      <origin xyz="0 -0.08 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.03 0.06" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.45 0.47 0.48 1" />
+        </material>
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0 0 -0.64" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.28 0.035" />
+        </geometry>
+      </collision>
+    <collision name="pedestal">
+      <origin xyz="0 0 -0.3675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.535" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bearing">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="fork_cheek_0">
+      <origin xyz="0 0.105 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.24" />
+        </geometry>
+      </collision>
+    <collision name="fork_cheek_1">
+      <origin xyz="0 -0.105 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.24" />
+        </geometry>
+      </collision>
+    <collision name="neck_web_0">
+      <origin xyz="0 0.08 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.03 0.06" />
+        </geometry>
+      </collision>
+    <collision name="neck_web_1">
+      <origin xyz="0 -0.08 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.03 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_arm">
+    <visual name="shoulder_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.105" />
+        </geometry>
+      <material name="dark_joint">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="upper_beam">
+      <origin xyz="0.291 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.422 0.07 0.055" />
+        </geometry>
+      <material name="link_blue">
+        <color rgba="0.1 0.28 0.58 1" />
+        </material>
+      </visual>
+    <visual name="elbow_bearing">
+      <origin xyz="0.56 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.115" />
+        </geometry>
+      <material name="dark_joint">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="angle_index">
+      <origin xyz="0.12 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.022 0.018" />
+        </geometry>
+      <material name="yellow_index">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <collision name="shoulder_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.105" />
+        </geometry>
+      </collision>
+    <collision name="upper_beam">
+      <origin xyz="0.291 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.422 0.07 0.055" />
+        </geometry>
+      </collision>
+    <collision name="elbow_bearing">
+      <origin xyz="0.56 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.115" />
+        </geometry>
+      </collision>
+    <collision name="angle_index">
+      <origin xyz="0.12 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.022 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="forearm">
+    <visual name="elbow_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.092" />
+        </geometry>
+      <material name="dark_joint">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="forearm_beam">
+      <origin xyz="0.227 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.326 0.06 0.05" />
+        </geometry>
+      <material name="link_blue">
+        <color rgba="0.1 0.28 0.58 1" />
+        </material>
+      </visual>
+    <visual name="wrist_bearing">
+      <origin xyz="0.44 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.062" length="0.096" />
+        </geometry>
+      <material name="dark_joint">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="elbow_index">
+      <origin xyz="0.16 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.014" />
+        </geometry>
+      <material name="yellow_index">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <collision name="elbow_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="forearm_beam">
+      <origin xyz="0.227 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.326 0.06 0.05" />
+        </geometry>
+      </collision>
+    <collision name="wrist_bearing">
+      <origin xyz="0.44 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.062" length="0.096" />
+        </geometry>
+      </collision>
+    <collision name="elbow_index">
+      <origin xyz="0.16 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist_link">
+    <visual name="wrist_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.08" />
+        </geometry>
+      <material name="dark_joint">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="short_link">
+      <origin xyz="0.141 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.178 0.052 0.045" />
+        </geometry>
+      <material name="link_blue">
+        <color rgba="0.1 0.28 0.58 1" />
+        </material>
+      </visual>
+    <visual name="pad_mount">
+      <origin xyz="0.26 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.046 0.07" />
+        </geometry>
+      <material name="dark_joint">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="rectangular_pad">
+      <origin xyz="0.305 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.13 0.03" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="wrist_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="short_link">
+      <origin xyz="0.141 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.178 0.052 0.045" />
+        </geometry>
+      </collision>
+    <collision name="pad_mount">
+      <origin xyz="0.26 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.046 0.07" />
+        </geometry>
+      </collision>
+    <collision name="rectangular_pad">
+      <origin xyz="0.305 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.13 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shoulder" type="revolute">
+    <parent link="base" />
+    <child link="upper_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="35" velocity="1.2" lower="-0.85" upper="1.35" />
+    </joint>
+  <joint name="elbow" type="revolute">
+    <origin xyz="0.56 0 0" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="forearm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="28" velocity="1.4" lower="-2.2" upper="2.2" />
+    </joint>
+  <joint name="wrist" type="revolute">
+    <origin xyz="0.44 0 0" rpy="0 0 0" />
+    <parent link="forearm" />
+    <child link="wrist_link" />
+    <axis xyz="0 -1 0" />
+    <limit effort="12" velocity="2" lower="-1.85" upper="1.85" />
+    </joint>
+  </robot>

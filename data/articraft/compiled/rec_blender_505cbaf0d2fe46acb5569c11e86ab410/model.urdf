@@ -1,0 +1,528 @@
+<robot name="countertop_soup_blender">
+  <material name="glossy_plastic">
+    <color rgba="0.12 0.18 0.24 1" />
+    </material>
+  <material name="dark_plastic">
+    <color rgba="0.015 0.018 0.02 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <material name="tempered_glass">
+    <color rgba="0.7 0.92 1 0.34" />
+    </material>
+  <material name="thick_glass_edges">
+    <color rgba="0.78 0.96 1 0.48" />
+    </material>
+  <material name="brushed_stainless">
+    <color rgba="0.76 0.78 0.78 1" />
+    </material>
+  <material name="satin_metal">
+    <color rgba="0.54 0.56 0.58 1" />
+    </material>
+  <material name="white_marking">
+    <color rgba="0.94 0.96 0.92 1" />
+    </material>
+  <link name="base">
+    <visual name="wide_round_base">
+      <geometry>
+        <mesh filename="assets/meshes/wide_round_base.obj" />
+        </geometry>
+      <material name="glossy_plastic">
+        <color rgba="0.12 0.18 0.24 1" />
+        </material>
+      </visual>
+    <visual name="coupling_ring">
+      <geometry>
+        <mesh filename="assets/meshes/coupling_ring.obj" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.54 0.56 0.58 1" />
+        </material>
+      </visual>
+    <visual name="drive_gasket">
+      <origin xyz="0 0 0.146" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.016" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_ramp_0">
+      <origin xyz="0.0994557 0.0304067 0.148" rpy="0 0 1.8675" />
+      <geometry>
+        <box size="0.05 0.017 0.012" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.54 0.56 0.58 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_ramp_1">
+      <origin xyz="-0.0760608 0.0709278 0.148" rpy="0 0 3.9619" />
+      <geometry>
+        <box size="0.05 0.017 0.012" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.54 0.56 0.58 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_ramp_2">
+      <origin xyz="-0.0233949 -0.101334 0.148" rpy="0 0 6.05629" />
+      <geometry>
+        <box size="0.05 0.017 0.012" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.54 0.56 0.58 1" />
+        </material>
+      </visual>
+    <visual name="front_panel">
+      <origin xyz="0 -0.174 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.024 0.074" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <collision name="wide_round_base">
+      <geometry>
+        <mesh filename="assets/meshes/wide_round_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="coupling_ring">
+      <geometry>
+        <mesh filename="assets/meshes/coupling_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="drive_gasket">
+      <origin xyz="0 0 0.146" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_ramp_0">
+      <origin xyz="0.0994557 0.0304067 0.148" rpy="0 0 1.8675" />
+      <geometry>
+        <box size="0.05 0.017 0.012" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_ramp_1">
+      <origin xyz="-0.0760608 0.0709278 0.148" rpy="0 0 3.9619" />
+      <geometry>
+        <box size="0.05 0.017 0.012" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_ramp_2">
+      <origin xyz="-0.0233949 -0.101334 0.148" rpy="0 0 6.05629" />
+      <geometry>
+        <box size="0.05 0.017 0.012" />
+        </geometry>
+      </collision>
+    <collision name="front_panel">
+      <origin xyz="0 -0.174 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.024 0.074" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="jar">
+    <visual name="wide_mouth_glass_jar">
+      <geometry>
+        <mesh filename="assets/meshes/wide_mouth_glass_jar.obj" />
+        </geometry>
+      <material name="tempered_glass">
+        <color rgba="0.7 0.92 1 0.34" />
+        </material>
+      </visual>
+    <visual name="jar_lock_collar">
+      <geometry>
+        <mesh filename="assets/meshes/jar_lock_collar.obj" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_tab_0">
+      <origin xyz="0.099 0 0.03" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.04 0.015 0.014" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_tab_1">
+      <origin xyz="-0.0495 0.0857365 0.03" rpy="0 0 3.66519" />
+      <geometry>
+        <box size="0.04 0.015 0.014" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="bayonet_tab_2">
+      <origin xyz="-0.0495 -0.0857365 0.03" rpy="0 0 5.75959" />
+      <geometry>
+        <box size="0.04 0.015 0.014" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="blade_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/blade_bearing.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.76 0.78 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bearing_spoke_0">
+      <origin xyz="0.041 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.007 0.008" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.76 0.78 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bearing_spoke_1">
+      <origin xyz="2.51053e-18 0.041 0.025" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.045 0.007 0.008" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.76 0.78 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bearing_spoke_2">
+      <origin xyz="-0.041 5.02105e-18 0.025" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.045 0.007 0.008" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.76 0.78 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bearing_spoke_3">
+      <origin xyz="-7.53158e-18 -0.041 0.025" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.045 0.007 0.008" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.76 0.78 0.78 1" />
+        </material>
+      </visual>
+    <visual name="thick_pouring_lip">
+      <geometry>
+        <mesh filename="assets/meshes/thick_pouring_lip.obj" />
+        </geometry>
+      <material name="thick_glass_edges">
+        <color rgba="0.78 0.96 1 0.48" />
+        </material>
+      </visual>
+    <visual name="measure_mark_0">
+      <origin xyz="-0.035 -0.095 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.006 0.004" />
+        </geometry>
+      <material name="white_marking">
+        <color rgba="0.94 0.96 0.92 1" />
+        </material>
+      </visual>
+    <visual name="measure_mark_1">
+      <origin xyz="-0.035 -0.0975 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.023 0.006 0.004" />
+        </geometry>
+      <material name="white_marking">
+        <color rgba="0.94 0.96 0.92 1" />
+        </material>
+      </visual>
+    <visual name="measure_mark_2">
+      <origin xyz="-0.035 -0.1 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.006 0.004" />
+        </geometry>
+      <material name="white_marking">
+        <color rgba="0.94 0.96 0.92 1" />
+        </material>
+      </visual>
+    <visual name="measure_mark_3">
+      <origin xyz="-0.035 -0.1025 0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.023 0.006 0.004" />
+        </geometry>
+      <material name="white_marking">
+        <color rgba="0.94 0.96 0.92 1" />
+        </material>
+      </visual>
+    <visual name="measure_mark_4">
+      <origin xyz="-0.035 -0.105 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.006 0.004" />
+        </geometry>
+      <material name="white_marking">
+        <color rgba="0.94 0.96 0.92 1" />
+        </material>
+      </visual>
+    <visual name="vented_lid">
+      <geometry>
+        <mesh filename="assets/meshes/vented_lid.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="hinge_support_0">
+      <origin xyz="-0.034 0.031 0.456" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.014" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="hinge_support_1">
+      <origin xyz="-0.034 -0.031 0.456" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.014" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="wide_mouth_glass_jar">
+      <geometry>
+        <mesh filename="assets/meshes/wide_mouth_glass_jar.obj" />
+        </geometry>
+      </collision>
+    <collision name="jar_lock_collar">
+      <geometry>
+        <mesh filename="assets/meshes/jar_lock_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_tab_0">
+      <origin xyz="0.099 0 0.03" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.04 0.015 0.014" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_tab_1">
+      <origin xyz="-0.0495 0.0857365 0.03" rpy="0 0 3.66519" />
+      <geometry>
+        <box size="0.04 0.015 0.014" />
+        </geometry>
+      </collision>
+    <collision name="bayonet_tab_2">
+      <origin xyz="-0.0495 -0.0857365 0.03" rpy="0 0 5.75959" />
+      <geometry>
+        <box size="0.04 0.015 0.014" />
+        </geometry>
+      </collision>
+    <collision name="blade_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/blade_bearing.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_spoke_0">
+      <origin xyz="0.041 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.007 0.008" />
+        </geometry>
+      </collision>
+    <collision name="bearing_spoke_1">
+      <origin xyz="2.51053e-18 0.041 0.025" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.045 0.007 0.008" />
+        </geometry>
+      </collision>
+    <collision name="bearing_spoke_2">
+      <origin xyz="-0.041 5.02105e-18 0.025" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.045 0.007 0.008" />
+        </geometry>
+      </collision>
+    <collision name="bearing_spoke_3">
+      <origin xyz="-7.53158e-18 -0.041 0.025" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.045 0.007 0.008" />
+        </geometry>
+      </collision>
+    <collision name="thick_pouring_lip">
+      <geometry>
+        <mesh filename="assets/meshes/thick_pouring_lip.obj" />
+        </geometry>
+      </collision>
+    <collision name="measure_mark_0">
+      <origin xyz="-0.035 -0.095 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.006 0.004" />
+        </geometry>
+      </collision>
+    <collision name="measure_mark_1">
+      <origin xyz="-0.035 -0.0975 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.023 0.006 0.004" />
+        </geometry>
+      </collision>
+    <collision name="measure_mark_2">
+      <origin xyz="-0.035 -0.1 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.006 0.004" />
+        </geometry>
+      </collision>
+    <collision name="measure_mark_3">
+      <origin xyz="-0.035 -0.1025 0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.023 0.006 0.004" />
+        </geometry>
+      </collision>
+    <collision name="measure_mark_4">
+      <origin xyz="-0.035 -0.105 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.006 0.004" />
+        </geometry>
+      </collision>
+    <collision name="vented_lid">
+      <geometry>
+        <mesh filename="assets/meshes/vented_lid.obj" />
+        </geometry>
+      </collision>
+    <collision name="hinge_support_0">
+      <origin xyz="-0.034 0.031 0.456" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.014" />
+        </geometry>
+      </collision>
+    <collision name="hinge_support_1">
+      <origin xyz="-0.034 -0.031 0.456" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade">
+    <visual name="blade_shaft">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.038" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.76 0.78 0.78 1" />
+        </material>
+      </visual>
+    <visual name="four_blade_assembly">
+      <geometry>
+        <mesh filename="assets/meshes/four_blade_assembly.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.76 0.78 0.78 1" />
+        </material>
+      </visual>
+    <collision name="blade_shaft">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.038" />
+        </geometry>
+      </collision>
+    <collision name="four_blade_assembly">
+      <geometry>
+        <mesh filename="assets/meshes/four_blade_assembly.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="steam_cap">
+    <visual name="vent_cap_disc">
+      <origin xyz="0.045 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0.007" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.044" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="lift_tab">
+      <origin xyz="0.086 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.02 0.006" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="vent_cap_disc">
+      <origin xyz="0.045 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0.007" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.044" />
+        </geometry>
+      </collision>
+    <collision name="lift_tab">
+      <origin xyz="0.086 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.02 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dial">
+    <visual name="front_speed_dial">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_speed_dial.obj" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <collision name="front_speed_dial">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_speed_dial.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_jar" type="revolute">
+    <origin xyz="0 0 0.154" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="jar" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.2" lower="0" upper="0.488692" />
+    </joint>
+  <joint name="jar_to_blade" type="continuous">
+    <origin xyz="0 0 0.045" rpy="0 0 0" />
+    <parent link="jar" />
+    <child link="blade" />
+    <axis xyz="0 0 1" />
+    <limit effort="9" velocity="80" />
+    </joint>
+  <joint name="jar_to_steam_cap" type="revolute">
+    <origin xyz="-0.034 0 0.449" rpy="0 0 0" />
+    <parent link="jar" />
+    <child link="steam_cap" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.8" velocity="2" lower="0" upper="1.25664" />
+    </joint>
+  <joint name="base_to_dial" type="revolute">
+    <origin xyz="0 -0.186 0.075" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="dial" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.5" velocity="4" lower="-2.26893" upper="2.26893" />
+    </joint>
+  </robot>

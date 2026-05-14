@@ -1,0 +1,74 @@
+<robot name="spinning_top_fidget_desk_toy">
+  <material name="warm_wood">
+    <color rgba="0.62 0.43 0.26 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.7 0.72 0.7 1" />
+    </material>
+  <material name="anodized_teal">
+    <color rgba="0.05 0.42 0.52 1" />
+    </material>
+  <link name="desk">
+    <inertial>
+      <origin xyz="0 0 -0.0035" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="0.000573096" ixy="0" ixz="0" iyy="0.000573096" iyz="0" izz="0.00114333" />
+      </inertial>
+    <visual name="desktop_slab">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.14 0.006" />
+        </geometry>
+      <material name="warm_wood">
+        <color rgba="0.62 0.43 0.26 1" />
+        </material>
+      </visual>
+    <visual name="spin_pad">
+      <origin xyz="0 0 -0.0005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.001" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <collision name="desktop_slab">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.14 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spin_pad">
+      <origin xyz="0 0 -0.0005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="top">
+    <inertial>
+      <origin xyz="0 0 0.0345" rpy="0 0 0" />
+      <mass value="0.08" />
+      <inertia ixx="8.174e-05" ixy="0" ixz="0" iyy="8.174e-05" iyz="0" izz="0.0001" />
+      </inertial>
+    <visual name="top_body">
+      <geometry>
+        <mesh filename="assets/meshes/spinning_top_body.obj" />
+        </geometry>
+      <material name="anodized_teal">
+        <color rgba="0.05 0.42 0.52 1" />
+        </material>
+      </visual>
+    <collision name="top_body">
+      <geometry>
+        <mesh filename="assets/meshes/spinning_top_body.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="spin_axis" type="continuous">
+    <parent link="desk" />
+    <child link="top" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.02" velocity="80" />
+    </joint>
+  </robot>

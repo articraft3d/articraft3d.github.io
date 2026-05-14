@@ -1,0 +1,1036 @@
+<robot name="four_antenna_router">
+  <material name="matte_black">
+    <color rgba="0.015 0.016 0.017 1" />
+    </material>
+  <material name="soft_black">
+    <color rgba="0.035 0.037 0.04 1" />
+    </material>
+  <material name="dark_grey">
+    <color rgba="0.09 0.095 0.1 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.005 0.005 0.006 1" />
+    </material>
+  <material name="port_black">
+    <color rgba="0.002 0.002 0.003 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.62 0.64 0.62 1" />
+    </material>
+  <material name="wan_blue">
+    <color rgba="0 0.18 0.85 1" />
+    </material>
+  <material name="led_green">
+    <color rgba="0 0.95 0.23 1" />
+    </material>
+  <material name="led_amber">
+    <color rgba="1 0.55 0.05 1" />
+    </material>
+  <material name="led_blue">
+    <color rgba="0.05 0.35 1 1" />
+    </material>
+  <material name="white_print">
+    <color rgba="0.86 0.88 0.86 1" />
+    </material>
+  <link name="housing">
+    <visual name="main_shell">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_router_shell.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="top_inset">
+      <origin xyz="0 -0.004 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.238 0.132 0.003" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="top_vents">
+      <origin xyz="0 -0.014 0.0568" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_vent_slots.obj" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="brand_mark">
+      <origin xyz="0 -0.063 0.0567" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.01 0.0012" />
+        </geometry>
+      <material name="white_print">
+        <color rgba="0.86 0.88 0.86 1" />
+        </material>
+      </visual>
+    <visual name="foot_0">
+      <origin xyz="-0.115 -0.064 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="foot_1">
+      <origin xyz="0.115 -0.064 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="foot_2">
+      <origin xyz="-0.115 0.064 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="foot_3">
+      <origin xyz="0.115 0.064 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="front_led_0">
+      <origin xyz="-0.07 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      <material name="led_green">
+        <color rgba="0 0.95 0.23 1" />
+        </material>
+      </visual>
+    <visual name="front_led_1">
+      <origin xyz="-0.045 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      <material name="led_green">
+        <color rgba="0 0.95 0.23 1" />
+        </material>
+      </visual>
+    <visual name="front_led_2">
+      <origin xyz="-0.02 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      <material name="led_blue">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <visual name="front_led_3">
+      <origin xyz="0.005 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      <material name="led_blue">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <visual name="front_led_4">
+      <origin xyz="0.03 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      <material name="led_green">
+        <color rgba="0 0.95 0.23 1" />
+        </material>
+      </visual>
+    <visual name="front_led_5">
+      <origin xyz="0.055 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      <material name="led_amber">
+        <color rgba="1 0.55 0.05 1" />
+        </material>
+      </visual>
+    <visual name="front_led_6">
+      <origin xyz="0.08 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      <material name="led_green">
+        <color rgba="0 0.95 0.23 1" />
+        </material>
+      </visual>
+    <visual name="rear_panel">
+      <origin xyz="0 0.0922 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.214 0.006 0.032" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lan_port_0">
+      <origin xyz="-0.075 0.096 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.005 0.016" />
+        </geometry>
+      <material name="port_black">
+        <color rgba="0.002 0.002 0.003 1" />
+        </material>
+      </visual>
+    <visual name="lan_contact_0">
+      <origin xyz="-0.075 0.099 0.0385" rpy="0 0 0" />
+      <geometry>
+        <box size="0.019 0.0016 0.003" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="lan_port_1">
+      <origin xyz="-0.044 0.096 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.005 0.016" />
+        </geometry>
+      <material name="port_black">
+        <color rgba="0.002 0.002 0.003 1" />
+        </material>
+      </visual>
+    <visual name="lan_contact_1">
+      <origin xyz="-0.044 0.099 0.0385" rpy="0 0 0" />
+      <geometry>
+        <box size="0.019 0.0016 0.003" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="lan_port_2">
+      <origin xyz="-0.013 0.096 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.005 0.016" />
+        </geometry>
+      <material name="port_black">
+        <color rgba="0.002 0.002 0.003 1" />
+        </material>
+      </visual>
+    <visual name="lan_contact_2">
+      <origin xyz="-0.013 0.099 0.0385" rpy="0 0 0" />
+      <geometry>
+        <box size="0.019 0.0016 0.003" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="lan_port_3">
+      <origin xyz="0.018 0.096 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.005 0.016" />
+        </geometry>
+      <material name="port_black">
+        <color rgba="0.002 0.002 0.003 1" />
+        </material>
+      </visual>
+    <visual name="lan_contact_3">
+      <origin xyz="0.018 0.099 0.0385" rpy="0 0 0" />
+      <geometry>
+        <box size="0.019 0.0016 0.003" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="wan_port">
+      <origin xyz="0.054 0.096 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.005 0.017" />
+        </geometry>
+      <material name="wan_blue">
+        <color rgba="0 0.18 0.85 1" />
+        </material>
+      </visual>
+    <visual name="usb_port">
+      <origin xyz="0.087 0.096 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.005 0.013" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="power_jack">
+      <origin xyz="0.119 0.092 0.03" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="port_black">
+        <color rgba="0.002 0.002 0.003 1" />
+        </material>
+      </visual>
+    <visual name="socket_stem_0">
+      <origin xyz="-0.115 0.098 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.01" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_bridge_0">
+      <origin xyz="-0.115 0.098 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.042 0.018 0.006" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_yoke_0_a">
+      <origin xyz="-0.133 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_yoke_0_b">
+      <origin xyz="-0.097 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_stem_1">
+      <origin xyz="-0.038 0.098 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.01" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_bridge_1">
+      <origin xyz="-0.038 0.098 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.042 0.018 0.006" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_yoke_1_a">
+      <origin xyz="-0.056 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_yoke_1_b">
+      <origin xyz="-0.02 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_stem_2">
+      <origin xyz="0.038 0.098 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.01" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_bridge_2">
+      <origin xyz="0.038 0.098 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.042 0.018 0.006" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_yoke_2_a">
+      <origin xyz="0.02 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_yoke_2_b">
+      <origin xyz="0.056 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_stem_3">
+      <origin xyz="0.115 0.098 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.01" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_bridge_3">
+      <origin xyz="0.115 0.098 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.042 0.018 0.006" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_yoke_3_a">
+      <origin xyz="0.097 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="socket_yoke_3_b">
+      <origin xyz="0.133 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <collision name="main_shell">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_router_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_inset">
+      <origin xyz="0 -0.004 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.238 0.132 0.003" />
+        </geometry>
+      </collision>
+    <collision name="top_vents">
+      <origin xyz="0 -0.014 0.0568" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_vent_slots.obj" />
+        </geometry>
+      </collision>
+    <collision name="brand_mark">
+      <origin xyz="0 -0.063 0.0567" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.01 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="foot_0">
+      <origin xyz="-0.115 -0.064 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="foot_1">
+      <origin xyz="0.115 -0.064 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="foot_2">
+      <origin xyz="-0.115 0.064 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="foot_3">
+      <origin xyz="0.115 0.064 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="front_led_0">
+      <origin xyz="-0.07 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      </collision>
+    <collision name="front_led_1">
+      <origin xyz="-0.045 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      </collision>
+    <collision name="front_led_2">
+      <origin xyz="-0.02 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      </collision>
+    <collision name="front_led_3">
+      <origin xyz="0.005 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      </collision>
+    <collision name="front_led_4">
+      <origin xyz="0.03 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      </collision>
+    <collision name="front_led_5">
+      <origin xyz="0.055 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      </collision>
+    <collision name="front_led_6">
+      <origin xyz="0.08 -0.0914 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0035 0.0055" />
+        </geometry>
+      </collision>
+    <collision name="rear_panel">
+      <origin xyz="0 0.0922 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.214 0.006 0.032" />
+        </geometry>
+      </collision>
+    <collision name="lan_port_0">
+      <origin xyz="-0.075 0.096 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.005 0.016" />
+        </geometry>
+      </collision>
+    <collision name="lan_contact_0">
+      <origin xyz="-0.075 0.099 0.0385" rpy="0 0 0" />
+      <geometry>
+        <box size="0.019 0.0016 0.003" />
+        </geometry>
+      </collision>
+    <collision name="lan_port_1">
+      <origin xyz="-0.044 0.096 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.005 0.016" />
+        </geometry>
+      </collision>
+    <collision name="lan_contact_1">
+      <origin xyz="-0.044 0.099 0.0385" rpy="0 0 0" />
+      <geometry>
+        <box size="0.019 0.0016 0.003" />
+        </geometry>
+      </collision>
+    <collision name="lan_port_2">
+      <origin xyz="-0.013 0.096 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.005 0.016" />
+        </geometry>
+      </collision>
+    <collision name="lan_contact_2">
+      <origin xyz="-0.013 0.099 0.0385" rpy="0 0 0" />
+      <geometry>
+        <box size="0.019 0.0016 0.003" />
+        </geometry>
+      </collision>
+    <collision name="lan_port_3">
+      <origin xyz="0.018 0.096 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.005 0.016" />
+        </geometry>
+      </collision>
+    <collision name="lan_contact_3">
+      <origin xyz="0.018 0.099 0.0385" rpy="0 0 0" />
+      <geometry>
+        <box size="0.019 0.0016 0.003" />
+        </geometry>
+      </collision>
+    <collision name="wan_port">
+      <origin xyz="0.054 0.096 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.005 0.017" />
+        </geometry>
+      </collision>
+    <collision name="usb_port">
+      <origin xyz="0.087 0.096 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.005 0.013" />
+        </geometry>
+      </collision>
+    <collision name="power_jack">
+      <origin xyz="0.119 0.092 0.03" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="socket_stem_0">
+      <origin xyz="-0.115 0.098 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="socket_bridge_0">
+      <origin xyz="-0.115 0.098 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.042 0.018 0.006" />
+        </geometry>
+      </collision>
+    <collision name="socket_yoke_0_a">
+      <origin xyz="-0.133 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      </collision>
+    <collision name="socket_yoke_0_b">
+      <origin xyz="-0.097 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      </collision>
+    <collision name="socket_stem_1">
+      <origin xyz="-0.038 0.098 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="socket_bridge_1">
+      <origin xyz="-0.038 0.098 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.042 0.018 0.006" />
+        </geometry>
+      </collision>
+    <collision name="socket_yoke_1_a">
+      <origin xyz="-0.056 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      </collision>
+    <collision name="socket_yoke_1_b">
+      <origin xyz="-0.02 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      </collision>
+    <collision name="socket_stem_2">
+      <origin xyz="0.038 0.098 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="socket_bridge_2">
+      <origin xyz="0.038 0.098 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.042 0.018 0.006" />
+        </geometry>
+      </collision>
+    <collision name="socket_yoke_2_a">
+      <origin xyz="0.02 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      </collision>
+    <collision name="socket_yoke_2_b">
+      <origin xyz="0.056 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      </collision>
+    <collision name="socket_stem_3">
+      <origin xyz="0.115 0.098 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="socket_bridge_3">
+      <origin xyz="0.115 0.098 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.042 0.018 0.006" />
+        </geometry>
+      </collision>
+    <collision name="socket_yoke_3_a">
+      <origin xyz="0.097 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      </collision>
+    <collision name="socket_yoke_3_b">
+      <origin xyz="0.133 0.098 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wps_button">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="button_glyph">
+      <origin xyz="0 -0.0018 0.0058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0126 0.0012 0.001" />
+        </geometry>
+      <material name="white_print">
+        <color rgba="0.86 0.88 0.86 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="button_glyph">
+      <origin xyz="0 -0.0018 0.0058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0126 0.0012 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="reset_button">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.006" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="button_glyph">
+      <origin xyz="0 -0.0012 0.0058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0084 0.0012 0.001" />
+        </geometry>
+      <material name="white_print">
+        <color rgba="0.86 0.88 0.86 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="button_glyph">
+      <origin xyz="0 -0.0012 0.0058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0084 0.0012 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="antenna_0">
+    <visual name="barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.026" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="neck">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.026" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <origin xyz="0 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/flat_antenna_blade.obj" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="blade_boot">
+      <origin xyz="0 -0.0008 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <collision name="barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="neck">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="blade">
+      <origin xyz="0 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/flat_antenna_blade.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_boot">
+      <origin xyz="0 -0.0008 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="antenna_1">
+    <visual name="barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.026" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="neck">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.026" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <origin xyz="0 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/flat_antenna_blade.obj" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="blade_boot">
+      <origin xyz="0 -0.0008 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <collision name="barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="neck">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="blade">
+      <origin xyz="0 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/flat_antenna_blade.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_boot">
+      <origin xyz="0 -0.0008 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="antenna_2">
+    <visual name="barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.026" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="neck">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.026" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <origin xyz="0 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/flat_antenna_blade.obj" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="blade_boot">
+      <origin xyz="0 -0.0008 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <collision name="barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="neck">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="blade">
+      <origin xyz="0 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/flat_antenna_blade.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_boot">
+      <origin xyz="0 -0.0008 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="antenna_3">
+    <visual name="barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.026" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="neck">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.026" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <origin xyz="0 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/flat_antenna_blade.obj" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.035 0.037 0.04 1" />
+        </material>
+      </visual>
+    <visual name="blade_boot">
+      <origin xyz="0 -0.0008 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <collision name="barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="neck">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="blade">
+      <origin xyz="0 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/flat_antenna_blade.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_boot">
+      <origin xyz="0 -0.0008 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="housing_to_wps_button" type="prismatic">
+    <origin xyz="-0.12 -0.024 0.054" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="wps_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.04" lower="0" upper="0.004" />
+    </joint>
+  <joint name="housing_to_reset_button" type="prismatic">
+    <origin xyz="0.12 -0.024 0.054" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="reset_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.04" lower="0" upper="0.004" />
+    </joint>
+  <joint name="housing_to_antenna_0" type="revolute">
+    <origin xyz="-0.115 0.098 0.073" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="antenna_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.6" velocity="1.2" lower="-1.1" upper="1.1" />
+    </joint>
+  <joint name="housing_to_antenna_1" type="revolute">
+    <origin xyz="-0.038 0.098 0.073" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="antenna_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.6" velocity="1.2" lower="-1.1" upper="1.1" />
+    </joint>
+  <joint name="housing_to_antenna_2" type="revolute">
+    <origin xyz="0.038 0.098 0.073" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="antenna_2" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.6" velocity="1.2" lower="-1.1" upper="1.1" />
+    </joint>
+  <joint name="housing_to_antenna_3" type="revolute">
+    <origin xyz="0.115 0.098 0.073" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="antenna_3" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.6" velocity="1.2" lower="-1.1" upper="1.1" />
+    </joint>
+  </robot>

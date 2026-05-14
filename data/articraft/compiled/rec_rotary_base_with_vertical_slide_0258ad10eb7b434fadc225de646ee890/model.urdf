@@ -1,0 +1,202 @@
+<robot name="low_profile_rotary_lift">
+  <material name="dark_metal">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.56 0.58 0.58 1" />
+    </material>
+  <material name="satin_black">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="warm_column">
+    <color rgba="0.35 0.36 0.34 1" />
+    </material>
+  <material name="matte_rubber">
+    <color rgba="0.025 0.025 0.023 1" />
+    </material>
+  <link name="base">
+    <visual name="base_disk">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.32" length="0.045" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="bearing_shadow">
+      <origin xyz="0 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.255" length="0.008" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="base_disk">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.32" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="bearing_shadow">
+      <origin xyz="0 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.255" length="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="turntable">
+    <visual name="table_disk">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.04" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.56 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="center_boss">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.014" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="tower_column">
+      <origin xyz="0 -0.1 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.09 0.28" />
+        </geometry>
+      <material name="warm_column">
+        <color rgba="0.35 0.36 0.34 1" />
+        </material>
+      </visual>
+    <visual name="front_guide">
+      <origin xyz="0 -0.059 0.172" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.008 0.25" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="tower_foot">
+      <origin xyz="0 -0.1 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.148 0.12 0.018" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="table_disk">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="center_boss">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="tower_column">
+      <origin xyz="0 -0.1 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.09 0.28" />
+        </geometry>
+      </collision>
+    <collision name="front_guide">
+      <origin xyz="0 -0.059 0.172" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.008 0.25" />
+        </geometry>
+      </collision>
+    <collision name="tower_foot">
+      <origin xyz="0 -0.1 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.148 0.12 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lift_stage">
+    <visual name="slide_rail">
+      <origin xyz="0 0.015 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.03 0.24" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.56 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="carriage_face">
+      <origin xyz="0 0.039 0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.018 0.12" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="square_pad">
+      <origin xyz="0 0.095 0.253" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.16 0.026" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.025 0.025 0.023 1" />
+        </material>
+      </visual>
+    <visual name="pad_neck">
+      <origin xyz="0 0.047 0.232" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.07 0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.56 0.58 0.58 1" />
+        </material>
+      </visual>
+    <collision name="slide_rail">
+      <origin xyz="0 0.015 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.03 0.24" />
+        </geometry>
+      </collision>
+    <collision name="carriage_face">
+      <origin xyz="0 0.039 0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.018 0.12" />
+        </geometry>
+      </collision>
+    <collision name="square_pad">
+      <origin xyz="0 0.095 0.253" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.16 0.026" />
+        </geometry>
+      </collision>
+    <collision name="pad_neck">
+      <origin xyz="0 0.047 0.232" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.07 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="table_spin" type="revolute">
+    <origin xyz="0 0 0.045" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="turntable" />
+    <axis xyz="0 0 1" />
+    <limit effort="40" velocity="1.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="stage_lift" type="prismatic">
+    <origin xyz="0 -0.055 0.07" rpy="0 0 0" />
+    <parent link="turntable" />
+    <child link="lift_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.18" lower="0" upper="0.1" />
+    </joint>
+  </robot>

@@ -1,0 +1,875 @@
+<robot name="advertising_blimp">
+  <material name="pearl_white_fabric">
+    <color rgba="0.88 0.91 0.88 1" />
+    </material>
+  <material name="deep_blue_trim">
+    <color rgba="0.03 0.13 0.42 1" />
+    </material>
+  <material name="advertising_red">
+    <color rgba="0.9 0.08 0.05 1" />
+    </material>
+  <material name="brushed_silver">
+    <color rgba="0.64 0.67 0.68 1" />
+    </material>
+  <material name="dark_glass">
+    <color rgba="0.02 0.035 0.055 1" />
+    </material>
+  <material name="strut_aluminum">
+    <color rgba="0.4 0.42 0.43 1" />
+    </material>
+  <material name="satin_black_propellers">
+    <color rgba="0.015 0.015 0.014 1" />
+    </material>
+  <link name="envelope">
+    <visual name="envelope_body">
+      <geometry>
+        <mesh filename="assets/meshes/cigar_envelope.obj" />
+        </geometry>
+      <material name="pearl_white_fabric">
+        <color rgba="0.88 0.91 0.88 1" />
+        </material>
+      </visual>
+    <visual name="port_ad_panel">
+      <origin xyz="2.5 7.12 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="30 0.08 2.4" />
+        </geometry>
+      <material name="advertising_red">
+        <color rgba="0.9 0.08 0.05 1" />
+        </material>
+      </visual>
+    <visual name="starboard_ad_panel">
+      <origin xyz="2.5 -7.12 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="30 0.08 2.4" />
+        </geometry>
+      <material name="advertising_red">
+        <color rgba="0.9 0.08 0.05 1" />
+        </material>
+      </visual>
+    <visual name="equator_stripe">
+      <origin xyz="7 0 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="20 14.15 0.1" />
+        </geometry>
+      <material name="deep_blue_trim">
+        <color rgba="0.03 0.13 0.42 1" />
+        </material>
+      </visual>
+    <visual name="dorsal_fin">
+      <origin xyz="-27.05 0 4.48" rpy="0 0 0" />
+      <geometry>
+        <box size="3.25 0.26 3.75" />
+        </geometry>
+      <material name="deep_blue_trim">
+        <color rgba="0.03 0.13 0.42 1" />
+        </material>
+      </visual>
+    <visual name="ventral_fin">
+      <origin xyz="-27.05 0 -4.36" rpy="0 0 0" />
+      <geometry>
+        <box size="3.25 0.26 3.55" />
+        </geometry>
+      <material name="deep_blue_trim">
+        <color rgba="0.03 0.13 0.42 1" />
+        </material>
+      </visual>
+    <visual name="port_stabilizer">
+      <origin xyz="-27.05 5.18 0" rpy="0 0 0" />
+      <geometry>
+        <box size="3.25 5.15 0.24" />
+        </geometry>
+      <material name="deep_blue_trim">
+        <color rgba="0.03 0.13 0.42 1" />
+        </material>
+      </visual>
+    <visual name="starboard_stabilizer">
+      <origin xyz="-27.05 -5.18 0" rpy="0 0 0" />
+      <geometry>
+        <box size="3.25 5.15 0.24" />
+        </geometry>
+      <material name="deep_blue_trim">
+        <color rgba="0.03 0.13 0.42 1" />
+        </material>
+      </visual>
+    <collision name="envelope_body">
+      <geometry>
+        <mesh filename="assets/meshes/cigar_envelope.obj" />
+        </geometry>
+      </collision>
+    <collision name="port_ad_panel">
+      <origin xyz="2.5 7.12 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="30 0.08 2.4" />
+        </geometry>
+      </collision>
+    <collision name="starboard_ad_panel">
+      <origin xyz="2.5 -7.12 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="30 0.08 2.4" />
+        </geometry>
+      </collision>
+    <collision name="equator_stripe">
+      <origin xyz="7 0 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="20 14.15 0.1" />
+        </geometry>
+      </collision>
+    <collision name="dorsal_fin">
+      <origin xyz="-27.05 0 4.48" rpy="0 0 0" />
+      <geometry>
+        <box size="3.25 0.26 3.75" />
+        </geometry>
+      </collision>
+    <collision name="ventral_fin">
+      <origin xyz="-27.05 0 -4.36" rpy="0 0 0" />
+      <geometry>
+        <box size="3.25 0.26 3.55" />
+        </geometry>
+      </collision>
+    <collision name="port_stabilizer">
+      <origin xyz="-27.05 5.18 0" rpy="0 0 0" />
+      <geometry>
+        <box size="3.25 5.15 0.24" />
+        </geometry>
+      </collision>
+    <collision name="starboard_stabilizer">
+      <origin xyz="-27.05 -5.18 0" rpy="0 0 0" />
+      <geometry>
+        <box size="3.25 5.15 0.24" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gondola">
+    <visual name="cabin_shell">
+      <geometry>
+        <mesh filename="assets/meshes/underslung_gondola.obj" />
+        </geometry>
+      <material name="brushed_silver">
+        <color rgba="0.64 0.67 0.68 1" />
+        </material>
+      </visual>
+    <visual name="port_windows">
+      <origin xyz="0.35 1.49 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="3.55 0.075 0.55" />
+        </geometry>
+      <material name="dark_glass">
+        <color rgba="0.02 0.035 0.055 1" />
+        </material>
+      </visual>
+    <visual name="starboard_windows">
+      <origin xyz="0.35 -1.49 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="3.55 0.075 0.55" />
+        </geometry>
+      <material name="dark_glass">
+        <color rgba="0.02 0.035 0.055 1" />
+        </material>
+      </visual>
+    <visual name="windshield">
+      <origin xyz="4.06 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 1.18 0.5" />
+        </geometry>
+      <material name="dark_glass">
+        <color rgba="0.02 0.035 0.055 1" />
+        </material>
+      </visual>
+    <visual name="port_skid">
+      <origin xyz="0 0.95 -1.33" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="7.25" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="port_skid_brace_rear">
+      <origin xyz="-2.47 0.8645 -0.99" rpy="0 0.49245 -0.581764" />
+      <geometry>
+        <cylinder radius="0.045" length="0.65821" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="port_skid_brace_front">
+      <origin xyz="2.3275 0.8645 -0.99" rpy="0 0.475677 -2.53224" />
+      <geometry>
+        <cylinder radius="0.045" length="0.652431" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="starboard_skid">
+      <origin xyz="0 -0.95 -1.33" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="7.25" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="starboard_skid_brace_rear">
+      <origin xyz="-2.47 -0.8645 -0.99" rpy="0 0.49245 0.581764" />
+      <geometry>
+        <cylinder radius="0.045" length="0.65821" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="starboard_skid_brace_front">
+      <origin xyz="2.3275 -0.8645 -0.99" rpy="0 0.475677 2.53224" />
+      <geometry>
+        <cylinder radius="0.045" length="0.652431" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="roof_hardpoint_0">
+      <origin xyz="-2.5 1.05 0.87" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.48 0.28" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="suspension_strut_0">
+      <origin xyz="-2.7 1.25 2.25" rpy="0 0.209542 2.35619" />
+      <geometry>
+        <cylinder radius="0.07" length="2.71949" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="top_saddle_0">
+      <origin xyz="-2.9 1.45 3.62" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.52 0.24" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="roof_hardpoint_1">
+      <origin xyz="-2.5 -1.05 0.87" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.48 0.28" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="suspension_strut_1">
+      <origin xyz="-2.7 -1.25 2.25" rpy="0 0.209542 -2.35619" />
+      <geometry>
+        <cylinder radius="0.07" length="2.71949" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="top_saddle_1">
+      <origin xyz="-2.9 -1.45 3.62" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.52 0.24" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="roof_hardpoint_2">
+      <origin xyz="2.05 0.98 0.83" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.48 0.28" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="suspension_strut_2">
+      <origin xyz="2.3 1.165 2.23" rpy="0 0.226425 0.63707" />
+      <geometry>
+        <cylinder radius="0.07" length="2.77072" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="top_saddle_2">
+      <origin xyz="2.55 1.35 3.62" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.52 0.24" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="roof_hardpoint_3">
+      <origin xyz="2.05 -0.98 0.83" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.48 0.28" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="suspension_strut_3">
+      <origin xyz="2.3 -1.165 2.23" rpy="0 0.226425 -0.63707" />
+      <geometry>
+        <cylinder radius="0.07" length="2.77072" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="top_saddle_3">
+      <origin xyz="2.55 -1.35 3.62" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.52 0.24" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <collision name="cabin_shell">
+      <geometry>
+        <mesh filename="assets/meshes/underslung_gondola.obj" />
+        </geometry>
+      </collision>
+    <collision name="port_windows">
+      <origin xyz="0.35 1.49 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="3.55 0.075 0.55" />
+        </geometry>
+      </collision>
+    <collision name="starboard_windows">
+      <origin xyz="0.35 -1.49 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="3.55 0.075 0.55" />
+        </geometry>
+      </collision>
+    <collision name="windshield">
+      <origin xyz="4.06 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 1.18 0.5" />
+        </geometry>
+      </collision>
+    <collision name="port_skid">
+      <origin xyz="0 0.95 -1.33" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="7.25" />
+        </geometry>
+      </collision>
+    <collision name="port_skid_brace_rear">
+      <origin xyz="-2.47 0.8645 -0.99" rpy="0 0.49245 -0.581764" />
+      <geometry>
+        <cylinder radius="0.045" length="0.65821" />
+        </geometry>
+      </collision>
+    <collision name="port_skid_brace_front">
+      <origin xyz="2.3275 0.8645 -0.99" rpy="0 0.475677 -2.53224" />
+      <geometry>
+        <cylinder radius="0.045" length="0.652431" />
+        </geometry>
+      </collision>
+    <collision name="starboard_skid">
+      <origin xyz="0 -0.95 -1.33" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="7.25" />
+        </geometry>
+      </collision>
+    <collision name="starboard_skid_brace_rear">
+      <origin xyz="-2.47 -0.8645 -0.99" rpy="0 0.49245 0.581764" />
+      <geometry>
+        <cylinder radius="0.045" length="0.65821" />
+        </geometry>
+      </collision>
+    <collision name="starboard_skid_brace_front">
+      <origin xyz="2.3275 -0.8645 -0.99" rpy="0 0.475677 2.53224" />
+      <geometry>
+        <cylinder radius="0.045" length="0.652431" />
+        </geometry>
+      </collision>
+    <collision name="roof_hardpoint_0">
+      <origin xyz="-2.5 1.05 0.87" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.48 0.28" />
+        </geometry>
+      </collision>
+    <collision name="suspension_strut_0">
+      <origin xyz="-2.7 1.25 2.25" rpy="0 0.209542 2.35619" />
+      <geometry>
+        <cylinder radius="0.07" length="2.71949" />
+        </geometry>
+      </collision>
+    <collision name="top_saddle_0">
+      <origin xyz="-2.9 1.45 3.62" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.52 0.24" />
+        </geometry>
+      </collision>
+    <collision name="roof_hardpoint_1">
+      <origin xyz="-2.5 -1.05 0.87" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.48 0.28" />
+        </geometry>
+      </collision>
+    <collision name="suspension_strut_1">
+      <origin xyz="-2.7 -1.25 2.25" rpy="0 0.209542 -2.35619" />
+      <geometry>
+        <cylinder radius="0.07" length="2.71949" />
+        </geometry>
+      </collision>
+    <collision name="top_saddle_1">
+      <origin xyz="-2.9 -1.45 3.62" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.52 0.24" />
+        </geometry>
+      </collision>
+    <collision name="roof_hardpoint_2">
+      <origin xyz="2.05 0.98 0.83" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.48 0.28" />
+        </geometry>
+      </collision>
+    <collision name="suspension_strut_2">
+      <origin xyz="2.3 1.165 2.23" rpy="0 0.226425 0.63707" />
+      <geometry>
+        <cylinder radius="0.07" length="2.77072" />
+        </geometry>
+      </collision>
+    <collision name="top_saddle_2">
+      <origin xyz="2.55 1.35 3.62" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.52 0.24" />
+        </geometry>
+      </collision>
+    <collision name="roof_hardpoint_3">
+      <origin xyz="2.05 -0.98 0.83" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.48 0.28" />
+        </geometry>
+      </collision>
+    <collision name="suspension_strut_3">
+      <origin xyz="2.3 -1.165 2.23" rpy="0 0.226425 -0.63707" />
+      <geometry>
+        <cylinder radius="0.07" length="2.77072" />
+        </geometry>
+      </collision>
+    <collision name="top_saddle_3">
+      <origin xyz="2.55 -1.35 3.62" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.52 0.24" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="port_pylon">
+    <visual name="pylon_arm">
+      <origin xyz="0 -0.96 0" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.115" length="0.28" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="1.7" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="cabin_mount">
+      <origin xyz="0 -1.18 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.22 0.48" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <collision name="pylon_arm">
+      <origin xyz="0 -0.96 0" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.115" length="0.28" />
+        </geometry>
+      </collision>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="1.7" />
+        </geometry>
+      </collision>
+    <collision name="cabin_mount">
+      <origin xyz="0 -1.18 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.22 0.48" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="port_pod">
+    <visual name="nacelle_body">
+      <geometry>
+        <mesh filename="assets/meshes/port_nacelle_body.obj" />
+        </geometry>
+      <material name="pearl_white_fabric">
+        <color rgba="0.88 0.91 0.88 1" />
+        </material>
+      </visual>
+    <visual name="front_cowling">
+      <geometry>
+        <mesh filename="assets/meshes/port_front_cowling.obj" />
+        </geometry>
+      <material name="deep_blue_trim">
+        <color rgba="0.03 0.13 0.42 1" />
+        </material>
+      </visual>
+    <visual name="pivot_collar">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.22" length="1.6" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="prop_shaft">
+      <origin xyz="1.94 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.082" length="0.28" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <collision name="nacelle_body">
+      <geometry>
+        <mesh filename="assets/meshes/port_nacelle_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_cowling">
+      <geometry>
+        <mesh filename="assets/meshes/port_front_cowling.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_collar">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.22" length="1.6" />
+        </geometry>
+      </collision>
+    <collision name="prop_shaft">
+      <origin xyz="1.94 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.082" length="0.28" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="port_propeller">
+    <visual name="rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/port_propeller_rotor.obj" />
+        </geometry>
+      <material name="satin_black_propellers">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/port_propeller_rotor.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="starboard_pylon">
+    <visual name="pylon_arm">
+      <origin xyz="0 0.96 0" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.115" length="0.28" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="1.7" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="cabin_mount">
+      <origin xyz="0 1.18 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.22 0.48" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <collision name="pylon_arm">
+      <origin xyz="0 0.96 0" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.115" length="0.28" />
+        </geometry>
+      </collision>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="1.7" />
+        </geometry>
+      </collision>
+    <collision name="cabin_mount">
+      <origin xyz="0 1.18 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.22 0.48" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="starboard_pod">
+    <visual name="nacelle_body">
+      <geometry>
+        <mesh filename="assets/meshes/starboard_nacelle_body.obj" />
+        </geometry>
+      <material name="pearl_white_fabric">
+        <color rgba="0.88 0.91 0.88 1" />
+        </material>
+      </visual>
+    <visual name="front_cowling">
+      <geometry>
+        <mesh filename="assets/meshes/starboard_front_cowling.obj" />
+        </geometry>
+      <material name="deep_blue_trim">
+        <color rgba="0.03 0.13 0.42 1" />
+        </material>
+      </visual>
+    <visual name="pivot_collar">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.22" length="1.6" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <visual name="prop_shaft">
+      <origin xyz="1.94 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.082" length="0.28" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <collision name="nacelle_body">
+      <geometry>
+        <mesh filename="assets/meshes/starboard_nacelle_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_cowling">
+      <geometry>
+        <mesh filename="assets/meshes/starboard_front_cowling.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_collar">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.22" length="1.6" />
+        </geometry>
+      </collision>
+    <collision name="prop_shaft">
+      <origin xyz="1.94 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.082" length="0.28" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="starboard_propeller">
+    <visual name="rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/starboard_propeller_rotor.obj" />
+        </geometry>
+      <material name="satin_black_propellers">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/starboard_propeller_rotor.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rudder">
+    <visual name="rudder_panel">
+      <origin xyz="-1.18 0 1.58" rpy="0 0 0" />
+      <geometry>
+        <box size="2.35 0.2 3.15" />
+        </geometry>
+      <material name="deep_blue_trim">
+        <color rgba="0.03 0.13 0.42 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 1.62" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="3.25" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <collision name="rudder_panel">
+      <origin xyz="-1.18 0 1.58" rpy="0 0 0" />
+      <geometry>
+        <box size="2.35 0.2 3.15" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 1.62" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="3.25" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="port_elevator">
+    <visual name="elevator_panel">
+      <origin xyz="-1.15 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="2.25 4.55 0.18" />
+        </geometry>
+      <material name="deep_blue_trim">
+        <color rgba="0.03 0.13 0.42 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="4.6" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <collision name="elevator_panel">
+      <origin xyz="-1.15 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="2.25 4.55 0.18" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="4.6" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="starboard_elevator">
+    <visual name="elevator_panel">
+      <origin xyz="-1.15 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="2.25 4.55 0.18" />
+        </geometry>
+      <material name="deep_blue_trim">
+        <color rgba="0.03 0.13 0.42 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="4.6" />
+        </geometry>
+      <material name="strut_aluminum">
+        <color rgba="0.4 0.42 0.43 1" />
+        </material>
+      </visual>
+    <collision name="elevator_panel">
+      <origin xyz="-1.15 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="2.25 4.55 0.18" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="4.6" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="envelope_to_gondola" type="fixed">
+    <origin xyz="-4 0 -10.2" rpy="0 0 0" />
+    <parent link="envelope" />
+    <child link="gondola" />
+    </joint>
+  <joint name="gondola_to_port_pylon" type="fixed">
+    <origin xyz="0.35 2.78 -0.35" rpy="0 0 0" />
+    <parent link="gondola" />
+    <child link="port_pylon" />
+    </joint>
+  <joint name="port_pylon_to_pod" type="revolute">
+    <parent link="port_pylon" />
+    <child link="port_pod" />
+    <axis xyz="0 1 0" />
+    <limit effort="250" velocity="0.8" lower="-0.45" upper="0.45" />
+    </joint>
+  <joint name="port_pod_to_propeller" type="continuous">
+    <origin xyz="2.06 0 0" rpy="0 0 0" />
+    <parent link="port_pod" />
+    <child link="port_propeller" />
+    <axis xyz="1 0 0" />
+    <limit effort="60" velocity="90" />
+    </joint>
+  <joint name="gondola_to_starboard_pylon" type="fixed">
+    <origin xyz="0.35 -2.78 -0.35" rpy="0 0 0" />
+    <parent link="gondola" />
+    <child link="starboard_pylon" />
+    </joint>
+  <joint name="starboard_pylon_to_pod" type="revolute">
+    <parent link="starboard_pylon" />
+    <child link="starboard_pod" />
+    <axis xyz="0 1 0" />
+    <limit effort="250" velocity="0.8" lower="-0.45" upper="0.45" />
+    </joint>
+  <joint name="starboard_pod_to_propeller" type="continuous">
+    <origin xyz="2.06 0 0" rpy="0 0 0" />
+    <parent link="starboard_pod" />
+    <child link="starboard_propeller" />
+    <axis xyz="1 0 0" />
+    <limit effort="60" velocity="90" />
+    </joint>
+  <joint name="envelope_to_rudder" type="revolute">
+    <origin xyz="-28.68 0 4.12" rpy="0 0 0" />
+    <parent link="envelope" />
+    <child link="rudder" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="1.4" lower="-0.55" upper="0.55" />
+    </joint>
+  <joint name="envelope_to_port_elevator" type="revolute">
+    <origin xyz="-28.68 5.18 0" rpy="0 0 0" />
+    <parent link="envelope" />
+    <child link="port_elevator" />
+    <axis xyz="0 1 0" />
+    <limit effort="90" velocity="1.3" lower="-0.48" upper="0.48" />
+    </joint>
+  <joint name="envelope_to_starboard_elevator" type="revolute">
+    <origin xyz="-28.68 -5.18 0" rpy="0 0 0" />
+    <parent link="envelope" />
+    <child link="starboard_elevator" />
+    <axis xyz="0 1 0" />
+    <limit effort="90" velocity="1.3" lower="-0.48" upper="0.48" />
+    </joint>
+  </robot>

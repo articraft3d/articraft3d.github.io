@@ -1,0 +1,877 @@
+<robot name="fold_out_boom">
+  <material name="satin_yellow">
+    <color rgba="0.95 0.63 0.12 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="cast_gray">
+    <color rgba="0.33 0.35 0.37 1" />
+    </material>
+  <material name="black_bolt">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <link name="base">
+    <visual name="mount_plate">
+      <origin xyz="-0.04 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.17 0.018" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.33 0.35 0.37 1" />
+        </material>
+      </visual>
+    <visual name="pedestal">
+      <origin xyz="-0.035 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.07 0.116" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.33 0.35 0.37 1" />
+        </material>
+      </visual>
+    <visual name="root_yoke">
+      <origin xyz="-0.03 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.086 0.058" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.33 0.35 0.37 1" />
+        </material>
+      </visual>
+    <visual name="root_pin_cap">
+      <origin xyz="-0.033 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.064" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="bolt_4">
+      <origin xyz="-0.13 -0.06 0.021" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.007" />
+        </geometry>
+      <material name="black_bolt">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bolt_5">
+      <origin xyz="-0.13 0.06 0.021" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.007" />
+        </geometry>
+      <material name="black_bolt">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bolt_6">
+      <origin xyz="0.04 -0.06 0.021" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.007" />
+        </geometry>
+      <material name="black_bolt">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bolt_7">
+      <origin xyz="0.04 0.06 0.021" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.007" />
+        </geometry>
+      <material name="black_bolt">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="mount_plate">
+      <origin xyz="-0.04 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.17 0.018" />
+        </geometry>
+      </collision>
+    <collision name="pedestal">
+      <origin xyz="-0.035 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.07 0.116" />
+        </geometry>
+      </collision>
+    <collision name="root_yoke">
+      <origin xyz="-0.03 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.086 0.058" />
+        </geometry>
+      </collision>
+    <collision name="root_pin_cap">
+      <origin xyz="-0.033 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.064" />
+        </geometry>
+      </collision>
+    <collision name="bolt_4">
+      <origin xyz="-0.13 -0.06 0.021" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_5">
+      <origin xyz="-0.13 0.06 0.021" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_6">
+      <origin xyz="0.04 -0.06 0.021" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_7">
+      <origin xyz="0.04 0.06 0.021" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="segment_0">
+    <visual name="web">
+      <origin xyz="0.21 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.028 0.026" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_lug">
+      <origin xyz="0.0375 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_lug">
+      <origin xyz="0.3825 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="side_0">
+      <origin xyz="0.21 0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="side_1">
+      <origin xyz="0.21 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_boss">
+      <origin xyz="0.036 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_cheek_0">
+      <origin xyz="0.036 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_cheek_1">
+      <origin xyz="0.036 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_boss">
+      <origin xyz="0.384 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_cheek_0">
+      <origin xyz="0.384 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_cheek_1">
+      <origin xyz="0.384 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <collision name="web">
+      <origin xyz="0.21 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.028 0.026" />
+        </geometry>
+      </collision>
+    <collision name="proximal_lug">
+      <origin xyz="0.0375 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      </collision>
+    <collision name="distal_lug">
+      <origin xyz="0.3825 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      </collision>
+    <collision name="side_0">
+      <origin xyz="0.21 0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      </collision>
+    <collision name="side_1">
+      <origin xyz="0.21 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      </collision>
+    <collision name="proximal_boss">
+      <origin xyz="0.036 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="proximal_cheek_0">
+      <origin xyz="0.036 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    <collision name="proximal_cheek_1">
+      <origin xyz="0.036 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    <collision name="distal_boss">
+      <origin xyz="0.384 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_0">
+      <origin xyz="0.384 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_1">
+      <origin xyz="0.384 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="segment_1">
+    <visual name="web">
+      <origin xyz="0.21 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.028 0.026" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_lug">
+      <origin xyz="0.0375 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_lug">
+      <origin xyz="0.3825 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="side_0">
+      <origin xyz="0.21 0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="side_1">
+      <origin xyz="0.21 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_boss">
+      <origin xyz="0.036 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_cheek_0">
+      <origin xyz="0.036 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_cheek_1">
+      <origin xyz="0.036 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_boss">
+      <origin xyz="0.384 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_cheek_0">
+      <origin xyz="0.384 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_cheek_1">
+      <origin xyz="0.384 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <collision name="web">
+      <origin xyz="0.21 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.028 0.026" />
+        </geometry>
+      </collision>
+    <collision name="proximal_lug">
+      <origin xyz="0.0375 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      </collision>
+    <collision name="distal_lug">
+      <origin xyz="0.3825 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      </collision>
+    <collision name="side_0">
+      <origin xyz="0.21 0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      </collision>
+    <collision name="side_1">
+      <origin xyz="0.21 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      </collision>
+    <collision name="proximal_boss">
+      <origin xyz="0.036 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="proximal_cheek_0">
+      <origin xyz="0.036 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    <collision name="proximal_cheek_1">
+      <origin xyz="0.036 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    <collision name="distal_boss">
+      <origin xyz="0.384 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_0">
+      <origin xyz="0.384 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_1">
+      <origin xyz="0.384 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="segment_2">
+    <visual name="web">
+      <origin xyz="0.21 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.028 0.026" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_lug">
+      <origin xyz="0.0375 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_lug">
+      <origin xyz="0.3825 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="side_0">
+      <origin xyz="0.21 0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="side_1">
+      <origin xyz="0.21 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_boss">
+      <origin xyz="0.036 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_cheek_0">
+      <origin xyz="0.036 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_cheek_1">
+      <origin xyz="0.036 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_boss">
+      <origin xyz="0.384 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_cheek_0">
+      <origin xyz="0.384 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_cheek_1">
+      <origin xyz="0.384 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <collision name="web">
+      <origin xyz="0.21 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.028 0.026" />
+        </geometry>
+      </collision>
+    <collision name="proximal_lug">
+      <origin xyz="0.0375 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      </collision>
+    <collision name="distal_lug">
+      <origin xyz="0.3825 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      </collision>
+    <collision name="side_0">
+      <origin xyz="0.21 0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      </collision>
+    <collision name="side_1">
+      <origin xyz="0.21 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      </collision>
+    <collision name="proximal_boss">
+      <origin xyz="0.036 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="proximal_cheek_0">
+      <origin xyz="0.036 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    <collision name="proximal_cheek_1">
+      <origin xyz="0.036 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    <collision name="distal_boss">
+      <origin xyz="0.384 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_0">
+      <origin xyz="0.384 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_1">
+      <origin xyz="0.384 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="segment_3">
+    <visual name="web">
+      <origin xyz="0.21 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.028 0.026" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_lug">
+      <origin xyz="0.0375 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_lug">
+      <origin xyz="0.3825 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="side_0">
+      <origin xyz="0.21 0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="side_1">
+      <origin xyz="0.21 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_boss">
+      <origin xyz="0.036 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_cheek_0">
+      <origin xyz="0.036 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="proximal_cheek_1">
+      <origin xyz="0.036 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_boss">
+      <origin xyz="0.384 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_cheek_0">
+      <origin xyz="0.384 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="distal_cheek_1">
+      <origin xyz="0.384 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="end_plate">
+      <origin xyz="0.434 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.09 0.066" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="end_bolt_0">
+      <origin xyz="0.449 -0.026 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.006" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="end_bolt_1">
+      <origin xyz="0.449 0.026 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.006" />
+        </geometry>
+      <material name="satin_yellow">
+        <color rgba="0.95 0.63 0.12 1" />
+        </material>
+      </visual>
+    <collision name="web">
+      <origin xyz="0.21 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.028 0.026" />
+        </geometry>
+      </collision>
+    <collision name="proximal_lug">
+      <origin xyz="0.0375 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      </collision>
+    <collision name="distal_lug">
+      <origin xyz="0.3825 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.052 0.034" />
+        </geometry>
+      </collision>
+    <collision name="side_0">
+      <origin xyz="0.21 0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      </collision>
+    <collision name="side_1">
+      <origin xyz="0.21 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.01 0.038" />
+        </geometry>
+      </collision>
+    <collision name="proximal_boss">
+      <origin xyz="0.036 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="proximal_cheek_0">
+      <origin xyz="0.036 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    <collision name="proximal_cheek_1">
+      <origin xyz="0.036 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    <collision name="distal_boss">
+      <origin xyz="0.384 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_0">
+      <origin xyz="0.384 0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    <collision name="distal_cheek_1">
+      <origin xyz="0.384 -0.031 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.01 0.052" />
+        </geometry>
+      </collision>
+    <collision name="end_plate">
+      <origin xyz="0.434 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.09 0.066" />
+        </geometry>
+      </collision>
+    <collision name="end_bolt_0">
+      <origin xyz="0.449 -0.026 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="end_bolt_1">
+      <origin xyz="0.449 0.026 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_segment_0" type="revolute">
+    <origin xyz="0 0 0.16" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="segment_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="60" velocity="1.5" lower="-1.5708" upper="1.5708" />
+    </joint>
+  <joint name="segment_0_to_segment_1" type="revolute">
+    <origin xyz="0.42 0 0" rpy="0 0 0" />
+    <parent link="segment_0" />
+    <child link="segment_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="45" velocity="1.5" lower="-1.5708" upper="1.5708" />
+    </joint>
+  <joint name="segment_1_to_segment_2" type="revolute">
+    <origin xyz="0.42 0 0" rpy="0 0 0" />
+    <parent link="segment_1" />
+    <child link="segment_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="45" velocity="1.5" lower="-1.5708" upper="1.5708" />
+    </joint>
+  <joint name="segment_2_to_segment_3" type="revolute">
+    <origin xyz="0.42 0 0" rpy="0 0 0" />
+    <parent link="segment_2" />
+    <child link="segment_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="45" velocity="1.5" lower="-1.5708" upper="1.5708" />
+    </joint>
+  </robot>

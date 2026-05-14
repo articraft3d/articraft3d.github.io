@@ -1,0 +1,804 @@
+<robot name="offset_robotic_wrist">
+  <material name="satin_machined_aluminum">
+    <color rgba="0.7 0.72 0.72 1" />
+    </material>
+  <material name="dark_anodized_covers">
+    <color rgba="0.07 0.075 0.08 1" />
+    </material>
+  <material name="brushed_steel_spindle">
+    <color rgba="0.52 0.55 0.57 1" />
+    </material>
+  <material name="black_bearing_seals">
+    <color rgba="0.015 0.017 0.018 1" />
+    </material>
+  <link name="pedestal">
+    <visual name="pedestal_body">
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_body.obj" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_0">
+      <origin xyz="-0.075 -0.055 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.004" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_1">
+      <origin xyz="-0.075 0.055 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.004" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_2">
+      <origin xyz="0.075 -0.055 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.004" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_3">
+      <origin xyz="0.075 0.055 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.004" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="yaw_seal">
+      <origin xyz="0 0 0.151" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.004" />
+        </geometry>
+      <material name="black_bearing_seals">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <collision name="pedestal_body">
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_0">
+      <origin xyz="-0.075 -0.055 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_1">
+      <origin xyz="-0.075 0.055 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_2">
+      <origin xyz="0.075 -0.055 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_3">
+      <origin xyz="0.075 0.055 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="yaw_seal">
+      <origin xyz="0 0 0.151" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="yaw_carriage">
+    <visual name="turntable_underseal">
+      <origin xyz="0 0 0.001" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.004" />
+        </geometry>
+      <material name="black_bearing_seals">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="turntable">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.067" length="0.03" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="turntable_lip">
+      <origin xyz="0 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.076" length="0.01" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="yaw_hub">
+      <origin xyz="0 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.05" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="offset_boom">
+      <geometry>
+        <mesh filename="assets/meshes/offset_boom.obj" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="hub_web">
+      <origin xyz="0.01 0 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.048 0.11" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_saddle">
+      <origin xyz="0.158 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.174 0.026" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_lower_neg">
+      <origin xyz="0.185 -0.078 0.089" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.06" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_upper_neg">
+      <origin xyz="0.185 -0.078 0.197" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.034" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_rear_neg">
+      <origin xyz="0.135 -0.078 0.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.018 0.112" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_front_neg">
+      <origin xyz="0.235 -0.078 0.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.018 0.112" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="pitch_stop_neg">
+      <origin xyz="0.137 -0.091 0.186" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.026 0.03" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_lower_pos">
+      <origin xyz="0.185 0.078 0.089" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.06" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_upper_pos">
+      <origin xyz="0.185 0.078 0.197" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.034" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_rear_pos">
+      <origin xyz="0.135 0.078 0.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.018 0.112" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_front_pos">
+      <origin xyz="0.235 0.078 0.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.018 0.112" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="pitch_stop_pos">
+      <origin xyz="0.137 0.091 0.186" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.026 0.03" />
+        </geometry>
+      <material name="dark_anodized_covers">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <collision name="turntable_underseal">
+      <origin xyz="0 0 0.001" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="turntable">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.067" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="turntable_lip">
+      <origin xyz="0 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.076" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="yaw_hub">
+      <origin xyz="0 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="offset_boom">
+      <geometry>
+        <mesh filename="assets/meshes/offset_boom.obj" />
+        </geometry>
+      </collision>
+    <collision name="hub_web">
+      <origin xyz="0.01 0 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.048 0.11" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_saddle">
+      <origin xyz="0.158 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.174 0.026" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_lower_neg">
+      <origin xyz="0.185 -0.078 0.089" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.06" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_upper_neg">
+      <origin xyz="0.185 -0.078 0.197" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.034" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_rear_neg">
+      <origin xyz="0.135 -0.078 0.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.018 0.112" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_front_neg">
+      <origin xyz="0.235 -0.078 0.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.018 0.112" />
+        </geometry>
+      </collision>
+    <collision name="pitch_stop_neg">
+      <origin xyz="0.137 -0.091 0.186" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.026 0.03" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_lower_pos">
+      <origin xyz="0.185 0.078 0.089" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.06" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_upper_pos">
+      <origin xyz="0.185 0.078 0.197" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.034" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_rear_pos">
+      <origin xyz="0.135 0.078 0.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.018 0.112" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_front_pos">
+      <origin xyz="0.235 0.078 0.142" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.018 0.112" />
+        </geometry>
+      </collision>
+    <collision name="pitch_stop_pos">
+      <origin xyz="0.137 0.091 0.186" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.026 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pitch_frame">
+    <visual name="pitch_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.196" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="pitch_collar_neg">
+      <origin xyz="0 -0.058 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.022" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="pitch_collar_pos">
+      <origin xyz="0 0.058 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.022" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rail_side_neg">
+      <origin xyz="0.07 -0.054 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.152 0.016 0.124" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rail_side_pos">
+      <origin xyz="0.07 0.054 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.152 0.016 0.124" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rail_lower">
+      <origin xyz="0.07 0 -0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.152 0.124 0.016" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rail_upper">
+      <origin xyz="0.07 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.152 0.124 0.016" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_bearing_upper">
+      <origin xyz="0.016 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.106 0.012" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_bearing_lower">
+      <origin xyz="0.016 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.106 0.012" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_bearing_side_pos">
+      <origin xyz="0.016 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.106" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_bearing_side_neg">
+      <origin xyz="0.016 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.106" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_upper">
+      <origin xyz="0.124 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.106 0.012" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_lower">
+      <origin xyz="0.124 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.106 0.012" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_side_pos">
+      <origin xyz="0.124 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.106" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_side_neg">
+      <origin xyz="0.124 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.106" />
+        </geometry>
+      <material name="satin_machined_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="mid_bearing_pad_upper">
+      <origin xyz="0.07 0 0.04025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.036 0.0195" />
+        </geometry>
+      <material name="black_bearing_seals">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="mid_bearing_pad_lower">
+      <origin xyz="0.07 0 -0.04025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.036 0.0195" />
+        </geometry>
+      <material name="black_bearing_seals">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="mid_bearing_pad_pos">
+      <origin xyz="0.07 0.04025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.0195 0.036" />
+        </geometry>
+      <material name="black_bearing_seals">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="mid_bearing_pad_neg">
+      <origin xyz="0.07 -0.04025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.0195 0.036" />
+        </geometry>
+      <material name="black_bearing_seals">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_pad_upper">
+      <origin xyz="0.124 0 0.04025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.036 0.0195" />
+        </geometry>
+      <material name="black_bearing_seals">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_pad_lower">
+      <origin xyz="0.124 0 -0.04025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.036 0.0195" />
+        </geometry>
+      <material name="black_bearing_seals">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_pad_pos">
+      <origin xyz="0.124 0.04025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.0195 0.036" />
+        </geometry>
+      <material name="black_bearing_seals">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_pad_neg">
+      <origin xyz="0.124 -0.04025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.0195 0.036" />
+        </geometry>
+      <material name="black_bearing_seals">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <collision name="pitch_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.196" />
+        </geometry>
+      </collision>
+    <collision name="pitch_collar_neg">
+      <origin xyz="0 -0.058 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="pitch_collar_pos">
+      <origin xyz="0 0.058 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="rail_side_neg">
+      <origin xyz="0.07 -0.054 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.152 0.016 0.124" />
+        </geometry>
+      </collision>
+    <collision name="rail_side_pos">
+      <origin xyz="0.07 0.054 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.152 0.016 0.124" />
+        </geometry>
+      </collision>
+    <collision name="rail_lower">
+      <origin xyz="0.07 0 -0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.152 0.124 0.016" />
+        </geometry>
+      </collision>
+    <collision name="rail_upper">
+      <origin xyz="0.07 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.152 0.124 0.016" />
+        </geometry>
+      </collision>
+    <collision name="rear_bearing_upper">
+      <origin xyz="0.016 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.106 0.012" />
+        </geometry>
+      </collision>
+    <collision name="rear_bearing_lower">
+      <origin xyz="0.016 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.106 0.012" />
+        </geometry>
+      </collision>
+    <collision name="rear_bearing_side_pos">
+      <origin xyz="0.016 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.106" />
+        </geometry>
+      </collision>
+    <collision name="rear_bearing_side_neg">
+      <origin xyz="0.016 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.106" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_upper">
+      <origin xyz="0.124 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.106 0.012" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_lower">
+      <origin xyz="0.124 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.106 0.012" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_side_pos">
+      <origin xyz="0.124 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.106" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_side_neg">
+      <origin xyz="0.124 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.106" />
+        </geometry>
+      </collision>
+    <collision name="mid_bearing_pad_upper">
+      <origin xyz="0.07 0 0.04025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.036 0.0195" />
+        </geometry>
+      </collision>
+    <collision name="mid_bearing_pad_lower">
+      <origin xyz="0.07 0 -0.04025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.036 0.0195" />
+        </geometry>
+      </collision>
+    <collision name="mid_bearing_pad_pos">
+      <origin xyz="0.07 0.04025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.0195 0.036" />
+        </geometry>
+      </collision>
+    <collision name="mid_bearing_pad_neg">
+      <origin xyz="0.07 -0.04025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.0195 0.036" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_pad_upper">
+      <origin xyz="0.124 0 0.04025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.036 0.0195" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_pad_lower">
+      <origin xyz="0.124 0 -0.04025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.036 0.0195" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_pad_pos">
+      <origin xyz="0.124 0.04025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.0195 0.036" />
+        </geometry>
+      </collision>
+    <collision name="front_bearing_pad_neg">
+      <origin xyz="0.124 -0.04025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.0195 0.036" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="roll_nose">
+    <visual name="nose_barrel">
+      <origin xyz="0.06 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.13" />
+        </geometry>
+      <material name="brushed_steel_spindle">
+        <color rgba="0.52 0.55 0.57 1" />
+        </material>
+      </visual>
+    <visual name="rear_spindle_collar">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.014" />
+        </geometry>
+      <material name="brushed_steel_spindle">
+        <color rgba="0.52 0.55 0.57 1" />
+        </material>
+      </visual>
+    <visual name="front_spindle_collar">
+      <origin xyz="0.054 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.014" />
+        </geometry>
+      <material name="brushed_steel_spindle">
+        <color rgba="0.52 0.55 0.57 1" />
+        </material>
+      </visual>
+    <visual name="tool_flange">
+      <origin xyz="0.136 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.022" />
+        </geometry>
+      <material name="brushed_steel_spindle">
+        <color rgba="0.52 0.55 0.57 1" />
+        </material>
+      </visual>
+    <visual name="tool_socket">
+      <origin xyz="0.1495 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.005" />
+        </geometry>
+      <material name="black_bearing_seals">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <collision name="nose_barrel">
+      <origin xyz="0.06 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.13" />
+        </geometry>
+      </collision>
+    <collision name="rear_spindle_collar">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="front_spindle_collar">
+      <origin xyz="0.054 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="tool_flange">
+      <origin xyz="0.136 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="tool_socket">
+      <origin xyz="0.1495 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="pedestal_to_yaw" type="revolute">
+    <origin xyz="0 0 0.151" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="yaw_carriage" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="yaw_to_pitch" type="revolute">
+    <origin xyz="0.185 0 0.142" rpy="0 0 0" />
+    <parent link="yaw_carriage" />
+    <child link="pitch_frame" />
+    <axis xyz="0 1 0" />
+    <limit effort="28" velocity="2" lower="-0.8" upper="0.8" />
+    </joint>
+  <joint name="pitch_to_roll" type="revolute">
+    <origin xyz="0.07 0 0" rpy="0 0 0" />
+    <parent link="pitch_frame" />
+    <child link="roll_nose" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="6" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

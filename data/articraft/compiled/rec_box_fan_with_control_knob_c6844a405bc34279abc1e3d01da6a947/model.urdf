@@ -1,0 +1,689 @@
+<robot name="square_box_fan">
+  <link name="housing">
+    <visual name="side_rail_0">
+      <origin xyz="-0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.12 0.5" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.84 0.82 0.74 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.12 0.5" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.84 0.82 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_rail">
+      <origin xyz="0 0 0.225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.12 0.05" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.84 0.82 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail">
+      <origin xyz="0 0 -0.225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.12 0.05" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.84 0.82 0.74 1" />
+        </material>
+      </visual>
+    <visual name="front_face">
+      <origin xyz="0 -0.06 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_face.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.84 0.82 0.74 1" />
+        </material>
+      </visual>
+    <visual name="front_lip">
+      <origin xyz="0 -0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_lip.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.84 0.82 0.74 1" />
+        </material>
+      </visual>
+    <visual name="motor_boss">
+      <origin xyz="0 0.035 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.042" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="axle_pin">
+      <origin xyz="0 -0.004 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.092" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="motor_strut_0">
+      <origin xyz="0.1385 0.034 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.173" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="motor_strut_1">
+      <origin xyz="8.48068e-18 0.034 0.1385" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.173" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="motor_strut_2">
+      <origin xyz="-0.1385 0.034 1.69614e-17" rpy="0 -1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.173" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="motor_strut_3">
+      <origin xyz="-2.5442e-17 0.034 -0.1385" rpy="0 -3.14159 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.173" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="speed_mark_0">
+      <origin xyz="0.251 0.0232673 0.112463" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.002" />
+        </geometry>
+      <material name="white_speed_marks">
+        <color rgba="0.93 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="speed_mark_1">
+      <origin xyz="0.251 0.0382135 0.133179" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.002" />
+        </geometry>
+      <material name="white_speed_marks">
+        <color rgba="0.93 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="speed_mark_2">
+      <origin xyz="0.251 0.0375749 0.158716" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.002" />
+        </geometry>
+      <material name="white_speed_marks">
+        <color rgba="0.93 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="speed_mark_3">
+      <origin xyz="0.251 0.0216121 0.178659" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.002" />
+        </geometry>
+      <material name="white_speed_marks">
+        <color rgba="0.93 0.92 0.86 1" />
+        </material>
+      </visual>
+    <collision name="side_rail_0">
+      <origin xyz="-0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.12 0.5" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_1">
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.12 0.5" />
+        </geometry>
+      </collision>
+    <collision name="top_rail">
+      <origin xyz="0 0 0.225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.12 0.05" />
+        </geometry>
+      </collision>
+    <collision name="bottom_rail">
+      <origin xyz="0 0 -0.225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.12 0.05" />
+        </geometry>
+      </collision>
+    <collision name="front_face">
+      <origin xyz="0 -0.06 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_face.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_lip">
+      <origin xyz="0 -0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_lip.obj" />
+        </geometry>
+      </collision>
+    <collision name="motor_boss">
+      <origin xyz="0 0.035 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.042" />
+        </geometry>
+      </collision>
+    <collision name="axle_pin">
+      <origin xyz="0 -0.004 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="motor_strut_0">
+      <origin xyz="0.1385 0.034 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.173" />
+        </geometry>
+      </collision>
+    <collision name="motor_strut_1">
+      <origin xyz="8.48068e-18 0.034 0.1385" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.173" />
+        </geometry>
+      </collision>
+    <collision name="motor_strut_2">
+      <origin xyz="-0.1385 0.034 1.69614e-17" rpy="0 -1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.173" />
+        </geometry>
+      </collision>
+    <collision name="motor_strut_3">
+      <origin xyz="-2.5442e-17 0.034 -0.1385" rpy="0 -3.14159 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.173" />
+        </geometry>
+      </collision>
+    <collision name="speed_mark_0">
+      <origin xyz="0.251 0.0232673 0.112463" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="speed_mark_1">
+      <origin xyz="0.251 0.0382135 0.133179" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="speed_mark_2">
+      <origin xyz="0.251 0.0375749 0.158716" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="speed_mark_3">
+      <origin xyz="0.251 0.0216121 0.178659" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_grille">
+    <visual name="ring_0">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/grille_ring_0.obj" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="ring_1">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/grille_ring_1.obj" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="ring_2">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/grille_ring_2.obj" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="ring_3">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/grille_ring_3.obj" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="ring_4">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/grille_ring_4.obj" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_0">
+      <origin xyz="0.2225 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_1">
+      <origin xyz="0.205563 0 0.0851471" rpy="0 1.1781 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_2">
+      <origin xyz="0.157331 0 0.157331" rpy="0 0.785398 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_3">
+      <origin xyz="0.0851471 0 0.205563" rpy="0 0.392699 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_4">
+      <origin xyz="1.36242e-17 0 0.2225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_5">
+      <origin xyz="-0.0851471 0 0.205563" rpy="0 -0.392699 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_6">
+      <origin xyz="-0.157331 0 0.157331" rpy="0 -0.785398 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_7">
+      <origin xyz="-0.205563 0 0.0851471" rpy="0 -1.1781 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_8">
+      <origin xyz="-0.2225 0 2.72484e-17" rpy="0 -1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_9">
+      <origin xyz="-0.205563 0 -0.0851471" rpy="0 -1.9635 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_10">
+      <origin xyz="-0.157331 0 -0.157331" rpy="0 -2.35619 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_11">
+      <origin xyz="-0.0851471 0 -0.205563" rpy="0 -2.74889 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_12">
+      <origin xyz="-4.08726e-17 0 -0.2225" rpy="0 -3.14159 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_13">
+      <origin xyz="0.0851471 0 -0.205563" rpy="0 -3.53429 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_14">
+      <origin xyz="0.157331 0 -0.157331" rpy="0 -3.92699 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="radial_wire_15">
+      <origin xyz="0.205563 0 -0.0851471" rpy="0 -4.31969 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="mount_tab_0">
+      <origin xyz="0.234 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.032" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="mount_tab_1">
+      <origin xyz="1.43284e-17 0 0.234" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.032" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="mount_tab_2">
+      <origin xyz="-0.234 0 2.86567e-17" rpy="0 -1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.032" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="mount_tab_3">
+      <origin xyz="-4.29851e-17 0 -0.234" rpy="0 -3.14159 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.032" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="center_badge">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.006" />
+        </geometry>
+      <material name="black_powder_coated_wire">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <collision name="ring_0">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/grille_ring_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="ring_1">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/grille_ring_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="ring_2">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/grille_ring_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="ring_3">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/grille_ring_3.obj" />
+        </geometry>
+      </collision>
+    <collision name="ring_4">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/grille_ring_4.obj" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_0">
+      <origin xyz="0.2225 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_1">
+      <origin xyz="0.205563 0 0.0851471" rpy="0 1.1781 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_2">
+      <origin xyz="0.157331 0 0.157331" rpy="0 0.785398 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_3">
+      <origin xyz="0.0851471 0 0.205563" rpy="0 0.392699 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_4">
+      <origin xyz="1.36242e-17 0 0.2225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_5">
+      <origin xyz="-0.0851471 0 0.205563" rpy="0 -0.392699 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_6">
+      <origin xyz="-0.157331 0 0.157331" rpy="0 -0.785398 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_7">
+      <origin xyz="-0.205563 0 0.0851471" rpy="0 -1.1781 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_8">
+      <origin xyz="-0.2225 0 2.72484e-17" rpy="0 -1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_9">
+      <origin xyz="-0.205563 0 -0.0851471" rpy="0 -1.9635 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_10">
+      <origin xyz="-0.157331 0 -0.157331" rpy="0 -2.35619 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_11">
+      <origin xyz="-0.0851471 0 -0.205563" rpy="0 -2.74889 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_12">
+      <origin xyz="-4.08726e-17 0 -0.2225" rpy="0 -3.14159 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_13">
+      <origin xyz="0.0851471 0 -0.205563" rpy="0 -3.53429 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_14">
+      <origin xyz="0.157331 0 -0.157331" rpy="0 -3.92699 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="radial_wire_15">
+      <origin xyz="0.205563 0 -0.0851471" rpy="0 -4.31969 0" />
+      <geometry>
+        <cylinder radius="0.0021" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="mount_tab_0">
+      <origin xyz="0.234 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="mount_tab_1">
+      <origin xyz="1.43284e-17 0 0.234" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="mount_tab_2">
+      <origin xyz="-0.234 0 2.86567e-17" rpy="0 -1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="mount_tab_3">
+      <origin xyz="-4.29851e-17 0 -0.234" rpy="0 -3.14159 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="center_badge">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotor">
+    <visual name="fan_rotor">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_rotor.obj" />
+        </geometry>
+      <material name="smoky_blue_blade_plastic">
+        <color rgba="0.38 0.53 0.66 0.82" />
+        </material>
+      </visual>
+    <collision name="fan_rotor">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_rotor.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="speed_knob">
+    <visual name="knob_cap">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/speed_knob.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <collision name="knob_cap">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/speed_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="housing_to_grille" type="fixed">
+    <origin xyz="0 -0.064 0" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="front_grille" />
+    </joint>
+  <joint name="fan_axle" type="continuous">
+    <origin xyz="0 -0.015 0" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="rotor" />
+    <axis xyz="0 1 0" />
+    <limit effort="2" velocity="45" />
+    </joint>
+  <joint name="speed_selector" type="revolute">
+    <origin xyz="0.25 0 0.145" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="speed_knob" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.25" velocity="4" lower="0" upper="4.7" />
+    </joint>
+  </robot>

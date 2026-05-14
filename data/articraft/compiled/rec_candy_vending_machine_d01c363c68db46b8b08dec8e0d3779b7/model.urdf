@@ -1,0 +1,613 @@
+<robot name="freestanding_candy_vending_machine">
+  <link name="machine">
+    <visual name="round_floor_base">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.29" length="0.07" />
+        </geometry>
+      <material name="red_enamel">
+        <color rgba="0.72 0.03 0.025 1" />
+        </material>
+      </visual>
+    <visual name="base_trim_ring">
+      <origin xyz="0 0 0.092" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.225" length="0.045" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_column">
+      <origin xyz="0 0 0.37" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.56" />
+        </geometry>
+      <material name="red_enamel">
+        <color rgba="0.72 0.03 0.025 1" />
+        </material>
+      </visual>
+    <visual name="column_collar">
+      <origin xyz="0 0 0.635" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.06" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="coin_box_body">
+      <origin xyz="0 0 0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.32 0.32" />
+        </geometry>
+      <material name="red_enamel">
+        <color rgba="0.72 0.03 0.025 1" />
+        </material>
+      </visual>
+    <visual name="coin_panel">
+      <origin xyz="0 -0.169 0.805" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.02 0.245" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.95 0.67 0.28 1" />
+        </material>
+      </visual>
+    <visual name="coin_slot">
+      <origin xyz="0 -0.182 0.885" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.006 0.018" />
+        </geometry>
+      <material name="black_recess">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="coin_return_recess">
+      <origin xyz="0 -0.178 0.715" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.008 0.045" />
+        </geometry>
+      <material name="black_recess">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="price_label">
+      <origin xyz="0 -0.19 0.94" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.01 0.02" />
+        </geometry>
+      <material name="white_label">
+        <color rgba="0.96 0.94 0.84 1" />
+        </material>
+      </visual>
+    <visual name="chute_opening">
+      <origin xyz="0 -0.183 0.61" rpy="0 0 0" />
+      <geometry>
+        <box size="0.185 0.014 0.065" />
+        </geometry>
+      <material name="black_recess">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="chute_back_mount">
+      <origin xyz="0 -0.166 0.603" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.03 0.075" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="chute_floor">
+      <origin xyz="0 -0.22 0.584" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.13 0.018" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="chute_side_0">
+      <origin xyz="-0.124 -0.221 0.618" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.125 0.07" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="chute_side_1">
+      <origin xyz="0.124 -0.221 0.618" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.125 0.07" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="chute_front_lip">
+      <origin xyz="0 -0.29 0.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.248 0.018 0.045" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="reservoir_base_cap">
+      <origin xyz="0 0 0.968" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.07" />
+        </geometry>
+      <material name="red_enamel">
+        <color rgba="0.72 0.03 0.025 1" />
+        </material>
+      </visual>
+    <visual name="lower_glass_seat">
+      <origin xyz="0 0 0.997" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.202" length="0.03" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="reservoir_shell">
+      <origin xyz="0 0 0.99" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/clear_product_reservoir.obj" />
+        </geometry>
+      <material name="clear_glass">
+        <color rgba="0.68 0.9 1 0.3" />
+        </material>
+      </visual>
+    <visual name="reservoir_lid">
+      <origin xyz="0 0 1.373" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.168" length="0.055" />
+        </geometry>
+      <material name="red_enamel">
+        <color rgba="0.72 0.03 0.025 1" />
+        </material>
+      </visual>
+    <visual name="lid_knob">
+      <origin xyz="0 0 1.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.04" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="gumball_0">
+      <origin xyz="0 0 1.017" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_red">
+        <color rgba="0.95 0.03 0.04 1" />
+        </material>
+      </visual>
+    <visual name="gumball_1">
+      <origin xyz="0.06 0.01 1.02" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_yellow">
+        <color rgba="1 0.82 0.05 1" />
+        </material>
+      </visual>
+    <visual name="gumball_2">
+      <origin xyz="-0.058 0.018 1.022" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_blue">
+        <color rgba="0.05 0.25 0.95 1" />
+        </material>
+      </visual>
+    <visual name="gumball_3">
+      <origin xyz="0.01 0.066 1.02" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_green">
+        <color rgba="0.04 0.68 0.2 1" />
+        </material>
+      </visual>
+    <visual name="gumball_4">
+      <origin xyz="-0.004 -0.064 1.022" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_orange">
+        <color rgba="1 0.42 0.02 1" />
+        </material>
+      </visual>
+    <visual name="gumball_5">
+      <origin xyz="0.112 0.04 1.024" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_purple">
+        <color rgba="0.5 0.12 0.72 1" />
+        </material>
+      </visual>
+    <visual name="gumball_6">
+      <origin xyz="-0.105 -0.045 1.026" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_red">
+        <color rgba="0.95 0.03 0.04 1" />
+        </material>
+      </visual>
+    <visual name="gumball_7">
+      <origin xyz="0.05 -0.075 1.078" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_yellow">
+        <color rgba="1 0.82 0.05 1" />
+        </material>
+      </visual>
+    <visual name="gumball_8">
+      <origin xyz="-0.058 0.078 1.08" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_blue">
+        <color rgba="0.05 0.25 0.95 1" />
+        </material>
+      </visual>
+    <visual name="gumball_9">
+      <origin xyz="0 0 1.088" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_green">
+        <color rgba="0.04 0.68 0.2 1" />
+        </material>
+      </visual>
+    <visual name="gumball_10">
+      <origin xyz="0.096 -0.018 1.092" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_orange">
+        <color rgba="1 0.42 0.02 1" />
+        </material>
+      </visual>
+    <visual name="gumball_11">
+      <origin xyz="-0.094 0 1.095" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_purple">
+        <color rgba="0.5 0.12 0.72 1" />
+        </material>
+      </visual>
+    <visual name="gumball_12">
+      <origin xyz="0.026 0.055 1.15" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_red">
+        <color rgba="0.95 0.03 0.04 1" />
+        </material>
+      </visual>
+    <visual name="gumball_13">
+      <origin xyz="-0.036 -0.048 1.154" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_yellow">
+        <color rgba="1 0.82 0.05 1" />
+        </material>
+      </visual>
+    <visual name="gumball_14">
+      <origin xyz="0.066 0.018 1.16" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      <material name="candy_blue">
+        <color rgba="0.05 0.25 0.95 1" />
+        </material>
+      </visual>
+    <collision name="round_floor_base">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.29" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="base_trim_ring">
+      <origin xyz="0 0 0.092" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.225" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_column">
+      <origin xyz="0 0 0.37" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.56" />
+        </geometry>
+      </collision>
+    <collision name="column_collar">
+      <origin xyz="0 0 0.635" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="coin_box_body">
+      <origin xyz="0 0 0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.32 0.32" />
+        </geometry>
+      </collision>
+    <collision name="coin_panel">
+      <origin xyz="0 -0.169 0.805" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.02 0.245" />
+        </geometry>
+      </collision>
+    <collision name="coin_slot">
+      <origin xyz="0 -0.182 0.885" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.006 0.018" />
+        </geometry>
+      </collision>
+    <collision name="coin_return_recess">
+      <origin xyz="0 -0.178 0.715" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.008 0.045" />
+        </geometry>
+      </collision>
+    <collision name="price_label">
+      <origin xyz="0 -0.19 0.94" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.01 0.02" />
+        </geometry>
+      </collision>
+    <collision name="chute_opening">
+      <origin xyz="0 -0.183 0.61" rpy="0 0 0" />
+      <geometry>
+        <box size="0.185 0.014 0.065" />
+        </geometry>
+      </collision>
+    <collision name="chute_back_mount">
+      <origin xyz="0 -0.166 0.603" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.03 0.075" />
+        </geometry>
+      </collision>
+    <collision name="chute_floor">
+      <origin xyz="0 -0.22 0.584" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.13 0.018" />
+        </geometry>
+      </collision>
+    <collision name="chute_side_0">
+      <origin xyz="-0.124 -0.221 0.618" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.125 0.07" />
+        </geometry>
+      </collision>
+    <collision name="chute_side_1">
+      <origin xyz="0.124 -0.221 0.618" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.125 0.07" />
+        </geometry>
+      </collision>
+    <collision name="chute_front_lip">
+      <origin xyz="0 -0.29 0.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.248 0.018 0.045" />
+        </geometry>
+      </collision>
+    <collision name="reservoir_base_cap">
+      <origin xyz="0 0 0.968" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="lower_glass_seat">
+      <origin xyz="0 0 0.997" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.202" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="reservoir_shell">
+      <origin xyz="0 0 0.99" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/clear_product_reservoir.obj" />
+        </geometry>
+      </collision>
+    <collision name="reservoir_lid">
+      <origin xyz="0 0 1.373" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.168" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="lid_knob">
+      <origin xyz="0 0 1.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="gumball_0">
+      <origin xyz="0 0 1.017" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_1">
+      <origin xyz="0.06 0.01 1.02" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_2">
+      <origin xyz="-0.058 0.018 1.022" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_3">
+      <origin xyz="0.01 0.066 1.02" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_4">
+      <origin xyz="-0.004 -0.064 1.022" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_5">
+      <origin xyz="0.112 0.04 1.024" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_6">
+      <origin xyz="-0.105 -0.045 1.026" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_7">
+      <origin xyz="0.05 -0.075 1.078" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_8">
+      <origin xyz="-0.058 0.078 1.08" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_9">
+      <origin xyz="0 0 1.088" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_10">
+      <origin xyz="0.096 -0.018 1.092" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_11">
+      <origin xyz="-0.094 0 1.095" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_12">
+      <origin xyz="0.026 0.055 1.15" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_13">
+      <origin xyz="-0.036 -0.048 1.154" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    <collision name="gumball_14">
+      <origin xyz="0.066 0.018 1.16" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dispense_knob">
+    <visual name="knob_collar">
+      <origin xyz="0 -0.006 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.012" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="knob_shaft">
+      <origin xyz="0 -0.016 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.032" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="knob_cap">
+      <origin xyz="0 -0.052 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_dispense_knob.obj" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="handle_boss">
+      <origin xyz="0.055 -0.077 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.02" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="handle_grip">
+      <origin xyz="0.055 -0.096 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.04" />
+        </geometry>
+      <material name="dark_red_shadow">
+        <color rgba="0.36 0.01 0.01 1" />
+        </material>
+      </visual>
+    <collision name="knob_collar">
+      <origin xyz="0 -0.006 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="knob_shaft">
+      <origin xyz="0 -0.016 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="knob_cap">
+      <origin xyz="0 -0.052 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_dispense_knob.obj" />
+        </geometry>
+      </collision>
+    <collision name="handle_boss">
+      <origin xyz="0.055 -0.077 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="handle_grip">
+      <origin xyz="0.055 -0.096 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="machine_to_dispense_knob" type="revolute">
+    <origin xyz="0 -0.179 0.805" rpy="0 0 0" />
+    <parent link="machine" />
+    <child link="dispense_knob" />
+    <axis xyz="0 -1 0" />
+    <limit effort="6" velocity="3" lower="0" upper="6.28319" />
+    </joint>
+  </robot>

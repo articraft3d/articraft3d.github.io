@@ -1,0 +1,748 @@
+<robot name="slant_top_video_slot_machine">
+  <material name="deep_red_laminate">
+    <color rgba="0.42 0.025 0.035 1" />
+    </material>
+  <material name="black_powdercoat">
+    <color rgba="0.015 0.015 0.018 1" />
+    </material>
+  <material name="charcoal_metal">
+    <color rgba="0.08 0.085 0.09 1" />
+    </material>
+  <material name="brushed_chrome">
+    <color rgba="0.72 0.7 0.65 1" />
+    </material>
+  <material name="dark_blue_glass">
+    <color rgba="0.015 0.035 0.085 0.92" />
+    </material>
+  <material name="lit_marquee">
+    <color rgba="1 0.83 0.3 1" />
+    </material>
+  <material name="white_legends">
+    <color rgba="0.92 0.93 0.88 1" />
+    </material>
+  <material name="coin_gold">
+    <color rgba="0.95 0.68 0.2 1" />
+    </material>
+  <material name="button_red">
+    <color rgba="0.86 0.05 0.03 1" />
+    </material>
+  <material name="button_blue">
+    <color rgba="0.05 0.22 0.9 1" />
+    </material>
+  <material name="button_green">
+    <color rgba="0.04 0.62 0.16 1" />
+    </material>
+  <material name="button_yellow">
+    <color rgba="0.94 0.82 0.08 1" />
+    </material>
+  <material name="button_purple">
+    <color rgba="0.42 0.12 0.7 1" />
+    </material>
+  <material name="button_white">
+    <color rgba="0.92 0.92 0.86 1" />
+    </material>
+  <link name="cabinet">
+    <visual name="cabinet_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cabinet_shell.obj" />
+        </geometry>
+      <material name="deep_red_laminate">
+        <color rgba="0.42 0.025 0.035 1" />
+        </material>
+      </visual>
+    <visual name="floor_plinth">
+      <origin xyz="0 -0.02 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.88 0.72 0.12" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="button_deck">
+      <origin xyz="0 -0.52 0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.31 0.065" />
+        </geometry>
+      <material name="charcoal_metal">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="deck_front_roll">
+      <origin xyz="0 -0.675 0.785" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.76" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.65 1" />
+        </material>
+      </visual>
+    <visual name="deck_gusset_0">
+      <geometry>
+        <mesh filename="assets/meshes/deck_gusset_0.obj" />
+        </geometry>
+      <material name="charcoal_metal">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="deck_gusset_1">
+      <geometry>
+        <mesh filename="assets/meshes/deck_gusset_1.obj" />
+        </geometry>
+      <material name="charcoal_metal">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="video_screen">
+      <origin xyz="0 -0.245 1.15" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.6 0.018 0.36" />
+        </geometry>
+      <material name="dark_blue_glass">
+        <color rgba="0.015 0.035 0.085 0.92" />
+        </material>
+      </visual>
+    <visual name="screen_top_bezel">
+      <origin xyz="0 -0.15066 1.32351" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.67 0.026 0.035" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="screen_bottom_bezel">
+      <origin xyz="0 -0.33934 0.976488" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.67 0.026 0.035" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="screen_side_bezel_0">
+      <origin xyz="-0.3175 -0.245 1.15" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.035 0.026 0.36" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="screen_side_bezel_1">
+      <origin xyz="0.3175 -0.245 1.15" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.035 0.026 0.36" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="game_graphic">
+      <origin xyz="0 -0.298533 1.07666" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.5 0.01 0.035" />
+        </geometry>
+      <material name="lit_marquee">
+        <color rgba="1 0.83 0.3 1" />
+        </material>
+      </visual>
+    <visual name="top_marquee">
+      <origin xyz="0 -0.0952712 1.41287" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.68 0.03 0.13" />
+        </geometry>
+      <material name="lit_marquee">
+        <color rgba="1 0.83 0.3 1" />
+        </material>
+      </visual>
+    <visual name="belly_header_trim">
+      <origin xyz="0 -0.382 0.735" rpy="0 0 0" />
+      <geometry>
+        <box size="0.73 0.02 0.055" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.65 1" />
+        </material>
+      </visual>
+    <visual name="hinge_jamb">
+      <origin xyz="-0.345 -0.374 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.02 0.56" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.65 1" />
+        </material>
+      </visual>
+    <visual name="latch_jamb">
+      <origin xyz="0.285 -0.382 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.02 0.56" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.65 1" />
+        </material>
+      </visual>
+    <visual name="bill_acceptor">
+      <origin xyz="0.12 -0.386 0.845" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.02 0.075" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bill_slot">
+      <origin xyz="0.12 -0.398 0.848" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.024 0.03" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.65 1" />
+        </material>
+      </visual>
+    <visual name="card_reader">
+      <origin xyz="-0.2 -0.387 0.842" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.018 0.055" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="button_collar_0">
+      <origin xyz="-0.27 -0.585 0.82075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.0065" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="button_collar_1">
+      <origin xyz="-0.162 -0.585 0.82075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.0065" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="button_collar_2">
+      <origin xyz="-0.054 -0.585 0.82075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.0065" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="button_collar_3">
+      <origin xyz="0.054 -0.585 0.82075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.0065" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="button_collar_4">
+      <origin xyz="0.162 -0.585 0.82075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.0065" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="button_collar_5">
+      <origin xyz="0.27 -0.585 0.82075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.0065" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <collision name="cabinet_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cabinet_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="floor_plinth">
+      <origin xyz="0 -0.02 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.88 0.72 0.12" />
+        </geometry>
+      </collision>
+    <collision name="button_deck">
+      <origin xyz="0 -0.52 0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.31 0.065" />
+        </geometry>
+      </collision>
+    <collision name="deck_front_roll">
+      <origin xyz="0 -0.675 0.785" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.76" />
+        </geometry>
+      </collision>
+    <collision name="deck_gusset_0">
+      <geometry>
+        <mesh filename="assets/meshes/deck_gusset_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="deck_gusset_1">
+      <geometry>
+        <mesh filename="assets/meshes/deck_gusset_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="video_screen">
+      <origin xyz="0 -0.245 1.15" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.6 0.018 0.36" />
+        </geometry>
+      </collision>
+    <collision name="screen_top_bezel">
+      <origin xyz="0 -0.15066 1.32351" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.67 0.026 0.035" />
+        </geometry>
+      </collision>
+    <collision name="screen_bottom_bezel">
+      <origin xyz="0 -0.33934 0.976488" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.67 0.026 0.035" />
+        </geometry>
+      </collision>
+    <collision name="screen_side_bezel_0">
+      <origin xyz="-0.3175 -0.245 1.15" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.035 0.026 0.36" />
+        </geometry>
+      </collision>
+    <collision name="screen_side_bezel_1">
+      <origin xyz="0.3175 -0.245 1.15" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.035 0.026 0.36" />
+        </geometry>
+      </collision>
+    <collision name="game_graphic">
+      <origin xyz="0 -0.298533 1.07666" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.5 0.01 0.035" />
+        </geometry>
+      </collision>
+    <collision name="top_marquee">
+      <origin xyz="0 -0.0952712 1.41287" rpy="-0.498 0 0" />
+      <geometry>
+        <box size="0.68 0.03 0.13" />
+        </geometry>
+      </collision>
+    <collision name="belly_header_trim">
+      <origin xyz="0 -0.382 0.735" rpy="0 0 0" />
+      <geometry>
+        <box size="0.73 0.02 0.055" />
+        </geometry>
+      </collision>
+    <collision name="hinge_jamb">
+      <origin xyz="-0.345 -0.374 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.02 0.56" />
+        </geometry>
+      </collision>
+    <collision name="latch_jamb">
+      <origin xyz="0.285 -0.382 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.02 0.56" />
+        </geometry>
+      </collision>
+    <collision name="bill_acceptor">
+      <origin xyz="0.12 -0.386 0.845" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.02 0.075" />
+        </geometry>
+      </collision>
+    <collision name="bill_slot">
+      <origin xyz="0.12 -0.398 0.848" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.024 0.03" />
+        </geometry>
+      </collision>
+    <collision name="card_reader">
+      <origin xyz="-0.2 -0.387 0.842" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.018 0.055" />
+        </geometry>
+      </collision>
+    <collision name="button_collar_0">
+      <origin xyz="-0.27 -0.585 0.82075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.0065" />
+        </geometry>
+      </collision>
+    <collision name="button_collar_1">
+      <origin xyz="-0.162 -0.585 0.82075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.0065" />
+        </geometry>
+      </collision>
+    <collision name="button_collar_2">
+      <origin xyz="-0.054 -0.585 0.82075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.0065" />
+        </geometry>
+      </collision>
+    <collision name="button_collar_3">
+      <origin xyz="0.054 -0.585 0.82075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.0065" />
+        </geometry>
+      </collision>
+    <collision name="button_collar_4">
+      <origin xyz="0.162 -0.585 0.82075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.0065" />
+        </geometry>
+      </collision>
+    <collision name="button_collar_5">
+      <origin xyz="0.27 -0.585 0.82075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.0065" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="belly_door">
+    <visual name="door_panel">
+      <origin xyz="0.31 -0.008 0.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.032 0.52" />
+        </geometry>
+      <material name="charcoal_metal">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="door_vent">
+      <origin xyz="0.33 -0.027 0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.006 0.065" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="lock_cylinder">
+      <origin xyz="0.5 -0.03 0.31" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.02" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.65 1" />
+        </material>
+      </visual>
+    <visual name="lock_slot">
+      <origin xyz="0.5 -0.042 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.004" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel_12">
+      <origin xyz="0.004 -0.01 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.16" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.65 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel_40">
+      <origin xyz="0.004 -0.01 0.4" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.16" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.7 0.65 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <origin xyz="0.31 -0.008 0.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.032 0.52" />
+        </geometry>
+      </collision>
+    <collision name="door_vent">
+      <origin xyz="0.33 -0.027 0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.006 0.065" />
+        </geometry>
+      </collision>
+    <collision name="lock_cylinder">
+      <origin xyz="0.5 -0.03 0.31" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="lock_slot">
+      <origin xyz="0.5 -0.042 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.004" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel_12">
+      <origin xyz="0.004 -0.01 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel_40">
+      <origin xyz="0.004 -0.01 0.4" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.16" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_0">
+    <visual name="cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.026" />
+        </geometry>
+      <material name="button_red">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="legend_lens">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      <material name="white_legends">
+        <color rgba="0.92 0.93 0.88 1" />
+        </material>
+      </visual>
+    <collision name="cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="legend_lens">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_1">
+    <visual name="cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.026" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.05 0.22 0.9 1" />
+        </material>
+      </visual>
+    <visual name="legend_lens">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      <material name="white_legends">
+        <color rgba="0.92 0.93 0.88 1" />
+        </material>
+      </visual>
+    <collision name="cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="legend_lens">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_2">
+    <visual name="cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.026" />
+        </geometry>
+      <material name="button_green">
+        <color rgba="0.04 0.62 0.16 1" />
+        </material>
+      </visual>
+    <visual name="legend_lens">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      <material name="white_legends">
+        <color rgba="0.92 0.93 0.88 1" />
+        </material>
+      </visual>
+    <collision name="cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="legend_lens">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_3">
+    <visual name="cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.026" />
+        </geometry>
+      <material name="button_yellow">
+        <color rgba="0.94 0.82 0.08 1" />
+        </material>
+      </visual>
+    <visual name="legend_lens">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      <material name="coin_gold">
+        <color rgba="0.95 0.68 0.2 1" />
+        </material>
+      </visual>
+    <collision name="cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="legend_lens">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_4">
+    <visual name="cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.026" />
+        </geometry>
+      <material name="button_purple">
+        <color rgba="0.42 0.12 0.7 1" />
+        </material>
+      </visual>
+    <visual name="legend_lens">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      <material name="white_legends">
+        <color rgba="0.92 0.93 0.88 1" />
+        </material>
+      </visual>
+    <collision name="cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="legend_lens">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_5">
+    <visual name="cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.026" />
+        </geometry>
+      <material name="button_white">
+        <color rgba="0.92 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="legend_lens">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      <material name="white_legends">
+        <color rgba="0.92 0.93 0.88 1" />
+        </material>
+      </visual>
+    <collision name="cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="legend_lens">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="belly_door_hinge" type="revolute">
+    <origin xyz="-0.36 -0.4 0.2" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="belly_door" />
+    <axis xyz="0 0 -1" />
+    <limit effort="35" velocity="1.5" lower="0" upper="1.35" />
+    </joint>
+  <joint name="button_0_slide" type="prismatic">
+    <origin xyz="-0.27 -0.585 0.824" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_0" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.2" lower="0" upper="0.016" />
+    </joint>
+  <joint name="button_1_slide" type="prismatic">
+    <origin xyz="-0.162 -0.585 0.824" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.2" lower="0" upper="0.016" />
+    </joint>
+  <joint name="button_2_slide" type="prismatic">
+    <origin xyz="-0.054 -0.585 0.824" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_2" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.2" lower="0" upper="0.016" />
+    </joint>
+  <joint name="button_3_slide" type="prismatic">
+    <origin xyz="0.054 -0.585 0.824" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_3" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.2" lower="0" upper="0.016" />
+    </joint>
+  <joint name="button_4_slide" type="prismatic">
+    <origin xyz="0.162 -0.585 0.824" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_4" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.2" lower="0" upper="0.016" />
+    </joint>
+  <joint name="button_5_slide" type="prismatic">
+    <origin xyz="0.27 -0.585 0.824" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="button_5" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.2" lower="0" upper="0.016" />
+    </joint>
+  </robot>

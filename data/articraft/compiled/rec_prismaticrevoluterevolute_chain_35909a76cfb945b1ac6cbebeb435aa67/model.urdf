@@ -1,0 +1,1014 @@
+<robot name="prismatic_revolute_revolute_study">
+  <material name="dark_oxide">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="blued_steel">
+    <color rgba="0.16 0.19 0.21 1" />
+    </material>
+  <material name="ground_rail">
+    <color rgba="0.72 0.74 0.72 1" />
+    </material>
+  <material name="machined_aluminum">
+    <color rgba="0.58 0.61 0.62 1" />
+    </material>
+  <material name="brushed_cover">
+    <color rgba="0.4 0.42 0.42 1" />
+    </material>
+  <material name="bearing_black">
+    <color rgba="0.015 0.015 0.016 1" />
+    </material>
+  <material name="fastener">
+    <color rgba="0.09 0.095 0.1 1" />
+    </material>
+  <link name="linear_base">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.32 0.035" />
+        </geometry>
+      <material name="dark_oxide" />
+      </visual>
+    <visual name="rail_bed_0">
+      <origin xyz="0 -0.085 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.04 0.035" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="rail_bed_1">
+      <origin xyz="0 0.085 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.04 0.035" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="linear_rail_0">
+      <origin xyz="0 -0.085 0.0815" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="1" />
+        </geometry>
+      <material name="ground_rail" />
+      </visual>
+    <visual name="linear_rail_1">
+      <origin xyz="0 0.085 0.0815" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="1" />
+        </geometry>
+      <material name="ground_rail" />
+      </visual>
+    <visual name="end_stop_neg">
+      <origin xyz="-0.525 0 0.079" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.265 0.088" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="end_stop_pos">
+      <origin xyz="0.525 0 0.079" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.265 0.088" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="bearing_block_neg">
+      <origin xyz="-0.465 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.06" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="bearing_block_pos">
+      <origin xyz="0.465 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.06" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="drive_screw">
+      <origin xyz="0 0 0.088" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.93" />
+        </geometry>
+      <material name="ground_rail" />
+      </visual>
+    <visual name="stop_bumper_neg">
+      <origin xyz="-0.501 0 0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      <material name="bearing_black" />
+      </visual>
+    <visual name="stop_bumper_pos">
+      <origin xyz="0.501 0 0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      <material name="bearing_black" />
+      </visual>
+    <visual name="left_access_cover">
+      <origin xyz="0 -0.142 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.038 0.006" />
+        </geometry>
+      <material name="brushed_cover" />
+      </visual>
+    <visual name="right_access_cover">
+      <origin xyz="0 0.142 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.038 0.006" />
+        </geometry>
+      <material name="brushed_cover" />
+      </visual>
+    <visual name="left_cover_screw_0">
+      <origin xyz="-0.12 -0.142 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="left_cover_screw_1">
+      <origin xyz="0.12 -0.142 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="right_cover_screw_0">
+      <origin xyz="-0.12 0.142 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="right_cover_screw_1">
+      <origin xyz="0.12 0.142 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.32 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rail_bed_0">
+      <origin xyz="0 -0.085 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.04 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rail_bed_1">
+      <origin xyz="0 0.085 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.04 0.035" />
+        </geometry>
+      </collision>
+    <collision name="linear_rail_0">
+      <origin xyz="0 -0.085 0.0815" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="1" />
+        </geometry>
+      </collision>
+    <collision name="linear_rail_1">
+      <origin xyz="0 0.085 0.0815" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="1" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_neg">
+      <origin xyz="-0.525 0 0.079" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.265 0.088" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_pos">
+      <origin xyz="0.525 0 0.079" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.265 0.088" />
+        </geometry>
+      </collision>
+    <collision name="bearing_block_neg">
+      <origin xyz="-0.465 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.06" />
+        </geometry>
+      </collision>
+    <collision name="bearing_block_pos">
+      <origin xyz="0.465 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.06" />
+        </geometry>
+      </collision>
+    <collision name="drive_screw">
+      <origin xyz="0 0 0.088" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.93" />
+        </geometry>
+      </collision>
+    <collision name="stop_bumper_neg">
+      <origin xyz="-0.501 0 0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="stop_bumper_pos">
+      <origin xyz="0.501 0 0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="left_access_cover">
+      <origin xyz="0 -0.142 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.038 0.006" />
+        </geometry>
+      </collision>
+    <collision name="right_access_cover">
+      <origin xyz="0 0.142 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.038 0.006" />
+        </geometry>
+      </collision>
+    <collision name="left_cover_screw_0">
+      <origin xyz="-0.12 -0.142 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="left_cover_screw_1">
+      <origin xyz="0.12 -0.142 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="right_cover_screw_0">
+      <origin xyz="-0.12 0.142 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="right_cover_screw_1">
+      <origin xyz="0.12 0.142 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="turret">
+    <visual name="carriage_plate">
+      <origin xyz="0 0 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.235 0.026" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="guide_bridge_0">
+      <origin xyz="0 -0.085 0.1025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.062 0.018" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="guide_cheek_0_inner">
+      <origin xyz="0 -0.059925 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.008 0.049" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="guide_cheek_0_outer">
+      <origin xyz="0 -0.110075 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.008 0.049" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="guide_bridge_1">
+      <origin xyz="0 0.085 0.1025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.062 0.018" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="guide_cheek_1_inner">
+      <origin xyz="0 0.059925 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.008 0.049" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="guide_cheek_1_outer">
+      <origin xyz="0 0.110075 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.008 0.049" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="nut_bridge">
+      <origin xyz="0 0 0.114" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.056 0.014" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="nut_lug_neg">
+      <origin xyz="0 -0.022 0.093" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.014 0.03" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="nut_lug_pos">
+      <origin xyz="0 0.022 0.093" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.014 0.03" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="lower_bearing_ring">
+      <origin xyz="0 0 0.154" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.018" />
+        </geometry>
+      <material name="bearing_black" />
+      </visual>
+    <visual name="turret_register">
+      <origin xyz="0 0 0.176" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.062" length="0.025" />
+        </geometry>
+      <material name="ground_rail" />
+      </visual>
+    <visual name="riser_block">
+      <origin xyz="0 0 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 0.18" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="turret_access_cover">
+      <origin xyz="0 0.0618 0.235" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/turret_access_cover_mesh.obj" />
+        </geometry>
+      <material name="brushed_cover" />
+      </visual>
+    <visual name="turret_cover_screw_-0.031_0.198">
+      <origin xyz="-0.031 0.0645 0.198" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="turret_cover_screw_-0.031_0.272">
+      <origin xyz="-0.031 0.0645 0.272" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="turret_cover_screw_0.031_0.198">
+      <origin xyz="0.031 0.0645 0.198" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="turret_cover_screw_0.031_0.272">
+      <origin xyz="0.031 0.0645 0.272" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="hinge1_saddle">
+      <origin xyz="0 0 0.338" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.17 0.026" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="hinge1_cheek_neg">
+      <origin xyz="0 -0.074 0.386" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.018 0.112" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="hinge1_cheek_pos">
+      <origin xyz="0 0.074 0.386" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.018 0.112" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="hinge1_rear_bridge">
+      <origin xyz="-0.062 0 0.382" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.166 0.07" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="hinge1_boss_neg">
+      <origin xyz="0 -0.089 0.386" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.012" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="hinge1_boss_pos">
+      <origin xyz="0 0.089 0.386" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.012" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="hinge1_pin_cap_-0.089">
+      <origin xyz="0 -0.089 0.386" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.005" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="hinge1_pin_cap_0.089">
+      <origin xyz="0 0.089 0.386" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.005" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <collision name="carriage_plate">
+      <origin xyz="0 0 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.235 0.026" />
+        </geometry>
+      </collision>
+    <collision name="guide_bridge_0">
+      <origin xyz="0 -0.085 0.1025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.062 0.018" />
+        </geometry>
+      </collision>
+    <collision name="guide_cheek_0_inner">
+      <origin xyz="0 -0.059925 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.008 0.049" />
+        </geometry>
+      </collision>
+    <collision name="guide_cheek_0_outer">
+      <origin xyz="0 -0.110075 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.008 0.049" />
+        </geometry>
+      </collision>
+    <collision name="guide_bridge_1">
+      <origin xyz="0 0.085 0.1025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.062 0.018" />
+        </geometry>
+      </collision>
+    <collision name="guide_cheek_1_inner">
+      <origin xyz="0 0.059925 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.008 0.049" />
+        </geometry>
+      </collision>
+    <collision name="guide_cheek_1_outer">
+      <origin xyz="0 0.110075 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.008 0.049" />
+        </geometry>
+      </collision>
+    <collision name="nut_bridge">
+      <origin xyz="0 0 0.114" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.056 0.014" />
+        </geometry>
+      </collision>
+    <collision name="nut_lug_neg">
+      <origin xyz="0 -0.022 0.093" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.014 0.03" />
+        </geometry>
+      </collision>
+    <collision name="nut_lug_pos">
+      <origin xyz="0 0.022 0.093" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.014 0.03" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_ring">
+      <origin xyz="0 0 0.154" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="turret_register">
+      <origin xyz="0 0 0.176" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.062" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="riser_block">
+      <origin xyz="0 0 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 0.18" />
+        </geometry>
+      </collision>
+    <collision name="turret_access_cover">
+      <origin xyz="0 0.0618 0.235" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/turret_access_cover_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="turret_cover_screw_-0.031_0.198">
+      <origin xyz="-0.031 0.0645 0.198" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="turret_cover_screw_-0.031_0.272">
+      <origin xyz="-0.031 0.0645 0.272" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="turret_cover_screw_0.031_0.198">
+      <origin xyz="0.031 0.0645 0.198" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="turret_cover_screw_0.031_0.272">
+      <origin xyz="0.031 0.0645 0.272" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="hinge1_saddle">
+      <origin xyz="0 0 0.338" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.17 0.026" />
+        </geometry>
+      </collision>
+    <collision name="hinge1_cheek_neg">
+      <origin xyz="0 -0.074 0.386" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.018 0.112" />
+        </geometry>
+      </collision>
+    <collision name="hinge1_cheek_pos">
+      <origin xyz="0 0.074 0.386" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.018 0.112" />
+        </geometry>
+      </collision>
+    <collision name="hinge1_rear_bridge">
+      <origin xyz="-0.062 0 0.382" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.166 0.07" />
+        </geometry>
+      </collision>
+    <collision name="hinge1_boss_neg">
+      <origin xyz="0 -0.089 0.386" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="hinge1_boss_pos">
+      <origin xyz="0 0.089 0.386" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="hinge1_pin_cap_-0.089">
+      <origin xyz="0 -0.089 0.386" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="hinge1_pin_cap_0.089">
+      <origin xyz="0 0.089 0.386" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="first_arm">
+    <visual name="first_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.1" />
+        </geometry>
+      <material name="ground_rail" />
+      </visual>
+    <visual name="first_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.126" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="arm_plate_neg">
+      <origin xyz="0.165 -0.032 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.014 0.045" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="arm_plate_pos">
+      <origin xyz="0.165 0.032 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.014 0.045" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="arm_top_spacer">
+      <origin xyz="0.165 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.075 0.014" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="arm_lower_spacer">
+      <origin xyz="0.115 0 -0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.064 0.012" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="arm_access_cover">
+      <origin xyz="0.165 0 0.036" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arm_access_cover_mesh.obj" />
+        </geometry>
+      <material name="brushed_cover" />
+      </visual>
+    <visual name="arm_cover_screw_0.1_-0.018">
+      <origin xyz="0.1 -0.018 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.006" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="arm_cover_screw_0.1_0.018">
+      <origin xyz="0.1 0.018 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.006" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="arm_cover_screw_0.23_-0.018">
+      <origin xyz="0.23 -0.018 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.006" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="arm_cover_screw_0.23_0.018">
+      <origin xyz="0.23 0.018 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.006" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="hinge2_root_block">
+      <origin xyz="0.27 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.112 0.05" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="hinge2_cheek_neg">
+      <origin xyz="0.32 -0.045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.012 0.086" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="hinge2_cheek_pos">
+      <origin xyz="0.32 0.045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.012 0.086" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="hinge2_boss_neg">
+      <origin xyz="0.32 -0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.012" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="hinge2_boss_pos">
+      <origin xyz="0.32 0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.012" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <collision name="first_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="first_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.126" />
+        </geometry>
+      </collision>
+    <collision name="arm_plate_neg">
+      <origin xyz="0.165 -0.032 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.014 0.045" />
+        </geometry>
+      </collision>
+    <collision name="arm_plate_pos">
+      <origin xyz="0.165 0.032 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.014 0.045" />
+        </geometry>
+      </collision>
+    <collision name="arm_top_spacer">
+      <origin xyz="0.165 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.075 0.014" />
+        </geometry>
+      </collision>
+    <collision name="arm_lower_spacer">
+      <origin xyz="0.115 0 -0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.064 0.012" />
+        </geometry>
+      </collision>
+    <collision name="arm_access_cover">
+      <origin xyz="0.165 0 0.036" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arm_access_cover_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="arm_cover_screw_0.1_-0.018">
+      <origin xyz="0.1 -0.018 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="arm_cover_screw_0.1_0.018">
+      <origin xyz="0.1 0.018 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="arm_cover_screw_0.23_-0.018">
+      <origin xyz="0.23 -0.018 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="arm_cover_screw_0.23_0.018">
+      <origin xyz="0.23 0.018 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="hinge2_root_block">
+      <origin xyz="0.27 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.112 0.05" />
+        </geometry>
+      </collision>
+    <collision name="hinge2_cheek_neg">
+      <origin xyz="0.32 -0.045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.012 0.086" />
+        </geometry>
+      </collision>
+    <collision name="hinge2_cheek_pos">
+      <origin xyz="0.32 0.045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.012 0.086" />
+        </geometry>
+      </collision>
+    <collision name="hinge2_boss_neg">
+      <origin xyz="0.32 -0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="hinge2_boss_pos">
+      <origin xyz="0.32 0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="forearm">
+    <visual name="second_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.062" />
+        </geometry>
+      <material name="ground_rail" />
+      </visual>
+    <visual name="second_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.088" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="forearm_spine">
+      <origin xyz="0.13 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.052 0.035" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="forearm_rib_top">
+      <origin xyz="0.135 0 0.0235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.064 0.012" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="forearm_rib_bottom">
+      <origin xyz="0.126 0 -0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.042 0.01" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="terminal_pad">
+      <origin xyz="0.27 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.082 0.06" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="terminal_face">
+      <origin xyz="0.306 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.09 0.068" />
+        </geometry>
+      <material name="brushed_cover" />
+      </visual>
+    <visual name="terminal_fastener_-0.026_-0.02">
+      <origin xyz="0.311 -0.026 -0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="terminal_fastener_-0.026_0.02">
+      <origin xyz="0.311 -0.026 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="terminal_fastener_0.026_-0.02">
+      <origin xyz="0.311 0.026 -0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="terminal_fastener_0.026_0.02">
+      <origin xyz="0.311 0.026 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="forearm_access_cover">
+      <origin xyz="0.143 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.044 0.005" />
+        </geometry>
+      <material name="brushed_cover" />
+      </visual>
+    <visual name="forearm_cover_screw_0.1">
+      <origin xyz="0.1 0 0.0365" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <visual name="forearm_cover_screw_0.185">
+      <origin xyz="0.185 0 0.0365" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.004" />
+        </geometry>
+      <material name="fastener" />
+      </visual>
+    <collision name="second_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.062" />
+        </geometry>
+      </collision>
+    <collision name="second_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.088" />
+        </geometry>
+      </collision>
+    <collision name="forearm_spine">
+      <origin xyz="0.13 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.052 0.035" />
+        </geometry>
+      </collision>
+    <collision name="forearm_rib_top">
+      <origin xyz="0.135 0 0.0235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.064 0.012" />
+        </geometry>
+      </collision>
+    <collision name="forearm_rib_bottom">
+      <origin xyz="0.126 0 -0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.042 0.01" />
+        </geometry>
+      </collision>
+    <collision name="terminal_pad">
+      <origin xyz="0.27 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.082 0.06" />
+        </geometry>
+      </collision>
+    <collision name="terminal_face">
+      <origin xyz="0.306 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.09 0.068" />
+        </geometry>
+      </collision>
+    <collision name="terminal_fastener_-0.026_-0.02">
+      <origin xyz="0.311 -0.026 -0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="terminal_fastener_-0.026_0.02">
+      <origin xyz="0.311 -0.026 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="terminal_fastener_0.026_-0.02">
+      <origin xyz="0.311 0.026 -0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="terminal_fastener_0.026_0.02">
+      <origin xyz="0.311 0.026 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="forearm_access_cover">
+      <origin xyz="0.143 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.044 0.005" />
+        </geometry>
+      </collision>
+    <collision name="forearm_cover_screw_0.1">
+      <origin xyz="0.1 0 0.0365" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="forearm_cover_screw_0.185">
+      <origin xyz="0.185 0 0.0365" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_turret" type="prismatic">
+    <origin xyz="-0.22 0 0" rpy="0 0 0" />
+    <parent link="linear_base" />
+    <child link="turret" />
+    <axis xyz="1 0 0" />
+    <limit effort="750" velocity="0.35" lower="0" upper="0.38" />
+    </joint>
+  <joint name="turret_to_first_arm" type="revolute">
+    <origin xyz="0 0 0.386" rpy="0 0 0" />
+    <parent link="turret" />
+    <child link="first_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="320" velocity="1.2" lower="-0.55" upper="1.05" />
+    </joint>
+  <joint name="first_arm_to_forearm" type="revolute">
+    <origin xyz="0.32 0 0" rpy="0 0 0" />
+    <parent link="first_arm" />
+    <child link="forearm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="180" velocity="1.4" lower="-1.15" upper="1.15" />
+    </joint>
+  </robot>

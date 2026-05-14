@@ -1,0 +1,203 @@
+<robot name="nested_ring_turntable">
+  <material name="cast_black">
+    <color rgba="0.055 0.06 0.065 1" />
+    </material>
+  <material name="shadow_black">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.7 0.72 0.74 1" />
+    </material>
+  <material name="bearing_steel">
+    <color rgba="0.43 0.47 0.51 1" />
+    </material>
+  <material name="fixture_orange">
+    <color rgba="0.92 0.39 0.12 1" />
+    </material>
+  <link name="base">
+    <visual name="base_housing">
+      <geometry>
+        <mesh filename="assets/meshes/base_housing.obj" />
+        </geometry>
+      <material name="cast_black">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <visual name="base_race_dark">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_race_dark.obj" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="base_housing">
+      <geometry>
+        <mesh filename="assets/meshes/base_housing.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_race_dark">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_race_dark.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_platter">
+    <visual name="platter_housing">
+      <geometry>
+        <mesh filename="assets/meshes/platter_housing.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="platter_shadow_land">
+      <origin xyz="0 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/platter_shadow_land.obj" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="platter_index">
+      <origin xyz="0.184 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.018 0.006" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="platter_housing">
+      <geometry>
+        <mesh filename="assets/meshes/platter_housing.obj" />
+        </geometry>
+      </collision>
+    <collision name="platter_shadow_land">
+      <origin xyz="0 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/platter_shadow_land.obj" />
+        </geometry>
+      </collision>
+    <collision name="platter_index">
+      <origin xyz="0.184 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="intermediate_ring">
+    <visual name="ring_housing">
+      <geometry>
+        <mesh filename="assets/meshes/ring_housing.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.43 0.47 0.51 1" />
+        </material>
+      </visual>
+    <visual name="ring_shadow_land">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/ring_shadow_land.obj" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="ring_index">
+      <origin xyz="0.136 0 0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.016 0.007" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="ring_housing">
+      <geometry>
+        <mesh filename="assets/meshes/ring_housing.obj" />
+        </geometry>
+      </collision>
+    <collision name="ring_shadow_land">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/ring_shadow_land.obj" />
+        </geometry>
+      </collision>
+    <collision name="ring_index">
+      <origin xyz="0.136 0 0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.016 0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="fixture_cup">
+    <visual name="cup_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cup_shell.obj" />
+        </geometry>
+      <material name="fixture_orange">
+        <color rgba="0.92 0.39 0.12 1" />
+        </material>
+      </visual>
+    <visual name="cup_inner_lip">
+      <origin xyz="0 0 0.068" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cup_inner_lip.obj" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="cup_index_lug">
+      <origin xyz="0.09 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.03 0.026" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="cup_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cup_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="cup_inner_lip">
+      <origin xyz="0 0 0.068" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cup_inner_lip.obj" />
+        </geometry>
+      </collision>
+    <collision name="cup_index_lug">
+      <origin xyz="0.09 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.03 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_platter" type="revolute">
+    <origin xyz="0 0 0.04" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="lower_platter" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="2.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="platter_to_ring" type="revolute">
+    <origin xyz="0 0 0.044" rpy="0 0 0" />
+    <parent link="lower_platter" />
+    <child link="intermediate_ring" />
+    <axis xyz="0 0 1" />
+    <limit effort="22" velocity="2.6" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="ring_to_cup" type="revolute">
+    <origin xyz="0 0 0.072" rpy="0 0 0" />
+    <parent link="intermediate_ring" />
+    <child link="fixture_cup" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="3" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

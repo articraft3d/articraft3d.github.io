@@ -1,0 +1,794 @@
+<robot name="ceiling_cassette_air_purifier">
+  <material name="powder_coated_warm_white">
+    <color rgba="0.86 0.86 0.8 1" />
+    </material>
+  <material name="matte_ceiling_white">
+    <color rgba="0.93 0.93 0.9 1" />
+    </material>
+  <material name="shadowed_dark_gray">
+    <color rgba="0.11 0.12 0.13 1" />
+    </material>
+  <material name="pleated_filter_media">
+    <color rgba="0.78 0.74 0.62 1" />
+    </material>
+  <material name="galvanized_guide_metal">
+    <color rgba="0.55 0.57 0.58 1" />
+    </material>
+  <material name="black_rubber_gasket">
+    <color rgba="0.025 0.025 0.025 1" />
+    </material>
+  <link name="ceiling_plate">
+    <visual name="ceiling_tile">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="1.04 0.7 0.025" />
+        </geometry>
+      <material name="matte_ceiling_white">
+        <color rgba="0.93 0.93 0.9 1" />
+        </material>
+      </visual>
+    <collision name="ceiling_tile">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="1.04 0.7 0.025" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="housing">
+    <visual name="top_pan">
+      <origin xyz="0 0 -0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.52 0.018" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="side_wall_0">
+      <origin xyz="-0.4175 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.52 0.15" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="side_wall_1">
+      <origin xyz="0.4175 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.52 0.15" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="rear_wall">
+      <origin xyz="0 0.2475 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.025 0.15" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="front_fascia">
+      <origin xyz="0 -0.2475 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.025 0.07" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="rear_base_lip">
+      <origin xyz="0 0.245 -0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.03 0.012" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="side_base_lip_0">
+      <origin xyz="-0.405 0 -0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.52 0.012" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="side_base_lip_1">
+      <origin xyz="0.405 0 -0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.52 0.012" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="front_hinge_lip_0">
+      <origin xyz="-0.365 -0.248 -0.151" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.02 0.014" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="front_hinge_lip_1">
+      <origin xyz="0.365 -0.248 -0.151" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.02 0.014" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_0">
+      <origin xyz="-0.36 0 -0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.47 0.015" />
+        </geometry>
+      <material name="galvanized_guide_metal">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_1">
+      <origin xyz="0.36 0 -0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.47 0.015" />
+        </geometry>
+      <material name="galvanized_guide_metal">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_0">
+      <origin xyz="-0.34 -0.252 -0.16" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.18" />
+        </geometry>
+      <material name="galvanized_guide_metal">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_1">
+      <origin xyz="0.34 -0.252 -0.16" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.18" />
+        </geometry>
+      <material name="galvanized_guide_metal">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="top_pan">
+      <origin xyz="0 0 -0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.52 0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_wall_0">
+      <origin xyz="-0.4175 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.52 0.15" />
+        </geometry>
+      </collision>
+    <collision name="side_wall_1">
+      <origin xyz="0.4175 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.52 0.15" />
+        </geometry>
+      </collision>
+    <collision name="rear_wall">
+      <origin xyz="0 0.2475 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.025 0.15" />
+        </geometry>
+      </collision>
+    <collision name="front_fascia">
+      <origin xyz="0 -0.2475 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.025 0.07" />
+        </geometry>
+      </collision>
+    <collision name="rear_base_lip">
+      <origin xyz="0 0.245 -0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.03 0.012" />
+        </geometry>
+      </collision>
+    <collision name="side_base_lip_0">
+      <origin xyz="-0.405 0 -0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.52 0.012" />
+        </geometry>
+      </collision>
+    <collision name="side_base_lip_1">
+      <origin xyz="0.405 0 -0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.52 0.012" />
+        </geometry>
+      </collision>
+    <collision name="front_hinge_lip_0">
+      <origin xyz="-0.365 -0.248 -0.151" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.02 0.014" />
+        </geometry>
+      </collision>
+    <collision name="front_hinge_lip_1">
+      <origin xyz="0.365 -0.248 -0.151" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.02 0.014" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_0">
+      <origin xyz="-0.36 0 -0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.47 0.015" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_1">
+      <origin xyz="0.36 0 -0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.47 0.015" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_0">
+      <origin xyz="-0.34 -0.252 -0.16" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_1">
+      <origin xyz="0.34 -0.252 -0.16" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.18" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_grille">
+    <visual name="front_bar">
+      <origin xyz="0 0.027 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.03 0.018" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="rear_bar">
+      <origin xyz="0 0.465 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.03 0.018" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="side_bar_0">
+      <origin xyz="-0.3725 0.246 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.465 0.018" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="side_bar_1">
+      <origin xyz="0.3725 0.246 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.465 0.018" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="center_mullion">
+      <origin xyz="0 0.246 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.38 0.014" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="louver_0">
+      <origin xyz="0 0.085 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="louver_1">
+      <origin xyz="0 0.125 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="louver_2">
+      <origin xyz="0 0.165 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="louver_3">
+      <origin xyz="0 0.205 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="louver_4">
+      <origin xyz="0 0.245 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="louver_5">
+      <origin xyz="0 0.285 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="louver_6">
+      <origin xyz="0 0.325 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="louver_7">
+      <origin xyz="0 0.365 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="louver_8">
+      <origin xyz="0 0.405 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="dark_opening_shadow">
+      <origin xyz="0 0.246 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.725 0.44 0.004" />
+        </geometry>
+      <material name="shadowed_dark_gray">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="perimeter_gasket">
+      <origin xyz="0 0.246 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.43 0.003" />
+        </geometry>
+      <material name="black_rubber_gasket">
+        <color rgba="0.025 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="knuckle_web_0">
+      <origin xyz="-0.165 0.014 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.016 0.01" />
+        </geometry>
+      <material name="galvanized_guide_metal">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="grille_knuckle_0">
+      <origin xyz="-0.165 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.17" />
+        </geometry>
+      <material name="galvanized_guide_metal">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="knuckle_web_1">
+      <origin xyz="0.165 0.014 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.016 0.01" />
+        </geometry>
+      <material name="galvanized_guide_metal">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="grille_knuckle_1">
+      <origin xyz="0.165 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.17" />
+        </geometry>
+      <material name="galvanized_guide_metal">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="front_bar">
+      <origin xyz="0 0.027 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.03 0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_bar">
+      <origin xyz="0 0.465 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.03 0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_bar_0">
+      <origin xyz="-0.3725 0.246 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.465 0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_bar_1">
+      <origin xyz="0.3725 0.246 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.465 0.018" />
+        </geometry>
+      </collision>
+    <collision name="center_mullion">
+      <origin xyz="0 0.246 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.38 0.014" />
+        </geometry>
+      </collision>
+    <collision name="louver_0">
+      <origin xyz="0 0.085 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="louver_1">
+      <origin xyz="0 0.125 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="louver_2">
+      <origin xyz="0 0.165 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="louver_3">
+      <origin xyz="0 0.205 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="louver_4">
+      <origin xyz="0 0.245 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="louver_5">
+      <origin xyz="0 0.285 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="louver_6">
+      <origin xyz="0 0.325 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="louver_7">
+      <origin xyz="0 0.365 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="louver_8">
+      <origin xyz="0 0.405 -0.014" rpy="-0.22 0 0" />
+      <geometry>
+        <box size="0.705 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="dark_opening_shadow">
+      <origin xyz="0 0.246 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.725 0.44 0.004" />
+        </geometry>
+      </collision>
+    <collision name="perimeter_gasket">
+      <origin xyz="0 0.246 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.43 0.003" />
+        </geometry>
+      </collision>
+    <collision name="knuckle_web_0">
+      <origin xyz="-0.165 0.014 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.016 0.01" />
+        </geometry>
+      </collision>
+    <collision name="grille_knuckle_0">
+      <origin xyz="-0.165 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.17" />
+        </geometry>
+      </collision>
+    <collision name="knuckle_web_1">
+      <origin xyz="0.165 0.014 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.016 0.01" />
+        </geometry>
+      </collision>
+    <collision name="grille_knuckle_1">
+      <origin xyz="0.165 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.17" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="filter_block">
+    <visual name="filter_core">
+      <geometry>
+        <box size="0.61 0.405 0.045" />
+        </geometry>
+      <material name="pleated_filter_media">
+        <color rgba="0.78 0.74 0.62 1" />
+        </material>
+      </visual>
+    <visual name="front_filter_frame">
+      <origin xyz="0 -0.2225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.03 0.055" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="rear_filter_frame">
+      <origin xyz="0 0.2225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.03 0.055" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="side_filter_frame_0">
+      <origin xyz="-0.33 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.405 0.055" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="side_filter_frame_1">
+      <origin xyz="0.33 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.405 0.055" />
+        </geometry>
+      <material name="powder_coated_warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="pleat_0">
+      <origin xyz="0 -0.155 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      <material name="pleated_filter_media">
+        <color rgba="0.78 0.74 0.62 1" />
+        </material>
+      </visual>
+    <visual name="pleat_1">
+      <origin xyz="0 -0.105 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      <material name="pleated_filter_media">
+        <color rgba="0.78 0.74 0.62 1" />
+        </material>
+      </visual>
+    <visual name="pleat_2">
+      <origin xyz="0 -0.055 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      <material name="pleated_filter_media">
+        <color rgba="0.78 0.74 0.62 1" />
+        </material>
+      </visual>
+    <visual name="pleat_3">
+      <origin xyz="0 -0.005 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      <material name="pleated_filter_media">
+        <color rgba="0.78 0.74 0.62 1" />
+        </material>
+      </visual>
+    <visual name="pleat_4">
+      <origin xyz="0 0.045 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      <material name="pleated_filter_media">
+        <color rgba="0.78 0.74 0.62 1" />
+        </material>
+      </visual>
+    <visual name="pleat_5">
+      <origin xyz="0 0.095 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      <material name="pleated_filter_media">
+        <color rgba="0.78 0.74 0.62 1" />
+        </material>
+      </visual>
+    <visual name="pleat_6">
+      <origin xyz="0 0.145 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      <material name="pleated_filter_media">
+        <color rgba="0.78 0.74 0.62 1" />
+        </material>
+      </visual>
+    <visual name="runner_0">
+      <origin xyz="-0.31 0 -0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.43 0.012" />
+        </geometry>
+      <material name="galvanized_guide_metal">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="runner_1">
+      <origin xyz="0.31 0 -0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.43 0.012" />
+        </geometry>
+      <material name="galvanized_guide_metal">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="pull_grip">
+      <origin xyz="0 -0.246 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.018" />
+        </geometry>
+      <material name="black_rubber_gasket">
+        <color rgba="0.025 0.025 0.025 1" />
+        </material>
+      </visual>
+    <collision name="filter_core">
+      <geometry>
+        <box size="0.61 0.405 0.045" />
+        </geometry>
+      </collision>
+    <collision name="front_filter_frame">
+      <origin xyz="0 -0.2225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.03 0.055" />
+        </geometry>
+      </collision>
+    <collision name="rear_filter_frame">
+      <origin xyz="0 0.2225 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.03 0.055" />
+        </geometry>
+      </collision>
+    <collision name="side_filter_frame_0">
+      <origin xyz="-0.33 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.405 0.055" />
+        </geometry>
+      </collision>
+    <collision name="side_filter_frame_1">
+      <origin xyz="0.33 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.405 0.055" />
+        </geometry>
+      </collision>
+    <collision name="pleat_0">
+      <origin xyz="0 -0.155 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="pleat_1">
+      <origin xyz="0 -0.105 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="pleat_2">
+      <origin xyz="0 -0.055 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="pleat_3">
+      <origin xyz="0 -0.005 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="pleat_4">
+      <origin xyz="0 0.045 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="pleat_5">
+      <origin xyz="0 0.095 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="pleat_6">
+      <origin xyz="0 0.145 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="runner_0">
+      <origin xyz="-0.31 0 -0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.43 0.012" />
+        </geometry>
+      </collision>
+    <collision name="runner_1">
+      <origin xyz="0.31 0 -0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.43 0.012" />
+        </geometry>
+      </collision>
+    <collision name="pull_grip">
+      <origin xyz="0 -0.246 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="ceiling_to_housing" type="fixed">
+    <parent link="ceiling_plate" />
+    <child link="housing" />
+    </joint>
+  <joint name="housing_to_front_grille" type="revolute">
+    <origin xyz="0 -0.252 -0.16" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="front_grille" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="1.2" lower="0" upper="1.3" />
+    </joint>
+  <joint name="housing_to_filter_block" type="prismatic">
+    <origin xyz="0 0 -0.104" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="filter_block" />
+    <axis xyz="0 -1 0" />
+    <limit effort="35" velocity="0.2" lower="0" upper="0.32" />
+    </joint>
+  </robot>

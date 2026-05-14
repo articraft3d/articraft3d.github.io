@@ -1,0 +1,478 @@
+<robot name="z_axis_carriage_wrist">
+  <material name="clear_anodized_aluminum">
+    <color rgba="0.72 0.74 0.74 1" />
+    </material>
+  <material name="dark_anodized_carriage">
+    <color rgba="0.12 0.14 0.16 1" />
+    </material>
+  <material name="polished_linear_rail_steel">
+    <color rgba="0.82 0.84 0.83 1" />
+    </material>
+  <material name="black_bearing_blocks">
+    <color rgba="0.04 0.045 0.05 1" />
+    </material>
+  <material name="blue_bearing_end_seals">
+    <color rgba="0.05 0.18 0.42 1" />
+    </material>
+  <material name="brushed_wrist_steel">
+    <color rgba="0.46 0.48 0.5 1" />
+    </material>
+  <material name="amber_index_mark">
+    <color rgba="1 0.52 0.08 1" />
+    </material>
+  <link name="rail_frame">
+    <visual name="bottom_plate">
+      <origin xyz="0 -0.03 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.22 0.05" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.74 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_plate">
+      <origin xyz="0 -0.03 0.815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.22 0.05" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.74 0.74 1" />
+        </material>
+      </visual>
+    <visual name="rear_spine">
+      <origin xyz="0 -0.115 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.746" />
+        </geometry>
+      <material name="clear_anodized_aluminum">
+        <color rgba="0.72 0.74 0.74 1" />
+        </material>
+      </visual>
+    <visual name="rail_0">
+      <origin xyz="-0.13 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.746" />
+        </geometry>
+      <material name="polished_linear_rail_steel">
+        <color rgba="0.82 0.84 0.83 1" />
+        </material>
+      </visual>
+    <visual name="rail_1">
+      <origin xyz="0.13 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.746" />
+        </geometry>
+      <material name="polished_linear_rail_steel">
+        <color rgba="0.82 0.84 0.83 1" />
+        </material>
+      </visual>
+    <visual name="center_screw">
+      <origin xyz="0 -0.075 0.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.746" />
+        </geometry>
+      <material name="brushed_wrist_steel">
+        <color rgba="0.46 0.48 0.5 1" />
+        </material>
+      </visual>
+    <collision name="bottom_plate">
+      <origin xyz="0 -0.03 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.22 0.05" />
+        </geometry>
+      </collision>
+    <collision name="top_plate">
+      <origin xyz="0 -0.03 0.815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.22 0.05" />
+        </geometry>
+      </collision>
+    <collision name="rear_spine">
+      <origin xyz="0 -0.115 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.746" />
+        </geometry>
+      </collision>
+    <collision name="rail_0">
+      <origin xyz="-0.13 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.746" />
+        </geometry>
+      </collision>
+    <collision name="rail_1">
+      <origin xyz="0.13 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.746" />
+        </geometry>
+      </collision>
+    <collision name="center_screw">
+      <origin xyz="0 -0.075 0.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.746" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carriage">
+    <visual name="carriage_plate">
+      <origin xyz="0 -0.047 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.02 0.215" />
+        </geometry>
+      <material name="dark_anodized_carriage">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="wrist_mount_block">
+      <origin xyz="0 -0.005 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.07 0.085" />
+        </geometry>
+      <material name="dark_anodized_carriage">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="fixed_wrist_face">
+      <origin xyz="0 0.02 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.02" />
+        </geometry>
+      <material name="dark_anodized_carriage">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="bearing_0_0_rear_bridge">
+      <origin xyz="-0.13 -0.04 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.028 0.052" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bearing_0_0_side_0">
+      <origin xyz="-0.147 -0.004 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bearing_0_0_side_1">
+      <origin xyz="-0.113 -0.004 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bearing_0_0_front_seal">
+      <origin xyz="-0.13 0.03 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.006 0.058" />
+        </geometry>
+      <material name="blue_bearing_end_seals">
+        <color rgba="0.05 0.18 0.42 1" />
+        </material>
+      </visual>
+    <visual name="bearing_0_1_rear_bridge">
+      <origin xyz="-0.13 -0.04 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.028 0.052" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bearing_0_1_side_0">
+      <origin xyz="-0.147 -0.004 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bearing_0_1_side_1">
+      <origin xyz="-0.113 -0.004 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bearing_0_1_front_seal">
+      <origin xyz="-0.13 0.03 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.006 0.058" />
+        </geometry>
+      <material name="blue_bearing_end_seals">
+        <color rgba="0.05 0.18 0.42 1" />
+        </material>
+      </visual>
+    <visual name="bearing_1_0_rear_bridge">
+      <origin xyz="0.13 -0.04 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.028 0.052" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bearing_1_0_side_0">
+      <origin xyz="0.113 -0.004 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bearing_1_0_side_1">
+      <origin xyz="0.147 -0.004 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bearing_1_0_front_seal">
+      <origin xyz="0.13 0.03 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.006 0.058" />
+        </geometry>
+      <material name="blue_bearing_end_seals">
+        <color rgba="0.05 0.18 0.42 1" />
+        </material>
+      </visual>
+    <visual name="bearing_1_1_rear_bridge">
+      <origin xyz="0.13 -0.04 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.028 0.052" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bearing_1_1_side_0">
+      <origin xyz="0.113 -0.004 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bearing_1_1_side_1">
+      <origin xyz="0.147 -0.004 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bearing_1_1_front_seal">
+      <origin xyz="0.13 0.03 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.006 0.058" />
+        </geometry>
+      <material name="blue_bearing_end_seals">
+        <color rgba="0.05 0.18 0.42 1" />
+        </material>
+      </visual>
+    <collision name="carriage_plate">
+      <origin xyz="0 -0.047 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.02 0.215" />
+        </geometry>
+      </collision>
+    <collision name="wrist_mount_block">
+      <origin xyz="0 -0.005 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.07 0.085" />
+        </geometry>
+      </collision>
+    <collision name="fixed_wrist_face">
+      <origin xyz="0 0.02 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="bearing_0_0_rear_bridge">
+      <origin xyz="-0.13 -0.04 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.028 0.052" />
+        </geometry>
+      </collision>
+    <collision name="bearing_0_0_side_0">
+      <origin xyz="-0.147 -0.004 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      </collision>
+    <collision name="bearing_0_0_side_1">
+      <origin xyz="-0.113 -0.004 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      </collision>
+    <collision name="bearing_0_0_front_seal">
+      <origin xyz="-0.13 0.03 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.006 0.058" />
+        </geometry>
+      </collision>
+    <collision name="bearing_0_1_rear_bridge">
+      <origin xyz="-0.13 -0.04 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.028 0.052" />
+        </geometry>
+      </collision>
+    <collision name="bearing_0_1_side_0">
+      <origin xyz="-0.147 -0.004 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      </collision>
+    <collision name="bearing_0_1_side_1">
+      <origin xyz="-0.113 -0.004 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      </collision>
+    <collision name="bearing_0_1_front_seal">
+      <origin xyz="-0.13 0.03 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.006 0.058" />
+        </geometry>
+      </collision>
+    <collision name="bearing_1_0_rear_bridge">
+      <origin xyz="0.13 -0.04 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.028 0.052" />
+        </geometry>
+      </collision>
+    <collision name="bearing_1_0_side_0">
+      <origin xyz="0.113 -0.004 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      </collision>
+    <collision name="bearing_1_0_side_1">
+      <origin xyz="0.147 -0.004 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      </collision>
+    <collision name="bearing_1_0_front_seal">
+      <origin xyz="0.13 0.03 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.006 0.058" />
+        </geometry>
+      </collision>
+    <collision name="bearing_1_1_rear_bridge">
+      <origin xyz="0.13 -0.04 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.028 0.052" />
+        </geometry>
+      </collision>
+    <collision name="bearing_1_1_side_0">
+      <origin xyz="0.113 -0.004 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      </collision>
+    <collision name="bearing_1_1_side_1">
+      <origin xyz="0.147 -0.004 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.062 0.052" />
+        </geometry>
+      </collision>
+    <collision name="bearing_1_1_front_seal">
+      <origin xyz="0.13 0.03 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.006 0.058" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist">
+    <visual name="wrist_shaft">
+      <origin xyz="0 0.026 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.052" />
+        </geometry>
+      <material name="brushed_wrist_steel">
+        <color rgba="0.46 0.48 0.5 1" />
+        </material>
+      </visual>
+    <visual name="output_flange">
+      <origin xyz="0 0.061 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.018" />
+        </geometry>
+      <material name="brushed_wrist_steel">
+        <color rgba="0.46 0.48 0.5 1" />
+        </material>
+      </visual>
+    <visual name="tool_bar">
+      <origin xyz="0 0.078 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.016 0.04" />
+        </geometry>
+      <material name="brushed_wrist_steel">
+        <color rgba="0.46 0.48 0.5 1" />
+        </material>
+      </visual>
+    <visual name="index_tab">
+      <origin xyz="0.05 0.092 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.02" />
+        </geometry>
+      <material name="amber_index_mark">
+        <color rgba="1 0.52 0.08 1" />
+        </material>
+      </visual>
+    <collision name="wrist_shaft">
+      <origin xyz="0 0.026 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="output_flange">
+      <origin xyz="0 0.061 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="tool_bar">
+      <origin xyz="0 0.078 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.016 0.04" />
+        </geometry>
+      </collision>
+    <collision name="index_tab">
+      <origin xyz="0.05 0.092 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="z_slide" type="prismatic">
+    <origin xyz="0 0 0.42" rpy="0 0 0" />
+    <parent link="rail_frame" />
+    <child link="carriage" />
+    <axis xyz="0 0 1" />
+    <limit effort="350" velocity="0.35" lower="-0.18" upper="0.18" />
+    </joint>
+  <joint name="wrist_roll" type="revolute">
+    <origin xyz="0 0.03 0" rpy="0 0 0" />
+    <parent link="carriage" />
+    <child link="wrist" />
+    <axis xyz="0 1 0" />
+    <limit effort="55" velocity="2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

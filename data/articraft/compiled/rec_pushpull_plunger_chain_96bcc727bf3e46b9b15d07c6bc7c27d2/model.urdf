@@ -1,0 +1,176 @@
+<robot name="ejector_plunger_stack">
+  <material name="painted_iron">
+    <color rgba="0.12 0.16 0.18 1" />
+    </material>
+  <material name="satin_steel">
+    <color rgba="0.58 0.61 0.62 1" />
+    </material>
+  <material name="polished_rod">
+    <color rgba="0.82 0.84 0.86 1" />
+    </material>
+  <material name="blued_steel">
+    <color rgba="0.18 0.23 0.28 1" />
+    </material>
+  <link name="base">
+    <visual name="base_block">
+      <origin xyz="-0.13 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.18 0.16" />
+        </geometry>
+      <material name="painted_iron">
+        <color rgba="0.12 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="mounting_foot">
+      <origin xyz="-0.13 0 -0.092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.22 0.025" />
+        </geometry>
+      <material name="painted_iron">
+        <color rgba="0.12 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="nested_guides">
+      <geometry>
+        <mesh filename="assets/meshes/nested_guides.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.58 0.61 0.62 1" />
+        </material>
+      </visual>
+    <collision name="base_block">
+      <origin xyz="-0.13 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.18 0.16" />
+        </geometry>
+      </collision>
+    <collision name="mounting_foot">
+      <origin xyz="-0.13 0 -0.092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.22 0.025" />
+        </geometry>
+      </collision>
+    <collision name="nested_guides">
+      <geometry>
+        <mesh filename="assets/meshes/nested_guides.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rear_rod">
+    <visual name="rear_rod_body">
+      <origin xyz="0.11 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0175" length="0.22" />
+        </geometry>
+      <material name="polished_rod">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="rear_shoulder">
+      <origin xyz="0.227 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.014" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.18 0.23 0.28 1" />
+        </material>
+      </visual>
+    <collision name="rear_rod_body">
+      <origin xyz="0.11 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0175" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="rear_shoulder">
+      <origin xyz="0.227 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="middle_rod">
+    <visual name="middle_rod_body">
+      <origin xyz="0.09 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.18" />
+        </geometry>
+      <material name="polished_rod">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="middle_shoulder">
+      <origin xyz="0.186 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.18 0.23 0.28 1" />
+        </material>
+      </visual>
+    <collision name="middle_rod_body">
+      <origin xyz="0.09 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="middle_shoulder">
+      <origin xyz="0.186 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_rod">
+    <visual name="front_rod_body">
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.16" />
+        </geometry>
+      <material name="polished_rod">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="plunger_tip">
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_tip.obj" />
+        </geometry>
+      <material name="polished_rod">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <collision name="front_rod_body">
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="plunger_tip">
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_tip.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="rear_slide" type="prismatic">
+    <origin xyz="0.755 0 0" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="rear_rod" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="0.35" lower="0" upper="0.12" />
+    </joint>
+  <joint name="middle_slide" type="prismatic">
+    <origin xyz="0.989 0 0" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="middle_rod" />
+    <axis xyz="1 0 0" />
+    <limit effort="95" velocity="0.32" lower="0" upper="0.105" />
+    </joint>
+  <joint name="front_slide" type="prismatic">
+    <origin xyz="1.181 0 0" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="front_rod" />
+    <axis xyz="1 0 0" />
+    <limit effort="70" velocity="0.3" lower="0" upper="0.085" />
+    </joint>
+  </robot>

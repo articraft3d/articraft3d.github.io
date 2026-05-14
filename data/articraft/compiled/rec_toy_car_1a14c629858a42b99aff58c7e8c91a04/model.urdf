@@ -1,0 +1,787 @@
+<robot name="toy_car_hood">
+  <material name="molded_red_plastic">
+    <color rgba="0.86 0.05 0.03 1" />
+    </material>
+  <material name="soft_black_rubber">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="matte_black_chassis">
+    <color rgba="0.02 0.022 0.025 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.62 0.63 0.6 1" />
+    </material>
+  <material name="warm_yellow_hubcap">
+    <color rgba="1 0.74 0.08 1" />
+    </material>
+  <material name="smoky_blue_window">
+    <color rgba="0.1 0.22 0.34 0.72" />
+    </material>
+  <link name="chassis">
+    <visual name="deck_plate">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.11 0.018" />
+        </geometry>
+      <material name="matte_black_chassis">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <visual name="center_spine">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.03 0.016" />
+        </geometry>
+      <material name="matte_black_chassis">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <visual name="front_bumper_pad">
+      <origin xyz="0.178 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.118 0.018" />
+        </geometry>
+      <material name="matte_black_chassis">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <visual name="rear_bumper_pad">
+      <origin xyz="-0.178 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.118 0.018" />
+        </geometry>
+      <material name="matte_black_chassis">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <collision name="deck_plate">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.11 0.018" />
+        </geometry>
+      </collision>
+    <collision name="center_spine">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.03 0.016" />
+        </geometry>
+      </collision>
+    <collision name="front_bumper_pad">
+      <origin xyz="0.178 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.118 0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_bumper_pad">
+      <origin xyz="-0.178 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.118 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="body_shell">
+    <visual name="side_rail_left">
+      <origin xyz="0 0.064 0.079" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.012 0.05" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_right">
+      <origin xyz="0 -0.064 0.079" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.012 0.05" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="front_nose">
+      <origin xyz="0.17 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.132 0.042" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="rear_deck">
+      <origin xyz="-0.125 0 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.132 0.06" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="cowl_bar">
+      <origin xyz="0.019 0 0.099" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.132 0.016" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="cabin_shell">
+      <origin xyz="-0.045 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cabin_shell.obj" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="front_left_fender">
+      <origin xyz="0.115 0.068 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.022 0.012" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="front_right_fender">
+      <origin xyz="0.115 -0.068 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.022 0.012" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="rear_left_fender">
+      <origin xyz="-0.115 0.068 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.022 0.012" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="rear_right_fender">
+      <origin xyz="-0.115 -0.068 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.022 0.012" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="windshield">
+      <origin xyz="0.012 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.086 0.034" />
+        </geometry>
+      <material name="smoky_blue_window">
+        <color rgba="0.1 0.22 0.34 0.72" />
+        </material>
+      </visual>
+    <visual name="side_window_left">
+      <origin xyz="-0.057 0.054 0.128" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.004 0.028" />
+        </geometry>
+      <material name="smoky_blue_window">
+        <color rgba="0.1 0.22 0.34 0.72" />
+        </material>
+      </visual>
+    <visual name="side_window_right">
+      <origin xyz="-0.057 -0.054 0.128" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.004 0.028" />
+        </geometry>
+      <material name="smoky_blue_window">
+        <color rgba="0.1 0.22 0.34 0.72" />
+        </material>
+      </visual>
+    <visual name="hinge_block_left">
+      <origin xyz="0.028 0.04 0.111" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.02 0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_left">
+      <origin xyz="0.028 0.04 0.122" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="hinge_block_right">
+      <origin xyz="0.028 -0.04 0.111" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.02 0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_right">
+      <origin xyz="0.028 -0.04 0.122" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <collision name="side_rail_left">
+      <origin xyz="0 0.064 0.079" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_right">
+      <origin xyz="0 -0.064 0.079" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="front_nose">
+      <origin xyz="0.17 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.132 0.042" />
+        </geometry>
+      </collision>
+    <collision name="rear_deck">
+      <origin xyz="-0.125 0 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.132 0.06" />
+        </geometry>
+      </collision>
+    <collision name="cowl_bar">
+      <origin xyz="0.019 0 0.099" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.132 0.016" />
+        </geometry>
+      </collision>
+    <collision name="cabin_shell">
+      <origin xyz="-0.045 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cabin_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_left_fender">
+      <origin xyz="0.115 0.068 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.022 0.012" />
+        </geometry>
+      </collision>
+    <collision name="front_right_fender">
+      <origin xyz="0.115 -0.068 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.022 0.012" />
+        </geometry>
+      </collision>
+    <collision name="rear_left_fender">
+      <origin xyz="-0.115 0.068 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.022 0.012" />
+        </geometry>
+      </collision>
+    <collision name="rear_right_fender">
+      <origin xyz="-0.115 -0.068 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.022 0.012" />
+        </geometry>
+      </collision>
+    <collision name="windshield">
+      <origin xyz="0.012 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.086 0.034" />
+        </geometry>
+      </collision>
+    <collision name="side_window_left">
+      <origin xyz="-0.057 0.054 0.128" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.004 0.028" />
+        </geometry>
+      </collision>
+    <collision name="side_window_right">
+      <origin xyz="-0.057 -0.054 0.128" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.004 0.028" />
+        </geometry>
+      </collision>
+    <collision name="hinge_block_left">
+      <origin xyz="0.028 0.04 0.111" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.02 0.014" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_left">
+      <origin xyz="0.028 0.04 0.122" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="hinge_block_right">
+      <origin xyz="0.028 -0.04 0.111" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.02 0.014" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_right">
+      <origin xyz="0.028 -0.04 0.122" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="hood">
+    <visual name="hood_panel">
+      <origin xyz="0.069 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.114 0.098 0.008" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="raised_hood_rib">
+      <origin xyz="0.074 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.022 0.004" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="hinge_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.118" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="hinge_sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.026" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf">
+      <origin xyz="0.01 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.02 0.006" />
+        </geometry>
+      <material name="molded_red_plastic">
+        <color rgba="0.86 0.05 0.03 1" />
+        </material>
+      </visual>
+    <collision name="hood_panel">
+      <origin xyz="0.069 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.114 0.098 0.008" />
+        </geometry>
+      </collision>
+    <collision name="raised_hood_rib">
+      <origin xyz="0.074 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.022 0.004" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.118" />
+        </geometry>
+      </collision>
+    <collision name="hinge_sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="hinge_leaf">
+      <origin xyz="0.01 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.02 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_left_mount">
+    <visual name="mount_plate">
+      <origin xyz="0 -0.024 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.026" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="axle_stub">
+      <origin xyz="0 -0.0195 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.015" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <collision name="mount_plate">
+      <origin xyz="0 -0.024 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.026" />
+        </geometry>
+      </collision>
+    <collision name="axle_stub">
+      <origin xyz="0 -0.0195 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.015" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_left_wheel">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_tire.obj" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_wheel_rim.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="outer_hubcap">
+      <origin xyz="0 0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="warm_yellow_hubcap">
+        <color rgba="1 0.74 0.08 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_wheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="outer_hubcap">
+      <origin xyz="0 0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_right_mount">
+    <visual name="mount_plate">
+      <origin xyz="0 0.024 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.026" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="axle_stub">
+      <origin xyz="0 0.0195 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.015" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <collision name="mount_plate">
+      <origin xyz="0 0.024 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.026" />
+        </geometry>
+      </collision>
+    <collision name="axle_stub">
+      <origin xyz="0 0.0195 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.015" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_right_wheel">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_tire.obj" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_wheel_rim.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="outer_hubcap">
+      <origin xyz="0 -0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="warm_yellow_hubcap">
+        <color rgba="1 0.74 0.08 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_wheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="outer_hubcap">
+      <origin xyz="0 -0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rear_left_mount">
+    <visual name="mount_plate">
+      <origin xyz="0 -0.024 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.026" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="axle_stub">
+      <origin xyz="0 -0.0195 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.015" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <collision name="mount_plate">
+      <origin xyz="0 -0.024 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.026" />
+        </geometry>
+      </collision>
+    <collision name="axle_stub">
+      <origin xyz="0 -0.0195 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.015" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rear_left_wheel">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_tire.obj" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_wheel_rim.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="outer_hubcap">
+      <origin xyz="0 0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="warm_yellow_hubcap">
+        <color rgba="1 0.74 0.08 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_wheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="outer_hubcap">
+      <origin xyz="0 0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rear_right_mount">
+    <visual name="mount_plate">
+      <origin xyz="0 0.024 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.026" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="axle_stub">
+      <origin xyz="0 0.0195 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.015" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <collision name="mount_plate">
+      <origin xyz="0 0.024 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.026" />
+        </geometry>
+      </collision>
+    <collision name="axle_stub">
+      <origin xyz="0 0.0195 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.015" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rear_right_wheel">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_tire.obj" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_wheel_rim.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="outer_hubcap">
+      <origin xyz="0 -0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="warm_yellow_hubcap">
+        <color rgba="1 0.74 0.08 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/toy_wheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="outer_hubcap">
+      <origin xyz="0 -0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="chassis_to_body_shell" type="fixed">
+    <parent link="chassis" />
+    <child link="body_shell" />
+    </joint>
+  <joint name="body_shell_to_hood" type="revolute">
+    <origin xyz="0.028 0 0.122" rpy="0 0 0" />
+    <parent link="body_shell" />
+    <child link="hood" />
+    <axis xyz="0 -1 0" />
+    <limit effort="3" velocity="2" lower="0" upper="1.05" />
+    </joint>
+  <joint name="chassis_to_front_left_mount" type="fixed">
+    <origin xyz="0.115 0.082 0.04" rpy="0 0 0" />
+    <parent link="chassis" />
+    <child link="front_left_mount" />
+    </joint>
+  <joint name="front_left_mount_to_front_left_wheel" type="continuous">
+    <parent link="front_left_mount" />
+    <child link="front_left_wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.5" velocity="25" />
+    </joint>
+  <joint name="chassis_to_front_right_mount" type="fixed">
+    <origin xyz="0.115 -0.082 0.04" rpy="0 0 0" />
+    <parent link="chassis" />
+    <child link="front_right_mount" />
+    </joint>
+  <joint name="front_right_mount_to_front_right_wheel" type="continuous">
+    <parent link="front_right_mount" />
+    <child link="front_right_wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.5" velocity="25" />
+    </joint>
+  <joint name="chassis_to_rear_left_mount" type="fixed">
+    <origin xyz="-0.115 0.082 0.04" rpy="0 0 0" />
+    <parent link="chassis" />
+    <child link="rear_left_mount" />
+    </joint>
+  <joint name="rear_left_mount_to_rear_left_wheel" type="continuous">
+    <parent link="rear_left_mount" />
+    <child link="rear_left_wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.5" velocity="25" />
+    </joint>
+  <joint name="chassis_to_rear_right_mount" type="fixed">
+    <origin xyz="-0.115 -0.082 0.04" rpy="0 0 0" />
+    <parent link="chassis" />
+    <child link="rear_right_mount" />
+    </joint>
+  <joint name="rear_right_mount_to_rear_right_wheel" type="continuous">
+    <parent link="rear_right_mount" />
+    <child link="rear_right_wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.5" velocity="25" />
+    </joint>
+  </robot>

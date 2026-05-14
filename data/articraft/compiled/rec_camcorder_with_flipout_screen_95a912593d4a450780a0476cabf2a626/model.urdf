@@ -1,0 +1,458 @@
+<robot name="travel_camcorder">
+  <material name="graphite_plastic">
+    <color rgba="0.08 0.085 0.09 1" />
+    </material>
+  <material name="charcoal_rubber">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="satin_dark_gray">
+    <color rgba="0.18 0.19 0.2 1" />
+    </material>
+  <material name="screen_black">
+    <color rgba="0.004 0.006 0.008 1" />
+    </material>
+  <material name="blue_black_glass">
+    <color rgba="0.02 0.05 0.075 0.88" />
+    </material>
+  <material name="brushed_hinge_metal">
+    <color rgba="0.45 0.46 0.43 1" />
+    </material>
+  <material name="white_print">
+    <color rgba="0.86 0.88 0.84 1" />
+    </material>
+  <link name="body">
+    <visual name="body_shell">
+      <origin xyz="0 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/camcorder_body_shell.obj" />
+        </geometry>
+      <material name="graphite_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="screen_opening">
+      <origin xyz="-0.008 0.0281 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.106 0.0016 0.059" />
+        </geometry>
+      <material name="screen_black">
+        <color rgba="0.004 0.006 0.008 1" />
+        </material>
+      </visual>
+    <visual name="screen_top_lip">
+      <origin xyz="-0.008 0.0288 0.0905" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.002 0.004" />
+        </geometry>
+      <material name="satin_dark_gray">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="screen_bottom_lip">
+      <origin xyz="-0.008 0.0288 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.002 0.004" />
+        </geometry>
+      <material name="satin_dark_gray">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="screen_rear_lip">
+      <origin xyz="-0.065 0.0288 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.002 0.064" />
+        </geometry>
+      <material name="satin_dark_gray">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="screen_front_lip">
+      <origin xyz="0.049 0.0288 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.002 0.064" />
+        </geometry>
+      <material name="satin_dark_gray">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="hinge_lower_knuckle">
+      <origin xyz="-0.06 0.033 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0044" length="0.012" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.45 0.46 0.43 1" />
+        </material>
+      </visual>
+    <visual name="hinge_lower_leaf">
+      <origin xyz="-0.06 0.0308 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.007 0.011" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.45 0.46 0.43 1" />
+        </material>
+      </visual>
+    <visual name="hinge_upper_knuckle">
+      <origin xyz="-0.06 0.033 0.091" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0044" length="0.012" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.45 0.46 0.43 1" />
+        </material>
+      </visual>
+    <visual name="hinge_upper_leaf">
+      <origin xyz="-0.06 0.0308 0.091" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.007 0.011" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.45 0.46 0.43 1" />
+        </material>
+      </visual>
+    <visual name="lens_shoulder">
+      <origin xyz="0.0855 0 0.056" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.014" />
+        </geometry>
+      <material name="satin_dark_gray">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="fixed_barrel">
+      <origin xyz="0.105 0 0.056" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.03" />
+        </geometry>
+      <material name="charcoal_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_lens_glass">
+      <origin xyz="0.079 0 0.056" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.0025" />
+        </geometry>
+      <material name="blue_black_glass">
+        <color rgba="0.02 0.05 0.075 0.88" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <origin xyz="0 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/camcorder_body_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="screen_opening">
+      <origin xyz="-0.008 0.0281 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.106 0.0016 0.059" />
+        </geometry>
+      </collision>
+    <collision name="screen_top_lip">
+      <origin xyz="-0.008 0.0288 0.0905" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="screen_bottom_lip">
+      <origin xyz="-0.008 0.0288 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="screen_rear_lip">
+      <origin xyz="-0.065 0.0288 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.002 0.064" />
+        </geometry>
+      </collision>
+    <collision name="screen_front_lip">
+      <origin xyz="0.049 0.0288 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.002 0.064" />
+        </geometry>
+      </collision>
+    <collision name="hinge_lower_knuckle">
+      <origin xyz="-0.06 0.033 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0044" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="hinge_lower_leaf">
+      <origin xyz="-0.06 0.0308 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.007 0.011" />
+        </geometry>
+      </collision>
+    <collision name="hinge_upper_knuckle">
+      <origin xyz="-0.06 0.033 0.091" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0044" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="hinge_upper_leaf">
+      <origin xyz="-0.06 0.0308 0.091" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.007 0.011" />
+        </geometry>
+      </collision>
+    <collision name="lens_shoulder">
+      <origin xyz="0.0855 0 0.056" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="fixed_barrel">
+      <origin xyz="0.105 0 0.056" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="rear_lens_glass">
+      <origin xyz="0.079 0 0.056" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.0025" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="screen">
+    <visual name="hinge_spine">
+      <geometry>
+        <cylinder radius="0.0041" length="0.05" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.45 0.46 0.43 1" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf">
+      <origin xyz="0.006 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0042 0.044" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.45 0.46 0.43 1" />
+        </material>
+      </visual>
+    <visual name="screen_panel">
+      <origin xyz="0.058 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.0046 0.058" />
+        </geometry>
+      <material name="satin_dark_gray">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="lcd_glass">
+      <origin xyz="0.06 0.00255 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.083 0.001 0.044" />
+        </geometry>
+      <material name="screen_black">
+        <color rgba="0.004 0.006 0.008 1" />
+        </material>
+      </visual>
+    <collision name="hinge_spine">
+      <geometry>
+        <cylinder radius="0.0041" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="hinge_leaf">
+      <origin xyz="0.006 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0042 0.044" />
+        </geometry>
+      </collision>
+    <collision name="screen_panel">
+      <origin xyz="0.058 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.0046 0.058" />
+        </geometry>
+      </collision>
+    <collision name="lcd_glass">
+      <origin xyz="0.06 0.00255 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.083 0.001 0.044" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="focus_ring">
+    <visual name="ring_shell">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/focus_ring_shell.obj" />
+        </geometry>
+      <material name="charcoal_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="focus_mark">
+      <origin xyz="0 0 0.0282" rpy="0 0 0" />
+      <geometry>
+        <box size="0.013 0.0012 0.0032" />
+        </geometry>
+      <material name="white_print">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_glass">
+      <origin xyz="0.0124 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0195" length="0.0022" />
+        </geometry>
+      <material name="blue_black_glass">
+        <color rgba="0.02 0.05 0.075 0.88" />
+        </material>
+      </visual>
+    <collision name="ring_shell">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/focus_ring_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="focus_mark">
+      <origin xyz="0 0 0.0282" rpy="0 0 0" />
+      <geometry>
+        <box size="0.013 0.0012 0.0032" />
+        </geometry>
+      </collision>
+    <collision name="front_glass">
+      <origin xyz="0.0124 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0195" length="0.0022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_0">
+    <visual name="button_cap">
+      <origin xyz="0 0.002 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.004 0.007" />
+        </geometry>
+      <material name="satin_dark_gray">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="button_highlight">
+      <origin xyz="0 0.00435 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.0007 0.002" />
+        </geometry>
+      <material name="white_print">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0.002 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.004 0.007" />
+        </geometry>
+      </collision>
+    <collision name="button_highlight">
+      <origin xyz="0 0.00435 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.0007 0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_1">
+    <visual name="button_cap">
+      <origin xyz="0 0.002 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.004 0.007" />
+        </geometry>
+      <material name="satin_dark_gray">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="button_highlight">
+      <origin xyz="0 0.00435 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.0007 0.002" />
+        </geometry>
+      <material name="white_print">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0.002 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.004 0.007" />
+        </geometry>
+      </collision>
+    <collision name="button_highlight">
+      <origin xyz="0 0.00435 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.0007 0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_2">
+    <visual name="button_cap">
+      <origin xyz="0 0.002 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.004 0.007" />
+        </geometry>
+      <material name="satin_dark_gray">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="button_highlight">
+      <origin xyz="0 0.00435 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.0007 0.002" />
+        </geometry>
+      <material name="white_print">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0.002 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.004 0.007" />
+        </geometry>
+      </collision>
+    <collision name="button_highlight">
+      <origin xyz="0 0.00435 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.0007 0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_screen" type="revolute">
+    <origin xyz="-0.06 0.033 0.058" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="screen" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.2" velocity="2.5" lower="0" upper="1.75" />
+    </joint>
+  <joint name="body_to_focus_ring" type="continuous">
+    <origin xyz="0.1335 0 0.056" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="focus_ring" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.6" velocity="4" />
+    </joint>
+  <joint name="body_to_button_0" type="prismatic">
+    <origin xyz="-0.038 0.0278 0.0215" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_0" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.8" velocity="0.08" lower="0" upper="0.003" />
+    </joint>
+  <joint name="body_to_button_1" type="prismatic">
+    <origin xyz="-0.014 0.0278 0.0215" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_1" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.8" velocity="0.08" lower="0" upper="0.003" />
+    </joint>
+  <joint name="body_to_button_2" type="prismatic">
+    <origin xyz="0.01 0.0278 0.0215" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_2" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.8" velocity="0.08" lower="0" upper="0.003" />
+    </joint>
+  </robot>

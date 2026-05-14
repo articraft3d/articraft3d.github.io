@@ -1,0 +1,183 @@
+<robot name="compact_screwcap_bottle">
+  <material name="clear_pet">
+    <color rgba="0.72 0.92 1 0.36" />
+    </material>
+  <material name="thread_blue">
+    <color rgba="0.2 0.55 0.92 0.82" />
+    </material>
+  <material name="cap_blue">
+    <color rgba="0.05 0.27 0.78 0.48" />
+    </material>
+  <material name="cap_thread">
+    <color rgba="0.95 0.97 1 0.92" />
+    </material>
+  <material name="label_white">
+    <color rgba="0.96 0.96 0.9 0.88" />
+    </material>
+  <material name="dark_ink">
+    <color rgba="0.02 0.03 0.05 1" />
+    </material>
+  <link name="bottle">
+    <visual name="bottle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bottle_shell.obj" />
+        </geometry>
+      <material name="clear_pet">
+        <color rgba="0.72 0.92 1 0.36" />
+        </material>
+      </visual>
+    <visual name="neck_thread">
+      <geometry>
+        <mesh filename="assets/meshes/neck_thread.obj" />
+        </geometry>
+      <material name="thread_blue">
+        <color rgba="0.2 0.55 0.92 0.82" />
+        </material>
+      </visual>
+    <visual name="label_band">
+      <geometry>
+        <mesh filename="assets/meshes/desk_label_band.obj" />
+        </geometry>
+      <material name="label_white">
+        <color rgba="0.96 0.96 0.9 0.88" />
+        </material>
+      </visual>
+    <visual name="label_stripe">
+      <geometry>
+        <mesh filename="assets/meshes/label_stripe.obj" />
+        </geometry>
+      <material name="dark_ink">
+        <color rgba="0.02 0.03 0.05 1" />
+        </material>
+      </visual>
+    <collision name="bottle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bottle_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="neck_thread">
+      <geometry>
+        <mesh filename="assets/meshes/neck_thread.obj" />
+        </geometry>
+      </collision>
+    <collision name="label_band">
+      <geometry>
+        <mesh filename="assets/meshes/desk_label_band.obj" />
+        </geometry>
+      </collision>
+    <collision name="label_stripe">
+      <geometry>
+        <mesh filename="assets/meshes/label_stripe.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cap_axis" />
+  <link name="cap">
+    <visual name="cap_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cap_shell.obj" />
+        </geometry>
+      <material name="cap_blue">
+        <color rgba="0.05 0.27 0.78 0.48" />
+        </material>
+      </visual>
+    <visual name="seal_gasket">
+      <geometry>
+        <mesh filename="assets/meshes/seal_gasket.obj" />
+        </geometry>
+      <material name="cap_thread">
+        <color rgba="0.95 0.97 1 0.92" />
+        </material>
+      </visual>
+    <visual name="grip_band_0">
+      <geometry>
+        <mesh filename="assets/meshes/grip_band_0.obj" />
+        </geometry>
+      <material name="cap_blue">
+        <color rgba="0.05 0.27 0.78 0.48" />
+        </material>
+      </visual>
+    <visual name="grip_band_1">
+      <geometry>
+        <mesh filename="assets/meshes/grip_band_1.obj" />
+        </geometry>
+      <material name="cap_blue">
+        <color rgba="0.05 0.27 0.78 0.48" />
+        </material>
+      </visual>
+    <visual name="grip_band_2">
+      <geometry>
+        <mesh filename="assets/meshes/grip_band_2.obj" />
+        </geometry>
+      <material name="cap_blue">
+        <color rgba="0.05 0.27 0.78 0.48" />
+        </material>
+      </visual>
+    <visual name="cap_thread">
+      <geometry>
+        <mesh filename="assets/meshes/cap_thread.obj" />
+        </geometry>
+      <material name="cap_thread">
+        <color rgba="0.95 0.97 1 0.92" />
+        </material>
+      </visual>
+    <visual name="turn_mark">
+      <origin xyz="0.0075 0 0.03025" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.0017 0.0145 0.001" />
+        </geometry>
+      <material name="dark_ink">
+        <color rgba="0.02 0.03 0.05 1" />
+        </material>
+      </visual>
+    <collision name="cap_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cap_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="seal_gasket">
+      <geometry>
+        <mesh filename="assets/meshes/seal_gasket.obj" />
+        </geometry>
+      </collision>
+    <collision name="grip_band_0">
+      <geometry>
+        <mesh filename="assets/meshes/grip_band_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="grip_band_1">
+      <geometry>
+        <mesh filename="assets/meshes/grip_band_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="grip_band_2">
+      <geometry>
+        <mesh filename="assets/meshes/grip_band_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="cap_thread">
+      <geometry>
+        <mesh filename="assets/meshes/cap_thread.obj" />
+        </geometry>
+      </collision>
+    <collision name="turn_mark">
+      <origin xyz="0.0075 0 0.03025" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.0017 0.0145 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="cap_twist" type="revolute">
+    <origin xyz="0 0 0.096" rpy="0 0 0" />
+    <parent link="bottle" />
+    <child link="cap_axis" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="4" lower="0" upper="7.38274" />
+    </joint>
+  <joint name="cap_lift" type="prismatic">
+    <parent link="cap_axis" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.05" lower="0" upper="0.00705" />
+    </joint>
+  </robot>

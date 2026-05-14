@@ -1,0 +1,652 @@
+<robot name="windmill_ceiling_fan">
+  <material name="oiled_bronze">
+    <color rgba="0.09 0.075 0.06 1" />
+    </material>
+  <material name="dark_iron">
+    <color rgba="0.025 0.024 0.023 1" />
+    </material>
+  <material name="warm_wood_veneer">
+    <color rgba="0.56 0.34 0.16 1" />
+    </material>
+  <material name="dark_wood_grain">
+    <color rgba="0.26 0.13 0.055 1" />
+    </material>
+  <link name="support">
+    <visual name="round_canopy">
+      <geometry>
+        <mesh filename="assets/meshes/round_canopy.obj" />
+        </geometry>
+      <material name="oiled_bronze">
+        <color rgba="0.09 0.075 0.06 1" />
+        </material>
+      </visual>
+    <visual name="downrod">
+      <origin xyz="0 0 0.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.78" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="upper_rod_collar">
+      <origin xyz="0 0 1.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.08" />
+        </geometry>
+      <material name="oiled_bronze">
+        <color rgba="0.09 0.075 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lower_rod_collar">
+      <origin xyz="0 0 0.335" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.09" />
+        </geometry>
+      <material name="oiled_bronze">
+        <color rgba="0.09 0.075 0.06 1" />
+        </material>
+      </visual>
+    <visual name="motor_upper">
+      <geometry>
+        <mesh filename="assets/meshes/motor_upper.obj" />
+        </geometry>
+      <material name="oiled_bronze">
+        <color rgba="0.09 0.075 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bearing_ring">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.028" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <collision name="round_canopy">
+      <geometry>
+        <mesh filename="assets/meshes/round_canopy.obj" />
+        </geometry>
+      </collision>
+    <collision name="downrod">
+      <origin xyz="0 0 0.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.78" />
+        </geometry>
+      </collision>
+    <collision name="upper_rod_collar">
+      <origin xyz="0 0 1.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="lower_rod_collar">
+      <origin xyz="0 0 0.335" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="motor_upper">
+      <geometry>
+        <mesh filename="assets/meshes/motor_upper.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_ring">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.028" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotor">
+    <visual name="rotor_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rotor_shell.obj" />
+        </geometry>
+      <material name="oiled_bronze">
+        <color rgba="0.09 0.075 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lower_cap">
+      <geometry>
+        <mesh filename="assets/meshes/lower_cap.obj" />
+        </geometry>
+      <material name="oiled_bronze">
+        <color rgba="0.09 0.075 0.06 1" />
+        </material>
+      </visual>
+    <visual name="blade_0">
+      <origin xyz="0.92 0 -0.145" rpy="0.122173 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wood_blade.obj" />
+        </geometry>
+      <material name="warm_wood_veneer">
+        <color rgba="0.56 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="iron_0_0">
+      <origin xyz="0.318 -0.043 -0.088" rpy="0 0.174533 0" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="iron_0_1">
+      <origin xyz="0.318 0.043 -0.088" rpy="0 0.174533 0" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="blade_plate_0">
+      <origin xyz="0.435 0 -0.128" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.15 0.118 0.018" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="grain_0_0">
+      <origin xyz="0.92 -0.045 -0.129" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      <material name="dark_wood_grain" />
+      </visual>
+    <visual name="grain_0_1">
+      <origin xyz="0.92 0.045 -0.129" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      <material name="dark_wood_grain" />
+      </visual>
+    <visual name="blade_1">
+      <origin xyz="0.46 0.796743 -0.145" rpy="0.122173 0 1.0472" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wood_blade.obj" />
+        </geometry>
+      <material name="warm_wood_veneer">
+        <color rgba="0.56 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="iron_1_0">
+      <origin xyz="0.196239 0.253896 -0.088" rpy="0 0.174533 1.0472" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="iron_1_1">
+      <origin xyz="0.121761 0.296896 -0.088" rpy="0 0.174533 1.0472" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="blade_plate_1">
+      <origin xyz="0.2175 0.376721 -0.128" rpy="0.122173 0 1.0472" />
+      <geometry>
+        <box size="0.15 0.118 0.018" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="grain_1_0">
+      <origin xyz="0.498971 0.774243 -0.129" rpy="0.122173 0 1.0472" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      <material name="dark_wood_grain" />
+      </visual>
+    <visual name="grain_1_1">
+      <origin xyz="0.421029 0.819243 -0.129" rpy="0.122173 0 1.0472" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      <material name="dark_wood_grain" />
+      </visual>
+    <visual name="blade_2">
+      <origin xyz="-0.46 0.796743 -0.145" rpy="0.122173 0 2.0944" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wood_blade.obj" />
+        </geometry>
+      <material name="warm_wood_veneer">
+        <color rgba="0.56 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="iron_2_0">
+      <origin xyz="-0.121761 0.296896 -0.088" rpy="0 0.174533 2.0944" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="iron_2_1">
+      <origin xyz="-0.196239 0.253896 -0.088" rpy="0 0.174533 2.0944" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="blade_plate_2">
+      <origin xyz="-0.2175 0.376721 -0.128" rpy="0.122173 0 2.0944" />
+      <geometry>
+        <box size="0.15 0.118 0.018" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="grain_2_0">
+      <origin xyz="-0.421029 0.819243 -0.129" rpy="0.122173 0 2.0944" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      <material name="dark_wood_grain" />
+      </visual>
+    <visual name="grain_2_1">
+      <origin xyz="-0.498971 0.774243 -0.129" rpy="0.122173 0 2.0944" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      <material name="dark_wood_grain" />
+      </visual>
+    <visual name="blade_3">
+      <origin xyz="-0.92 1.12668e-16 -0.145" rpy="0.122173 0 3.14159" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wood_blade.obj" />
+        </geometry>
+      <material name="warm_wood_veneer">
+        <color rgba="0.56 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="iron_3_0">
+      <origin xyz="-0.318 0.043 -0.088" rpy="0 0.174533 3.14159" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="iron_3_1">
+      <origin xyz="-0.318 -0.043 -0.088" rpy="0 0.174533 3.14159" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="blade_plate_3">
+      <origin xyz="-0.435 5.32721e-17 -0.128" rpy="0.122173 0 3.14159" />
+      <geometry>
+        <box size="0.15 0.118 0.018" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="grain_3_0">
+      <origin xyz="-0.92 0.045 -0.129" rpy="0.122173 0 3.14159" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      <material name="dark_wood_grain" />
+      </visual>
+    <visual name="grain_3_1">
+      <origin xyz="-0.92 -0.045 -0.129" rpy="0.122173 0 3.14159" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      <material name="dark_wood_grain" />
+      </visual>
+    <visual name="blade_4">
+      <origin xyz="-0.46 -0.796743 -0.145" rpy="0.122173 0 4.18879" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wood_blade.obj" />
+        </geometry>
+      <material name="warm_wood_veneer">
+        <color rgba="0.56 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="iron_4_0">
+      <origin xyz="-0.196239 -0.253896 -0.088" rpy="0 0.174533 4.18879" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="iron_4_1">
+      <origin xyz="-0.121761 -0.296896 -0.088" rpy="0 0.174533 4.18879" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="blade_plate_4">
+      <origin xyz="-0.2175 -0.376721 -0.128" rpy="0.122173 0 4.18879" />
+      <geometry>
+        <box size="0.15 0.118 0.018" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="grain_4_0">
+      <origin xyz="-0.498971 -0.774243 -0.129" rpy="0.122173 0 4.18879" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      <material name="dark_wood_grain" />
+      </visual>
+    <visual name="grain_4_1">
+      <origin xyz="-0.421029 -0.819243 -0.129" rpy="0.122173 0 4.18879" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      <material name="dark_wood_grain" />
+      </visual>
+    <visual name="blade_5">
+      <origin xyz="0.46 -0.796743 -0.145" rpy="0.122173 0 5.23599" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wood_blade.obj" />
+        </geometry>
+      <material name="warm_wood_veneer">
+        <color rgba="0.56 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="iron_5_0">
+      <origin xyz="0.121761 -0.296896 -0.088" rpy="0 0.174533 5.23599" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="iron_5_1">
+      <origin xyz="0.196239 -0.253896 -0.088" rpy="0 0.174533 5.23599" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="blade_plate_5">
+      <origin xyz="0.2175 -0.376721 -0.128" rpy="0.122173 0 5.23599" />
+      <geometry>
+        <box size="0.15 0.118 0.018" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.025 0.024 0.023 1" />
+        </material>
+      </visual>
+    <visual name="grain_5_0">
+      <origin xyz="0.421029 -0.819243 -0.129" rpy="0.122173 0 5.23599" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      <material name="dark_wood_grain" />
+      </visual>
+    <visual name="grain_5_1">
+      <origin xyz="0.498971 -0.774243 -0.129" rpy="0.122173 0 5.23599" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      <material name="dark_wood_grain" />
+      </visual>
+    <collision name="rotor_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rotor_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_cap">
+      <geometry>
+        <mesh filename="assets/meshes/lower_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_0">
+      <origin xyz="0.92 0 -0.145" rpy="0.122173 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wood_blade.obj" />
+        </geometry>
+      </collision>
+    <collision name="iron_0_0">
+      <origin xyz="0.318 -0.043 -0.088" rpy="0 0.174533 0" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="iron_0_1">
+      <origin xyz="0.318 0.043 -0.088" rpy="0 0.174533 0" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="blade_plate_0">
+      <origin xyz="0.435 0 -0.128" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.15 0.118 0.018" />
+        </geometry>
+      </collision>
+    <collision name="grain_0_0">
+      <origin xyz="0.92 -0.045 -0.129" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="grain_0_1">
+      <origin xyz="0.92 0.045 -0.129" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="blade_1">
+      <origin xyz="0.46 0.796743 -0.145" rpy="0.122173 0 1.0472" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wood_blade.obj" />
+        </geometry>
+      </collision>
+    <collision name="iron_1_0">
+      <origin xyz="0.196239 0.253896 -0.088" rpy="0 0.174533 1.0472" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="iron_1_1">
+      <origin xyz="0.121761 0.296896 -0.088" rpy="0 0.174533 1.0472" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="blade_plate_1">
+      <origin xyz="0.2175 0.376721 -0.128" rpy="0.122173 0 1.0472" />
+      <geometry>
+        <box size="0.15 0.118 0.018" />
+        </geometry>
+      </collision>
+    <collision name="grain_1_0">
+      <origin xyz="0.498971 0.774243 -0.129" rpy="0.122173 0 1.0472" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="grain_1_1">
+      <origin xyz="0.421029 0.819243 -0.129" rpy="0.122173 0 1.0472" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="blade_2">
+      <origin xyz="-0.46 0.796743 -0.145" rpy="0.122173 0 2.0944" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wood_blade.obj" />
+        </geometry>
+      </collision>
+    <collision name="iron_2_0">
+      <origin xyz="-0.121761 0.296896 -0.088" rpy="0 0.174533 2.0944" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="iron_2_1">
+      <origin xyz="-0.196239 0.253896 -0.088" rpy="0 0.174533 2.0944" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="blade_plate_2">
+      <origin xyz="-0.2175 0.376721 -0.128" rpy="0.122173 0 2.0944" />
+      <geometry>
+        <box size="0.15 0.118 0.018" />
+        </geometry>
+      </collision>
+    <collision name="grain_2_0">
+      <origin xyz="-0.421029 0.819243 -0.129" rpy="0.122173 0 2.0944" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="grain_2_1">
+      <origin xyz="-0.498971 0.774243 -0.129" rpy="0.122173 0 2.0944" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="blade_3">
+      <origin xyz="-0.92 1.12668e-16 -0.145" rpy="0.122173 0 3.14159" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wood_blade.obj" />
+        </geometry>
+      </collision>
+    <collision name="iron_3_0">
+      <origin xyz="-0.318 0.043 -0.088" rpy="0 0.174533 3.14159" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="iron_3_1">
+      <origin xyz="-0.318 -0.043 -0.088" rpy="0 0.174533 3.14159" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="blade_plate_3">
+      <origin xyz="-0.435 5.32721e-17 -0.128" rpy="0.122173 0 3.14159" />
+      <geometry>
+        <box size="0.15 0.118 0.018" />
+        </geometry>
+      </collision>
+    <collision name="grain_3_0">
+      <origin xyz="-0.92 0.045 -0.129" rpy="0.122173 0 3.14159" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="grain_3_1">
+      <origin xyz="-0.92 -0.045 -0.129" rpy="0.122173 0 3.14159" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="blade_4">
+      <origin xyz="-0.46 -0.796743 -0.145" rpy="0.122173 0 4.18879" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wood_blade.obj" />
+        </geometry>
+      </collision>
+    <collision name="iron_4_0">
+      <origin xyz="-0.196239 -0.253896 -0.088" rpy="0 0.174533 4.18879" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="iron_4_1">
+      <origin xyz="-0.121761 -0.296896 -0.088" rpy="0 0.174533 4.18879" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="blade_plate_4">
+      <origin xyz="-0.2175 -0.376721 -0.128" rpy="0.122173 0 4.18879" />
+      <geometry>
+        <box size="0.15 0.118 0.018" />
+        </geometry>
+      </collision>
+    <collision name="grain_4_0">
+      <origin xyz="-0.498971 -0.774243 -0.129" rpy="0.122173 0 4.18879" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="grain_4_1">
+      <origin xyz="-0.421029 -0.819243 -0.129" rpy="0.122173 0 4.18879" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="blade_5">
+      <origin xyz="0.46 -0.796743 -0.145" rpy="0.122173 0 5.23599" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wood_blade.obj" />
+        </geometry>
+      </collision>
+    <collision name="iron_5_0">
+      <origin xyz="0.121761 -0.296896 -0.088" rpy="0 0.174533 5.23599" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="iron_5_1">
+      <origin xyz="0.196239 -0.253896 -0.088" rpy="0 0.174533 5.23599" />
+      <geometry>
+        <box size="0.45 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="blade_plate_5">
+      <origin xyz="0.2175 -0.376721 -0.128" rpy="0.122173 0 5.23599" />
+      <geometry>
+        <box size="0.15 0.118 0.018" />
+        </geometry>
+      </collision>
+    <collision name="grain_5_0">
+      <origin xyz="0.421029 -0.819243 -0.129" rpy="0.122173 0 5.23599" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="grain_5_1">
+      <origin xyz="0.498971 -0.774243 -0.129" rpy="0.122173 0 5.23599" />
+      <geometry>
+        <box size="0.8056 0.006 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="spin_axle" type="continuous">
+    <parent link="support" />
+    <child link="rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="18" />
+    </joint>
+  </robot>

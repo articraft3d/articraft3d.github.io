@@ -1,0 +1,81 @@
+<robot name="two_tier_pantry_lazy_susan">
+  <material name="matte_white_plastic">
+    <color rgba="0.92 0.9 0.84 1" />
+    </material>
+  <material name="warm_gray_base">
+    <color rgba="0.58 0.56 0.52 1" />
+    </material>
+  <material name="dark_bearing_ring">
+    <color rgba="0.08 0.08 0.075 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.72 0.72 0.68 1" />
+    </material>
+  <link name="base">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.018" />
+        </geometry>
+      <material name="warm_gray_base">
+        <color rgba="0.58 0.56 0.52 1" />
+        </material>
+      </visual>
+    <visual name="support_ring">
+      <geometry>
+        <mesh filename="assets/meshes/support_ring.obj" />
+        </geometry>
+      <material name="dark_bearing_ring">
+        <color rgba="0.08 0.08 0.075 1" />
+        </material>
+      </visual>
+    <visual name="center_boss">
+      <origin xyz="0 0 0.0455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.055" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="support_ring">
+      <geometry>
+        <mesh filename="assets/meshes/support_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="center_boss">
+      <origin xyz="0 0 0.0455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.055" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shelf">
+    <visual name="tray">
+      <geometry>
+        <mesh filename="assets/meshes/rotating_tray.obj" />
+        </geometry>
+      <material name="matte_white_plastic">
+        <color rgba="0.92 0.9 0.84 1" />
+        </material>
+      </visual>
+    <collision name="tray">
+      <geometry>
+        <mesh filename="assets/meshes/rotating_tray.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_shelf" type="continuous">
+    <origin xyz="0 0 0.073" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="shelf" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="5" />
+    </joint>
+  </robot>

@@ -1,0 +1,509 @@
+<robot name="compact_precision_gripper">
+  <material name="dark_anodized">
+    <color rgba="0.12 0.13 0.15 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.035 0.036 0.04 1" />
+    </material>
+  <material name="ground_steel">
+    <color rgba="0.62 0.64 0.66 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.48 0.5 0.53 1" />
+    </material>
+  <material name="bronze_pad">
+    <color rgba="0.72 0.52 0.25 1" />
+    </material>
+  <material name="hardened_tip">
+    <color rgba="0.1 0.105 0.11 1" />
+    </material>
+  <link name="center_body">
+    <visual name="backbone">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.024 0.02" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="guide_mount_0">
+      <origin xyz="0 -0.034 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.012 0.01" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="guide_mount_1">
+      <origin xyz="0 0.034 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.012 0.01" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="cross_web_0">
+      <origin xyz="-0.06 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.08 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="cross_web_1">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.08 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="cross_web_2">
+      <origin xyz="0.06 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.08 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="work_zone_floor">
+      <origin xyz="0 0 0.0255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.022 0.003" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="end_stop_0">
+      <origin xyz="-0.092 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.086 0.024" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="end_stop_1">
+      <origin xyz="0.092 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.086 0.024" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <collision name="backbone">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.024 0.02" />
+        </geometry>
+      </collision>
+    <collision name="guide_mount_0">
+      <origin xyz="0 -0.034 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.012 0.01" />
+        </geometry>
+      </collision>
+    <collision name="guide_mount_1">
+      <origin xyz="0 0.034 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.012 0.01" />
+        </geometry>
+      </collision>
+    <collision name="cross_web_0">
+      <origin xyz="-0.06 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.08 0.012" />
+        </geometry>
+      </collision>
+    <collision name="cross_web_1">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.08 0.012" />
+        </geometry>
+      </collision>
+    <collision name="cross_web_2">
+      <origin xyz="0.06 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.08 0.012" />
+        </geometry>
+      </collision>
+    <collision name="work_zone_floor">
+      <origin xyz="0 0 0.0255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.022 0.003" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_0">
+      <origin xyz="-0.092 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.086 0.024" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_1">
+      <origin xyz="0.092 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.086 0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="guide_0">
+    <visual name="rail">
+      <origin xyz="0 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.01 0.01" />
+        </geometry>
+      <material name="ground_steel" />
+      </visual>
+    <visual name="cover">
+      <origin xyz="0 -0.008 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.006 0.004" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="cover_bolt_0">
+      <origin xyz="-0.058 -0.008 0.0383" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0023" length="0.0016" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <visual name="cover_bolt_1">
+      <origin xyz="0.058 -0.008 0.0383" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0023" length="0.0016" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <collision name="rail">
+      <origin xyz="0 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.01 0.01" />
+        </geometry>
+      </collision>
+    <collision name="cover">
+      <origin xyz="0 -0.008 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.006 0.004" />
+        </geometry>
+      </collision>
+    <collision name="cover_bolt_0">
+      <origin xyz="-0.058 -0.008 0.0383" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0023" length="0.0016" />
+        </geometry>
+      </collision>
+    <collision name="cover_bolt_1">
+      <origin xyz="0.058 -0.008 0.0383" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0023" length="0.0016" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="guide_1">
+    <visual name="rail">
+      <origin xyz="0 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.01 0.01" />
+        </geometry>
+      <material name="ground_steel" />
+      </visual>
+    <visual name="cover">
+      <origin xyz="0 0.008 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.006 0.004" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="cover_bolt_0">
+      <origin xyz="-0.058 0.008 0.0383" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0023" length="0.0016" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <visual name="cover_bolt_1">
+      <origin xyz="0.058 0.008 0.0383" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0023" length="0.0016" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <collision name="rail">
+      <origin xyz="0 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.01 0.01" />
+        </geometry>
+      </collision>
+    <collision name="cover">
+      <origin xyz="0 0.008 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.006 0.004" />
+        </geometry>
+      </collision>
+    <collision name="cover_bolt_0">
+      <origin xyz="-0.058 0.008 0.0383" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0023" length="0.0016" />
+        </geometry>
+      </collision>
+    <collision name="cover_bolt_1">
+      <origin xyz="0.058 0.008 0.0383" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0023" length="0.0016" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="jaw_slider_0">
+    <visual name="carriage_shoe">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.086 0.014" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="slide_pad_0">
+      <origin xyz="0 -0.034 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.008 0.004" />
+        </geometry>
+      <material name="bronze_pad" />
+      </visual>
+    <visual name="slide_pad_1">
+      <origin xyz="0 0.034 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.008 0.004" />
+        </geometry>
+      <material name="bronze_pad" />
+      </visual>
+    <visual name="tapered_jaw">
+      <origin xyz="0 0 0.0615" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/jaw_taper_0.obj" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="tip_pad">
+      <origin xyz="0.029 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.012 0.02" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <visual name="shoulder_bolt_0">
+      <origin xyz="-0.01 -0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <visual name="shoulder_bolt_1">
+      <origin xyz="-0.01 0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <visual name="shoulder_bolt_2">
+      <origin xyz="0.01 -0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <visual name="shoulder_bolt_3">
+      <origin xyz="0.01 0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <collision name="carriage_shoe">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.086 0.014" />
+        </geometry>
+      </collision>
+    <collision name="slide_pad_0">
+      <origin xyz="0 -0.034 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slide_pad_1">
+      <origin xyz="0 0.034 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="tapered_jaw">
+      <origin xyz="0 0 0.0615" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/jaw_taper_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="tip_pad">
+      <origin xyz="0.029 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.012 0.02" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bolt_0">
+      <origin xyz="-0.01 -0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bolt_1">
+      <origin xyz="-0.01 0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bolt_2">
+      <origin xyz="0.01 -0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bolt_3">
+      <origin xyz="0.01 0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="jaw_slider_1">
+    <visual name="carriage_shoe">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.086 0.014" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="slide_pad_0">
+      <origin xyz="0 -0.034 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.008 0.004" />
+        </geometry>
+      <material name="bronze_pad" />
+      </visual>
+    <visual name="slide_pad_1">
+      <origin xyz="0 0.034 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.008 0.004" />
+        </geometry>
+      <material name="bronze_pad" />
+      </visual>
+    <visual name="tapered_jaw">
+      <origin xyz="0 0 0.0615" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/jaw_taper_1.obj" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="tip_pad">
+      <origin xyz="-0.029 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.012 0.02" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <visual name="shoulder_bolt_0">
+      <origin xyz="-0.01 -0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <visual name="shoulder_bolt_1">
+      <origin xyz="-0.01 0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <visual name="shoulder_bolt_2">
+      <origin xyz="0.01 -0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <visual name="shoulder_bolt_3">
+      <origin xyz="0.01 0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      <material name="hardened_tip" />
+      </visual>
+    <collision name="carriage_shoe">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.086 0.014" />
+        </geometry>
+      </collision>
+    <collision name="slide_pad_0">
+      <origin xyz="0 -0.034 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slide_pad_1">
+      <origin xyz="0 0.034 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="tapered_jaw">
+      <origin xyz="0 0 0.0615" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/jaw_taper_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="tip_pad">
+      <origin xyz="-0.029 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.012 0.02" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bolt_0">
+      <origin xyz="-0.01 -0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bolt_1">
+      <origin xyz="-0.01 0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bolt_2">
+      <origin xyz="0.01 -0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bolt_3">
+      <origin xyz="0.01 0.028 0.0558" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_guide_0" type="fixed">
+    <origin xyz="0 -0.034 0" rpy="0 0 0" />
+    <parent link="center_body" />
+    <child link="guide_0" />
+    </joint>
+  <joint name="body_to_guide_1" type="fixed">
+    <origin xyz="0 0.034 0" rpy="0 0 0" />
+    <parent link="center_body" />
+    <child link="guide_1" />
+    </joint>
+  <joint name="body_to_jaw_slider_0" type="prismatic">
+    <origin xyz="-0.056 0 0" rpy="0 0 0" />
+    <parent link="center_body" />
+    <child link="jaw_slider_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="70" velocity="0.18" lower="0" upper="0.024" />
+    </joint>
+  <joint name="body_to_jaw_slider_1" type="prismatic">
+    <origin xyz="0.056 0 0" rpy="0 0 0" />
+    <parent link="center_body" />
+    <child link="jaw_slider_1" />
+    <axis xyz="-1 0 0" />
+    <limit effort="70" velocity="0.18" lower="0" upper="0.024" />
+    </joint>
+  </robot>

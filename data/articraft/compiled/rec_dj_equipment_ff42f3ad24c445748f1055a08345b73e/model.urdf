@@ -1,0 +1,363 @@
+<robot name="scratch_direct_drive_turntable">
+  <material name="black_plinth">
+    <color rgba="0.025 0.026 0.028 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.62 0.64 0.66 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.004 0.004 0.004 1" />
+    </material>
+  <material name="vinyl_black">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="dark_groove">
+    <color rgba="0.035 0.035 0.038 1" />
+    </material>
+  <material name="paper_label">
+    <color rgba="0.9 0.16 0.1 1" />
+    </material>
+  <material name="white_mark">
+    <color rgba="0.92 0.9 0.82 1" />
+    </material>
+  <material name="cartridge_black">
+    <color rgba="0.015 0.014 0.013 1" />
+    </material>
+  <link name="base">
+    <visual name="rounded_plinth">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_plinth.obj" />
+        </geometry>
+      <material name="black_plinth" />
+      </visual>
+    <visual name="satin_top_plate">
+      <origin xyz="0 0 0.071" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.31 0.003" />
+        </geometry>
+      <material name="satin_top">
+        <color rgba="0.075 0.078 0.082 1" />
+        </material>
+      </visual>
+    <visual name="motor_trim_ring">
+      <origin xyz="-0.09 0 0.0735" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_trim_ring.obj" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="tonearm_pedestal">
+      <origin xyz="0.15 0.105 0.097" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.056" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="tonearm_bearing_cap">
+      <origin xyz="0.15 0.105 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="black_plinth" />
+      </visual>
+    <visual name="speed_tick_0">
+      <origin xyz="0.12 -0.123 0.0718" rpy="0 0 -0.35" />
+      <geometry>
+        <box size="0.018 0.004 0.0012" />
+        </geometry>
+      <material name="white_mark" />
+      </visual>
+    <visual name="speed_tick_1">
+      <origin xyz="0.15 -0.096 0.0718" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.004 0.0012" />
+        </geometry>
+      <material name="white_mark" />
+      </visual>
+    <visual name="speed_tick_2">
+      <origin xyz="0.18 -0.123 0.0718" rpy="0 0 0.35" />
+      <geometry>
+        <box size="0.018 0.004 0.0012" />
+        </geometry>
+      <material name="white_mark" />
+      </visual>
+    <collision name="rounded_plinth">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_plinth.obj" />
+        </geometry>
+      </collision>
+    <collision name="satin_top_plate">
+      <origin xyz="0 0 0.071" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.31 0.003" />
+        </geometry>
+      </collision>
+    <collision name="motor_trim_ring">
+      <origin xyz="-0.09 0 0.0735" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_trim_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="tonearm_pedestal">
+      <origin xyz="0.15 0.105 0.097" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.056" />
+        </geometry>
+      </collision>
+    <collision name="tonearm_bearing_cap">
+      <origin xyz="0.15 0.105 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="speed_tick_0">
+      <origin xyz="0.12 -0.123 0.0718" rpy="0 0 -0.35" />
+      <geometry>
+        <box size="0.018 0.004 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="speed_tick_1">
+      <origin xyz="0.15 -0.096 0.0718" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.004 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="speed_tick_2">
+      <origin xyz="0.18 -0.123 0.0718" rpy="0 0 0.35" />
+      <geometry>
+        <box size="0.018 0.004 0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="platter">
+    <visual name="aluminum_platter">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.032" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="vinyl_disc">
+      <origin xyz="0 0 0.0355" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.142" length="0.007" />
+        </geometry>
+      <material name="vinyl_black" />
+      </visual>
+    <visual name="groove_70">
+      <origin xyz="0 0 0.0391" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/record_groove_70.obj" />
+        </geometry>
+      <material name="dark_groove" />
+      </visual>
+    <visual name="groove_95">
+      <origin xyz="0 0 0.0391" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/record_groove_95.obj" />
+        </geometry>
+      <material name="dark_groove" />
+      </visual>
+    <visual name="groove_120">
+      <origin xyz="0 0 0.0391" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/record_groove_120.obj" />
+        </geometry>
+      <material name="dark_groove" />
+      </visual>
+    <visual name="groove_134">
+      <origin xyz="0 0 0.0391" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/record_groove_134.obj" />
+        </geometry>
+      <material name="dark_groove" />
+      </visual>
+    <visual name="center_label">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.002" />
+        </geometry>
+      <material name="paper_label" />
+      </visual>
+    <visual name="central_axle">
+      <origin xyz="0 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.025" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <collision name="aluminum_platter">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="vinyl_disc">
+      <origin xyz="0 0 0.0355" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.142" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="groove_70">
+      <origin xyz="0 0 0.0391" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/record_groove_70.obj" />
+        </geometry>
+      </collision>
+    <collision name="groove_95">
+      <origin xyz="0 0 0.0391" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/record_groove_95.obj" />
+        </geometry>
+      </collision>
+    <collision name="groove_120">
+      <origin xyz="0 0 0.0391" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/record_groove_120.obj" />
+        </geometry>
+      </collision>
+    <collision name="groove_134">
+      <origin xyz="0 0 0.0391" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/record_groove_134.obj" />
+        </geometry>
+      </collision>
+    <collision name="center_label">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="central_axle">
+      <origin xyz="0 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.025" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tonearm">
+    <visual name="pivot_collar">
+      <origin xyz="0 0 0.0105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.021" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="s_tonearm_tube">
+      <geometry>
+        <mesh filename="assets/meshes/s_tonearm_tube.obj" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="counterweight_stem">
+      <origin xyz="0.03 0.014 0.014" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.058" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="0.062 0.014 0.014" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.044" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="headshell">
+      <origin xyz="-0.181 -0.169 0.009" rpy="0 0 -0.76" />
+      <geometry>
+        <box size="0.044 0.018 0.006" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="cartridge">
+      <origin xyz="-0.186 -0.174 0.004" rpy="0 0 -0.76" />
+      <geometry>
+        <box size="0.02 0.012 0.008" />
+        </geometry>
+      <material name="cartridge_black" />
+      </visual>
+    <visual name="stylus_tip">
+      <origin xyz="-0.186 -0.174 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0012" length="0.01" />
+        </geometry>
+      <material name="white_mark" />
+      </visual>
+    <collision name="pivot_collar">
+      <origin xyz="0 0 0.0105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.021" />
+        </geometry>
+      </collision>
+    <collision name="s_tonearm_tube">
+      <geometry>
+        <mesh filename="assets/meshes/s_tonearm_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="counterweight_stem">
+      <origin xyz="0.03 0.014 0.014" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="counterweight">
+      <origin xyz="0.062 0.014 0.014" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.044" />
+        </geometry>
+      </collision>
+    <collision name="headshell">
+      <origin xyz="-0.181 -0.169 0.009" rpy="0 0 -0.76" />
+      <geometry>
+        <box size="0.044 0.018 0.006" />
+        </geometry>
+      </collision>
+    <collision name="cartridge">
+      <origin xyz="-0.186 -0.174 0.004" rpy="0 0 -0.76" />
+      <geometry>
+        <box size="0.02 0.012 0.008" />
+        </geometry>
+      </collision>
+    <collision name="stylus_tip">
+      <origin xyz="-0.186 -0.174 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0012" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="speed_knob">
+    <visual name="selector_cap">
+      <geometry>
+        <mesh filename="assets/meshes/speed_selector_knob.obj" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <collision name="selector_cap">
+      <geometry>
+        <mesh filename="assets/meshes/speed_selector_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_platter" type="continuous">
+    <origin xyz="-0.09 0 0.0725" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="platter" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="12" />
+    </joint>
+  <joint name="base_to_tonearm" type="revolute">
+    <origin xyz="0.15 0.105 0.125" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="tonearm" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.7" velocity="1.4" lower="-0.42" upper="0.58" />
+    </joint>
+  <joint name="base_to_speed_knob" type="revolute">
+    <origin xyz="0.15 -0.12 0.0725" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="speed_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="2" lower="-0.65" upper="0.65" />
+    </joint>
+  </robot>

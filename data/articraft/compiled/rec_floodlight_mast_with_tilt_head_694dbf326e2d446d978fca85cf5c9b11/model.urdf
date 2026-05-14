@@ -1,0 +1,402 @@
+<robot name="telescoping_floodlight_mast">
+  <material name="powder_coated_dark_metal">
+    <color rgba="0.045 0.048 0.052 1" />
+    </material>
+  <material name="matte_black_housing">
+    <color rgba="0.01 0.011 0.012 1" />
+    </material>
+  <material name="satin_anodized_aluminum">
+    <color rgba="0.68 0.7 0.7 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.015 0.014 0.013 1" />
+    </material>
+  <material name="warm_diffusing_lens">
+    <color rgba="1 0.82 0.34 0.82" />
+    </material>
+  <material name="amber_led_board">
+    <color rgba="1 0.58 0.08 1" />
+    </material>
+  <link name="ballast_base">
+    <visual name="weighted_case">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.44 0.12" />
+        </geometry>
+      <material name="powder_coated_dark_metal">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="front_rubber_foot">
+      <origin xyz="0 -0.235 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.03 0.018" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="rear_rubber_foot">
+      <origin xyz="0 0.235 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.03 0.018" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="carry_handle_pad">
+      <origin xyz="0 -0.15 0.129" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.09 0.018" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="receiver_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/base_receiver_tube.obj" />
+        </geometry>
+      <material name="satin_anodized_aluminum">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="guide_bushing">
+      <geometry>
+        <mesh filename="assets/meshes/base_guide_bushing.obj" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="socket_flange">
+      <geometry>
+        <mesh filename="assets/meshes/socket_flange_ring.obj" />
+        </geometry>
+      <material name="powder_coated_dark_metal">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <collision name="weighted_case">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.44 0.12" />
+        </geometry>
+      </collision>
+    <collision name="front_rubber_foot">
+      <origin xyz="0 -0.235 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.03 0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_rubber_foot">
+      <origin xyz="0 0.235 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.03 0.018" />
+        </geometry>
+      </collision>
+    <collision name="carry_handle_pad">
+      <origin xyz="0 -0.15 0.129" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.09 0.018" />
+        </geometry>
+      </collision>
+    <collision name="receiver_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/base_receiver_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_bushing">
+      <geometry>
+        <mesh filename="assets/meshes/base_guide_bushing.obj" />
+        </geometry>
+      </collision>
+    <collision name="socket_flange">
+      <geometry>
+        <mesh filename="assets/meshes/socket_flange_ring.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_pole">
+    <visual name="lower_tube">
+      <geometry>
+        <mesh filename="assets/meshes/lower_stage_tube.obj" />
+        </geometry>
+      <material name="satin_anodized_aluminum">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="lower_locking_collar">
+      <geometry>
+        <mesh filename="assets/meshes/lower_locking_collar.obj" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="lower_clamp_knob">
+      <origin xyz="0.064 0 1.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.07" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <collision name="lower_tube">
+      <geometry>
+        <mesh filename="assets/meshes/lower_stage_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_locking_collar">
+      <geometry>
+        <mesh filename="assets/meshes/lower_locking_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_clamp_knob">
+      <origin xyz="0.064 0 1.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_pole">
+    <visual name="upper_tube">
+      <geometry>
+        <mesh filename="assets/meshes/upper_stage_tube.obj" />
+        </geometry>
+      <material name="satin_anodized_aluminum">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="top_locking_collar">
+      <origin xyz="0 0 0.78" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.035" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="top_clamp_knob">
+      <origin xyz="0.05 0 0.78" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.06" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <collision name="upper_tube">
+      <geometry>
+        <mesh filename="assets/meshes/upper_stage_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_locking_collar">
+      <origin xyz="0 0 0.78" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="top_clamp_knob">
+      <origin xyz="0.05 0 0.78" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bracket">
+    <visual name="stem_collar">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.09" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tilt_yoke">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tilt_yoke.obj" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <collision name="stem_collar">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="tilt_yoke">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tilt_yoke.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="floodlight_head">
+    <visual name="head_shell">
+      <geometry>
+        <mesh filename="assets/meshes/floodlight_shell.obj" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="glass_lens">
+      <origin xyz="0 0.139 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.178 0.007 0.112" />
+        </geometry>
+      <material name="warm_diffusing_lens">
+        <color rgba="1 0.82 0.34 0.82" />
+        </material>
+      </visual>
+    <visual name="led_panel">
+      <origin xyz="0 0.133 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.006 0.072" />
+        </geometry>
+      <material name="amber_led_board">
+        <color rgba="1 0.58 0.08 1" />
+        </material>
+      </visual>
+    <visual name="heat_sink_fin_0">
+      <origin xyz="0 -0.01 -0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.024 0.009" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="heat_sink_fin_1">
+      <origin xyz="0 -0.01 -0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.024 0.009" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="heat_sink_fin_2">
+      <origin xyz="0 -0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.024 0.009" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="heat_sink_fin_3">
+      <origin xyz="0 -0.01 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.024 0.009" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="heat_sink_fin_4">
+      <origin xyz="0 -0.01 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.024 0.009" />
+        </geometry>
+      <material name="matte_black_housing">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tilt_pin">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.33" />
+        </geometry>
+      <material name="satin_anodized_aluminum">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <collision name="head_shell">
+      <geometry>
+        <mesh filename="assets/meshes/floodlight_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="glass_lens">
+      <origin xyz="0 0.139 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.178 0.007 0.112" />
+        </geometry>
+      </collision>
+    <collision name="led_panel">
+      <origin xyz="0 0.133 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.006 0.072" />
+        </geometry>
+      </collision>
+    <collision name="heat_sink_fin_0">
+      <origin xyz="0 -0.01 -0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.024 0.009" />
+        </geometry>
+      </collision>
+    <collision name="heat_sink_fin_1">
+      <origin xyz="0 -0.01 -0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.024 0.009" />
+        </geometry>
+      </collision>
+    <collision name="heat_sink_fin_2">
+      <origin xyz="0 -0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.024 0.009" />
+        </geometry>
+      </collision>
+    <collision name="heat_sink_fin_3">
+      <origin xyz="0 -0.01 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.024 0.009" />
+        </geometry>
+      </collision>
+    <collision name="heat_sink_fin_4">
+      <origin xyz="0 -0.01 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.024 0.009" />
+        </geometry>
+      </collision>
+    <collision name="tilt_pin">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.33" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_lower" type="prismatic">
+    <origin xyz="0 0 0.67" rpy="0 0 0" />
+    <parent link="ballast_base" />
+    <child link="lower_pole" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.25" lower="0" upper="0.35" />
+    </joint>
+  <joint name="lower_to_upper" type="prismatic">
+    <origin xyz="0 0 1.05" rpy="0 0 0" />
+    <parent link="lower_pole" />
+    <child link="upper_pole" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="0.22" lower="0" upper="0.3" />
+    </joint>
+  <joint name="upper_to_bracket" type="fixed">
+    <origin xyz="0 0 0.8" rpy="0 0 0" />
+    <parent link="upper_pole" />
+    <child link="bracket" />
+    </joint>
+  <joint name="bracket_to_head" type="revolute">
+    <origin xyz="0 0 0.25" rpy="0 0 0" />
+    <parent link="bracket" />
+    <child link="floodlight_head" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="1.5" lower="-0.65" upper="0.9" />
+    </joint>
+  </robot>

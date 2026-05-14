@@ -1,0 +1,647 @@
+<robot name="universal_remote">
+  <material name="soft_black_plastic">
+    <color rgba="0.035 0.038 0.042 1" />
+    </material>
+  <material name="matte_button_panel">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="dark_rubber_buttons">
+    <color rgba="0.025 0.025 0.027 1" />
+    </material>
+  <material name="grey_rubber_buttons">
+    <color rgba="0.23 0.24 0.25 1" />
+    </material>
+  <material name="red_power_button">
+    <color rgba="0.78 0.05 0.04 1" />
+    </material>
+  <material name="pale_printed_labels">
+    <color rgba="0.82 0.84 0.8 1" />
+    </material>
+  <material name="brushed_chrome">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <material name="black_hinge_pin">
+    <color rgba="0.01 0.011 0.012 1" />
+    </material>
+  <material name="rear_battery_door">
+    <color rgba="0.055 0.058 0.064 1" />
+    </material>
+  <link name="body">
+    <visual name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_remote_body.obj" />
+        </geometry>
+      <material name="soft_black_plastic">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="button_face">
+      <origin xyz="0 -0.018 0.01065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.135 0.0016" />
+        </geometry>
+      <material name="matte_button_panel">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="label_window">
+      <origin xyz="0 0.055 0.0118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.014 0.0012" />
+        </geometry>
+      <material name="pale_printed_labels">
+        <color rgba="0.82 0.84 0.8 1" />
+        </material>
+      </visual>
+    <visual name="power_button">
+      <origin xyz="-0.018 0.071 0.0111" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0024" />
+        </geometry>
+      <material name="red_power_button">
+        <color rgba="0.78 0.05 0.04 1" />
+        </material>
+      </visual>
+    <visual name="input_button">
+      <origin xyz="0.018 0.071 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.0022" />
+        </geometry>
+      <material name="grey_rubber_buttons">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="navigation_ring">
+      <origin xyz="0 0.023 0.01205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.002" />
+        </geometry>
+      <material name="grey_rubber_buttons">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="select_button">
+      <origin xyz="0 0.023 0.01255" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0052" length="0.0026" />
+        </geometry>
+      <material name="dark_rubber_buttons">
+        <color rgba="0.025 0.025 0.027 1" />
+        </material>
+      </visual>
+    <visual name="nav_key_0">
+      <origin xyz="0 0.038 0.01225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.008 0.002" />
+        </geometry>
+      <material name="dark_rubber_buttons">
+        <color rgba="0.025 0.025 0.027 1" />
+        </material>
+      </visual>
+    <visual name="nav_key_1">
+      <origin xyz="0 0.008 0.01225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.008 0.002" />
+        </geometry>
+      <material name="dark_rubber_buttons">
+        <color rgba="0.025 0.025 0.027 1" />
+        </material>
+      </visual>
+    <visual name="nav_key_2">
+      <origin xyz="-0.015 0.023 0.01225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.007 0.002" />
+        </geometry>
+      <material name="dark_rubber_buttons">
+        <color rgba="0.025 0.025 0.027 1" />
+        </material>
+      </visual>
+    <visual name="nav_key_3">
+      <origin xyz="0.015 0.023 0.01225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.007 0.002" />
+        </geometry>
+      <material name="dark_rubber_buttons">
+        <color rgba="0.025 0.025 0.027 1" />
+        </material>
+      </visual>
+    <visual name="number_button_0_0">
+      <origin xyz="-0.018 -0.004 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      <material name="grey_rubber_buttons">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="number_button_0_1">
+      <origin xyz="0 -0.004 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      <material name="grey_rubber_buttons">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="number_button_0_2">
+      <origin xyz="0.018 -0.004 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      <material name="grey_rubber_buttons">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="number_button_1_0">
+      <origin xyz="-0.018 -0.023 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      <material name="grey_rubber_buttons">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="number_button_1_1">
+      <origin xyz="0 -0.023 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      <material name="grey_rubber_buttons">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="number_button_1_2">
+      <origin xyz="0.018 -0.023 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      <material name="grey_rubber_buttons">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="number_button_2_0">
+      <origin xyz="-0.018 -0.042 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      <material name="grey_rubber_buttons">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="number_button_2_1">
+      <origin xyz="0 -0.042 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      <material name="grey_rubber_buttons">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="number_button_2_2">
+      <origin xyz="0.018 -0.042 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      <material name="grey_rubber_buttons">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="transport_button_0">
+      <origin xyz="-0.018 -0.061 0.0121" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.007 0.002" />
+        </geometry>
+      <material name="dark_rubber_buttons">
+        <color rgba="0.025 0.025 0.027 1" />
+        </material>
+      </visual>
+    <visual name="transport_button_1">
+      <origin xyz="0 -0.061 0.0121" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.007 0.002" />
+        </geometry>
+      <material name="dark_rubber_buttons">
+        <color rgba="0.025 0.025 0.027 1" />
+        </material>
+      </visual>
+    <visual name="transport_button_2">
+      <origin xyz="0.018 -0.061 0.0121" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.007 0.002" />
+        </geometry>
+      <material name="dark_rubber_buttons">
+        <color rgba="0.025 0.025 0.027 1" />
+        </material>
+      </visual>
+    <visual name="antenna_saddle">
+      <origin xyz="0 0.103 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.034 0.004" />
+        </geometry>
+      <material name="soft_black_plastic">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="antenna_socket">
+      <origin xyz="0 0.108 0.018" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.04" />
+        </geometry>
+      <material name="black_hinge_pin">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="battery_frame_hinge_side">
+      <origin xyz="-0.026 -0.02 -0.0104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.095 0.0008" />
+        </geometry>
+      <material name="matte_button_panel">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="battery_frame_latch_side">
+      <origin xyz="0.022 -0.02 -0.0104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.095 0.0008" />
+        </geometry>
+      <material name="matte_button_panel">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="battery_frame_top">
+      <origin xyz="-0.002 0.028 -0.0104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.004 0.0008" />
+        </geometry>
+      <material name="matte_button_panel">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="battery_frame_bottom">
+      <origin xyz="-0.002 -0.068 -0.0104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.004 0.0008" />
+        </geometry>
+      <material name="matte_button_panel">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_leaf_0">
+      <origin xyz="-0.022 -0.054 -0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.016 0.0022" />
+        </geometry>
+      <material name="black_hinge_pin">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_knuckle_0">
+      <origin xyz="-0.022 -0.054 -0.013" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.016" />
+        </geometry>
+      <material name="black_hinge_pin">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_leaf_1">
+      <origin xyz="-0.022 0.014 -0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.016 0.0022" />
+        </geometry>
+      <material name="black_hinge_pin">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_knuckle_1">
+      <origin xyz="-0.022 0.014 -0.013" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.016" />
+        </geometry>
+      <material name="black_hinge_pin">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <collision name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_remote_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_face">
+      <origin xyz="0 -0.018 0.01065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.135 0.0016" />
+        </geometry>
+      </collision>
+    <collision name="label_window">
+      <origin xyz="0 0.055 0.0118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.014 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="power_button">
+      <origin xyz="-0.018 0.071 0.0111" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0024" />
+        </geometry>
+      </collision>
+    <collision name="input_button">
+      <origin xyz="0.018 0.071 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="navigation_ring">
+      <origin xyz="0 0.023 0.01205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="select_button">
+      <origin xyz="0 0.023 0.01255" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0052" length="0.0026" />
+        </geometry>
+      </collision>
+    <collision name="nav_key_0">
+      <origin xyz="0 0.038 0.01225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.008 0.002" />
+        </geometry>
+      </collision>
+    <collision name="nav_key_1">
+      <origin xyz="0 0.008 0.01225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.008 0.002" />
+        </geometry>
+      </collision>
+    <collision name="nav_key_2">
+      <origin xyz="-0.015 0.023 0.01225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.007 0.002" />
+        </geometry>
+      </collision>
+    <collision name="nav_key_3">
+      <origin xyz="0.015 0.023 0.01225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.007 0.002" />
+        </geometry>
+      </collision>
+    <collision name="number_button_0_0">
+      <origin xyz="-0.018 -0.004 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="number_button_0_1">
+      <origin xyz="0 -0.004 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="number_button_0_2">
+      <origin xyz="0.018 -0.004 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="number_button_1_0">
+      <origin xyz="-0.018 -0.023 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="number_button_1_1">
+      <origin xyz="0 -0.023 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="number_button_1_2">
+      <origin xyz="0.018 -0.023 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="number_button_2_0">
+      <origin xyz="-0.018 -0.042 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="number_button_2_1">
+      <origin xyz="0 -0.042 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="number_button_2_2">
+      <origin xyz="0.018 -0.042 0.0121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0022" />
+        </geometry>
+      </collision>
+    <collision name="transport_button_0">
+      <origin xyz="-0.018 -0.061 0.0121" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.007 0.002" />
+        </geometry>
+      </collision>
+    <collision name="transport_button_1">
+      <origin xyz="0 -0.061 0.0121" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.007 0.002" />
+        </geometry>
+      </collision>
+    <collision name="transport_button_2">
+      <origin xyz="0.018 -0.061 0.0121" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.007 0.002" />
+        </geometry>
+      </collision>
+    <collision name="antenna_saddle">
+      <origin xyz="0 0.103 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.034 0.004" />
+        </geometry>
+      </collision>
+    <collision name="antenna_socket">
+      <origin xyz="0 0.108 0.018" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="battery_frame_hinge_side">
+      <origin xyz="-0.026 -0.02 -0.0104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.095 0.0008" />
+        </geometry>
+      </collision>
+    <collision name="battery_frame_latch_side">
+      <origin xyz="0.022 -0.02 -0.0104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.095 0.0008" />
+        </geometry>
+      </collision>
+    <collision name="battery_frame_top">
+      <origin xyz="-0.002 0.028 -0.0104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.004 0.0008" />
+        </geometry>
+      </collision>
+    <collision name="battery_frame_bottom">
+      <origin xyz="-0.002 -0.068 -0.0104" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.004 0.0008" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_leaf_0">
+      <origin xyz="-0.022 -0.054 -0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.016 0.0022" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_knuckle_0">
+      <origin xyz="-0.022 -0.054 -0.013" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_leaf_1">
+      <origin xyz="-0.022 0.014 -0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.016 0.0022" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_knuckle_1">
+      <origin xyz="-0.022 0.014 -0.013" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.016" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="antenna">
+    <visual name="base_stage">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.2" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="tip_stage">
+      <origin xyz="0 0.155 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.002" length="0.13" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="rounded_tip">
+      <origin xyz="0 0.222 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0032" />
+        </geometry>
+      <material name="brushed_chrome">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <collision name="base_stage">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.2" />
+        </geometry>
+      </collision>
+    <collision name="tip_stage">
+      <origin xyz="0 0.155 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.002" length="0.13" />
+        </geometry>
+      </collision>
+    <collision name="rounded_tip">
+      <origin xyz="0 0.222 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0032" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="battery_door">
+    <visual name="door_panel">
+      <origin xyz="0.02 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.085 0.002" />
+        </geometry>
+      <material name="rear_battery_door">
+        <color rgba="0.055 0.058 0.064 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_barrel">
+      <origin xyz="0 0 -0.003" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.04" />
+        </geometry>
+      <material name="black_hinge_pin">
+        <color rgba="0.01 0.011 0.012 1" />
+        </material>
+      </visual>
+    <visual name="finger_grip">
+      <origin xyz="0.034 0 -0.00245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.03 0.0009" />
+        </geometry>
+      <material name="matte_button_panel">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="latch_lip">
+      <origin xyz="0.0405 0 -0.0013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.02 0.0014" />
+        </geometry>
+      <material name="rear_battery_door">
+        <color rgba="0.055 0.058 0.064 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <origin xyz="0.02 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.085 0.002" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_barrel">
+      <origin xyz="0 0 -0.003" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="finger_grip">
+      <origin xyz="0.034 0 -0.00245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.03 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="latch_lip">
+      <origin xyz="0.0405 0 -0.0013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.02 0.0014" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="antenna_slide" type="prismatic">
+    <origin xyz="0 0.128 0.018" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="antenna" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="0.35" lower="0" upper="0.08" />
+    </joint>
+  <joint name="battery_door_hinge" type="revolute">
+    <origin xyz="-0.022 -0.02 -0.01" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="battery_door" />
+    <axis xyz="0 1 0" />
+    <limit effort="2.5" velocity="2" lower="0" upper="1.35" />
+    </joint>
+  </robot>

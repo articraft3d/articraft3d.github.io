@@ -1,0 +1,260 @@
+<robot name="compact_box_cutter">
+  <material name="molded_red_shell">
+    <color rgba="0.78 0.08 0.035 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.018 0.018 0.018 1" />
+    </material>
+  <material name="shadow_black">
+    <color rgba="0.002 0.002 0.002 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.74 0.74 0.69 1" />
+    </material>
+  <material name="honed_edge">
+    <color rgba="0.92 0.92 0.88 1" />
+    </material>
+  <material name="translucent_smoke_guard">
+    <color rgba="1 0.62 0.1 0.48" />
+    </material>
+  <link name="shell">
+    <visual name="handle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_handle_shell.obj" />
+        </geometry>
+      <material name="molded_red_shell">
+        <color rgba="0.78 0.08 0.035 1" />
+        </material>
+      </visual>
+    <visual name="side_grip_0">
+      <origin xyz="-0.015 0.0232 -0.0005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.003 0.011" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.018 0.018 0.018 1" />
+        </material>
+      </visual>
+    <visual name="side_grip_1">
+      <origin xyz="-0.015 -0.0232 -0.0005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.003 0.011" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.018 0.018 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_channel_stop">
+      <origin xyz="-0.0505 0 -0.0005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.016 0.006" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="hinge_pin">
+      <origin xyz="0.064 0 0.014" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0025" length="0.046" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.74 0.74 0.69 1" />
+        </material>
+      </visual>
+    <visual name="hinge_ear_0">
+      <origin xyz="0.0615 -0.02 0.0115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.004 0.008" />
+        </geometry>
+      <material name="molded_red_shell">
+        <color rgba="0.78 0.08 0.035 1" />
+        </material>
+      </visual>
+    <visual name="hinge_ear_1">
+      <origin xyz="0.0615 0.02 0.0115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.004 0.008" />
+        </geometry>
+      <material name="molded_red_shell">
+        <color rgba="0.78 0.08 0.035 1" />
+        </material>
+      </visual>
+    <collision name="handle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_handle_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_grip_0">
+      <origin xyz="-0.015 0.0232 -0.0005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.003 0.011" />
+        </geometry>
+      </collision>
+    <collision name="side_grip_1">
+      <origin xyz="-0.015 -0.0232 -0.0005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.003 0.011" />
+        </geometry>
+      </collision>
+    <collision name="rear_channel_stop">
+      <origin xyz="-0.0505 0 -0.0005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.016 0.006" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pin">
+      <origin xyz="0.064 0 0.014" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0025" length="0.046" />
+        </geometry>
+      </collision>
+    <collision name="hinge_ear_0">
+      <origin xyz="0.0615 -0.02 0.0115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.004 0.008" />
+        </geometry>
+      </collision>
+    <collision name="hinge_ear_1">
+      <origin xyz="0.0615 0.02 0.0115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.004 0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_carrier">
+    <visual name="carrier_rail">
+      <origin xyz="-0.009 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.012 0.003" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.74 0.74 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <geometry>
+        <mesh filename="assets/meshes/trapezoid_blade.obj" />
+        </geometry>
+      <material name="honed_edge">
+        <color rgba="0.92 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="thumb_stem">
+      <origin xyz="-0.018 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.006 0.009" />
+        </geometry>
+      <material name="shadow_black">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <visual name="thumb_slider">
+      <origin xyz="-0.018 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.018 0.006" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.018 0.018 0.018 1" />
+        </material>
+      </visual>
+    <collision name="carrier_rail">
+      <origin xyz="-0.009 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.012 0.003" />
+        </geometry>
+      </collision>
+    <collision name="blade">
+      <geometry>
+        <mesh filename="assets/meshes/trapezoid_blade.obj" />
+        </geometry>
+      </collision>
+    <collision name="thumb_stem">
+      <origin xyz="-0.018 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.006 0.009" />
+        </geometry>
+      </collision>
+    <collision name="thumb_slider">
+      <origin xyz="-0.018 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="guard_cover">
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.032" />
+        </geometry>
+      <material name="translucent_smoke_guard">
+        <color rgba="1 0.62 0.1 0.48" />
+        </material>
+      </visual>
+    <visual name="upper_bridge">
+      <origin xyz="0.004 0 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.032 0.005" />
+        </geometry>
+      <material name="translucent_smoke_guard">
+        <color rgba="1 0.62 0.1 0.48" />
+        </material>
+      </visual>
+    <visual name="front_shield">
+      <origin xyz="0.01 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.038 0.026" />
+        </geometry>
+      <material name="translucent_smoke_guard">
+        <color rgba="1 0.62 0.1 0.48" />
+        </material>
+      </visual>
+    <visual name="guard_lip">
+      <origin xyz="0.017 0 -0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.04 0.005" />
+        </geometry>
+      <material name="translucent_smoke_guard">
+        <color rgba="1 0.62 0.1 0.48" />
+        </material>
+      </visual>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="upper_bridge">
+      <origin xyz="0.004 0 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.032 0.005" />
+        </geometry>
+      </collision>
+    <collision name="front_shield">
+      <origin xyz="0.01 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.038 0.026" />
+        </geometry>
+      </collision>
+    <collision name="guard_lip">
+      <origin xyz="0.017 0 -0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.04 0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shell_to_blade_carrier" type="prismatic">
+    <parent link="shell" />
+    <child link="blade_carrier" />
+    <axis xyz="1 0 0" />
+    <limit effort="35" velocity="0.2" lower="0" upper="0.026" />
+    </joint>
+  <joint name="shell_to_guard_cover" type="revolute">
+    <origin xyz="0.064 0 0.014" rpy="0 0 0" />
+    <parent link="shell" />
+    <child link="guard_cover" />
+    <axis xyz="0 -1 0" />
+    <limit effort="2" velocity="2.5" lower="0" upper="1.35" />
+    </joint>
+  </robot>

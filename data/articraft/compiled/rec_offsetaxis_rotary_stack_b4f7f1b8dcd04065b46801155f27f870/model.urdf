@@ -1,0 +1,771 @@
+<robot name="offset_indexing_head">
+  <material name="cast_iron">
+    <color rgba="0.18 0.2 0.22 1" />
+    </material>
+  <material name="machined_steel">
+    <color rgba="0.62 0.64 0.66 1" />
+    </material>
+  <material name="brushed_face">
+    <color rgba="0.76 0.77 0.74 1" />
+    </material>
+  <material name="dark_oil">
+    <color rgba="0.045 0.05 0.055 1" />
+    </material>
+  <material name="slot_shadow">
+    <color rgba="0.02 0.025 0.03 1" />
+    </material>
+  <material name="blackened_steel">
+    <color rgba="0.08 0.085 0.09 1" />
+    </material>
+  <material name="index_blue">
+    <color rgba="0.12 0.18 0.26 1" />
+    </material>
+  <link name="bed">
+    <visual name="bed_casting">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.62 0.08" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="front_way">
+      <origin xyz="0 0.275 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.11 0.028" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="rear_way">
+      <origin xyz="0 -0.275 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.11 0.028" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="pedestal_bearing">
+      <origin xyz="0 0 0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.09" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="lower_oil_seal">
+      <origin xyz="0 0 0.165" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.215" length="0.01" />
+        </geometry>
+      <material name="dark_oil" />
+      </visual>
+    <visual name="center_spigot">
+      <origin xyz="0 0 0.163" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.014" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="bed_bolt_m0_m0">
+      <origin xyz="-0.43 -0.22 0.089" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.018" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="bed_bolt_m0_p0">
+      <origin xyz="-0.43 0.22 0.089" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.018" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="bed_bolt_p0_m0">
+      <origin xyz="0.43 -0.22 0.089" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.018" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="bed_bolt_p0_p0">
+      <origin xyz="0.43 0.22 0.089" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.018" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <collision name="bed_casting">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.62 0.08" />
+        </geometry>
+      </collision>
+    <collision name="front_way">
+      <origin xyz="0 0.275 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.11 0.028" />
+        </geometry>
+      </collision>
+    <collision name="rear_way">
+      <origin xyz="0 -0.275 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.11 0.028" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_bearing">
+      <origin xyz="0 0 0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="lower_oil_seal">
+      <origin xyz="0 0 0.165" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.215" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="center_spigot">
+      <origin xyz="0 0 0.163" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="bed_bolt_m0_m0">
+      <origin xyz="-0.43 -0.22 0.089" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="bed_bolt_m0_p0">
+      <origin xyz="-0.43 0.22 0.089" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="bed_bolt_p0_m0">
+      <origin xyz="0.43 -0.22 0.089" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="bed_bolt_p0_p0">
+      <origin xyz="0.43 0.22 0.089" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_stage">
+    <visual name="lower_turntable">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.09" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="main_machined_face">
+      <origin xyz="0 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.305" length="0.012" />
+        </geometry>
+      <material name="brushed_face" />
+      </visual>
+    <visual name="lower_bearing_skirt">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.25" length="0.03" />
+        </geometry>
+      <material name="dark_oil" />
+      </visual>
+    <visual name="main_bearing_cap">
+      <origin xyz="0 0 0.128" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.055" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="main_slot_0">
+      <origin xyz="0.275 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.195 0.026 0.006" />
+        </geometry>
+      <material name="slot_shadow" />
+      </visual>
+    <visual name="main_slot_1">
+      <origin xyz="1.68389e-17 0.275 0.105" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.195 0.026 0.006" />
+        </geometry>
+      <material name="slot_shadow" />
+      </visual>
+    <visual name="main_slot_2">
+      <origin xyz="-0.275 3.36778e-17 0.105" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.195 0.026 0.006" />
+        </geometry>
+      <material name="slot_shadow" />
+      </visual>
+    <visual name="main_slot_3">
+      <origin xyz="-5.05167e-17 -0.275 0.105" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.195 0.026 0.006" />
+        </geometry>
+      <material name="slot_shadow" />
+      </visual>
+    <visual name="main_cap_screw_0">
+      <origin xyz="0.235 0 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="main_cap_screw_1">
+      <origin xyz="0.16617 0.16617 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="main_cap_screw_2">
+      <origin xyz="1.43896e-17 0.235 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="main_cap_screw_3">
+      <origin xyz="-0.16617 0.16617 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="main_cap_screw_4">
+      <origin xyz="-0.235 2.87792e-17 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="main_cap_screw_5">
+      <origin xyz="-0.16617 -0.16617 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="main_cap_screw_6">
+      <origin xyz="-4.31688e-17 -0.235 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="main_cap_screw_7">
+      <origin xyz="0.16617 -0.16617 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="offset_saddle">
+      <origin xyz="0.345 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.235 0.08" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="main_column">
+      <origin xyz="0 0 0.172" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.145" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="upper_bridge">
+      <origin xyz="0.365 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.545 0.235 0.08" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="offset_upright">
+      <origin xyz="0.62 0 0.305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.27 0.25" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="offset_bearing_cap">
+      <origin xyz="0.62 0 0.385" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.09" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="upper_oil_seal">
+      <origin xyz="0.62 0 0.421" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.018" />
+        </geometry>
+      <material name="dark_oil" />
+      </visual>
+    <visual name="front_bridge_rib">
+      <origin xyz="0.36 0.125 0.181" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/offset_bridge_rib.obj" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="rear_bridge_rib">
+      <origin xyz="0.36 -0.125 0.181" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/offset_bridge_rib.obj" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="front_upright_web">
+      <origin xyz="0.475 0.143 0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.245" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="rear_upright_web">
+      <origin xyz="0.475 -0.143 0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.245" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="upper_cap_screw_0">
+      <origin xyz="0.805 0 0.434" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="upper_cap_screw_1">
+      <origin xyz="0.7125 0.160215 0.434" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="upper_cap_screw_2">
+      <origin xyz="0.5275 0.160215 0.434" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="upper_cap_screw_3">
+      <origin xyz="0.435 2.2656e-17 0.434" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="upper_cap_screw_4">
+      <origin xyz="0.5275 -0.160215 0.434" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="upper_cap_screw_5">
+      <origin xyz="0.7125 -0.160215 0.434" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <collision name="lower_turntable">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="main_machined_face">
+      <origin xyz="0 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.305" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_skirt">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.25" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="main_bearing_cap">
+      <origin xyz="0 0 0.128" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="main_slot_0">
+      <origin xyz="0.275 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.195 0.026 0.006" />
+        </geometry>
+      </collision>
+    <collision name="main_slot_1">
+      <origin xyz="1.68389e-17 0.275 0.105" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.195 0.026 0.006" />
+        </geometry>
+      </collision>
+    <collision name="main_slot_2">
+      <origin xyz="-0.275 3.36778e-17 0.105" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.195 0.026 0.006" />
+        </geometry>
+      </collision>
+    <collision name="main_slot_3">
+      <origin xyz="-5.05167e-17 -0.275 0.105" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.195 0.026 0.006" />
+        </geometry>
+      </collision>
+    <collision name="main_cap_screw_0">
+      <origin xyz="0.235 0 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="main_cap_screw_1">
+      <origin xyz="0.16617 0.16617 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="main_cap_screw_2">
+      <origin xyz="1.43896e-17 0.235 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="main_cap_screw_3">
+      <origin xyz="-0.16617 0.16617 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="main_cap_screw_4">
+      <origin xyz="-0.235 2.87792e-17 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="main_cap_screw_5">
+      <origin xyz="-0.16617 -0.16617 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="main_cap_screw_6">
+      <origin xyz="-4.31688e-17 -0.235 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="main_cap_screw_7">
+      <origin xyz="0.16617 -0.16617 0.107" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="offset_saddle">
+      <origin xyz="0.345 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.235 0.08" />
+        </geometry>
+      </collision>
+    <collision name="main_column">
+      <origin xyz="0 0 0.172" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.145" />
+        </geometry>
+      </collision>
+    <collision name="upper_bridge">
+      <origin xyz="0.365 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.545 0.235 0.08" />
+        </geometry>
+      </collision>
+    <collision name="offset_upright">
+      <origin xyz="0.62 0 0.305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.27 0.25" />
+        </geometry>
+      </collision>
+    <collision name="offset_bearing_cap">
+      <origin xyz="0.62 0 0.385" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="upper_oil_seal">
+      <origin xyz="0.62 0 0.421" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="front_bridge_rib">
+      <origin xyz="0.36 0.125 0.181" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/offset_bridge_rib.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_bridge_rib">
+      <origin xyz="0.36 -0.125 0.181" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/offset_bridge_rib.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_upright_web">
+      <origin xyz="0.475 0.143 0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.245" />
+        </geometry>
+      </collision>
+    <collision name="rear_upright_web">
+      <origin xyz="0.475 -0.143 0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.245" />
+        </geometry>
+      </collision>
+    <collision name="upper_cap_screw_0">
+      <origin xyz="0.805 0 0.434" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="upper_cap_screw_1">
+      <origin xyz="0.7125 0.160215 0.434" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="upper_cap_screw_2">
+      <origin xyz="0.5275 0.160215 0.434" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="upper_cap_screw_3">
+      <origin xyz="0.435 2.2656e-17 0.434" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="upper_cap_screw_4">
+      <origin xyz="0.5275 -0.160215 0.434" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="upper_cap_screw_5">
+      <origin xyz="0.7125 -0.160215 0.434" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="spin_head">
+    <visual name="head_base">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.158" length="0.08" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="head_faceplate">
+      <origin xyz="0 0 0.101" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.19" length="0.042" />
+        </geometry>
+      <material name="brushed_face" />
+      </visual>
+    <visual name="head_bearing_cap">
+      <origin xyz="0 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.112" length="0.055" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="indexing_nose">
+      <origin xyz="0 0 0.1975" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.042" />
+        </geometry>
+      <material name="index_blue" />
+      </visual>
+    <visual name="head_slot_0">
+      <origin xyz="0.156 0 0.124" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.018 0.005" />
+        </geometry>
+      <material name="slot_shadow" />
+      </visual>
+    <visual name="head_slot_1">
+      <origin xyz="-0.078 0.1351 0.124" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.11 0.018 0.005" />
+        </geometry>
+      <material name="slot_shadow" />
+      </visual>
+    <visual name="head_slot_2">
+      <origin xyz="-0.078 -0.1351 0.124" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.11 0.018 0.005" />
+        </geometry>
+      <material name="slot_shadow" />
+      </visual>
+    <visual name="head_cap_screw_0">
+      <origin xyz="0.126 0 0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="head_cap_screw_1">
+      <origin xyz="0.063 0.109119 0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="head_cap_screw_2">
+      <origin xyz="-0.063 0.109119 0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="head_cap_screw_3">
+      <origin xyz="-0.126 1.54305e-17 0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="head_cap_screw_4">
+      <origin xyz="-0.063 -0.109119 0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="head_cap_screw_5">
+      <origin xyz="0.063 -0.109119 0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="index_mark">
+      <origin xyz="0.085 0 0.222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.012 0.008" />
+        </geometry>
+      <material name="slot_shadow" />
+      </visual>
+    <collision name="head_base">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.158" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="head_faceplate">
+      <origin xyz="0 0 0.101" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.19" length="0.042" />
+        </geometry>
+      </collision>
+    <collision name="head_bearing_cap">
+      <origin xyz="0 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.112" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="indexing_nose">
+      <origin xyz="0 0 0.1975" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.042" />
+        </geometry>
+      </collision>
+    <collision name="head_slot_0">
+      <origin xyz="0.156 0 0.124" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.018 0.005" />
+        </geometry>
+      </collision>
+    <collision name="head_slot_1">
+      <origin xyz="-0.078 0.1351 0.124" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.11 0.018 0.005" />
+        </geometry>
+      </collision>
+    <collision name="head_slot_2">
+      <origin xyz="-0.078 -0.1351 0.124" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.11 0.018 0.005" />
+        </geometry>
+      </collision>
+    <collision name="head_cap_screw_0">
+      <origin xyz="0.126 0 0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="head_cap_screw_1">
+      <origin xyz="0.063 0.109119 0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="head_cap_screw_2">
+      <origin xyz="-0.063 0.109119 0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="head_cap_screw_3">
+      <origin xyz="-0.126 1.54305e-17 0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="head_cap_screw_4">
+      <origin xyz="-0.063 -0.109119 0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="head_cap_screw_5">
+      <origin xyz="0.063 -0.109119 0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="index_mark">
+      <origin xyz="0.085 0 0.222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.012 0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="main_axis" type="continuous">
+    <origin xyz="0 0 0.17" rpy="0 0 0" />
+    <parent link="bed" />
+    <child link="lower_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="180" velocity="0.8" />
+    </joint>
+  <joint name="offset_axis" type="continuous">
+    <origin xyz="0.62 0 0.43" rpy="0 0 0" />
+    <parent link="lower_stage" />
+    <child link="spin_head" />
+    <axis xyz="0 0 1" />
+    <limit effort="70" velocity="1.4" />
+    </joint>
+  </robot>

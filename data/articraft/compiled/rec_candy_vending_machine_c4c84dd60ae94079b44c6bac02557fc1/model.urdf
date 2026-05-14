@@ -1,0 +1,512 @@
+<robot name="octagonal_jellybean_dispenser">
+  <material name="cast_red_enamel">
+    <color rgba="0.66 0.05 0.03 1" />
+    </material>
+  <material name="dark_shadow">
+    <color rgba="0.02 0.018 0.015 1" />
+    </material>
+  <material name="polished_chrome">
+    <color rgba="0.82 0.82 0.78 1" />
+    </material>
+  <material name="warm_brass">
+    <color rgba="0.85 0.56 0.19 1" />
+    </material>
+  <material name="clear_blue_glass">
+    <color rgba="0.7 0.91 1 0.32" />
+    </material>
+  <material name="thick_glass_edges">
+    <color rgba="0.55 0.78 0.92 0.55" />
+    </material>
+  <material name="jellybean_fill">
+    <color rgba="0.95 0.18 0.12 1" />
+    </material>
+  <link name="base">
+    <visual name="lower_plinth">
+      <geometry>
+        <mesh filename="assets/meshes/lower_plinth.obj" />
+        </geometry>
+      <material name="cast_red_enamel">
+        <color rgba="0.66 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="main_casting">
+      <geometry>
+        <mesh filename="assets/meshes/main_casting.obj" />
+        </geometry>
+      <material name="cast_red_enamel">
+        <color rgba="0.66 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_ring">
+      <geometry>
+        <mesh filename="assets/meshes/shoulder_ring.obj" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.85 0.56 0.19 1" />
+        </material>
+      </visual>
+    <visual name="coin_plate">
+      <origin xyz="0 -0.095 0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.108 0.008 0.074" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="coin_slot">
+      <origin xyz="0 -0.098 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.003 0.007" />
+        </geometry>
+      <material name="dark_shadow">
+        <color rgba="0.02 0.018 0.015 1" />
+        </material>
+      </visual>
+    <visual name="price_badge">
+      <origin xyz="0 -0.101 0.153" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.003 0.014" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.85 0.56 0.19 1" />
+        </material>
+      </visual>
+    <visual name="knob_bushing">
+      <origin xyz="0 -0.104 0.089" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="chute_floor">
+      <origin xyz="0 -0.13 0.035" rpy="0.18 0 0" />
+      <geometry>
+        <box size="0.096 0.08 0.012" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="chute_side_0">
+      <origin xyz="-0.05 -0.13 0.044" rpy="0.18 0 0" />
+      <geometry>
+        <box size="0.01 0.074 0.028" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="chute_side_1">
+      <origin xyz="0.05 -0.13 0.044" rpy="0.18 0 0" />
+      <geometry>
+        <box size="0.01 0.074 0.028" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="chute_lip">
+      <origin xyz="0 -0.171 0.034" rpy="0.18 0 0" />
+      <geometry>
+        <box size="0.105 0.006 0.014" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="service_recess">
+      <origin xyz="-0.005 0.11 0.087" rpy="0 0 0" />
+      <geometry>
+        <box size="0.144 0.003 0.102" />
+        </geometry>
+      <material name="dark_shadow">
+        <color rgba="0.02 0.018 0.015 1" />
+        </material>
+      </visual>
+    <visual name="service_hinge_mount">
+      <origin xyz="-0.07 0.1105 0.087" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.003 0.105" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.85 0.56 0.19 1" />
+        </material>
+      </visual>
+    <collision name="lower_plinth">
+      <geometry>
+        <mesh filename="assets/meshes/lower_plinth.obj" />
+        </geometry>
+      </collision>
+    <collision name="main_casting">
+      <geometry>
+        <mesh filename="assets/meshes/main_casting.obj" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_ring">
+      <geometry>
+        <mesh filename="assets/meshes/shoulder_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="coin_plate">
+      <origin xyz="0 -0.095 0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.108 0.008 0.074" />
+        </geometry>
+      </collision>
+    <collision name="coin_slot">
+      <origin xyz="0 -0.098 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.003 0.007" />
+        </geometry>
+      </collision>
+    <collision name="price_badge">
+      <origin xyz="0 -0.101 0.153" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.003 0.014" />
+        </geometry>
+      </collision>
+    <collision name="knob_bushing">
+      <origin xyz="0 -0.104 0.089" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="chute_floor">
+      <origin xyz="0 -0.13 0.035" rpy="0.18 0 0" />
+      <geometry>
+        <box size="0.096 0.08 0.012" />
+        </geometry>
+      </collision>
+    <collision name="chute_side_0">
+      <origin xyz="-0.05 -0.13 0.044" rpy="0.18 0 0" />
+      <geometry>
+        <box size="0.01 0.074 0.028" />
+        </geometry>
+      </collision>
+    <collision name="chute_side_1">
+      <origin xyz="0.05 -0.13 0.044" rpy="0.18 0 0" />
+      <geometry>
+        <box size="0.01 0.074 0.028" />
+        </geometry>
+      </collision>
+    <collision name="chute_lip">
+      <origin xyz="0 -0.171 0.034" rpy="0.18 0 0" />
+      <geometry>
+        <box size="0.105 0.006 0.014" />
+        </geometry>
+      </collision>
+    <collision name="service_recess">
+      <origin xyz="-0.005 0.11 0.087" rpy="0 0 0" />
+      <geometry>
+        <box size="0.144 0.003 0.102" />
+        </geometry>
+      </collision>
+    <collision name="service_hinge_mount">
+      <origin xyz="-0.07 0.1105 0.087" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.003 0.105" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="canister">
+    <visual name="clear_shell">
+      <geometry>
+        <mesh filename="assets/meshes/clear_canister_shell.obj" />
+        </geometry>
+      <material name="clear_blue_glass">
+        <color rgba="0.7 0.91 1 0.32" />
+        </material>
+      </visual>
+    <visual name="facet_edge_0">
+      <origin xyz="0.103013 0.0426692 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      <material name="thick_glass_edges">
+        <color rgba="0.55 0.78 0.92 0.55" />
+        </material>
+      </visual>
+    <visual name="facet_edge_1">
+      <origin xyz="0.0426692 0.103013 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      <material name="thick_glass_edges">
+        <color rgba="0.55 0.78 0.92 0.55" />
+        </material>
+      </visual>
+    <visual name="facet_edge_2">
+      <origin xyz="-0.0426692 0.103013 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      <material name="thick_glass_edges">
+        <color rgba="0.55 0.78 0.92 0.55" />
+        </material>
+      </visual>
+    <visual name="facet_edge_3">
+      <origin xyz="-0.103013 0.0426692 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      <material name="thick_glass_edges">
+        <color rgba="0.55 0.78 0.92 0.55" />
+        </material>
+      </visual>
+    <visual name="facet_edge_4">
+      <origin xyz="-0.103013 -0.0426692 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      <material name="thick_glass_edges">
+        <color rgba="0.55 0.78 0.92 0.55" />
+        </material>
+      </visual>
+    <visual name="facet_edge_5">
+      <origin xyz="-0.0426692 -0.103013 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      <material name="thick_glass_edges">
+        <color rgba="0.55 0.78 0.92 0.55" />
+        </material>
+      </visual>
+    <visual name="facet_edge_6">
+      <origin xyz="0.0426692 -0.103013 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      <material name="thick_glass_edges">
+        <color rgba="0.55 0.78 0.92 0.55" />
+        </material>
+      </visual>
+    <visual name="facet_edge_7">
+      <origin xyz="0.103013 -0.0426692 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      <material name="thick_glass_edges">
+        <color rgba="0.55 0.78 0.92 0.55" />
+        </material>
+      </visual>
+    <visual name="jellybean_mound">
+      <geometry>
+        <mesh filename="assets/meshes/jellybean_mound.obj" />
+        </geometry>
+      <material name="jellybean_fill">
+        <color rgba="0.95 0.18 0.12 1" />
+        </material>
+      </visual>
+    <collision name="clear_shell">
+      <geometry>
+        <mesh filename="assets/meshes/clear_canister_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="facet_edge_0">
+      <origin xyz="0.103013 0.0426692 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      </collision>
+    <collision name="facet_edge_1">
+      <origin xyz="0.0426692 0.103013 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      </collision>
+    <collision name="facet_edge_2">
+      <origin xyz="-0.0426692 0.103013 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      </collision>
+    <collision name="facet_edge_3">
+      <origin xyz="-0.103013 0.0426692 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      </collision>
+    <collision name="facet_edge_4">
+      <origin xyz="-0.103013 -0.0426692 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      </collision>
+    <collision name="facet_edge_5">
+      <origin xyz="-0.0426692 -0.103013 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      </collision>
+    <collision name="facet_edge_6">
+      <origin xyz="0.0426692 -0.103013 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      </collision>
+    <collision name="facet_edge_7">
+      <origin xyz="0.103013 -0.0426692 0.136" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.27" />
+        </geometry>
+      </collision>
+    <collision name="jellybean_mound">
+      <geometry>
+        <mesh filename="assets/meshes/jellybean_mound.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_knob">
+    <visual name="knob_cap">
+      <origin xyz="0 -0.02 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_knob_cap.obj" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="turn_bar">
+      <origin xyz="0 -0.041 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.01 0.016" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <collision name="knob_cap">
+      <origin xyz="0 -0.02 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_knob_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="turn_bar">
+      <origin xyz="0 -0.041 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.01 0.016" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="service_door">
+    <visual name="door_panel">
+      <origin xyz="0.063 0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.126 0.008 0.092" />
+        </geometry>
+      <material name="cast_red_enamel">
+        <color rgba="0.66 0.05 0.03 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0.006 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.1" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.85 0.56 0.19 1" />
+        </material>
+      </visual>
+    <visual name="door_pull">
+      <origin xyz="0.105 0.012 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.01 0.014" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <origin xyz="0.063 0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.126 0.008 0.092" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0.006 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="door_pull">
+      <origin xyz="0.105 0.012 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.01 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="refill_cap">
+    <visual name="cap_panel">
+      <geometry>
+        <mesh filename="assets/meshes/refill_cap_panel.obj" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_leaf">
+      <origin xyz="0 -0.016 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.028 0.01" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.095" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.85 0.56 0.19 1" />
+        </material>
+      </visual>
+    <collision name="cap_panel">
+      <geometry>
+        <mesh filename="assets/meshes/refill_cap_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_leaf">
+      <origin xyz="0 -0.016 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.028 0.01" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.095" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_canister" type="fixed">
+    <origin xyz="0 0 0.18" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="canister" />
+    </joint>
+  <joint name="base_to_front_knob" type="continuous">
+    <origin xyz="0 -0.109 0.089" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="front_knob" />
+    <axis xyz="0 -1 0" />
+    <limit effort="2" velocity="8" />
+    </joint>
+  <joint name="base_to_service_door" type="revolute">
+    <origin xyz="-0.07 0.11145 0.087" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="service_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="1.5" lower="0" upper="1.75" />
+    </joint>
+  <joint name="canister_to_refill_cap" type="revolute">
+    <origin xyz="0 0.118 0.28" rpy="0 0 0" />
+    <parent link="canister" />
+    <child link="refill_cap" />
+    <axis xyz="-1 0 0" />
+    <limit effort="1" velocity="1.5" lower="0" upper="1.35" />
+    </joint>
+  </robot>

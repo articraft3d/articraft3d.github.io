@@ -1,0 +1,305 @@
+<robot name="searchlight_tower">
+  <material name="dark_blued_steel">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="weathered_yellow">
+    <color rgba="0.86 0.63 0.12 1" />
+    </material>
+  <material name="pale_blue_glass">
+    <color rgba="0.55 0.82 1 0.45" />
+    </material>
+  <material name="warm_reflector">
+    <color rgba="1 0.78 0.28 1" />
+    </material>
+  <link name="tower">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.8 0.12" />
+        </geometry>
+      <material name="dark_blued_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="single_mast">
+      <origin xyz="0 0 1.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="1.82" />
+        </geometry>
+      <material name="dark_blued_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="mast_foot_collar">
+      <origin xyz="0 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.08" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="upper_sleeve">
+      <origin xyz="0 0 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.18" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="fixed_bearing">
+      <origin xyz="0 0 1.98" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.04" />
+        </geometry>
+      <material name="dark_blued_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.8 0.12" />
+        </geometry>
+      </collision>
+    <collision name="single_mast">
+      <origin xyz="0 0 1.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="1.82" />
+        </geometry>
+      </collision>
+    <collision name="mast_foot_collar">
+      <origin xyz="0 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="upper_sleeve">
+      <origin xyz="0 0 1.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="fixed_bearing">
+      <origin xyz="0 0 1.98" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pan_stage">
+    <visual name="lower_bearing">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.05" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="turntable">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.2" length="0.06" />
+        </geometry>
+      <material name="dark_blued_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="yoke">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/trunnion_yoke.obj" />
+        </geometry>
+      <material name="weathered_yellow">
+        <color rgba="0.86 0.63 0.12 1" />
+        </material>
+      </visual>
+    <collision name="lower_bearing">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="turntable">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.2" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="yoke">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/trunnion_yoke.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lamp_head">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lamp_body_shell.obj" />
+        </geometry>
+      <material name="weathered_yellow">
+        <color rgba="0.86 0.63 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_gasket">
+      <origin xyz="0.258 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_gasket.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0.266 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.148" length="0.014" />
+        </geometry>
+      <material name="pale_blue_glass">
+        <color rgba="0.55 0.82 1 0.45" />
+        </material>
+      </visual>
+    <visual name="reflector">
+      <origin xyz="0.253 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.142" length="0.018" />
+        </geometry>
+      <material name="warm_reflector">
+        <color rgba="1 0.78 0.28 1" />
+        </material>
+      </visual>
+    <visual name="rear_cap">
+      <origin xyz="-0.238 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.137" length="0.035" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_socket">
+      <origin xyz="-0.276 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.045" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tilt_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.62" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_0">
+      <origin xyz="0.02 -0.045 0.173" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.012 0.045" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_1">
+      <origin xyz="0.02 0 0.173" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.012 0.045" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_2">
+      <origin xyz="0.02 0.045 0.173" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.012 0.045" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lamp_body_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_gasket">
+      <origin xyz="0.258 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_gasket.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_lens">
+      <origin xyz="0.266 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.148" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="reflector">
+      <origin xyz="0.253 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.142" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_cap">
+      <origin xyz="-0.238 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.137" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="rear_socket">
+      <origin xyz="-0.276 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="tilt_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.62" />
+        </geometry>
+      </collision>
+    <collision name="cooling_fin_0">
+      <origin xyz="0.02 -0.045 0.173" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.012 0.045" />
+        </geometry>
+      </collision>
+    <collision name="cooling_fin_1">
+      <origin xyz="0.02 0 0.173" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.012 0.045" />
+        </geometry>
+      </collision>
+    <collision name="cooling_fin_2">
+      <origin xyz="0.02 0.045 0.173" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.012 0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="tower_to_pan" type="revolute">
+    <origin xyz="0 0 2" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="pan_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="1.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="pan_to_lamp" type="revolute">
+    <origin xyz="0 0 0.59" rpy="0 0 0" />
+    <parent link="pan_stage" />
+    <child link="lamp_head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="45" velocity="1" lower="-0.5" upper="0.9" />
+    </joint>
+  </robot>

@@ -1,0 +1,782 @@
+<robot name="outdoor_weatherproof_vacuum">
+  <material name="moss_polymer">
+    <color rgba="0.16 0.28 0.2 1" />
+    </material>
+  <material name="dark_polymer">
+    <color rgba="0.05 0.06 0.055 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.005 0.006 0.005 1" />
+    </material>
+  <material name="wand_anodized">
+    <color rgba="0.38 0.44 0.43 1" />
+    </material>
+  <material name="stainless">
+    <color rgba="0.78 0.8 0.76 1" />
+    </material>
+  <material name="warning_amber">
+    <color rgba="1 0.55 0.12 1" />
+    </material>
+  <link name="body">
+    <visual name="sealed_base_skid">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.42 0.06" />
+        </geometry>
+      <material name="dark_polymer" />
+      </visual>
+    <visual name="tank_shell">
+      <origin xyz="0 0 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.34 0.38" />
+        </geometry>
+      <material name="moss_polymer" />
+      </visual>
+    <visual name="corner_bumper_nx_ny">
+      <origin xyz="-0.235 -0.165 0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.38" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="corner_bumper_nx_py">
+      <origin xyz="-0.235 0.165 0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.38" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="corner_bumper_px_ny">
+      <origin xyz="0.235 -0.165 0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.38" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="corner_bumper_px_py">
+      <origin xyz="0.235 0.165 0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.38" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="sealed_lid">
+      <origin xyz="0 0 0.475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.42 0.07" />
+        </geometry>
+      <material name="dark_polymer" />
+      </visual>
+    <visual name="drip_overhang_roof">
+      <origin xyz="0 0 0.525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.48 0.04" />
+        </geometry>
+      <material name="dark_polymer" />
+      </visual>
+    <visual name="side_gasket_0">
+      <origin xyz="0 0.213 0.443" rpy="0 0 0" />
+      <geometry>
+        <box size="0.605 0.026 0.03" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="side_gasket_1">
+      <origin xyz="0 -0.213 0.443" rpy="0 0 0" />
+      <geometry>
+        <box size="0.605 0.026 0.03" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="front_gasket">
+      <origin xyz="0.293 0 0.443" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.42 0.03" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="rear_gasket">
+      <origin xyz="-0.293 0 0.443" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.42 0.03" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="inlet_rain_hood">
+      <origin xyz="0.307 0 0.357" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.21 0.025" />
+        </geometry>
+      <material name="dark_polymer" />
+      </visual>
+    <visual name="hood_drip_lip">
+      <origin xyz="0.372 0 0.336" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.235 0.035" />
+        </geometry>
+      <material name="dark_polymer" />
+      </visual>
+    <visual name="front_bulkhead_boss">
+      <origin xyz="0.265 0 0.265" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.17 0.17" />
+        </geometry>
+      <material name="moss_polymer" />
+      </visual>
+    <visual name="front_socket">
+      <origin xyz="0.3305 0 0.265" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.125" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="inlet_seal_ring">
+      <origin xyz="0.302 0 0.265" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.03" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="front_yoke">
+      <origin xyz="0.405 0 0.265" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/body_front_yoke.obj" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="carry_handle">
+      <geometry>
+        <mesh filename="assets/meshes/arched_carry_handle.obj" />
+        </geometry>
+      <material name="dark_polymer" />
+      </visual>
+    <visual name="handle_foot_0">
+      <origin xyz="-0.185 0 0.548" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.055 0.03" />
+        </geometry>
+      <material name="dark_polymer" />
+      </visual>
+    <visual name="handle_foot_1">
+      <origin xyz="0.185 0 0.548" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.055 0.03" />
+        </geometry>
+      <material name="dark_polymer" />
+      </visual>
+    <visual name="stainless_latch_n">
+      <origin xyz="0.105 -0.201 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.018 0.115" />
+        </geometry>
+      <material name="stainless" />
+      </visual>
+    <visual name="upper_screw_n">
+      <origin xyz="0.105 -0.201 0.482" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="stainless" />
+      </visual>
+    <visual name="lower_screw_n">
+      <origin xyz="0.105 -0.201 0.428" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="stainless" />
+      </visual>
+    <visual name="stainless_latch_p">
+      <origin xyz="0.105 0.201 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.018 0.115" />
+        </geometry>
+      <material name="stainless" />
+      </visual>
+    <visual name="upper_screw_p">
+      <origin xyz="0.105 0.201 0.482" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="stainless" />
+      </visual>
+    <visual name="lower_screw_p">
+      <origin xyz="0.105 0.201 0.428" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="stainless" />
+      </visual>
+    <visual name="switch_gasket">
+      <origin xyz="-0.185 0.125 0.549" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.066 0.014" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <collision name="sealed_base_skid">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.42 0.06" />
+        </geometry>
+      </collision>
+    <collision name="tank_shell">
+      <origin xyz="0 0 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.34 0.38" />
+        </geometry>
+      </collision>
+    <collision name="corner_bumper_nx_ny">
+      <origin xyz="-0.235 -0.165 0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="corner_bumper_nx_py">
+      <origin xyz="-0.235 0.165 0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="corner_bumper_px_ny">
+      <origin xyz="0.235 -0.165 0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="corner_bumper_px_py">
+      <origin xyz="0.235 0.165 0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="sealed_lid">
+      <origin xyz="0 0 0.475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.42 0.07" />
+        </geometry>
+      </collision>
+    <collision name="drip_overhang_roof">
+      <origin xyz="0 0 0.525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.48 0.04" />
+        </geometry>
+      </collision>
+    <collision name="side_gasket_0">
+      <origin xyz="0 0.213 0.443" rpy="0 0 0" />
+      <geometry>
+        <box size="0.605 0.026 0.03" />
+        </geometry>
+      </collision>
+    <collision name="side_gasket_1">
+      <origin xyz="0 -0.213 0.443" rpy="0 0 0" />
+      <geometry>
+        <box size="0.605 0.026 0.03" />
+        </geometry>
+      </collision>
+    <collision name="front_gasket">
+      <origin xyz="0.293 0 0.443" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.42 0.03" />
+        </geometry>
+      </collision>
+    <collision name="rear_gasket">
+      <origin xyz="-0.293 0 0.443" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.42 0.03" />
+        </geometry>
+      </collision>
+    <collision name="inlet_rain_hood">
+      <origin xyz="0.307 0 0.357" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.21 0.025" />
+        </geometry>
+      </collision>
+    <collision name="hood_drip_lip">
+      <origin xyz="0.372 0 0.336" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.235 0.035" />
+        </geometry>
+      </collision>
+    <collision name="front_bulkhead_boss">
+      <origin xyz="0.265 0 0.265" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.17 0.17" />
+        </geometry>
+      </collision>
+    <collision name="front_socket">
+      <origin xyz="0.3305 0 0.265" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.125" />
+        </geometry>
+      </collision>
+    <collision name="inlet_seal_ring">
+      <origin xyz="0.302 0 0.265" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="front_yoke">
+      <origin xyz="0.405 0 0.265" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/body_front_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="carry_handle">
+      <geometry>
+        <mesh filename="assets/meshes/arched_carry_handle.obj" />
+        </geometry>
+      </collision>
+    <collision name="handle_foot_0">
+      <origin xyz="-0.185 0 0.548" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.055 0.03" />
+        </geometry>
+      </collision>
+    <collision name="handle_foot_1">
+      <origin xyz="0.185 0 0.548" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.055 0.03" />
+        </geometry>
+      </collision>
+    <collision name="stainless_latch_n">
+      <origin xyz="0.105 -0.201 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.018 0.115" />
+        </geometry>
+      </collision>
+    <collision name="upper_screw_n">
+      <origin xyz="0.105 -0.201 0.482" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="lower_screw_n">
+      <origin xyz="0.105 -0.201 0.428" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="stainless_latch_p">
+      <origin xyz="0.105 0.201 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.018 0.115" />
+        </geometry>
+      </collision>
+    <collision name="upper_screw_p">
+      <origin xyz="0.105 0.201 0.482" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="lower_screw_p">
+      <origin xyz="0.105 0.201 0.428" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="switch_gasket">
+      <origin xyz="-0.185 0.125 0.549" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.066 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="power_switch">
+    <visual name="sealed_rocker_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.044 0.014" />
+        </geometry>
+      <material name="warning_amber" />
+      </visual>
+    <visual name="rocker_pin">
+      <origin xyz="0 0 0.002" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.06" />
+        </geometry>
+      <material name="stainless" />
+      </visual>
+    <collision name="sealed_rocker_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.044 0.014" />
+        </geometry>
+      </collision>
+    <collision name="rocker_pin">
+      <origin xyz="0 0 0.002" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wand_0">
+    <visual name="proximal_pivot_boss">
+      <origin xyz="0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.086 0.07" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="proximal_pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.134" />
+        </geometry>
+      <material name="stainless" />
+      </visual>
+    <visual name="proximal_collar">
+      <origin xyz="0.073 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.09" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="sealed_wand_tube">
+      <origin xyz="0.34 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.47" />
+        </geometry>
+      <material name="wand_anodized" />
+      </visual>
+    <visual name="proximal_o_ring">
+      <origin xyz="0.16 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.03" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="distal_o_ring">
+      <origin xyz="0.5 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.03" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="distal_collar">
+      <origin xyz="0.568 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.08" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="distal_yoke">
+      <origin xyz="0.62 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/wand_0_distal_yoke.obj" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <collision name="proximal_pivot_boss">
+      <origin xyz="0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.086 0.07" />
+        </geometry>
+      </collision>
+    <collision name="proximal_pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.134" />
+        </geometry>
+      </collision>
+    <collision name="proximal_collar">
+      <origin xyz="0.073 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="sealed_wand_tube">
+      <origin xyz="0.34 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.47" />
+        </geometry>
+      </collision>
+    <collision name="proximal_o_ring">
+      <origin xyz="0.16 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="distal_o_ring">
+      <origin xyz="0.5 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="distal_collar">
+      <origin xyz="0.568 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="distal_yoke">
+      <origin xyz="0.62 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/wand_0_distal_yoke.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wand_1">
+    <visual name="proximal_pivot_boss">
+      <origin xyz="0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.086 0.07" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="proximal_pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.134" />
+        </geometry>
+      <material name="stainless" />
+      </visual>
+    <visual name="proximal_collar">
+      <origin xyz="0.073 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.09" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="sealed_wand_tube">
+      <origin xyz="0.34 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.47" />
+        </geometry>
+      <material name="wand_anodized" />
+      </visual>
+    <visual name="proximal_o_ring">
+      <origin xyz="0.16 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.03" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="distal_o_ring">
+      <origin xyz="0.5 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.03" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="distal_collar">
+      <origin xyz="0.568 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.08" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="distal_yoke">
+      <origin xyz="0.62 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/wand_1_distal_yoke.obj" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <collision name="proximal_pivot_boss">
+      <origin xyz="0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.086 0.07" />
+        </geometry>
+      </collision>
+    <collision name="proximal_pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.134" />
+        </geometry>
+      </collision>
+    <collision name="proximal_collar">
+      <origin xyz="0.073 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="sealed_wand_tube">
+      <origin xyz="0.34 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.47" />
+        </geometry>
+      </collision>
+    <collision name="proximal_o_ring">
+      <origin xyz="0.16 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="distal_o_ring">
+      <origin xyz="0.5 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="distal_collar">
+      <origin xyz="0.568 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="distal_yoke">
+      <origin xyz="0.62 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/wand_1_distal_yoke.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="floor_nozzle">
+    <visual name="proximal_pivot_boss">
+      <origin xyz="0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.086 0.07" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="proximal_pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.134" />
+        </geometry>
+      <material name="stainless" />
+      </visual>
+    <visual name="proximal_collar">
+      <origin xyz="0.073 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.09" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="drop_neck">
+      <geometry>
+        <mesh filename="assets/meshes/nozzle_drop_neck.obj" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="nozzle_shell">
+      <origin xyz="0.36 0 -0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.5 0.07" />
+        </geometry>
+      <material name="dark_polymer" />
+      </visual>
+    <visual name="drip_visor">
+      <origin xyz="0.36 0 -0.187" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.54 0.018" />
+        </geometry>
+      <material name="dark_polymer" />
+      </visual>
+    <visual name="rear_squeegee">
+      <origin xyz="0.185 0 -0.2475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.525 0.035" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="front_squeegee">
+      <origin xyz="0.535 0 -0.2475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.525 0.035" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="side_glide_0">
+      <origin xyz="0.36 0.245 -0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.27 0.055 0.026" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="side_glide_1">
+      <origin xyz="0.36 -0.245 -0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.27 0.055 0.026" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <collision name="proximal_pivot_boss">
+      <origin xyz="0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.086 0.07" />
+        </geometry>
+      </collision>
+    <collision name="proximal_pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.134" />
+        </geometry>
+      </collision>
+    <collision name="proximal_collar">
+      <origin xyz="0.073 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="drop_neck">
+      <geometry>
+        <mesh filename="assets/meshes/nozzle_drop_neck.obj" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_shell">
+      <origin xyz="0.36 0 -0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.5 0.07" />
+        </geometry>
+      </collision>
+    <collision name="drip_visor">
+      <origin xyz="0.36 0 -0.187" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.54 0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_squeegee">
+      <origin xyz="0.185 0 -0.2475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.525 0.035" />
+        </geometry>
+      </collision>
+    <collision name="front_squeegee">
+      <origin xyz="0.535 0 -0.2475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.525 0.035" />
+        </geometry>
+      </collision>
+    <collision name="side_glide_0">
+      <origin xyz="0.36 0.245 -0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.27 0.055 0.026" />
+        </geometry>
+      </collision>
+    <collision name="side_glide_1">
+      <origin xyz="0.36 -0.245 -0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.27 0.055 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_power_switch" type="revolute">
+    <origin xyz="-0.185 0.125 0.556" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="power_switch" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="1" lower="-0.22" upper="0.22" />
+    </joint>
+  <joint name="body_to_wand_0" type="revolute">
+    <origin xyz="0.405 0 0.265" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="wand_0" />
+    <axis xyz="0 -1 0" />
+    <limit effort="20" velocity="1.2" lower="-0.45" upper="0.85" />
+    </joint>
+  <joint name="wand_0_to_wand_1" type="revolute">
+    <origin xyz="0.62 0 0" rpy="0 0 0" />
+    <parent link="wand_0" />
+    <child link="wand_1" />
+    <axis xyz="0 -1 0" />
+    <limit effort="15" velocity="1.2" lower="-0.7" upper="0.9" />
+    </joint>
+  <joint name="wand_1_to_nozzle" type="revolute">
+    <origin xyz="0.62 0 0" rpy="0 0 0" />
+    <parent link="wand_1" />
+    <child link="floor_nozzle" />
+    <axis xyz="0 -1 0" />
+    <limit effort="12" velocity="1.4" lower="-0.9" upper="0.9" />
+    </joint>
+  </robot>

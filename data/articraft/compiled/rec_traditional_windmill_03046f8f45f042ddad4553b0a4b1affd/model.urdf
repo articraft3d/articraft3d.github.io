@@ -1,0 +1,974 @@
+<robot name="traditional_windmill">
+  <material name="warm_stone">
+    <color rgba="0.66 0.61 0.52 1" />
+    </material>
+  <material name="weathered_stone">
+    <color rgba="0.5 0.47 0.41 1" />
+    </material>
+  <material name="whitewashed_wood">
+    <color rgba="0.82 0.78 0.68 1" />
+    </material>
+  <material name="dark_shingle">
+    <color rgba="0.22 0.16 0.12 1" />
+    </material>
+  <material name="aged_oak">
+    <color rgba="0.55 0.35 0.18 1" />
+    </material>
+  <material name="dark_oak">
+    <color rgba="0.3 0.18 0.1 1" />
+    </material>
+  <material name="blackened_iron">
+    <color rgba="0.07 0.07 0.065 1" />
+    </material>
+  <material name="dark_glass">
+    <color rgba="0.05 0.06 0.07 1" />
+    </material>
+  <link name="tower">
+    <visual name="square_plinth">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="1.9 1.9 0.16" />
+        </geometry>
+      <material name="weathered_stone">
+        <color rgba="0.5 0.47 0.41 1" />
+        </material>
+      </visual>
+    <visual name="round_footing">
+      <origin xyz="0 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.86" length="0.22" />
+        </geometry>
+      <material name="warm_stone">
+        <color rgba="0.66 0.61 0.52 1" />
+        </material>
+      </visual>
+    <visual name="tapered_body">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_tower_body.obj" />
+        </geometry>
+      <material name="warm_stone">
+        <color rgba="0.66 0.61 0.52 1" />
+        </material>
+      </visual>
+    <visual name="stone_belt_0">
+      <origin xyz="0 0 0.58" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.73" length="0.05" />
+        </geometry>
+      <material name="weathered_stone">
+        <color rgba="0.5 0.47 0.41 1" />
+        </material>
+      </visual>
+    <visual name="stone_belt_1">
+      <origin xyz="0 0 1.35" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.62" length="0.05" />
+        </geometry>
+      <material name="weathered_stone">
+        <color rgba="0.5 0.47 0.41 1" />
+        </material>
+      </visual>
+    <visual name="stone_belt_2">
+      <origin xyz="0 0 2.15" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.53" length="0.05" />
+        </geometry>
+      <material name="weathered_stone">
+        <color rgba="0.5 0.47 0.41 1" />
+        </material>
+      </visual>
+    <visual name="top_bearing">
+      <origin xyz="0 0 2.96" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.5" length="0.08" />
+        </geometry>
+      <material name="weathered_stone">
+        <color rgba="0.5 0.47 0.41 1" />
+        </material>
+      </visual>
+    <visual name="front_door">
+      <origin xyz="0.735 0 0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.3 0.48" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lower_window">
+      <origin xyz="0.606 0 1.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.2 0.26" />
+        </geometry>
+      <material name="dark_glass">
+        <color rgba="0.05 0.06 0.07 1" />
+        </material>
+      </visual>
+    <visual name="upper_window">
+      <origin xyz="0.507 0 2.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.16 0.22" />
+        </geometry>
+      <material name="dark_glass">
+        <color rgba="0.05 0.06 0.07 1" />
+        </material>
+      </visual>
+    <collision name="square_plinth">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="1.9 1.9 0.16" />
+        </geometry>
+      </collision>
+    <collision name="round_footing">
+      <origin xyz="0 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.86" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="tapered_body">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_tower_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="stone_belt_0">
+      <origin xyz="0 0 0.58" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.73" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="stone_belt_1">
+      <origin xyz="0 0 1.35" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.62" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="stone_belt_2">
+      <origin xyz="0 0 2.15" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.53" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="top_bearing">
+      <origin xyz="0 0 2.96" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.5" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="front_door">
+      <origin xyz="0.735 0 0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.3 0.48" />
+        </geometry>
+      </collision>
+    <collision name="lower_window">
+      <origin xyz="0.606 0 1.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.2 0.26" />
+        </geometry>
+      </collision>
+    <collision name="upper_window">
+      <origin xyz="0.507 0 2.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.16 0.22" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cap">
+    <visual name="turntable">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.56" length="0.08" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <visual name="cap_house">
+      <origin xyz="0.18 0 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.82 0.46" />
+        </geometry>
+      <material name="whitewashed_wood">
+        <color rgba="0.82 0.78 0.68 1" />
+        </material>
+      </visual>
+    <visual name="front_face">
+      <origin xyz="0.7 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.66 0.36" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <visual name="shaft_bearing">
+      <origin xyz="0.78 0 0.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.16" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.07 0.07 0.065 1" />
+        </material>
+      </visual>
+    <visual name="roof_panel_0">
+      <origin xyz="0.18 0.245 0.64" rpy="-0.45 0 0" />
+      <geometry>
+        <box size="1.12 0.55 0.055" />
+        </geometry>
+      <material name="dark_shingle">
+        <color rgba="0.22 0.16 0.12 1" />
+        </material>
+      </visual>
+    <visual name="roof_panel_1">
+      <origin xyz="0.18 -0.245 0.64" rpy="0.45 0 0" />
+      <geometry>
+        <box size="1.12 0.55 0.055" />
+        </geometry>
+      <material name="dark_shingle">
+        <color rgba="0.22 0.16 0.12 1" />
+        </material>
+      </visual>
+    <visual name="ridge_pole">
+      <origin xyz="0.18 0 0.765" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="1.18" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_eave">
+      <origin xyz="-0.34 0 0.56" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.92 0.06" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <collision name="turntable">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.56" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="cap_house">
+      <origin xyz="0.18 0 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.82 0.46" />
+        </geometry>
+      </collision>
+    <collision name="front_face">
+      <origin xyz="0.7 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.66 0.36" />
+        </geometry>
+      </collision>
+    <collision name="shaft_bearing">
+      <origin xyz="0.78 0 0.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="roof_panel_0">
+      <origin xyz="0.18 0.245 0.64" rpy="-0.45 0 0" />
+      <geometry>
+        <box size="1.12 0.55 0.055" />
+        </geometry>
+      </collision>
+    <collision name="roof_panel_1">
+      <origin xyz="0.18 -0.245 0.64" rpy="0.45 0 0" />
+      <geometry>
+        <box size="1.12 0.55 0.055" />
+        </geometry>
+      </collision>
+    <collision name="ridge_pole">
+      <origin xyz="0.18 0 0.765" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="1.18" />
+        </geometry>
+      </collision>
+    <collision name="rear_eave">
+      <origin xyz="-0.34 0 0.56" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.92 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="sail_hub">
+    <visual name="rear_washer">
+      <origin xyz="0.015 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.03" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.07 0.07 0.065 1" />
+        </material>
+      </visual>
+    <visual name="hub_drum">
+      <origin xyz="0.09 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.18" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_nose">
+      <origin xyz="0.21 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.08" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.07 0.07 0.065 1" />
+        </material>
+      </visual>
+    <visual name="blade_root_plate">
+      <origin xyz="0.226 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.052" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_spar">
+      <origin xyz="0.23 0 0.7425" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="1.215" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rail_0">
+      <origin xyz="0.23 -0.0903 0.75" rpy="0 0.029991 1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rail_1">
+      <origin xyz="0.23 0.0903 0.75" rpy="0 0.029991 -1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rung_0">
+      <origin xyz="0.23 0 0.34" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.206609" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rung_1">
+      <origin xyz="0.23 0 0.52" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19898" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rung_2">
+      <origin xyz="0.23 0 0.7" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19135" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rung_3">
+      <origin xyz="0.23 0 0.88" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.183721" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rung_4">
+      <origin xyz="0.23 0 1.06" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.176092" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_diagonal_0">
+      <origin xyz="0.23 -0.013125 0.72" rpy="0 0.225772 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_diagonal_1">
+      <origin xyz="0.23 0.013125 0.72" rpy="0 0.225772 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_spar">
+      <origin xyz="0.23 0.7425 4.5465e-17" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.02" length="1.215" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rail_0">
+      <origin xyz="0.23 0.75 0.0903" rpy="0 1.60079 1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rail_1">
+      <origin xyz="0.23 0.75 -0.0903" rpy="0 1.54081 1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rung_0">
+      <origin xyz="0.23 0.34 2.77556e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.206609" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rung_1">
+      <origin xyz="0.23 0.52 2.77556e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19898" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rung_2">
+      <origin xyz="0.23 0.7 4.16334e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19135" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rung_3">
+      <origin xyz="0.23 0.88 5.55112e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.183721" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rung_4">
+      <origin xyz="0.23 1.06 6.93889e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.176092" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_diagonal_0">
+      <origin xyz="0.23 0.72 0.013125" rpy="0 1.79657 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_diagonal_1">
+      <origin xyz="0.23 0.72 -0.013125" rpy="0 1.34502 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_spar">
+      <origin xyz="0.23 9.093e-17 -0.7425" rpy="0 3.14159 1.5708" />
+      <geometry>
+        <cylinder radius="0.02" length="1.215" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rail_0">
+      <origin xyz="0.23 0.0903 -0.75" rpy="0 3.1116 -1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rail_1">
+      <origin xyz="0.23 -0.0903 -0.75" rpy="0 3.1116 1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rung_0">
+      <origin xyz="0.23 4.16334e-17 -0.34" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.206609" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rung_1">
+      <origin xyz="0.23 6.93889e-17 -0.52" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19898" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rung_2">
+      <origin xyz="0.23 8.32667e-17 -0.7" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19135" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rung_3">
+      <origin xyz="0.23 1.11022e-16 -0.88" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.183721" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rung_4">
+      <origin xyz="0.23 1.249e-16 -1.06" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.176092" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_diagonal_0">
+      <origin xyz="0.23 0.013125 -0.72" rpy="0 2.91582 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_diagonal_1">
+      <origin xyz="0.23 -0.013125 -0.72" rpy="0 2.91582 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_spar">
+      <origin xyz="0.23 -0.7425 -1.36395e-16" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.02" length="1.215" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rail_0">
+      <origin xyz="0.23 -0.75 -0.0903" rpy="0 1.54081 -1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rail_1">
+      <origin xyz="0.23 -0.75 0.0903" rpy="0 1.60079 -1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rung_0">
+      <origin xyz="0.23 -0.34 -6.93889e-17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.206609" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rung_1">
+      <origin xyz="0.23 -0.52 -9.71445e-17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19898" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rung_2">
+      <origin xyz="0.23 -0.7 -1.249e-16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19135" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rung_3">
+      <origin xyz="0.23 -0.88 -1.66533e-16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.183721" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rung_4">
+      <origin xyz="0.23 -1.06 -1.94289e-16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.176092" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_diagonal_0">
+      <origin xyz="0.23 -0.72 -0.013125" rpy="0 1.34502 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_diagonal_1">
+      <origin xyz="0.23 -0.72 0.013125" rpy="0 1.79657 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.55 0.35 0.18 1" />
+        </material>
+      </visual>
+    <collision name="rear_washer">
+      <origin xyz="0.015 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="hub_drum">
+      <origin xyz="0.09 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="front_nose">
+      <origin xyz="0.21 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="blade_root_plate">
+      <origin xyz="0.226 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="blade_0_spar">
+      <origin xyz="0.23 0 0.7425" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="1.215" />
+        </geometry>
+      </collision>
+    <collision name="blade_0_rail_0">
+      <origin xyz="0.23 -0.0903 0.75" rpy="0 0.029991 1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      </collision>
+    <collision name="blade_0_rail_1">
+      <origin xyz="0.23 0.0903 0.75" rpy="0 0.029991 -1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      </collision>
+    <collision name="blade_0_rung_0">
+      <origin xyz="0.23 0 0.34" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.206609" />
+        </geometry>
+      </collision>
+    <collision name="blade_0_rung_1">
+      <origin xyz="0.23 0 0.52" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19898" />
+        </geometry>
+      </collision>
+    <collision name="blade_0_rung_2">
+      <origin xyz="0.23 0 0.7" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19135" />
+        </geometry>
+      </collision>
+    <collision name="blade_0_rung_3">
+      <origin xyz="0.23 0 0.88" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.183721" />
+        </geometry>
+      </collision>
+    <collision name="blade_0_rung_4">
+      <origin xyz="0.23 0 1.06" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.176092" />
+        </geometry>
+      </collision>
+    <collision name="blade_0_diagonal_0">
+      <origin xyz="0.23 -0.013125 0.72" rpy="0 0.225772 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      </collision>
+    <collision name="blade_0_diagonal_1">
+      <origin xyz="0.23 0.013125 0.72" rpy="0 0.225772 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      </collision>
+    <collision name="blade_1_spar">
+      <origin xyz="0.23 0.7425 4.5465e-17" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.02" length="1.215" />
+        </geometry>
+      </collision>
+    <collision name="blade_1_rail_0">
+      <origin xyz="0.23 0.75 0.0903" rpy="0 1.60079 1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      </collision>
+    <collision name="blade_1_rail_1">
+      <origin xyz="0.23 0.75 -0.0903" rpy="0 1.54081 1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      </collision>
+    <collision name="blade_1_rung_0">
+      <origin xyz="0.23 0.34 2.77556e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.206609" />
+        </geometry>
+      </collision>
+    <collision name="blade_1_rung_1">
+      <origin xyz="0.23 0.52 2.77556e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19898" />
+        </geometry>
+      </collision>
+    <collision name="blade_1_rung_2">
+      <origin xyz="0.23 0.7 4.16334e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19135" />
+        </geometry>
+      </collision>
+    <collision name="blade_1_rung_3">
+      <origin xyz="0.23 0.88 5.55112e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.183721" />
+        </geometry>
+      </collision>
+    <collision name="blade_1_rung_4">
+      <origin xyz="0.23 1.06 6.93889e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.176092" />
+        </geometry>
+      </collision>
+    <collision name="blade_1_diagonal_0">
+      <origin xyz="0.23 0.72 0.013125" rpy="0 1.79657 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      </collision>
+    <collision name="blade_1_diagonal_1">
+      <origin xyz="0.23 0.72 -0.013125" rpy="0 1.34502 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      </collision>
+    <collision name="blade_2_spar">
+      <origin xyz="0.23 9.093e-17 -0.7425" rpy="0 3.14159 1.5708" />
+      <geometry>
+        <cylinder radius="0.02" length="1.215" />
+        </geometry>
+      </collision>
+    <collision name="blade_2_rail_0">
+      <origin xyz="0.23 0.0903 -0.75" rpy="0 3.1116 -1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      </collision>
+    <collision name="blade_2_rail_1">
+      <origin xyz="0.23 -0.0903 -0.75" rpy="0 3.1116 1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      </collision>
+    <collision name="blade_2_rung_0">
+      <origin xyz="0.23 4.16334e-17 -0.34" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.206609" />
+        </geometry>
+      </collision>
+    <collision name="blade_2_rung_1">
+      <origin xyz="0.23 6.93889e-17 -0.52" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19898" />
+        </geometry>
+      </collision>
+    <collision name="blade_2_rung_2">
+      <origin xyz="0.23 8.32667e-17 -0.7" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19135" />
+        </geometry>
+      </collision>
+    <collision name="blade_2_rung_3">
+      <origin xyz="0.23 1.11022e-16 -0.88" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.183721" />
+        </geometry>
+      </collision>
+    <collision name="blade_2_rung_4">
+      <origin xyz="0.23 1.249e-16 -1.06" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.176092" />
+        </geometry>
+      </collision>
+    <collision name="blade_2_diagonal_0">
+      <origin xyz="0.23 0.013125 -0.72" rpy="0 2.91582 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      </collision>
+    <collision name="blade_2_diagonal_1">
+      <origin xyz="0.23 -0.013125 -0.72" rpy="0 2.91582 1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      </collision>
+    <collision name="blade_3_spar">
+      <origin xyz="0.23 -0.7425 -1.36395e-16" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.02" length="1.215" />
+        </geometry>
+      </collision>
+    <collision name="blade_3_rail_0">
+      <origin xyz="0.23 -0.75 -0.0903" rpy="0 1.54081 -1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      </collision>
+    <collision name="blade_3_rail_1">
+      <origin xyz="0.23 -0.75 0.0903" rpy="0 1.60079 -1.5708" />
+      <geometry>
+        <cylinder radius="0.01" length="0.980441" />
+        </geometry>
+      </collision>
+    <collision name="blade_3_rung_0">
+      <origin xyz="0.23 -0.34 -6.93889e-17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.206609" />
+        </geometry>
+      </collision>
+    <collision name="blade_3_rung_1">
+      <origin xyz="0.23 -0.52 -9.71445e-17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19898" />
+        </geometry>
+      </collision>
+    <collision name="blade_3_rung_2">
+      <origin xyz="0.23 -0.7 -1.249e-16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.19135" />
+        </geometry>
+      </collision>
+    <collision name="blade_3_rung_3">
+      <origin xyz="0.23 -0.88 -1.66533e-16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.183721" />
+        </geometry>
+      </collision>
+    <collision name="blade_3_rung_4">
+      <origin xyz="0.23 -1.06 -1.94289e-16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.176092" />
+        </geometry>
+      </collision>
+    <collision name="blade_3_diagonal_0">
+      <origin xyz="0.23 -0.72 -0.013125" rpy="0 1.34502 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      </collision>
+    <collision name="blade_3_diagonal_1">
+      <origin xyz="0.23 -0.72 0.013125" rpy="0 1.79657 -1.5708" />
+      <geometry>
+        <cylinder radius="0.007" length="0.820831" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="cap_yaw" type="continuous">
+    <origin xyz="0 0 3" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="600" velocity="0.35" />
+    </joint>
+  <joint name="hub_spin" type="continuous">
+    <origin xyz="0.86 0 0.42" rpy="0 0 0" />
+    <parent link="cap" />
+    <child link="sail_hub" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="4.5" />
+    </joint>
+  </robot>

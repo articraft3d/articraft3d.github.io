@@ -1,0 +1,413 @@
+<robot name="pan_tilt_searchlight_tower">
+  <material name="weathered_concrete">
+    <color rgba="0.42 0.42 0.39 1" />
+    </material>
+  <material name="painted_yellow">
+    <color rgba="0.92 0.7 0.18 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="pale_blue_glass">
+    <color rgba="0.45 0.72 0.95 0.55" />
+    </material>
+  <material name="warm_reflector">
+    <color rgba="1 0.92 0.62 1" />
+    </material>
+  <link name="support">
+    <visual name="concrete_pad">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 1 0.08" />
+        </geometry>
+      <material name="weathered_concrete">
+        <color rgba="0.42 0.42 0.39 1" />
+        </material>
+      </visual>
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.46 0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="central_mast">
+      <origin xyz="0 0 0.81" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="1.3" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lower_sleeve">
+      <origin xyz="0 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="top_platform">
+      <origin xyz="0 0 1.495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.56 0.07" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="fixed_bearing">
+      <origin xyz="0 0 1.5525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.175" length="0.045" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="tower_leg_0">
+      <origin xyz="0.26 0.205 0.81" rpy="0 0.0271028 0.982794" />
+      <geometry>
+        <cylinder radius="0.018" length="1.33049" />
+        </geometry>
+      <material name="painted_yellow">
+        <color rgba="0.92 0.7 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tower_leg_1">
+      <origin xyz="-0.26 0.205 0.81" rpy="0 0.0271028 2.1588" />
+      <geometry>
+        <cylinder radius="0.018" length="1.33049" />
+        </geometry>
+      <material name="painted_yellow">
+        <color rgba="0.92 0.7 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tower_leg_2">
+      <origin xyz="0.26 -0.205 0.81" rpy="0 0.0271028 -0.982794" />
+      <geometry>
+        <cylinder radius="0.018" length="1.33049" />
+        </geometry>
+      <material name="painted_yellow">
+        <color rgba="0.92 0.7 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tower_leg_3">
+      <origin xyz="-0.26 -0.205 0.81" rpy="0 0.0271028 -2.1588" />
+      <geometry>
+        <cylinder radius="0.018" length="1.33049" />
+        </geometry>
+      <material name="painted_yellow">
+        <color rgba="0.92 0.7 0.18 1" />
+        </material>
+      </visual>
+    <visual name="cross_brace_0">
+      <origin xyz="0.01 0.21 0.78" rpy="0 0.434741 0.0192284" />
+      <geometry>
+        <cylinder radius="0.011" length="1.23487" />
+        </geometry>
+      <material name="painted_yellow">
+        <color rgba="0.92 0.7 0.18 1" />
+        </material>
+      </visual>
+    <visual name="cross_brace_1">
+      <origin xyz="-0.01 0.21 0.78" rpy="0 0.434741 3.12236" />
+      <geometry>
+        <cylinder radius="0.011" length="1.23487" />
+        </geometry>
+      <material name="painted_yellow">
+        <color rgba="0.92 0.7 0.18 1" />
+        </material>
+      </visual>
+    <visual name="cross_brace_2">
+      <origin xyz="0.01 -0.21 0.78" rpy="0 0.434741 -0.0192284" />
+      <geometry>
+        <cylinder radius="0.011" length="1.23487" />
+        </geometry>
+      <material name="painted_yellow">
+        <color rgba="0.92 0.7 0.18 1" />
+        </material>
+      </visual>
+    <visual name="cross_brace_3">
+      <origin xyz="-0.01 -0.21 0.78" rpy="0 0.434741 -3.12236" />
+      <geometry>
+        <cylinder radius="0.011" length="1.23487" />
+        </geometry>
+      <material name="painted_yellow">
+        <color rgba="0.92 0.7 0.18 1" />
+        </material>
+      </visual>
+    <collision name="concrete_pad">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 1 0.08" />
+        </geometry>
+      </collision>
+    <collision name="base_plinth">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.46 0.08" />
+        </geometry>
+      </collision>
+    <collision name="central_mast">
+      <origin xyz="0 0 0.81" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="1.3" />
+        </geometry>
+      </collision>
+    <collision name="lower_sleeve">
+      <origin xyz="0 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="top_platform">
+      <origin xyz="0 0 1.495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.56 0.07" />
+        </geometry>
+      </collision>
+    <collision name="fixed_bearing">
+      <origin xyz="0 0 1.5525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.175" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="tower_leg_0">
+      <origin xyz="0.26 0.205 0.81" rpy="0 0.0271028 0.982794" />
+      <geometry>
+        <cylinder radius="0.018" length="1.33049" />
+        </geometry>
+      </collision>
+    <collision name="tower_leg_1">
+      <origin xyz="-0.26 0.205 0.81" rpy="0 0.0271028 2.1588" />
+      <geometry>
+        <cylinder radius="0.018" length="1.33049" />
+        </geometry>
+      </collision>
+    <collision name="tower_leg_2">
+      <origin xyz="0.26 -0.205 0.81" rpy="0 0.0271028 -0.982794" />
+      <geometry>
+        <cylinder radius="0.018" length="1.33049" />
+        </geometry>
+      </collision>
+    <collision name="tower_leg_3">
+      <origin xyz="-0.26 -0.205 0.81" rpy="0 0.0271028 -2.1588" />
+      <geometry>
+        <cylinder radius="0.018" length="1.33049" />
+        </geometry>
+      </collision>
+    <collision name="cross_brace_0">
+      <origin xyz="0.01 0.21 0.78" rpy="0 0.434741 0.0192284" />
+      <geometry>
+        <cylinder radius="0.011" length="1.23487" />
+        </geometry>
+      </collision>
+    <collision name="cross_brace_1">
+      <origin xyz="-0.01 0.21 0.78" rpy="0 0.434741 3.12236" />
+      <geometry>
+        <cylinder radius="0.011" length="1.23487" />
+        </geometry>
+      </collision>
+    <collision name="cross_brace_2">
+      <origin xyz="0.01 -0.21 0.78" rpy="0 0.434741 -0.0192284" />
+      <geometry>
+        <cylinder radius="0.011" length="1.23487" />
+        </geometry>
+      </collision>
+    <collision name="cross_brace_3">
+      <origin xyz="-0.01 -0.21 0.78" rpy="0 0.434741 -3.12236" />
+      <geometry>
+        <cylinder radius="0.011" length="1.23487" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="yoke">
+    <visual name="yoke_frame">
+      <geometry>
+        <mesh filename="assets/meshes/trunnion_yoke.obj" />
+        </geometry>
+      <material name="painted_yellow">
+        <color rgba="0.92 0.7 0.18 1" />
+        </material>
+      </visual>
+    <visual name="turntable_collar">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.06" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="pan_post">
+      <origin xyz="0 0 0.0975" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.075" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <collision name="yoke_frame">
+      <geometry>
+        <mesh filename="assets/meshes/trunnion_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="turntable_collar">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="pan_post">
+      <origin xyz="0 0 0.0975" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.075" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lamp">
+    <visual name="lamp_barrel">
+      <origin xyz="0 0.045 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.32" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="front_bezel">
+      <origin xyz="0 0.23 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.15" length="0.05" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0 0.263 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.016" />
+        </geometry>
+      <material name="pale_blue_glass">
+        <color rgba="0.45 0.72 0.95 0.55" />
+        </material>
+      </visual>
+    <visual name="rear_cap">
+      <origin xyz="0 -0.1375 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.045" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="inner_reflector">
+      <origin xyz="0 0.254 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.01" />
+        </geometry>
+      <material name="warm_reflector">
+        <color rgba="1 0.92 0.62 1" />
+        </material>
+      </visual>
+    <visual name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0455" length="0.47" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_boss_0">
+      <origin xyz="-0.145 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.057" length="0.016" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_boss_1">
+      <origin xyz="0.145 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.057" length="0.016" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <collision name="lamp_barrel">
+      <origin xyz="0 0.045 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.32" />
+        </geometry>
+      </collision>
+    <collision name="front_bezel">
+      <origin xyz="0 0.23 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.15" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="front_lens">
+      <origin xyz="0 0.263 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="rear_cap">
+      <origin xyz="0 -0.1375 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="inner_reflector">
+      <origin xyz="0 0.254 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0455" length="0.47" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_boss_0">
+      <origin xyz="-0.145 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.057" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_boss_1">
+      <origin xyz="0.145 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.057" length="0.016" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="pan" type="revolute">
+    <origin xyz="0 0 1.575" rpy="0 0 0" />
+    <parent link="support" />
+    <child link="yoke" />
+    <axis xyz="0 0 1" />
+    <limit effort="40" velocity="1" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="tilt" type="revolute">
+    <origin xyz="0 0 0.28" rpy="0 0 0" />
+    <parent link="yoke" />
+    <child link="lamp" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="0.8" lower="-0.45" upper="0.95" />
+    </joint>
+  </robot>

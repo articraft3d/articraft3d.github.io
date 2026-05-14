@@ -1,0 +1,888 @@
+<robot name="compact_dial_thermostat">
+  <material name="warm_white_shell">
+    <color rgba="0.92 0.9 0.84 1" />
+    </material>
+  <material name="satin_face">
+    <color rgba="0.82 0.82 0.78 1" />
+    </material>
+  <material name="display_black">
+    <color rgba="0.03 0.04 0.045 1" />
+    </material>
+  <material name="smoked_glass">
+    <color rgba="0.08 0.18 0.21 0.55" />
+    </material>
+  <material name="graphite_dial">
+    <color rgba="0.12 0.13 0.13 1" />
+    </material>
+  <material name="soft_rubber_grip">
+    <color rgba="0.05 0.055 0.055 1" />
+    </material>
+  <material name="printed_white">
+    <color rgba="0.96 0.95 0.88 1" />
+    </material>
+  <material name="warm_indicator">
+    <color rgba="1 0.58 0.16 1" />
+    </material>
+  <material name="brushed_retainer">
+    <color rgba="0.68 0.7 0.7 1" />
+    </material>
+  <material name="folding_stand_grey">
+    <color rgba="0.34 0.35 0.34 1" />
+    </material>
+  <link name="housing">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/thermostat_rounded_body.obj" />
+        </geometry>
+      <material name="warm_white_shell">
+        <color rgba="0.92 0.9 0.84 1" />
+        </material>
+      </visual>
+    <visual name="faceplate">
+      <origin xyz="0.0122 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/thermostat_front_face.obj" />
+        </geometry>
+      <material name="satin_face">
+        <color rgba="0.82 0.82 0.78 1" />
+        </material>
+      </visual>
+    <visual name="display_recess">
+      <origin xyz="0.0134 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0012 0.063 0.017" />
+        </geometry>
+      <material name="display_black">
+        <color rgba="0.03 0.04 0.045 1" />
+        </material>
+      </visual>
+    <visual name="display_lens">
+      <origin xyz="0.0141 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.055 0.011" />
+        </geometry>
+      <material name="smoked_glass">
+        <color rgba="0.08 0.18 0.21 0.55" />
+        </material>
+      </visual>
+    <visual name="display_segment_0">
+      <origin xyz="0.0148 -0.021 0.0375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0008 0.008 0.0014" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="display_segment_1">
+      <origin xyz="0.0148 -0.007 0.0375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0008 0.008 0.0014" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="display_segment_2">
+      <origin xyz="0.0148 0.007 0.0375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0008 0.008 0.0014" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="display_segment_3">
+      <origin xyz="0.0148 0.021 0.0375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0008 0.008 0.0014" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_0">
+      <origin xyz="0.0131 -0.0415692 -0.036" rpy="2.0944 0 0" />
+      <geometry>
+        <box size="0.0008 0.0024 0.0082" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_1">
+      <origin xyz="0.0131 -0.0472708 -0.0203351" rpy="1.74533 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_2">
+      <origin xyz="0.0131 -0.0472708 -0.00366489" rpy="1.39626 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_3">
+      <origin xyz="0.0131 -0.0415692 0.012" rpy="1.0472 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_4">
+      <origin xyz="0.0131 -0.0308538 0.0247701" rpy="0.698132 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_5">
+      <origin xyz="0.0131 -0.016417 0.0331052" rpy="0.349066 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_6">
+      <origin xyz="0.0131 0 0.036" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.0008 0.0024 0.0082" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_7">
+      <origin xyz="0.0131 0.016417 0.0331052" rpy="-0.349066 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_8">
+      <origin xyz="0.0131 0.0308538 0.0247701" rpy="-0.698132 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_9">
+      <origin xyz="0.0131 0.0415692 0.012" rpy="-1.0472 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_10">
+      <origin xyz="0.0131 0.0472708 -0.00366489" rpy="-1.39626 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_11">
+      <origin xyz="0.0131 0.0472708 -0.0203351" rpy="-1.74533 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_12">
+      <origin xyz="0.0131 0.0415692 -0.036" rpy="-2.0944 0 0" />
+      <geometry>
+        <box size="0.0008 0.0024 0.0082" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <visual name="dial_shaft">
+      <origin xyz="0.0235 0 -0.012" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0052" length="0.023" />
+        </geometry>
+      <material name="brushed_retainer">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="dial_retainer">
+      <origin xyz="0.0324 0 -0.012" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0114" length="0.003" />
+        </geometry>
+      <material name="brushed_retainer">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="stand_hinge_knuckle_0">
+      <origin xyz="-0.0145 -0.031 0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.016" />
+        </geometry>
+      <material name="brushed_retainer">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="stand_hinge_pad_0">
+      <origin xyz="-0.0127 -0.031 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.01" />
+        </geometry>
+      <material name="folding_stand_grey">
+        <color rgba="0.34 0.35 0.34 1" />
+        </material>
+      </visual>
+    <visual name="stand_hinge_knuckle_1">
+      <origin xyz="-0.0145 0.031 0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.016" />
+        </geometry>
+      <material name="brushed_retainer">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="stand_hinge_pad_1">
+      <origin xyz="-0.0127 0.031 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.01" />
+        </geometry>
+      <material name="folding_stand_grey">
+        <color rgba="0.34 0.35 0.34 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/thermostat_rounded_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="faceplate">
+      <origin xyz="0.0122 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/thermostat_front_face.obj" />
+        </geometry>
+      </collision>
+    <collision name="display_recess">
+      <origin xyz="0.0134 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0012 0.063 0.017" />
+        </geometry>
+      </collision>
+    <collision name="display_lens">
+      <origin xyz="0.0141 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.001 0.055 0.011" />
+        </geometry>
+      </collision>
+    <collision name="display_segment_0">
+      <origin xyz="0.0148 -0.021 0.0375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0008 0.008 0.0014" />
+        </geometry>
+      </collision>
+    <collision name="display_segment_1">
+      <origin xyz="0.0148 -0.007 0.0375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0008 0.008 0.0014" />
+        </geometry>
+      </collision>
+    <collision name="display_segment_2">
+      <origin xyz="0.0148 0.007 0.0375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0008 0.008 0.0014" />
+        </geometry>
+      </collision>
+    <collision name="display_segment_3">
+      <origin xyz="0.0148 0.021 0.0375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0008 0.008 0.0014" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_0">
+      <origin xyz="0.0131 -0.0415692 -0.036" rpy="2.0944 0 0" />
+      <geometry>
+        <box size="0.0008 0.0024 0.0082" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_1">
+      <origin xyz="0.0131 -0.0472708 -0.0203351" rpy="1.74533 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_2">
+      <origin xyz="0.0131 -0.0472708 -0.00366489" rpy="1.39626 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_3">
+      <origin xyz="0.0131 -0.0415692 0.012" rpy="1.0472 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_4">
+      <origin xyz="0.0131 -0.0308538 0.0247701" rpy="0.698132 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_5">
+      <origin xyz="0.0131 -0.016417 0.0331052" rpy="0.349066 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_6">
+      <origin xyz="0.0131 0 0.036" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.0008 0.0024 0.0082" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_7">
+      <origin xyz="0.0131 0.016417 0.0331052" rpy="-0.349066 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_8">
+      <origin xyz="0.0131 0.0308538 0.0247701" rpy="-0.698132 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_9">
+      <origin xyz="0.0131 0.0415692 0.012" rpy="-1.0472 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_10">
+      <origin xyz="0.0131 0.0472708 -0.00366489" rpy="-1.39626 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_11">
+      <origin xyz="0.0131 0.0472708 -0.0203351" rpy="-1.74533 0 0" />
+      <geometry>
+        <box size="0.0008 0.0018 0.0058" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_12">
+      <origin xyz="0.0131 0.0415692 -0.036" rpy="-2.0944 0 0" />
+      <geometry>
+        <box size="0.0008 0.0024 0.0082" />
+        </geometry>
+      </collision>
+    <collision name="dial_shaft">
+      <origin xyz="0.0235 0 -0.012" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0052" length="0.023" />
+        </geometry>
+      </collision>
+    <collision name="dial_retainer">
+      <origin xyz="0.0324 0 -0.012" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0114" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="stand_hinge_knuckle_0">
+      <origin xyz="-0.0145 -0.031 0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="stand_hinge_pad_0">
+      <origin xyz="-0.0127 -0.031 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.01" />
+        </geometry>
+      </collision>
+    <collision name="stand_hinge_knuckle_1">
+      <origin xyz="-0.0145 0.031 0.027" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="stand_hinge_pad_1">
+      <origin xyz="-0.0127 0.031 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dial">
+    <visual name="dial_ring">
+      <geometry>
+        <mesh filename="assets/meshes/thermostat_annular_dial.obj" />
+        </geometry>
+      <material name="graphite_dial">
+        <color rgba="0.12 0.13 0.13 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_0">
+      <origin xyz="0.007 0 0.0375" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_1">
+      <origin xyz="0.007 0.00970571 0.0362222" rpy="-0.261799 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_2">
+      <origin xyz="0.007 0.01875 0.032476" rpy="-0.523599 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_3">
+      <origin xyz="0.007 0.0265165 0.0265165" rpy="-0.785398 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_4">
+      <origin xyz="0.007 0.032476 0.01875" rpy="-1.0472 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_5">
+      <origin xyz="0.007 0.0362222 0.00970571" rpy="-1.309 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_6">
+      <origin xyz="0.007 0.0375 2.29621e-18" rpy="-1.5708 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_7">
+      <origin xyz="0.007 0.0362222 -0.00970571" rpy="-1.8326 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_8">
+      <origin xyz="0.007 0.032476 -0.01875" rpy="-2.0944 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_9">
+      <origin xyz="0.007 0.0265165 -0.0265165" rpy="-2.35619 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_10">
+      <origin xyz="0.007 0.01875 -0.032476" rpy="-2.61799 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_11">
+      <origin xyz="0.007 0.00970571 -0.0362222" rpy="-2.87979 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_12">
+      <origin xyz="0.007 4.59243e-18 -0.0375" rpy="-3.14159 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_13">
+      <origin xyz="0.007 -0.00970571 -0.0362222" rpy="-3.40339 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_14">
+      <origin xyz="0.007 -0.01875 -0.032476" rpy="-3.66519 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_15">
+      <origin xyz="0.007 -0.0265165 -0.0265165" rpy="-3.92699 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_16">
+      <origin xyz="0.007 -0.032476 -0.01875" rpy="-4.18879 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_17">
+      <origin xyz="0.007 -0.0362222 -0.00970571" rpy="-4.45059 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_18">
+      <origin xyz="0.007 -0.0375 -6.88864e-18" rpy="-4.71239 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_19">
+      <origin xyz="0.007 -0.0362222 0.00970571" rpy="-4.97419 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_20">
+      <origin xyz="0.007 -0.032476 0.01875" rpy="-5.23599 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_21">
+      <origin xyz="0.007 -0.0265165 0.0265165" rpy="-5.49779 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_22">
+      <origin xyz="0.007 -0.01875 0.032476" rpy="-5.75959 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_23">
+      <origin xyz="0.007 -0.00970571 0.0362222" rpy="-6.02139 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      <material name="soft_rubber_grip">
+        <color rgba="0.05 0.055 0.055 1" />
+        </material>
+      </visual>
+    <visual name="dial_pointer">
+      <origin xyz="0.0147 0 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0014 0.006 0.012" />
+        </geometry>
+      <material name="warm_indicator">
+        <color rgba="1 0.58 0.16 1" />
+        </material>
+      </visual>
+    <collision name="dial_ring">
+      <geometry>
+        <mesh filename="assets/meshes/thermostat_annular_dial.obj" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_0">
+      <origin xyz="0.007 0 0.0375" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_1">
+      <origin xyz="0.007 0.00970571 0.0362222" rpy="-0.261799 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_2">
+      <origin xyz="0.007 0.01875 0.032476" rpy="-0.523599 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_3">
+      <origin xyz="0.007 0.0265165 0.0265165" rpy="-0.785398 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_4">
+      <origin xyz="0.007 0.032476 0.01875" rpy="-1.0472 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_5">
+      <origin xyz="0.007 0.0362222 0.00970571" rpy="-1.309 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_6">
+      <origin xyz="0.007 0.0375 2.29621e-18" rpy="-1.5708 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_7">
+      <origin xyz="0.007 0.0362222 -0.00970571" rpy="-1.8326 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_8">
+      <origin xyz="0.007 0.032476 -0.01875" rpy="-2.0944 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_9">
+      <origin xyz="0.007 0.0265165 -0.0265165" rpy="-2.35619 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_10">
+      <origin xyz="0.007 0.01875 -0.032476" rpy="-2.61799 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_11">
+      <origin xyz="0.007 0.00970571 -0.0362222" rpy="-2.87979 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_12">
+      <origin xyz="0.007 4.59243e-18 -0.0375" rpy="-3.14159 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_13">
+      <origin xyz="0.007 -0.00970571 -0.0362222" rpy="-3.40339 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_14">
+      <origin xyz="0.007 -0.01875 -0.032476" rpy="-3.66519 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_15">
+      <origin xyz="0.007 -0.0265165 -0.0265165" rpy="-3.92699 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_16">
+      <origin xyz="0.007 -0.032476 -0.01875" rpy="-4.18879 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_17">
+      <origin xyz="0.007 -0.0362222 -0.00970571" rpy="-4.45059 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_18">
+      <origin xyz="0.007 -0.0375 -6.88864e-18" rpy="-4.71239 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_19">
+      <origin xyz="0.007 -0.0362222 0.00970571" rpy="-4.97419 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_20">
+      <origin xyz="0.007 -0.032476 0.01875" rpy="-5.23599 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_21">
+      <origin xyz="0.007 -0.0265165 0.0265165" rpy="-5.49779 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_22">
+      <origin xyz="0.007 -0.01875 0.032476" rpy="-5.75959 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_23">
+      <origin xyz="0.007 -0.00970571 0.0362222" rpy="-6.02139 0 0" />
+      <geometry>
+        <box size="0.0115 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="dial_pointer">
+      <origin xyz="0.0147 0 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0014 0.006 0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="stand">
+    <visual name="stand_hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.038" />
+        </geometry>
+      <material name="brushed_retainer">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="stand_panel">
+      <origin xyz="-0.002 0 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0032 0.064 0.058" />
+        </geometry>
+      <material name="folding_stand_grey">
+        <color rgba="0.34 0.35 0.34 1" />
+        </material>
+      </visual>
+    <visual name="stand_foot">
+      <origin xyz="-0.006 0 -0.0595" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.066 0.004" />
+        </geometry>
+      <material name="folding_stand_grey">
+        <color rgba="0.34 0.35 0.34 1" />
+        </material>
+      </visual>
+    <collision name="stand_hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.038" />
+        </geometry>
+      </collision>
+    <collision name="stand_panel">
+      <origin xyz="-0.002 0 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0032 0.064 0.058" />
+        </geometry>
+      </collision>
+    <collision name="stand_foot">
+      <origin xyz="-0.006 0 -0.0595" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.066 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="housing_to_dial" type="continuous">
+    <origin xyz="0.017 0 -0.012" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="dial" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.08" velocity="4" />
+    </joint>
+  <joint name="housing_to_stand" type="revolute">
+    <origin xyz="-0.0145 0 0.027" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="stand" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="1.6" lower="0" upper="1.05" />
+    </joint>
+  </robot>

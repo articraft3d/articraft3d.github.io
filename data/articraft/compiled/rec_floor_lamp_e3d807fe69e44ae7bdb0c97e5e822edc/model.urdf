@@ -1,0 +1,282 @@
+<robot name="swing_arm_floor_lamp">
+  <material name="matte_black">
+    <color rgba="0.02 0.022 0.024 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.58 0.6 0.62 1" />
+    </material>
+  <material name="warm_cream">
+    <color rgba="0.92 0.86 0.72 1" />
+    </material>
+  <material name="warm_light">
+    <color rgba="1 0.78 0.34 0.85" />
+    </material>
+  <link name="base_column">
+    <visual name="rectangular_base">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.28 0.045" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="column_plinth">
+      <origin xyz="-0.13 0 0.053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.085 0.018" />
+        </geometry>
+      <material name="dark_metal" />
+      </visual>
+    <visual name="fixed_column">
+      <origin xyz="-0.13 0 0.669" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.25" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shoulder_socket">
+      <origin xyz="-0.13 0 1.3105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.037" />
+        </geometry>
+      <material name="dark_metal" />
+      </visual>
+    <visual name="base_screw_0_0">
+      <origin xyz="-0.145 -0.085 0.0465" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.003" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="base_screw_0_1">
+      <origin xyz="-0.145 0.085 0.0465" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.003" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="base_screw_1_0">
+      <origin xyz="0.145 -0.085 0.0465" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.003" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="base_screw_1_1">
+      <origin xyz="0.145 0.085 0.0465" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.003" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="rectangular_base">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.28 0.045" />
+        </geometry>
+      </collision>
+    <collision name="column_plinth">
+      <origin xyz="-0.13 0 0.053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.085 0.018" />
+        </geometry>
+      </collision>
+    <collision name="fixed_column">
+      <origin xyz="-0.13 0 0.669" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.25" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_socket">
+      <origin xyz="-0.13 0 1.3105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.037" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_0_0">
+      <origin xyz="-0.145 -0.085 0.0465" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_0_1">
+      <origin xyz="-0.145 0.085 0.0465" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_1_0">
+      <origin xyz="0.145 -0.085 0.0465" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_1_1">
+      <origin xyz="0.145 0.085 0.0465" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="swing_arm">
+    <visual name="shoulder_turntable">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.034" />
+        </geometry>
+      <material name="dark_metal" />
+      </visual>
+    <visual name="arm_tube">
+      <origin xyz="0.285 0 0.035" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.57" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="clevis_bridge">
+      <origin xyz="0.565 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.088 0.03" />
+        </geometry>
+      <material name="dark_metal" />
+      </visual>
+    <visual name="clevis_cheek_0">
+      <origin xyz="0.61 -0.039 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.012 0.08" />
+        </geometry>
+      <material name="dark_metal" />
+      </visual>
+    <visual name="clevis_cheek_1">
+      <origin xyz="0.61 0.039 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.012 0.08" />
+        </geometry>
+      <material name="dark_metal" />
+      </visual>
+    <collision name="shoulder_turntable">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="arm_tube">
+      <origin xyz="0.285 0 0.035" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.57" />
+        </geometry>
+      </collision>
+    <collision name="clevis_bridge">
+      <origin xyz="0.565 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.088 0.03" />
+        </geometry>
+      </collision>
+    <collision name="clevis_cheek_0">
+      <origin xyz="0.61 -0.039 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.012 0.08" />
+        </geometry>
+      </collision>
+    <collision name="clevis_cheek_1">
+      <origin xyz="0.61 0.039 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.012 0.08" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shade">
+    <visual name="shade_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.066" />
+        </geometry>
+      <material name="dark_metal" />
+      </visual>
+    <visual name="shade_stem">
+      <origin xyz="0 0 -0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.086" />
+        </geometry>
+      <material name="dark_metal" />
+      </visual>
+    <visual name="top_cap">
+      <origin xyz="0 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.012" />
+        </geometry>
+      <material name="dark_metal" />
+      </visual>
+    <visual name="shade_shell">
+      <geometry>
+        <mesh filename="assets/meshes/conical_shade_shell.obj" />
+        </geometry>
+      <material name="warm_cream" />
+      </visual>
+    <visual name="lamp_socket">
+      <origin xyz="0 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.06" />
+        </geometry>
+      <material name="dark_metal" />
+      </visual>
+    <visual name="glowing_bulb">
+      <origin xyz="0 0 -0.145" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      <material name="warm_light" />
+      </visual>
+    <collision name="shade_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.066" />
+        </geometry>
+      </collision>
+    <collision name="shade_stem">
+      <origin xyz="0 0 -0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.086" />
+        </geometry>
+      </collision>
+    <collision name="top_cap">
+      <origin xyz="0 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="shade_shell">
+      <geometry>
+        <mesh filename="assets/meshes/conical_shade_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="lamp_socket">
+      <origin xyz="0 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="glowing_bulb">
+      <origin xyz="0 0 -0.145" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shoulder_swing" type="revolute">
+    <origin xyz="-0.13 0 1.329" rpy="0 0 0" />
+    <parent link="base_column" />
+    <child link="swing_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1" lower="-1.15" upper="1.15" />
+    </joint>
+  <joint name="shade_tilt" type="revolute">
+    <origin xyz="0.62 0 0.035" rpy="0 0 0" />
+    <parent link="swing_arm" />
+    <child link="shade" />
+    <axis xyz="0 -1 0" />
+    <limit effort="6" velocity="1.2" lower="-0.45" upper="0.75" />
+    </joint>
+  </robot>

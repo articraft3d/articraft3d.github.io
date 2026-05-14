@@ -1,0 +1,162 @@
+<robot name="hard_shell_violin_case">
+  <material name="black_hardshell">
+    <color rgba="0.015 0.018 0.023 1" />
+    </material>
+  <material name="burgundy_velvet">
+    <color rgba="0.33 0.025 0.07 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.72 0.7 0.66 1" />
+    </material>
+  <material name="rubber_grip">
+    <color rgba="0.025 0.025 0.025 1" />
+    </material>
+  <link name="lower_shell">
+    <visual name="lower_shell_body">
+      <geometry>
+        <mesh filename="assets/meshes/lower_shell_body.obj" />
+        </geometry>
+      <material name="black_hardshell" />
+      </visual>
+    <visual name="velvet_cavity">
+      <origin xyz="0 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/velvet_cavity.obj" />
+        </geometry>
+      <material name="burgundy_velvet" />
+      </visual>
+    <visual name="neck_support">
+      <origin xyz="-0.16 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.036 0.014" />
+        </geometry>
+      <material name="burgundy_velvet" />
+      </visual>
+    <visual name="body_support">
+      <origin xyz="0.205 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.046 0.014" />
+        </geometry>
+      <material name="burgundy_velvet" />
+      </visual>
+    <visual name="hinge_leaf">
+      <origin xyz="0 0.184 0.077" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.018 0.006" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="hinge_bar">
+      <origin xyz="0 0.194 0.083" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.74" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <collision name="lower_shell_body">
+      <geometry>
+        <mesh filename="assets/meshes/lower_shell_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="velvet_cavity">
+      <origin xyz="0 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/velvet_cavity.obj" />
+        </geometry>
+      </collision>
+    <collision name="neck_support">
+      <origin xyz="-0.16 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.036 0.014" />
+        </geometry>
+      </collision>
+    <collision name="body_support">
+      <origin xyz="0.205 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.046 0.014" />
+        </geometry>
+      </collision>
+    <collision name="hinge_leaf">
+      <origin xyz="0 0.184 0.077" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.018 0.006" />
+        </geometry>
+      </collision>
+    <collision name="hinge_bar">
+      <origin xyz="0 0.194 0.083" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.74" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_shell">
+    <visual name="upper_shell_body">
+      <geometry>
+        <mesh filename="assets/meshes/upper_shell_body.obj" />
+        </geometry>
+      <material name="black_hardshell" />
+      </visual>
+    <visual name="hinge_leaf">
+      <origin xyz="0 -0.012 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.04 0.005" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="handle_mount_0">
+      <origin xyz="-0.095 -0.318 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.018 0.024" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="handle_mount_1">
+      <origin xyz="0.095 -0.318 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.018 0.024" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="handle_grip">
+      <geometry>
+        <mesh filename="assets/meshes/handle_grip.obj" />
+        </geometry>
+      <material name="rubber_grip" />
+      </visual>
+    <collision name="upper_shell_body">
+      <geometry>
+        <mesh filename="assets/meshes/upper_shell_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="hinge_leaf">
+      <origin xyz="0 -0.012 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.04 0.005" />
+        </geometry>
+      </collision>
+    <collision name="handle_mount_0">
+      <origin xyz="-0.095 -0.318 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.018 0.024" />
+        </geometry>
+      </collision>
+    <collision name="handle_mount_1">
+      <origin xyz="0.095 -0.318 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.018 0.024" />
+        </geometry>
+      </collision>
+    <collision name="handle_grip">
+      <geometry>
+        <mesh filename="assets/meshes/handle_grip.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="rear_hinge" type="revolute">
+    <origin xyz="0 0.19 0.08" rpy="0 0 0" />
+    <parent link="lower_shell" />
+    <child link="upper_shell" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="2" lower="0" upper="1.65806" />
+    </joint>
+  </robot>

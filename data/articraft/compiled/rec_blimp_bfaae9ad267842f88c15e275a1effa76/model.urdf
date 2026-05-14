@@ -1,0 +1,726 @@
+<robot name="sightseeing_blimp">
+  <material name="warm_white_fabric">
+    <color rgba="0.88 0.91 0.88 1" />
+    </material>
+  <material name="deep_tail_blue">
+    <color rgba="0.06 0.18 0.34 1" />
+    </material>
+  <material name="cabin_white">
+    <color rgba="0.92 0.93 0.89 1" />
+    </material>
+  <material name="smoked_blue_glass">
+    <color rgba="0.05 0.16 0.23 0.78" />
+    </material>
+  <material name="matte_graphite">
+    <color rgba="0.015 0.017 0.018 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.58 0.6 0.58 1" />
+    </material>
+  <material name="safety_red">
+    <color rgba="0.78 0.07 0.04 1" />
+    </material>
+  <link name="hull">
+    <visual name="envelope">
+      <geometry>
+        <mesh filename="assets/meshes/streamlined_envelope.obj" />
+        </geometry>
+      <material name="warm_white_fabric">
+        <color rgba="0.88 0.91 0.88 1" />
+        </material>
+      </visual>
+    <visual name="belly_keel">
+      <origin xyz="1.5 0 -7.15" rpy="0 0 0" />
+      <geometry>
+        <box size="17.5 0.82 0.38" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="cabin">
+      <geometry>
+        <mesh filename="assets/meshes/passenger_cabin.obj" />
+        </geometry>
+      <material name="cabin_white">
+        <color rgba="0.92 0.93 0.89 1" />
+        </material>
+      </visual>
+    <visual name="cabin_hanger_0">
+      <origin xyz="-5.8 0 -7.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.28 0.72" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="cabin_hanger_1">
+      <origin xyz="-1.6 0 -7.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.28 0.72" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="cabin_hanger_2">
+      <origin xyz="2.6 0 -7.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.28 0.72" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="cabin_hanger_3">
+      <origin xyz="6.8 0 -7.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.28 0.72" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="port_window_band">
+      <origin xyz="1.55 1.7 -8.34" rpy="0 0 0" />
+      <geometry>
+        <box size="13.4 0.075 0.44" />
+        </geometry>
+      <material name="smoked_blue_glass">
+        <color rgba="0.05 0.16 0.23 0.78" />
+        </material>
+      </visual>
+    <visual name="starboard_window_band">
+      <origin xyz="1.55 -1.7 -8.34" rpy="0 0 0" />
+      <geometry>
+        <box size="13.4 0.075 0.44" />
+        </geometry>
+      <material name="smoked_blue_glass">
+        <color rgba="0.05 0.16 0.23 0.78" />
+        </material>
+      </visual>
+    <visual name="landing_skid">
+      <origin xyz="1.8 0 -9.78" rpy="0 0 0" />
+      <geometry>
+        <box size="12 0.18 0.11" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="port_pylon">
+      <origin xyz="1 3.15 -8.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 2.9 0.34" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="port_pylon_tip">
+      <origin xyz="1 4.51 -8.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.18 0.86" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="port_pylon_root">
+      <origin xyz="1 1.73 -8.62" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.18 0.64" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="starboard_pylon">
+      <origin xyz="1 -3.15 -8.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 2.9 0.34" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="starboard_pylon_tip">
+      <origin xyz="1 -4.51 -8.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.18 0.86" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="starboard_pylon_root">
+      <origin xyz="1 -1.73 -8.62" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.18 0.64" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="top_fin">
+      <geometry>
+        <mesh filename="assets/meshes/top_fin.obj" />
+        </geometry>
+      <material name="deep_tail_blue">
+        <color rgba="0.06 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="bottom_fin">
+      <geometry>
+        <mesh filename="assets/meshes/bottom_fin.obj" />
+        </geometry>
+      <material name="deep_tail_blue">
+        <color rgba="0.06 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="port_tailplane">
+      <geometry>
+        <mesh filename="assets/meshes/port_tailplane.obj" />
+        </geometry>
+      <material name="deep_tail_blue">
+        <color rgba="0.06 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="starboard_tailplane">
+      <geometry>
+        <mesh filename="assets/meshes/starboard_tailplane.obj" />
+        </geometry>
+      <material name="deep_tail_blue">
+        <color rgba="0.06 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rudder_hinge">
+      <origin xyz="-27.75 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="7.2" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="tail_post_fairing">
+      <origin xyz="-27.48 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.26 1.25" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="port_tailplane_root">
+      <origin xyz="-24.72 2.36 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.3 2.45 0.32" />
+        </geometry>
+      <material name="deep_tail_blue">
+        <color rgba="0.06 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="starboard_tailplane_root">
+      <origin xyz="-24.72 -2.36 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.3 2.45 0.32" />
+        </geometry>
+      <material name="deep_tail_blue">
+        <color rgba="0.06 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="port_elevator_hinge">
+      <origin xyz="-25.4 3.98 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="5.5" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="starboard_elevator_hinge">
+      <origin xyz="-25.4 -3.98 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="5.5" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <collision name="envelope">
+      <geometry>
+        <mesh filename="assets/meshes/streamlined_envelope.obj" />
+        </geometry>
+      </collision>
+    <collision name="belly_keel">
+      <origin xyz="1.5 0 -7.15" rpy="0 0 0" />
+      <geometry>
+        <box size="17.5 0.82 0.38" />
+        </geometry>
+      </collision>
+    <collision name="cabin">
+      <geometry>
+        <mesh filename="assets/meshes/passenger_cabin.obj" />
+        </geometry>
+      </collision>
+    <collision name="cabin_hanger_0">
+      <origin xyz="-5.8 0 -7.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.28 0.72" />
+        </geometry>
+      </collision>
+    <collision name="cabin_hanger_1">
+      <origin xyz="-1.6 0 -7.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.28 0.72" />
+        </geometry>
+      </collision>
+    <collision name="cabin_hanger_2">
+      <origin xyz="2.6 0 -7.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.28 0.72" />
+        </geometry>
+      </collision>
+    <collision name="cabin_hanger_3">
+      <origin xyz="6.8 0 -7.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.28 0.72" />
+        </geometry>
+      </collision>
+    <collision name="port_window_band">
+      <origin xyz="1.55 1.7 -8.34" rpy="0 0 0" />
+      <geometry>
+        <box size="13.4 0.075 0.44" />
+        </geometry>
+      </collision>
+    <collision name="starboard_window_band">
+      <origin xyz="1.55 -1.7 -8.34" rpy="0 0 0" />
+      <geometry>
+        <box size="13.4 0.075 0.44" />
+        </geometry>
+      </collision>
+    <collision name="landing_skid">
+      <origin xyz="1.8 0 -9.78" rpy="0 0 0" />
+      <geometry>
+        <box size="12 0.18 0.11" />
+        </geometry>
+      </collision>
+    <collision name="port_pylon">
+      <origin xyz="1 3.15 -8.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 2.9 0.34" />
+        </geometry>
+      </collision>
+    <collision name="port_pylon_tip">
+      <origin xyz="1 4.51 -8.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.18 0.86" />
+        </geometry>
+      </collision>
+    <collision name="port_pylon_root">
+      <origin xyz="1 1.73 -8.62" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.18 0.64" />
+        </geometry>
+      </collision>
+    <collision name="starboard_pylon">
+      <origin xyz="1 -3.15 -8.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 2.9 0.34" />
+        </geometry>
+      </collision>
+    <collision name="starboard_pylon_tip">
+      <origin xyz="1 -4.51 -8.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.18 0.86" />
+        </geometry>
+      </collision>
+    <collision name="starboard_pylon_root">
+      <origin xyz="1 -1.73 -8.62" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.18 0.64" />
+        </geometry>
+      </collision>
+    <collision name="top_fin">
+      <geometry>
+        <mesh filename="assets/meshes/top_fin.obj" />
+        </geometry>
+      </collision>
+    <collision name="bottom_fin">
+      <geometry>
+        <mesh filename="assets/meshes/bottom_fin.obj" />
+        </geometry>
+      </collision>
+    <collision name="port_tailplane">
+      <geometry>
+        <mesh filename="assets/meshes/port_tailplane.obj" />
+        </geometry>
+      </collision>
+    <collision name="starboard_tailplane">
+      <geometry>
+        <mesh filename="assets/meshes/starboard_tailplane.obj" />
+        </geometry>
+      </collision>
+    <collision name="rudder_hinge">
+      <origin xyz="-27.75 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="7.2" />
+        </geometry>
+      </collision>
+    <collision name="tail_post_fairing">
+      <origin xyz="-27.48 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.26 1.25" />
+        </geometry>
+      </collision>
+    <collision name="port_tailplane_root">
+      <origin xyz="-24.72 2.36 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.3 2.45 0.32" />
+        </geometry>
+      </collision>
+    <collision name="starboard_tailplane_root">
+      <origin xyz="-24.72 -2.36 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.3 2.45 0.32" />
+        </geometry>
+      </collision>
+    <collision name="port_elevator_hinge">
+      <origin xyz="-25.4 3.98 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="5.5" />
+        </geometry>
+      </collision>
+    <collision name="starboard_elevator_hinge">
+      <origin xyz="-25.4 -3.98 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="5.5" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="port_pod">
+    <visual name="nacelle">
+      <origin xyz="0.02 0.64 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.44" length="1.78" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="pivot_lug">
+      <origin xyz="0.02 0.1 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.2 0.78" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="cowl_ring">
+      <origin xyz="0.952 0.64 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/port_cowl_ring.obj" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="aft_exhaust">
+      <origin xyz="-0.95 0.64 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.3" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <collision name="nacelle">
+      <origin xyz="0.02 0.64 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.44" length="1.78" />
+        </geometry>
+      </collision>
+    <collision name="pivot_lug">
+      <origin xyz="0.02 0.1 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.2 0.78" />
+        </geometry>
+      </collision>
+    <collision name="cowl_ring">
+      <origin xyz="0.952 0.64 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/port_cowl_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="aft_exhaust">
+      <origin xyz="-0.95 0.64 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.3" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="port_propeller">
+    <visual name="rotor">
+      <geometry>
+        <mesh filename="assets/meshes/port_propeller.obj" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="shaft">
+      <origin xyz="0 0 -0.23" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.46" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <collision name="rotor">
+      <geometry>
+        <mesh filename="assets/meshes/port_propeller.obj" />
+        </geometry>
+      </collision>
+    <collision name="shaft">
+      <origin xyz="0 0 -0.23" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.46" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="starboard_pod">
+    <visual name="nacelle">
+      <origin xyz="0.02 -0.64 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.44" length="1.78" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="pivot_lug">
+      <origin xyz="0.02 -0.1 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.2 0.78" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="cowl_ring">
+      <origin xyz="0.952 -0.64 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/starboard_cowl_ring.obj" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="aft_exhaust">
+      <origin xyz="-0.95 -0.64 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.3" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <collision name="nacelle">
+      <origin xyz="0.02 -0.64 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.44" length="1.78" />
+        </geometry>
+      </collision>
+    <collision name="pivot_lug">
+      <origin xyz="0.02 -0.1 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.2 0.78" />
+        </geometry>
+      </collision>
+    <collision name="cowl_ring">
+      <origin xyz="0.952 -0.64 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/starboard_cowl_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="aft_exhaust">
+      <origin xyz="-0.95 -0.64 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.3" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="starboard_propeller">
+    <visual name="rotor">
+      <geometry>
+        <mesh filename="assets/meshes/starboard_propeller.obj" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="shaft">
+      <origin xyz="0 0 -0.23" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.46" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <collision name="rotor">
+      <geometry>
+        <mesh filename="assets/meshes/starboard_propeller.obj" />
+        </geometry>
+      </collision>
+    <collision name="shaft">
+      <origin xyz="0 0 -0.23" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.46" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rudder">
+    <visual name="panel">
+      <geometry>
+        <mesh filename="assets/meshes/rudder_panel.obj" />
+        </geometry>
+      <material name="deep_tail_blue">
+        <color rgba="0.06 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="red_trailing_edge">
+      <origin xyz="-1.52 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.2 2.9" />
+        </geometry>
+      <material name="safety_red">
+        <color rgba="0.78 0.07 0.04 1" />
+        </material>
+      </visual>
+    <collision name="panel">
+      <geometry>
+        <mesh filename="assets/meshes/rudder_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="red_trailing_edge">
+      <origin xyz="-1.52 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.2 2.9" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="port_elevator">
+    <visual name="panel">
+      <geometry>
+        <mesh filename="assets/meshes/port_elevator_panel.obj" />
+        </geometry>
+      <material name="deep_tail_blue">
+        <color rgba="0.06 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="red_tip">
+      <origin xyz="-3.2 4.85 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.78 0.09" />
+        </geometry>
+      <material name="safety_red">
+        <color rgba="0.78 0.07 0.04 1" />
+        </material>
+      </visual>
+    <collision name="panel">
+      <geometry>
+        <mesh filename="assets/meshes/port_elevator_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="red_tip">
+      <origin xyz="-3.2 4.85 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.78 0.09" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="starboard_elevator">
+    <visual name="panel">
+      <geometry>
+        <mesh filename="assets/meshes/starboard_elevator_panel.obj" />
+        </geometry>
+      <material name="deep_tail_blue">
+        <color rgba="0.06 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="red_tip">
+      <origin xyz="-3.2 -4.85 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.78 0.09" />
+        </geometry>
+      <material name="safety_red">
+        <color rgba="0.78 0.07 0.04 1" />
+        </material>
+      </visual>
+    <collision name="panel">
+      <geometry>
+        <mesh filename="assets/meshes/starboard_elevator_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="red_tip">
+      <origin xyz="-3.2 -4.85 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.78 0.09" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="port_vector" type="revolute">
+    <origin xyz="1 4.6 -8.62" rpy="0 0 0" />
+    <parent link="hull" />
+    <child link="port_pod" />
+    <axis xyz="0 0 1" />
+    <limit effort="220" velocity="0.9" lower="-0.55" upper="0.55" />
+    </joint>
+  <joint name="port_propeller_spin" type="continuous">
+    <origin xyz="1.22 0.64 0" rpy="0 1.5708 0" />
+    <parent link="port_pod" />
+    <child link="port_propeller" />
+    <axis xyz="0 0 1" />
+    <limit effort="90" velocity="120" />
+    </joint>
+  <joint name="starboard_vector" type="revolute">
+    <origin xyz="1 -4.6 -8.62" rpy="0 0 0" />
+    <parent link="hull" />
+    <child link="starboard_pod" />
+    <axis xyz="0 0 1" />
+    <limit effort="220" velocity="0.9" lower="-0.55" upper="0.55" />
+    </joint>
+  <joint name="starboard_propeller_spin" type="continuous">
+    <origin xyz="1.22 -0.64 0" rpy="0 1.5708 0" />
+    <parent link="starboard_pod" />
+    <child link="starboard_propeller" />
+    <axis xyz="0 0 1" />
+    <limit effort="90" velocity="120" />
+    </joint>
+  <joint name="rudder_hinge" type="revolute">
+    <origin xyz="-27.75 0 0" rpy="0 0 0" />
+    <parent link="hull" />
+    <child link="rudder" />
+    <axis xyz="0 0 1" />
+    <limit effort="260" velocity="0.75" lower="-0.44" upper="0.44" />
+    </joint>
+  <joint name="port_elevator_hinge" type="revolute">
+    <origin xyz="-25.4 0 0" rpy="0 0 0" />
+    <parent link="hull" />
+    <child link="port_elevator" />
+    <axis xyz="0 1 0" />
+    <limit effort="180" velocity="0.8" lower="-0.35" upper="0.35" />
+    </joint>
+  <joint name="starboard_elevator_hinge" type="revolute">
+    <origin xyz="-25.4 0 0" rpy="0 0 0" />
+    <parent link="hull" />
+    <child link="starboard_elevator" />
+    <axis xyz="0 1 0" />
+    <limit effort="180" velocity="0.8" lower="-0.35" upper="0.35" />
+    </joint>
+  </robot>

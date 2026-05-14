@@ -1,0 +1,129 @@
+<robot name="quad_lobe_fidget_spinner">
+  <link name="hub">
+    <visual name="top_cap">
+      <origin xyz="0 0 0.00475" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.0025" />
+        </geometry>
+      <material name="dark_cap_plastic">
+        <color rgba="0.035 0.035 0.04 1" />
+        </material>
+      </visual>
+    <visual name="bottom_cap">
+      <origin xyz="0 0 -0.00475" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.0025" />
+        </geometry>
+      <material name="dark_cap_plastic">
+        <color rgba="0.035 0.035 0.04 1" />
+        </material>
+      </visual>
+    <visual name="axle">
+      <geometry>
+        <cylinder radius="0.0055" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <collision name="top_cap">
+      <origin xyz="0 0 0.00475" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="bottom_cap">
+      <origin xyz="0 0 -0.00475" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="axle">
+      <geometry>
+        <cylinder radius="0.0055" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lobes">
+    <visual name="spinner_plate">
+      <geometry>
+        <mesh filename="assets/meshes/quad_lobe_plate.obj" />
+        </geometry>
+      <material name="satin_cobalt_plastic">
+        <color rgba="0.03 0.22 0.78 1" />
+        </material>
+      </visual>
+    <visual name="weight_0">
+      <origin xyz="0.0345 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.00728" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="weight_1">
+      <origin xyz="2.11252e-18 0.0345 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.00728" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="weight_2">
+      <origin xyz="-0.0345 4.22503e-18 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.00728" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="weight_3">
+      <origin xyz="-6.33755e-18 -0.0345 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.00728" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <collision name="spinner_plate">
+      <geometry>
+        <mesh filename="assets/meshes/quad_lobe_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="weight_0">
+      <origin xyz="0.0345 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.00728" />
+        </geometry>
+      </collision>
+    <collision name="weight_1">
+      <origin xyz="2.11252e-18 0.0345 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.00728" />
+        </geometry>
+      </collision>
+    <collision name="weight_2">
+      <origin xyz="-0.0345 4.22503e-18 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.00728" />
+        </geometry>
+      </collision>
+    <collision name="weight_3">
+      <origin xyz="-6.33755e-18 -0.0345 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.00728" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="hub_to_lobes" type="continuous">
+    <parent link="hub" />
+    <child link="lobes" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.08" velocity="35" />
+    <dynamics damping="0.002" friction="0.001" />
+    </joint>
+  </robot>

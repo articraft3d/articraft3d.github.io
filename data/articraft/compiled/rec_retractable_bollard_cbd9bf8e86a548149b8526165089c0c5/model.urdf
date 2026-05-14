@@ -1,0 +1,290 @@
+<robot name="flush_mount_bollard">
+  <material name="cast_concrete">
+    <color rgba="0.47 0.48 0.46 1" />
+    </material>
+  <material name="dark_sleeve_steel">
+    <color rgba="0.03 0.035 0.04 1" />
+    </material>
+  <material name="brushed_plate_steel">
+    <color rgba="0.55 0.57 0.56 1" />
+    </material>
+  <material name="brushed_stainless_post">
+    <color rgba="0.72 0.74 0.72 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.005 0.005 0.004 1" />
+    </material>
+  <material name="yellow_reflective_band">
+    <color rgba="1 0.74 0.06 1" />
+    </material>
+  <material name="darker_keyed_cap">
+    <color rgba="0.3 0.32 0.33 1" />
+    </material>
+  <material name="black_keyway">
+    <color rgba="0 0 0 1" />
+    </material>
+  <link name="sleeve">
+    <visual name="pavement_patch">
+      <geometry>
+        <mesh filename="assets/meshes/pavement_patch.obj" />
+        </geometry>
+      <material name="cast_concrete">
+        <color rgba="0.47 0.48 0.46 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_wall">
+      <geometry>
+        <mesh filename="assets/meshes/sleeve_wall.obj" />
+        </geometry>
+      <material name="dark_sleeve_steel">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <visual name="flush_plate">
+      <geometry>
+        <mesh filename="assets/meshes/flush_plate.obj" />
+        </geometry>
+      <material name="brushed_plate_steel">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <visual name="mouth_gasket">
+      <geometry>
+        <mesh filename="assets/meshes/mouth_gasket.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="guide_pad_0">
+      <origin xyz="0.097 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.028 0.05" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="guide_pad_1">
+      <origin xyz="-0.097 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.028 0.05" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="guide_pad_2">
+      <origin xyz="0 0.097 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.024 0.05" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="guide_pad_3">
+      <origin xyz="0 -0.097 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.024 0.05" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <collision name="pavement_patch">
+      <geometry>
+        <mesh filename="assets/meshes/pavement_patch.obj" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_wall">
+      <geometry>
+        <mesh filename="assets/meshes/sleeve_wall.obj" />
+        </geometry>
+      </collision>
+    <collision name="flush_plate">
+      <geometry>
+        <mesh filename="assets/meshes/flush_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="mouth_gasket">
+      <geometry>
+        <mesh filename="assets/meshes/mouth_gasket.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_pad_0">
+      <origin xyz="0.097 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.028 0.05" />
+        </geometry>
+      </collision>
+    <collision name="guide_pad_1">
+      <origin xyz="-0.097 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.028 0.05" />
+        </geometry>
+      </collision>
+    <collision name="guide_pad_2">
+      <origin xyz="0 0.097 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.024 0.05" />
+        </geometry>
+      </collision>
+    <collision name="guide_pad_3">
+      <origin xyz="0 -0.097 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.024 0.05" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="post">
+    <visual name="post_tube">
+      <geometry>
+        <mesh filename="assets/meshes/post_tube.obj" />
+        </geometry>
+      <material name="brushed_stainless_post">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="lower_reflector">
+      <origin xyz="0 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.07" />
+        </geometry>
+      <material name="yellow_reflective_band">
+        <color rgba="1 0.74 0.06 1" />
+        </material>
+      </visual>
+    <visual name="upper_reflector">
+      <origin xyz="0 0 0.56" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.07" />
+        </geometry>
+      <material name="yellow_reflective_band">
+        <color rgba="1 0.74 0.06 1" />
+        </material>
+      </visual>
+    <visual name="base_wiper">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.087" length="0.025" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <collision name="post_tube">
+      <geometry>
+        <mesh filename="assets/meshes/post_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_reflector">
+      <origin xyz="0 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="upper_reflector">
+      <origin xyz="0 0 0.56" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="base_wiper">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.087" length="0.025" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="keyed_cap">
+    <visual name="cap_disk">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.055" />
+        </geometry>
+      <material name="darker_keyed_cap">
+        <color rgba="0.3 0.32 0.33 1" />
+        </material>
+      </visual>
+    <visual name="cap_boss">
+      <origin xyz="0 0 -0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.07" />
+        </geometry>
+      <material name="darker_keyed_cap">
+        <color rgba="0.3 0.32 0.33 1" />
+        </material>
+      </visual>
+    <visual name="separation_seam">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0965" length="0.006" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="key_slot">
+      <origin xyz="0.012 0 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.018 0.004" />
+        </geometry>
+      <material name="black_keyway">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="key_stem">
+      <origin xyz="-0.026 0 0.0565" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.052 0.004" />
+        </geometry>
+      <material name="black_keyway">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <collision name="cap_disk">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="cap_boss">
+      <origin xyz="0 0 -0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="separation_seam">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0965" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="key_slot">
+      <origin xyz="0.012 0 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.018 0.004" />
+        </geometry>
+      </collision>
+    <collision name="key_stem">
+      <origin xyz="-0.026 0 0.0565" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.052 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="sleeve_to_post" type="prismatic">
+    <parent link="sleeve" />
+    <child link="post" />
+    <axis xyz="0 0 1" />
+    <limit effort="900" velocity="0.22" lower="-0.85" upper="0.05" />
+    </joint>
+  <joint name="post_to_keyed_cap" type="continuous">
+    <origin xyz="0 0 0.8" rpy="0 0 0" />
+    <parent link="post" />
+    <child link="keyed_cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="8" />
+    </joint>
+  </robot>

@@ -1,0 +1,386 @@
+<robot name="three_arm_turnstile_gate">
+  <material name="dark_paint">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="galvanized_steel">
+    <color rgba="0.62 0.65 0.66 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.78 0.78 0.74 1" />
+    </material>
+  <material name="safety_yellow">
+    <color rgba="1 0.72 0.08 1" />
+    </material>
+  <material name="black_plastic">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <link name="frame">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="1.55 1.55 0.05" />
+        </geometry>
+      <material name="dark_paint">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="central_column">
+      <origin xyz="0 0 0.41" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.72" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cup">
+      <origin xyz="0 0 0.788" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.04" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="corner_post_0_0">
+      <origin xyz="-0.72 -0.72 0.735" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="1.42" />
+        </geometry>
+      <material name="dark_paint">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="corner_post_0_1">
+      <origin xyz="-0.72 0.72 0.735" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="1.42" />
+        </geometry>
+      <material name="dark_paint">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="corner_post_1_0">
+      <origin xyz="0.72 -0.72 0.735" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="1.42" />
+        </geometry>
+      <material name="dark_paint">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="corner_post_1_1">
+      <origin xyz="0.72 0.72 0.735" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="1.42" />
+        </geometry>
+      <material name="dark_paint">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lower_rail_x_neg">
+      <origin xyz="0 -0.72 0.63" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.44" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="top_rail_x_neg">
+      <origin xyz="0 -0.72 1.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.44" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="lower_rail_x_pos">
+      <origin xyz="0 0.72 0.63" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.44" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="top_rail_x_pos">
+      <origin xyz="0 0.72 1.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.44" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="lower_rail_y_neg">
+      <origin xyz="-0.72 0 0.63" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.44" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="top_rail_y_neg">
+      <origin xyz="-0.72 0 1.42" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.44" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="lower_rail_y_pos">
+      <origin xyz="0.72 0 0.63" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.44" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="top_rail_y_pos">
+      <origin xyz="0.72 0 1.42" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.44" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="1.55 1.55 0.05" />
+        </geometry>
+      </collision>
+    <collision name="central_column">
+      <origin xyz="0 0 0.41" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.72" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cup">
+      <origin xyz="0 0 0.788" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="corner_post_0_0">
+      <origin xyz="-0.72 -0.72 0.735" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="1.42" />
+        </geometry>
+      </collision>
+    <collision name="corner_post_0_1">
+      <origin xyz="-0.72 0.72 0.735" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="1.42" />
+        </geometry>
+      </collision>
+    <collision name="corner_post_1_0">
+      <origin xyz="0.72 -0.72 0.735" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="1.42" />
+        </geometry>
+      </collision>
+    <collision name="corner_post_1_1">
+      <origin xyz="0.72 0.72 0.735" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="1.42" />
+        </geometry>
+      </collision>
+    <collision name="lower_rail_x_neg">
+      <origin xyz="0 -0.72 0.63" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.44" />
+        </geometry>
+      </collision>
+    <collision name="top_rail_x_neg">
+      <origin xyz="0 -0.72 1.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.44" />
+        </geometry>
+      </collision>
+    <collision name="lower_rail_x_pos">
+      <origin xyz="0 0.72 0.63" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.44" />
+        </geometry>
+      </collision>
+    <collision name="top_rail_x_pos">
+      <origin xyz="0 0.72 1.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.44" />
+        </geometry>
+      </collision>
+    <collision name="lower_rail_y_neg">
+      <origin xyz="-0.72 0 0.63" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.44" />
+        </geometry>
+      </collision>
+    <collision name="top_rail_y_neg">
+      <origin xyz="-0.72 0 1.42" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.44" />
+        </geometry>
+      </collision>
+    <collision name="lower_rail_y_pos">
+      <origin xyz="0.72 0 0.63" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.44" />
+        </geometry>
+      </collision>
+    <collision name="top_rail_y_pos">
+      <origin xyz="0.72 0 1.42" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.44" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotor">
+    <visual name="hub_body">
+      <geometry>
+        <cylinder radius="0.105" length="0.24" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_hub_cap">
+      <origin xyz="0 0 0.1375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.035" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="lower_hub_cap">
+      <origin xyz="0 0 -0.1375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.035" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="arm_0">
+      <origin xyz="0.35 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.6" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="arm_tip_0">
+      <origin xyz="0.65 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.035" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="1 0.72 0.08 1" />
+        </material>
+      </visual>
+    <visual name="arm_1">
+      <origin xyz="-0.175 0.303109 0" rpy="0 1.5708 2.0944" />
+      <geometry>
+        <cylinder radius="0.025" length="0.6" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="arm_tip_1">
+      <origin xyz="-0.325 0.562917 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.035" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="1 0.72 0.08 1" />
+        </material>
+      </visual>
+    <visual name="arm_2">
+      <origin xyz="-0.175 -0.303109 0" rpy="0 1.5708 4.18879" />
+      <geometry>
+        <cylinder radius="0.025" length="0.6" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.78 0.78 0.74 1" />
+        </material>
+      </visual>
+    <visual name="arm_tip_2">
+      <origin xyz="-0.325 -0.562917 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.035" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="1 0.72 0.08 1" />
+        </material>
+      </visual>
+    <collision name="hub_body">
+      <geometry>
+        <cylinder radius="0.105" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="upper_hub_cap">
+      <origin xyz="0 0 0.1375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="lower_hub_cap">
+      <origin xyz="0 0 -0.1375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="arm_0">
+      <origin xyz="0.35 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.6" />
+        </geometry>
+      </collision>
+    <collision name="arm_tip_0">
+      <origin xyz="0.65 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.035" />
+        </geometry>
+      </collision>
+    <collision name="arm_1">
+      <origin xyz="-0.175 0.303109 0" rpy="0 1.5708 2.0944" />
+      <geometry>
+        <cylinder radius="0.025" length="0.6" />
+        </geometry>
+      </collision>
+    <collision name="arm_tip_1">
+      <origin xyz="-0.325 0.562917 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.035" />
+        </geometry>
+      </collision>
+    <collision name="arm_2">
+      <origin xyz="-0.175 -0.303109 0" rpy="0 1.5708 4.18879" />
+      <geometry>
+        <cylinder radius="0.025" length="0.6" />
+        </geometry>
+      </collision>
+    <collision name="arm_tip_2">
+      <origin xyz="-0.325 -0.562917 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.035" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="frame_to_rotor" type="continuous">
+    <origin xyz="0 0 0.963" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="2" />
+    </joint>
+  </robot>

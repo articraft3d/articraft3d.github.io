@@ -1,0 +1,719 @@
+<robot name="vented_tumble_dryer">
+  <material name="warm_white_enamel">
+    <color rgba="0.96 0.96 0.91 1" />
+    </material>
+  <material name="slightly_glossy_white_trim">
+    <color rgba="1 1 0.97 1" />
+    </material>
+  <material name="deep_shadow_cavity">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="brushed_galvanized_drum">
+    <color rgba="0.68 0.69 0.66 1" />
+    </material>
+  <material name="dull_hinge_steel">
+    <color rgba="0.54 0.55 0.54 1" />
+    </material>
+  <material name="smoked_blue_glass">
+    <color rgba="0.2 0.31 0.4 0.45" />
+    </material>
+  <material name="charcoal_plastic">
+    <color rgba="0.04 0.045 0.05 1" />
+    </material>
+  <material name="soft_grey_buttons">
+    <color rgba="0.48 0.5 0.51 1" />
+    </material>
+  <link name="cabinet">
+    <visual name="side_panel_0">
+      <origin xyz="-0.3825 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.66 0.9" />
+        </geometry>
+      <material name="warm_white_enamel">
+        <color rgba="0.96 0.96 0.91 1" />
+        </material>
+      </visual>
+    <visual name="side_panel_1">
+      <origin xyz="0.3825 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.66 0.9" />
+        </geometry>
+      <material name="warm_white_enamel">
+        <color rgba="0.96 0.96 0.91 1" />
+        </material>
+      </visual>
+    <visual name="top_deck">
+      <origin xyz="0 0 0.8825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.66 0.035" />
+        </geometry>
+      <material name="warm_white_enamel">
+        <color rgba="0.96 0.96 0.91 1" />
+        </material>
+      </visual>
+    <visual name="bottom_plinth">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.66 0.04" />
+        </geometry>
+      <material name="warm_white_enamel">
+        <color rgba="0.96 0.96 0.91 1" />
+        </material>
+      </visual>
+    <visual name="rear_panel">
+      <origin xyz="0 0.3125 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.035 0.9" />
+        </geometry>
+      <material name="warm_white_enamel">
+        <color rgba="0.96 0.96 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_side_0">
+      <origin xyz="-0.3325 -0.3475 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.035 0.9" />
+        </geometry>
+      <material name="warm_white_enamel">
+        <color rgba="0.96 0.96 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_side_1">
+      <origin xyz="0.3325 -0.3475 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.035 0.9" />
+        </geometry>
+      <material name="warm_white_enamel">
+        <color rgba="0.96 0.96 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_upper_rail">
+      <origin xyz="0 -0.3475 0.815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.035 0.17" />
+        </geometry>
+      <material name="warm_white_enamel">
+        <color rgba="0.96 0.96 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_lower_rail">
+      <origin xyz="0 -0.3475 0.1025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.035 0.205" />
+        </geometry>
+      <material name="warm_white_enamel">
+        <color rgba="0.96 0.96 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_bezel">
+      <origin xyz="0 -0.345 0.455" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cabinet_front_round_bezel.obj" />
+        </geometry>
+      <material name="slightly_glossy_white_trim">
+        <color rgba="1 1 0.97 1" />
+        </material>
+      </visual>
+    <visual name="porthole_shadow">
+      <origin xyz="0 -0.326 0.455" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.238" length="0.02" />
+        </geometry>
+      <material name="deep_shadow_cavity">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="front_vent">
+      <origin xyz="-0.185 -0.365 0.11" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_exhaust_vent.obj" />
+        </geometry>
+      <material name="slightly_glossy_white_trim">
+        <color rgba="1 1 0.97 1" />
+        </material>
+      </visual>
+    <visual name="rear_vent">
+      <origin xyz="0.22 0.335 0.36" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_service_vent.obj" />
+        </geometry>
+      <material name="slightly_glossy_white_trim">
+        <color rgba="1 1 0.97 1" />
+        </material>
+      </visual>
+    <visual name="upper_fixed_hinge_leaf">
+      <origin xyz="0.368 -0.34 0.64" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.036 0.125" />
+        </geometry>
+      <material name="dull_hinge_steel">
+        <color rgba="0.54 0.55 0.54 1" />
+        </material>
+      </visual>
+    <visual name="upper_fixed_hinge_pin_stub">
+      <origin xyz="0.33 -0.352 0.64" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.09" />
+        </geometry>
+      <material name="dull_hinge_steel">
+        <color rgba="0.54 0.55 0.54 1" />
+        </material>
+      </visual>
+    <visual name="lower_fixed_hinge_leaf">
+      <origin xyz="0.368 -0.34 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.036 0.125" />
+        </geometry>
+      <material name="dull_hinge_steel">
+        <color rgba="0.54 0.55 0.54 1" />
+        </material>
+      </visual>
+    <visual name="lower_fixed_hinge_pin_stub">
+      <origin xyz="0.33 -0.352 0.3" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.09" />
+        </geometry>
+      <material name="dull_hinge_steel">
+        <color rgba="0.54 0.55 0.54 1" />
+        </material>
+      </visual>
+    <visual name="left_leveling_foot">
+      <origin xyz="-0.285 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.035" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="right_leveling_foot">
+      <origin xyz="0.285 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.035" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <collision name="side_panel_0">
+      <origin xyz="-0.3825 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.66 0.9" />
+        </geometry>
+      </collision>
+    <collision name="side_panel_1">
+      <origin xyz="0.3825 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.66 0.9" />
+        </geometry>
+      </collision>
+    <collision name="top_deck">
+      <origin xyz="0 0 0.8825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.66 0.035" />
+        </geometry>
+      </collision>
+    <collision name="bottom_plinth">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.66 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_panel">
+      <origin xyz="0 0.3125 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.035 0.9" />
+        </geometry>
+      </collision>
+    <collision name="front_side_0">
+      <origin xyz="-0.3325 -0.3475 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.035 0.9" />
+        </geometry>
+      </collision>
+    <collision name="front_side_1">
+      <origin xyz="0.3325 -0.3475 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.035 0.9" />
+        </geometry>
+      </collision>
+    <collision name="front_upper_rail">
+      <origin xyz="0 -0.3475 0.815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.035 0.17" />
+        </geometry>
+      </collision>
+    <collision name="front_lower_rail">
+      <origin xyz="0 -0.3475 0.1025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.8 0.035 0.205" />
+        </geometry>
+      </collision>
+    <collision name="front_bezel">
+      <origin xyz="0 -0.345 0.455" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cabinet_front_round_bezel.obj" />
+        </geometry>
+      </collision>
+    <collision name="porthole_shadow">
+      <origin xyz="0 -0.326 0.455" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.238" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="front_vent">
+      <origin xyz="-0.185 -0.365 0.11" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_exhaust_vent.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_vent">
+      <origin xyz="0.22 0.335 0.36" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_service_vent.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_fixed_hinge_leaf">
+      <origin xyz="0.368 -0.34 0.64" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.036 0.125" />
+        </geometry>
+      </collision>
+    <collision name="upper_fixed_hinge_pin_stub">
+      <origin xyz="0.33 -0.352 0.64" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="lower_fixed_hinge_leaf">
+      <origin xyz="0.368 -0.34 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.036 0.125" />
+        </geometry>
+      </collision>
+    <collision name="lower_fixed_hinge_pin_stub">
+      <origin xyz="0.33 -0.352 0.3" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="left_leveling_foot">
+      <origin xyz="-0.285 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.035" />
+        </geometry>
+      </collision>
+    <collision name="right_leveling_foot">
+      <origin xyz="0.285 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.035" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="drum">
+    <visual name="drum_shell">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hollow_tumble_drum_shell.obj" />
+        </geometry>
+      <material name="brushed_galvanized_drum">
+        <color rgba="0.68 0.69 0.66 1" />
+        </material>
+      </visual>
+    <visual name="drum_back_plate">
+      <origin xyz="0 0.226 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.014" />
+        </geometry>
+      <material name="brushed_galvanized_drum">
+        <color rgba="0.68 0.69 0.66 1" />
+        </material>
+      </visual>
+    <visual name="rear_axle_stub">
+      <origin xyz="0 0.2525 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.115" />
+        </geometry>
+      <material name="dull_hinge_steel">
+        <color rgba="0.54 0.55 0.54 1" />
+        </material>
+      </visual>
+    <visual name="drum_lifter_0">
+      <origin xyz="0.218 0 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.055 0.36 0.024" />
+        </geometry>
+      <material name="brushed_galvanized_drum">
+        <color rgba="0.68 0.69 0.66 1" />
+        </material>
+      </visual>
+    <visual name="drum_lifter_1">
+      <origin xyz="-0.109 0 0.188794" rpy="0 -2.0944 0" />
+      <geometry>
+        <box size="0.055 0.36 0.024" />
+        </geometry>
+      <material name="brushed_galvanized_drum">
+        <color rgba="0.68 0.69 0.66 1" />
+        </material>
+      </visual>
+    <visual name="drum_lifter_2">
+      <origin xyz="-0.109 0 -0.188794" rpy="0 -4.18879 0" />
+      <geometry>
+        <box size="0.055 0.36 0.024" />
+        </geometry>
+      <material name="brushed_galvanized_drum">
+        <color rgba="0.68 0.69 0.66 1" />
+        </material>
+      </visual>
+    <collision name="drum_shell">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hollow_tumble_drum_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="drum_back_plate">
+      <origin xyz="0 0.226 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="rear_axle_stub">
+      <origin xyz="0 0.2525 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.115" />
+        </geometry>
+      </collision>
+    <collision name="drum_lifter_0">
+      <origin xyz="0.218 0 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.055 0.36 0.024" />
+        </geometry>
+      </collision>
+    <collision name="drum_lifter_1">
+      <origin xyz="-0.109 0 0.188794" rpy="0 -2.0944 0" />
+      <geometry>
+        <box size="0.055 0.36 0.024" />
+        </geometry>
+      </collision>
+    <collision name="drum_lifter_2">
+      <origin xyz="-0.109 0 -0.188794" rpy="0 -4.18879 0" />
+      <geometry>
+        <box size="0.055 0.36 0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="porthole_door">
+    <visual name="door_frame">
+      <origin xyz="-0.31 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/door_round_frame.obj" />
+        </geometry>
+      <material name="slightly_glossy_white_trim">
+        <color rgba="1 1 0.97 1" />
+        </material>
+      </visual>
+    <visual name="glass_bowl">
+      <origin xyz="-0.31 -0.01 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.224" length="0.014" />
+        </geometry>
+      <material name="smoked_blue_glass">
+        <color rgba="0.2 0.31 0.4 0.45" />
+        </material>
+      </visual>
+    <visual name="front_handle">
+      <origin xyz="-0.58 -0.004 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.034 0.17" />
+        </geometry>
+      <material name="slightly_glossy_white_trim">
+        <color rgba="1 1 0.97 1" />
+        </material>
+      </visual>
+    <visual name="handle_recess">
+      <origin xyz="-0.568 -0.023 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.036 0.105" />
+        </geometry>
+      <material name="deep_shadow_cavity">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="upper_hinge_barrel">
+      <origin xyz="0 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.118" />
+        </geometry>
+      <material name="dull_hinge_steel">
+        <color rgba="0.54 0.55 0.54 1" />
+        </material>
+      </visual>
+    <visual name="upper_moving_hinge_leaf">
+      <origin xyz="-0.07 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.028 0.096" />
+        </geometry>
+      <material name="dull_hinge_steel">
+        <color rgba="0.54 0.55 0.54 1" />
+        </material>
+      </visual>
+    <visual name="lower_hinge_barrel">
+      <origin xyz="0 0 -0.155" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.118" />
+        </geometry>
+      <material name="dull_hinge_steel">
+        <color rgba="0.54 0.55 0.54 1" />
+        </material>
+      </visual>
+    <visual name="lower_moving_hinge_leaf">
+      <origin xyz="-0.07 0 -0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.028 0.096" />
+        </geometry>
+      <material name="dull_hinge_steel">
+        <color rgba="0.54 0.55 0.54 1" />
+        </material>
+      </visual>
+    <collision name="door_frame">
+      <origin xyz="-0.31 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/door_round_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="glass_bowl">
+      <origin xyz="-0.31 -0.01 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.224" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="front_handle">
+      <origin xyz="-0.58 -0.004 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.034 0.17" />
+        </geometry>
+      </collision>
+    <collision name="handle_recess">
+      <origin xyz="-0.568 -0.023 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.036 0.105" />
+        </geometry>
+      </collision>
+    <collision name="upper_hinge_barrel">
+      <origin xyz="0 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.118" />
+        </geometry>
+      </collision>
+    <collision name="upper_moving_hinge_leaf">
+      <origin xyz="-0.07 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.028 0.096" />
+        </geometry>
+      </collision>
+    <collision name="lower_hinge_barrel">
+      <origin xyz="0 0 -0.155" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.118" />
+        </geometry>
+      </collision>
+    <collision name="lower_moving_hinge_leaf">
+      <origin xyz="-0.07 0 -0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.028 0.096" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="control_cover">
+    <visual name="cover_panel">
+      <origin xyz="0 -0.12 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.24 0.032" />
+        </geometry>
+      <material name="slightly_glossy_white_trim">
+        <color rgba="1 1 0.97 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_leaf">
+      <origin xyz="0 -0.006 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.69 0.01 0.032" />
+        </geometry>
+      <material name="dull_hinge_steel">
+        <color rgba="0.54 0.55 0.54 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_barrel">
+      <origin xyz="0 0 0.018" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.69" />
+        </geometry>
+      <material name="dull_hinge_steel">
+        <color rgba="0.54 0.55 0.54 1" />
+        </material>
+      </visual>
+    <visual name="status_window">
+      <origin xyz="0.185 -0.125 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.05 0.004" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="dial_label_line">
+      <origin xyz="-0.215 -0.065 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.004 0.003" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <collision name="cover_panel">
+      <origin xyz="0 -0.12 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.24 0.032" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_leaf">
+      <origin xyz="0 -0.006 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.69 0.01 0.032" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_barrel">
+      <origin xyz="0 0 0.018" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.69" />
+        </geometry>
+      </collision>
+    <collision name="status_window">
+      <origin xyz="0.185 -0.125 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.05 0.004" />
+        </geometry>
+      </collision>
+    <collision name="dial_label_line">
+      <origin xyz="-0.215 -0.065 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.004 0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="timer_dial">
+    <visual name="dial_cap">
+      <geometry>
+        <mesh filename="assets/meshes/timer_dial_knob.obj" />
+        </geometry>
+      <material name="soft_grey_buttons">
+        <color rgba="0.48 0.5 0.51 1" />
+        </material>
+      </visual>
+    <collision name="dial_cap">
+      <geometry>
+        <mesh filename="assets/meshes/timer_dial_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_0">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.034 0.014" />
+        </geometry>
+      <material name="soft_grey_buttons">
+        <color rgba="0.48 0.5 0.51 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.034 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_1">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.034 0.014" />
+        </geometry>
+      <material name="soft_grey_buttons">
+        <color rgba="0.48 0.5 0.51 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.034 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_2">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.034 0.014" />
+        </geometry>
+      <material name="soft_grey_buttons">
+        <color rgba="0.48 0.5 0.51 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.034 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="cabinet_to_drum" type="continuous">
+    <origin xyz="0 -0.015 0.455" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="drum" />
+    <axis xyz="0 1 0" />
+    <limit effort="45" velocity="12" />
+    </joint>
+  <joint name="cabinet_to_porthole_door" type="revolute">
+    <origin xyz="0.31 -0.391 0.455" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="porthole_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.6" lower="0" upper="1.92" />
+    </joint>
+  <joint name="cabinet_to_control_cover" type="revolute">
+    <origin xyz="0 0.292 0.9" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="control_cover" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="1.2" lower="0" upper="1.28" />
+    </joint>
+  <joint name="control_cover_to_timer_dial" type="revolute">
+    <origin xyz="-0.245 -0.125 0.032" rpy="0 0 0" />
+    <parent link="control_cover" />
+    <child link="timer_dial" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.5" velocity="3" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="control_cover_to_button_0" type="prismatic">
+    <origin xyz="0.05 -0.068 0.032" rpy="0 0 0" />
+    <parent link="control_cover" />
+    <child link="button_0" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1" velocity="0.08" lower="0" upper="0.009" />
+    </joint>
+  <joint name="control_cover_to_button_1" type="prismatic">
+    <origin xyz="0.115 -0.068 0.032" rpy="0 0 0" />
+    <parent link="control_cover" />
+    <child link="button_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1" velocity="0.08" lower="0" upper="0.009" />
+    </joint>
+  <joint name="control_cover_to_button_2" type="prismatic">
+    <origin xyz="0.18 -0.068 0.032" rpy="0 0 0" />
+    <parent link="control_cover" />
+    <child link="button_2" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1" velocity="0.08" lower="0" upper="0.009" />
+    </joint>
+  </robot>

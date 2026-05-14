@@ -1,0 +1,543 @@
+<robot name="clean_room_three_wing_revolving_door">
+  <material name="brushed_stainless">
+    <color rgba="0.7 0.72 0.73 1" />
+    </material>
+  <material name="dark_stainless">
+    <color rgba="0.36 0.38 0.39 1" />
+    </material>
+  <material name="clear_cleanroom_glass">
+    <color rgba="0.62 0.82 0.92 0.3" />
+    </material>
+  <material name="sealed_laminated_panel">
+    <color rgba="0.74 0.88 0.95 0.55" />
+    </material>
+  <material name="black_epdm_seal">
+    <color rgba="0.02 0.025 0.025 1" />
+    </material>
+  <material name="white_cleanroom_polymer">
+    <color rgba="0.92 0.94 0.93 1" />
+    </material>
+  <link name="drum_housing">
+    <inertial>
+      <origin xyz="0 0 1.33" rpy="0 0 0" />
+      <mass value="280" />
+      <inertia ixx="262.565" ixy="0" ixz="0" iyy="262.565" iyz="0" izz="194.936" />
+      </inertial>
+    <visual name="floor_plinth">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.18" length="0.12" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.72 0.73 1" />
+        </material>
+      </visual>
+    <visual name="sealed_drum_shell">
+      <geometry>
+        <mesh filename="assets/meshes/transparent_sealed_drum_shell.obj" />
+        </geometry>
+      <material name="clear_cleanroom_glass">
+        <color rgba="0.62 0.82 0.92 0.3" />
+        </material>
+      </visual>
+    <visual name="top_canopy">
+      <origin xyz="0 0 2.585" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.18" length="0.16" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.72 0.73 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/lower_post_bearing_ring.obj" />
+        </geometry>
+      <material name="dark_stainless">
+        <color rgba="0.36 0.38 0.39 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/upper_post_bearing_ring.obj" />
+        </geometry>
+      <material name="dark_stainless">
+        <color rgba="0.36 0.38 0.39 1" />
+        </material>
+      </visual>
+    <visual name="front_seal_jamb">
+      <origin xyz="0 1.112 1.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.055 2.3" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="rear_seal_jamb">
+      <origin xyz="0 -1.112 1.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.055 2.3" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="lower_cleanroom_gasket">
+      <geometry>
+        <mesh filename="assets/meshes/lower_cleanroom_gasket.obj" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="upper_cleanroom_gasket">
+      <geometry>
+        <mesh filename="assets/meshes/upper_cleanroom_gasket.obj" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="front_flush_threshold">
+      <origin xyz="0 1.18 0.1475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.035 0.055" />
+        </geometry>
+      <material name="white_cleanroom_polymer">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="rear_flush_threshold">
+      <origin xyz="0 -1.18 0.1475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.035 0.055" />
+        </geometry>
+      <material name="white_cleanroom_polymer">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <collision name="floor_plinth">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.18" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="sealed_drum_shell">
+      <geometry>
+        <mesh filename="assets/meshes/transparent_sealed_drum_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_canopy">
+      <origin xyz="0 0 2.585" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.18" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/lower_post_bearing_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/upper_post_bearing_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_seal_jamb">
+      <origin xyz="0 1.112 1.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.055 2.3" />
+        </geometry>
+      </collision>
+    <collision name="rear_seal_jamb">
+      <origin xyz="0 -1.112 1.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.055 2.3" />
+        </geometry>
+      </collision>
+    <collision name="lower_cleanroom_gasket">
+      <geometry>
+        <mesh filename="assets/meshes/lower_cleanroom_gasket.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_cleanroom_gasket">
+      <geometry>
+        <mesh filename="assets/meshes/upper_cleanroom_gasket.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_flush_threshold">
+      <origin xyz="0 1.18 0.1475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.035 0.055" />
+        </geometry>
+      </collision>
+    <collision name="rear_flush_threshold">
+      <origin xyz="0 -1.18 0.1475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.035 0.055" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wing_assembly">
+    <inertial>
+      <origin xyz="0 0 1.31" rpy="0 0 0" />
+      <mass value="95" />
+      <inertia ixx="66.439" ixy="0" ixz="0" iyy="66.439" iyz="0" izz="44.6927" />
+      </inertial>
+    <visual name="central_post">
+      <origin xyz="0 0 1.31" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="2.36" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.72 0.73 1" />
+        </material>
+      </visual>
+    <visual name="lower_hub">
+      <origin xyz="0 0 0.255" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.118" length="0.1" />
+        </geometry>
+      <material name="dark_stainless">
+        <color rgba="0.36 0.38 0.39 1" />
+        </material>
+      </visual>
+    <visual name="upper_hub">
+      <origin xyz="0 0 2.365" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.118" length="0.1" />
+        </geometry>
+      <material name="dark_stainless">
+        <color rgba="0.36 0.38 0.39 1" />
+        </material>
+      </visual>
+    <collision name="central_post">
+      <origin xyz="0 0 1.31" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="2.36" />
+        </geometry>
+      </collision>
+    <collision name="lower_hub">
+      <origin xyz="0 0 0.255" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.118" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="upper_hub">
+      <origin xyz="0 0 2.365" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.118" length="0.1" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wing_0">
+    <inertial>
+      <origin xyz="0.535 0 1.31" rpy="0 0 0" />
+      <mass value="24" />
+      <inertia ixx="8.0128" ixy="0" ixz="0" iyy="9.86245" iyz="0" izz="1.87525" />
+      </inertial>
+    <visual name="wing_panel_0">
+      <origin xyz="0.535 0 1.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.032 1.82" />
+        </geometry>
+      <material name="sealed_laminated_panel">
+        <color rgba="0.74 0.88 0.95 0.55" />
+        </material>
+      </visual>
+    <visual name="top_rail_0">
+      <origin xyz="0.535 0 2.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.895 0.06 0.055" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.72 0.73 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail_0">
+      <origin xyz="0.535 0 0.385" rpy="0 0 0" />
+      <geometry>
+        <box size="0.895 0.06 0.055" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.72 0.73 1" />
+        </material>
+      </visual>
+    <visual name="root_stile_0">
+      <origin xyz="0.1025 0 1.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.07 1.92" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.72 0.73 1" />
+        </material>
+      </visual>
+    <visual name="outer_seal_0">
+      <origin xyz="0.965 0 1.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.07 1.94" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="sweep_seal_0">
+      <origin xyz="0.5675 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.795 0.012 0.08" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <collision name="wing_panel_0">
+      <origin xyz="0.535 0 1.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.032 1.82" />
+        </geometry>
+      </collision>
+    <collision name="top_rail_0">
+      <origin xyz="0.535 0 2.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.895 0.06 0.055" />
+        </geometry>
+      </collision>
+    <collision name="bottom_rail_0">
+      <origin xyz="0.535 0 0.385" rpy="0 0 0" />
+      <geometry>
+        <box size="0.895 0.06 0.055" />
+        </geometry>
+      </collision>
+    <collision name="root_stile_0">
+      <origin xyz="0.1025 0 1.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.07 1.92" />
+        </geometry>
+      </collision>
+    <collision name="outer_seal_0">
+      <origin xyz="0.965 0 1.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.07 1.94" />
+        </geometry>
+      </collision>
+    <collision name="sweep_seal_0">
+      <origin xyz="0.5675 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.795 0.012 0.08" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wing_1">
+    <inertial>
+      <origin xyz="-0.2675 0.463324 1.31" rpy="0 0 0" />
+      <mass value="24" />
+      <inertia ixx="8.0128" ixy="0" ixz="0" iyy="9.86245" iyz="0" izz="1.87525" />
+      </inertial>
+    <visual name="wing_panel_1">
+      <origin xyz="-0.2675 0.463324 1.31" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.86 0.032 1.82" />
+        </geometry>
+      <material name="sealed_laminated_panel">
+        <color rgba="0.74 0.88 0.95 0.55" />
+        </material>
+      </visual>
+    <visual name="top_rail_1">
+      <origin xyz="-0.2675 0.463324 2.235" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.895 0.06 0.055" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.72 0.73 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail_1">
+      <origin xyz="-0.2675 0.463324 0.385" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.895 0.06 0.055" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.72 0.73 1" />
+        </material>
+      </visual>
+    <visual name="root_stile_1">
+      <origin xyz="-0.05125 0.0887676 1.31" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.095 0.07 1.92" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.72 0.73 1" />
+        </material>
+      </visual>
+    <visual name="outer_seal_1">
+      <origin xyz="-0.4825 0.835715 1.31" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.045 0.07 1.94" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="sweep_seal_1">
+      <origin xyz="-0.28375 0.491469 0.325" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.795 0.012 0.08" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <collision name="wing_panel_1">
+      <origin xyz="-0.2675 0.463324 1.31" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.86 0.032 1.82" />
+        </geometry>
+      </collision>
+    <collision name="top_rail_1">
+      <origin xyz="-0.2675 0.463324 2.235" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.895 0.06 0.055" />
+        </geometry>
+      </collision>
+    <collision name="bottom_rail_1">
+      <origin xyz="-0.2675 0.463324 0.385" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.895 0.06 0.055" />
+        </geometry>
+      </collision>
+    <collision name="root_stile_1">
+      <origin xyz="-0.05125 0.0887676 1.31" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.095 0.07 1.92" />
+        </geometry>
+      </collision>
+    <collision name="outer_seal_1">
+      <origin xyz="-0.4825 0.835715 1.31" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.045 0.07 1.94" />
+        </geometry>
+      </collision>
+    <collision name="sweep_seal_1">
+      <origin xyz="-0.28375 0.491469 0.325" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.795 0.012 0.08" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wing_2">
+    <inertial>
+      <origin xyz="-0.2675 -0.463324 1.31" rpy="0 0 0" />
+      <mass value="24" />
+      <inertia ixx="8.0128" ixy="0" ixz="0" iyy="9.86245" iyz="0" izz="1.87525" />
+      </inertial>
+    <visual name="wing_panel_2">
+      <origin xyz="-0.2675 -0.463324 1.31" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.86 0.032 1.82" />
+        </geometry>
+      <material name="sealed_laminated_panel">
+        <color rgba="0.74 0.88 0.95 0.55" />
+        </material>
+      </visual>
+    <visual name="top_rail_2">
+      <origin xyz="-0.2675 -0.463324 2.235" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.895 0.06 0.055" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.72 0.73 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail_2">
+      <origin xyz="-0.2675 -0.463324 0.385" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.895 0.06 0.055" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.72 0.73 1" />
+        </material>
+      </visual>
+    <visual name="root_stile_2">
+      <origin xyz="-0.05125 -0.0887676 1.31" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.095 0.07 1.92" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.7 0.72 0.73 1" />
+        </material>
+      </visual>
+    <visual name="outer_seal_2">
+      <origin xyz="-0.4825 -0.835715 1.31" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.045 0.07 1.94" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="sweep_seal_2">
+      <origin xyz="-0.28375 -0.491469 0.325" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.795 0.012 0.08" />
+        </geometry>
+      <material name="black_epdm_seal">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <collision name="wing_panel_2">
+      <origin xyz="-0.2675 -0.463324 1.31" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.86 0.032 1.82" />
+        </geometry>
+      </collision>
+    <collision name="top_rail_2">
+      <origin xyz="-0.2675 -0.463324 2.235" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.895 0.06 0.055" />
+        </geometry>
+      </collision>
+    <collision name="bottom_rail_2">
+      <origin xyz="-0.2675 -0.463324 0.385" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.895 0.06 0.055" />
+        </geometry>
+      </collision>
+    <collision name="root_stile_2">
+      <origin xyz="-0.05125 -0.0887676 1.31" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.095 0.07 1.92" />
+        </geometry>
+      </collision>
+    <collision name="outer_seal_2">
+      <origin xyz="-0.4825 -0.835715 1.31" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.045 0.07 1.94" />
+        </geometry>
+      </collision>
+    <collision name="sweep_seal_2">
+      <origin xyz="-0.28375 -0.491469 0.325" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.795 0.012 0.08" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="hub_to_wing_0" type="fixed">
+    <parent link="wing_assembly" />
+    <child link="wing_0" />
+    </joint>
+  <joint name="hub_to_wing_1" type="fixed">
+    <parent link="wing_assembly" />
+    <child link="wing_1" />
+    </joint>
+  <joint name="hub_to_wing_2" type="fixed">
+    <parent link="wing_assembly" />
+    <child link="wing_2" />
+    </joint>
+  <joint name="drum_to_wings" type="continuous">
+    <parent link="drum_housing" />
+    <child link="wing_assembly" />
+    <axis xyz="0 0 1" />
+    <limit effort="160" velocity="0.65" />
+    </joint>
+  </robot>

@@ -1,0 +1,399 @@
+<robot name="wood_fired_oven">
+  <link name="oven_housing">
+    <visual name="masonry_vault">
+      <geometry>
+        <mesh filename="assets/meshes/masonry_vault.obj" />
+        </geometry>
+      <material name="warm_firebrick">
+        <color rgba="0.56 0.34 0.2 1" />
+        </material>
+      </visual>
+    <visual name="mouth_surround">
+      <geometry>
+        <mesh filename="assets/meshes/mouth_surround.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="soot_back">
+      <origin xyz="0 0.581 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/soot_back.obj" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.05 0.052 0.05 1" />
+        </material>
+      </visual>
+    <visual name="flue_stack">
+      <origin xyz="0 -0.12 1.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.38" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.05 0.052 0.05 1" />
+        </material>
+      </visual>
+    <visual name="axle_pin">
+      <origin xyz="0 -0.672 0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="1.22" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.05 0.052 0.05 1" />
+        </material>
+      </visual>
+    <visual name="axle_boss_neg">
+      <origin xyz="-0.56 -0.657 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.09 0.12" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="axle_boss_pos">
+      <origin xyz="0.56 -0.657 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.09 0.12" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="hearth_sill">
+      <origin xyz="0 -0.43 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="1.22 0.34 0.045" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.05 0.052 0.05 1" />
+        </material>
+      </visual>
+    <collision name="masonry_vault">
+      <geometry>
+        <mesh filename="assets/meshes/masonry_vault.obj" />
+        </geometry>
+      </collision>
+    <collision name="mouth_surround">
+      <geometry>
+        <mesh filename="assets/meshes/mouth_surround.obj" />
+        </geometry>
+      </collision>
+    <collision name="soot_back">
+      <origin xyz="0 0.581 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/soot_back.obj" />
+        </geometry>
+      </collision>
+    <collision name="flue_stack">
+      <origin xyz="0 -0.12 1.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="axle_pin">
+      <origin xyz="0 -0.672 0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="1.22" />
+        </geometry>
+      </collision>
+    <collision name="axle_boss_neg">
+      <origin xyz="-0.56 -0.657 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.09 0.12" />
+        </geometry>
+      </collision>
+    <collision name="axle_boss_pos">
+      <origin xyz="0.56 -0.657 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.09 0.12" />
+        </geometry>
+      </collision>
+    <collision name="hearth_sill">
+      <origin xyz="0 -0.43 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="1.22 0.34 0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="door">
+    <visual name="door_slab">
+      <origin xyz="0 -0.01 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/door_slab.obj" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.05 0.052 0.05 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_0">
+      <origin xyz="-0.36 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.18" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="hinge_strap_0">
+      <origin xyz="-0.36 -0.038 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.025 0.13" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_1">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.18" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="hinge_strap_1">
+      <origin xyz="0 -0.038 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.025 0.13" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_2">
+      <origin xyz="0.36 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.18" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="hinge_strap_2">
+      <origin xyz="0.36 -0.038 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.025 0.13" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="handle_bar">
+      <origin xyz="0 -0.096 0.44" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.72" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="handle_post_0">
+      <origin xyz="-0.29 -0.062 0.44" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.07" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="handle_post_1">
+      <origin xyz="0.29 -0.062 0.44" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.07" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="handle_finial_0">
+      <origin xyz="-0.39 -0.096 0.44" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.032" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="handle_finial_1">
+      <origin xyz="0.39 -0.096 0.44" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.032" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="rivet_0">
+      <origin xyz="-0.38 -0.046 0.22" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="rivet_1">
+      <origin xyz="0.38 -0.046 0.22" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="rivet_2">
+      <origin xyz="-0.42 -0.046 0.39" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="rivet_3">
+      <origin xyz="0.42 -0.046 0.39" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="rivet_4">
+      <origin xyz="-0.3 -0.046 0.665" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <visual name="rivet_5">
+      <origin xyz="0.3 -0.046 0.665" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.33 0.34 0.33 1" />
+        </material>
+      </visual>
+    <collision name="door_slab">
+      <origin xyz="0 -0.01 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/door_slab.obj" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_0">
+      <origin xyz="-0.36 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="hinge_strap_0">
+      <origin xyz="-0.36 -0.038 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.025 0.13" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_1">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="hinge_strap_1">
+      <origin xyz="0 -0.038 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.025 0.13" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_2">
+      <origin xyz="0.36 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="hinge_strap_2">
+      <origin xyz="0.36 -0.038 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.025 0.13" />
+        </geometry>
+      </collision>
+    <collision name="handle_bar">
+      <origin xyz="0 -0.096 0.44" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.72" />
+        </geometry>
+      </collision>
+    <collision name="handle_post_0">
+      <origin xyz="-0.29 -0.062 0.44" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="handle_post_1">
+      <origin xyz="0.29 -0.062 0.44" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="handle_finial_0">
+      <origin xyz="-0.39 -0.096 0.44" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.032" />
+        </geometry>
+      </collision>
+    <collision name="handle_finial_1">
+      <origin xyz="0.39 -0.096 0.44" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.032" />
+        </geometry>
+      </collision>
+    <collision name="rivet_0">
+      <origin xyz="-0.38 -0.046 0.22" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="rivet_1">
+      <origin xyz="0.38 -0.046 0.22" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="rivet_2">
+      <origin xyz="-0.42 -0.046 0.39" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="rivet_3">
+      <origin xyz="0.42 -0.046 0.39" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="rivet_4">
+      <origin xyz="-0.3 -0.046 0.665" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="rivet_5">
+      <origin xyz="0.3 -0.046 0.665" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="door_axle" type="revolute">
+    <origin xyz="0 -0.672 0.1" rpy="0 0 0" />
+    <parent link="oven_housing" />
+    <child link="door" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="1.2" lower="0" upper="1.75" />
+    </joint>
+  </robot>

@@ -1,0 +1,325 @@
+<robot name="mast_and_wrist_slide">
+  <material name="dark_steel">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.7 0.73 0.74 1" />
+    </material>
+  <material name="rail_chrome">
+    <color rgba="0.86 0.88 0.9 1" />
+    </material>
+  <material name="carriage_blue">
+    <color rgba="0.05 0.25 0.58 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.015 0.015 0.018 1" />
+    </material>
+  <material name="output_orange">
+    <color rgba="0.95 0.45 0.1 1" />
+    </material>
+  <link name="mast">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.36 0.04" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="backbone">
+      <origin xyz="0 0 0.54" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.26 1" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lower_rail_clamp">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.3 0.04" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.73 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_rail_clamp">
+      <origin xyz="0 0 1.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.3 0.04" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.73 0.74 1" />
+        </material>
+      </visual>
+    <visual name="rail_0">
+      <origin xyz="0.052 -0.085 0.56" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.92" />
+        </geometry>
+      <material name="rail_chrome">
+        <color rgba="0.86 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="rail_1">
+      <origin xyz="0.052 0.085 0.56" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.92" />
+        </geometry>
+      <material name="rail_chrome">
+        <color rgba="0.86 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="lead_screw">
+      <origin xyz="0.05 0 0.56" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.88" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.73 0.74 1" />
+        </material>
+      </visual>
+    <visual name="brace_0">
+      <origin xyz="-0.08 -0.1 0.18" rpy="0 0.55 0" />
+      <geometry>
+        <box size="0.16 0.04 0.3" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="brace_1">
+      <origin xyz="-0.08 0.1 0.18" rpy="0 0.55 0" />
+      <geometry>
+        <box size="0.16 0.04 0.3" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.36 0.04" />
+        </geometry>
+      </collision>
+    <collision name="backbone">
+      <origin xyz="0 0 0.54" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.26 1" />
+        </geometry>
+      </collision>
+    <collision name="lower_rail_clamp">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.3 0.04" />
+        </geometry>
+      </collision>
+    <collision name="upper_rail_clamp">
+      <origin xyz="0 0 1.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.3 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rail_0">
+      <origin xyz="0.052 -0.085 0.56" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.92" />
+        </geometry>
+      </collision>
+    <collision name="rail_1">
+      <origin xyz="0.052 0.085 0.56" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.92" />
+        </geometry>
+      </collision>
+    <collision name="lead_screw">
+      <origin xyz="0.05 0 0.56" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.88" />
+        </geometry>
+      </collision>
+    <collision name="brace_0">
+      <origin xyz="-0.08 -0.1 0.18" rpy="0 0.55 0" />
+      <geometry>
+        <box size="0.16 0.04 0.3" />
+        </geometry>
+      </collision>
+    <collision name="brace_1">
+      <origin xyz="-0.08 0.1 0.18" rpy="0 0.55 0" />
+      <geometry>
+        <box size="0.16 0.04 0.3" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carriage">
+    <visual name="body">
+      <origin xyz="0.038 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.076 0.245 0.18" />
+        </geometry>
+      <material name="carriage_blue">
+        <color rgba="0.05 0.25 0.58 1" />
+        </material>
+      </visual>
+    <visual name="bearing_pad_0">
+      <origin xyz="0.005 -0.085 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.052 0.16" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bearing_pad_1">
+      <origin xyz="0.005 0.085 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.052 0.16" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="clevis_ear_0">
+      <origin xyz="0.103 -0.12 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.03 0.095" />
+        </geometry>
+      <material name="carriage_blue">
+        <color rgba="0.05 0.25 0.58 1" />
+        </material>
+      </visual>
+    <visual name="clevis_ear_1">
+      <origin xyz="0.103 0.12 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.03 0.095" />
+        </geometry>
+      <material name="carriage_blue">
+        <color rgba="0.05 0.25 0.58 1" />
+        </material>
+      </visual>
+    <collision name="body">
+      <origin xyz="0.038 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.076 0.245 0.18" />
+        </geometry>
+      </collision>
+    <collision name="bearing_pad_0">
+      <origin xyz="0.005 -0.085 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.052 0.16" />
+        </geometry>
+      </collision>
+    <collision name="bearing_pad_1">
+      <origin xyz="0.005 0.085 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.052 0.16" />
+        </geometry>
+      </collision>
+    <collision name="clevis_ear_0">
+      <origin xyz="0.103 -0.12 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.03 0.095" />
+        </geometry>
+      </collision>
+    <collision name="clevis_ear_1">
+      <origin xyz="0.103 0.12 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.03 0.095" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="output_face">
+    <visual name="hinge_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.21" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.73 0.74 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0.032 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.1 0.05" />
+        </geometry>
+      <material name="output_orange">
+        <color rgba="0.95 0.45 0.1 1" />
+        </material>
+      </visual>
+    <visual name="face_plate">
+      <origin xyz="0.055 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.18 0.14" />
+        </geometry>
+      <material name="output_orange">
+        <color rgba="0.95 0.45 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_grip">
+      <origin xyz="0.071 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.15 0.01" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bottom_grip">
+      <origin xyz="0.071 0 -0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.15 0.01" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <collision name="hinge_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.21" />
+        </geometry>
+      </collision>
+    <collision name="hub">
+      <origin xyz="0.032 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.1 0.05" />
+        </geometry>
+      </collision>
+    <collision name="face_plate">
+      <origin xyz="0.055 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.18 0.14" />
+        </geometry>
+      </collision>
+    <collision name="top_grip">
+      <origin xyz="0.071 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.15 0.01" />
+        </geometry>
+      </collision>
+    <collision name="bottom_grip">
+      <origin xyz="0.071 0 -0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.15 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="mast_to_carriage" type="prismatic">
+    <origin xyz="0.065 0 0.25" rpy="0 0 0" />
+    <parent link="mast" />
+    <child link="carriage" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.25" lower="0" upper="0.55" />
+    </joint>
+  <joint name="carriage_to_face" type="revolute">
+    <origin xyz="0.103 0 0" rpy="0 0 0" />
+    <parent link="carriage" />
+    <child link="output_face" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="1.5" lower="-0.8" upper="0.8" />
+    </joint>
+  </robot>

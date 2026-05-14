@@ -1,0 +1,860 @@
+<robot name="premium_serial_robotic_arm">
+  <material name="matte_graphite">
+    <color rgba="0.045 0.047 0.052 1" />
+    </material>
+  <material name="satin_pearl">
+    <color rgba="0.78 0.8 0.78 1" />
+    </material>
+  <material name="warm_titanium">
+    <color rgba="0.55 0.52 0.47 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.011 0.012 1" />
+    </material>
+  <material name="dark_glass">
+    <color rgba="0.04 0.06 0.075 1" />
+    </material>
+  <material name="polished_bolt">
+    <color rgba="0.82 0.83 0.8 1" />
+    </material>
+  <link name="base">
+    <visual name="floor_plate">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.255" length="0.03" />
+        </geometry>
+      <material name="matte_graphite" />
+      </visual>
+    <visual name="satin_base_bevel">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.214" length="0.035" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="base_pedestal">
+      <origin xyz="0 0 0.092" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.055" />
+        </geometry>
+      <material name="matte_graphite" />
+      </visual>
+    <visual name="turntable_seam">
+      <origin xyz="0 0 0.117" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.186" length="0.006" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="anchor_bolt_0">
+      <origin xyz="0.168 0.168 0.033" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="polished_bolt" />
+      </visual>
+    <visual name="anchor_bolt_1">
+      <origin xyz="-0.168 0.168 0.033" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="polished_bolt" />
+      </visual>
+    <visual name="anchor_bolt_2">
+      <origin xyz="-0.168 -0.168 0.033" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="polished_bolt" />
+      </visual>
+    <visual name="anchor_bolt_3">
+      <origin xyz="0.168 -0.168 0.033" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="polished_bolt" />
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.255" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="satin_base_bevel">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.214" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="base_pedestal">
+      <origin xyz="0 0 0.092" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="turntable_seam">
+      <origin xyz="0 0 0.117" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.186" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_0">
+      <origin xyz="0.168 0.168 0.033" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_1">
+      <origin xyz="-0.168 0.168 0.033" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_2">
+      <origin xyz="-0.168 -0.168 0.033" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_3">
+      <origin xyz="0.168 -0.168 0.033" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shoulder">
+    <visual name="yaw_turntable">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.055" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="upper_yaw_seam">
+      <origin xyz="0 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.138" length="0.016" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="shoulder_core">
+      <origin xyz="0 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shoulder_core.obj" />
+        </geometry>
+      <material name="matte_graphite" />
+      </visual>
+    <visual name="shoulder_cheek_0">
+      <origin xyz="0 0.124 0.255" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shoulder_cheek_0.obj" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="shoulder_cheek_1">
+      <origin xyz="0 -0.124 0.255" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shoulder_cheek_1.obj" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="shoulder_bridge">
+      <origin xyz="0 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.286 0.03" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="shoulder_bushing_0">
+      <origin xyz="0 0.124 0.255" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.05" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="shoulder_bushing_1">
+      <origin xyz="0 -0.124 0.255" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.05" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="shoulder_outer_seam_0">
+      <origin xyz="0 0.151 0.255" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.073" length="0.006" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="shoulder_outer_seam_1">
+      <origin xyz="0 -0.151 0.255" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.073" length="0.006" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <collision name="yaw_turntable">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="upper_yaw_seam">
+      <origin xyz="0 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.138" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_core">
+      <origin xyz="0 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shoulder_core.obj" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_cheek_0">
+      <origin xyz="0 0.124 0.255" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shoulder_cheek_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_cheek_1">
+      <origin xyz="0 -0.124 0.255" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shoulder_cheek_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bridge">
+      <origin xyz="0 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.286 0.03" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bushing_0">
+      <origin xyz="0 0.124 0.255" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bushing_1">
+      <origin xyz="0 -0.124 0.255" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_outer_seam_0">
+      <origin xyz="0 0.151 0.255" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.073" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_outer_seam_1">
+      <origin xyz="0 -0.151 0.255" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.073" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_arm">
+    <visual name="shoulder_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.294" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="shoulder_collar">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.082" length="0.102" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="shoulder_inner_seam_0">
+      <origin xyz="0 0.056 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.011" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="shoulder_inner_seam_1">
+      <origin xyz="0 -0.056 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.011" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="upper_arm_shell">
+      <origin xyz="0.235 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_arm_shell.obj" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="shoulder_neck">
+      <origin xyz="0.055 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.106 0.076 0.062" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="elbow_bushing_0">
+      <origin xyz="0.48 0.108 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.042" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="elbow_bushing_1">
+      <origin xyz="0.48 -0.108 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.042" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="elbow_yoke_lug_0">
+      <origin xyz="0.432 0.071 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.034 0.075" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="elbow_yoke_lug_1">
+      <origin xyz="0.432 -0.071 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.034 0.075" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="upper_actuator_housing">
+      <origin xyz="0.235 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.25" />
+        </geometry>
+      <material name="matte_graphite" />
+      </visual>
+    <visual name="upper_actuator_cap_0">
+      <origin xyz="0.105 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.035" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="upper_actuator_cap_1">
+      <origin xyz="0.365 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.035" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="upper_actuator_mount_0">
+      <origin xyz="0.105 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.035" />
+        </geometry>
+      <material name="matte_graphite" />
+      </visual>
+    <visual name="upper_actuator_mount_1">
+      <origin xyz="0.365 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.035" />
+        </geometry>
+      <material name="matte_graphite" />
+      </visual>
+    <visual name="upper_side_seam_0">
+      <origin xyz="0.25 -0.047 0.048" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.006 0.012" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="upper_side_seam_1">
+      <origin xyz="0.25 0.047 0.048" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.006 0.012" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <collision name="shoulder_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.294" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_collar">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.082" length="0.102" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_inner_seam_0">
+      <origin xyz="0 0.056 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.011" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_inner_seam_1">
+      <origin xyz="0 -0.056 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.011" />
+        </geometry>
+      </collision>
+    <collision name="upper_arm_shell">
+      <origin xyz="0.235 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_arm_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_neck">
+      <origin xyz="0.055 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.106 0.076 0.062" />
+        </geometry>
+      </collision>
+    <collision name="elbow_bushing_0">
+      <origin xyz="0.48 0.108 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.042" />
+        </geometry>
+      </collision>
+    <collision name="elbow_bushing_1">
+      <origin xyz="0.48 -0.108 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.042" />
+        </geometry>
+      </collision>
+    <collision name="elbow_yoke_lug_0">
+      <origin xyz="0.432 0.071 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.034 0.075" />
+        </geometry>
+      </collision>
+    <collision name="elbow_yoke_lug_1">
+      <origin xyz="0.432 -0.071 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.034 0.075" />
+        </geometry>
+      </collision>
+    <collision name="upper_actuator_housing">
+      <origin xyz="0.235 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="upper_actuator_cap_0">
+      <origin xyz="0.105 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="upper_actuator_cap_1">
+      <origin xyz="0.365 0 -0.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="upper_actuator_mount_0">
+      <origin xyz="0.105 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.035" />
+        </geometry>
+      </collision>
+    <collision name="upper_actuator_mount_1">
+      <origin xyz="0.365 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.035" />
+        </geometry>
+      </collision>
+    <collision name="upper_side_seam_0">
+      <origin xyz="0.25 -0.047 0.048" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.006 0.012" />
+        </geometry>
+      </collision>
+    <collision name="upper_side_seam_1">
+      <origin xyz="0.25 0.047 0.048" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.006 0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="forearm">
+    <visual name="elbow_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.258" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="elbow_collar">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.09" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="forearm_shell">
+      <origin xyz="0.18 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/forearm_shell.obj" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="elbow_neck">
+      <origin xyz="0.045 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.065 0.055" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="wrist_bushing_0">
+      <origin xyz="0.38 0.082 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.036" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="wrist_bushing_1">
+      <origin xyz="0.38 -0.082 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.036" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="wrist_yoke_lug_0">
+      <origin xyz="0.337 0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.028 0.06" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="wrist_yoke_lug_1">
+      <origin xyz="0.337 -0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.028 0.06" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="forearm_actuator_housing">
+      <origin xyz="0.205 0 -0.069" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.196" />
+        </geometry>
+      <material name="matte_graphite" />
+      </visual>
+    <visual name="forearm_actuator_cap_0">
+      <origin xyz="0.098 0 -0.069" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.03" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="forearm_actuator_cap_1">
+      <origin xyz="0.312 0 -0.069" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.03" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="forearm_side_seam_0">
+      <origin xyz="0.205 -0.043 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.005 0.01" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="forearm_side_seam_1">
+      <origin xyz="0.205 0.043 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.005 0.01" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <collision name="elbow_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.258" />
+        </geometry>
+      </collision>
+    <collision name="elbow_collar">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="forearm_shell">
+      <origin xyz="0.18 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/forearm_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="elbow_neck">
+      <origin xyz="0.045 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.065 0.055" />
+        </geometry>
+      </collision>
+    <collision name="wrist_bushing_0">
+      <origin xyz="0.38 0.082 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.036" />
+        </geometry>
+      </collision>
+    <collision name="wrist_bushing_1">
+      <origin xyz="0.38 -0.082 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.036" />
+        </geometry>
+      </collision>
+    <collision name="wrist_yoke_lug_0">
+      <origin xyz="0.337 0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.028 0.06" />
+        </geometry>
+      </collision>
+    <collision name="wrist_yoke_lug_1">
+      <origin xyz="0.337 -0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.028 0.06" />
+        </geometry>
+      </collision>
+    <collision name="forearm_actuator_housing">
+      <origin xyz="0.205 0 -0.069" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.196" />
+        </geometry>
+      </collision>
+    <collision name="forearm_actuator_cap_0">
+      <origin xyz="0.098 0 -0.069" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="forearm_actuator_cap_1">
+      <origin xyz="0.312 0 -0.069" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="forearm_side_seam_0">
+      <origin xyz="0.205 -0.043 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.005 0.01" />
+        </geometry>
+      </collision>
+    <collision name="forearm_side_seam_1">
+      <origin xyz="0.205 0.043 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.005 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist">
+    <visual name="wrist_pitch_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.205" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="wrist_pitch_collar">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.078" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="wrist_cradle">
+      <origin xyz="0.065 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/wrist_cradle.obj" />
+        </geometry>
+      <material name="matte_graphite" />
+      </visual>
+    <visual name="roll_neck">
+      <origin xyz="0.122 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.052 0.052" />
+        </geometry>
+      <material name="matte_graphite" />
+      </visual>
+    <visual name="roll_bearing">
+      <origin xyz="0.155 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.07" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="roll_seam">
+      <origin xyz="0.114 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.054" length="0.01" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <collision name="wrist_pitch_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.205" />
+        </geometry>
+      </collision>
+    <collision name="wrist_pitch_collar">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.078" />
+        </geometry>
+      </collision>
+    <collision name="wrist_cradle">
+      <origin xyz="0.065 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/wrist_cradle.obj" />
+        </geometry>
+      </collision>
+    <collision name="roll_neck">
+      <origin xyz="0.122 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.052 0.052" />
+        </geometry>
+      </collision>
+    <collision name="roll_bearing">
+      <origin xyz="0.155 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="roll_seam">
+      <origin xyz="0.114 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.054" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tool_flange">
+    <visual name="roll_spindle">
+      <origin xyz="0.032 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.07" />
+        </geometry>
+      <material name="warm_titanium" />
+      </visual>
+    <visual name="mount_flange">
+      <origin xyz="0.077 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.024" />
+        </geometry>
+      <material name="satin_pearl" />
+      </visual>
+    <visual name="front_seal">
+      <origin xyz="0.092 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.006" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <visual name="flange_bolt_0">
+      <origin xyz="0.098 0.033 0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      <material name="polished_bolt" />
+      </visual>
+    <visual name="flange_bolt_1">
+      <origin xyz="0.098 -0.033 0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      <material name="polished_bolt" />
+      </visual>
+    <visual name="flange_bolt_2">
+      <origin xyz="0.098 -0.033 -0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      <material name="polished_bolt" />
+      </visual>
+    <visual name="flange_bolt_3">
+      <origin xyz="0.098 0.033 -0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      <material name="polished_bolt" />
+      </visual>
+    <collision name="roll_spindle">
+      <origin xyz="0.032 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="mount_flange">
+      <origin xyz="0.077 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="front_seal">
+      <origin xyz="0.092 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="flange_bolt_0">
+      <origin xyz="0.098 0.033 0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="flange_bolt_1">
+      <origin xyz="0.098 -0.033 0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="flange_bolt_2">
+      <origin xyz="0.098 -0.033 -0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="flange_bolt_3">
+      <origin xyz="0.098 0.033 -0.033" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_yaw" type="revolute">
+    <origin xyz="0 0 0.12" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="shoulder" />
+    <axis xyz="0 0 1" />
+    <limit effort="260" velocity="1.25" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="shoulder_pitch" type="revolute">
+    <origin xyz="0 0 0.255" rpy="0 0 0" />
+    <parent link="shoulder" />
+    <child link="upper_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="210" velocity="1.2" lower="-0.85" upper="1.55" />
+    </joint>
+  <joint name="elbow_pitch" type="revolute">
+    <origin xyz="0.48 0 0" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="forearm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="150" velocity="1.6" lower="-1.95" upper="1.15" />
+    </joint>
+  <joint name="wrist_pitch" type="revolute">
+    <origin xyz="0.38 0 0" rpy="0 0 0" />
+    <parent link="forearm" />
+    <child link="wrist" />
+    <axis xyz="0 -1 0" />
+    <limit effort="72" velocity="2.2" lower="-1.75" upper="1.75" />
+    </joint>
+  <joint name="wrist_roll" type="revolute">
+    <origin xyz="0.155 0 0" rpy="0 0 0" />
+    <parent link="wrist" />
+    <child link="tool_flange" />
+    <axis xyz="1 0 0" />
+    <limit effort="42" velocity="3.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

@@ -1,0 +1,370 @@
+<robot name="bedroom_tower_fan">
+  <material name="warm_white_plastic">
+    <color rgba="0.86 0.84 0.78 1" />
+    </material>
+  <material name="satin_gray_plastic">
+    <color rgba="0.38 0.4 0.42 1" />
+    </material>
+  <material name="charcoal_grille">
+    <color rgba="0.035 0.038 0.042 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.015 0.015 0.016 1" />
+    </material>
+  <material name="printed_white">
+    <color rgba="0.95 0.95 0.9 1" />
+    </material>
+  <material name="smoked_blower_plastic">
+    <color rgba="0.14 0.17 0.19 0.72" />
+    </material>
+  <link name="base">
+    <visual name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/low_oval_base.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="turntable_bearing">
+      <origin xyz="0 0 0.053" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.006" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_pad">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_shadow_pad.obj" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.015 0.015 0.016 1" />
+        </material>
+      </visual>
+    <collision name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/low_oval_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="turntable_bearing">
+      <origin xyz="0 0 0.053" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_pad">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_shadow_pad.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="body">
+    <visual name="lower_collar">
+      <geometry>
+        <mesh filename="assets/meshes/lower_rotating_collar.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_body_shell.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="front_grille">
+      <origin xyz="0 -0.058 0.42" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_slotted_grille.obj" />
+        </geometry>
+      <material name="charcoal_grille">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="top_cap">
+      <geometry>
+        <mesh filename="assets/meshes/top_cap_handle.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="control_deck">
+      <geometry>
+        <mesh filename="assets/meshes/separate_control_deck.obj" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="timer_shaft_collar">
+      <origin xyz="-0.035 -0.022 0.879" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      <material name="charcoal_grille">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="speed_shaft_collar">
+      <origin xyz="0.036 -0.022 0.879" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.006" />
+        </geometry>
+      <material name="charcoal_grille">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="timer_tick">
+      <origin xyz="-0.035 -0.052 0.8762" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.014 0.0015" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.95 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="speed_tick">
+      <origin xyz="0.036 -0.049 0.8762" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.014 0.0015" />
+        </geometry>
+      <material name="printed_white">
+        <color rgba="0.95 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="lower_blower_rib">
+      <origin xyz="0 0.026 0.067" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.056 0.006" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="upper_blower_rib">
+      <origin xyz="0 0.026 0.773" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.056 0.006" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="lower_blower_bearing">
+      <origin xyz="0 0 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="upper_blower_bearing">
+      <origin xyz="0 0 0.773" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <collision name="lower_collar">
+      <geometry>
+        <mesh filename="assets/meshes/lower_rotating_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_body_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_grille">
+      <origin xyz="0 -0.058 0.42" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_slotted_grille.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_cap">
+      <geometry>
+        <mesh filename="assets/meshes/top_cap_handle.obj" />
+        </geometry>
+      </collision>
+    <collision name="control_deck">
+      <geometry>
+        <mesh filename="assets/meshes/separate_control_deck.obj" />
+        </geometry>
+      </collision>
+    <collision name="timer_shaft_collar">
+      <origin xyz="-0.035 -0.022 0.879" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="speed_shaft_collar">
+      <origin xyz="0.036 -0.022 0.879" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="timer_tick">
+      <origin xyz="-0.035 -0.052 0.8762" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.014 0.0015" />
+        </geometry>
+      </collision>
+    <collision name="speed_tick">
+      <origin xyz="0.036 -0.049 0.8762" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.014 0.0015" />
+        </geometry>
+      </collision>
+    <collision name="lower_blower_rib">
+      <origin xyz="0 0.026 0.067" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.056 0.006" />
+        </geometry>
+      </collision>
+    <collision name="upper_blower_rib">
+      <origin xyz="0 0.026 0.773" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.056 0.006" />
+        </geometry>
+      </collision>
+    <collision name="lower_blower_bearing">
+      <origin xyz="0 0 0.067" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="upper_blower_bearing">
+      <origin xyz="0 0 0.773" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blower">
+    <visual name="blower_wheel">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_blower_wheel.obj" />
+        </geometry>
+      <material name="smoked_blower_plastic">
+        <color rgba="0.14 0.17 0.19 0.72" />
+        </material>
+      </visual>
+    <visual name="blower_shaft">
+      <geometry>
+        <cylinder radius="0.0045" length="0.7" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="lower_shaft_hub">
+      <origin xyz="0 0 -0.315" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.01" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="upper_shaft_hub">
+      <origin xyz="0 0 0.315" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.01" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <collision name="blower_wheel">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_blower_wheel.obj" />
+        </geometry>
+      </collision>
+    <collision name="blower_shaft">
+      <geometry>
+        <cylinder radius="0.0045" length="0.7" />
+        </geometry>
+      </collision>
+    <collision name="lower_shaft_hub">
+      <origin xyz="0 0 -0.315" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="upper_shaft_hub">
+      <origin xyz="0 0 0.315" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="timer_dial">
+    <visual name="timer_cap">
+      <geometry>
+        <mesh filename="assets/meshes/timer_dial_cap.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <collision name="timer_cap">
+      <geometry>
+        <mesh filename="assets/meshes/timer_dial_cap.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="speed_dial">
+    <visual name="speed_cap">
+      <geometry>
+        <mesh filename="assets/meshes/speed_dial_cap.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <collision name="speed_cap">
+      <geometry>
+        <mesh filename="assets/meshes/speed_dial_cap.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_body" type="revolute">
+    <origin xyz="0 0 0.056" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="body" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.2" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="body_to_blower" type="continuous">
+    <origin xyz="0 0 0.42" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="blower" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="80" />
+    </joint>
+  <joint name="body_to_timer_dial" type="continuous">
+    <origin xyz="-0.035 -0.022 0.882" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="timer_dial" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.2" velocity="6" />
+    </joint>
+  <joint name="body_to_speed_dial" type="continuous">
+    <origin xyz="0.036 -0.022 0.882" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="speed_dial" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.2" velocity="8" />
+    </joint>
+  </robot>

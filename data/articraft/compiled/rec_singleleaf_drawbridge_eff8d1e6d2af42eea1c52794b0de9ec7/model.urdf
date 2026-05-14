@@ -1,0 +1,993 @@
+<robot name="single_leaf_drawbridge">
+  <material name="painted_steel">
+    <color rgba="0.18 0.21 0.23 1" />
+    </material>
+  <material name="galvanized">
+    <color rgba="0.64 0.67 0.68 1" />
+    </material>
+  <material name="dark_machined">
+    <color rgba="0.07 0.08 0.08 1" />
+    </material>
+  <material name="safety_yellow">
+    <color rgba="0.95 0.71 0.12 1" />
+    </material>
+  <material name="wear_steel">
+    <color rgba="0.5 0.48 0.43 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <material name="maintenance_blue">
+    <color rgba="0.1 0.28 0.45 1" />
+    </material>
+  <link name="support_frame">
+    <inertial>
+      <origin xyz="-0.2 0 0.82" rpy="0 0 0" />
+      <mass value="5200" />
+      <inertia ixx="6337.5" ixy="0" ixz="0" iyy="2432.08" iyz="0" izz="6410.08" />
+      </inertial>
+    <visual name="base_skid">
+      <origin xyz="-0.36 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="1.7 3.45 0.2" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="service_deck">
+      <origin xyz="-0.7 0 0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 2.85 0.08" />
+        </geometry>
+      <material name="galvanized" />
+      </visual>
+    <visual name="rear_cross_web">
+      <origin xyz="-0.3 0 0.51" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 2.7 0.72" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="low_cross_tie">
+      <origin xyz="-0.72 0 0.175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 2.9 0.15" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="rail_post_4">
+      <origin xyz="-1.02 -1.28 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.06 0.66" />
+        </geometry>
+      <material name="safety_yellow" />
+      </visual>
+    <visual name="rail_post_5">
+      <origin xyz="-1.02 -0.43 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.06 0.66" />
+        </geometry>
+      <material name="safety_yellow" />
+      </visual>
+    <visual name="rail_post_6">
+      <origin xyz="-1.02 0.43 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.06 0.66" />
+        </geometry>
+      <material name="safety_yellow" />
+      </visual>
+    <visual name="rail_post_7">
+      <origin xyz="-1.02 1.28 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.06 0.66" />
+        </geometry>
+      <material name="safety_yellow" />
+      </visual>
+    <visual name="top_guard_rail">
+      <origin xyz="-1.02 0 1.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 2.74 0.07" />
+        </geometry>
+      <material name="safety_yellow" />
+      </visual>
+    <visual name="mid_guard_rail">
+      <origin xyz="-1.02 0 1.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 2.74 0.06" />
+        </geometry>
+      <material name="safety_yellow" />
+      </visual>
+    <visual name="side_0_pedestal">
+      <origin xyz="0 -1.3 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.46 0.56" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="side_0_lower_bearing">
+      <origin xyz="0 -1.3 0.69" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.52 0.22" />
+        </geometry>
+      <material name="galvanized" />
+      </visual>
+    <visual name="side_0_lower_liner">
+      <origin xyz="0 -1.3 0.8" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.42 0.04" />
+        </geometry>
+      <material name="wear_steel" />
+      </visual>
+    <visual name="side_0_rear_cheek">
+      <origin xyz="-0.35 -1.3 1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.52 0.62" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="side_0_front_cheek">
+      <origin xyz="0.35 -1.3 1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.52 0.62" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="side_0_split_cap">
+      <origin xyz="0 -1.3 1.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.52 0.22" />
+        </geometry>
+      <material name="galvanized" />
+      </visual>
+    <visual name="side_0_cap_cover">
+      <origin xyz="0 -1.3 1.465" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.4 0.035" />
+        </geometry>
+      <material name="maintenance_blue" />
+      </visual>
+    <visual name="side_0_cap_bolt_-0.24_-0.15">
+      <origin xyz="-0.24 -1.45 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="side_0_cap_bolt_-0.24_0.15">
+      <origin xyz="-0.24 -1.15 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="side_0_cap_bolt_0.24_-0.15">
+      <origin xyz="0.24 -1.45 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="side_0_cap_bolt_0.24_0.15">
+      <origin xyz="0.24 -1.15 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="side_0_grease_stem">
+      <origin xyz="0 -1.3 1.532" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.1" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="side_0_grease_cap">
+      <origin xyz="0 -1.3 1.598" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.035" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="side_1_pedestal">
+      <origin xyz="0 1.3 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.46 0.56" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="side_1_lower_bearing">
+      <origin xyz="0 1.3 0.69" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.52 0.22" />
+        </geometry>
+      <material name="galvanized" />
+      </visual>
+    <visual name="side_1_lower_liner">
+      <origin xyz="0 1.3 0.8" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.42 0.04" />
+        </geometry>
+      <material name="wear_steel" />
+      </visual>
+    <visual name="side_1_rear_cheek">
+      <origin xyz="-0.35 1.3 1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.52 0.62" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="side_1_front_cheek">
+      <origin xyz="0.35 1.3 1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.52 0.62" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="side_1_split_cap">
+      <origin xyz="0 1.3 1.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.52 0.22" />
+        </geometry>
+      <material name="galvanized" />
+      </visual>
+    <visual name="side_1_cap_cover">
+      <origin xyz="0 1.3 1.465" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.4 0.035" />
+        </geometry>
+      <material name="maintenance_blue" />
+      </visual>
+    <visual name="side_1_cap_bolt_-0.24_-0.15">
+      <origin xyz="-0.24 1.15 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="side_1_cap_bolt_-0.24_0.15">
+      <origin xyz="-0.24 1.45 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="side_1_cap_bolt_0.24_-0.15">
+      <origin xyz="0.24 1.15 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="side_1_cap_bolt_0.24_0.15">
+      <origin xyz="0.24 1.45 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="side_1_grease_stem">
+      <origin xyz="0 1.3 1.532" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.1" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="side_1_grease_cap">
+      <origin xyz="0 1.3 1.598" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.035" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <collision name="base_skid">
+      <origin xyz="-0.36 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="1.7 3.45 0.2" />
+        </geometry>
+      </collision>
+    <collision name="service_deck">
+      <origin xyz="-0.7 0 0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 2.85 0.08" />
+        </geometry>
+      </collision>
+    <collision name="rear_cross_web">
+      <origin xyz="-0.3 0 0.51" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 2.7 0.72" />
+        </geometry>
+      </collision>
+    <collision name="low_cross_tie">
+      <origin xyz="-0.72 0 0.175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 2.9 0.15" />
+        </geometry>
+      </collision>
+    <collision name="rail_post_4">
+      <origin xyz="-1.02 -1.28 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.06 0.66" />
+        </geometry>
+      </collision>
+    <collision name="rail_post_5">
+      <origin xyz="-1.02 -0.43 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.06 0.66" />
+        </geometry>
+      </collision>
+    <collision name="rail_post_6">
+      <origin xyz="-1.02 0.43 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.06 0.66" />
+        </geometry>
+      </collision>
+    <collision name="rail_post_7">
+      <origin xyz="-1.02 1.28 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.06 0.66" />
+        </geometry>
+      </collision>
+    <collision name="top_guard_rail">
+      <origin xyz="-1.02 0 1.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 2.74 0.07" />
+        </geometry>
+      </collision>
+    <collision name="mid_guard_rail">
+      <origin xyz="-1.02 0 1.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 2.74 0.06" />
+        </geometry>
+      </collision>
+    <collision name="side_0_pedestal">
+      <origin xyz="0 -1.3 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.46 0.56" />
+        </geometry>
+      </collision>
+    <collision name="side_0_lower_bearing">
+      <origin xyz="0 -1.3 0.69" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.52 0.22" />
+        </geometry>
+      </collision>
+    <collision name="side_0_lower_liner">
+      <origin xyz="0 -1.3 0.8" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.42 0.04" />
+        </geometry>
+      </collision>
+    <collision name="side_0_rear_cheek">
+      <origin xyz="-0.35 -1.3 1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.52 0.62" />
+        </geometry>
+      </collision>
+    <collision name="side_0_front_cheek">
+      <origin xyz="0.35 -1.3 1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.52 0.62" />
+        </geometry>
+      </collision>
+    <collision name="side_0_split_cap">
+      <origin xyz="0 -1.3 1.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.52 0.22" />
+        </geometry>
+      </collision>
+    <collision name="side_0_cap_cover">
+      <origin xyz="0 -1.3 1.465" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.4 0.035" />
+        </geometry>
+      </collision>
+    <collision name="side_0_cap_bolt_-0.24_-0.15">
+      <origin xyz="-0.24 -1.45 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="side_0_cap_bolt_-0.24_0.15">
+      <origin xyz="-0.24 -1.15 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="side_0_cap_bolt_0.24_-0.15">
+      <origin xyz="0.24 -1.45 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="side_0_cap_bolt_0.24_0.15">
+      <origin xyz="0.24 -1.15 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="side_0_grease_stem">
+      <origin xyz="0 -1.3 1.532" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="side_0_grease_cap">
+      <origin xyz="0 -1.3 1.598" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="side_1_pedestal">
+      <origin xyz="0 1.3 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.46 0.56" />
+        </geometry>
+      </collision>
+    <collision name="side_1_lower_bearing">
+      <origin xyz="0 1.3 0.69" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.52 0.22" />
+        </geometry>
+      </collision>
+    <collision name="side_1_lower_liner">
+      <origin xyz="0 1.3 0.8" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.42 0.04" />
+        </geometry>
+      </collision>
+    <collision name="side_1_rear_cheek">
+      <origin xyz="-0.35 1.3 1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.52 0.62" />
+        </geometry>
+      </collision>
+    <collision name="side_1_front_cheek">
+      <origin xyz="0.35 1.3 1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.52 0.62" />
+        </geometry>
+      </collision>
+    <collision name="side_1_split_cap">
+      <origin xyz="0 1.3 1.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.52 0.22" />
+        </geometry>
+      </collision>
+    <collision name="side_1_cap_cover">
+      <origin xyz="0 1.3 1.465" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.4 0.035" />
+        </geometry>
+      </collision>
+    <collision name="side_1_cap_bolt_-0.24_-0.15">
+      <origin xyz="-0.24 1.15 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="side_1_cap_bolt_-0.24_0.15">
+      <origin xyz="-0.24 1.45 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="side_1_cap_bolt_0.24_-0.15">
+      <origin xyz="0.24 1.15 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="side_1_cap_bolt_0.24_0.15">
+      <origin xyz="0.24 1.45 1.503" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="side_1_grease_stem">
+      <origin xyz="0 1.3 1.532" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="side_1_grease_cap">
+      <origin xyz="0 1.3 1.598" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.035" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bridge_leaf">
+    <inertial>
+      <origin xyz="2.75 0 -0.08" rpy="0 0 0" />
+      <mass value="3800" />
+      <inertia ixx="1492.29" ixy="0" ixz="0" iyy="9674.96" iyz="0" izz="10975.7" />
+      </inertial>
+    <visual name="trunnion_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="3.08" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="torque_tube">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="1.8" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="deck_plate">
+      <origin xyz="2.75 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="5.3 2.04 0.16" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="girder_0">
+      <origin xyz="2.82 -0.72 -0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="5.15 0.18 0.34" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="girder_1">
+      <origin xyz="2.82 0.72 -0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="5.15 0.18 0.34" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="crossmember_0.35">
+      <origin xyz="0.35 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 2 0.24" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="crossmember_1.25">
+      <origin xyz="1.25 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 2 0.24" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="crossmember_2.15">
+      <origin xyz="2.15 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 2 0.24" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="crossmember_3.05">
+      <origin xyz="3.05 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 2 0.24" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="crossmember_3.95">
+      <origin xyz="3.95 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 2 0.24" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="crossmember_4.85">
+      <origin xyz="4.85 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 2 0.24" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="hinge_web_-0.84">
+      <origin xyz="0.2 -0.84 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.09 0.34" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="hinge_web_-0.42">
+      <origin xyz="0.2 -0.42 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.09 0.34" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="hinge_web_0.0">
+      <origin xyz="0.2 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.09 0.34" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="hinge_web_0.42">
+      <origin xyz="0.2 0.42 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.09 0.34" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="hinge_web_0.84">
+      <origin xyz="0.2 0.84 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.09 0.34" />
+        </geometry>
+      <material name="painted_steel" />
+      </visual>
+    <visual name="side_curb_-0.92">
+      <origin xyz="2.98 -0.92 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="4.65 0.12 0.22" />
+        </geometry>
+      <material name="safety_yellow" />
+      </visual>
+    <visual name="side_curb_0.92">
+      <origin xyz="2.98 0.92 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="4.65 0.12 0.22" />
+        </geometry>
+      <material name="safety_yellow" />
+      </visual>
+    <visual name="replaceable_wear_lane_-0.45">
+      <origin xyz="2.95 -0.45 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="4.6 0.34 0.035" />
+        </geometry>
+      <material name="wear_steel" />
+      </visual>
+    <visual name="replaceable_wear_lane_0.45">
+      <origin xyz="2.95 0.45 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="4.6 0.34 0.035" />
+        </geometry>
+      <material name="wear_steel" />
+      </visual>
+    <visual name="wear_bolt_1.0_-0.58">
+      <origin xyz="1 -0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_1.0_-0.32">
+      <origin xyz="1 -0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_1.0_0.32">
+      <origin xyz="1 0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_1.0_0.58">
+      <origin xyz="1 0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_2.05_-0.58">
+      <origin xyz="2.05 -0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_2.05_-0.32">
+      <origin xyz="2.05 -0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_2.05_0.32">
+      <origin xyz="2.05 0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_2.05_0.58">
+      <origin xyz="2.05 0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_3.1_-0.58">
+      <origin xyz="3.1 -0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_3.1_-0.32">
+      <origin xyz="3.1 -0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_3.1_0.32">
+      <origin xyz="3.1 0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_3.1_0.58">
+      <origin xyz="3.1 0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_4.15_-0.58">
+      <origin xyz="4.15 -0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_4.15_-0.32">
+      <origin xyz="4.15 -0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_4.15_0.32">
+      <origin xyz="4.15 0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="wear_bolt_4.15_0.58">
+      <origin xyz="4.15 0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="dark_machined" />
+      </visual>
+    <visual name="nose_bumper">
+      <origin xyz="5.35 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 1.72 0.14" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <collision name="trunnion_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="3.08" />
+        </geometry>
+      </collision>
+    <collision name="torque_tube">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="1.8" />
+        </geometry>
+      </collision>
+    <collision name="deck_plate">
+      <origin xyz="2.75 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="5.3 2.04 0.16" />
+        </geometry>
+      </collision>
+    <collision name="girder_0">
+      <origin xyz="2.82 -0.72 -0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="5.15 0.18 0.34" />
+        </geometry>
+      </collision>
+    <collision name="girder_1">
+      <origin xyz="2.82 0.72 -0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="5.15 0.18 0.34" />
+        </geometry>
+      </collision>
+    <collision name="crossmember_0.35">
+      <origin xyz="0.35 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 2 0.24" />
+        </geometry>
+      </collision>
+    <collision name="crossmember_1.25">
+      <origin xyz="1.25 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 2 0.24" />
+        </geometry>
+      </collision>
+    <collision name="crossmember_2.15">
+      <origin xyz="2.15 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 2 0.24" />
+        </geometry>
+      </collision>
+    <collision name="crossmember_3.05">
+      <origin xyz="3.05 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 2 0.24" />
+        </geometry>
+      </collision>
+    <collision name="crossmember_3.95">
+      <origin xyz="3.95 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 2 0.24" />
+        </geometry>
+      </collision>
+    <collision name="crossmember_4.85">
+      <origin xyz="4.85 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 2 0.24" />
+        </geometry>
+      </collision>
+    <collision name="hinge_web_-0.84">
+      <origin xyz="0.2 -0.84 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.09 0.34" />
+        </geometry>
+      </collision>
+    <collision name="hinge_web_-0.42">
+      <origin xyz="0.2 -0.42 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.09 0.34" />
+        </geometry>
+      </collision>
+    <collision name="hinge_web_0.0">
+      <origin xyz="0.2 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.09 0.34" />
+        </geometry>
+      </collision>
+    <collision name="hinge_web_0.42">
+      <origin xyz="0.2 0.42 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.09 0.34" />
+        </geometry>
+      </collision>
+    <collision name="hinge_web_0.84">
+      <origin xyz="0.2 0.84 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.09 0.34" />
+        </geometry>
+      </collision>
+    <collision name="side_curb_-0.92">
+      <origin xyz="2.98 -0.92 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="4.65 0.12 0.22" />
+        </geometry>
+      </collision>
+    <collision name="side_curb_0.92">
+      <origin xyz="2.98 0.92 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="4.65 0.12 0.22" />
+        </geometry>
+      </collision>
+    <collision name="replaceable_wear_lane_-0.45">
+      <origin xyz="2.95 -0.45 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="4.6 0.34 0.035" />
+        </geometry>
+      </collision>
+    <collision name="replaceable_wear_lane_0.45">
+      <origin xyz="2.95 0.45 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="4.6 0.34 0.035" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_1.0_-0.58">
+      <origin xyz="1 -0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_1.0_-0.32">
+      <origin xyz="1 -0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_1.0_0.32">
+      <origin xyz="1 0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_1.0_0.58">
+      <origin xyz="1 0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_2.05_-0.58">
+      <origin xyz="2.05 -0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_2.05_-0.32">
+      <origin xyz="2.05 -0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_2.05_0.32">
+      <origin xyz="2.05 0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_2.05_0.58">
+      <origin xyz="2.05 0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_3.1_-0.58">
+      <origin xyz="3.1 -0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_3.1_-0.32">
+      <origin xyz="3.1 -0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_3.1_0.32">
+      <origin xyz="3.1 0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_3.1_0.58">
+      <origin xyz="3.1 0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_4.15_-0.58">
+      <origin xyz="4.15 -0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_4.15_-0.32">
+      <origin xyz="4.15 -0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_4.15_0.32">
+      <origin xyz="4.15 0.32 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="wear_bolt_4.15_0.58">
+      <origin xyz="4.15 0.58 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="nose_bumper">
+      <origin xyz="5.35 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 1.72 0.14" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="leaf_pivot" type="revolute">
+    <origin xyz="0 0 1" rpy="0 0 0" />
+    <parent link="support_frame" />
+    <child link="bridge_leaf" />
+    <axis xyz="0 -1 0" />
+    <limit effort="85000" velocity="0.18" lower="0" upper="1.2" />
+    </joint>
+  </robot>

@@ -1,0 +1,475 @@
+<robot name="slim_household_tower_fan">
+  <material name="warm_white">
+    <color rgba="0.86 0.86 0.8 1" />
+    </material>
+  <material name="pearl_white">
+    <color rgba="0.96 0.95 0.9 1" />
+    </material>
+  <material name="satin_black">
+    <color rgba="0.025 0.027 0.03 1" />
+    </material>
+  <material name="dark_graphite">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="soft_gray">
+    <color rgba="0.52 0.54 0.55 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.015 0.014 0.013 1" />
+    </material>
+  <link name="base">
+    <visual name="rounded_base">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_base.obj" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot">
+      <origin xyz="0 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rubber_foot.obj" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="oscillation_bearing">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.01" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <collision name="rounded_base">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot">
+      <origin xyz="0 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rubber_foot.obj" />
+        </geometry>
+      </collision>
+    <collision name="oscillation_bearing">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="body">
+    <visual name="turntable_neck">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.032" />
+        </geometry>
+      <material name="pearl_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="turntable_shadow">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.068" length="0.006" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="side_stile_0">
+      <origin xyz="-0.066 0 0.502" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.099 0.94" />
+        </geometry>
+      <material name="pearl_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="side_stile_1">
+      <origin xyz="0.066 0 0.502" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.099 0.94" />
+        </geometry>
+      <material name="pearl_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="rounded_corner_0_0">
+      <origin xyz="-0.067 -0.0445 0.502" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.94" />
+        </geometry>
+      <material name="pearl_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="rounded_corner_0_1">
+      <origin xyz="-0.067 0.0445 0.502" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.94" />
+        </geometry>
+      <material name="pearl_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="rounded_corner_1_0">
+      <origin xyz="0.067 -0.0445 0.502" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.94" />
+        </geometry>
+      <material name="pearl_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="rounded_corner_1_1">
+      <origin xyz="0.067 0.0445 0.502" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.94" />
+        </geometry>
+      <material name="pearl_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="lower_cap">
+      <origin xyz="0 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_cap.obj" />
+        </geometry>
+      <material name="pearl_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="top_cap">
+      <origin xyz="0 0 0.932" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_cap.obj" />
+        </geometry>
+      <material name="pearl_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="rear_shell_panel">
+      <origin xyz="0 0.0585 0.512" rpy="0 0 0" />
+      <geometry>
+        <box size="0.116 0.006 0.84" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="front_grille">
+      <origin xyz="0 -0.0685 0.477" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_grille.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="grille_center_spine">
+      <origin xyz="0 -0.0735 0.477" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.01 0.76" />
+        </geometry>
+      <material name="soft_gray">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="upper_shaft_bearing">
+      <origin xyz="0 0 0.846" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.008" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="bearing_strut_0">
+      <origin xyz="0.01 0 0.875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.05" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="bearing_strut_1">
+      <origin xyz="-0.01 0 0.875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.05" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="dial_socket_0">
+      <origin xyz="-0.036 0.02 0.97325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.0025" />
+        </geometry>
+      <material name="soft_gray">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="dial_socket_1">
+      <origin xyz="0.036 0.02 0.97325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.0025" />
+        </geometry>
+      <material name="soft_gray">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <collision name="turntable_neck">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="turntable_shadow">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.068" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="side_stile_0">
+      <origin xyz="-0.066 0 0.502" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.099 0.94" />
+        </geometry>
+      </collision>
+    <collision name="side_stile_1">
+      <origin xyz="0.066 0 0.502" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.099 0.94" />
+        </geometry>
+      </collision>
+    <collision name="rounded_corner_0_0">
+      <origin xyz="-0.067 -0.0445 0.502" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.94" />
+        </geometry>
+      </collision>
+    <collision name="rounded_corner_0_1">
+      <origin xyz="-0.067 0.0445 0.502" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.94" />
+        </geometry>
+      </collision>
+    <collision name="rounded_corner_1_0">
+      <origin xyz="0.067 -0.0445 0.502" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.94" />
+        </geometry>
+      </collision>
+    <collision name="rounded_corner_1_1">
+      <origin xyz="0.067 0.0445 0.502" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.94" />
+        </geometry>
+      </collision>
+    <collision name="lower_cap">
+      <origin xyz="0 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_cap">
+      <origin xyz="0 0 0.932" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_shell_panel">
+      <origin xyz="0 0.0585 0.512" rpy="0 0 0" />
+      <geometry>
+        <box size="0.116 0.006 0.84" />
+        </geometry>
+      </collision>
+    <collision name="front_grille">
+      <origin xyz="0 -0.0685 0.477" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_grille.obj" />
+        </geometry>
+      </collision>
+    <collision name="grille_center_spine">
+      <origin xyz="0 -0.0735 0.477" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.01 0.76" />
+        </geometry>
+      </collision>
+    <collision name="upper_shaft_bearing">
+      <origin xyz="0 0 0.846" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="bearing_strut_0">
+      <origin xyz="0.01 0 0.875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.05" />
+        </geometry>
+      </collision>
+    <collision name="bearing_strut_1">
+      <origin xyz="-0.01 0 0.875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.02 0.05" />
+        </geometry>
+      </collision>
+    <collision name="dial_socket_0">
+      <origin xyz="-0.036 0.02 0.97325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="dial_socket_1">
+      <origin xyz="0.036 0.02 0.97325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.0025" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blower_wheel">
+    <visual name="vertical_blower_wheel">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_blower_wheel.obj" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="center_shaft">
+      <geometry>
+        <cylinder radius="0.005" length="0.73" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="shaft_hub">
+      <geometry>
+        <cylinder radius="0.022" length="0.014" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <collision name="vertical_blower_wheel">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_blower_wheel.obj" />
+        </geometry>
+      </collision>
+    <collision name="center_shaft">
+      <geometry>
+        <cylinder radius="0.005" length="0.73" />
+        </geometry>
+      </collision>
+    <collision name="shaft_hub">
+      <geometry>
+        <cylinder radius="0.022" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dial_0">
+    <visual name="knurled_dial">
+      <geometry>
+        <mesh filename="assets/meshes/knurled_dial_0.obj" />
+        </geometry>
+      <material name="soft_gray">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <collision name="knurled_dial">
+      <geometry>
+        <mesh filename="assets/meshes/knurled_dial_0.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dial_1">
+    <visual name="knurled_dial">
+      <geometry>
+        <mesh filename="assets/meshes/knurled_dial_1.obj" />
+        </geometry>
+      <material name="soft_gray">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <collision name="knurled_dial">
+      <geometry>
+        <mesh filename="assets/meshes/knurled_dial_1.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="osc_button">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.008" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="button_stem">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="button_stem">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_body" type="revolute">
+    <origin xyz="0 0 0.055" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="body" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="1.4" lower="-0.78" upper="0.78" />
+    </joint>
+  <joint name="body_to_blower" type="continuous">
+    <origin xyz="0 0 0.477" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="blower_wheel" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="45" />
+    </joint>
+  <joint name="body_to_dial_0" type="continuous">
+    <origin xyz="-0.036 0.02 0.9745" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="dial_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="10" />
+    </joint>
+  <joint name="body_to_dial_1" type="continuous">
+    <origin xyz="0.036 0.02 0.9745" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="dial_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="10" />
+    </joint>
+  <joint name="body_to_osc_button" type="prismatic">
+    <origin xyz="0 -0.03 0.978" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="osc_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1" velocity="0.08" lower="0" upper="0.006" />
+    </joint>
+  </robot>

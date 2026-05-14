@@ -1,0 +1,177 @@
+<robot name="road_bike_crankset">
+  <material name="satin_silver">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <material name="anodized_black">
+    <color rgba="0.02 0.022 0.025 1" />
+    </material>
+  <material name="dark_grey">
+    <color rgba="0.1 0.105 0.11 1" />
+    </material>
+  <material name="polished_steel">
+    <color rgba="0.82 0.84 0.86 1" />
+    </material>
+  <link name="bottom_bracket">
+    <visual name="bb_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bottom_bracket_shell.obj" />
+        </geometry>
+      <material name="satin_silver" />
+      </visual>
+    <collision name="bb_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bottom_bracket_shell.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="crank_assembly">
+    <visual name="crank_body">
+      <geometry>
+        <mesh filename="assets/meshes/spider_chainring_cranks.obj" />
+        </geometry>
+      <material name="anodized_black" />
+      </visual>
+    <visual name="chainring_bolt_0">
+      <origin xyz="4.71489e-18 0.077 0.0455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      <material name="polished_steel" />
+      </visual>
+    <visual name="chainring_bolt_1">
+      <origin xyz="-0.0732314 0.0237943 0.0455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      <material name="polished_steel" />
+      </visual>
+    <visual name="chainring_bolt_2">
+      <origin xyz="-0.0452595 -0.0622943 0.0455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      <material name="polished_steel" />
+      </visual>
+    <visual name="chainring_bolt_3">
+      <origin xyz="0.0452595 -0.0622943 0.0455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      <material name="polished_steel" />
+      </visual>
+    <visual name="chainring_bolt_4">
+      <origin xyz="0.0732314 0.0237943 0.0455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      <material name="polished_steel" />
+      </visual>
+    <visual name="drive_stub_axle">
+      <origin xyz="0 -0.17 0.1125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.115" />
+        </geometry>
+      <material name="polished_steel" />
+      </visual>
+    <visual name="opposite_stub_axle">
+      <origin xyz="0 0.17 -0.1125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.115" />
+        </geometry>
+      <material name="polished_steel" />
+      </visual>
+    <collision name="crank_body">
+      <geometry>
+        <mesh filename="assets/meshes/spider_chainring_cranks.obj" />
+        </geometry>
+      </collision>
+    <collision name="chainring_bolt_0">
+      <origin xyz="4.71489e-18 0.077 0.0455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="chainring_bolt_1">
+      <origin xyz="-0.0732314 0.0237943 0.0455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="chainring_bolt_2">
+      <origin xyz="-0.0452595 -0.0622943 0.0455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="chainring_bolt_3">
+      <origin xyz="0.0452595 -0.0622943 0.0455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="chainring_bolt_4">
+      <origin xyz="0.0732314 0.0237943 0.0455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="drive_stub_axle">
+      <origin xyz="0 -0.17 0.1125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.115" />
+        </geometry>
+      </collision>
+    <collision name="opposite_stub_axle">
+      <origin xyz="0 0.17 -0.1125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.115" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="drive_pedal">
+    <visual name="pedal_body">
+      <geometry>
+        <mesh filename="assets/meshes/drive_platform_pedal.obj" />
+        </geometry>
+      <material name="dark_grey" />
+      </visual>
+    <collision name="pedal_body">
+      <geometry>
+        <mesh filename="assets/meshes/drive_platform_pedal.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="opposite_pedal">
+    <visual name="pedal_body">
+      <geometry>
+        <mesh filename="assets/meshes/opposite_platform_pedal.obj" />
+        </geometry>
+      <material name="dark_grey" />
+      </visual>
+    <collision name="pedal_body">
+      <geometry>
+        <mesh filename="assets/meshes/opposite_platform_pedal.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="bottom_bracket_spin" type="revolute">
+    <parent link="bottom_bracket" />
+    <child link="crank_assembly" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="8" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="drive_pedal_spin" type="revolute">
+    <origin xyz="0 -0.17 0.055" rpy="0 0 0" />
+    <parent link="crank_assembly" />
+    <child link="drive_pedal" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="12" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="opposite_pedal_spin" type="revolute">
+    <origin xyz="0 0.17 -0.055" rpy="3.14159 0 0" />
+    <parent link="crank_assembly" />
+    <child link="opposite_pedal" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="12" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

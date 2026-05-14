@@ -1,0 +1,966 @@
+<robot name="dual_head_ceiling_fan">
+  <material name="oil_rubbed_bronze">
+    <color rgba="0.1 0.075 0.045 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.025 0.027 0.03 1" />
+    </material>
+  <material name="warm_brass">
+    <color rgba="0.62 0.44 0.18 1" />
+    </material>
+  <material name="smoked_blades">
+    <color rgba="0.18 0.2 0.22 0.86" />
+    </material>
+  <material name="black_wire">
+    <color rgba="0.012 0.012 0.013 1" />
+    </material>
+  <link name="ceiling_mount">
+    <visual name="ceiling_plate">
+      <origin xyz="0 0 1.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.016" />
+        </geometry>
+      <material name="dark_metal" />
+      </visual>
+    <visual name="canopy_shell">
+      <geometry>
+        <mesh filename="assets/meshes/ceiling_canopy.obj" />
+        </geometry>
+      <material name="oil_rubbed_bronze" />
+      </visual>
+    <visual name="downrod">
+      <origin xyz="0 0 0.455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.85" />
+        </geometry>
+      <material name="oil_rubbed_bronze" />
+      </visual>
+    <visual name="upper_rod_collar">
+      <origin xyz="0 0 0.875" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.062" />
+        </geometry>
+      <material name="warm_brass" />
+      </visual>
+    <visual name="lower_rod_collar">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.05" />
+        </geometry>
+      <material name="warm_brass" />
+      </visual>
+    <collision name="ceiling_plate">
+      <origin xyz="0 0 1.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="canopy_shell">
+      <geometry>
+        <mesh filename="assets/meshes/ceiling_canopy.obj" />
+        </geometry>
+      </collision>
+    <collision name="downrod">
+      <origin xyz="0 0 0.455" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.85" />
+        </geometry>
+      </collision>
+    <collision name="upper_rod_collar">
+      <origin xyz="0 0 0.875" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.062" />
+        </geometry>
+      </collision>
+    <collision name="lower_rod_collar">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.05" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="crossbar">
+    <visual name="yaw_bearing">
+      <origin xyz="0 0 -0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.05" />
+        </geometry>
+      <material name="warm_brass" />
+      </visual>
+    <visual name="bar_tube">
+      <origin xyz="0 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="1.42" />
+        </geometry>
+      <material name="oil_rubbed_bronze" />
+      </visual>
+    <visual name="fan_0_inner_ring">
+      <origin xyz="-0.742 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_guard_ring.obj" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_outer_ring">
+      <origin xyz="-0.818 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_guard_ring.obj" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_inner_ring">
+      <origin xyz="0.742 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_guard_ring.obj" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_outer_ring">
+      <origin xyz="0.818 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_guard_ring.obj" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_motor">
+      <origin xyz="-0.696 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.112" />
+        </geometry>
+      <material name="oil_rubbed_bronze" />
+      </visual>
+    <visual name="fan_0_bearing_cap">
+      <origin xyz="-0.748 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.02" />
+        </geometry>
+      <material name="warm_brass" />
+      </visual>
+    <visual name="fan_0_inner_guard_hub">
+      <origin xyz="-0.742 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_inner_spoke_0">
+      <origin xyz="-0.742 0.148 -0.06" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_inner_spoke_1">
+      <origin xyz="-0.742 0.104652 0.0446518" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_inner_spoke_2">
+      <origin xyz="-0.742 9.06239e-18 0.088" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_inner_spoke_3">
+      <origin xyz="-0.742 -0.104652 0.0446518" rpy="0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_inner_spoke_4">
+      <origin xyz="-0.742 -0.148 -0.06" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_inner_spoke_5">
+      <origin xyz="-0.742 -0.104652 -0.164652" rpy="2.35619 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_inner_spoke_6">
+      <origin xyz="-0.742 -2.71872e-17 -0.208" rpy="3.14159 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_inner_spoke_7">
+      <origin xyz="-0.742 0.104652 -0.164652" rpy="3.92699 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_outer_guard_hub">
+      <origin xyz="-0.818 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_outer_spoke_0">
+      <origin xyz="-0.818 0.148 -0.06" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_outer_spoke_1">
+      <origin xyz="-0.818 0.104652 0.0446518" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_outer_spoke_2">
+      <origin xyz="-0.818 9.06239e-18 0.088" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_outer_spoke_3">
+      <origin xyz="-0.818 -0.104652 0.0446518" rpy="0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_outer_spoke_4">
+      <origin xyz="-0.818 -0.148 -0.06" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_outer_spoke_5">
+      <origin xyz="-0.818 -0.104652 -0.164652" rpy="2.35619 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_outer_spoke_6">
+      <origin xyz="-0.818 -2.71872e-17 -0.208" rpy="3.14159 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_outer_spoke_7">
+      <origin xyz="-0.818 0.104652 -0.164652" rpy="3.92699 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_cage_tie_0">
+      <origin xyz="-0.78 0.27 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_cage_tie_1">
+      <origin xyz="-0.78 0.190919 0.130919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_cage_tie_2">
+      <origin xyz="-0.78 1.65327e-17 0.21" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_cage_tie_3">
+      <origin xyz="-0.78 -0.190919 0.130919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_cage_tie_4">
+      <origin xyz="-0.78 -0.27 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_cage_tie_5">
+      <origin xyz="-0.78 -0.190919 -0.250919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_cage_tie_6">
+      <origin xyz="-0.78 -4.95982e-17 -0.33" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_0_cage_tie_7">
+      <origin xyz="-0.78 0.190919 -0.250919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_motor">
+      <origin xyz="0.696 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.112" />
+        </geometry>
+      <material name="oil_rubbed_bronze" />
+      </visual>
+    <visual name="fan_1_bearing_cap">
+      <origin xyz="0.748 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.02" />
+        </geometry>
+      <material name="warm_brass" />
+      </visual>
+    <visual name="fan_1_inner_guard_hub">
+      <origin xyz="0.742 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_inner_spoke_0">
+      <origin xyz="0.742 0.148 -0.06" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_inner_spoke_1">
+      <origin xyz="0.742 0.104652 0.0446518" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_inner_spoke_2">
+      <origin xyz="0.742 9.06239e-18 0.088" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_inner_spoke_3">
+      <origin xyz="0.742 -0.104652 0.0446518" rpy="0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_inner_spoke_4">
+      <origin xyz="0.742 -0.148 -0.06" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_inner_spoke_5">
+      <origin xyz="0.742 -0.104652 -0.164652" rpy="2.35619 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_inner_spoke_6">
+      <origin xyz="0.742 -2.71872e-17 -0.208" rpy="3.14159 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_inner_spoke_7">
+      <origin xyz="0.742 0.104652 -0.164652" rpy="3.92699 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_outer_guard_hub">
+      <origin xyz="0.818 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_outer_spoke_0">
+      <origin xyz="0.818 0.148 -0.06" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_outer_spoke_1">
+      <origin xyz="0.818 0.104652 0.0446518" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_outer_spoke_2">
+      <origin xyz="0.818 9.06239e-18 0.088" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_outer_spoke_3">
+      <origin xyz="0.818 -0.104652 0.0446518" rpy="0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_outer_spoke_4">
+      <origin xyz="0.818 -0.148 -0.06" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_outer_spoke_5">
+      <origin xyz="0.818 -0.104652 -0.164652" rpy="2.35619 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_outer_spoke_6">
+      <origin xyz="0.818 -2.71872e-17 -0.208" rpy="3.14159 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_outer_spoke_7">
+      <origin xyz="0.818 0.104652 -0.164652" rpy="3.92699 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_cage_tie_0">
+      <origin xyz="0.78 0.27 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_cage_tie_1">
+      <origin xyz="0.78 0.190919 0.130919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_cage_tie_2">
+      <origin xyz="0.78 1.65327e-17 0.21" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_cage_tie_3">
+      <origin xyz="0.78 -0.190919 0.130919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_cage_tie_4">
+      <origin xyz="0.78 -0.27 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_cage_tie_5">
+      <origin xyz="0.78 -0.190919 -0.250919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_cage_tie_6">
+      <origin xyz="0.78 -4.95982e-17 -0.33" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <visual name="fan_1_cage_tie_7">
+      <origin xyz="0.78 0.190919 -0.250919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      <material name="black_wire" />
+      </visual>
+    <collision name="yaw_bearing">
+      <origin xyz="0 0 -0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="bar_tube">
+      <origin xyz="0 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="1.42" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_inner_ring">
+      <origin xyz="-0.742 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_guard_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_outer_ring">
+      <origin xyz="-0.818 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_guard_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_inner_ring">
+      <origin xyz="0.742 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_guard_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_outer_ring">
+      <origin xyz="0.818 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_guard_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_motor">
+      <origin xyz="-0.696 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.112" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_bearing_cap">
+      <origin xyz="-0.748 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_inner_guard_hub">
+      <origin xyz="-0.742 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_inner_spoke_0">
+      <origin xyz="-0.742 0.148 -0.06" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_inner_spoke_1">
+      <origin xyz="-0.742 0.104652 0.0446518" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_inner_spoke_2">
+      <origin xyz="-0.742 9.06239e-18 0.088" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_inner_spoke_3">
+      <origin xyz="-0.742 -0.104652 0.0446518" rpy="0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_inner_spoke_4">
+      <origin xyz="-0.742 -0.148 -0.06" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_inner_spoke_5">
+      <origin xyz="-0.742 -0.104652 -0.164652" rpy="2.35619 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_inner_spoke_6">
+      <origin xyz="-0.742 -2.71872e-17 -0.208" rpy="3.14159 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_inner_spoke_7">
+      <origin xyz="-0.742 0.104652 -0.164652" rpy="3.92699 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_outer_guard_hub">
+      <origin xyz="-0.818 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_outer_spoke_0">
+      <origin xyz="-0.818 0.148 -0.06" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_outer_spoke_1">
+      <origin xyz="-0.818 0.104652 0.0446518" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_outer_spoke_2">
+      <origin xyz="-0.818 9.06239e-18 0.088" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_outer_spoke_3">
+      <origin xyz="-0.818 -0.104652 0.0446518" rpy="0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_outer_spoke_4">
+      <origin xyz="-0.818 -0.148 -0.06" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_outer_spoke_5">
+      <origin xyz="-0.818 -0.104652 -0.164652" rpy="2.35619 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_outer_spoke_6">
+      <origin xyz="-0.818 -2.71872e-17 -0.208" rpy="3.14159 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_outer_spoke_7">
+      <origin xyz="-0.818 0.104652 -0.164652" rpy="3.92699 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_cage_tie_0">
+      <origin xyz="-0.78 0.27 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_cage_tie_1">
+      <origin xyz="-0.78 0.190919 0.130919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_cage_tie_2">
+      <origin xyz="-0.78 1.65327e-17 0.21" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_cage_tie_3">
+      <origin xyz="-0.78 -0.190919 0.130919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_cage_tie_4">
+      <origin xyz="-0.78 -0.27 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_cage_tie_5">
+      <origin xyz="-0.78 -0.190919 -0.250919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_cage_tie_6">
+      <origin xyz="-0.78 -4.95982e-17 -0.33" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_0_cage_tie_7">
+      <origin xyz="-0.78 0.190919 -0.250919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_motor">
+      <origin xyz="0.696 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.112" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_bearing_cap">
+      <origin xyz="0.748 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_inner_guard_hub">
+      <origin xyz="0.742 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_inner_spoke_0">
+      <origin xyz="0.742 0.148 -0.06" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_inner_spoke_1">
+      <origin xyz="0.742 0.104652 0.0446518" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_inner_spoke_2">
+      <origin xyz="0.742 9.06239e-18 0.088" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_inner_spoke_3">
+      <origin xyz="0.742 -0.104652 0.0446518" rpy="0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_inner_spoke_4">
+      <origin xyz="0.742 -0.148 -0.06" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_inner_spoke_5">
+      <origin xyz="0.742 -0.104652 -0.164652" rpy="2.35619 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_inner_spoke_6">
+      <origin xyz="0.742 -2.71872e-17 -0.208" rpy="3.14159 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_inner_spoke_7">
+      <origin xyz="0.742 0.104652 -0.164652" rpy="3.92699 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_outer_guard_hub">
+      <origin xyz="0.818 0 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_outer_spoke_0">
+      <origin xyz="0.818 0.148 -0.06" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_outer_spoke_1">
+      <origin xyz="0.818 0.104652 0.0446518" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_outer_spoke_2">
+      <origin xyz="0.818 9.06239e-18 0.088" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_outer_spoke_3">
+      <origin xyz="0.818 -0.104652 0.0446518" rpy="0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_outer_spoke_4">
+      <origin xyz="0.818 -0.148 -0.06" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_outer_spoke_5">
+      <origin xyz="0.818 -0.104652 -0.164652" rpy="2.35619 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_outer_spoke_6">
+      <origin xyz="0.818 -2.71872e-17 -0.208" rpy="3.14159 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_outer_spoke_7">
+      <origin xyz="0.818 0.104652 -0.164652" rpy="3.92699 0 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_cage_tie_0">
+      <origin xyz="0.78 0.27 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_cage_tie_1">
+      <origin xyz="0.78 0.190919 0.130919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_cage_tie_2">
+      <origin xyz="0.78 1.65327e-17 0.21" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_cage_tie_3">
+      <origin xyz="0.78 -0.190919 0.130919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_cage_tie_4">
+      <origin xyz="0.78 -0.27 -0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_cage_tie_5">
+      <origin xyz="0.78 -0.190919 -0.250919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_cage_tie_6">
+      <origin xyz="0.78 -4.95982e-17 -0.33" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="fan_1_cage_tie_7">
+      <origin xyz="0.78 0.190919 -0.250919" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.092" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="fan_0">
+    <visual name="rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/four_blade_rotor.obj" />
+        </geometry>
+      <material name="smoked_blades" />
+      </visual>
+    <visual name="axle_stub">
+      <origin xyz="0.011 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.022" />
+        </geometry>
+      <material name="warm_brass" />
+      </visual>
+    <collision name="rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/four_blade_rotor.obj" />
+        </geometry>
+      </collision>
+    <collision name="axle_stub">
+      <origin xyz="0.011 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="fan_1">
+    <visual name="rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/four_blade_rotor.obj" />
+        </geometry>
+      <material name="smoked_blades" />
+      </visual>
+    <visual name="axle_stub">
+      <origin xyz="-0.011 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.022" />
+        </geometry>
+      <material name="warm_brass" />
+      </visual>
+    <collision name="rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/four_blade_rotor.obj" />
+        </geometry>
+      </collision>
+    <collision name="axle_stub">
+      <origin xyz="-0.011 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="downrod_to_crossbar" type="revolute">
+    <parent link="ceiling_mount" />
+    <child link="crossbar" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.5" lower="-0.75" upper="0.75" />
+    </joint>
+  <joint name="crossbar_to_fan_0" type="revolute">
+    <origin xyz="-0.78 0 -0.06" rpy="0 0 0" />
+    <parent link="crossbar" />
+    <child link="fan_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="2" velocity="30" lower="0" upper="6.28319" />
+    </joint>
+  <joint name="crossbar_to_fan_1" type="revolute">
+    <origin xyz="0.78 0 -0.06" rpy="0 0 0" />
+    <parent link="crossbar" />
+    <child link="fan_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="2" velocity="30" lower="0" upper="6.28319" />
+    </joint>
+  </robot>

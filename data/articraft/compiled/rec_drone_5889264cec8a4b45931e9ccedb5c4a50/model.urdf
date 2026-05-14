@@ -1,0 +1,953 @@
+<robot name="tilt_rotor_quadrotor">
+  <material name="carbon_black">
+    <color rgba="0.02 0.025 0.025 1" />
+    </material>
+  <material name="matte_graphite">
+    <color rgba="0.09 0.095 0.1 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.68 0.7 0.72 1" />
+    </material>
+  <material name="warning_orange">
+    <color rgba="1 0.36 0.06 1" />
+    </material>
+  <material name="avionics_blue">
+    <color rgba="0.05 0.18 0.34 1" />
+    </material>
+  <link name="airframe">
+    <visual name="avionics_bay">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.2 0.07" />
+        </geometry>
+      <material name="avionics_blue">
+        <color rgba="0.05 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_0">
+      <origin xyz="0 0.3 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="1.04 0.04 0.034" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="0 -0.3 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="1.04 0.04 0.034" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="end_rail_0">
+      <origin xyz="0.5 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.64 0.034" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="end_rail_1">
+      <origin xyz="-0.5 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.64 0.034" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="mid_cross_tube">
+      <origin xyz="0 0 0.086" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.04 0.64 0.026" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="arm_0">
+      <origin xyz="0.355 0.22 0.074" rpy="0 0 0.565149" />
+      <geometry>
+        <box size="0.525489 0.034 0.034" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="yoke_base_0">
+      <origin xyz="0.56 0.35 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.168 0.03" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_0_a">
+      <origin xyz="0.56 0.421 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_0_a">
+      <origin xyz="0.56 0.433 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_0_b">
+      <origin xyz="0.56 0.279 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_0_b">
+      <origin xyz="0.56 0.267 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="arm_1">
+      <origin xyz="0.355 -0.22 0.074" rpy="0 0 -0.565149" />
+      <geometry>
+        <box size="0.525489 0.034 0.034" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="yoke_base_1">
+      <origin xyz="0.56 -0.35 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.168 0.03" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_1_a">
+      <origin xyz="0.56 -0.279 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_1_a">
+      <origin xyz="0.56 -0.267 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_1_b">
+      <origin xyz="0.56 -0.421 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_1_b">
+      <origin xyz="0.56 -0.433 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="arm_2">
+      <origin xyz="-0.355 0.22 0.074" rpy="0 0 2.57644" />
+      <geometry>
+        <box size="0.525489 0.034 0.034" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="yoke_base_2">
+      <origin xyz="-0.56 0.35 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.168 0.03" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_2_a">
+      <origin xyz="-0.56 0.421 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_2_a">
+      <origin xyz="-0.56 0.433 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_2_b">
+      <origin xyz="-0.56 0.279 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_2_b">
+      <origin xyz="-0.56 0.267 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="arm_3">
+      <origin xyz="-0.355 -0.22 0.074" rpy="0 0 -2.57644" />
+      <geometry>
+        <box size="0.525489 0.034 0.034" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="yoke_base_3">
+      <origin xyz="-0.56 -0.35 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.168 0.03" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_3_a">
+      <origin xyz="-0.56 -0.279 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_3_a">
+      <origin xyz="-0.56 -0.267 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_3_b">
+      <origin xyz="-0.56 -0.421 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      <material name="carbon_black">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_3_b">
+      <origin xyz="-0.56 -0.433 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <collision name="avionics_bay">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.2 0.07" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_0">
+      <origin xyz="0 0.3 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="1.04 0.04 0.034" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_1">
+      <origin xyz="0 -0.3 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="1.04 0.04 0.034" />
+        </geometry>
+      </collision>
+    <collision name="end_rail_0">
+      <origin xyz="0.5 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.64 0.034" />
+        </geometry>
+      </collision>
+    <collision name="end_rail_1">
+      <origin xyz="-0.5 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.64 0.034" />
+        </geometry>
+      </collision>
+    <collision name="mid_cross_tube">
+      <origin xyz="0 0 0.086" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.04 0.64 0.026" />
+        </geometry>
+      </collision>
+    <collision name="arm_0">
+      <origin xyz="0.355 0.22 0.074" rpy="0 0 0.565149" />
+      <geometry>
+        <box size="0.525489 0.034 0.034" />
+        </geometry>
+      </collision>
+    <collision name="yoke_base_0">
+      <origin xyz="0.56 0.35 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.168 0.03" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_0_a">
+      <origin xyz="0.56 0.421 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap_0_a">
+      <origin xyz="0.56 0.433 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_0_b">
+      <origin xyz="0.56 0.279 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap_0_b">
+      <origin xyz="0.56 0.267 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="arm_1">
+      <origin xyz="0.355 -0.22 0.074" rpy="0 0 -0.565149" />
+      <geometry>
+        <box size="0.525489 0.034 0.034" />
+        </geometry>
+      </collision>
+    <collision name="yoke_base_1">
+      <origin xyz="0.56 -0.35 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.168 0.03" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_1_a">
+      <origin xyz="0.56 -0.279 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap_1_a">
+      <origin xyz="0.56 -0.267 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_1_b">
+      <origin xyz="0.56 -0.421 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap_1_b">
+      <origin xyz="0.56 -0.433 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="arm_2">
+      <origin xyz="-0.355 0.22 0.074" rpy="0 0 2.57644" />
+      <geometry>
+        <box size="0.525489 0.034 0.034" />
+        </geometry>
+      </collision>
+    <collision name="yoke_base_2">
+      <origin xyz="-0.56 0.35 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.168 0.03" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_2_a">
+      <origin xyz="-0.56 0.421 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap_2_a">
+      <origin xyz="-0.56 0.433 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_2_b">
+      <origin xyz="-0.56 0.279 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap_2_b">
+      <origin xyz="-0.56 0.267 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="arm_3">
+      <origin xyz="-0.355 -0.22 0.074" rpy="0 0 -2.57644" />
+      <geometry>
+        <box size="0.525489 0.034 0.034" />
+        </geometry>
+      </collision>
+    <collision name="yoke_base_3">
+      <origin xyz="-0.56 -0.35 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.168 0.03" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_3_a">
+      <origin xyz="-0.56 -0.279 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap_3_a">
+      <origin xyz="-0.56 -0.267 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_3_b">
+      <origin xyz="-0.56 -0.421 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.102" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap_3_b">
+      <origin xyz="-0.56 -0.433 0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pod_0">
+    <visual name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.116" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="motor_can">
+      <origin xyz="0 0 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.083" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_collar">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.014" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="prop_shaft">
+      <origin xyz="0 0 0.1085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.023" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="service_lug">
+      <origin xyz="0 -0.053 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.022" />
+        </geometry>
+      <material name="warning_orange">
+        <color rgba="1 0.36 0.06 1" />
+        </material>
+      </visual>
+    <collision name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.116" />
+        </geometry>
+      </collision>
+    <collision name="motor_can">
+      <origin xyz="0 0 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.083" />
+        </geometry>
+      </collision>
+    <collision name="top_collar">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="prop_shaft">
+      <origin xyz="0 0 0.1085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.023" />
+        </geometry>
+      </collision>
+    <collision name="service_lug">
+      <origin xyz="0 -0.053 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller_0">
+    <visual name="hub_socket">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="two_blade_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="hub_socket">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="two_blade_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pod_1">
+    <visual name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.116" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="motor_can">
+      <origin xyz="0 0 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.083" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_collar">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.014" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="prop_shaft">
+      <origin xyz="0 0 0.1085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.023" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="service_lug">
+      <origin xyz="0 -0.053 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.022" />
+        </geometry>
+      <material name="warning_orange">
+        <color rgba="1 0.36 0.06 1" />
+        </material>
+      </visual>
+    <collision name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.116" />
+        </geometry>
+      </collision>
+    <collision name="motor_can">
+      <origin xyz="0 0 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.083" />
+        </geometry>
+      </collision>
+    <collision name="top_collar">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="prop_shaft">
+      <origin xyz="0 0 0.1085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.023" />
+        </geometry>
+      </collision>
+    <collision name="service_lug">
+      <origin xyz="0 -0.053 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller_1">
+    <visual name="hub_socket">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="two_blade_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="hub_socket">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="two_blade_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pod_2">
+    <visual name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.116" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="motor_can">
+      <origin xyz="0 0 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.083" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_collar">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.014" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="prop_shaft">
+      <origin xyz="0 0 0.1085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.023" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="service_lug">
+      <origin xyz="0 -0.053 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.022" />
+        </geometry>
+      <material name="warning_orange">
+        <color rgba="1 0.36 0.06 1" />
+        </material>
+      </visual>
+    <collision name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.116" />
+        </geometry>
+      </collision>
+    <collision name="motor_can">
+      <origin xyz="0 0 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.083" />
+        </geometry>
+      </collision>
+    <collision name="top_collar">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="prop_shaft">
+      <origin xyz="0 0 0.1085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.023" />
+        </geometry>
+      </collision>
+    <collision name="service_lug">
+      <origin xyz="0 -0.053 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller_2">
+    <visual name="hub_socket">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="two_blade_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="hub_socket">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="two_blade_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pod_3">
+    <visual name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.116" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="motor_can">
+      <origin xyz="0 0 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.083" />
+        </geometry>
+      <material name="matte_graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_collar">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.014" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="prop_shaft">
+      <origin xyz="0 0 0.1085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.023" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="service_lug">
+      <origin xyz="0 -0.053 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.022" />
+        </geometry>
+      <material name="warning_orange">
+        <color rgba="1 0.36 0.06 1" />
+        </material>
+      </visual>
+    <collision name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.116" />
+        </geometry>
+      </collision>
+    <collision name="motor_can">
+      <origin xyz="0 0 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.083" />
+        </geometry>
+      </collision>
+    <collision name="top_collar">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="prop_shaft">
+      <origin xyz="0 0 0.1085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.023" />
+        </geometry>
+      </collision>
+    <collision name="service_lug">
+      <origin xyz="0 -0.053 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.018 0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller_3">
+    <visual name="hub_socket">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    <visual name="two_blade_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="hub_socket">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="two_blade_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/two_blade_propeller.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="tilt_0" type="revolute">
+    <origin xyz="0.56 0.35 0.132" rpy="0 0 0" />
+    <parent link="airframe" />
+    <child link="pod_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="2.2" lower="-0.25" upper="1.45" />
+    </joint>
+  <joint name="axle_0" type="continuous">
+    <origin xyz="0 0 0.12" rpy="0 0 0" />
+    <parent link="pod_0" />
+    <child link="propeller_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="80" />
+    </joint>
+  <joint name="tilt_1" type="revolute">
+    <origin xyz="0.56 -0.35 0.132" rpy="0 0 0" />
+    <parent link="airframe" />
+    <child link="pod_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="2.2" lower="-0.25" upper="1.45" />
+    </joint>
+  <joint name="axle_1" type="continuous">
+    <origin xyz="0 0 0.12" rpy="0 0 0" />
+    <parent link="pod_1" />
+    <child link="propeller_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="80" />
+    </joint>
+  <joint name="tilt_2" type="revolute">
+    <origin xyz="-0.56 0.35 0.132" rpy="0 0 0" />
+    <parent link="airframe" />
+    <child link="pod_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="2.2" lower="-0.25" upper="1.45" />
+    </joint>
+  <joint name="axle_2" type="continuous">
+    <origin xyz="0 0 0.12" rpy="0 0 0" />
+    <parent link="pod_2" />
+    <child link="propeller_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="80" />
+    </joint>
+  <joint name="tilt_3" type="revolute">
+    <origin xyz="-0.56 -0.35 0.132" rpy="0 0 0" />
+    <parent link="airframe" />
+    <child link="pod_3" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="2.2" lower="-0.25" upper="1.45" />
+    </joint>
+  <joint name="axle_3" type="continuous">
+    <origin xyz="0 0 0.12" rpy="0 0 0" />
+    <parent link="pod_3" />
+    <child link="propeller_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="80" />
+    </joint>
+  </robot>

@@ -1,0 +1,419 @@
+<robot name="liquid_cooled_gpu">
+  <material name="pcb_green">
+    <color rgba="0.03 0.22 0.12 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="satin_gunmetal">
+    <color rgba="0.2 0.22 0.24 1" />
+    </material>
+  <material name="dark_graphite">
+    <color rgba="0.055 0.06 0.066 1" />
+    </material>
+  <material name="nickel">
+    <color rgba="0.72 0.7 0.66 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.006 0.006 0.007 1" />
+    </material>
+  <material name="copper">
+    <color rgba="0.76 0.35 0.13 1" />
+    </material>
+  <material name="fan_gray">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <link name="body">
+    <visual name="circuit_board">
+      <origin xyz="0 0 0.0012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.115 0.0024" />
+        </geometry>
+      <material name="pcb_green">
+        <color rgba="0.03 0.22 0.12 1" />
+        </material>
+      </visual>
+    <visual name="pcie_fingers">
+      <origin xyz="-0.082 -0.0605 0.0028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.007 0.0012" />
+        </geometry>
+      <material name="copper">
+        <color rgba="0.76 0.35 0.13 1" />
+        </material>
+      </visual>
+    <visual name="io_bracket">
+      <origin xyz="-0.158 0 0.0165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.118 0.03" />
+        </geometry>
+      <material name="nickel">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="long_cover">
+      <origin xyz="-0.008 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/long_shroud_cover.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="upper_trim">
+      <origin xyz="-0.012 0.0415 0.0115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.006 0.002" />
+        </geometry>
+      <material name="satin_gunmetal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="lower_trim">
+      <origin xyz="-0.04 -0.0415 0.0115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.005 0.002" />
+        </geometry>
+      <material name="satin_gunmetal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="pump_cover">
+      <origin xyz="-0.067 0.001 0.0142" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pump_block_cover.obj" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.055 0.06 0.066 1" />
+        </material>
+      </visual>
+    <visual name="pump_cap">
+      <origin xyz="-0.067 0.001 0.0302" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.004" />
+        </geometry>
+      <material name="satin_gunmetal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="coolant_fitting_low">
+      <origin xyz="-0.108 -0.017 0.0245" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.04" />
+        </geometry>
+      <material name="nickel">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="hose_stub_low">
+      <origin xyz="-0.137 -0.017 0.0245" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0074" length="0.048" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="coolant_fitting_high">
+      <origin xyz="-0.108 0.017 0.0245" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.04" />
+        </geometry>
+      <material name="nickel">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="hose_stub_high">
+      <origin xyz="-0.137 0.017 0.0245" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0074" length="0.048" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="fan_pod_frame">
+      <origin xyz="0.104 0.023 0.014" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_fan_pod_frame.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="fan_well">
+      <origin xyz="0.104 0.023 0.0145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.003" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.055 0.06 0.066 1" />
+        </material>
+      </visual>
+    <visual name="fan_axle">
+      <origin xyz="0.104 0.023 0.0215" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.011" />
+        </geometry>
+      <material name="nickel">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="guard_post_0.070_0.023">
+      <origin xyz="0.07 0.023 0.0243" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.009" />
+        </geometry>
+      <material name="satin_gunmetal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="guard_post_0.138_0.023">
+      <origin xyz="0.138 0.023 0.0243" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.009" />
+        </geometry>
+      <material name="satin_gunmetal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="guard_post_0.104_-0.011">
+      <origin xyz="0.104 -0.011 0.0243" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.009" />
+        </geometry>
+      <material name="satin_gunmetal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="guard_post_0.104_0.057">
+      <origin xyz="0.104 0.057 0.0243" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.009" />
+        </geometry>
+      <material name="satin_gunmetal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="fan_guard_cross">
+      <origin xyz="0.104 0.023 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.076 0.0042 0.0022" />
+        </geometry>
+      <material name="satin_gunmetal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="fan_guard_bar">
+      <origin xyz="0.104 0.023 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0042 0.076 0.0022" />
+        </geometry>
+      <material name="satin_gunmetal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="guard_center">
+      <origin xyz="0.104 0.023 0.0281" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.0024" />
+        </geometry>
+      <material name="satin_gunmetal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="selector_socket">
+      <origin xyz="-0.018 -0.046 0.012" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="satin_gunmetal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <collision name="circuit_board">
+      <origin xyz="0 0 0.0012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.115 0.0024" />
+        </geometry>
+      </collision>
+    <collision name="pcie_fingers">
+      <origin xyz="-0.082 -0.0605 0.0028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.007 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="io_bracket">
+      <origin xyz="-0.158 0 0.0165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.118 0.03" />
+        </geometry>
+      </collision>
+    <collision name="long_cover">
+      <origin xyz="-0.008 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/long_shroud_cover.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_trim">
+      <origin xyz="-0.012 0.0415 0.0115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.006 0.002" />
+        </geometry>
+      </collision>
+    <collision name="lower_trim">
+      <origin xyz="-0.04 -0.0415 0.0115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.005 0.002" />
+        </geometry>
+      </collision>
+    <collision name="pump_cover">
+      <origin xyz="-0.067 0.001 0.0142" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pump_block_cover.obj" />
+        </geometry>
+      </collision>
+    <collision name="pump_cap">
+      <origin xyz="-0.067 0.001 0.0302" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="coolant_fitting_low">
+      <origin xyz="-0.108 -0.017 0.0245" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="hose_stub_low">
+      <origin xyz="-0.137 -0.017 0.0245" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0074" length="0.048" />
+        </geometry>
+      </collision>
+    <collision name="coolant_fitting_high">
+      <origin xyz="-0.108 0.017 0.0245" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="hose_stub_high">
+      <origin xyz="-0.137 0.017 0.0245" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0074" length="0.048" />
+        </geometry>
+      </collision>
+    <collision name="fan_pod_frame">
+      <origin xyz="0.104 0.023 0.014" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_fan_pod_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="fan_well">
+      <origin xyz="0.104 0.023 0.0145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="fan_axle">
+      <origin xyz="0.104 0.023 0.0215" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.011" />
+        </geometry>
+      </collision>
+    <collision name="guard_post_0.070_0.023">
+      <origin xyz="0.07 0.023 0.0243" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="guard_post_0.138_0.023">
+      <origin xyz="0.138 0.023 0.0243" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="guard_post_0.104_-0.011">
+      <origin xyz="0.104 -0.011 0.0243" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="guard_post_0.104_0.057">
+      <origin xyz="0.104 0.057 0.0243" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="fan_guard_cross">
+      <origin xyz="0.104 0.023 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.076 0.0042 0.0022" />
+        </geometry>
+      </collision>
+    <collision name="fan_guard_bar">
+      <origin xyz="0.104 0.023 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0042 0.076 0.0022" />
+        </geometry>
+      </collision>
+    <collision name="guard_center">
+      <origin xyz="0.104 0.023 0.0281" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.0024" />
+        </geometry>
+      </collision>
+    <collision name="selector_socket">
+      <origin xyz="-0.018 -0.046 0.012" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="assist_fan">
+    <visual name="fan_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/assist_fan_rotor.obj" />
+        </geometry>
+      <material name="fan_gray">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="fan_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/assist_fan_rotor.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="selector_knob">
+    <visual name="knob_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/selector_knob_cap.obj" />
+        </geometry>
+      <material name="satin_gunmetal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <collision name="knob_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/selector_knob_cap.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="fan_spin" type="continuous">
+    <origin xyz="0.104 0.023 0.0224" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="assist_fan" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.15" velocity="180" />
+    </joint>
+  <joint name="selector_turn" type="revolute">
+    <origin xyz="-0.018 -0.049 0.012" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="selector_knob" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.4" velocity="4" lower="-2.35" upper="2.35" />
+    </joint>
+  </robot>

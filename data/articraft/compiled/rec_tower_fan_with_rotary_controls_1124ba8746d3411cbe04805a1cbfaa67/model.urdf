@@ -1,0 +1,376 @@
+<robot name="slim_tower_fan">
+  <material name="warm_white">
+    <color rgba="0.86 0.85 0.8 1" />
+    </material>
+  <material name="satin_gray">
+    <color rgba="0.58 0.6 0.61 1" />
+    </material>
+  <material name="dark_grille">
+    <color rgba="0.045 0.047 0.052 1" />
+    </material>
+  <material name="black_plastic">
+    <color rgba="0.025 0.027 0.03 1" />
+    </material>
+  <material name="rubber_gray">
+    <color rgba="0.1 0.105 0.11 1" />
+    </material>
+  <material name="pointer_white">
+    <color rgba="0.96 0.95 0.88 1" />
+    </material>
+  <link name="base">
+    <visual name="oval_base">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/oval_base.obj" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.86 0.85 0.8 1" />
+        </material>
+      </visual>
+    <visual name="pivot_collar">
+      <origin xyz="0 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.015" />
+        </geometry>
+      <material name="satin_gray">
+        <color rgba="0.58 0.6 0.61 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_ring">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.158" length="0.006" />
+        </geometry>
+      <material name="rubber_gray">
+        <color rgba="0.1 0.105 0.11 1" />
+        </material>
+      </visual>
+    <collision name="oval_base">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/oval_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_collar">
+      <origin xyz="0 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_ring">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.158" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="body">
+    <visual name="open_body_shell">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/open_body_shell.obj" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.86 0.85 0.8 1" />
+        </material>
+      </visual>
+    <visual name="rotating_neck">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.08" />
+        </geometry>
+      <material name="satin_gray">
+        <color rgba="0.58 0.6 0.61 1" />
+        </material>
+      </visual>
+    <visual name="lower_transition">
+      <origin xyz="0 0.004 0.084" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_transition.obj" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.86 0.85 0.8 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_bridge">
+      <origin xyz="0 0.042 0.116" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.036 0.012" />
+        </geometry>
+      <material name="dark_grille">
+        <color rgba="0.045 0.047 0.052 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing">
+      <origin xyz="0 0.002 0.116" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      <material name="dark_grille">
+        <color rgba="0.045 0.047 0.052 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing_bridge">
+      <origin xyz="0 0.042 0.842" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.036 0.012" />
+        </geometry>
+      <material name="dark_grille">
+        <color rgba="0.045 0.047 0.052 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing">
+      <origin xyz="0 0.002 0.842" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      <material name="dark_grille">
+        <color rgba="0.045 0.047 0.052 1" />
+        </material>
+      </visual>
+    <collision name="open_body_shell">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/open_body_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="rotating_neck">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="lower_transition">
+      <origin xyz="0 0.004 0.084" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_transition.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_bridge">
+      <origin xyz="0 0.042 0.116" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.036 0.012" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing">
+      <origin xyz="0 0.002 0.116" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing_bridge">
+      <origin xyz="0 0.042 0.842" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.036 0.012" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing">
+      <origin xyz="0 0.002 0.842" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="grille">
+    <visual name="front_grille">
+      <origin xyz="0 -0.067 0.472" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_grille.obj" />
+        </geometry>
+      <material name="dark_grille">
+        <color rgba="0.045 0.047 0.052 1" />
+        </material>
+      </visual>
+    <visual name="center_divider">
+      <origin xyz="0 -0.0705 0.472" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.003 0.69" />
+        </geometry>
+      <material name="satin_gray">
+        <color rgba="0.58 0.6 0.61 1" />
+        </material>
+      </visual>
+    <collision name="front_grille">
+      <origin xyz="0 -0.067 0.472" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_grille.obj" />
+        </geometry>
+      </collision>
+    <collision name="center_divider">
+      <origin xyz="0 -0.0705 0.472" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.003 0.69" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="top_cap">
+    <visual name="top_cap_handle">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_cap_handle.obj" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.86 0.85 0.8 1" />
+        </material>
+      </visual>
+    <visual name="rear_bridge_lip">
+      <origin xyz="0 0.061 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.01 0.006" />
+        </geometry>
+      <material name="satin_gray">
+        <color rgba="0.58 0.6 0.61 1" />
+        </material>
+      </visual>
+    <collision name="top_cap_handle">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_cap_handle.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_bridge_lip">
+      <origin xyz="0 0.061 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.01 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blower">
+    <visual name="vertical_blower_wheel">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_blower_wheel.obj" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="axle">
+      <geometry>
+        <cylinder radius="0.006" length="0.74" />
+        </geometry>
+      <material name="satin_gray">
+        <color rgba="0.58 0.6 0.61 1" />
+        </material>
+      </visual>
+    <visual name="center_hub">
+      <geometry>
+        <cylinder radius="0.02" length="0.04" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <collision name="vertical_blower_wheel">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_blower_wheel.obj" />
+        </geometry>
+      </collision>
+    <collision name="axle">
+      <geometry>
+        <cylinder radius="0.006" length="0.74" />
+        </geometry>
+      </collision>
+    <collision name="center_hub">
+      <geometry>
+        <cylinder radius="0.02" length="0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dial_0">
+    <visual name="knurled_dial">
+      <geometry>
+        <mesh filename="assets/meshes/knurled_dial.obj" />
+        </geometry>
+      <material name="satin_gray">
+        <color rgba="0.58 0.6 0.61 1" />
+        </material>
+      </visual>
+    <visual name="pointer_line">
+      <origin xyz="0.008 0 0.0246" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.003 0.0012" />
+        </geometry>
+      <material name="pointer_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <collision name="knurled_dial">
+      <geometry>
+        <mesh filename="assets/meshes/knurled_dial.obj" />
+        </geometry>
+      </collision>
+    <collision name="pointer_line">
+      <origin xyz="0.008 0 0.0246" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.003 0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dial_1">
+    <visual name="knurled_dial">
+      <geometry>
+        <mesh filename="assets/meshes/knurled_dial.obj" />
+        </geometry>
+      <material name="satin_gray">
+        <color rgba="0.58 0.6 0.61 1" />
+        </material>
+      </visual>
+    <visual name="pointer_line">
+      <origin xyz="0.008 0 0.0246" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.003 0.0012" />
+        </geometry>
+      <material name="pointer_white">
+        <color rgba="0.96 0.95 0.88 1" />
+        </material>
+      </visual>
+    <collision name="knurled_dial">
+      <geometry>
+        <mesh filename="assets/meshes/knurled_dial.obj" />
+        </geometry>
+      </collision>
+    <collision name="pointer_line">
+      <origin xyz="0.008 0 0.0246" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.003 0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="dial_0_spin" type="continuous">
+    <origin xyz="-0.038 -0.026 0.04" rpy="0 0 0" />
+    <parent link="top_cap" />
+    <child link="dial_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.8" velocity="6" />
+    </joint>
+  <joint name="dial_1_spin" type="continuous">
+    <origin xyz="0.038 -0.026 0.04" rpy="0 0 0" />
+    <parent link="top_cap" />
+    <child link="dial_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.8" velocity="6" />
+    </joint>
+  <joint name="base_to_body" type="revolute">
+    <origin xyz="0 0 0.06" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="body" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="1" lower="-0.85" upper="0.85" />
+    </joint>
+  <joint name="body_to_grille" type="fixed">
+    <parent link="body" />
+    <child link="grille" />
+    </joint>
+  <joint name="body_to_top_cap" type="fixed">
+    <origin xyz="0 0 0.855" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="top_cap" />
+    </joint>
+  <joint name="blower_spin" type="continuous">
+    <origin xyz="0 0.002 0.478" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="blower" />
+    <axis xyz="0 0 1" />
+    <limit effort="2.5" velocity="60" />
+    </joint>
+  </robot>

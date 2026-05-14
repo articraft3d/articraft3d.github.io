@@ -1,0 +1,307 @@
+<robot name="three_stage_telescoping_antenna_mast">
+  <material name="brushed_aluminum">
+    <color rgba="0.74 0.76 0.74 1" />
+    </material>
+  <material name="pale_aluminum">
+    <color rgba="0.86 0.88 0.86 1" />
+    </material>
+  <material name="dark_anodized">
+    <color rgba="0.16 0.18 0.2 1" />
+    </material>
+  <material name="black_plastic">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <material name="red_height_marks">
+    <color rgba="0.8 0.06 0.03 1" />
+    </material>
+  <link name="outer_stage">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.2 0.04" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.16 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="outer_tube">
+      <origin xyz="0 0 0.585" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/outer_tube_mesh.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.74 0.76 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_socket">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_socket_mesh.obj" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.16 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="outer_collar_front">
+      <origin xyz="0 0.043 1.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.142 0.02 0.08" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="outer_collar_rear">
+      <origin xyz="0 -0.043 1.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.142 0.02 0.08" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="outer_collar_side_0">
+      <origin xyz="0.059 0 1.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.106 0.08" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="outer_collar_side_1">
+      <origin xyz="-0.059 0 1.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.106 0.08" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.2 0.04" />
+        </geometry>
+      </collision>
+    <collision name="outer_tube">
+      <origin xyz="0 0 0.585" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/outer_tube_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_socket">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_socket_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="outer_collar_front">
+      <origin xyz="0 0.043 1.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.142 0.02 0.08" />
+        </geometry>
+      </collision>
+    <collision name="outer_collar_rear">
+      <origin xyz="0 -0.043 1.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.142 0.02 0.08" />
+        </geometry>
+      </collision>
+    <collision name="outer_collar_side_0">
+      <origin xyz="0.059 0 1.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.106 0.08" />
+        </geometry>
+      </collision>
+    <collision name="outer_collar_side_1">
+      <origin xyz="-0.059 0 1.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.106 0.08" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="middle_stage">
+    <visual name="middle_tube">
+      <origin xyz="0 0 -0.255" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/middle_tube_mesh.obj" />
+        </geometry>
+      <material name="pale_aluminum">
+        <color rgba="0.86 0.88 0.86 1" />
+        </material>
+      </visual>
+    <visual name="middle_collar_front">
+      <origin xyz="0 0.0315 0.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.108 0.017 0.075" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="middle_collar_rear">
+      <origin xyz="0 -0.0315 0.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.108 0.017 0.075" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="middle_collar_side_0">
+      <origin xyz="0.044 0 0.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.08 0.075" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="middle_collar_side_1">
+      <origin xyz="-0.044 0 0.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.08 0.075" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="middle_mark_0">
+      <origin xyz="0 -0.031 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.002 0.018" />
+        </geometry>
+      <material name="red_height_marks">
+        <color rgba="0.8 0.06 0.03 1" />
+        </material>
+      </visual>
+    <visual name="middle_mark_1">
+      <origin xyz="0 -0.031 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.002 0.018" />
+        </geometry>
+      <material name="red_height_marks">
+        <color rgba="0.8 0.06 0.03 1" />
+        </material>
+      </visual>
+    <visual name="middle_mark_2">
+      <origin xyz="0 -0.031 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.002 0.018" />
+        </geometry>
+      <material name="red_height_marks">
+        <color rgba="0.8 0.06 0.03 1" />
+        </material>
+      </visual>
+    <collision name="middle_tube">
+      <origin xyz="0 0 -0.255" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/middle_tube_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="middle_collar_front">
+      <origin xyz="0 0.0315 0.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.108 0.017 0.075" />
+        </geometry>
+      </collision>
+    <collision name="middle_collar_rear">
+      <origin xyz="0 -0.0315 0.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.108 0.017 0.075" />
+        </geometry>
+      </collision>
+    <collision name="middle_collar_side_0">
+      <origin xyz="0.044 0 0.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.08 0.075" />
+        </geometry>
+      </collision>
+    <collision name="middle_collar_side_1">
+      <origin xyz="-0.044 0 0.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.08 0.075" />
+        </geometry>
+      </collision>
+    <collision name="middle_mark_0">
+      <origin xyz="0 -0.031 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.002 0.018" />
+        </geometry>
+      </collision>
+    <collision name="middle_mark_1">
+      <origin xyz="0 -0.031 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.002 0.018" />
+        </geometry>
+      </collision>
+    <collision name="middle_mark_2">
+      <origin xyz="0 -0.031 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.002 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="inner_stage">
+    <visual name="inner_tube">
+      <origin xyz="0 0 -0.225" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/inner_tube_mesh.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.74 0.76 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_cap">
+      <origin xyz="0 0 0.358" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.048 0.016" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.16 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="antenna_stud">
+      <origin xyz="0 0 0.3935" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.055" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="inner_tube">
+      <origin xyz="0 0 -0.225" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/inner_tube_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_cap">
+      <origin xyz="0 0 0.358" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.048 0.016" />
+        </geometry>
+      </collision>
+    <collision name="antenna_stud">
+      <origin xyz="0 0 0.3935" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.055" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="outer_to_middle" type="prismatic">
+    <origin xyz="0 0 1.11" rpy="0 0 0" />
+    <parent link="outer_stage" />
+    <child link="middle_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="90" velocity="0.2" lower="0" upper="0.72" />
+    </joint>
+  <joint name="middle_to_inner" type="prismatic">
+    <origin xyz="0 0 0.37" rpy="0 0 0" />
+    <parent link="middle_stage" />
+    <child link="inner_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="70" velocity="0.18" lower="0" upper="0.68" />
+    </joint>
+  </robot>

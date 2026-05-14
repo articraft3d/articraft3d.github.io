@@ -1,0 +1,548 @@
+<robot name="business_monitor">
+  <material name="matte_charcoal">
+    <color rgba="0.025 0.028 0.03 1" />
+    </material>
+  <material name="dark_graphite">
+    <color rgba="0.08 0.085 0.09 1" />
+    </material>
+  <material name="soft_black">
+    <color rgba="0.005 0.006 0.007 1" />
+    </material>
+  <material name="dark_glass">
+    <color rgba="0.02 0.04 0.055 1" />
+    </material>
+  <material name="button_rubber">
+    <color rgba="0.012 0.013 0.014 1" />
+    </material>
+  <material name="power_mark">
+    <color rgba="0.62 0.95 0.68 1" />
+    </material>
+  <link name="base">
+    <visual name="pedestal_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_pedestal_base.obj" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="swivel_socket">
+      <origin xyz="0 0 0.037" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.01" />
+        </geometry>
+      <material name="matte_charcoal">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <collision name="pedestal_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_pedestal_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="swivel_socket">
+      <origin xyz="0 0 0.037" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="swivel">
+    <visual name="turntable_disk">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.012" />
+        </geometry>
+      <material name="matte_charcoal">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_back">
+      <origin xyz="0 0.012 0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.012 0.2" />
+        </geometry>
+      <material name="matte_charcoal">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_side_0">
+      <origin xyz="-0.034 -0.002 0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.04 0.2" />
+        </geometry>
+      <material name="matte_charcoal">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_side_1">
+      <origin xyz="0.034 -0.002 0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.04 0.2" />
+        </geometry>
+      <material name="matte_charcoal">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_foot">
+      <origin xyz="0 -0.002 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.05 0.025" />
+        </geometry>
+      <material name="matte_charcoal">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <collision name="turntable_disk">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_back">
+      <origin xyz="0 0.012 0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.012 0.2" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_side_0">
+      <origin xyz="-0.034 -0.002 0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.04 0.2" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_side_1">
+      <origin xyz="0.034 -0.002 0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.04 0.2" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_foot">
+      <origin xyz="0 -0.002 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.05 0.025" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="neck">
+    <visual name="inner_member">
+      <origin xyz="0 -0.002 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.016 0.3" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="head_block">
+      <origin xyz="0 0.014 0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.062 0.032 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="head_pin">
+      <origin xyz="0 0 0.175" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.155" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="head_bridge">
+      <origin xyz="0 0.018 0.136" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.012 0.016" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="yoke_plate_0">
+      <origin xyz="-0.072 0.012 0.175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.04 0.065" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="yoke_plate_1">
+      <origin xyz="0.072 0.012 0.175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.04 0.065" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <collision name="inner_member">
+      <origin xyz="0 -0.002 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.016 0.3" />
+        </geometry>
+      </collision>
+    <collision name="head_block">
+      <origin xyz="0 0.014 0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.062 0.032 0.045" />
+        </geometry>
+      </collision>
+    <collision name="head_pin">
+      <origin xyz="0 0 0.175" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.155" />
+        </geometry>
+      </collision>
+    <collision name="head_bridge">
+      <origin xyz="0 0.018 0.136" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.012 0.016" />
+        </geometry>
+      </collision>
+    <collision name="yoke_plate_0">
+      <origin xyz="-0.072 0.012 0.175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.04 0.065" />
+        </geometry>
+      </collision>
+    <collision name="yoke_plate_1">
+      <origin xyz="0.072 0.012 0.175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.04 0.065" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="display">
+    <visual name="display_shell">
+      <origin xyz="0 -0.0375 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/display_shell.obj" />
+        </geometry>
+      <material name="matte_charcoal">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <visual name="front_bezel">
+      <origin xyz="0 -0.067 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bezel.obj" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="screen_glass">
+      <origin xyz="0 -0.0735 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.494 0.003 0.288" />
+        </geometry>
+      <material name="dark_glass">
+        <color rgba="0.02 0.04 0.055 1" />
+        </material>
+      </visual>
+    <visual name="display_hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.105" />
+        </geometry>
+      <material name="matte_charcoal">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_boss">
+      <origin xyz="0 -0.004 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.012 0.014" />
+        </geometry>
+      <material name="matte_charcoal">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <visual name="rear_vent_0">
+      <origin xyz="-0.16 -0.011 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.003 0.006" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="rear_vent_1">
+      <origin xyz="-0.09 -0.011 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.003 0.006" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="rear_vent_2">
+      <origin xyz="-0.02 -0.011 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.003 0.006" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="rear_vent_3">
+      <origin xyz="0.05 -0.011 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.003 0.006" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="rear_vent_4">
+      <origin xyz="0.12 -0.011 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.003 0.006" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <collision name="display_shell">
+      <origin xyz="0 -0.0375 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/display_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_bezel">
+      <origin xyz="0 -0.067 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bezel.obj" />
+        </geometry>
+      </collision>
+    <collision name="screen_glass">
+      <origin xyz="0 -0.0735 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.494 0.003 0.288" />
+        </geometry>
+      </collision>
+    <collision name="display_hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.105" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_boss">
+      <origin xyz="0 -0.004 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.012 0.014" />
+        </geometry>
+      </collision>
+    <collision name="rear_vent_0">
+      <origin xyz="-0.16 -0.011 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.003 0.006" />
+        </geometry>
+      </collision>
+    <collision name="rear_vent_1">
+      <origin xyz="-0.09 -0.011 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.003 0.006" />
+        </geometry>
+      </collision>
+    <collision name="rear_vent_2">
+      <origin xyz="-0.02 -0.011 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.003 0.006" />
+        </geometry>
+      </collision>
+    <collision name="rear_vent_3">
+      <origin xyz="0.05 -0.011 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.003 0.006" />
+        </geometry>
+      </collision>
+    <collision name="rear_vent_4">
+      <origin xyz="0.12 -0.011 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.003 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="power_rocker">
+    <visual name="rocker_cap">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.017 0.008" />
+        </geometry>
+      <material name="button_rubber">
+        <color rgba="0.012 0.013 0.014 1" />
+        </material>
+      </visual>
+    <visual name="power_glyph">
+      <origin xyz="-0.006 -0.0088 -0.0082" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.002 0.001" />
+        </geometry>
+      <material name="power_mark">
+        <color rgba="0.62 0.95 0.68 1" />
+        </material>
+      </visual>
+    <collision name="rocker_cap">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.017 0.008" />
+        </geometry>
+      </collision>
+    <collision name="power_glyph">
+      <origin xyz="-0.006 -0.0088 -0.0082" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.002 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="menu_button_0">
+    <visual name="button_cap">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      <material name="button_rubber">
+        <color rgba="0.012 0.013 0.014 1" />
+        </material>
+      </visual>
+    <visual name="button_dot">
+      <origin xyz="0 0 -0.0059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0008" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="button_dot">
+      <origin xyz="0 0 -0.0059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="menu_button_1">
+    <visual name="button_cap">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      <material name="button_rubber">
+        <color rgba="0.012 0.013 0.014 1" />
+        </material>
+      </visual>
+    <visual name="button_dot">
+      <origin xyz="0 0 -0.0059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0008" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="button_dot">
+      <origin xyz="0 0 -0.0059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="menu_button_2">
+    <visual name="button_cap">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      <material name="button_rubber">
+        <color rgba="0.012 0.013 0.014 1" />
+        </material>
+      </visual>
+    <visual name="button_dot">
+      <origin xyz="0 0 -0.0059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0008" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="button_dot">
+      <origin xyz="0 0 -0.0059" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0008" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_swivel" type="continuous">
+    <origin xyz="0 0 0.042" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="swivel" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="1.5" />
+    </joint>
+  <joint name="sleeve_to_neck" type="prismatic">
+    <origin xyz="0 0 0.212" rpy="0 0 0" />
+    <parent link="swivel" />
+    <child link="neck" />
+    <axis xyz="0 0 1" />
+    <limit effort="60" velocity="0.18" lower="0" upper="0.1" />
+    </joint>
+  <joint name="neck_to_display" type="revolute">
+    <origin xyz="0 0 0.175" rpy="0 0 0" />
+    <parent link="neck" />
+    <child link="display" />
+    <axis xyz="1 0 0" />
+    <limit effort="10" velocity="1" lower="-0.35" upper="0.2" />
+    </joint>
+  <joint name="display_to_power_rocker" type="revolute">
+    <origin xyz="-0.145 -0.055 -0.17" rpy="0 0 0" />
+    <parent link="display" />
+    <child link="power_rocker" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.7" velocity="3" lower="-0.25" upper="0.25" />
+    </joint>
+  <joint name="display_to_menu_button_0" type="prismatic">
+    <origin xyz="-0.07 -0.055 -0.17" rpy="0 0 0" />
+    <parent link="display" />
+    <child link="menu_button_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.5" velocity="0.08" lower="0" upper="0.004" />
+    </joint>
+  <joint name="display_to_menu_button_1" type="prismatic">
+    <origin xyz="-0.035 -0.055 -0.17" rpy="0 0 0" />
+    <parent link="display" />
+    <child link="menu_button_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.5" velocity="0.08" lower="0" upper="0.004" />
+    </joint>
+  <joint name="display_to_menu_button_2" type="prismatic">
+    <origin xyz="0 -0.055 -0.17" rpy="0 0 0" />
+    <parent link="display" />
+    <child link="menu_button_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.5" velocity="0.08" lower="0" upper="0.004" />
+    </joint>
+  </robot>

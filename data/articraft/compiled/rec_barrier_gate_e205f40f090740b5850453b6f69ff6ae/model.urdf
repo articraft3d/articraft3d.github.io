@@ -1,0 +1,382 @@
+<robot name="parking_barrier_gate">
+  <material name="painted_white">
+    <color rgba="0.92 0.92 0.86 1" />
+    </material>
+  <material name="warning_red">
+    <color rgba="0.85 0.04 0.03 1" />
+    </material>
+  <material name="cabinet_gray">
+    <color rgba="0.42 0.45 0.43 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="concrete">
+    <color rgba="0.48 0.47 0.42 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="red_lens">
+    <color rgba="1 0.03 0.02 1" />
+    </material>
+  <material name="green_lens">
+    <color rgba="0.02 0.75 0.13 1" />
+    </material>
+  <link name="housing">
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.62 0.12" />
+        </geometry>
+      <material name="concrete">
+        <color rgba="0.48 0.47 0.42 1" />
+        </material>
+      </visual>
+    <visual name="control_cabinet">
+      <origin xyz="0 0 0.67" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.38 1.1" />
+        </geometry>
+      <material name="cabinet_gray">
+        <color rgba="0.42 0.45 0.43 1" />
+        </material>
+      </visual>
+    <visual name="front_door">
+      <origin xyz="0 -0.199 0.7" rpy="0 0 0" />
+      <geometry>
+        <box size="0.39 0.018 0.78" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="display_window">
+      <origin xyz="0 -0.212 1.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.02 0.1" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="red_indicator">
+      <origin xyz="-0.075 -0.214 0.91" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.018" />
+        </geometry>
+      <material name="red_lens">
+        <color rgba="1 0.03 0.02 1" />
+        </material>
+      </visual>
+    <visual name="green_indicator">
+      <origin xyz="0.075 -0.214 0.91" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.018" />
+        </geometry>
+      <material name="green_lens">
+        <color rgba="0.02 0.75 0.13 1" />
+        </material>
+      </visual>
+    <visual name="key_slot">
+      <origin xyz="0 -0.214 0.79" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.018 0.038" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="hinge_bracket_0">
+      <origin xyz="0.41 0.175 0.81" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.035 0.18" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="hinge_bracket_1">
+      <origin xyz="0.41 -0.175 0.81" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.035 0.18" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="yoke_plate_0">
+      <origin xyz="0.65 0.14 1.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.035 0.34" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="yoke_plate_1">
+      <origin xyz="0.65 -0.14 1.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.035 0.34" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="outer_bearing_0">
+      <origin xyz="0.65 0.168 1.06" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.024" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="outer_bearing_1">
+      <origin xyz="0.65 -0.168 1.06" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.024" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <collision name="base_plinth">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.62 0.12" />
+        </geometry>
+      </collision>
+    <collision name="control_cabinet">
+      <origin xyz="0 0 0.67" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.38 1.1" />
+        </geometry>
+      </collision>
+    <collision name="front_door">
+      <origin xyz="0 -0.199 0.7" rpy="0 0 0" />
+      <geometry>
+        <box size="0.39 0.018 0.78" />
+        </geometry>
+      </collision>
+    <collision name="display_window">
+      <origin xyz="0 -0.212 1.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.02 0.1" />
+        </geometry>
+      </collision>
+    <collision name="red_indicator">
+      <origin xyz="-0.075 -0.214 0.91" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="green_indicator">
+      <origin xyz="0.075 -0.214 0.91" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="key_slot">
+      <origin xyz="0 -0.214 0.79" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.018 0.038" />
+        </geometry>
+      </collision>
+    <collision name="hinge_bracket_0">
+      <origin xyz="0.41 0.175 0.81" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.035 0.18" />
+        </geometry>
+      </collision>
+    <collision name="hinge_bracket_1">
+      <origin xyz="0.41 -0.175 0.81" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.035 0.18" />
+        </geometry>
+      </collision>
+    <collision name="yoke_plate_0">
+      <origin xyz="0.65 0.14 1.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.035 0.34" />
+        </geometry>
+      </collision>
+    <collision name="yoke_plate_1">
+      <origin xyz="0.65 -0.14 1.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.035 0.34" />
+        </geometry>
+      </collision>
+    <collision name="outer_bearing_0">
+      <origin xyz="0.65 0.168 1.06" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="outer_bearing_1">
+      <origin xyz="0.65 -0.168 1.06" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="boom">
+    <visual name="pivot_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.245" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="main_boom">
+      <origin xyz="1.86 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="3.6 0.12 0.11" />
+        </geometry>
+      <material name="painted_white">
+        <color rgba="0.92 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="red_band_0">
+      <origin xyz="0.62 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.126 0.116" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.04 0.03 1" />
+        </material>
+      </visual>
+    <visual name="red_band_1">
+      <origin xyz="1.18 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.126 0.116" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.04 0.03 1" />
+        </material>
+      </visual>
+    <visual name="red_band_2">
+      <origin xyz="1.74 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.126 0.116" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.04 0.03 1" />
+        </material>
+      </visual>
+    <visual name="red_band_3">
+      <origin xyz="2.3 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.126 0.116" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.04 0.03 1" />
+        </material>
+      </visual>
+    <visual name="red_band_4">
+      <origin xyz="2.86 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.126 0.116" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.04 0.03 1" />
+        </material>
+      </visual>
+    <visual name="red_band_5">
+      <origin xyz="3.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.126 0.116" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.04 0.03 1" />
+        </material>
+      </visual>
+    <visual name="end_cap">
+      <origin xyz="3.7 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.13 0.12" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.85 0.04 0.03 1" />
+        </material>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="-0.21 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.2 0.22" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <collision name="pivot_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.245" />
+        </geometry>
+      </collision>
+    <collision name="main_boom">
+      <origin xyz="1.86 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="3.6 0.12 0.11" />
+        </geometry>
+      </collision>
+    <collision name="red_band_0">
+      <origin xyz="0.62 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.126 0.116" />
+        </geometry>
+      </collision>
+    <collision name="red_band_1">
+      <origin xyz="1.18 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.126 0.116" />
+        </geometry>
+      </collision>
+    <collision name="red_band_2">
+      <origin xyz="1.74 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.126 0.116" />
+        </geometry>
+      </collision>
+    <collision name="red_band_3">
+      <origin xyz="2.3 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.126 0.116" />
+        </geometry>
+      </collision>
+    <collision name="red_band_4">
+      <origin xyz="2.86 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.126 0.116" />
+        </geometry>
+      </collision>
+    <collision name="red_band_5">
+      <origin xyz="3.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.126 0.116" />
+        </geometry>
+      </collision>
+    <collision name="end_cap">
+      <origin xyz="3.7 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.13 0.12" />
+        </geometry>
+      </collision>
+    <collision name="counterweight">
+      <origin xyz="-0.21 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.2 0.22" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="boom_hinge" type="revolute">
+    <origin xyz="0.65 0 1.06" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="boom" />
+    <axis xyz="0 -1 0" />
+    <limit effort="250" velocity="0.55" lower="0" upper="1.35" />
+    </joint>
+  </robot>

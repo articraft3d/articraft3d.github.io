@@ -1,0 +1,363 @@
+<robot name="articulated_terrestrial_globe">
+  <material name="ocean_blue">
+    <color rgba="0.03 0.22 0.52 1" />
+    </material>
+  <material name="land_green">
+    <color rgba="0.2 0.48 0.2 1" />
+    </material>
+  <material name="desert_tan">
+    <color rgba="0.62 0.47 0.27 1" />
+    </material>
+  <material name="ice_white">
+    <color rgba="0.92 0.94 0.88 1" />
+    </material>
+  <material name="map_ink">
+    <color rgba="0.93 0.88 0.62 1" />
+    </material>
+  <material name="aged_brass">
+    <color rgba="0.78 0.6 0.22 1" />
+    </material>
+  <material name="dark_ticks">
+    <color rgba="0.08 0.07 0.04 1" />
+    </material>
+  <material name="walnut">
+    <color rgba="0.33 0.18 0.08 1" />
+    </material>
+  <material name="black_felt">
+    <color rgba="0.015 0.014 0.012 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.032" rpy="0 0 0" />
+      <mass value="1.4" />
+      <inertia ixx="0.0118329" ixy="0" ixz="0" iyy="0.0118329" iyz="0" izz="0.02268" />
+      </inertial>
+    <visual name="wood_plinth">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.055" />
+        </geometry>
+      <material name="walnut" />
+      </visual>
+    <visual name="brass_inlay">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.145" length="0.01" />
+        </geometry>
+      <material name="aged_brass" />
+      </visual>
+    <visual name="base_collar">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.046" />
+        </geometry>
+      <material name="aged_brass" />
+      </visual>
+    <visual name="post_socket">
+      <origin xyz="-0.0837561 0 0.058" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.05" />
+        </geometry>
+      <material name="aged_brass" />
+      </visual>
+    <visual name="foot_0">
+      <origin xyz="0.12 0.088 -0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="black_felt" />
+      </visual>
+    <visual name="foot_1">
+      <origin xyz="0.12 -0.088 -0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="black_felt" />
+      </visual>
+    <visual name="foot_2">
+      <origin xyz="-0.12 0.088 -0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="black_felt" />
+      </visual>
+    <visual name="foot_3">
+      <origin xyz="-0.12 -0.088 -0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="black_felt" />
+      </visual>
+    <collision name="wood_plinth">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="brass_inlay">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.145" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="base_collar">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.046" />
+        </geometry>
+      </collision>
+    <collision name="post_socket">
+      <origin xyz="-0.0837561 0 0.058" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="foot_0">
+      <origin xyz="0.12 0.088 -0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="foot_1">
+      <origin xyz="0.12 -0.088 -0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="foot_2">
+      <origin xyz="-0.12 0.088 -0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="foot_3">
+      <origin xyz="-0.12 -0.088 -0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="meridian">
+    <inertial>
+      <origin xyz="0 0 0.43" rpy="0 0 0" />
+      <mass value="0.65" />
+      <inertia ixx="0.00975" ixy="0" ixz="0" iyy="0.0200417" iyz="0" izz="0.0106817" />
+      </inertial>
+    <visual name="pedestal_post">
+      <origin xyz="-0.0837561 0 0.169037" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.172073" />
+        </geometry>
+      <material name="aged_brass" />
+      </visual>
+    <visual name="post_foot">
+      <origin xyz="-0.0837561 0 0.092" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      <material name="aged_brass" />
+      </visual>
+    <visual name="meridian_ring">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_ring.obj" />
+        </geometry>
+      <material name="aged_brass" />
+      </visual>
+    <visual name="degree_ticks">
+      <geometry>
+        <mesh filename="assets/meshes/degree_ticks.obj" />
+        </geometry>
+      <material name="dark_ticks" />
+      </visual>
+    <collision name="pedestal_post">
+      <origin xyz="-0.0837561 0 0.169037" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.172073" />
+        </geometry>
+      </collision>
+    <collision name="post_foot">
+      <origin xyz="-0.0837561 0 0.092" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="meridian_ring">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="degree_ticks">
+      <geometry>
+        <mesh filename="assets/meshes/degree_ticks.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="globe">
+    <inertial>
+      <mass value="0.45" />
+      <inertia ixx="0.005202" ixy="0" ixz="0" iyy="0.005202" iyz="0" izz="0.005202" />
+      </inertial>
+    <visual name="ocean_sphere">
+      <geometry>
+        <mesh filename="assets/meshes/ocean_sphere.obj" />
+        </geometry>
+      <material name="ocean_blue" />
+      </visual>
+    <visual name="graticule">
+      <geometry>
+        <mesh filename="assets/meshes/latitude_longitude_grid.obj" />
+        </geometry>
+      <material name="map_ink" />
+      </visual>
+    <visual name="north_america">
+      <geometry>
+        <mesh filename="assets/meshes/north_america.obj" />
+        </geometry>
+      <material name="land_green" />
+      </visual>
+    <visual name="south_america">
+      <geometry>
+        <mesh filename="assets/meshes/south_america.obj" />
+        </geometry>
+      <material name="land_green" />
+      </visual>
+    <visual name="eurasia">
+      <geometry>
+        <mesh filename="assets/meshes/eurasia.obj" />
+        </geometry>
+      <material name="land_green" />
+      </visual>
+    <visual name="africa">
+      <geometry>
+        <mesh filename="assets/meshes/africa.obj" />
+        </geometry>
+      <material name="desert_tan" />
+      </visual>
+    <visual name="australia">
+      <geometry>
+        <mesh filename="assets/meshes/australia.obj" />
+        </geometry>
+      <material name="desert_tan" />
+      </visual>
+    <visual name="greenland">
+      <geometry>
+        <mesh filename="assets/meshes/greenland.obj" />
+        </geometry>
+      <material name="ice_white" />
+      </visual>
+    <visual name="antarctica">
+      <geometry>
+        <mesh filename="assets/meshes/antarctica.obj" />
+        </geometry>
+      <material name="ice_white" />
+      </visual>
+    <visual name="north_pivot_cap">
+      <origin xyz="0 0 0.176" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.012" />
+        </geometry>
+      <material name="aged_brass" />
+      </visual>
+    <visual name="north_pivot_tip">
+      <origin xyz="0 0 0.186" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.004" />
+        </geometry>
+      <material name="aged_brass" />
+      </visual>
+    <visual name="south_pivot_cap">
+      <origin xyz="0 0 -0.176" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.012" />
+        </geometry>
+      <material name="aged_brass" />
+      </visual>
+    <visual name="south_pivot_tip">
+      <origin xyz="0 0 -0.186" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.004" />
+        </geometry>
+      <material name="aged_brass" />
+      </visual>
+    <collision name="ocean_sphere">
+      <geometry>
+        <mesh filename="assets/meshes/ocean_sphere.obj" />
+        </geometry>
+      </collision>
+    <collision name="graticule">
+      <geometry>
+        <mesh filename="assets/meshes/latitude_longitude_grid.obj" />
+        </geometry>
+      </collision>
+    <collision name="north_america">
+      <geometry>
+        <mesh filename="assets/meshes/north_america.obj" />
+        </geometry>
+      </collision>
+    <collision name="south_america">
+      <geometry>
+        <mesh filename="assets/meshes/south_america.obj" />
+        </geometry>
+      </collision>
+    <collision name="eurasia">
+      <geometry>
+        <mesh filename="assets/meshes/eurasia.obj" />
+        </geometry>
+      </collision>
+    <collision name="africa">
+      <geometry>
+        <mesh filename="assets/meshes/africa.obj" />
+        </geometry>
+      </collision>
+    <collision name="australia">
+      <geometry>
+        <mesh filename="assets/meshes/australia.obj" />
+        </geometry>
+      </collision>
+    <collision name="greenland">
+      <geometry>
+        <mesh filename="assets/meshes/greenland.obj" />
+        </geometry>
+      </collision>
+    <collision name="antarctica">
+      <geometry>
+        <mesh filename="assets/meshes/antarctica.obj" />
+        </geometry>
+      </collision>
+    <collision name="north_pivot_cap">
+      <origin xyz="0 0 0.176" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="north_pivot_tip">
+      <origin xyz="0 0 0.186" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.004" />
+        </geometry>
+      </collision>
+    <collision name="south_pivot_cap">
+      <origin xyz="0 0 -0.176" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="south_pivot_tip">
+      <origin xyz="0 0 -0.186" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_meridian" type="fixed">
+    <parent link="base" />
+    <child link="meridian" />
+    </joint>
+  <joint name="globe_spin" type="continuous">
+    <origin xyz="0 0 0.43" rpy="0 0.410152 0" />
+    <parent link="meridian" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="4" />
+    </joint>
+  </robot>

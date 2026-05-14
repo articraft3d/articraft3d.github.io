@@ -1,0 +1,627 @@
+<robot name="compact_wireless_headphone">
+  <material name="matte_black">
+    <color rgba="0.015 0.015 0.018 1" />
+    </material>
+  <material name="charcoal_plastic">
+    <color rgba="0.08 0.085 0.09 1" />
+    </material>
+  <material name="soft_foam">
+    <color rgba="0 0 0 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.35 0.36 0.38 1" />
+    </material>
+  <material name="cool_grey_accent">
+    <color rgba="0.18 0.24 0.3 1" />
+    </material>
+  <link name="headband">
+    <visual name="arched_band">
+      <geometry>
+        <mesh filename="assets/meshes/arched_headband.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="underside_pad">
+      <geometry>
+        <mesh filename="assets/meshes/underside_head_pad.obj" />
+        </geometry>
+      <material name="soft_foam">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="left_fold_socket">
+      <origin xyz="-0.108 0 0.064" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.05" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.35 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="left_side_cap">
+      <origin xyz="-0.108 0 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.044 0.024" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="right_fold_socket">
+      <origin xyz="0.108 0 0.064" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.05" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.35 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="right_side_cap">
+      <origin xyz="0.108 0 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.044 0.024" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="carry_socket_0">
+      <origin xyz="-0.04 0 0.19" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.015" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.35 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="carry_socket_1">
+      <origin xyz="0.04 0 0.19" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.015" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.35 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="carry_recess">
+      <origin xyz="0 -0.006 0.193" rpy="0 0 0" />
+      <geometry>
+        <box size="0.094 0.008 0.004" />
+        </geometry>
+      <material name="cool_grey_accent">
+        <color rgba="0.18 0.24 0.3 1" />
+        </material>
+      </visual>
+    <collision name="arched_band">
+      <geometry>
+        <mesh filename="assets/meshes/arched_headband.obj" />
+        </geometry>
+      </collision>
+    <collision name="underside_pad">
+      <geometry>
+        <mesh filename="assets/meshes/underside_head_pad.obj" />
+        </geometry>
+      </collision>
+    <collision name="left_fold_socket">
+      <origin xyz="-0.108 0 0.064" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="left_side_cap">
+      <origin xyz="-0.108 0 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.044 0.024" />
+        </geometry>
+      </collision>
+    <collision name="right_fold_socket">
+      <origin xyz="0.108 0 0.064" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="right_side_cap">
+      <origin xyz="0.108 0 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.044 0.024" />
+        </geometry>
+      </collision>
+    <collision name="carry_socket_0">
+      <origin xyz="-0.04 0 0.19" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="carry_socket_1">
+      <origin xyz="0.04 0 0.19" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="carry_recess">
+      <origin xyz="0 -0.006 0.193" rpy="0 0 0" />
+      <geometry>
+        <box size="0.094 0.008 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carry_loop">
+    <visual name="loop_tube">
+      <geometry>
+        <mesh filename="assets/meshes/folding_carry_loop.obj" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.35 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="pivot_0">
+      <origin xyz="-0.04 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0062" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.35 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="pivot_1">
+      <origin xyz="0.04 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0062" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.35 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="finger_pad">
+      <origin xyz="0 0.055 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.01 0.004" />
+        </geometry>
+      <material name="soft_foam">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <collision name="loop_tube">
+      <geometry>
+        <mesh filename="assets/meshes/folding_carry_loop.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_0">
+      <origin xyz="-0.04 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0062" />
+        </geometry>
+      </collision>
+    <collision name="pivot_1">
+      <origin xyz="0.04 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0062" />
+        </geometry>
+      </collision>
+    <collision name="finger_pad">
+      <origin xyz="0 0.055 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.01 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="left_yoke">
+    <visual name="fold_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.084" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.35 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="hinge_cheek_rear">
+      <origin xyz="0 -0.037 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.014 0.012" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="hinge_cheek_front">
+      <origin xyz="0 0.037 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.014 0.012" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="side_arm_rear">
+      <origin xyz="0 -0.044 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.07" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="side_arm_front">
+      <origin xyz="0 0.044 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.07" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="pivot_bridge_rear">
+      <origin xyz="0 -0.026 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.035 0.006" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="pivot_bridge_front">
+      <origin xyz="0 0.026 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.035 0.006" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="swivel_socket">
+      <origin xyz="0 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.013" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.35 0.36 0.38 1" />
+        </material>
+      </visual>
+    <collision name="fold_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.084" />
+        </geometry>
+      </collision>
+    <collision name="hinge_cheek_rear">
+      <origin xyz="0 -0.037 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="hinge_cheek_front">
+      <origin xyz="0 0.037 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="side_arm_rear">
+      <origin xyz="0 -0.044 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.07" />
+        </geometry>
+      </collision>
+    <collision name="side_arm_front">
+      <origin xyz="0 0.044 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.07" />
+        </geometry>
+      </collision>
+    <collision name="pivot_bridge_rear">
+      <origin xyz="0 -0.026 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.035 0.006" />
+        </geometry>
+      </collision>
+    <collision name="pivot_bridge_front">
+      <origin xyz="0 0.026 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.035 0.006" />
+        </geometry>
+      </collision>
+    <collision name="swivel_socket">
+      <origin xyz="0 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.013" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="right_yoke">
+    <visual name="fold_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.084" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.35 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="hinge_cheek_rear">
+      <origin xyz="0 -0.037 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.014 0.012" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="hinge_cheek_front">
+      <origin xyz="0 0.037 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.014 0.012" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="side_arm_rear">
+      <origin xyz="0 -0.044 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.07" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="side_arm_front">
+      <origin xyz="0 0.044 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.07" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="pivot_bridge_rear">
+      <origin xyz="0 -0.026 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.035 0.006" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="pivot_bridge_front">
+      <origin xyz="0 0.026 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.035 0.006" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="swivel_socket">
+      <origin xyz="0 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.013" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.35 0.36 0.38 1" />
+        </material>
+      </visual>
+    <collision name="fold_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0072" length="0.084" />
+        </geometry>
+      </collision>
+    <collision name="hinge_cheek_rear">
+      <origin xyz="0 -0.037 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="hinge_cheek_front">
+      <origin xyz="0 0.037 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="side_arm_rear">
+      <origin xyz="0 -0.044 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.07" />
+        </geometry>
+      </collision>
+    <collision name="side_arm_front">
+      <origin xyz="0 0.044 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.07" />
+        </geometry>
+      </collision>
+    <collision name="pivot_bridge_rear">
+      <origin xyz="0 -0.026 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.035 0.006" />
+        </geometry>
+      </collision>
+    <collision name="pivot_bridge_front">
+      <origin xyz="0 0.026 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.035 0.006" />
+        </geometry>
+      </collision>
+    <collision name="swivel_socket">
+      <origin xyz="0 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.013" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="left_cup">
+    <visual name="outer_shell">
+      <geometry>
+        <mesh filename="assets/meshes/left_cup_shell_mesh.obj" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="ear_cushion">
+      <geometry>
+        <mesh filename="assets/meshes/left_cup_cushion_mesh.obj" />
+        </geometry>
+      <material name="soft_foam">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="driver_grille">
+      <geometry>
+        <mesh filename="assets/meshes/left_cup_grille_mesh.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="outer_cap">
+      <geometry>
+        <mesh filename="assets/meshes/left_cup_outer_cap_mesh.obj" />
+        </geometry>
+      <material name="cool_grey_accent">
+        <color rgba="0.18 0.24 0.3 1" />
+        </material>
+      </visual>
+    <visual name="swivel_stem">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.02" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.35 0.36 0.38 1" />
+        </material>
+      </visual>
+    <collision name="outer_shell">
+      <geometry>
+        <mesh filename="assets/meshes/left_cup_shell_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="ear_cushion">
+      <geometry>
+        <mesh filename="assets/meshes/left_cup_cushion_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="driver_grille">
+      <geometry>
+        <mesh filename="assets/meshes/left_cup_grille_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="outer_cap">
+      <geometry>
+        <mesh filename="assets/meshes/left_cup_outer_cap_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="swivel_stem">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="right_cup">
+    <visual name="outer_shell">
+      <geometry>
+        <mesh filename="assets/meshes/right_cup_shell_mesh.obj" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="ear_cushion">
+      <geometry>
+        <mesh filename="assets/meshes/right_cup_cushion_mesh.obj" />
+        </geometry>
+      <material name="soft_foam">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="driver_grille">
+      <geometry>
+        <mesh filename="assets/meshes/right_cup_grille_mesh.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="outer_cap">
+      <geometry>
+        <mesh filename="assets/meshes/right_cup_outer_cap_mesh.obj" />
+        </geometry>
+      <material name="cool_grey_accent">
+        <color rgba="0.18 0.24 0.3 1" />
+        </material>
+      </visual>
+    <visual name="swivel_stem">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.02" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.35 0.36 0.38 1" />
+        </material>
+      </visual>
+    <collision name="outer_shell">
+      <geometry>
+        <mesh filename="assets/meshes/right_cup_shell_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="ear_cushion">
+      <geometry>
+        <mesh filename="assets/meshes/right_cup_cushion_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="driver_grille">
+      <geometry>
+        <mesh filename="assets/meshes/right_cup_grille_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="outer_cap">
+      <geometry>
+        <mesh filename="assets/meshes/right_cup_outer_cap_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="swivel_stem">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="left_fold_hinge" type="revolute">
+    <origin xyz="-0.108 0 0.064" rpy="0 0 0" />
+    <parent link="headband" />
+    <child link="left_yoke" />
+    <axis xyz="0 -1 0" />
+    <limit effort="4" velocity="2.5" lower="0" upper="1.15" />
+    </joint>
+  <joint name="right_fold_hinge" type="revolute">
+    <origin xyz="0.108 0 0.064" rpy="0 0 0" />
+    <parent link="headband" />
+    <child link="right_yoke" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="2.5" lower="0" upper="1.15" />
+    </joint>
+  <joint name="left_swivel_pivot" type="revolute">
+    <origin xyz="0 0 -0.075" rpy="0 0 0" />
+    <parent link="left_yoke" />
+    <child link="left_cup" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="3" lower="-0.55" upper="0.55" />
+    </joint>
+  <joint name="right_swivel_pivot" type="revolute">
+    <origin xyz="0 0 -0.075" rpy="0 0 0" />
+    <parent link="right_yoke" />
+    <child link="right_cup" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="3" lower="-0.55" upper="0.55" />
+    </joint>
+  <joint name="carry_loop_pivot" type="revolute">
+    <origin xyz="0 0 0.19" rpy="0 0 0" />
+    <parent link="headband" />
+    <child link="carry_loop" />
+    <axis xyz="1 0 0" />
+    <limit effort="1" velocity="2" lower="0" upper="1.35" />
+    </joint>
+  </robot>

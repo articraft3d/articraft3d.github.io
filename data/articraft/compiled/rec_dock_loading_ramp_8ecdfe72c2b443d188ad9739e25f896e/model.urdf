@@ -1,0 +1,460 @@
+<robot name="vertical_storing_dock_leveler">
+  <material name="formed_concrete">
+    <color rgba="0.5 0.5 0.47 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <material name="blue_gray_painted_steel">
+    <color rgba="0.18 0.28 0.34 1" />
+    </material>
+  <material name="worn_steel_edges">
+    <color rgba="0.55 0.57 0.56 1" />
+    </material>
+  <material name="safety_yellow">
+    <color rgba="1 0.72 0.06 1" />
+    </material>
+  <link name="dock_face">
+    <visual name="concrete_wall">
+      <origin xyz="-0.11 0 1.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 2.9 2.7" />
+        </geometry>
+      <material name="formed_concrete">
+        <color rgba="0.5 0.5 0.47 1" />
+        </material>
+      </visual>
+    <visual name="pit_floor">
+      <origin xyz="0.825 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="1.65 2.9 0.1" />
+        </geometry>
+      <material name="formed_concrete">
+        <color rgba="0.5 0.5 0.47 1" />
+        </material>
+      </visual>
+    <visual name="rear_sill">
+      <origin xyz="0.02 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 2.46 0.12" />
+        </geometry>
+      <material name="formed_concrete">
+        <color rgba="0.5 0.5 0.47 1" />
+        </material>
+      </visual>
+    <visual name="pit_curb_0">
+      <origin xyz="0.825 -1.53 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="1.65 0.16 0.18" />
+        </geometry>
+      <material name="formed_concrete">
+        <color rgba="0.5 0.5 0.47 1" />
+        </material>
+      </visual>
+    <visual name="pit_curb_1">
+      <origin xyz="0.825 1.53 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="1.65 0.16 0.18" />
+        </geometry>
+      <material name="formed_concrete">
+        <color rgba="0.5 0.5 0.47 1" />
+        </material>
+      </visual>
+    <visual name="dock_bumper_0">
+      <origin xyz="0.0375 -1.29 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.18 1.18" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="dock_bumper_1">
+      <origin xyz="0.0375 1.29 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.18 1.18" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="yellow_hinge_stripe">
+      <origin xyz="-0.006 0 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 2.34 0.08" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="1 0.72 0.06 1" />
+        </material>
+      </visual>
+    <collision name="concrete_wall">
+      <origin xyz="-0.11 0 1.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 2.9 2.7" />
+        </geometry>
+      </collision>
+    <collision name="pit_floor">
+      <origin xyz="0.825 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="1.65 2.9 0.1" />
+        </geometry>
+      </collision>
+    <collision name="rear_sill">
+      <origin xyz="0.02 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 2.46 0.12" />
+        </geometry>
+      </collision>
+    <collision name="pit_curb_0">
+      <origin xyz="0.825 -1.53 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="1.65 0.16 0.18" />
+        </geometry>
+      </collision>
+    <collision name="pit_curb_1">
+      <origin xyz="0.825 1.53 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="1.65 0.16 0.18" />
+        </geometry>
+      </collision>
+    <collision name="dock_bumper_0">
+      <origin xyz="0.0375 -1.29 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.18 1.18" />
+        </geometry>
+      </collision>
+    <collision name="dock_bumper_1">
+      <origin xyz="0.0375 1.29 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.18 1.18" />
+        </geometry>
+      </collision>
+    <collision name="yellow_hinge_stripe">
+      <origin xyz="-0.006 0 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 2.34 0.08" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="deck">
+    <visual name="deck_plate">
+      <origin xyz="-0.01 0 1.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 2.2 2.32" />
+        </geometry>
+      <material name="blue_gray_painted_steel">
+        <color rgba="0.18 0.28 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_tube">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="2.34" />
+        </geometry>
+      <material name="worn_steel_edges">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <visual name="side_beam_0">
+      <origin xyz="-0.02 -1.14 1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.1 2.24" />
+        </geometry>
+      <material name="blue_gray_painted_steel">
+        <color rgba="0.18 0.28 0.34 1" />
+        </material>
+      </visual>
+    <visual name="side_beam_1">
+      <origin xyz="-0.02 1.14 1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.1 2.24" />
+        </geometry>
+      <material name="blue_gray_painted_steel">
+        <color rgba="0.18 0.28 0.34 1" />
+        </material>
+      </visual>
+    <visual name="traction_bar_0">
+      <origin xyz="0.055 0 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.36 0.03" />
+        </geometry>
+      <material name="worn_steel_edges">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <visual name="traction_bar_1">
+      <origin xyz="0.055 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.36 0.03" />
+        </geometry>
+      <material name="worn_steel_edges">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <visual name="traction_bar_2">
+      <origin xyz="0.055 0 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.36 0.03" />
+        </geometry>
+      <material name="worn_steel_edges">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <visual name="traction_bar_3">
+      <origin xyz="0.055 0 1.54" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.36 0.03" />
+        </geometry>
+      <material name="worn_steel_edges">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <visual name="traction_bar_4">
+      <origin xyz="0.055 0 1.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.36 0.03" />
+        </geometry>
+      <material name="worn_steel_edges">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <visual name="traction_bar_5">
+      <origin xyz="0.055 0 2.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.36 0.03" />
+        </geometry>
+      <material name="worn_steel_edges">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <collision name="deck_plate">
+      <origin xyz="-0.01 0 1.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 2.2 2.32" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_tube">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="2.34" />
+        </geometry>
+      </collision>
+    <collision name="side_beam_0">
+      <origin xyz="-0.02 -1.14 1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.1 2.24" />
+        </geometry>
+      </collision>
+    <collision name="side_beam_1">
+      <origin xyz="-0.02 1.14 1.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.1 2.24" />
+        </geometry>
+      </collision>
+    <collision name="traction_bar_0">
+      <origin xyz="0.055 0 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.36 0.03" />
+        </geometry>
+      </collision>
+    <collision name="traction_bar_1">
+      <origin xyz="0.055 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.36 0.03" />
+        </geometry>
+      </collision>
+    <collision name="traction_bar_2">
+      <origin xyz="0.055 0 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.36 0.03" />
+        </geometry>
+      </collision>
+    <collision name="traction_bar_3">
+      <origin xyz="0.055 0 1.54" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.36 0.03" />
+        </geometry>
+      </collision>
+    <collision name="traction_bar_4">
+      <origin xyz="0.055 0 1.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.36 0.03" />
+        </geometry>
+      </collision>
+    <collision name="traction_bar_5">
+      <origin xyz="0.055 0 2.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.36 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lip">
+    <visual name="lip_hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="2.12" />
+        </geometry>
+      <material name="worn_steel_edges">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <visual name="lip_plate">
+      <origin xyz="0.045 0 -0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 1.42 0.72" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="1 0.72 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lip_nose_edge">
+      <origin xyz="0.05 0 -0.7" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.36 0.045" />
+        </geometry>
+      <material name="worn_steel_edges">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <collision name="lip_hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="2.12" />
+        </geometry>
+      </collision>
+    <collision name="lip_plate">
+      <origin xyz="0.045 0 -0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 1.42 0.72" />
+        </geometry>
+      </collision>
+    <collision name="lip_nose_edge">
+      <origin xyz="0.05 0 -0.7" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.36 0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="side_skirt_0">
+    <visual name="skirt_hinge_barrel">
+      <origin xyz="-0.01 0 1.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0225" length="2.18" />
+        </geometry>
+      <material name="worn_steel_edges">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <visual name="skirt_panel">
+      <origin xyz="-0.01 -0.18 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.36 2.1" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="1 0.72 0.06 1" />
+        </material>
+      </visual>
+    <visual name="skirt_wear_edge">
+      <origin xyz="0.01 -0.36 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 2.04" />
+        </geometry>
+      <material name="worn_steel_edges">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <collision name="skirt_hinge_barrel">
+      <origin xyz="-0.01 0 1.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0225" length="2.18" />
+        </geometry>
+      </collision>
+    <collision name="skirt_panel">
+      <origin xyz="-0.01 -0.18 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.36 2.1" />
+        </geometry>
+      </collision>
+    <collision name="skirt_wear_edge">
+      <origin xyz="0.01 -0.36 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 2.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="side_skirt_1">
+    <visual name="skirt_hinge_barrel">
+      <origin xyz="-0.01 0 1.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0225" length="2.18" />
+        </geometry>
+      <material name="worn_steel_edges">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <visual name="skirt_panel">
+      <origin xyz="-0.01 0.18 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.36 2.1" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="1 0.72 0.06 1" />
+        </material>
+      </visual>
+    <visual name="skirt_wear_edge">
+      <origin xyz="0.01 0.36 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 2.04" />
+        </geometry>
+      <material name="worn_steel_edges">
+        <color rgba="0.55 0.57 0.56 1" />
+        </material>
+      </visual>
+    <collision name="skirt_hinge_barrel">
+      <origin xyz="-0.01 0 1.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0225" length="2.18" />
+        </geometry>
+      </collision>
+    <collision name="skirt_panel">
+      <origin xyz="-0.01 0.18 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.36 2.1" />
+        </geometry>
+      </collision>
+    <collision name="skirt_wear_edge">
+      <origin xyz="0.01 0.36 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 2.04" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="dock_to_deck" type="revolute">
+    <origin xyz="0.06 0 0.18" rpy="0 0 0" />
+    <parent link="dock_face" />
+    <child link="deck" />
+    <axis xyz="0 1 0" />
+    <limit effort="5000" velocity="0.35" lower="0" upper="1.5708" />
+    </joint>
+  <joint name="deck_to_lip" type="revolute">
+    <origin xyz="0.08 0 2.36" rpy="0 0 0" />
+    <parent link="deck" />
+    <child link="lip" />
+    <axis xyz="0 1 0" />
+    <limit effort="1200" velocity="1" lower="0" upper="2.95" />
+    </joint>
+  <joint name="deck_to_side_skirt_0" type="revolute">
+    <origin xyz="0.0725 1.1 0.12" rpy="0 0 0" />
+    <parent link="deck" />
+    <child link="side_skirt_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="400" velocity="1" lower="0" upper="1.5708" />
+    </joint>
+  <joint name="deck_to_side_skirt_1" type="revolute">
+    <origin xyz="0.0725 -1.1 0.12" rpy="0 0 0" />
+    <parent link="deck" />
+    <child link="side_skirt_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="400" velocity="1" lower="-1.5708" upper="0" />
+    </joint>
+  </robot>

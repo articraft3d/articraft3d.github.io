@@ -1,0 +1,565 @@
+<robot name="shallow_electric_cooktop">
+  <material name="warm_stone">
+    <color rgba="0.72 0.69 0.62 1" />
+    </material>
+  <material name="black_ceramic_glass">
+    <color rgba="0.015 0.018 0.02 1" />
+    </material>
+  <material name="charcoal_control_strip">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="faint_radiant_red">
+    <color rgba="0.85 0.055 0.015 1" />
+    </material>
+  <material name="dark_zone_print">
+    <color rgba="0.006 0.006 0.007 1" />
+    </material>
+  <material name="satin_silver_button">
+    <color rgba="0.8 0.8 0.76 1" />
+    </material>
+  <link name="counter">
+    <visual name="counter_frame">
+      <geometry>
+        <mesh filename="assets/meshes/counter_frame.obj" />
+        </geometry>
+      <material name="warm_stone">
+        <color rgba="0.72 0.69 0.62 1" />
+        </material>
+      </visual>
+    <visual name="glass_panel">
+      <geometry>
+        <mesh filename="assets/meshes/glass_panel.obj" />
+        </geometry>
+      <material name="black_ceramic_glass">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="control_strip">
+      <geometry>
+        <mesh filename="assets/meshes/control_strip.obj" />
+        </geometry>
+      <material name="charcoal_control_strip">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="zone_0_field">
+      <origin xyz="-0.175 0.125 0.040125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.00025" />
+        </geometry>
+      <material name="dark_zone_print">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="zone_0_outer_ring">
+      <origin xyz="-0.175 0.125 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/medium_radiant_ring.obj" />
+        </geometry>
+      <material name="faint_radiant_red">
+        <color rgba="0.85 0.055 0.015 1" />
+        </material>
+      </visual>
+    <visual name="zone_0_inner_ring">
+      <origin xyz="-0.175 0.125 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/zone_0_inner_ring.obj" />
+        </geometry>
+      <material name="faint_radiant_red">
+        <color rgba="0.85 0.055 0.015 1" />
+        </material>
+      </visual>
+    <visual name="zone_1_field">
+      <origin xyz="0.175 0.125 0.040125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.00025" />
+        </geometry>
+      <material name="dark_zone_print">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="zone_1_outer_ring">
+      <origin xyz="0.175 0.125 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/small_radiant_ring.obj" />
+        </geometry>
+      <material name="faint_radiant_red">
+        <color rgba="0.85 0.055 0.015 1" />
+        </material>
+      </visual>
+    <visual name="zone_1_inner_ring">
+      <origin xyz="0.175 0.125 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/zone_1_inner_ring.obj" />
+        </geometry>
+      <material name="faint_radiant_red">
+        <color rgba="0.85 0.055 0.015 1" />
+        </material>
+      </visual>
+    <visual name="zone_2_field">
+      <origin xyz="-0.175 -0.07 0.040125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.062" length="0.00025" />
+        </geometry>
+      <material name="dark_zone_print">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="zone_2_outer_ring">
+      <origin xyz="-0.175 -0.07 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/small_radiant_ring.obj" />
+        </geometry>
+      <material name="faint_radiant_red">
+        <color rgba="0.85 0.055 0.015 1" />
+        </material>
+      </visual>
+    <visual name="zone_2_inner_ring">
+      <origin xyz="-0.175 -0.07 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/zone_2_inner_ring.obj" />
+        </geometry>
+      <material name="faint_radiant_red">
+        <color rgba="0.85 0.055 0.015 1" />
+        </material>
+      </visual>
+    <visual name="zone_3_field">
+      <origin xyz="0.175 -0.06 0.040125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.00025" />
+        </geometry>
+      <material name="dark_zone_print">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="zone_3_outer_ring">
+      <origin xyz="0.175 -0.06 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/large_radiant_ring.obj" />
+        </geometry>
+      <material name="faint_radiant_red">
+        <color rgba="0.85 0.055 0.015 1" />
+        </material>
+      </visual>
+    <visual name="zone_3_inner_ring">
+      <origin xyz="0.175 -0.06 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/zone_3_inner_ring.obj" />
+        </geometry>
+      <material name="faint_radiant_red">
+        <color rgba="0.85 0.055 0.015 1" />
+        </material>
+      </visual>
+    <collision name="counter_frame">
+      <geometry>
+        <mesh filename="assets/meshes/counter_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="glass_panel">
+      <geometry>
+        <mesh filename="assets/meshes/glass_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="control_strip">
+      <geometry>
+        <mesh filename="assets/meshes/control_strip.obj" />
+        </geometry>
+      </collision>
+    <collision name="zone_0_field">
+      <origin xyz="-0.175 0.125 0.040125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.00025" />
+        </geometry>
+      </collision>
+    <collision name="zone_0_outer_ring">
+      <origin xyz="-0.175 0.125 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/medium_radiant_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="zone_0_inner_ring">
+      <origin xyz="-0.175 0.125 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/zone_0_inner_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="zone_1_field">
+      <origin xyz="0.175 0.125 0.040125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.00025" />
+        </geometry>
+      </collision>
+    <collision name="zone_1_outer_ring">
+      <origin xyz="0.175 0.125 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/small_radiant_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="zone_1_inner_ring">
+      <origin xyz="0.175 0.125 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/zone_1_inner_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="zone_2_field">
+      <origin xyz="-0.175 -0.07 0.040125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.062" length="0.00025" />
+        </geometry>
+      </collision>
+    <collision name="zone_2_outer_ring">
+      <origin xyz="-0.175 -0.07 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/small_radiant_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="zone_2_inner_ring">
+      <origin xyz="-0.175 -0.07 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/zone_2_inner_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="zone_3_field">
+      <origin xyz="0.175 -0.06 0.040125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.00025" />
+        </geometry>
+      </collision>
+    <collision name="zone_3_outer_ring">
+      <origin xyz="0.175 -0.06 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/large_radiant_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="zone_3_inner_ring">
+      <origin xyz="0.175 -0.06 0.04025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/zone_3_inner_ring.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_0">
+    <visual name="button_stem">
+      <origin xyz="0 0 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.015" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.00275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.0055" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <visual name="retainer_flange">
+      <origin xyz="0 0 -0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0205" length="0.0012" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <collision name="button_stem">
+      <origin xyz="0 0 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.00275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.0055" />
+        </geometry>
+      </collision>
+    <collision name="retainer_flange">
+      <origin xyz="0 0 -0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0205" length="0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_1">
+    <visual name="button_stem">
+      <origin xyz="0 0 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.015" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.00275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.0055" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <visual name="retainer_flange">
+      <origin xyz="0 0 -0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0205" length="0.0012" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <collision name="button_stem">
+      <origin xyz="0 0 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.00275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.0055" />
+        </geometry>
+      </collision>
+    <collision name="retainer_flange">
+      <origin xyz="0 0 -0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0205" length="0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_2">
+    <visual name="button_stem">
+      <origin xyz="0 0 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.015" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.00275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.0055" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <visual name="retainer_flange">
+      <origin xyz="0 0 -0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0205" length="0.0012" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <collision name="button_stem">
+      <origin xyz="0 0 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.00275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.0055" />
+        </geometry>
+      </collision>
+    <collision name="retainer_flange">
+      <origin xyz="0 0 -0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0205" length="0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_3">
+    <visual name="button_stem">
+      <origin xyz="0 0 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.015" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.00275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.0055" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <visual name="retainer_flange">
+      <origin xyz="0 0 -0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0205" length="0.0012" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <collision name="button_stem">
+      <origin xyz="0 0 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.00275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.0055" />
+        </geometry>
+      </collision>
+    <collision name="retainer_flange">
+      <origin xyz="0 0 -0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0205" length="0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_4">
+    <visual name="button_stem">
+      <origin xyz="0 0 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.015" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.00275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.0055" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <visual name="retainer_flange">
+      <origin xyz="0 0 -0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0205" length="0.0012" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <collision name="button_stem">
+      <origin xyz="0 0 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.00275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.0055" />
+        </geometry>
+      </collision>
+    <collision name="retainer_flange">
+      <origin xyz="0 0 -0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0205" length="0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_5">
+    <visual name="button_stem">
+      <origin xyz="0 0 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.015" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.00275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.0055" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <visual name="retainer_flange">
+      <origin xyz="0 0 -0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0205" length="0.0012" />
+        </geometry>
+      <material name="satin_silver_button">
+        <color rgba="0.8 0.8 0.76 1" />
+        </material>
+      </visual>
+    <collision name="button_stem">
+      <origin xyz="0 0 -0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.00275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.0055" />
+        </geometry>
+      </collision>
+    <collision name="retainer_flange">
+      <origin xyz="0 0 -0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0205" length="0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="button_0_slide" type="prismatic">
+    <origin xyz="-0.225 -0.215 0.0408" rpy="0 0 0" />
+    <parent link="counter" />
+    <child link="button_0" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.08" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_1_slide" type="prismatic">
+    <origin xyz="-0.185 -0.215 0.0408" rpy="0 0 0" />
+    <parent link="counter" />
+    <child link="button_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.08" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_2_slide" type="prismatic">
+    <origin xyz="-0.02 -0.215 0.0408" rpy="0 0 0" />
+    <parent link="counter" />
+    <child link="button_2" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.08" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_3_slide" type="prismatic">
+    <origin xyz="0.02 -0.215 0.0408" rpy="0 0 0" />
+    <parent link="counter" />
+    <child link="button_3" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.08" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_4_slide" type="prismatic">
+    <origin xyz="0.185 -0.215 0.0408" rpy="0 0 0" />
+    <parent link="counter" />
+    <child link="button_4" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.08" lower="0" upper="0.006" />
+    </joint>
+  <joint name="button_5_slide" type="prismatic">
+    <origin xyz="0.225 -0.215 0.0408" rpy="0 0 0" />
+    <parent link="counter" />
+    <child link="button_5" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="0.08" lower="0" upper="0.006" />
+    </joint>
+  </robot>

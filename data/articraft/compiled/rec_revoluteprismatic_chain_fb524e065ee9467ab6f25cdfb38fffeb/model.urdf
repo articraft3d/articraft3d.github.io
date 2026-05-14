@@ -1,0 +1,365 @@
+<robot name="hinged_extension_service_module">
+  <material name="dark_steel">
+    <color rgba="0.09 0.1 0.11 1" />
+    </material>
+  <material name="cast_metal">
+    <color rgba="0.42 0.45 0.47 1" />
+    </material>
+  <material name="rail_black">
+    <color rgba="0.015 0.017 0.02 1" />
+    </material>
+  <material name="slide_chrome">
+    <color rgba="0.72 0.76 0.78 1" />
+    </material>
+  <material name="rubber_blue">
+    <color rgba="0.05 0.22 0.65 1" />
+    </material>
+  <link name="support">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.24 0.025" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="pedestal">
+      <origin xyz="0 0 0.1325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.215" />
+        </geometry>
+      <material name="cast_metal">
+        <color rgba="0.42 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing">
+      <origin xyz="0 0 0.244" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.077" length="0.016" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing">
+      <origin xyz="0 0 0.316" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.073" length="0.016" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="hinge_pin">
+      <origin xyz="0 0 0.28" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.15" />
+        </geometry>
+      <material name="slide_chrome">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_0_0">
+      <origin xyz="-0.125 -0.08 0.0285" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="cast_metal">
+        <color rgba="0.42 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_0_1">
+      <origin xyz="-0.125 0.08 0.0285" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="cast_metal">
+        <color rgba="0.42 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_1_0">
+      <origin xyz="0.125 -0.08 0.0285" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="cast_metal">
+        <color rgba="0.42 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_1_1">
+      <origin xyz="0.125 0.08 0.0285" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      <material name="cast_metal">
+        <color rgba="0.42 0.45 0.47 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.24 0.025" />
+        </geometry>
+      </collision>
+    <collision name="pedestal">
+      <origin xyz="0 0 0.1325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.215" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing">
+      <origin xyz="0 0 0.244" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.077" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing">
+      <origin xyz="0 0 0.316" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.073" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pin">
+      <origin xyz="0 0 0.28" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.15" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_0_0">
+      <origin xyz="-0.125 -0.08 0.0285" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_0_1">
+      <origin xyz="-0.125 0.08 0.0285" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_1_0">
+      <origin xyz="0.125 -0.08 0.0285" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_1_1">
+      <origin xyz="0.125 0.08 0.0285" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.009" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="arm">
+    <visual name="hinge_hub">
+      <geometry>
+        <cylinder radius="0.066" length="0.055" />
+        </geometry>
+      <material name="cast_metal">
+        <color rgba="0.42 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="upper_rail">
+      <origin xyz="0.35 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.116 0.02" />
+        </geometry>
+      <material name="rail_black">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="lower_rail">
+      <origin xyz="0.35 0 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.116 0.02" />
+        </geometry>
+      <material name="rail_black">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_0">
+      <origin xyz="0.35 0.058 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.02 0.07" />
+        </geometry>
+      <material name="rail_black">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="0.35 -0.058 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.02 0.07" />
+        </geometry>
+      <material name="rail_black">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="root_clamp">
+      <origin xyz="0.063 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.128 0.05" />
+        </geometry>
+      <material name="cast_metal">
+        <color rgba="0.42 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="distal_collar_top">
+      <origin xyz="0.615 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.128 0.018" />
+        </geometry>
+      <material name="cast_metal">
+        <color rgba="0.42 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="distal_collar_bottom">
+      <origin xyz="0.615 0 -0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.128 0.018" />
+        </geometry>
+      <material name="cast_metal">
+        <color rgba="0.42 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="distal_collar_side_0">
+      <origin xyz="0.615 0.064 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.072" />
+        </geometry>
+      <material name="cast_metal">
+        <color rgba="0.42 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="distal_collar_side_1">
+      <origin xyz="0.615 -0.064 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.072" />
+        </geometry>
+      <material name="cast_metal">
+        <color rgba="0.42 0.45 0.47 1" />
+        </material>
+      </visual>
+    <collision name="hinge_hub">
+      <geometry>
+        <cylinder radius="0.066" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="upper_rail">
+      <origin xyz="0.35 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.116 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lower_rail">
+      <origin xyz="0.35 0 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.116 0.02" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_0">
+      <origin xyz="0.35 0.058 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.02 0.07" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_1">
+      <origin xyz="0.35 -0.058 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.02 0.07" />
+        </geometry>
+      </collision>
+    <collision name="root_clamp">
+      <origin xyz="0.063 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.128 0.05" />
+        </geometry>
+      </collision>
+    <collision name="distal_collar_top">
+      <origin xyz="0.615 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.128 0.018" />
+        </geometry>
+      </collision>
+    <collision name="distal_collar_bottom">
+      <origin xyz="0.615 0 -0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.128 0.018" />
+        </geometry>
+      </collision>
+    <collision name="distal_collar_side_0">
+      <origin xyz="0.615 0.064 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.072" />
+        </geometry>
+      </collision>
+    <collision name="distal_collar_side_1">
+      <origin xyz="0.615 -0.064 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.072" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="output_member">
+    <visual name="slide_bar">
+      <origin xyz="-0.08 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.04 0.06" />
+        </geometry>
+      <material name="slide_chrome">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="end_block">
+      <origin xyz="0.17 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.082 0.062" />
+        </geometry>
+      <material name="cast_metal">
+        <color rgba="0.42 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="output_pad">
+      <origin xyz="0.215 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.03" />
+        </geometry>
+      <material name="rubber_blue">
+        <color rgba="0.05 0.22 0.65 1" />
+        </material>
+      </visual>
+    <collision name="slide_bar">
+      <origin xyz="-0.08 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.04 0.06" />
+        </geometry>
+      </collision>
+    <collision name="end_block">
+      <origin xyz="0.17 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.082 0.062" />
+        </geometry>
+      </collision>
+    <collision name="output_pad">
+      <origin xyz="0.215 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_hinge" type="revolute">
+    <origin xyz="0 0 0.28" rpy="0 0 0" />
+    <parent link="support" />
+    <child link="arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="30" velocity="1.5" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="extension_slide" type="prismatic">
+    <origin xyz="0.58 0 0" rpy="0 0 0" />
+    <parent link="arm" />
+    <child link="output_member" />
+    <axis xyz="1 0 0" />
+    <limit effort="70" velocity="0.35" lower="0" upper="0.22" />
+    </joint>
+  </robot>

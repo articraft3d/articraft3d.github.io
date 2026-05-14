@@ -1,0 +1,1412 @@
+<robot name="two_deck_dj_controller">
+  <material name="matte_black">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="charcoal_panel">
+    <color rgba="0.055 0.058 0.064 1" />
+    </material>
+  <material name="soft_black">
+    <color rgba="0.006 0.006 0.007 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.018 0.018 0.02 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.56 0.58 0.58 1" />
+    </material>
+  <material name="white_mark">
+    <color rgba="0.92 0.94 0.92 1" />
+    </material>
+  <material name="blue_led">
+    <color rgba="0.05 0.35 1 1" />
+    </material>
+  <material name="amber_led">
+    <color rgba="1 0.55 0.05 1" />
+    </material>
+  <material name="magenta_pad">
+    <color rgba="0.82 0.08 0.45 1" />
+    </material>
+  <link name="controller">
+    <visual name="rounded_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_controller_shell.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="top_plate">
+      <origin xyz="0 0 0.0465" rpy="0 0 0" />
+      <geometry>
+        <box size="0.745 0.35 0.005" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="deck_panel_0">
+      <origin xyz="-0.235 0 0.0505" rpy="0 0 0" />
+      <geometry>
+        <box size="0.288 0.322 0.003" />
+        </geometry>
+      <material name="charcoal_panel">
+        <color rgba="0.055 0.058 0.064 1" />
+        </material>
+      </visual>
+    <visual name="platter_well_0">
+      <origin xyz="-0.235 0.035 0.05325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.0025" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="pitch_slot_0">
+      <origin xyz="-0.11 0.02 0.05325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.18 0.0025" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="pitch_marker_0">
+      <origin xyz="-0.11 0.02 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.04 0.004" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <visual name="deck_panel_1">
+      <origin xyz="0.235 0 0.0505" rpy="0 0 0" />
+      <geometry>
+        <box size="0.288 0.322 0.003" />
+        </geometry>
+      <material name="charcoal_panel">
+        <color rgba="0.055 0.058 0.064 1" />
+        </material>
+      </visual>
+    <visual name="platter_well_1">
+      <origin xyz="0.235 0.035 0.05325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.0025" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="pitch_slot_1">
+      <origin xyz="0.11 0.02 0.05325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.18 0.0025" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="pitch_marker_1">
+      <origin xyz="0.11 0.02 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.04 0.004" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <visual name="mixer_panel">
+      <origin xyz="0 0 0.0505" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.322 0.003" />
+        </geometry>
+      <material name="charcoal_panel">
+        <color rgba="0.055 0.058 0.064 1" />
+        </material>
+      </visual>
+    <visual name="crossfader_slot">
+      <origin xyz="0 -0.126 0.05325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.014 0.0025" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="channel_fader_slots">
+      <origin xyz="0 -0.074 0.05325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.012 0.0025" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="meter_neg_0">
+      <origin xyz="-0.042 0.104 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <visual name="meter_neg_1">
+      <origin xyz="-0.042 0.096 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <visual name="meter_neg_2">
+      <origin xyz="-0.042 0.088 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <visual name="meter_neg_3">
+      <origin xyz="-0.042 0.08 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      <material name="amber_led">
+        <color rgba="1 0.55 0.05 1" />
+        </material>
+      </visual>
+    <visual name="meter_neg_4">
+      <origin xyz="-0.042 0.072 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      <material name="amber_led">
+        <color rgba="1 0.55 0.05 1" />
+        </material>
+      </visual>
+    <visual name="meter_pos_0">
+      <origin xyz="0.042 0.104 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <visual name="meter_pos_1">
+      <origin xyz="0.042 0.096 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <visual name="meter_pos_2">
+      <origin xyz="0.042 0.088 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <visual name="meter_pos_3">
+      <origin xyz="0.042 0.08 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      <material name="amber_led">
+        <color rgba="1 0.55 0.05 1" />
+        </material>
+      </visual>
+    <visual name="meter_pos_4">
+      <origin xyz="0.042 0.072 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      <material name="amber_led">
+        <color rgba="1 0.55 0.05 1" />
+        </material>
+      </visual>
+    <collision name="rounded_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_controller_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_plate">
+      <origin xyz="0 0 0.0465" rpy="0 0 0" />
+      <geometry>
+        <box size="0.745 0.35 0.005" />
+        </geometry>
+      </collision>
+    <collision name="deck_panel_0">
+      <origin xyz="-0.235 0 0.0505" rpy="0 0 0" />
+      <geometry>
+        <box size="0.288 0.322 0.003" />
+        </geometry>
+      </collision>
+    <collision name="platter_well_0">
+      <origin xyz="-0.235 0.035 0.05325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="pitch_slot_0">
+      <origin xyz="-0.11 0.02 0.05325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.18 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="pitch_marker_0">
+      <origin xyz="-0.11 0.02 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.04 0.004" />
+        </geometry>
+      </collision>
+    <collision name="deck_panel_1">
+      <origin xyz="0.235 0 0.0505" rpy="0 0 0" />
+      <geometry>
+        <box size="0.288 0.322 0.003" />
+        </geometry>
+      </collision>
+    <collision name="platter_well_1">
+      <origin xyz="0.235 0.035 0.05325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="pitch_slot_1">
+      <origin xyz="0.11 0.02 0.05325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.18 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="pitch_marker_1">
+      <origin xyz="0.11 0.02 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.04 0.004" />
+        </geometry>
+      </collision>
+    <collision name="mixer_panel">
+      <origin xyz="0 0 0.0505" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.322 0.003" />
+        </geometry>
+      </collision>
+    <collision name="crossfader_slot">
+      <origin xyz="0 -0.126 0.05325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.014 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="channel_fader_slots">
+      <origin xyz="0 -0.074 0.05325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.012 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="meter_neg_0">
+      <origin xyz="-0.042 0.104 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="meter_neg_1">
+      <origin xyz="-0.042 0.096 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="meter_neg_2">
+      <origin xyz="-0.042 0.088 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="meter_neg_3">
+      <origin xyz="-0.042 0.08 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="meter_neg_4">
+      <origin xyz="-0.042 0.072 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="meter_pos_0">
+      <origin xyz="0.042 0.104 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="meter_pos_1">
+      <origin xyz="0.042 0.096 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="meter_pos_2">
+      <origin xyz="0.042 0.088 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="meter_pos_3">
+      <origin xyz="0.042 0.08 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      </collision>
+    <collision name="meter_pos_4">
+      <origin xyz="0.042 0.072 0.0523" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="platter_0">
+    <visual name="platter_base">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.012" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.018 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rubber_rim">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/platter_rim_0.obj" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.018 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="metal_disk">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.006" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.56 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="center_label">
+      <origin xyz="0 0 0.0195" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.003" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="tick_0">
+      <origin xyz="0.067 0 0.0184" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_1">
+      <origin xyz="0.0473762 0.0473762 0.0184" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_2">
+      <origin xyz="4.10257e-18 0.067 0.0184" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_3">
+      <origin xyz="-0.0473762 0.0473762 0.0184" rpy="0 0 2.35619" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_4">
+      <origin xyz="-0.067 8.20513e-18 0.0184" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_5">
+      <origin xyz="-0.0473762 -0.0473762 0.0184" rpy="0 0 3.92699" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_6">
+      <origin xyz="-1.23077e-17 -0.067 0.0184" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_7">
+      <origin xyz="0.0473762 -0.0473762 0.0184" rpy="0 0 5.49779" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <collision name="platter_base">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="rubber_rim">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/platter_rim_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="metal_disk">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="center_label">
+      <origin xyz="0 0 0.0195" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="tick_0">
+      <origin xyz="0.067 0 0.0184" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_1">
+      <origin xyz="0.0473762 0.0473762 0.0184" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_2">
+      <origin xyz="4.10257e-18 0.067 0.0184" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_3">
+      <origin xyz="-0.0473762 0.0473762 0.0184" rpy="0 0 2.35619" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_4">
+      <origin xyz="-0.067 8.20513e-18 0.0184" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_5">
+      <origin xyz="-0.0473762 -0.0473762 0.0184" rpy="0 0 3.92699" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_6">
+      <origin xyz="-1.23077e-17 -0.067 0.0184" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_7">
+      <origin xyz="0.0473762 -0.0473762 0.0184" rpy="0 0 5.49779" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="platter_1">
+    <visual name="platter_base">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.012" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.018 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rubber_rim">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/platter_rim_1.obj" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.018 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="metal_disk">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.006" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.56 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="center_label">
+      <origin xyz="0 0 0.0195" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.003" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="tick_0">
+      <origin xyz="0.067 0 0.0184" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_1">
+      <origin xyz="0.0473762 0.0473762 0.0184" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_2">
+      <origin xyz="4.10257e-18 0.067 0.0184" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_3">
+      <origin xyz="-0.0473762 0.0473762 0.0184" rpy="0 0 2.35619" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_4">
+      <origin xyz="-0.067 8.20513e-18 0.0184" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_5">
+      <origin xyz="-0.0473762 -0.0473762 0.0184" rpy="0 0 3.92699" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_6">
+      <origin xyz="-1.23077e-17 -0.067 0.0184" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tick_7">
+      <origin xyz="0.0473762 -0.0473762 0.0184" rpy="0 0 5.49779" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <collision name="platter_base">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="rubber_rim">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/platter_rim_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="metal_disk">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="center_label">
+      <origin xyz="0 0 0.0195" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="tick_0">
+      <origin xyz="0.067 0 0.0184" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_1">
+      <origin xyz="0.0473762 0.0473762 0.0184" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_2">
+      <origin xyz="4.10257e-18 0.067 0.0184" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_3">
+      <origin xyz="-0.0473762 0.0473762 0.0184" rpy="0 0 2.35619" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_4">
+      <origin xyz="-0.067 8.20513e-18 0.0184" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_5">
+      <origin xyz="-0.0473762 -0.0473762 0.0184" rpy="0 0 3.92699" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_6">
+      <origin xyz="-1.23077e-17 -0.067 0.0184" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    <collision name="tick_7">
+      <origin xyz="0.0473762 -0.0473762 0.0184" rpy="0 0 5.49779" />
+      <geometry>
+        <box size="0.004 0.024 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="crossfader">
+    <visual name="fader_stem">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.008 0.01" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.56 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="fader_cap">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.026 0.014" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.018 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="fader_mark">
+      <origin xyz="0 0.01 0.0245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.003 0.001" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <collision name="fader_stem">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.008 0.01" />
+        </geometry>
+      </collision>
+    <collision name="fader_cap">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.026 0.014" />
+        </geometry>
+      </collision>
+    <collision name="fader_mark">
+      <origin xyz="0 0.01 0.0245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.003 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="knob_0_0">
+    <visual name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/mixer_knob_0_0.obj" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.018 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="pointer_mark">
+      <origin xyz="0 0.0045 0.0222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.015 0.0012" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <collision name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/mixer_knob_0_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="pointer_mark">
+      <origin xyz="0 0.0045 0.0222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.015 0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="knob_0_1">
+    <visual name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/mixer_knob_0_1.obj" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.018 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="pointer_mark">
+      <origin xyz="0 0.0045 0.0222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.015 0.0012" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <collision name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/mixer_knob_0_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="pointer_mark">
+      <origin xyz="0 0.0045 0.0222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.015 0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="knob_1_0">
+    <visual name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/mixer_knob_1_0.obj" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.018 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="pointer_mark">
+      <origin xyz="0 0.0045 0.0222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.015 0.0012" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <collision name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/mixer_knob_1_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="pointer_mark">
+      <origin xyz="0 0.0045 0.0222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.015 0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="knob_1_1">
+    <visual name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/mixer_knob_1_1.obj" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.018 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="pointer_mark">
+      <origin xyz="0 0.0045 0.0222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.015 0.0012" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <collision name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/mixer_knob_1_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="pointer_mark">
+      <origin xyz="0 0.0045 0.0222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.015 0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="knob_2_0">
+    <visual name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/mixer_knob_2_0.obj" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.018 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="pointer_mark">
+      <origin xyz="0 0.0045 0.0222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.015 0.0012" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <collision name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/mixer_knob_2_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="pointer_mark">
+      <origin xyz="0 0.0045 0.0222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.015 0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="knob_2_1">
+    <visual name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/mixer_knob_2_1.obj" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.018 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="pointer_mark">
+      <origin xyz="0 0.0045 0.0222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.015 0.0012" />
+        </geometry>
+      <material name="white_mark">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <collision name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/mixer_knob_2_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="pointer_mark">
+      <origin xyz="0 0.0045 0.0222" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.015 0.0012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_0_0_0">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_0_0_1">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="magenta_pad">
+        <color rgba="0.82 0.08 0.45 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_0_0_2">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_0_0_3">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_0_1_0">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="magenta_pad">
+        <color rgba="0.82 0.08 0.45 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_0_1_1">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="magenta_pad">
+        <color rgba="0.82 0.08 0.45 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_0_1_2">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="magenta_pad">
+        <color rgba="0.82 0.08 0.45 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_0_1_3">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="magenta_pad">
+        <color rgba="0.82 0.08 0.45 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_1_0_0">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_1_0_1">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="magenta_pad">
+        <color rgba="0.82 0.08 0.45 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_1_0_2">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_1_0_3">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="blue_led">
+        <color rgba="0.05 0.35 1 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_1_1_0">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="magenta_pad">
+        <color rgba="0.82 0.08 0.45 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_1_1_1">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="magenta_pad">
+        <color rgba="0.82 0.08 0.45 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_1_1_2">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="magenta_pad">
+        <color rgba="0.82 0.08 0.45 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pad_1_1_3">
+    <visual name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      <material name="magenta_pad">
+        <color rgba="0.82 0.08 0.45 1" />
+        </material>
+      </visual>
+    <collision name="pad_cap">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="controller_to_platter_0" type="revolute">
+    <origin xyz="-0.235 0.035 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="platter_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="12" lower="-6.28319" upper="6.28319" />
+    </joint>
+  <joint name="controller_to_platter_1" type="revolute">
+    <origin xyz="0.235 0.035 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="platter_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="12" lower="-6.28319" upper="6.28319" />
+    </joint>
+  <joint name="controller_to_crossfader" type="prismatic">
+    <origin xyz="0 -0.126 0.0545" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="crossfader" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="0.5" lower="-0.06" upper="0.06" />
+    </joint>
+  <joint name="controller_to_knob_0_0" type="revolute">
+    <origin xyz="-0.037 0.112 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="knob_0_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.6" velocity="4" lower="-2.62" upper="2.62" />
+    </joint>
+  <joint name="controller_to_knob_0_1" type="revolute">
+    <origin xyz="0.037 0.112 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="knob_0_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.6" velocity="4" lower="-2.62" upper="2.62" />
+    </joint>
+  <joint name="controller_to_knob_1_0" type="revolute">
+    <origin xyz="-0.037 0.07 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="knob_1_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.6" velocity="4" lower="-2.62" upper="2.62" />
+    </joint>
+  <joint name="controller_to_knob_1_1" type="revolute">
+    <origin xyz="0.037 0.07 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="knob_1_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.6" velocity="4" lower="-2.62" upper="2.62" />
+    </joint>
+  <joint name="controller_to_knob_2_0" type="revolute">
+    <origin xyz="-0.037 0.028 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="knob_2_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.6" velocity="4" lower="-2.62" upper="2.62" />
+    </joint>
+  <joint name="controller_to_knob_2_1" type="revolute">
+    <origin xyz="0.037 0.028 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="knob_2_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.6" velocity="4" lower="-2.62" upper="2.62" />
+    </joint>
+  <joint name="controller_to_pad_0_0_0" type="prismatic">
+    <origin xyz="-0.275 -0.12 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_0_0_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_0_0_1" type="prismatic">
+    <origin xyz="-0.247 -0.12 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_0_0_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_0_0_2" type="prismatic">
+    <origin xyz="-0.219 -0.12 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_0_0_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_0_0_3" type="prismatic">
+    <origin xyz="-0.191 -0.12 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_0_0_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_0_1_0" type="prismatic">
+    <origin xyz="-0.275 -0.094 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_0_1_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_0_1_1" type="prismatic">
+    <origin xyz="-0.247 -0.094 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_0_1_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_0_1_2" type="prismatic">
+    <origin xyz="-0.219 -0.094 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_0_1_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_0_1_3" type="prismatic">
+    <origin xyz="-0.191 -0.094 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_0_1_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_1_0_0" type="prismatic">
+    <origin xyz="0.195 -0.12 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_1_0_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_1_0_1" type="prismatic">
+    <origin xyz="0.223 -0.12 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_1_0_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_1_0_2" type="prismatic">
+    <origin xyz="0.251 -0.12 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_1_0_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_1_0_3" type="prismatic">
+    <origin xyz="0.279 -0.12 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_1_0_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_1_1_0" type="prismatic">
+    <origin xyz="0.195 -0.094 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_1_1_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_1_1_1" type="prismatic">
+    <origin xyz="0.223 -0.094 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_1_1_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_1_1_2" type="prismatic">
+    <origin xyz="0.251 -0.094 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_1_1_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  <joint name="controller_to_pad_1_1_3" type="prismatic">
+    <origin xyz="0.279 -0.094 0.052" rpy="0 0 0" />
+    <parent link="controller" />
+    <child link="pad_1_1_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.003" upper="0" />
+    </joint>
+  </robot>

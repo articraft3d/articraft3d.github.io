@@ -1,0 +1,601 @@
+<robot name="push_pull_plunger_chain">
+  <link name="frame">
+    <visual name="base_plate">
+      <origin xyz="0.02 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="1.42 0.3 0.035" />
+        </geometry>
+      <material name="powder_coated_frame">
+        <color rgba="0.1 0.14 0.18 1" />
+        </material>
+      </visual>
+    <visual name="center_rail">
+      <origin xyz="0.06 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.07 0.04" />
+        </geometry>
+      <material name="machined_steel_rail">
+        <color rgba="0.42 0.44 0.45 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_0">
+      <origin xyz="0.07 -0.115 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="1.28 0.03 0.03" />
+        </geometry>
+      <material name="machined_steel_rail">
+        <color rgba="0.42 0.44 0.45 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="0.07 0.115 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="1.28 0.03 0.03" />
+        </geometry>
+      <material name="machined_steel_rail">
+        <color rgba="0.42 0.44 0.45 1" />
+        </material>
+      </visual>
+    <visual name="guide_sleeve">
+      <origin xyz="-0.45 0 0.2" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fixed_guide_sleeve_mesh.obj" />
+        </geometry>
+      <material name="black_oxide_sleeve">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_bushing">
+      <origin xyz="-0.565 0 0.2" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fixed_rear_bushing_mesh.obj" />
+        </geometry>
+      <material name="bronze_bushing">
+        <color rgba="0.78 0.5 0.2 1" />
+        </material>
+      </visual>
+    <visual name="front_bushing">
+      <origin xyz="-0.335 0 0.2" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fixed_front_bushing_mesh.obj" />
+        </geometry>
+      <material name="bronze_bushing">
+        <color rgba="0.78 0.5 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_pedestal">
+      <origin xyz="-0.45 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.095 0.083" />
+        </geometry>
+      <material name="powder_coated_frame">
+        <color rgba="0.1 0.14 0.18 1" />
+        </material>
+      </visual>
+    <visual name="top_clamp">
+      <origin xyz="-0.45 0 0.249" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.125 0.014" />
+        </geometry>
+      <material name="powder_coated_frame">
+        <color rgba="0.1 0.14 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clamp_bolt_0">
+      <origin xyz="-0.525 -0.05 0.259" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="clamp_bolt_1">
+      <origin xyz="-0.525 0.05 0.259" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="clamp_bolt_2">
+      <origin xyz="-0.375 -0.05 0.259" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="clamp_bolt_3">
+      <origin xyz="-0.375 0.05 0.259" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0.02 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="1.42 0.3 0.035" />
+        </geometry>
+      </collision>
+    <collision name="center_rail">
+      <origin xyz="0.06 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="1.34 0.07 0.04" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_0">
+      <origin xyz="0.07 -0.115 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="1.28 0.03 0.03" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_1">
+      <origin xyz="0.07 0.115 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="1.28 0.03 0.03" />
+        </geometry>
+      </collision>
+    <collision name="guide_sleeve">
+      <origin xyz="-0.45 0 0.2" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fixed_guide_sleeve_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_bushing">
+      <origin xyz="-0.565 0 0.2" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fixed_rear_bushing_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_bushing">
+      <origin xyz="-0.335 0 0.2" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fixed_front_bushing_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_pedestal">
+      <origin xyz="-0.45 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.095 0.083" />
+        </geometry>
+      </collision>
+    <collision name="top_clamp">
+      <origin xyz="-0.45 0 0.249" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.125 0.014" />
+        </geometry>
+      </collision>
+    <collision name="clamp_bolt_0">
+      <origin xyz="-0.525 -0.05 0.259" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="clamp_bolt_1">
+      <origin xyz="-0.525 0.05 0.259" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="clamp_bolt_2">
+      <origin xyz="-0.375 -0.05 0.259" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="clamp_bolt_3">
+      <origin xyz="-0.375 0.05 0.259" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="plunger_0">
+    <visual name="rod">
+      <origin xyz="0.165 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0165" length="0.45" />
+        </geometry>
+      <material name="polished_plunger_rod">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="front_collar">
+      <origin xyz="0.4025 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.045" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="guide_sleeve">
+      <origin xyz="0.56 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_0_guide_sleeve_mesh.obj" />
+        </geometry>
+      <material name="black_oxide_sleeve">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_bushing">
+      <origin xyz="0.445 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_0_rear_bushing_mesh.obj" />
+        </geometry>
+      <material name="bronze_bushing">
+        <color rgba="0.78 0.5 0.2 1" />
+        </material>
+      </visual>
+    <visual name="front_bushing">
+      <origin xyz="0.675 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_0_front_bushing_mesh.obj" />
+        </geometry>
+      <material name="bronze_bushing">
+        <color rgba="0.78 0.5 0.2 1" />
+        </material>
+      </visual>
+    <visual name="under_bridge">
+      <origin xyz="0.455 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.03 0.02" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="collar_drop">
+      <origin xyz="0.392 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.034 0.037" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_drop">
+      <origin xyz="0.56 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.044 0.065" />
+        </geometry>
+      <material name="powder_coated_frame">
+        <color rgba="0.1 0.14 0.18 1" />
+        </material>
+      </visual>
+    <visual name="slide_shoe">
+      <origin xyz="0.56 0 -0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.115 0.018" />
+        </geometry>
+      <material name="machined_steel_rail">
+        <color rgba="0.42 0.44 0.45 1" />
+        </material>
+      </visual>
+    <visual name="push_pad">
+      <origin xyz="-0.0825 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      <material name="red_push_pad">
+        <color rgba="0.72 0.05 0.035 1" />
+        </material>
+      </visual>
+    <collision name="rod">
+      <origin xyz="0.165 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0165" length="0.45" />
+        </geometry>
+      </collision>
+    <collision name="front_collar">
+      <origin xyz="0.4025 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="guide_sleeve">
+      <origin xyz="0.56 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_0_guide_sleeve_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_bushing">
+      <origin xyz="0.445 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_0_rear_bushing_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_bushing">
+      <origin xyz="0.675 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_0_front_bushing_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="under_bridge">
+      <origin xyz="0.455 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.03 0.02" />
+        </geometry>
+      </collision>
+    <collision name="collar_drop">
+      <origin xyz="0.392 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.034 0.037" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_drop">
+      <origin xyz="0.56 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.044 0.065" />
+        </geometry>
+      </collision>
+    <collision name="slide_shoe">
+      <origin xyz="0.56 0 -0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.115 0.018" />
+        </geometry>
+      </collision>
+    <collision name="push_pad">
+      <origin xyz="-0.0825 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="plunger_1">
+    <visual name="rod">
+      <origin xyz="0.165 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0165" length="0.45" />
+        </geometry>
+      <material name="polished_plunger_rod">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="front_collar">
+      <origin xyz="0.4025 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.045" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="guide_sleeve">
+      <origin xyz="0.56 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_1_guide_sleeve_mesh.obj" />
+        </geometry>
+      <material name="black_oxide_sleeve">
+        <color rgba="0.015 0.017 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_bushing">
+      <origin xyz="0.445 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_1_rear_bushing_mesh.obj" />
+        </geometry>
+      <material name="bronze_bushing">
+        <color rgba="0.78 0.5 0.2 1" />
+        </material>
+      </visual>
+    <visual name="front_bushing">
+      <origin xyz="0.675 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_1_front_bushing_mesh.obj" />
+        </geometry>
+      <material name="bronze_bushing">
+        <color rgba="0.78 0.5 0.2 1" />
+        </material>
+      </visual>
+    <visual name="under_bridge">
+      <origin xyz="0.455 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.03 0.02" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="collar_drop">
+      <origin xyz="0.392 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.034 0.037" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_drop">
+      <origin xyz="0.56 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.044 0.065" />
+        </geometry>
+      <material name="powder_coated_frame">
+        <color rgba="0.1 0.14 0.18 1" />
+        </material>
+      </visual>
+    <visual name="slide_shoe">
+      <origin xyz="0.56 0 -0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.115 0.018" />
+        </geometry>
+      <material name="machined_steel_rail">
+        <color rgba="0.42 0.44 0.45 1" />
+        </material>
+      </visual>
+    <collision name="rod">
+      <origin xyz="0.165 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0165" length="0.45" />
+        </geometry>
+      </collision>
+    <collision name="front_collar">
+      <origin xyz="0.4025 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="guide_sleeve">
+      <origin xyz="0.56 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_1_guide_sleeve_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_bushing">
+      <origin xyz="0.445 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_1_rear_bushing_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_bushing">
+      <origin xyz="0.675 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plunger_1_front_bushing_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="under_bridge">
+      <origin xyz="0.455 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.03 0.02" />
+        </geometry>
+      </collision>
+    <collision name="collar_drop">
+      <origin xyz="0.392 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.034 0.037" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_drop">
+      <origin xyz="0.56 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.044 0.065" />
+        </geometry>
+      </collision>
+    <collision name="slide_shoe">
+      <origin xyz="0.56 0 -0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.115 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="plunger_2">
+    <visual name="rod">
+      <origin xyz="0.25 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0165" length="0.62" />
+        </geometry>
+      <material name="polished_plunger_rod">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="end_collar">
+      <origin xyz="0.578 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.044" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="clevis_bridge">
+      <origin xyz="0.615 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.083 0.058" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="clevis_ear_0">
+      <origin xyz="0.685 -0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.018 0.07" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="clevis_ear_1">
+      <origin xyz="0.685 0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.018 0.07" />
+        </geometry>
+      <material name="dark_hardened_pin">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="clevis_pin">
+      <origin xyz="0.7 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.112" />
+        </geometry>
+      <material name="polished_plunger_rod">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <collision name="rod">
+      <origin xyz="0.25 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0165" length="0.62" />
+        </geometry>
+      </collision>
+    <collision name="end_collar">
+      <origin xyz="0.578 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.044" />
+        </geometry>
+      </collision>
+    <collision name="clevis_bridge">
+      <origin xyz="0.615 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.083 0.058" />
+        </geometry>
+      </collision>
+    <collision name="clevis_ear_0">
+      <origin xyz="0.685 -0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.018 0.07" />
+        </geometry>
+      </collision>
+    <collision name="clevis_ear_1">
+      <origin xyz="0.685 0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.018 0.07" />
+        </geometry>
+      </collision>
+    <collision name="clevis_pin">
+      <origin xyz="0.7 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.112" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="frame_to_plunger_0" type="prismatic">
+    <origin xyz="-0.56 0 0.2" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="plunger_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="850" velocity="0.22" lower="0" upper="0.16" />
+    </joint>
+  <joint name="plunger_0_to_1" type="prismatic">
+    <origin xyz="0.5 0 0" rpy="0 0 0" />
+    <parent link="plunger_0" />
+    <child link="plunger_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="620" velocity="0.2" lower="0" upper="0.14" />
+    </joint>
+  <joint name="plunger_1_to_2" type="prismatic">
+    <origin xyz="0.5 0 0" rpy="0 0 0" />
+    <parent link="plunger_1" />
+    <child link="plunger_2" />
+    <axis xyz="1 0 0" />
+    <limit effort="420" velocity="0.18" lower="0" upper="0.12" />
+    </joint>
+  </robot>

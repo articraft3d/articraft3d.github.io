@@ -1,0 +1,560 @@
+<robot name="large_top_load_washer">
+  <material name="white_porcelain">
+    <color rgba="0.92 0.94 0.93 1" />
+    </material>
+  <material name="deep_shadow">
+    <color rgba="0.03 0.035 0.04 1" />
+    </material>
+  <material name="smoked_window">
+    <color rgba="0.18 0.25 0.3 0.38" />
+    </material>
+  <material name="brushed_stainless">
+    <color rgba="0.66 0.68 0.69 1" />
+    </material>
+  <material name="black_console">
+    <color rgba="0.015 0.018 0.02 1" />
+    </material>
+  <material name="soft_black">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <material name="blue_controls">
+    <color rgba="0.1 0.32 0.65 1" />
+    </material>
+  <link name="cabinet">
+    <visual name="cabinet_shell">
+      <geometry>
+        <mesh filename="assets/meshes/washer_cabinet.obj" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="console_panel">
+      <origin xyz="0 0.336 1.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.008 0.13" />
+        </geometry>
+      <material name="black_console">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_barrel">
+      <origin xyz="0 0.33 0.965" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.62" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="toe_shadow">
+      <origin xyz="0 -0.407 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.018 0.04" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bearing_post">
+      <origin xyz="0 0 0.1085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.217" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.66 0.68 0.69 1" />
+        </material>
+      </visual>
+    <visual name="cap_mount_barrel">
+      <origin xyz="-0.27 -0.315 0.973" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.17" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <collision name="cabinet_shell">
+      <geometry>
+        <mesh filename="assets/meshes/washer_cabinet.obj" />
+        </geometry>
+      </collision>
+    <collision name="console_panel">
+      <origin xyz="0 0.336 1.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.008 0.13" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_barrel">
+      <origin xyz="0 0.33 0.965" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.62" />
+        </geometry>
+      </collision>
+    <collision name="toe_shadow">
+      <origin xyz="0 -0.407 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.018 0.04" />
+        </geometry>
+      </collision>
+    <collision name="bearing_post">
+      <origin xyz="0 0 0.1085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.217" />
+        </geometry>
+      </collision>
+    <collision name="cap_mount_barrel">
+      <origin xyz="-0.27 -0.315 0.973" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.17" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wash_tub">
+    <visual name="hollow_basket">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_wash_tub.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.66 0.68 0.69 1" />
+        </material>
+      </visual>
+    <visual name="cavity_shadow">
+      <origin xyz="0 0 0.218" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.006" />
+        </geometry>
+      <material name="deep_shadow">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <collision name="hollow_basket">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_wash_tub.obj" />
+        </geometry>
+      </collision>
+    <collision name="cavity_shadow">
+      <origin xyz="0 0 0.218" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="front_frame">
+      <origin xyz="0 -0.58 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.045 0.04" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="rear_frame">
+      <origin xyz="0 -0.025 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.05 0.04" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="side_frame_0">
+      <origin xyz="-0.285 -0.3 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.555 0.04" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="side_frame_1">
+      <origin xyz="0.285 -0.3 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.555 0.04" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="window_panel">
+      <origin xyz="0 -0.305 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.51 0.01" />
+        </geometry>
+      <material name="smoked_window">
+        <color rgba="0.18 0.25 0.3 0.38" />
+        </material>
+      </visual>
+    <visual name="front_handle">
+      <origin xyz="0 -0.615 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.03 0.03" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <collision name="front_frame">
+      <origin xyz="0 -0.58 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.045 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_frame">
+      <origin xyz="0 -0.025 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.05 0.04" />
+        </geometry>
+      </collision>
+    <collision name="side_frame_0">
+      <origin xyz="-0.285 -0.3 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.555 0.04" />
+        </geometry>
+      </collision>
+    <collision name="side_frame_1">
+      <origin xyz="0.285 -0.3 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.555 0.04" />
+        </geometry>
+      </collision>
+    <collision name="window_panel">
+      <origin xyz="0 -0.305 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.51 0.01" />
+        </geometry>
+      </collision>
+    <collision name="front_handle">
+      <origin xyz="0 -0.615 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.03 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="selector_dial">
+    <visual name="dial_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/selector_dial.obj" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="dial_shaft">
+      <origin xyz="0 0.01 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.024" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.66 0.68 0.69 1" />
+        </material>
+      </visual>
+    <collision name="dial_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/selector_dial.obj" />
+        </geometry>
+      </collision>
+    <collision name="dial_shaft">
+      <origin xyz="0 0.01 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="mode_button_0">
+    <visual name="button_cap">
+      <origin xyz="0 -0.013 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.026 0.028" />
+        </geometry>
+      <material name="blue_controls">
+        <color rgba="0.1 0.32 0.65 1" />
+        </material>
+      </visual>
+    <visual name="button_face">
+      <origin xyz="0 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.01 0.018" />
+        </geometry>
+      <material name="deep_shadow">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.013 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.026 0.028" />
+        </geometry>
+      </collision>
+    <collision name="button_face">
+      <origin xyz="0 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.01 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="mode_button_1">
+    <visual name="button_cap">
+      <origin xyz="0 -0.013 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.026 0.028" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="button_face">
+      <origin xyz="0 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.01 0.018" />
+        </geometry>
+      <material name="deep_shadow">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.013 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.026 0.028" />
+        </geometry>
+      </collision>
+    <collision name="button_face">
+      <origin xyz="0 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.01 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="mode_button_2">
+    <visual name="button_cap">
+      <origin xyz="0 -0.013 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.026 0.028" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="button_face">
+      <origin xyz="0 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.01 0.018" />
+        </geometry>
+      <material name="deep_shadow">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.013 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.026 0.028" />
+        </geometry>
+      </collision>
+    <collision name="button_face">
+      <origin xyz="0 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.01 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="mode_button_3">
+    <visual name="button_cap">
+      <origin xyz="0 -0.013 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.026 0.028" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="button_face">
+      <origin xyz="0 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.01 0.018" />
+        </geometry>
+      <material name="deep_shadow">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.013 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.026 0.028" />
+        </geometry>
+      </collision>
+    <collision name="button_face">
+      <origin xyz="0 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.01 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="mode_button_4">
+    <visual name="button_cap">
+      <origin xyz="0 -0.013 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.026 0.028" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="button_face">
+      <origin xyz="0 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.01 0.018" />
+        </geometry>
+      <material name="deep_shadow">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.013 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.026 0.028" />
+        </geometry>
+      </collision>
+    <collision name="button_face">
+      <origin xyz="0 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.01 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="detergent_cap">
+    <visual name="cap_panel">
+      <origin xyz="0 -0.049 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.08 0.014" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="cap_hinge_barrel">
+      <origin xyz="0 0.001 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.15" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <collision name="cap_panel">
+      <origin xyz="0 -0.049 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.08 0.014" />
+        </geometry>
+      </collision>
+    <collision name="cap_hinge_barrel">
+      <origin xyz="0 0.001 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.15" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="softener_lid">
+    <visual name="cup_lid_disk">
+      <origin xyz="0 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.061" length="0.012" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="cup_lid_hinge">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.09" />
+        </geometry>
+      <material name="white_porcelain">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <collision name="cup_lid_disk">
+      <origin xyz="0 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.061" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="cup_lid_hinge">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.09" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="tub_spin" type="continuous">
+    <parent link="cabinet" />
+    <child link="wash_tub" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="14" />
+    </joint>
+  <joint name="lid_hinge" type="revolute">
+    <origin xyz="0 0.3162 0.968" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="22" velocity="2" lower="0" upper="1.45" />
+    </joint>
+  <joint name="dial_turn" type="continuous">
+    <origin xyz="-0.22 0.332 1.07" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="selector_dial" />
+    <axis xyz="0 -1 0" />
+    <limit effort="2" velocity="7" />
+    </joint>
+  <joint name="button_push_0" type="prismatic">
+    <origin xyz="-0.08 0.332 1.035" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="mode_button_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="0.08" lower="0" upper="0.009" />
+    </joint>
+  <joint name="button_push_1" type="prismatic">
+    <origin xyz="0 0.332 1.035" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="mode_button_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="0.08" lower="0" upper="0.009" />
+    </joint>
+  <joint name="button_push_2" type="prismatic">
+    <origin xyz="0.08 0.332 1.035" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="mode_button_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="0.08" lower="0" upper="0.009" />
+    </joint>
+  <joint name="button_push_3" type="prismatic">
+    <origin xyz="0.16 0.332 1.035" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="mode_button_3" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="0.08" lower="0" upper="0.009" />
+    </joint>
+  <joint name="button_push_4" type="prismatic">
+    <origin xyz="0.24 0.332 1.035" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="mode_button_4" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="0.08" lower="0" upper="0.009" />
+    </joint>
+  <joint name="detergent_hinge" type="revolute">
+    <origin xyz="-0.27 -0.315 0.977" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="detergent_cap" />
+    <axis xyz="-1 0 0" />
+    <limit effort="1.4" velocity="1.8" lower="0" upper="1.25" />
+    </joint>
+  <joint name="softener_hinge" type="revolute">
+    <origin xyz="0 0.055 0.721" rpy="0 0 0" />
+    <parent link="wash_tub" />
+    <child link="softener_lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="0.8" velocity="1.5" lower="0" upper="1.35" />
+    </joint>
+  </robot>

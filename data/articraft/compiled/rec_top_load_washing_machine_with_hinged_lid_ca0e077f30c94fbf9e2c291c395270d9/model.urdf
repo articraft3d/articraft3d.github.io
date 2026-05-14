@@ -1,0 +1,268 @@
+<robot name="commercial_top_load_washer">
+  <material name="warm_white_enamel">
+    <color rgba="0.88 0.9 0.88 1" />
+    </material>
+  <material name="dark_control_panel">
+    <color rgba="0.045 0.05 0.055 1" />
+    </material>
+  <material name="brushed_stainless">
+    <color rgba="0.68 0.7 0.68 1" />
+    </material>
+  <material name="deep_tub_shadow">
+    <color rgba="0.025 0.028 0.03 1" />
+    </material>
+  <material name="soft_grey_plastic">
+    <color rgba="0.62 0.65 0.63 1" />
+    </material>
+  <material name="start_green">
+    <color rgba="0.06 0.52 0.22 1" />
+    </material>
+  <material name="cancel_red">
+    <color rgba="0.68 0.07 0.055 1" />
+    </material>
+  <link name="cabinet">
+    <visual name="cabinet_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cabinet_shell.obj" />
+        </geometry>
+      <material name="warm_white_enamel">
+        <color rgba="0.88 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="tub_wall">
+      <origin xyz="0 -0.045 0.58" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tub_wall.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.68 1" />
+        </material>
+      </visual>
+    <visual name="tub_floor">
+      <origin xyz="0 -0.045 0.28" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.02" />
+        </geometry>
+      <material name="deep_tub_shadow">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <visual name="console_face">
+      <origin xyz="0 0.356 1.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.585 0.012 0.16" />
+        </geometry>
+      <material name="dark_control_panel">
+        <color rgba="0.045 0.05 0.055 1" />
+        </material>
+      </visual>
+    <visual name="bleach_pad">
+      <origin xyz="-0.16 0.22 0.941" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.108 0.012" />
+        </geometry>
+      <material name="soft_grey_plastic">
+        <color rgba="0.62 0.65 0.63 1" />
+        </material>
+      </visual>
+    <visual name="drive_shadow">
+      <origin xyz="0 -0.045 0.305" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.05" />
+        </geometry>
+      <material name="deep_tub_shadow">
+        <color rgba="0.025 0.028 0.03 1" />
+        </material>
+      </visual>
+    <collision name="cabinet_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cabinet_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="tub_wall">
+      <origin xyz="0 -0.045 0.58" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tub_wall.obj" />
+        </geometry>
+      </collision>
+    <collision name="tub_floor">
+      <origin xyz="0 -0.045 0.28" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="console_face">
+      <origin xyz="0 0.356 1.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.585 0.012 0.16" />
+        </geometry>
+      </collision>
+    <collision name="bleach_pad">
+      <origin xyz="-0.16 0.22 0.941" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.108 0.012" />
+        </geometry>
+      </collision>
+    <collision name="drive_shadow">
+      <origin xyz="0 -0.045 0.305" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.05" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="lid_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lid_shell.obj" />
+        </geometry>
+      <material name="warm_white_enamel">
+        <color rgba="0.88 0.9 0.88 1" />
+        </material>
+      </visual>
+    <collision name="lid_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lid_shell.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="basket">
+    <visual name="basket_shell">
+      <geometry>
+        <mesh filename="assets/meshes/basket_shell.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.68 1" />
+        </material>
+      </visual>
+    <collision name="basket_shell">
+      <geometry>
+        <mesh filename="assets/meshes/basket_shell.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cycle_knob">
+    <visual name="knob_body">
+      <origin xyz="0 0 -0.04532" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cycle_knob.obj" />
+        </geometry>
+      <material name="soft_grey_plastic">
+        <color rgba="0.62 0.65 0.63 1" />
+        </material>
+      </visual>
+    <collision name="knob_body">
+      <origin xyz="0 0 -0.04532" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cycle_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="start_button">
+    <visual name="button_face">
+      <origin xyz="0 -0.011 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.022" />
+        </geometry>
+      <material name="start_green">
+        <color rgba="0.06 0.52 0.22 1" />
+        </material>
+      </visual>
+    <collision name="button_face">
+      <origin xyz="0 -0.011 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cancel_button">
+    <visual name="button_face">
+      <origin xyz="0 -0.011 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.022" />
+        </geometry>
+      <material name="cancel_red">
+        <color rgba="0.68 0.07 0.055 1" />
+        </material>
+      </visual>
+    <collision name="button_face">
+      <origin xyz="0 -0.011 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bleach_cap">
+    <visual name="cap_body">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.022" />
+        </geometry>
+      <material name="soft_grey_plastic">
+        <color rgba="0.62 0.65 0.63 1" />
+        </material>
+      </visual>
+    <visual name="cap_grip">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.06 0.008" />
+        </geometry>
+      <material name="soft_grey_plastic">
+        <color rgba="0.62 0.65 0.63 1" />
+        </material>
+      </visual>
+    <collision name="cap_body">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="cap_grip">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.06 0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="lid_hinge" type="revolute">
+    <origin xyz="0 0.285 0.945" rpy="0 0 -1.5708" />
+    <parent link="cabinet" />
+    <child link="lid" />
+    <axis xyz="0 -1 0" />
+    <limit effort="35" velocity="1.6" lower="0" upper="1.85" />
+    </joint>
+  <joint name="basket_spin" type="continuous">
+    <origin xyz="0 -0.045 0.33" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="basket" />
+    <axis xyz="0 0 1" />
+    <limit effort="45" velocity="18" />
+    </joint>
+  <joint name="cycle_knob_spin" type="continuous">
+    <origin xyz="0 0.35 1.07" rpy="-1.5708 0 0" />
+    <parent link="cabinet" />
+    <child link="cycle_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="8" />
+    </joint>
+  <joint name="start_button_press" type="prismatic">
+    <origin xyz="-0.125 0.35 0.995" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="start_button" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="0.35" lower="0" upper="0.012" />
+    </joint>
+  <joint name="cancel_button_press" type="prismatic">
+    <origin xyz="0.125 0.35 0.995" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="cancel_button" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="0.35" lower="0" upper="0.012" />
+    </joint>
+  <joint name="bleach_cap_spin" type="continuous">
+    <origin xyz="-0.16 0.22 0.947" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="bleach_cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.5" velocity="6" />
+    </joint>
+  </robot>

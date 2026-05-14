@@ -1,0 +1,764 @@
+<robot name="pedestal_box_fan">
+  <material name="charcoal_plastic">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.015 0.015 0.018 1" />
+    </material>
+  <material name="satin_gray_plastic">
+    <color rgba="0.68 0.7 0.7 1" />
+    </material>
+  <material name="pale_gray_housing">
+    <color rgba="0.82 0.84 0.83 1" />
+    </material>
+  <material name="chrome_wire">
+    <color rgba="0.78 0.8 0.82 1" />
+    </material>
+  <material name="translucent_blue_blade">
+    <color rgba="0.45 0.68 0.86 0.82" />
+    </material>
+  <material name="black_marking">
+    <color rgba="0.02 0.02 0.02 1" />
+    </material>
+  <link name="base">
+    <visual name="round_base">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.06" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="base_step">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.028" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="lower_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/lower_sleeve.obj" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_collar">
+      <geometry>
+        <mesh filename="assets/meshes/sleeve_collar.obj" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="height_lock_screw">
+      <origin xyz="0.046 0 0.545" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.048" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <collision name="round_base">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.245" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="base_step">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="lower_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/lower_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_collar">
+      <geometry>
+        <mesh filename="assets/meshes/sleeve_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="height_lock_screw">
+      <origin xyz="0.046 0 0.545" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.048" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_column">
+    <visual name="inner_mast">
+      <origin xyz="0 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.83" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="neck_collar">
+      <origin xyz="0 0 0.51" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      <material name="pale_gray_housing">
+        <color rgba="0.82 0.84 0.83 1" />
+        </material>
+      </visual>
+    <visual name="neck_block">
+      <origin xyz="0 0 0.41" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.115 0.075" />
+        </geometry>
+      <material name="pale_gray_housing">
+        <color rgba="0.82 0.84 0.83 1" />
+        </material>
+      </visual>
+    <visual name="top_rail">
+      <origin xyz="0 0 0.99" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.145 0.06" />
+        </geometry>
+      <material name="pale_gray_housing">
+        <color rgba="0.82 0.84 0.83 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail">
+      <origin xyz="0 0 0.37" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.145 0.06" />
+        </geometry>
+      <material name="pale_gray_housing">
+        <color rgba="0.82 0.84 0.83 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_0">
+      <origin xyz="-0.33 0 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.145 0.68" />
+        </geometry>
+      <material name="pale_gray_housing">
+        <color rgba="0.82 0.84 0.83 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="0.33 0 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.145 0.68" />
+        </geometry>
+      <material name="pale_gray_housing">
+        <color rgba="0.82 0.84 0.83 1" />
+        </material>
+      </visual>
+    <visual name="yoke_socket">
+      <origin xyz="0 0 0.375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 0.15" />
+        </geometry>
+      <material name="pale_gray_housing">
+        <color rgba="0.82 0.84 0.83 1" />
+        </material>
+      </visual>
+    <visual name="motor_pod">
+      <origin xyz="0 0.035 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.12" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rear_face">
+      <origin xyz="0 0.1 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.104" length="0.018" />
+        </geometry>
+      <material name="pale_gray_housing">
+        <color rgba="0.82 0.84 0.83 1" />
+        </material>
+      </visual>
+    <visual name="rear_strut_0">
+      <origin xyz="0.19 0.045 0.68" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.305 0.018 0.018" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rear_strut_1">
+      <origin xyz="1.16341e-17 0.045 0.87" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.305 0.018 0.018" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rear_strut_2">
+      <origin xyz="-0.19 0.045 0.68" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.305 0.018 0.018" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rear_strut_3">
+      <origin xyz="-3.49024e-17 0.045 0.49" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="0.305 0.018 0.018" />
+        </geometry>
+      <material name="satin_gray_plastic">
+        <color rgba="0.68 0.7 0.7 1" />
+        </material>
+      </visual>
+    <visual name="front_ring_0">
+      <origin xyz="0 -0.105 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_ring_0.obj" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="front_ring_1">
+      <origin xyz="0 -0.105 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_ring_1.obj" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="front_ring_2">
+      <origin xyz="0 -0.105 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_ring_2.obj" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="front_ring_3">
+      <origin xyz="0 -0.105 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_ring_3.obj" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="guard_hub">
+      <origin xyz="0 -0.105 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.012" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="center_axle">
+      <origin xyz="0 -0.048 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.118" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0">
+      <origin xyz="0.168 -0.105 0.68" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1">
+      <origin xyz="0.155212 -0.105 0.744291" rpy="0 -0.392699 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_2">
+      <origin xyz="0.118794 -0.105 0.798794" rpy="0 -0.785398 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_3">
+      <origin xyz="0.0642908 -0.105 0.835212" rpy="0 -1.1781 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_4">
+      <origin xyz="1.0287e-17 -0.105 0.848" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_5">
+      <origin xyz="-0.0642908 -0.105 0.835212" rpy="0 -1.9635 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_6">
+      <origin xyz="-0.118794 -0.105 0.798794" rpy="0 -2.35619 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_7">
+      <origin xyz="-0.155212 -0.105 0.744291" rpy="0 -2.74889 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_8">
+      <origin xyz="-0.168 -0.105 0.68" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_9">
+      <origin xyz="-0.155212 -0.105 0.615709" rpy="0 -3.53429 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_10">
+      <origin xyz="-0.118794 -0.105 0.561206" rpy="0 -3.92699 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_11">
+      <origin xyz="-0.0642908 -0.105 0.524788" rpy="0 -4.31969 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_12">
+      <origin xyz="-3.08611e-17 -0.105 0.512" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_13">
+      <origin xyz="0.0642908 -0.105 0.524788" rpy="0 -5.10509 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_14">
+      <origin xyz="0.118794 -0.105 0.561206" rpy="0 -5.49779 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="spoke_15">
+      <origin xyz="0.155212 -0.105 0.615709" rpy="0 -5.89049 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="grille_tab_0">
+      <origin xyz="-0.292 -0.086 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.042 0.012" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="grille_tab_1">
+      <origin xyz="0.292 -0.086 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.042 0.012" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="grille_tab_2">
+      <origin xyz="0 -0.086 0.972" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.042 0.032" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="grille_tab_3">
+      <origin xyz="0 -0.086 0.388" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.042 0.032" />
+        </geometry>
+      <material name="chrome_wire">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <collision name="inner_mast">
+      <origin xyz="0 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.83" />
+        </geometry>
+      </collision>
+    <collision name="neck_collar">
+      <origin xyz="0 0 0.51" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="neck_block">
+      <origin xyz="0 0 0.41" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.115 0.075" />
+        </geometry>
+      </collision>
+    <collision name="top_rail">
+      <origin xyz="0 0 0.99" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.145 0.06" />
+        </geometry>
+      </collision>
+    <collision name="bottom_rail">
+      <origin xyz="0 0 0.37" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.145 0.06" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_0">
+      <origin xyz="-0.33 0 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.145 0.68" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_1">
+      <origin xyz="0.33 0 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.145 0.68" />
+        </geometry>
+      </collision>
+    <collision name="yoke_socket">
+      <origin xyz="0 0 0.375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 0.15" />
+        </geometry>
+      </collision>
+    <collision name="motor_pod">
+      <origin xyz="0 0.035 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="rear_face">
+      <origin xyz="0 0.1 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.104" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_strut_0">
+      <origin xyz="0.19 0.045 0.68" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.305 0.018 0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_strut_1">
+      <origin xyz="1.16341e-17 0.045 0.87" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.305 0.018 0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_strut_2">
+      <origin xyz="-0.19 0.045 0.68" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.305 0.018 0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_strut_3">
+      <origin xyz="-3.49024e-17 0.045 0.49" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="0.305 0.018 0.018" />
+        </geometry>
+      </collision>
+    <collision name="front_ring_0">
+      <origin xyz="0 -0.105 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_ring_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_ring_1">
+      <origin xyz="0 -0.105 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_ring_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_ring_2">
+      <origin xyz="0 -0.105 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_ring_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_ring_3">
+      <origin xyz="0 -0.105 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_ring_3.obj" />
+        </geometry>
+      </collision>
+    <collision name="guard_hub">
+      <origin xyz="0 -0.105 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="center_axle">
+      <origin xyz="0 -0.048 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.118" />
+        </geometry>
+      </collision>
+    <collision name="spoke_0">
+      <origin xyz="0.168 -0.105 0.68" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_1">
+      <origin xyz="0.155212 -0.105 0.744291" rpy="0 -0.392699 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_2">
+      <origin xyz="0.118794 -0.105 0.798794" rpy="0 -0.785398 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_3">
+      <origin xyz="0.0642908 -0.105 0.835212" rpy="0 -1.1781 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_4">
+      <origin xyz="1.0287e-17 -0.105 0.848" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_5">
+      <origin xyz="-0.0642908 -0.105 0.835212" rpy="0 -1.9635 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_6">
+      <origin xyz="-0.118794 -0.105 0.798794" rpy="0 -2.35619 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_7">
+      <origin xyz="-0.155212 -0.105 0.744291" rpy="0 -2.74889 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_8">
+      <origin xyz="-0.168 -0.105 0.68" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_9">
+      <origin xyz="-0.155212 -0.105 0.615709" rpy="0 -3.53429 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_10">
+      <origin xyz="-0.118794 -0.105 0.561206" rpy="0 -3.92699 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_11">
+      <origin xyz="-0.0642908 -0.105 0.524788" rpy="0 -4.31969 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_12">
+      <origin xyz="-3.08611e-17 -0.105 0.512" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_13">
+      <origin xyz="0.0642908 -0.105 0.524788" rpy="0 -5.10509 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_14">
+      <origin xyz="0.118794 -0.105 0.561206" rpy="0 -5.49779 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_15">
+      <origin xyz="0.155212 -0.105 0.615709" rpy="0 -5.89049 0" />
+      <geometry>
+        <box size="0.264 0.006 0.006" />
+        </geometry>
+      </collision>
+    <collision name="grille_tab_0">
+      <origin xyz="-0.292 -0.086 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.042 0.012" />
+        </geometry>
+      </collision>
+    <collision name="grille_tab_1">
+      <origin xyz="0.292 -0.086 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.042 0.012" />
+        </geometry>
+      </collision>
+    <collision name="grille_tab_2">
+      <origin xyz="0 -0.086 0.972" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.042 0.032" />
+        </geometry>
+      </collision>
+    <collision name="grille_tab_3">
+      <origin xyz="0 -0.086 0.388" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.042 0.032" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="propeller">
+    <visual name="five_blade_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/five_blade_rotor.obj" />
+        </geometry>
+      <material name="translucent_blue_blade">
+        <color rgba="0.45 0.68 0.86 0.82" />
+        </material>
+      </visual>
+    <collision name="five_blade_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/five_blade_rotor.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="timer_knob">
+    <visual name="timer_knob">
+      <geometry>
+        <mesh filename="assets/meshes/timer_knob.obj" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="timer_mark">
+      <origin xyz="0 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.0015 0.03" />
+        </geometry>
+      <material name="black_marking">
+        <color rgba="0.02 0.02 0.02 1" />
+        </material>
+      </visual>
+    <collision name="timer_knob">
+      <geometry>
+        <mesh filename="assets/meshes/timer_knob.obj" />
+        </geometry>
+      </collision>
+    <collision name="timer_mark">
+      <origin xyz="0 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.0015 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_column" type="prismatic">
+    <origin xyz="0 0 0.58" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="upper_column" />
+    <axis xyz="0 0 1" />
+    <limit effort="90" velocity="0.18" lower="0" upper="0.25" />
+    </joint>
+  <joint name="column_to_propeller" type="continuous">
+    <origin xyz="0 -0.056 0.68" rpy="-1.5708 0 0" />
+    <parent link="upper_column" />
+    <child link="propeller" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="40" />
+    </joint>
+  <joint name="column_to_timer" type="revolute">
+    <origin xyz="0 0.109 0.68" rpy="-1.5708 0 0" />
+    <parent link="upper_column" />
+    <child link="timer_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.6" velocity="2.5" lower="0" upper="5.75959" />
+    </joint>
+  </robot>

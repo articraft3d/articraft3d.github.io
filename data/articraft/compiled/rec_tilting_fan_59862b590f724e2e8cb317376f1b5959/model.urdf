@@ -1,0 +1,741 @@
+<robot name="desk_fan_tilting_head">
+  <material name="matte_dark_plastic">
+    <color rgba="0.045 0.05 0.055 1" />
+    </material>
+  <material name="warm_grey_plastic">
+    <color rgba="0.55 0.58 0.58 1" />
+    </material>
+  <material name="pale_guard_wire">
+    <color rgba="0.82 0.85 0.84 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.68 0.68 0.63 1" />
+    </material>
+  <material name="smoky_translucent_blade">
+    <color rgba="0.42 0.62 0.78 0.62" />
+    </material>
+  <link name="stand">
+    <visual name="base_slab">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_slab.obj" />
+        </geometry>
+      <material name="matte_dark_plastic">
+        <color rgba="0.045 0.05 0.055 1" />
+        </material>
+      </visual>
+    <visual name="central_pedestal">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.06" />
+        </geometry>
+      <material name="warm_grey_plastic">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="yoke_saddle">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.18 0.06" />
+        </geometry>
+      <material name="warm_grey_plastic">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="side_bracket_0">
+      <origin xyz="0 0.275 0.1825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.036 0.285" />
+        </geometry>
+      <material name="warm_grey_plastic">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="pivot_boss_0">
+      <origin xyz="0 0.259 0.32" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.052" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.68 0.68 0.63 1" />
+        </material>
+      </visual>
+    <visual name="side_bracket_1">
+      <origin xyz="0 -0.275 0.1825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.036 0.285" />
+        </geometry>
+      <material name="warm_grey_plastic">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="pivot_boss_1">
+      <origin xyz="0 -0.259 0.32" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.052" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.68 0.68 0.63 1" />
+        </material>
+      </visual>
+    <collision name="base_slab">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_slab.obj" />
+        </geometry>
+      </collision>
+    <collision name="central_pedestal">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="yoke_saddle">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.18 0.06" />
+        </geometry>
+      </collision>
+    <collision name="side_bracket_0">
+      <origin xyz="0 0.275 0.1825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.036 0.285" />
+        </geometry>
+      </collision>
+    <collision name="pivot_boss_0">
+      <origin xyz="0 0.259 0.32" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="side_bracket_1">
+      <origin xyz="0 -0.275 0.1825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.036 0.285" />
+        </geometry>
+      </collision>
+    <collision name="pivot_boss_1">
+      <origin xyz="0 -0.259 0.32" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.052" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="head">
+    <visual name="motor_pod">
+      <origin xyz="-0.083 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.12" />
+        </geometry>
+      <material name="matte_dark_plastic">
+        <color rgba="0.045 0.05 0.055 1" />
+        </material>
+      </visual>
+    <visual name="axle">
+      <origin xyz="-0.012 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.112" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.68 0.68 0.63 1" />
+        </material>
+      </visual>
+    <visual name="front_outer_guard_ring">
+      <origin xyz="0.056 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_outer_guard_ring.obj" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_middle_guard_ring">
+      <origin xyz="0.056 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_middle_guard_ring.obj" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_inner_guard_ring">
+      <origin xyz="0.056 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_inner_guard_ring.obj" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_0">
+      <origin xyz="0.056 0 0" rpy="-0 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_1">
+      <origin xyz="0.056 0 0" rpy="-0.261799 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_2">
+      <origin xyz="0.056 0 0" rpy="-0.523599 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_3">
+      <origin xyz="0.056 0 0" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_4">
+      <origin xyz="0.056 0 0" rpy="-1.0472 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_5">
+      <origin xyz="0.056 0 0" rpy="-1.309 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_6">
+      <origin xyz="0.056 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_7">
+      <origin xyz="0.056 0 0" rpy="-1.8326 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_8">
+      <origin xyz="0.056 0 0" rpy="-2.0944 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_9">
+      <origin xyz="0.056 0 0" rpy="-2.35619 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_10">
+      <origin xyz="0.056 0 0" rpy="-2.61799 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_11">
+      <origin xyz="0.056 0 0" rpy="-2.87979 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_outer_guard_ring">
+      <origin xyz="-0.056 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_outer_guard_ring.obj" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_middle_guard_ring">
+      <origin xyz="-0.056 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_middle_guard_ring.obj" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_inner_guard_ring">
+      <origin xyz="-0.056 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_inner_guard_ring.obj" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_0">
+      <origin xyz="-0.056 0 0" rpy="-0 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_1">
+      <origin xyz="-0.056 0 0" rpy="-0.261799 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_2">
+      <origin xyz="-0.056 0 0" rpy="-0.523599 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_3">
+      <origin xyz="-0.056 0 0" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_4">
+      <origin xyz="-0.056 0 0" rpy="-1.0472 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_5">
+      <origin xyz="-0.056 0 0" rpy="-1.309 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_6">
+      <origin xyz="-0.056 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_7">
+      <origin xyz="-0.056 0 0" rpy="-1.8326 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_8">
+      <origin xyz="-0.056 0 0" rpy="-2.0944 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_9">
+      <origin xyz="-0.056 0 0" rpy="-2.35619 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_10">
+      <origin xyz="-0.056 0 0" rpy="-2.61799 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_11">
+      <origin xyz="-0.056 0 0" rpy="-2.87979 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="cage_side_rail_0">
+      <origin xyz="0 0 0.204" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.112" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="cage_side_rail_1">
+      <origin xyz="0 0 -0.204" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.112" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="cage_side_rail_2">
+      <origin xyz="0 0.204 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.112" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="cage_side_rail_3">
+      <origin xyz="0 -0.204 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.112" />
+        </geometry>
+      <material name="pale_guard_wire">
+        <color rgba="0.82 0.85 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_medallion">
+      <origin xyz="0.063 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.018" />
+        </geometry>
+      <material name="warm_grey_plastic">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="side_pin_0">
+      <origin xyz="0 0.229 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.047" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.68 0.68 0.63 1" />
+        </material>
+      </visual>
+    <visual name="side_pin_1">
+      <origin xyz="0 -0.229 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.047" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.68 0.68 0.63 1" />
+        </material>
+      </visual>
+    <collision name="motor_pod">
+      <origin xyz="-0.083 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="axle">
+      <origin xyz="-0.012 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.112" />
+        </geometry>
+      </collision>
+    <collision name="front_outer_guard_ring">
+      <origin xyz="0.056 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_outer_guard_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_middle_guard_ring">
+      <origin xyz="0.056 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_middle_guard_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_inner_guard_ring">
+      <origin xyz="0.056 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_inner_guard_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_spoke_0">
+      <origin xyz="0.056 0 0" rpy="-0 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="front_spoke_1">
+      <origin xyz="0.056 0 0" rpy="-0.261799 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="front_spoke_2">
+      <origin xyz="0.056 0 0" rpy="-0.523599 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="front_spoke_3">
+      <origin xyz="0.056 0 0" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="front_spoke_4">
+      <origin xyz="0.056 0 0" rpy="-1.0472 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="front_spoke_5">
+      <origin xyz="0.056 0 0" rpy="-1.309 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="front_spoke_6">
+      <origin xyz="0.056 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="front_spoke_7">
+      <origin xyz="0.056 0 0" rpy="-1.8326 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="front_spoke_8">
+      <origin xyz="0.056 0 0" rpy="-2.0944 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="front_spoke_9">
+      <origin xyz="0.056 0 0" rpy="-2.35619 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="front_spoke_10">
+      <origin xyz="0.056 0 0" rpy="-2.61799 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="front_spoke_11">
+      <origin xyz="0.056 0 0" rpy="-2.87979 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="rear_outer_guard_ring">
+      <origin xyz="-0.056 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_outer_guard_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_middle_guard_ring">
+      <origin xyz="-0.056 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_middle_guard_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_inner_guard_ring">
+      <origin xyz="-0.056 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_inner_guard_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_0">
+      <origin xyz="-0.056 0 0" rpy="-0 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_1">
+      <origin xyz="-0.056 0 0" rpy="-0.261799 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_2">
+      <origin xyz="-0.056 0 0" rpy="-0.523599 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_3">
+      <origin xyz="-0.056 0 0" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_4">
+      <origin xyz="-0.056 0 0" rpy="-1.0472 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_5">
+      <origin xyz="-0.056 0 0" rpy="-1.309 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_6">
+      <origin xyz="-0.056 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_7">
+      <origin xyz="-0.056 0 0" rpy="-1.8326 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_8">
+      <origin xyz="-0.056 0 0" rpy="-2.0944 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_9">
+      <origin xyz="-0.056 0 0" rpy="-2.35619 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_10">
+      <origin xyz="-0.056 0 0" rpy="-2.61799 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_11">
+      <origin xyz="-0.056 0 0" rpy="-2.87979 0 0" />
+      <geometry>
+        <cylinder radius="0.0024" length="0.398" />
+        </geometry>
+      </collision>
+    <collision name="cage_side_rail_0">
+      <origin xyz="0 0 0.204" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.112" />
+        </geometry>
+      </collision>
+    <collision name="cage_side_rail_1">
+      <origin xyz="0 0 -0.204" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.112" />
+        </geometry>
+      </collision>
+    <collision name="cage_side_rail_2">
+      <origin xyz="0 0.204 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.112" />
+        </geometry>
+      </collision>
+    <collision name="cage_side_rail_3">
+      <origin xyz="0 -0.204 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.112" />
+        </geometry>
+      </collision>
+    <collision name="front_medallion">
+      <origin xyz="0.063 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_pin_0">
+      <origin xyz="0 0.229 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.047" />
+        </geometry>
+      </collision>
+    <collision name="side_pin_1">
+      <origin xyz="0 -0.229 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.047" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotor">
+    <visual name="five_blade_rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/five_blade_rotor.obj" />
+        </geometry>
+      <material name="smoky_translucent_blade">
+        <color rgba="0.42 0.62 0.78 0.62" />
+        </material>
+      </visual>
+    <collision name="five_blade_rotor">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/five_blade_rotor.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="stand_to_head" type="revolute">
+    <origin xyz="0 0 0.32" rpy="0 0 0" />
+    <parent link="stand" />
+    <child link="head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="12" velocity="1.2" lower="-0.38" upper="0.55" />
+    </joint>
+  <joint name="head_to_rotor" type="continuous">
+    <parent link="head" />
+    <child link="rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.25" velocity="80" />
+    </joint>
+  </robot>

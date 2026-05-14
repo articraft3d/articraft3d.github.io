@@ -1,0 +1,247 @@
+<robot name="compact_xy_axis">
+  <link name="lower_guide">
+    <visual name="ground_plate">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.3 0.04" />
+        </geometry>
+      <material name="painted_casting">
+        <color rgba="0.18 0.22 0.26 1" />
+        </material>
+      </visual>
+    <visual name="x_rail_0">
+      <origin xyz="0 -0.075 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.036 0.046" />
+        </geometry>
+      <material name="linear_rail_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="x_rail_1">
+      <origin xyz="0 0.075 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.036 0.046" />
+        </geometry>
+      <material name="linear_rail_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_0">
+      <origin xyz="-0.43 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.22 0.092" />
+        </geometry>
+      <material name="painted_casting">
+        <color rgba="0.18 0.22 0.26 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_1">
+      <origin xyz="0.43 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.22 0.092" />
+        </geometry>
+      <material name="painted_casting">
+        <color rgba="0.18 0.22 0.26 1" />
+        </material>
+      </visual>
+    <collision name="ground_plate">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.3 0.04" />
+        </geometry>
+      </collision>
+    <collision name="x_rail_0">
+      <origin xyz="0 -0.075 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.036 0.046" />
+        </geometry>
+      </collision>
+    <collision name="x_rail_1">
+      <origin xyz="0 0.075 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.036 0.046" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_0">
+      <origin xyz="-0.43 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.22 0.092" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_1">
+      <origin xyz="0.43 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.22 0.092" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="first_carriage">
+    <visual name="carriage_body">
+      <origin xyz="0 0 0.0375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.23 0.075" />
+        </geometry>
+      <material name="carriage_blue">
+        <color rgba="0.05 0.23 0.55 1" />
+        </material>
+      </visual>
+    <visual name="y_rail_0">
+      <origin xyz="-0.055 0 0.0845" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.31 0.021" />
+        </geometry>
+      <material name="linear_rail_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="y_rail_1">
+      <origin xyz="0.055 0 0.0845" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.31 0.021" />
+        </geometry>
+      <material name="linear_rail_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="top_wear_plate">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.16 0.01" />
+        </geometry>
+      <material name="fastener_black">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <collision name="carriage_body">
+      <origin xyz="0 0 0.0375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.23 0.075" />
+        </geometry>
+      </collision>
+    <collision name="y_rail_0">
+      <origin xyz="-0.055 0 0.0845" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.31 0.021" />
+        </geometry>
+      </collision>
+    <collision name="y_rail_1">
+      <origin xyz="0.055 0 0.0845" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.31 0.021" />
+        </geometry>
+      </collision>
+    <collision name="top_wear_plate">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.16 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cross_slide">
+    <visual name="cross_beam">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.42 0.045" />
+        </geometry>
+      <material name="cross_slide_gray">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="tooling_deck">
+      <origin xyz="0 0 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.2 0.028" />
+        </geometry>
+      <material name="tooling_orange">
+        <color rgba="0.95 0.48 0.13 1" />
+        </material>
+      </visual>
+    <visual name="deck_bolt_0">
+      <origin xyz="-0.07 -0.07 0.0745" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.007" />
+        </geometry>
+      <material name="fastener_black">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <visual name="deck_bolt_1">
+      <origin xyz="-0.07 0.07 0.0745" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.007" />
+        </geometry>
+      <material name="fastener_black">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <visual name="deck_bolt_2">
+      <origin xyz="0.07 -0.07 0.0745" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.007" />
+        </geometry>
+      <material name="fastener_black">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <visual name="deck_bolt_3">
+      <origin xyz="0.07 0.07 0.0745" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.007" />
+        </geometry>
+      <material name="fastener_black">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <collision name="cross_beam">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.42 0.045" />
+        </geometry>
+      </collision>
+    <collision name="tooling_deck">
+      <origin xyz="0 0 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.2 0.028" />
+        </geometry>
+      </collision>
+    <collision name="deck_bolt_0">
+      <origin xyz="-0.07 -0.07 0.0745" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="deck_bolt_1">
+      <origin xyz="-0.07 0.07 0.0745" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="deck_bolt_2">
+      <origin xyz="0.07 -0.07 0.0745" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="deck_bolt_3">
+      <origin xyz="0.07 0.07 0.0745" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="lower_to_carriage" type="prismatic">
+    <origin xyz="0 0 0.085" rpy="0 0 0" />
+    <parent link="lower_guide" />
+    <child link="first_carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="0.8" lower="-0.24" upper="0.24" />
+    </joint>
+  <joint name="carriage_to_cross_slide" type="prismatic">
+    <origin xyz="0 0 0.095" rpy="0 0 0" />
+    <parent link="first_carriage" />
+    <child link="cross_slide" />
+    <axis xyz="0 1 0" />
+    <limit effort="80" velocity="0.7" lower="-0.14" upper="0.14" />
+    </joint>
+  </robot>

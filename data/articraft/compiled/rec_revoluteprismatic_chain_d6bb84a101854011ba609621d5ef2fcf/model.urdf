@@ -1,0 +1,322 @@
+<robot name="bridge_backed_pivot_arm">
+  <link name="rear_support">
+    <visual name="base_plate">
+      <origin xyz="0.06 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.4 0.04" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rear_back">
+      <origin xyz="-0.14 0 0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.26 0.5" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="yoke_side_0">
+      <origin xyz="0.02 0.13 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.04 0.54" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="yoke_side_1">
+      <origin xyz="0.02 -0.13 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.04 0.54" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="top_bridge">
+      <origin xyz="0.01 0 0.605" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.32 0.05" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rear_bridge">
+      <origin xyz="-0.11 0 0.515" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.32 0.055" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="outer_boss_0">
+      <origin xyz="0 0.165 0.5" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.03" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="outer_boss_1">
+      <origin xyz="0 -0.165 0.5" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.03" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0.06 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.4 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_back">
+      <origin xyz="-0.14 0 0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.26 0.5" />
+        </geometry>
+      </collision>
+    <collision name="yoke_side_0">
+      <origin xyz="0.02 0.13 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.04 0.54" />
+        </geometry>
+      </collision>
+    <collision name="yoke_side_1">
+      <origin xyz="0.02 -0.13 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.04 0.54" />
+        </geometry>
+      </collision>
+    <collision name="top_bridge">
+      <origin xyz="0.01 0 0.605" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.32 0.05" />
+        </geometry>
+      </collision>
+    <collision name="rear_bridge">
+      <origin xyz="-0.11 0 0.515" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.32 0.055" />
+        </geometry>
+      </collision>
+    <collision name="outer_boss_0">
+      <origin xyz="0 0.165 0.5" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="outer_boss_1">
+      <origin xyz="0 -0.165 0.5" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pivot_arm">
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.22" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="root_web">
+      <origin xyz="0.075 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.1 0.045" />
+        </geometry>
+      <material name="parkerized_arm">
+        <color rgba="0.08 0.11 0.13 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_0">
+      <origin xyz="0.34 0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.025 0.065" />
+        </geometry>
+      <material name="parkerized_arm">
+        <color rgba="0.08 0.11 0.13 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="0.34 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.025 0.065" />
+        </geometry>
+      <material name="parkerized_arm">
+        <color rgba="0.08 0.11 0.13 1" />
+        </material>
+      </visual>
+    <visual name="top_spine">
+      <origin xyz="0.34 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.1 0.025" />
+        </geometry>
+      <material name="parkerized_arm">
+        <color rgba="0.08 0.11 0.13 1" />
+        </material>
+      </visual>
+    <visual name="lower_slide_bed">
+      <origin xyz="0.55 0 -0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.12 0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="front_collar_0">
+      <origin xyz="0.64 0.062 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.08" />
+        </geometry>
+      <material name="parkerized_arm">
+        <color rgba="0.08 0.11 0.13 1" />
+        </material>
+      </visual>
+    <visual name="front_collar_1">
+      <origin xyz="0.64 -0.062 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.08" />
+        </geometry>
+      <material name="parkerized_arm">
+        <color rgba="0.08 0.11 0.13 1" />
+        </material>
+      </visual>
+    <visual name="front_collar_top">
+      <origin xyz="0.64 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.13 0.015" />
+        </geometry>
+      <material name="parkerized_arm">
+        <color rgba="0.08 0.11 0.13 1" />
+        </material>
+      </visual>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="root_web">
+      <origin xyz="0.075 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.1 0.045" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_0">
+      <origin xyz="0.34 0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.025 0.065" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_1">
+      <origin xyz="0.34 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.025 0.065" />
+        </geometry>
+      </collision>
+    <collision name="top_spine">
+      <origin xyz="0.34 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.1 0.025" />
+        </geometry>
+      </collision>
+    <collision name="lower_slide_bed">
+      <origin xyz="0.55 0 -0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.12 0.012" />
+        </geometry>
+      </collision>
+    <collision name="front_collar_0">
+      <origin xyz="0.64 0.062 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.08" />
+        </geometry>
+      </collision>
+    <collision name="front_collar_1">
+      <origin xyz="0.64 -0.062 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.08" />
+        </geometry>
+      </collision>
+    <collision name="front_collar_top">
+      <origin xyz="0.64 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.13 0.015" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="extension_tip">
+    <visual name="sliding_stem">
+      <origin xyz="-0.05 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.065 0.036" />
+        </geometry>
+      <material name="amber_extension">
+        <color rgba="0.95 0.58 0.12 1" />
+        </material>
+      </visual>
+    <visual name="round_nose">
+      <origin xyz="0.245 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.09" />
+        </geometry>
+      <material name="amber_extension">
+        <color rgba="0.95 0.58 0.12 1" />
+        </material>
+      </visual>
+    <visual name="nose_pad">
+      <origin xyz="0.301 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.022" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="sliding_stem">
+      <origin xyz="-0.05 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.065 0.036" />
+        </geometry>
+      </collision>
+    <collision name="round_nose">
+      <origin xyz="0.245 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="nose_pad">
+      <origin xyz="0.301 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="arm_hinge" type="revolute">
+    <origin xyz="0 0 0.5" rpy="0 0 0" />
+    <parent link="rear_support" />
+    <child link="pivot_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="45" velocity="1.4" lower="-0.25" upper="1.05" />
+    </joint>
+  <joint name="tip_slide" type="prismatic">
+    <origin xyz="0.6 0 0" rpy="0 0 0" />
+    <parent link="pivot_arm" />
+    <child link="extension_tip" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="0.35" lower="0" upper="0.18" />
+    </joint>
+  </robot>

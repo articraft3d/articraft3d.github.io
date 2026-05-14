@@ -1,0 +1,893 @@
+<robot name="premium_articulated_vacuum">
+  <material name="satin_graphite">
+    <color rgba="0.13 0.14 0.15 1" />
+    </material>
+  <material name="deep_polymer">
+    <color rgba="0.045 0.048 0.052 1" />
+    </material>
+  <material name="champagne_metal">
+    <color rgba="0.74 0.67 0.55 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.69 0.71 0.73 1" />
+    </material>
+  <material name="smoked_clear">
+    <color rgba="0.45 0.56 0.62 0.42" />
+    </material>
+  <material name="matte_elastomer">
+    <color rgba="0.018 0.018 0.019 1" />
+    </material>
+  <material name="soft_button">
+    <color rgba="0.23 0.24 0.25 1" />
+    </material>
+  <material name="blue_brush_strip">
+    <color rgba="0.08 0.29 0.5 1" />
+    </material>
+  <link name="body">
+    <visual name="motor_shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_motor_shell.obj" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.13 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="dust_bin">
+      <origin xyz="0 0.098 0.99" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.071" length="0.245" />
+        </geometry>
+      <material name="smoked_clear">
+        <color rgba="0.45 0.56 0.62 0.42" />
+        </material>
+      </visual>
+    <visual name="cyclone_band">
+      <origin xyz="0 0.098 1.124" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.025" />
+        </geometry>
+      <material name="champagne_metal">
+        <color rgba="0.74 0.67 0.55 1" />
+        </material>
+      </visual>
+    <visual name="bin_latch_ring">
+      <origin xyz="0 0.098 0.852" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.022" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="handle_loop">
+      <geometry>
+        <mesh filename="assets/meshes/body_handle_loop.obj" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="trigger_bridge">
+      <origin xyz="0 -0.128 1.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.024 0.082" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="trigger_side_a_ear">
+      <origin xyz="-0.035 -0.145 1.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.042 0.032" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="trigger_side_b_ear">
+      <origin xyz="0.035 -0.145 1.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.042 0.032" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="socket_neck">
+      <geometry>
+        <mesh filename="assets/meshes/body_lower_socket_neck.obj" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="wand_fork_bridge">
+      <origin xyz="0 0.102 0.842" rpy="0 0 0" />
+      <geometry>
+        <box size="0.124 0.05 0.026" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="wand_side_a_fork">
+      <origin xyz="-0.055 0.104 0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.048 0.094" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="wand_side_b_fork">
+      <origin xyz="0.055 0.104 0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.048 0.094" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="vent_slit_0">
+      <origin xyz="0.078 -0.1 0.94" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.026" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.69 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="vent_slit_1">
+      <origin xyz="0.078 -0.1 0.985" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.026" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.69 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="vent_slit_2">
+      <origin xyz="0.078 -0.1 1.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.026" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.69 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="vent_slit_3">
+      <origin xyz="0.078 -0.1 1.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.026" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.69 0.71 0.73 1" />
+        </material>
+      </visual>
+    <collision name="motor_shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_motor_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="dust_bin">
+      <origin xyz="0 0.098 0.99" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.071" length="0.245" />
+        </geometry>
+      </collision>
+    <collision name="cyclone_band">
+      <origin xyz="0 0.098 1.124" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="bin_latch_ring">
+      <origin xyz="0 0.098 0.852" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="handle_loop">
+      <geometry>
+        <mesh filename="assets/meshes/body_handle_loop.obj" />
+        </geometry>
+      </collision>
+    <collision name="trigger_bridge">
+      <origin xyz="0 -0.128 1.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.024 0.082" />
+        </geometry>
+      </collision>
+    <collision name="trigger_side_a_ear">
+      <origin xyz="-0.035 -0.145 1.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.042 0.032" />
+        </geometry>
+      </collision>
+    <collision name="trigger_side_b_ear">
+      <origin xyz="0.035 -0.145 1.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.042 0.032" />
+        </geometry>
+      </collision>
+    <collision name="socket_neck">
+      <geometry>
+        <mesh filename="assets/meshes/body_lower_socket_neck.obj" />
+        </geometry>
+      </collision>
+    <collision name="wand_fork_bridge">
+      <origin xyz="0 0.102 0.842" rpy="0 0 0" />
+      <geometry>
+        <box size="0.124 0.05 0.026" />
+        </geometry>
+      </collision>
+    <collision name="wand_side_a_fork">
+      <origin xyz="-0.055 0.104 0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.048 0.094" />
+        </geometry>
+      </collision>
+    <collision name="wand_side_b_fork">
+      <origin xyz="0.055 0.104 0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.048 0.094" />
+        </geometry>
+      </collision>
+    <collision name="vent_slit_0">
+      <origin xyz="0.078 -0.1 0.94" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="vent_slit_1">
+      <origin xyz="0.078 -0.1 0.985" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="vent_slit_2">
+      <origin xyz="0.078 -0.1 1.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="vent_slit_3">
+      <origin xyz="0.078 -0.1 1.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="trigger">
+    <visual name="trigger_pivot">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.06" />
+        </geometry>
+      <material name="soft_button">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="trigger_blade">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.014 0.072" />
+        </geometry>
+      <material name="soft_button">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <collision name="trigger_pivot">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="trigger_blade">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.014 0.072" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="mode_button">
+    <visual name="mode_button_cap">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.01" />
+        </geometry>
+      <material name="soft_button">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <collision name="mode_button_cap">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_wand">
+    <visual name="upper_top_knuckle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.094" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="upper_top_collar">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.052" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="upper_metal_tube">
+      <origin xyz="0 0 -0.1875" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.315" />
+        </geometry>
+      <material name="champagne_metal">
+        <color rgba="0.74 0.67 0.55 1" />
+        </material>
+      </visual>
+    <visual name="upper_lower_collar">
+      <origin xyz="0 0 -0.342" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.052" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="upper_fork_bridge">
+      <origin xyz="0 0 -0.343" rpy="0 0 0" />
+      <geometry>
+        <box size="0.116 0.038 0.036" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="upper_side_a_fork">
+      <origin xyz="-0.05 0 -0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.042 0.104" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="upper_side_b_fork">
+      <origin xyz="0.05 0 -0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.042 0.104" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <collision name="upper_top_knuckle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.094" />
+        </geometry>
+      </collision>
+    <collision name="upper_top_collar">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="upper_metal_tube">
+      <origin xyz="0 0 -0.1875" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.315" />
+        </geometry>
+      </collision>
+    <collision name="upper_lower_collar">
+      <origin xyz="0 0 -0.342" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="upper_fork_bridge">
+      <origin xyz="0 0 -0.343" rpy="0 0 0" />
+      <geometry>
+        <box size="0.116 0.038 0.036" />
+        </geometry>
+      </collision>
+    <collision name="upper_side_a_fork">
+      <origin xyz="-0.05 0 -0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.042 0.104" />
+        </geometry>
+      </collision>
+    <collision name="upper_side_b_fork">
+      <origin xyz="0.05 0 -0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.042 0.104" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_wand">
+    <visual name="lower_top_knuckle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.086" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="lower_top_collar">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.052" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="lower_metal_tube">
+      <origin xyz="0 0 -0.155" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0155" length="0.25" />
+        </geometry>
+      <material name="champagne_metal">
+        <color rgba="0.74 0.67 0.55 1" />
+        </material>
+      </visual>
+    <visual name="lower_lower_collar">
+      <origin xyz="0 0 -0.277" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0215" length="0.052" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="swivel_socket">
+      <origin xyz="0 0 -0.306" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.042" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <collision name="lower_top_knuckle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.086" />
+        </geometry>
+      </collision>
+    <collision name="lower_top_collar">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="lower_metal_tube">
+      <origin xyz="0 0 -0.155" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0155" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="lower_lower_collar">
+      <origin xyz="0 0 -0.277" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0215" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="swivel_socket">
+      <origin xyz="0 0 -0.306" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.042" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="nozzle_neck">
+    <visual name="swivel_collar">
+      <origin xyz="0 0 -0.024" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.042" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="neck_elbow">
+      <geometry>
+        <mesh filename="assets/meshes/nozzle_neck_elbow.obj" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_pitch_knuckle">
+      <origin xyz="0 0.052 0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.078" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <collision name="swivel_collar">
+      <origin xyz="0 0 -0.024" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.042" />
+        </geometry>
+      </collision>
+    <collision name="neck_elbow">
+      <geometry>
+        <mesh filename="assets/meshes/nozzle_neck_elbow.obj" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_pitch_knuckle">
+      <origin xyz="0 0.052 0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.078" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="floor_nozzle">
+    <visual name="top_shell">
+      <origin xyz="0 0.12 -0.09" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/nozzle_top_shell.obj" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.13 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="hinge_bridge">
+      <origin xyz="0 0.1 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.04 0.028" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="neck_side_a_fork">
+      <origin xyz="-0.047 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.036 0.064" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="neck_side_a_strut">
+      <origin xyz="-0.047 0.035 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.05 0.088" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="neck_side_b_fork">
+      <origin xyz="0.047 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.036 0.064" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="neck_side_b_strut">
+      <origin xyz="0.047 0.035 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.05 0.088" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="front_bumper">
+      <origin xyz="0 0.185 -0.102" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.02 0.027" />
+        </geometry>
+      <material name="matte_elastomer">
+        <color rgba="0.018 0.018 0.019 1" />
+        </material>
+      </visual>
+    <visual name="rear_squeegee">
+      <origin xyz="0 -0.115 -0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.41 0.018 0.017" />
+        </geometry>
+      <material name="matte_elastomer">
+        <color rgba="0.018 0.018 0.019 1" />
+        </material>
+      </visual>
+    <visual name="rear_roller">
+      <origin xyz="0 -0.115 -0.128" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.405" />
+        </geometry>
+      <material name="matte_elastomer">
+        <color rgba="0.018 0.018 0.019 1" />
+        </material>
+      </visual>
+    <visual name="side_wheel">
+      <origin xyz="-0.206 -0.115 -0.128" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.018" />
+        </geometry>
+      <material name="matte_elastomer">
+        <color rgba="0.018 0.018 0.019 1" />
+        </material>
+      </visual>
+    <visual name="side_wheel">
+      <origin xyz="0.206 -0.115 -0.128" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.018" />
+        </geometry>
+      <material name="matte_elastomer">
+        <color rgba="0.018 0.018 0.019 1" />
+        </material>
+      </visual>
+    <visual name="side_side_a_rail">
+      <origin xyz="-0.216 0.035 -0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.315 0.038" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="side_side_b_rail">
+      <origin xyz="0.216 0.035 -0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.315 0.038" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="brush_side_a_bearing">
+      <origin xyz="-0.183 0.084 -0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.04 0.06" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <visual name="brush_side_b_bearing">
+      <origin xyz="0.183 0.084 -0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.04 0.06" />
+        </geometry>
+      <material name="deep_polymer">
+        <color rgba="0.045 0.048 0.052 1" />
+        </material>
+      </visual>
+    <collision name="top_shell">
+      <origin xyz="0 0.12 -0.09" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/nozzle_top_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="hinge_bridge">
+      <origin xyz="0 0.1 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.04 0.028" />
+        </geometry>
+      </collision>
+    <collision name="neck_side_a_fork">
+      <origin xyz="-0.047 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.036 0.064" />
+        </geometry>
+      </collision>
+    <collision name="neck_side_a_strut">
+      <origin xyz="-0.047 0.035 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.05 0.088" />
+        </geometry>
+      </collision>
+    <collision name="neck_side_b_fork">
+      <origin xyz="0.047 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.036 0.064" />
+        </geometry>
+      </collision>
+    <collision name="neck_side_b_strut">
+      <origin xyz="0.047 0.035 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.05 0.088" />
+        </geometry>
+      </collision>
+    <collision name="front_bumper">
+      <origin xyz="0 0.185 -0.102" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.02 0.027" />
+        </geometry>
+      </collision>
+    <collision name="rear_squeegee">
+      <origin xyz="0 -0.115 -0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.41 0.018 0.017" />
+        </geometry>
+      </collision>
+    <collision name="rear_roller">
+      <origin xyz="0 -0.115 -0.128" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.405" />
+        </geometry>
+      </collision>
+    <collision name="side_wheel">
+      <origin xyz="-0.206 -0.115 -0.128" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_wheel">
+      <origin xyz="0.206 -0.115 -0.128" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_side_a_rail">
+      <origin xyz="-0.216 0.035 -0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.315 0.038" />
+        </geometry>
+      </collision>
+    <collision name="side_side_b_rail">
+      <origin xyz="0.216 0.035 -0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.315 0.038" />
+        </geometry>
+      </collision>
+    <collision name="brush_side_a_bearing">
+      <origin xyz="-0.183 0.084 -0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.04 0.06" />
+        </geometry>
+      </collision>
+    <collision name="brush_side_b_bearing">
+      <origin xyz="0.183 0.084 -0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.04 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="brush_roll">
+    <visual name="brush_core">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.34" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.69 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="brush_strip_0">
+      <origin xyz="0 0.017 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.334 0.004 0.01" />
+        </geometry>
+      <material name="blue_brush_strip">
+        <color rgba="0.08 0.29 0.5 1" />
+        </material>
+      </visual>
+    <visual name="brush_strip_1">
+      <origin xyz="0 1.04095e-18 0.017" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.334 0.004 0.01" />
+        </geometry>
+      <material name="matte_elastomer">
+        <color rgba="0.018 0.018 0.019 1" />
+        </material>
+      </visual>
+    <visual name="brush_strip_2">
+      <origin xyz="0 -0.017 2.0819e-18" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.334 0.004 0.01" />
+        </geometry>
+      <material name="blue_brush_strip">
+        <color rgba="0.08 0.29 0.5 1" />
+        </material>
+      </visual>
+    <visual name="brush_strip_3">
+      <origin xyz="0 -3.12285e-18 -0.017" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.334 0.004 0.01" />
+        </geometry>
+      <material name="matte_elastomer">
+        <color rgba="0.018 0.018 0.019 1" />
+        </material>
+      </visual>
+    <collision name="brush_core">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.34" />
+        </geometry>
+      </collision>
+    <collision name="brush_strip_0">
+      <origin xyz="0 0.017 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.334 0.004 0.01" />
+        </geometry>
+      </collision>
+    <collision name="brush_strip_1">
+      <origin xyz="0 1.04095e-18 0.017" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.334 0.004 0.01" />
+        </geometry>
+      </collision>
+    <collision name="brush_strip_2">
+      <origin xyz="0 -0.017 2.0819e-18" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.334 0.004 0.01" />
+        </geometry>
+      </collision>
+    <collision name="brush_strip_3">
+      <origin xyz="0 -3.12285e-18 -0.017" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.334 0.004 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_trigger" type="revolute">
+    <origin xyz="0 -0.15 1.06" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="trigger" />
+    <axis xyz="1 0 0" />
+    <limit effort="1" velocity="2" lower="0" upper="0.32" />
+    </joint>
+  <joint name="body_to_mode_button" type="prismatic">
+    <origin xyz="0 -0.02 1.225" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="mode_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="3" velocity="0.06" lower="0" upper="0.006" />
+    </joint>
+  <joint name="body_to_upper_wand" type="revolute">
+    <origin xyz="0 0.104 0.78" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="upper_wand" />
+    <axis xyz="1 0 0" />
+    <limit effort="10" velocity="1.8" lower="-0.55" upper="0.75" />
+    </joint>
+  <joint name="upper_wand_to_lower_wand" type="revolute">
+    <origin xyz="0 0 -0.405" rpy="0 0 0" />
+    <parent link="upper_wand" />
+    <child link="lower_wand" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="1.6" lower="-0.85" upper="0.45" />
+    </joint>
+  <joint name="lower_wand_to_nozzle_neck" type="revolute">
+    <origin xyz="0 0 -0.33" rpy="0 0 0" />
+    <parent link="lower_wand" />
+    <child link="nozzle_neck" />
+    <axis xyz="0 0 1" />
+    <limit effort="5" velocity="1.8" lower="-0.8" upper="0.8" />
+    </joint>
+  <joint name="nozzle_neck_to_floor_nozzle" type="revolute">
+    <origin xyz="0 0.052 0.085" rpy="0 0 0" />
+    <parent link="nozzle_neck" />
+    <child link="floor_nozzle" />
+    <axis xyz="1 0 0" />
+    <limit effort="7" velocity="1.8" lower="-0.5" upper="0.7" />
+    </joint>
+  <joint name="floor_nozzle_to_brush_roll" type="continuous">
+    <origin xyz="0 0.084 -0.126" rpy="0 0 0" />
+    <parent link="floor_nozzle" />
+    <child link="brush_roll" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="35" />
+    </joint>
+  </robot>

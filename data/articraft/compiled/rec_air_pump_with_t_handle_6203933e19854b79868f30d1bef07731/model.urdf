@@ -1,0 +1,526 @@
+<robot name="industrial_floor_air_pump">
+  <link name="frame">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.16 0.036" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="guide_floor">
+      <origin xyz="0 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.082 0.01" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="guide_side_0">
+      <origin xyz="0 -0.034 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.014 0.056" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="guide_side_1">
+      <origin xyz="0 0.034 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.014 0.056" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="guide_top">
+      <origin xyz="0 0 0.089" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.082 0.01" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="barrel_shell">
+      <origin xyz="0 0 0.545" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      <material name="blue_enamel">
+        <color rgba="0.02 0.16 0.42 1" />
+        </material>
+      </visual>
+    <visual name="lower_collar">
+      <origin xyz="0 0 0.125" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_collar.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="upper_collar">
+      <origin xyz="0 0 0.975" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_collar.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="side_bracket_0">
+      <origin xyz="0 -0.05 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.02 0.07" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="side_bracket_1">
+      <origin xyz="0 0.05 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.02 0.07" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tie_rod_0">
+      <origin xyz="-0.052 0.033 0.54" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.76" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="tie_rod_1">
+      <origin xyz="0.052 0.033 0.54" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.76" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="gauge_neck">
+      <origin xyz="0 -0.08 0.735" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.058" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gauge_body">
+      <origin xyz="0 -0.135 0.735" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.06" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gauge_face">
+      <origin xyz="0 -0.167 0.735" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.004" />
+        </geometry>
+      <material name="gauge_face_white">
+        <color rgba="0.92 0.9 0.82 1" />
+        </material>
+      </visual>
+    <visual name="gauge_needle">
+      <origin xyz="0.018 -0.17 0.753" rpy="0 0.42 0" />
+      <geometry>
+        <box size="0.008 0.002 0.056" />
+        </geometry>
+      <material name="needle_red">
+        <color rgba="0.8 0.02 0.02 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_0">
+      <origin xyz="0 -0.17 0.792" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.002 0.016" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_1">
+      <origin xyz="-0.046 -0.17 0.735" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.002 0.006" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_2">
+      <origin xyz="0.046 -0.17 0.735" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.002 0.006" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_3">
+      <origin xyz="-0.03 -0.17 0.775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.002 0.006" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_4">
+      <origin xyz="0.03 -0.17 0.775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.002 0.006" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.1 0.15 0.18 1" />
+        </material>
+      </visual>
+    <visual name="button_collar">
+      <origin xyz="0.05 -0.166 0.675" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.006" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.16 0.036" />
+        </geometry>
+      </collision>
+    <collision name="guide_floor">
+      <origin xyz="0 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.082 0.01" />
+        </geometry>
+      </collision>
+    <collision name="guide_side_0">
+      <origin xyz="0 -0.034 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.014 0.056" />
+        </geometry>
+      </collision>
+    <collision name="guide_side_1">
+      <origin xyz="0 0.034 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.014 0.056" />
+        </geometry>
+      </collision>
+    <collision name="guide_top">
+      <origin xyz="0 0 0.089" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.082 0.01" />
+        </geometry>
+      </collision>
+    <collision name="barrel_shell">
+      <origin xyz="0 0 0.545" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_collar">
+      <origin xyz="0 0 0.125" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_collar">
+      <origin xyz="0 0 0.975" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_bracket_0">
+      <origin xyz="0 -0.05 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.02 0.07" />
+        </geometry>
+      </collision>
+    <collision name="side_bracket_1">
+      <origin xyz="0 0.05 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.02 0.07" />
+        </geometry>
+      </collision>
+    <collision name="tie_rod_0">
+      <origin xyz="-0.052 0.033 0.54" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.76" />
+        </geometry>
+      </collision>
+    <collision name="tie_rod_1">
+      <origin xyz="0.052 0.033 0.54" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.76" />
+        </geometry>
+      </collision>
+    <collision name="gauge_neck">
+      <origin xyz="0 -0.08 0.735" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="gauge_body">
+      <origin xyz="0 -0.135 0.735" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="gauge_face">
+      <origin xyz="0 -0.167 0.735" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="gauge_needle">
+      <origin xyz="0.018 -0.17 0.753" rpy="0 0.42 0" />
+      <geometry>
+        <box size="0.008 0.002 0.056" />
+        </geometry>
+      </collision>
+    <collision name="gauge_tick_0">
+      <origin xyz="0 -0.17 0.792" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.002 0.016" />
+        </geometry>
+      </collision>
+    <collision name="gauge_tick_1">
+      <origin xyz="-0.046 -0.17 0.735" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.002 0.006" />
+        </geometry>
+      </collision>
+    <collision name="gauge_tick_2">
+      <origin xyz="0.046 -0.17 0.735" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.002 0.006" />
+        </geometry>
+      </collision>
+    <collision name="gauge_tick_3">
+      <origin xyz="-0.03 -0.17 0.775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.002 0.006" />
+        </geometry>
+      </collision>
+    <collision name="gauge_tick_4">
+      <origin xyz="0.03 -0.17 0.775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.002 0.006" />
+        </geometry>
+      </collision>
+    <collision name="button_collar">
+      <origin xyz="0.05 -0.166 0.675" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="piston">
+    <visual name="piston_rod">
+      <origin xyz="0 0 -0.28" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.84" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handle_stem">
+      <origin xyz="0 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.11" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="plunger_stop">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.012" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="t_handle_pad">
+      <origin xyz="0 0 0.165" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.43" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="handle_end_0">
+      <origin xyz="0 -0.215 0.165" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="handle_end_1">
+      <origin xyz="0 0.215 0.165" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <collision name="piston_rod">
+      <origin xyz="0 0 -0.28" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.84" />
+        </geometry>
+      </collision>
+    <collision name="handle_stem">
+      <origin xyz="0 0 0.096" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.11" />
+        </geometry>
+      </collision>
+    <collision name="plunger_stop">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="t_handle_pad">
+      <origin xyz="0 0 0.165" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.43" />
+        </geometry>
+      </collision>
+    <collision name="handle_end_0">
+      <origin xyz="0 -0.215 0.165" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      </collision>
+    <collision name="handle_end_1">
+      <origin xyz="0 0.215 0.165" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="stabilizer">
+    <visual name="slide_bar">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.042 0.03" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_0">
+      <origin xyz="-0.38 0 -0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.07 0.018" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_1">
+      <origin xyz="0.38 0 -0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.07 0.018" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <collision name="slide_bar">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.042 0.03" />
+        </geometry>
+      </collision>
+    <collision name="foot_pad_0">
+      <origin xyz="-0.38 0 -0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.07 0.018" />
+        </geometry>
+      </collision>
+    <collision name="foot_pad_1">
+      <origin xyz="0.38 0 -0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.07 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="release_button">
+    <visual name="button_cap">
+      <origin xyz="0 -0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.024" />
+        </geometry>
+      <material name="release_red">
+        <color rgba="0.85 0.04 0.02 1" />
+        </material>
+      </visual>
+    <visual name="button_dome">
+      <origin xyz="0 -0.024 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+        </geometry>
+      <material name="release_red">
+        <color rgba="0.85 0.04 0.02 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="button_dome">
+      <origin xyz="0 -0.024 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="frame_to_piston" type="prismatic">
+    <origin xyz="0 0 0.9975" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="piston" />
+    <axis xyz="0 0 1" />
+    <limit effort="180" velocity="0.7" lower="0" upper="0.42" />
+    </joint>
+  <joint name="frame_to_stabilizer" type="prismatic">
+    <origin xyz="0 0 0.064" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="stabilizer" />
+    <axis xyz="1 0 0" />
+    <limit effort="80" velocity="0.35" lower="-0.18" upper="0.18" />
+    </joint>
+  <joint name="frame_to_release_button" type="prismatic">
+    <origin xyz="0.05 -0.169 0.675" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="release_button" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="0.04" lower="0" upper="0.01" />
+    </joint>
+  </robot>

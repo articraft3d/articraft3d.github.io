@@ -1,0 +1,419 @@
+<robot name="bank_end_slot_machine">
+  <material name="cabinet_red">
+    <color rgba="0.42 0.02 0.035 1" />
+    </material>
+  <material name="deep_maroon">
+    <color rgba="0.14 0.012 0.018 1" />
+    </material>
+  <material name="black_glass">
+    <color rgba="0.015 0.02 0.028 1" />
+    </material>
+  <material name="blue_screen">
+    <color rgba="0.05 0.18 0.36 1" />
+    </material>
+  <material name="gold_trim">
+    <color rgba="0.95 0.63 0.12 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.7 0.68 0.62 1" />
+    </material>
+  <material name="dark_slot">
+    <color rgba="0.002 0.002 0.004 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.01 0.009 0.008 1" />
+    </material>
+  <link name="cabinet">
+    <visual name="lower_body">
+      <origin xyz="0 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="1.24 0.62 0.9" />
+        </geometry>
+      <material name="cabinet_red" />
+      </visual>
+    <visual name="kick_plinth">
+      <origin xyz="0 0.02 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="1.3 0.68 0.1" />
+        </geometry>
+      <material name="deep_maroon" />
+      </visual>
+    <visual name="cabinet_belt">
+      <origin xyz="0 -0.333 0.875" rpy="0 0 0" />
+      <geometry>
+        <box size="1.28 0.035 0.065" />
+        </geometry>
+      <material name="gold_trim" />
+      </visual>
+    <visual name="screen_tower">
+      <origin xyz="0 -0.01 1.33" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.36 0.86" />
+        </geometry>
+      <material name="cabinet_red" />
+      </visual>
+    <visual name="top_marquee">
+      <origin xyz="0 -0.01 1.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.4 0.2" />
+        </geometry>
+      <material name="deep_maroon" />
+      </visual>
+    <visual name="marquee_face">
+      <origin xyz="0 -0.212 1.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.006 0.14" />
+        </geometry>
+      <material name="gold_trim" />
+      </visual>
+    <visual name="upper_screen_bezel">
+      <origin xyz="0 -0.189 1.52" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/screen_bezel.obj" />
+        </geometry>
+      <material name="gold_trim" />
+      </visual>
+    <visual name="lower_screen_bezel">
+      <origin xyz="0 -0.189 1.13" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/screen_bezel.obj" />
+        </geometry>
+      <material name="gold_trim" />
+      </visual>
+    <visual name="upper_screen_glass">
+      <origin xyz="0 -0.2075 1.52" rpy="0 0 0" />
+      <geometry>
+        <box size="0.61 0.035 0.265" />
+        </geometry>
+      <material name="blue_screen" />
+      </visual>
+    <visual name="lower_screen_glass">
+      <origin xyz="0 -0.2075 1.13" rpy="0 0 0" />
+      <geometry>
+        <box size="0.61 0.035 0.265" />
+        </geometry>
+      <material name="blue_screen" />
+      </visual>
+    <visual name="bill_bezel">
+      <origin xyz="0.24 -0.309 0.785" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/validator_bezel.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="ticket_bezel">
+      <origin xyz="0.24 -0.309 0.645" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/validator_bezel.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="bill_void">
+      <origin xyz="0.24 -0.313 0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.39 0.008 0.05" />
+        </geometry>
+      <material name="dark_slot" />
+      </visual>
+    <visual name="ticket_void">
+      <origin xyz="0.24 -0.313 0.645" rpy="0 0 0" />
+      <geometry>
+        <box size="0.39 0.008 0.05" />
+        </geometry>
+      <material name="dark_slot" />
+      </visual>
+    <visual name="button_deck">
+      <origin xyz="-0.15 -0.365 0.91" rpy="0.12 0 0" />
+      <geometry>
+        <box size="0.8 0.18 0.075" />
+        </geometry>
+      <material name="deep_maroon" />
+      </visual>
+    <visual name="play_button_0">
+      <origin xyz="-0.42 -0.462 0.945" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      <material name="gold_trim" />
+      </visual>
+    <visual name="play_button_1">
+      <origin xyz="-0.28 -0.462 0.945" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      <material name="gold_trim" />
+      </visual>
+    <visual name="play_button_2">
+      <origin xyz="-0.14 -0.462 0.945" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      <material name="gold_trim" />
+      </visual>
+    <visual name="play_button_3">
+      <origin xyz="0 -0.462 0.945" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      <material name="gold_trim" />
+      </visual>
+    <visual name="play_button_4">
+      <origin xyz="0.14 -0.462 0.945" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      <material name="gold_trim" />
+      </visual>
+    <collision name="lower_body">
+      <origin xyz="0 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="1.24 0.62 0.9" />
+        </geometry>
+      </collision>
+    <collision name="kick_plinth">
+      <origin xyz="0 0.02 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="1.3 0.68 0.1" />
+        </geometry>
+      </collision>
+    <collision name="cabinet_belt">
+      <origin xyz="0 -0.333 0.875" rpy="0 0 0" />
+      <geometry>
+        <box size="1.28 0.035 0.065" />
+        </geometry>
+      </collision>
+    <collision name="screen_tower">
+      <origin xyz="0 -0.01 1.33" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.36 0.86" />
+        </geometry>
+      </collision>
+    <collision name="top_marquee">
+      <origin xyz="0 -0.01 1.86" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.4 0.2" />
+        </geometry>
+      </collision>
+    <collision name="marquee_face">
+      <origin xyz="0 -0.212 1.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.006 0.14" />
+        </geometry>
+      </collision>
+    <collision name="upper_screen_bezel">
+      <origin xyz="0 -0.189 1.52" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/screen_bezel.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_screen_bezel">
+      <origin xyz="0 -0.189 1.13" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/screen_bezel.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_screen_glass">
+      <origin xyz="0 -0.2075 1.52" rpy="0 0 0" />
+      <geometry>
+        <box size="0.61 0.035 0.265" />
+        </geometry>
+      </collision>
+    <collision name="lower_screen_glass">
+      <origin xyz="0 -0.2075 1.13" rpy="0 0 0" />
+      <geometry>
+        <box size="0.61 0.035 0.265" />
+        </geometry>
+      </collision>
+    <collision name="bill_bezel">
+      <origin xyz="0.24 -0.309 0.785" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/validator_bezel.obj" />
+        </geometry>
+      </collision>
+    <collision name="ticket_bezel">
+      <origin xyz="0.24 -0.309 0.645" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/validator_bezel.obj" />
+        </geometry>
+      </collision>
+    <collision name="bill_void">
+      <origin xyz="0.24 -0.313 0.785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.39 0.008 0.05" />
+        </geometry>
+      </collision>
+    <collision name="ticket_void">
+      <origin xyz="0.24 -0.313 0.645" rpy="0 0 0" />
+      <geometry>
+        <box size="0.39 0.008 0.05" />
+        </geometry>
+      </collision>
+    <collision name="button_deck">
+      <origin xyz="-0.15 -0.365 0.91" rpy="0.12 0 0" />
+      <geometry>
+        <box size="0.8 0.18 0.075" />
+        </geometry>
+      </collision>
+    <collision name="play_button_0">
+      <origin xyz="-0.42 -0.462 0.945" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="play_button_1">
+      <origin xyz="-0.28 -0.462 0.945" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="play_button_2">
+      <origin xyz="-0.14 -0.462 0.945" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="play_button_3">
+      <origin xyz="0 -0.462 0.945" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="play_button_4">
+      <origin xyz="0.14 -0.462 0.945" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bill_flap">
+    <visual name="flap_panel">
+      <origin xyz="0 0 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.014 0.044" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.345" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="flap_panel">
+      <origin xyz="0 0 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.014 0.044" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.345" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="ticket_flap">
+    <visual name="flap_panel">
+      <origin xyz="0 0 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.014 0.044" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.345" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="flap_panel">
+      <origin xyz="0 0 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.014 0.044" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.345" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="service_door">
+    <visual name="door_panel">
+      <origin xyz="0.565 0 0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="1.13 0.026 0.43" />
+        </geometry>
+      <material name="deep_maroon" />
+      </visual>
+    <visual name="door_inset">
+      <origin xyz="0.565 -0.0165 0.225" rpy="0 0 0" />
+      <geometry>
+        <box size="1.05 0.008 0.36" />
+        </geometry>
+      <material name="cabinet_red" />
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.56" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="pull_handle">
+      <origin xyz="1.03 -0.026 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.02 0.055" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="door_panel">
+      <origin xyz="0.565 0 0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="1.13 0.026 0.43" />
+        </geometry>
+      </collision>
+    <collision name="door_inset">
+      <origin xyz="0.565 -0.0165 0.225" rpy="0 0 0" />
+      <geometry>
+        <box size="1.05 0.008 0.36" />
+        </geometry>
+      </collision>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.56" />
+        </geometry>
+      </collision>
+    <collision name="pull_handle">
+      <origin xyz="1.03 -0.026 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.02 0.055" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="cabinet_to_bill_flap" type="revolute">
+    <origin xyz="0.24 -0.324 0.813" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="bill_flap" />
+    <axis xyz="-1 0 0" />
+    <limit effort="1" velocity="4" lower="0" upper="0.95" />
+    </joint>
+  <joint name="cabinet_to_ticket_flap" type="revolute">
+    <origin xyz="0.24 -0.324 0.673" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="ticket_flap" />
+    <axis xyz="-1 0 0" />
+    <limit effort="1" velocity="4" lower="0" upper="0.95" />
+    </joint>
+  <joint name="cabinet_to_service_door" type="revolute">
+    <origin xyz="-0.585 -0.336 0.08" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="service_door" />
+    <axis xyz="0 0 -1" />
+    <limit effort="20" velocity="1.4" lower="0" upper="1.75" />
+    </joint>
+  </robot>

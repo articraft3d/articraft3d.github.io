@@ -1,0 +1,603 @@
+<robot name="three_wing_revolving_door">
+  <link name="drum">
+    <visual name="floor_plate">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.25" length="0.025" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="top_canopy">
+      <origin xyz="0 0 2.37" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.25" length="0.06" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bottom_bearing">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.04" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="top_bearing">
+      <origin xyz="0 0 2.31" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.06" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="curved_wall_0">
+      <geometry>
+        <mesh filename="assets/meshes/curved_wall_0.obj" />
+        </geometry>
+      <material name="smoky_curved_glass">
+        <color rgba="0.46 0.7 0.88 0.3" />
+        </material>
+      </visual>
+    <visual name="curved_wall_1">
+      <geometry>
+        <mesh filename="assets/meshes/curved_wall_1.obj" />
+        </geometry>
+      <material name="smoky_curved_glass">
+        <color rgba="0.46 0.7 0.88 0.3" />
+        </material>
+      </visual>
+    <visual name="jamb_0">
+      <origin xyz="1.03057 0.595 1.182" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="2.33" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="jamb_1">
+      <origin xyz="-1.03057 0.595 1.182" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="2.33" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="jamb_2">
+      <origin xyz="-1.03057 -0.595 1.182" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="2.33" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="jamb_3">
+      <origin xyz="1.03057 -0.595 1.182" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="2.33" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.25" length="0.025" />
+        </geometry>
+      </collision>
+    <collision name="top_canopy">
+      <origin xyz="0 0 2.37" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.25" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="bottom_bearing">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="top_bearing">
+      <origin xyz="0 0 2.31" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="curved_wall_0">
+      <geometry>
+        <mesh filename="assets/meshes/curved_wall_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="curved_wall_1">
+      <geometry>
+        <mesh filename="assets/meshes/curved_wall_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="jamb_0">
+      <origin xyz="1.03057 0.595 1.182" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="2.33" />
+        </geometry>
+      </collision>
+    <collision name="jamb_1">
+      <origin xyz="-1.03057 0.595 1.182" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="2.33" />
+        </geometry>
+      </collision>
+    <collision name="jamb_2">
+      <origin xyz="-1.03057 -0.595 1.182" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="2.33" />
+        </geometry>
+      </collision>
+    <collision name="jamb_3">
+      <origin xyz="1.03057 -0.595 1.182" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="2.33" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotor">
+    <visual name="central_post">
+      <origin xyz="0 0 1.1725" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="2.215" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="lower_hub">
+      <origin xyz="0 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.095" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="upper_hub">
+      <origin xyz="0 0 2.095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.095" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="panel_0">
+      <origin xyz="0.585 0 1.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.96 0.028 1.9" />
+        </geometry>
+      <material name="pale_blue_glass">
+        <color rgba="0.55 0.78 0.95 0.34" />
+        </material>
+      </visual>
+    <visual name="inner_stile_0">
+      <origin xyz="0.075 0 1.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 1.965" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="outer_stile_0">
+      <origin xyz="1.085 0 1.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 1.965" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail_0">
+      <origin xyz="0.58 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="1.01 0.05 0.05" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="top_rail_0">
+      <origin xyz="0.58 0 2.135" rpy="0 0 0" />
+      <geometry>
+        <box size="1.01 0.05 0.05" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="push_rail_0">
+      <geometry>
+        <mesh filename="assets/meshes/push_rail_0.obj" />
+        </geometry>
+      <material name="dark_push_grip">
+        <color rgba="0.04 0.045 0.045 1" />
+        </material>
+      </visual>
+    <visual name="rail_bracket_0_0">
+      <origin xyz="0.235 0.0565 0.88" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.085 0.065" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rail_bracket_0_1">
+      <origin xyz="0.64 0.076 0.88" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.124 0.065" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rail_bracket_0_2">
+      <origin xyz="0.985 0.0565 0.88" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.085 0.065" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="panel_1">
+      <origin xyz="-0.2925 0.506625 1.16" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.96 0.028 1.9" />
+        </geometry>
+      <material name="pale_blue_glass">
+        <color rgba="0.55 0.78 0.95 0.34" />
+        </material>
+      </visual>
+    <visual name="inner_stile_1">
+      <origin xyz="-0.0375 0.0649519 1.16" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.05 0.05 1.965" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="outer_stile_1">
+      <origin xyz="-0.5425 0.939638 1.16" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.05 0.05 1.965" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail_1">
+      <origin xyz="-0.29 0.502295 0.185" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="1.01 0.05 0.05" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="top_rail_1">
+      <origin xyz="-0.29 0.502295 2.135" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="1.01 0.05 0.05" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="push_rail_1">
+      <geometry>
+        <mesh filename="assets/meshes/push_rail_1.obj" />
+        </geometry>
+      <material name="dark_push_grip">
+        <color rgba="0.04 0.045 0.045 1" />
+        </material>
+      </visual>
+    <visual name="rail_bracket_1_0">
+      <origin xyz="-0.16643 0.175266 0.88" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.06 0.085 0.065" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rail_bracket_1_1">
+      <origin xyz="-0.385818 0.516256 0.88" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.06 0.124 0.065" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rail_bracket_1_2">
+      <origin xyz="-0.54143 0.824785 0.88" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.06 0.085 0.065" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="panel_2">
+      <origin xyz="-0.2925 -0.506625 1.16" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.96 0.028 1.9" />
+        </geometry>
+      <material name="pale_blue_glass">
+        <color rgba="0.55 0.78 0.95 0.34" />
+        </material>
+      </visual>
+    <visual name="inner_stile_2">
+      <origin xyz="-0.0375 -0.0649519 1.16" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.05 0.05 1.965" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="outer_stile_2">
+      <origin xyz="-0.5425 -0.939638 1.16" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.05 0.05 1.965" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail_2">
+      <origin xyz="-0.29 -0.502295 0.185" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="1.01 0.05 0.05" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="top_rail_2">
+      <origin xyz="-0.29 -0.502295 2.135" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="1.01 0.05 0.05" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="push_rail_2">
+      <geometry>
+        <mesh filename="assets/meshes/push_rail_2.obj" />
+        </geometry>
+      <material name="dark_push_grip">
+        <color rgba="0.04 0.045 0.045 1" />
+        </material>
+      </visual>
+    <visual name="rail_bracket_2_0">
+      <origin xyz="-0.0685696 -0.231766 0.88" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.06 0.085 0.065" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rail_bracket_2_1">
+      <origin xyz="-0.254182 -0.592256 0.88" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.06 0.124 0.065" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rail_bracket_2_2">
+      <origin xyz="-0.44357 -0.881285 0.88" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.06 0.085 0.065" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <collision name="central_post">
+      <origin xyz="0 0 1.1725" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="2.215" />
+        </geometry>
+      </collision>
+    <collision name="lower_hub">
+      <origin xyz="0 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.095" />
+        </geometry>
+      </collision>
+    <collision name="upper_hub">
+      <origin xyz="0 0 2.095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.095" />
+        </geometry>
+      </collision>
+    <collision name="panel_0">
+      <origin xyz="0.585 0 1.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.96 0.028 1.9" />
+        </geometry>
+      </collision>
+    <collision name="inner_stile_0">
+      <origin xyz="0.075 0 1.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 1.965" />
+        </geometry>
+      </collision>
+    <collision name="outer_stile_0">
+      <origin xyz="1.085 0 1.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 1.965" />
+        </geometry>
+      </collision>
+    <collision name="bottom_rail_0">
+      <origin xyz="0.58 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="1.01 0.05 0.05" />
+        </geometry>
+      </collision>
+    <collision name="top_rail_0">
+      <origin xyz="0.58 0 2.135" rpy="0 0 0" />
+      <geometry>
+        <box size="1.01 0.05 0.05" />
+        </geometry>
+      </collision>
+    <collision name="push_rail_0">
+      <geometry>
+        <mesh filename="assets/meshes/push_rail_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="rail_bracket_0_0">
+      <origin xyz="0.235 0.0565 0.88" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.085 0.065" />
+        </geometry>
+      </collision>
+    <collision name="rail_bracket_0_1">
+      <origin xyz="0.64 0.076 0.88" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.124 0.065" />
+        </geometry>
+      </collision>
+    <collision name="rail_bracket_0_2">
+      <origin xyz="0.985 0.0565 0.88" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.085 0.065" />
+        </geometry>
+      </collision>
+    <collision name="panel_1">
+      <origin xyz="-0.2925 0.506625 1.16" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.96 0.028 1.9" />
+        </geometry>
+      </collision>
+    <collision name="inner_stile_1">
+      <origin xyz="-0.0375 0.0649519 1.16" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.05 0.05 1.965" />
+        </geometry>
+      </collision>
+    <collision name="outer_stile_1">
+      <origin xyz="-0.5425 0.939638 1.16" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.05 0.05 1.965" />
+        </geometry>
+      </collision>
+    <collision name="bottom_rail_1">
+      <origin xyz="-0.29 0.502295 0.185" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="1.01 0.05 0.05" />
+        </geometry>
+      </collision>
+    <collision name="top_rail_1">
+      <origin xyz="-0.29 0.502295 2.135" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="1.01 0.05 0.05" />
+        </geometry>
+      </collision>
+    <collision name="push_rail_1">
+      <geometry>
+        <mesh filename="assets/meshes/push_rail_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="rail_bracket_1_0">
+      <origin xyz="-0.16643 0.175266 0.88" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.06 0.085 0.065" />
+        </geometry>
+      </collision>
+    <collision name="rail_bracket_1_1">
+      <origin xyz="-0.385818 0.516256 0.88" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.06 0.124 0.065" />
+        </geometry>
+      </collision>
+    <collision name="rail_bracket_1_2">
+      <origin xyz="-0.54143 0.824785 0.88" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.06 0.085 0.065" />
+        </geometry>
+      </collision>
+    <collision name="panel_2">
+      <origin xyz="-0.2925 -0.506625 1.16" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.96 0.028 1.9" />
+        </geometry>
+      </collision>
+    <collision name="inner_stile_2">
+      <origin xyz="-0.0375 -0.0649519 1.16" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.05 0.05 1.965" />
+        </geometry>
+      </collision>
+    <collision name="outer_stile_2">
+      <origin xyz="-0.5425 -0.939638 1.16" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.05 0.05 1.965" />
+        </geometry>
+      </collision>
+    <collision name="bottom_rail_2">
+      <origin xyz="-0.29 -0.502295 0.185" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="1.01 0.05 0.05" />
+        </geometry>
+      </collision>
+    <collision name="top_rail_2">
+      <origin xyz="-0.29 -0.502295 2.135" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="1.01 0.05 0.05" />
+        </geometry>
+      </collision>
+    <collision name="push_rail_2">
+      <geometry>
+        <mesh filename="assets/meshes/push_rail_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="rail_bracket_2_0">
+      <origin xyz="-0.0685696 -0.231766 0.88" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.06 0.085 0.065" />
+        </geometry>
+      </collision>
+    <collision name="rail_bracket_2_1">
+      <origin xyz="-0.254182 -0.592256 0.88" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.06 0.124 0.065" />
+        </geometry>
+      </collision>
+    <collision name="rail_bracket_2_2">
+      <origin xyz="-0.44357 -0.881285 0.88" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.06 0.085 0.065" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="drum_to_rotor" type="continuous">
+    <parent link="drum" />
+    <child link="rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="60" velocity="1.2" />
+    <dynamics damping="0.05" friction="0.02" />
+    </joint>
+  </robot>

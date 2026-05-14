@@ -1,0 +1,838 @@
+<robot name="nested_bracket_arm">
+  <material name="graphite_cast">
+    <color rgba="0.08 0.085 0.09 1" />
+    </material>
+  <material name="blued_steel">
+    <color rgba="0.1 0.16 0.22 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.58 0.6 0.58 1" />
+    </material>
+  <material name="dark_pin">
+    <color rgba="0.03 0.032 0.035 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.012 0.012 0.01 1" />
+    </material>
+  <material name="tray_enamel">
+    <color rgba="0.75 0.76 0.7 1" />
+    </material>
+  <link name="foot">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.28 0.034" />
+        </geometry>
+      <material name="graphite_cast" />
+      </visual>
+    <visual name="rubber_pad_-0.115_-0.095">
+      <origin xyz="-0.115 -0.095 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.018" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="bolt_head_-0.115_-0.095">
+      <origin xyz="-0.115 -0.095 0.048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="rubber_pad_-0.115_0.095">
+      <origin xyz="-0.115 0.095 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.018" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="bolt_head_-0.115_0.095">
+      <origin xyz="-0.115 0.095 0.048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="rubber_pad_0.115_-0.095">
+      <origin xyz="0.115 -0.095 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.018" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="bolt_head_0.115_-0.095">
+      <origin xyz="0.115 -0.095 0.048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="rubber_pad_0.115_0.095">
+      <origin xyz="0.115 0.095 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.018" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="bolt_head_0.115_0.095">
+      <origin xyz="0.115 0.095 0.048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="pedestal_block">
+      <origin xyz="0.01 0 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.16 0.078" />
+        </geometry>
+      <material name="graphite_cast" />
+      </visual>
+    <visual name="clevis_cheek_n">
+      <origin xyz="0.025 -0.088 0.157" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.028 0.165" />
+        </geometry>
+      <material name="graphite_cast" />
+      </visual>
+    <visual name="clevis_cheek_p">
+      <origin xyz="0.025 0.088 0.157" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.028 0.165" />
+        </geometry>
+      <material name="graphite_cast" />
+      </visual>
+    <visual name="base_pin_lobe_n">
+      <origin xyz="0.02 -0.088 0.23" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.028" />
+        </geometry>
+      <material name="graphite_cast" />
+      </visual>
+    <visual name="base_pin_head_n">
+      <origin xyz="0.02 -0.104 0.23" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.004" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="base_pin_lobe_p">
+      <origin xyz="0.02 0.088 0.23" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.028" />
+        </geometry>
+      <material name="graphite_cast" />
+      </visual>
+    <visual name="base_pin_head_p">
+      <origin xyz="0.02 0.104 0.23" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.004" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.28 0.034" />
+        </geometry>
+      </collision>
+    <collision name="rubber_pad_-0.115_-0.095">
+      <origin xyz="-0.115 -0.095 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="bolt_head_-0.115_-0.095">
+      <origin xyz="-0.115 -0.095 0.048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="rubber_pad_-0.115_0.095">
+      <origin xyz="-0.115 0.095 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="bolt_head_-0.115_0.095">
+      <origin xyz="-0.115 0.095 0.048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="rubber_pad_0.115_-0.095">
+      <origin xyz="0.115 -0.095 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="bolt_head_0.115_-0.095">
+      <origin xyz="0.115 -0.095 0.048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="rubber_pad_0.115_0.095">
+      <origin xyz="0.115 0.095 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="bolt_head_0.115_0.095">
+      <origin xyz="0.115 0.095 0.048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_block">
+      <origin xyz="0.01 0 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.16 0.078" />
+        </geometry>
+      </collision>
+    <collision name="clevis_cheek_n">
+      <origin xyz="0.025 -0.088 0.157" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.028 0.165" />
+        </geometry>
+      </collision>
+    <collision name="clevis_cheek_p">
+      <origin xyz="0.025 0.088 0.157" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.028 0.165" />
+        </geometry>
+      </collision>
+    <collision name="base_pin_lobe_n">
+      <origin xyz="0.02 -0.088 0.23" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="base_pin_head_n">
+      <origin xyz="0.02 -0.104 0.23" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_pin_lobe_p">
+      <origin xyz="0.02 0.088 0.23" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="base_pin_head_p">
+      <origin xyz="0.02 0.104 0.23" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="long_link_0">
+    <visual name="side_plate_n">
+      <origin xyz="0.215 -0.068 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.012 0.04472" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="near_lobe_n">
+      <origin xyz="0 -0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.012" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="near_pin_cap_n">
+      <origin xyz="0 -0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0172" length="0.0108" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="far_lobe_n">
+      <origin xyz="0.43 -0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.012" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="far_pin_cap_n">
+      <origin xyz="0.43 -0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0172" length="0.0108" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="side_plate_p">
+      <origin xyz="0.215 0.068 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.012 0.04472" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="near_lobe_p">
+      <origin xyz="0 0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.012" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="near_pin_cap_p">
+      <origin xyz="0 0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0172" length="0.0108" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="far_lobe_p">
+      <origin xyz="0.43 0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.012" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <visual name="far_pin_cap_p">
+      <origin xyz="0.43 0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0172" length="0.0108" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="cross_spacer">
+      <origin xyz="0.2064 0 -0.0301" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.148 0.01548" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="side_plate_n">
+      <origin xyz="0.215 -0.068 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.012 0.04472" />
+        </geometry>
+      </collision>
+    <collision name="near_lobe_n">
+      <origin xyz="0 -0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="near_pin_cap_n">
+      <origin xyz="0 -0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0172" length="0.0108" />
+        </geometry>
+      </collision>
+    <collision name="far_lobe_n">
+      <origin xyz="0.43 -0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="far_pin_cap_n">
+      <origin xyz="0.43 -0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0172" length="0.0108" />
+        </geometry>
+      </collision>
+    <collision name="side_plate_p">
+      <origin xyz="0.215 0.068 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.012 0.04472" />
+        </geometry>
+      </collision>
+    <collision name="near_lobe_p">
+      <origin xyz="0 0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="near_pin_cap_p">
+      <origin xyz="0 0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0172" length="0.0108" />
+        </geometry>
+      </collision>
+    <collision name="far_lobe_p">
+      <origin xyz="0.43 0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="far_pin_cap_p">
+      <origin xyz="0.43 0.068 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0172" length="0.0108" />
+        </geometry>
+      </collision>
+    <collision name="cross_spacer">
+      <origin xyz="0.2064 0 -0.0301" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.148 0.01548" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="short_link">
+    <visual name="side_plate_n">
+      <origin xyz="0.1225 -0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.01 0.03328" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="near_lobe_n">
+      <origin xyz="0 -0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.01" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="near_pin_cap_n">
+      <origin xyz="0 -0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.009" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="far_lobe_n">
+      <origin xyz="0.245 -0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.01" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="far_pin_cap_n">
+      <origin xyz="0.245 -0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.009" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="side_plate_p">
+      <origin xyz="0.1225 0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.01 0.03328" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="near_lobe_p">
+      <origin xyz="0 0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.01" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="near_pin_cap_p">
+      <origin xyz="0 0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.009" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="far_lobe_p">
+      <origin xyz="0.245 0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.01" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="far_pin_cap_p">
+      <origin xyz="0.245 0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.009" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="cross_spacer">
+      <origin xyz="0.1176 0 -0.0224" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0525 0.124 0.01152" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <collision name="side_plate_n">
+      <origin xyz="0.1225 -0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.01 0.03328" />
+        </geometry>
+      </collision>
+    <collision name="near_lobe_n">
+      <origin xyz="0 -0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="near_pin_cap_n">
+      <origin xyz="0 -0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="far_lobe_n">
+      <origin xyz="0.245 -0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="far_pin_cap_n">
+      <origin xyz="0.245 -0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="side_plate_p">
+      <origin xyz="0.1225 0.057 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.01 0.03328" />
+        </geometry>
+      </collision>
+    <collision name="near_lobe_p">
+      <origin xyz="0 0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="near_pin_cap_p">
+      <origin xyz="0 0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="far_lobe_p">
+      <origin xyz="0.245 0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="far_pin_cap_p">
+      <origin xyz="0.245 0.057 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0128" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="cross_spacer">
+      <origin xyz="0.1176 0 -0.0224" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0525 0.124 0.01152" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="long_link_1">
+    <visual name="side_plate_n">
+      <origin xyz="0.1675 -0.067 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.01 0.02912" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="near_lobe_n">
+      <origin xyz="0 -0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.01" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="near_pin_cap_n">
+      <origin xyz="0 -0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0112" length="0.009" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="far_lobe_n">
+      <origin xyz="0.335 -0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.01" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="far_pin_cap_n">
+      <origin xyz="0.335 -0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0112" length="0.009" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="side_plate_p">
+      <origin xyz="0.1675 0.067 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.01 0.02912" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="near_lobe_p">
+      <origin xyz="0 0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.01" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="near_pin_cap_p">
+      <origin xyz="0 0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0112" length="0.009" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="far_lobe_p">
+      <origin xyz="0.335 0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.01" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="far_pin_cap_p">
+      <origin xyz="0.335 0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0112" length="0.009" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="cross_spacer">
+      <origin xyz="0.1608 0 -0.0196" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0595 0.144 0.01008" />
+        </geometry>
+      <material name="blued_steel" />
+      </visual>
+    <collision name="side_plate_n">
+      <origin xyz="0.1675 -0.067 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.01 0.02912" />
+        </geometry>
+      </collision>
+    <collision name="near_lobe_n">
+      <origin xyz="0 -0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="near_pin_cap_n">
+      <origin xyz="0 -0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0112" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="far_lobe_n">
+      <origin xyz="0.335 -0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="far_pin_cap_n">
+      <origin xyz="0.335 -0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0112" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="side_plate_p">
+      <origin xyz="0.1675 0.067 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.335 0.01 0.02912" />
+        </geometry>
+      </collision>
+    <collision name="near_lobe_p">
+      <origin xyz="0 0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="near_pin_cap_p">
+      <origin xyz="0 0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0112" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="far_lobe_p">
+      <origin xyz="0.335 0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="far_pin_cap_p">
+      <origin xyz="0.335 0.067 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0112" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="cross_spacer">
+      <origin xyz="0.1608 0 -0.0196" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0595 0.144 0.01008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="end_bracket">
+    <visual name="tray_ear_n">
+      <origin xyz="0.015 -0.0575 -0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.009 0.058" />
+        </geometry>
+      <material name="tray_enamel" />
+      </visual>
+    <visual name="tray_pivot_lobe_n">
+      <origin xyz="0 -0.0575 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.009" />
+        </geometry>
+      <material name="tray_enamel" />
+      </visual>
+    <visual name="tray_pin_cap_n">
+      <origin xyz="0 -0.0535 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.0025" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="tray_ear_p">
+      <origin xyz="0.015 0.0575 -0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.009 0.058" />
+        </geometry>
+      <material name="tray_enamel" />
+      </visual>
+    <visual name="tray_pivot_lobe_p">
+      <origin xyz="0 0.0575 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.009" />
+        </geometry>
+      <material name="tray_enamel" />
+      </visual>
+    <visual name="tray_pin_cap_p">
+      <origin xyz="0 0.0535 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.0025" />
+        </geometry>
+      <material name="dark_pin" />
+      </visual>
+    <visual name="tray_floor">
+      <origin xyz="0.085 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.118 0.012" />
+        </geometry>
+      <material name="tray_enamel" />
+      </visual>
+    <visual name="side_lip_n">
+      <origin xyz="0.096 -0.044 -0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.01 0.038" />
+        </geometry>
+      <material name="tray_enamel" />
+      </visual>
+    <visual name="side_lip_p">
+      <origin xyz="0.096 0.044 -0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.01 0.038" />
+        </geometry>
+      <material name="tray_enamel" />
+      </visual>
+    <visual name="front_lip">
+      <origin xyz="0.166 0 -0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.118 0.04" />
+        </geometry>
+      <material name="tray_enamel" />
+      </visual>
+    <visual name="rear_bridge">
+      <origin xyz="0.02 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.118 0.018" />
+        </geometry>
+      <material name="tray_enamel" />
+      </visual>
+    <collision name="tray_ear_n">
+      <origin xyz="0.015 -0.0575 -0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.009 0.058" />
+        </geometry>
+      </collision>
+    <collision name="tray_pivot_lobe_n">
+      <origin xyz="0 -0.0575 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="tray_pin_cap_n">
+      <origin xyz="0 -0.0535 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="tray_ear_p">
+      <origin xyz="0.015 0.0575 -0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.009 0.058" />
+        </geometry>
+      </collision>
+    <collision name="tray_pivot_lobe_p">
+      <origin xyz="0 0.0575 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="tray_pin_cap_p">
+      <origin xyz="0 0.0535 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="tray_floor">
+      <origin xyz="0.085 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.118 0.012" />
+        </geometry>
+      </collision>
+    <collision name="side_lip_n">
+      <origin xyz="0.096 -0.044 -0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.01 0.038" />
+        </geometry>
+      </collision>
+    <collision name="side_lip_p">
+      <origin xyz="0.096 0.044 -0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.01 0.038" />
+        </geometry>
+      </collision>
+    <collision name="front_lip">
+      <origin xyz="0.166 0 -0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.118 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_bridge">
+      <origin xyz="0.02 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.118 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="foot_to_long_0" type="revolute">
+    <origin xyz="0.02 0 0.23" rpy="0 -0.42 0" />
+    <parent link="foot" />
+    <child link="long_link_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="38" velocity="1.4" lower="-0.85" upper="0.95" />
+    </joint>
+  <joint name="long_0_to_short" type="revolute">
+    <origin xyz="0.43 0 0" rpy="0 0.58 0" />
+    <parent link="long_link_0" />
+    <child link="short_link" />
+    <axis xyz="0 1 0" />
+    <limit effort="24" velocity="1.6" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="short_to_long_1" type="revolute">
+    <origin xyz="0.245 0 0" rpy="0 -0.5 0" />
+    <parent link="short_link" />
+    <child link="long_link_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="1.7" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="long_1_to_bracket" type="revolute">
+    <origin xyz="0.335 0 0" rpy="0 0.34 0" />
+    <parent link="long_link_1" />
+    <child link="end_bracket" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="2" lower="-1.2" upper="1.2" />
+    </joint>
+  </robot>

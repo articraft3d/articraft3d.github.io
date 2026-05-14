@@ -1,0 +1,699 @@
+<robot name="fully_articulated_robotic_arm">
+  <material name="brushed_aluminum">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <material name="dark_anodized_metal">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="blue_servo_covers">
+    <color rgba="0.05 0.23 0.82 1" />
+    </material>
+  <material name="polished_steel">
+    <color rgba="0.86 0.87 0.84 1" />
+    </material>
+  <material name="black_rubber_grip">
+    <color rgba="0.015 0.015 0.014 1" />
+    </material>
+  <material name="amber_status_lens">
+    <color rgba="1 0.55 0.08 1" />
+    </material>
+  <link name="base">
+    <visual name="floor_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.035" />
+        </geometry>
+      <material name="dark_anodized_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="bearing_plinth">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.05" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="cable_tray">
+      <origin xyz="0 -0.145 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.08 0.028" />
+        </geometry>
+      <material name="dark_anodized_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="bearing_plinth">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="cable_tray">
+      <origin xyz="0 -0.145 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.08 0.028" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="turret">
+    <visual name="rotating_disk">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.145" length="0.05" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="servo_column">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.13" />
+        </geometry>
+      <material name="dark_anodized_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_web">
+      <origin xyz="-0.08 0 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.18 0.14" />
+        </geometry>
+      <material name="dark_anodized_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_plate_0">
+      <origin xyz="-0.005 0.075 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.025 0.14" />
+        </geometry>
+      <material name="blue_servo_covers">
+        <color rgba="0.05 0.23 0.82 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_plate_1">
+      <origin xyz="-0.005 -0.075 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.025 0.14" />
+        </geometry>
+      <material name="blue_servo_covers">
+        <color rgba="0.05 0.23 0.82 1" />
+        </material>
+      </visual>
+    <visual name="status_beacon">
+      <origin xyz="-0.083 0 0.305" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.18" />
+        </geometry>
+      <material name="amber_status_lens">
+        <color rgba="1 0.55 0.08 1" />
+        </material>
+      </visual>
+    <collision name="rotating_disk">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.145" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="servo_column">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.13" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_web">
+      <origin xyz="-0.08 0 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.18 0.14" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_plate_0">
+      <origin xyz="-0.005 0.075 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.025 0.14" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_plate_1">
+      <origin xyz="-0.005 -0.075 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.025 0.14" />
+        </geometry>
+      </collision>
+    <collision name="status_beacon">
+      <origin xyz="-0.083 0 0.305" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.18" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_arm">
+    <visual name="proximal_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.129" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="main_tube">
+      <origin xyz="0.206 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.39" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="top_servo_cover">
+      <origin xyz="0.23 0 0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.05 0.04" />
+        </geometry>
+      <material name="blue_servo_covers">
+        <color rgba="0.05 0.23 0.82 1" />
+        </material>
+      </visual>
+    <visual name="elbow_web">
+      <origin xyz="0.3835 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.155 0.105" />
+        </geometry>
+      <material name="dark_anodized_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="elbow_plate_0">
+      <origin xyz="0.455 0.064 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.02 0.125" />
+        </geometry>
+      <material name="blue_servo_covers">
+        <color rgba="0.05 0.23 0.82 1" />
+        </material>
+      </visual>
+    <visual name="elbow_plate_1">
+      <origin xyz="0.455 -0.064 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.02 0.125" />
+        </geometry>
+      <material name="blue_servo_covers">
+        <color rgba="0.05 0.23 0.82 1" />
+        </material>
+      </visual>
+    <collision name="proximal_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.129" />
+        </geometry>
+      </collision>
+    <collision name="main_tube">
+      <origin xyz="0.206 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.39" />
+        </geometry>
+      </collision>
+    <collision name="top_servo_cover">
+      <origin xyz="0.23 0 0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.05 0.04" />
+        </geometry>
+      </collision>
+    <collision name="elbow_web">
+      <origin xyz="0.3835 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.155 0.105" />
+        </geometry>
+      </collision>
+    <collision name="elbow_plate_0">
+      <origin xyz="0.455 0.064 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.02 0.125" />
+        </geometry>
+      </collision>
+    <collision name="elbow_plate_1">
+      <origin xyz="0.455 -0.064 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.02 0.125" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="forearm">
+    <visual name="proximal_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.112" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="main_tube">
+      <origin xyz="0.173 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.315" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="lower_servo_cover">
+      <origin xyz="0.195 0 -0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.04 0.034" />
+        </geometry>
+      <material name="blue_servo_covers">
+        <color rgba="0.05 0.23 0.82 1" />
+        </material>
+      </visual>
+    <visual name="wrist_web">
+      <origin xyz="0.311 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.116 0.09" />
+        </geometry>
+      <material name="dark_anodized_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="wrist_plate_0">
+      <origin xyz="0.376 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.018 0.1" />
+        </geometry>
+      <material name="blue_servo_covers">
+        <color rgba="0.05 0.23 0.82 1" />
+        </material>
+      </visual>
+    <visual name="wrist_plate_1">
+      <origin xyz="0.376 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.018 0.1" />
+        </geometry>
+      <material name="blue_servo_covers">
+        <color rgba="0.05 0.23 0.82 1" />
+        </material>
+      </visual>
+    <collision name="proximal_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.112" />
+        </geometry>
+      </collision>
+    <collision name="main_tube">
+      <origin xyz="0.173 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.315" />
+        </geometry>
+      </collision>
+    <collision name="lower_servo_cover">
+      <origin xyz="0.195 0 -0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.04 0.034" />
+        </geometry>
+      </collision>
+    <collision name="wrist_web">
+      <origin xyz="0.311 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.116 0.09" />
+        </geometry>
+      </collision>
+    <collision name="wrist_plate_0">
+      <origin xyz="0.376 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.018 0.1" />
+        </geometry>
+      </collision>
+    <collision name="wrist_plate_1">
+      <origin xyz="0.376 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.018 0.1" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist_pitch">
+    <visual name="pitch_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.09" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="short_link">
+      <origin xyz="0.05 0 -0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.095" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="yaw_lower_flange">
+      <origin xyz="0.12 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.04" />
+        </geometry>
+      <material name="dark_anodized_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="pitch_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="short_link">
+      <origin xyz="0.05 0 -0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.095" />
+        </geometry>
+      </collision>
+    <collision name="yaw_lower_flange">
+      <origin xyz="0.12 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist_yaw">
+    <visual name="yaw_upper_flange">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="roll_bearing_arm">
+      <origin xyz="0.045 0 0.028" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.09" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="roll_mount">
+      <origin xyz="0.07 0 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.04" />
+        </geometry>
+      <material name="dark_anodized_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="yaw_upper_flange">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="roll_bearing_arm">
+      <origin xyz="0.045 0 0.028" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="roll_mount">
+      <origin xyz="0.07 0 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist_roll">
+    <visual name="roll_flange">
+      <origin xyz="0.0175 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.035" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="flange_neck">
+      <origin xyz="0.043 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.03" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="palm_body">
+      <origin xyz="0.085 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.11 0.07" />
+        </geometry>
+      <material name="dark_anodized_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="finger_lug_top_0">
+      <origin xyz="0.14 0.04 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.035 0.012" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="finger_lug_bottom_0">
+      <origin xyz="0.14 0.04 -0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.035 0.012" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="finger_lug_top_1">
+      <origin xyz="0.14 -0.04 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.035 0.012" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="finger_lug_bottom_1">
+      <origin xyz="0.14 -0.04 -0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.035 0.012" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <collision name="roll_flange">
+      <origin xyz="0.0175 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="flange_neck">
+      <origin xyz="0.043 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="palm_body">
+      <origin xyz="0.085 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.11 0.07" />
+        </geometry>
+      </collision>
+    <collision name="finger_lug_top_0">
+      <origin xyz="0.14 0.04 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.035 0.012" />
+        </geometry>
+      </collision>
+    <collision name="finger_lug_bottom_0">
+      <origin xyz="0.14 0.04 -0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.035 0.012" />
+        </geometry>
+      </collision>
+    <collision name="finger_lug_top_1">
+      <origin xyz="0.14 -0.04 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.035 0.012" />
+        </geometry>
+      </collision>
+    <collision name="finger_lug_bottom_1">
+      <origin xyz="0.14 -0.04 -0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.035 0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="finger_0">
+    <visual name="knuckle">
+      <geometry>
+        <cylinder radius="0.014" length="0.034" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="finger_beam">
+      <origin xyz="0.073 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.022 0.022" />
+        </geometry>
+      <material name="dark_anodized_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rubber_pad">
+      <origin xyz="0.14 -0.003 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.026 0.026" />
+        </geometry>
+      <material name="black_rubber_grip">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="knuckle">
+      <geometry>
+        <cylinder radius="0.014" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="finger_beam">
+      <origin xyz="0.073 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.022 0.022" />
+        </geometry>
+      </collision>
+    <collision name="rubber_pad">
+      <origin xyz="0.14 -0.003 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.026 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="finger_1">
+    <visual name="knuckle">
+      <geometry>
+        <cylinder radius="0.014" length="0.034" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="finger_beam">
+      <origin xyz="0.073 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.022 0.022" />
+        </geometry>
+      <material name="dark_anodized_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rubber_pad">
+      <origin xyz="0.14 0.003 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.026 0.026" />
+        </geometry>
+      <material name="black_rubber_grip">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="knuckle">
+      <geometry>
+        <cylinder radius="0.014" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="finger_beam">
+      <origin xyz="0.073 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.022 0.022" />
+        </geometry>
+      </collision>
+    <collision name="rubber_pad">
+      <origin xyz="0.14 0.003 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.026 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_yaw" type="continuous">
+    <origin xyz="0 0 0.05" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="turret" />
+    <axis xyz="0 0 1" />
+    <limit effort="160" velocity="1.4" />
+    <dynamics damping="0.08" friction="0.02" />
+    </joint>
+  <joint name="shoulder_pitch" type="revolute">
+    <origin xyz="0 0 0.22" rpy="0 0 0" />
+    <parent link="turret" />
+    <child link="upper_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="180" velocity="1.2" lower="-1.35" upper="1.45" />
+    <dynamics damping="0.1" friction="0.04" />
+    </joint>
+  <joint name="elbow_pitch" type="revolute">
+    <origin xyz="0.455 0 0" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="forearm" />
+    <axis xyz="0 1 0" />
+    <limit effort="120" velocity="1.5" lower="-0.25" upper="2.35" />
+    <dynamics damping="0.08" friction="0.03" />
+    </joint>
+  <joint name="wrist_pitch_joint" type="revolute">
+    <origin xyz="0.376 0 0" rpy="0 0 0" />
+    <parent link="forearm" />
+    <child link="wrist_pitch" />
+    <axis xyz="0 -1 0" />
+    <limit effort="35" velocity="2.2" lower="-1.7" upper="1.7" />
+    <dynamics damping="0.05" friction="0.02" />
+    </joint>
+  <joint name="wrist_yaw_joint" type="revolute">
+    <origin xyz="0.12 0 0" rpy="0 0 0" />
+    <parent link="wrist_pitch" />
+    <child link="wrist_yaw" />
+    <axis xyz="0 0 1" />
+    <limit effort="24" velocity="2.6" lower="-1.9" upper="1.9" />
+    <dynamics damping="0.04" friction="0.015" />
+    </joint>
+  <joint name="wrist_roll_joint" type="continuous">
+    <origin xyz="0.09 0 0.02" rpy="0 0 0" />
+    <parent link="wrist_yaw" />
+    <child link="wrist_roll" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="3.2" />
+    <dynamics damping="0.03" friction="0.01" />
+    </joint>
+  <joint name="finger_0_joint" type="revolute">
+    <origin xyz="0.14 0.04 0" rpy="0 0 0" />
+    <parent link="wrist_roll" />
+    <child link="finger_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.6" lower="0" upper="0.55" />
+    <dynamics damping="0.03" friction="0.02" />
+    </joint>
+  <joint name="finger_1_joint" type="revolute">
+    <origin xyz="0.14 -0.04 0" rpy="0 0 0" />
+    <parent link="wrist_roll" />
+    <child link="finger_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.6" lower="-0.55" upper="0" />
+    <dynamics damping="0.03" friction="0.02" />
+    <mimic joint="finger_0_joint" multiplier="-1" />
+    </joint>
+  </robot>

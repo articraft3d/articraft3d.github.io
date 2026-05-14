@@ -1,0 +1,410 @@
+<robot name="three_joint_pick_place_arm">
+  <material name="cast_white">
+    <color rgba="0.88 0.9 0.88 1" />
+    </material>
+  <material name="dark_gray">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <material name="blue_accent">
+    <color rgba="0.08 0.26 0.58 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.68 0.7 0.72 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.03 0.03 0.035 1" />
+    </material>
+  <link name="pedestal">
+    <visual name="floor_plate">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.19" length="0.07" />
+        </geometry>
+      <material name="dark_gray" />
+      </visual>
+    <visual name="pedestal_column">
+      <origin xyz="0 0 0.21" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.092" length="0.28" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="top_turntable">
+      <origin xyz="0 0 0.38" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.145" length="0.06" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="status_strip">
+      <origin xyz="0 -0.096 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.018 0.045" />
+        </geometry>
+      <material name="blue_accent" />
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.19" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_column">
+      <origin xyz="0 0 0.21" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.092" length="0.28" />
+        </geometry>
+      </collision>
+    <collision name="top_turntable">
+      <origin xyz="0 0 0.38" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.145" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="status_strip">
+      <origin xyz="0 -0.096 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.018 0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_arm">
+    <visual name="shoulder_column">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.118" length="0.18" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="shoulder_cap">
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.118" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="shoulder_motor">
+      <origin xyz="0.04 0 0.18" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.24" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="upper_rail_side_0">
+      <origin xyz="0.45 -0.072 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.045 0.055" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="elbow_fork_side_0">
+      <origin xyz="0.8 -0.072 0.18" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.076" length="0.04" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="upper_rail_side_1">
+      <origin xyz="0.45 0.072 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.045 0.055" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="elbow_fork_side_1">
+      <origin xyz="0.8 0.072 0.18" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.076" length="0.04" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="shoulder_web">
+      <origin xyz="0.205 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.19 0.03" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="elbow_web">
+      <origin xyz="0.705 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.18 0.028" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="elbow_pin">
+      <origin xyz="0.8 0 0.18" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.205" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="upper_service_cover">
+      <origin xyz="0.465 0 0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.47 0.16 0.018" />
+        </geometry>
+      <material name="blue_accent" />
+      </visual>
+    <collision name="shoulder_column">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.118" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_cap">
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.118" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_motor">
+      <origin xyz="0.04 0 0.18" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="upper_rail_side_0">
+      <origin xyz="0.45 -0.072 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.045 0.055" />
+        </geometry>
+      </collision>
+    <collision name="elbow_fork_side_0">
+      <origin xyz="0.8 -0.072 0.18" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.076" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="upper_rail_side_1">
+      <origin xyz="0.45 0.072 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.045 0.055" />
+        </geometry>
+      </collision>
+    <collision name="elbow_fork_side_1">
+      <origin xyz="0.8 0.072 0.18" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.076" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_web">
+      <origin xyz="0.205 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.19 0.03" />
+        </geometry>
+      </collision>
+    <collision name="elbow_web">
+      <origin xyz="0.705 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.18 0.028" />
+        </geometry>
+      </collision>
+    <collision name="elbow_pin">
+      <origin xyz="0.8 0 0.18" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.205" />
+        </geometry>
+      </collision>
+    <collision name="upper_service_cover">
+      <origin xyz="0.465 0 0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="0.47 0.16 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="forearm">
+    <visual name="elbow_lug">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.084" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="forearm_beam">
+      <origin xyz="0.31 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.075 0.07" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="cable_cover">
+      <origin xyz="0.36 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.03 0.024" />
+        </geometry>
+      <material name="blue_accent" />
+      </visual>
+    <visual name="wrist_bearing">
+      <origin xyz="0.6275 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.055" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="wrist_seal">
+      <origin xyz="0.628 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.052" />
+        </geometry>
+      <material name="black_rubber" />
+      </visual>
+    <collision name="elbow_lug">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.084" />
+        </geometry>
+      </collision>
+    <collision name="forearm_beam">
+      <origin xyz="0.31 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.075 0.07" />
+        </geometry>
+      </collision>
+    <collision name="cable_cover">
+      <origin xyz="0.36 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.03 0.024" />
+        </geometry>
+      </collision>
+    <collision name="wrist_bearing">
+      <origin xyz="0.6275 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="wrist_seal">
+      <origin xyz="0.628 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.052" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist_head">
+    <visual name="wrist_rear_shaft">
+      <origin xyz="0.02 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="tool_flange">
+      <origin xyz="0.053 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.026" />
+        </geometry>
+      <material name="cast_white" />
+      </visual>
+    <visual name="mounting_face">
+      <origin xyz="0.079 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.095 0.095" />
+        </geometry>
+      <material name="dark_gray" />
+      </visual>
+    <visual name="wrist_port">
+      <origin xyz="0.052 0 0.063" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.026 0.02" />
+        </geometry>
+      <material name="blue_accent" />
+      </visual>
+    <visual name="face_bolt_0">
+      <origin xyz="0.096 -0.032 -0.032" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="face_bolt_1">
+      <origin xyz="0.096 -0.032 0.032" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="face_bolt_2">
+      <origin xyz="0.096 0.032 -0.032" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="face_bolt_3">
+      <origin xyz="0.096 0.032 0.032" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.008" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="wrist_rear_shaft">
+      <origin xyz="0.02 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="tool_flange">
+      <origin xyz="0.053 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="mounting_face">
+      <origin xyz="0.079 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.095 0.095" />
+        </geometry>
+      </collision>
+    <collision name="wrist_port">
+      <origin xyz="0.052 0 0.063" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.026 0.02" />
+        </geometry>
+      </collision>
+    <collision name="face_bolt_0">
+      <origin xyz="0.096 -0.032 -0.032" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="face_bolt_1">
+      <origin xyz="0.096 -0.032 0.032" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="face_bolt_2">
+      <origin xyz="0.096 0.032 -0.032" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="face_bolt_3">
+      <origin xyz="0.096 0.032 0.032" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shoulder_yaw" type="revolute">
+    <origin xyz="0 0 0.41" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="upper_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="160" velocity="1.8" lower="-2.8" upper="2.8" />
+    </joint>
+  <joint name="elbow_pitch" type="revolute">
+    <origin xyz="0.8 0 0.18" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="forearm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="110" velocity="1.6" lower="-1.25" upper="1.55" />
+    </joint>
+  <joint name="wrist_roll" type="revolute">
+    <origin xyz="0.655 0 0" rpy="0 0 0" />
+    <parent link="forearm" />
+    <child link="wrist_head" />
+    <axis xyz="1 0 0" />
+    <limit effort="35" velocity="3.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

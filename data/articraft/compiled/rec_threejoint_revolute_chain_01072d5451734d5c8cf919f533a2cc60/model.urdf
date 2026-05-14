@@ -1,0 +1,598 @@
+<robot name="calibration_serial_arm">
+  <material name="base_graphite">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="hard_anodized">
+    <color rgba="0.55 0.58 0.58 1" />
+    </material>
+  <material name="dark_anodized">
+    <color rgba="0.16 0.18 0.2 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.72 0.72 0.68 1" />
+    </material>
+  <material name="black_oxide">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="tool_blue">
+    <color rgba="0.12 0.22 0.34 1" />
+    </material>
+  <link name="pedestal">
+    <visual name="pedestal_shell">
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_shell.obj" />
+        </geometry>
+      <material name="base_graphite" />
+      </visual>
+    <visual name="shoulder_spacer">
+      <origin xyz="0 0 0.1125" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="base_screw_0">
+      <origin xyz="0.11 0.11 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.006" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="base_screw_1">
+      <origin xyz="-0.11 0.11 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.006" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="base_screw_2">
+      <origin xyz="-0.11 -0.11 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.006" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="base_screw_3">
+      <origin xyz="0.11 -0.11 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.006" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="shoulder_stop_post_0">
+      <origin xyz="-0.0672146 -0.0832538 0.0565" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.062" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="shoulder_stop_0">
+      <origin xyz="-0.0672146 -0.0832538 0.095" rpy="0 0 -2.25" />
+      <geometry>
+        <box size="0.025 0.018 0.02" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="shoulder_stop_post_1">
+      <origin xyz="-0.0672146 0.0832538 0.0565" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.062" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="shoulder_stop_1">
+      <origin xyz="-0.0672146 0.0832538 0.095" rpy="0 0 2.25" />
+      <geometry>
+        <box size="0.025 0.018 0.02" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <collision name="pedestal_shell">
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_spacer">
+      <origin xyz="0 0 0.1125" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_0">
+      <origin xyz="0.11 0.11 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_1">
+      <origin xyz="-0.11 0.11 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_2">
+      <origin xyz="-0.11 -0.11 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_3">
+      <origin xyz="0.11 -0.11 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_stop_post_0">
+      <origin xyz="-0.0672146 -0.0832538 0.0565" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.062" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_stop_0">
+      <origin xyz="-0.0672146 -0.0832538 0.095" rpy="0 0 -2.25" />
+      <geometry>
+        <box size="0.025 0.018 0.02" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_stop_post_1">
+      <origin xyz="-0.0672146 0.0832538 0.0565" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.062" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_stop_1">
+      <origin xyz="-0.0672146 0.0832538 0.095" rpy="0 0 2.25" />
+      <geometry>
+        <box size="0.025 0.018 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="first_link">
+    <visual name="first_plate">
+      <geometry>
+        <mesh filename="assets/meshes/first_link_plate.obj" />
+        </geometry>
+      <material name="hard_anodized" />
+      </visual>
+    <visual name="shoulder_top_washer">
+      <origin xyz="0 0 0.0284" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shoulder_bottom_washer">
+      <origin xyz="0 0 0.0116" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shoulder_shoulder_sleeve">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0106" length="0.022" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shoulder_shoulder_bolt">
+      <origin xyz="0 0 0.0165" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.053" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shoulder_cap_screw">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0145" length="0.006" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="elbow_top_washer">
+      <origin xyz="0.23 0 0.0284" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="elbow_bottom_washer">
+      <origin xyz="0.23 0 0.0116" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="first_dowel_0">
+      <origin xyz="0.115 -0.019 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.003" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="first_dowel_1">
+      <origin xyz="0.115 0.019 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.003" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <collision name="first_plate">
+      <geometry>
+        <mesh filename="assets/meshes/first_link_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_top_washer">
+      <origin xyz="0 0 0.0284" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bottom_washer">
+      <origin xyz="0 0 0.0116" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_shoulder_sleeve">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0106" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_shoulder_bolt">
+      <origin xyz="0 0 0.0165" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.053" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_cap_screw">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0145" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="elbow_top_washer">
+      <origin xyz="0.23 0 0.0284" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      </collision>
+    <collision name="elbow_bottom_washer">
+      <origin xyz="0.23 0 0.0116" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      </collision>
+    <collision name="first_dowel_0">
+      <origin xyz="0.115 -0.019 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="first_dowel_1">
+      <origin xyz="0.115 0.019 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="second_link">
+    <visual name="second_plate">
+      <geometry>
+        <mesh filename="assets/meshes/second_link_plate.obj" />
+        </geometry>
+      <material name="hard_anodized" />
+      </visual>
+    <visual name="elbow_top_washer">
+      <origin xyz="0 0 0.0584" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="elbow_bottom_washer">
+      <origin xyz="0 0 0.0416" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="elbow_shoulder_sleeve">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0106" length="0.022" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="elbow_shoulder_bolt">
+      <origin xyz="0 0 0.0425" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.061" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="elbow_cap_screw">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0145" length="0.006" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="elbow_locknut">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.0055" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="wrist_top_washer">
+      <origin xyz="0.38 0 0.0584" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="wrist_bottom_washer">
+      <origin xyz="0.38 0 0.0416" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="second_slot_cover_0">
+      <origin xyz="0.145 0 0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.003" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="second_slot_cover_1">
+      <origin xyz="0.235 0 0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.003" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <collision name="second_plate">
+      <geometry>
+        <mesh filename="assets/meshes/second_link_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="elbow_top_washer">
+      <origin xyz="0 0 0.0584" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      </collision>
+    <collision name="elbow_bottom_washer">
+      <origin xyz="0 0 0.0416" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      </collision>
+    <collision name="elbow_shoulder_sleeve">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0106" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="elbow_shoulder_bolt">
+      <origin xyz="0 0 0.0425" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.061" />
+        </geometry>
+      </collision>
+    <collision name="elbow_cap_screw">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0145" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="elbow_locknut">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.0055" />
+        </geometry>
+      </collision>
+    <collision name="wrist_top_washer">
+      <origin xyz="0.38 0 0.0584" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      </collision>
+    <collision name="wrist_bottom_washer">
+      <origin xyz="0.38 0 0.0416" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      </collision>
+    <collision name="second_slot_cover_0">
+      <origin xyz="0.145 0 0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.003" />
+        </geometry>
+      </collision>
+    <collision name="second_slot_cover_1">
+      <origin xyz="0.235 0 0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="terminal_link">
+    <visual name="terminal_plate">
+      <geometry>
+        <mesh filename="assets/meshes/terminal_link_plate.obj" />
+        </geometry>
+      <material name="hard_anodized" />
+      </visual>
+    <visual name="tool_plate">
+      <geometry>
+        <mesh filename="assets/meshes/tool_plate.obj" />
+        </geometry>
+      <material name="tool_blue" />
+      </visual>
+    <visual name="wrist_top_washer">
+      <origin xyz="0 0 0.0874" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="wrist_bottom_washer">
+      <origin xyz="0 0 0.0726" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="wrist_shoulder_sleeve">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0106" length="0.02" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="wrist_shoulder_bolt">
+      <origin xyz="0 0 0.071" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.062" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="wrist_cap_screw">
+      <origin xyz="0 0 0.104" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0145" length="0.006" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="wrist_locknut">
+      <origin xyz="0 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.0055" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="tool_screw_0">
+      <origin xyz="0.218 -0.024 0.087" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.004" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="tool_screw_1">
+      <origin xyz="0.218 0.024 0.087" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.004" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="tool_screw_2">
+      <origin xyz="0.278 -0.024 0.087" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.004" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <visual name="tool_screw_3">
+      <origin xyz="0.278 0.024 0.087" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.004" />
+        </geometry>
+      <material name="black_oxide" />
+      </visual>
+    <collision name="terminal_plate">
+      <geometry>
+        <mesh filename="assets/meshes/terminal_link_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="tool_plate">
+      <geometry>
+        <mesh filename="assets/meshes/tool_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="wrist_top_washer">
+      <origin xyz="0 0 0.0874" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      </collision>
+    <collision name="wrist_bottom_washer">
+      <origin xyz="0 0 0.0726" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spacer_washer.obj" />
+        </geometry>
+      </collision>
+    <collision name="wrist_shoulder_sleeve">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0106" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="wrist_shoulder_bolt">
+      <origin xyz="0 0 0.071" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.062" />
+        </geometry>
+      </collision>
+    <collision name="wrist_cap_screw">
+      <origin xyz="0 0 0.104" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0145" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="wrist_locknut">
+      <origin xyz="0 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.0055" />
+        </geometry>
+      </collision>
+    <collision name="tool_screw_0">
+      <origin xyz="0.218 -0.024 0.087" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="tool_screw_1">
+      <origin xyz="0.218 0.024 0.087" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="tool_screw_2">
+      <origin xyz="0.278 -0.024 0.087" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="tool_screw_3">
+      <origin xyz="0.278 0.024 0.087" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shoulder" type="revolute">
+    <origin xyz="0 0 0.1049" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="first_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="20" velocity="1.4" lower="-2.05" upper="2.05" />
+    </joint>
+  <joint name="elbow" type="revolute">
+    <origin xyz="0.23 0 0" rpy="0 0 0" />
+    <parent link="first_link" />
+    <child link="second_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="16" velocity="1.6" lower="-2.4" upper="2.4" />
+    </joint>
+  <joint name="wrist" type="revolute">
+    <origin xyz="0.38 0 0" rpy="0 0 0" />
+    <parent link="second_link" />
+    <child link="terminal_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="2" lower="-2.25" upper="2.25" />
+    </joint>
+  </robot>

@@ -1,0 +1,295 @@
+<robot name="tower_fan">
+  <material name="warm_white_plastic">
+    <color rgba="0.88 0.86 0.8 1" />
+    </material>
+  <material name="satin_black_plastic">
+    <color rgba="0.025 0.026 0.028 1" />
+    </material>
+  <material name="weighted_dark_base">
+    <color rgba="0.11 0.115 0.12 1" />
+    </material>
+  <material name="shadow_grille_grey">
+    <color rgba="0.18 0.19 0.2 1" />
+    </material>
+  <material name="white_control_marks">
+    <color rgba="0.95 0.94 0.88 1" />
+    </material>
+  <material name="soft_grey_button">
+    <color rgba="0.55 0.57 0.58 1" />
+    </material>
+  <link name="base">
+    <visual name="weighted_base">
+      <geometry>
+        <mesh filename="assets/meshes/weighted_base.obj" />
+        </geometry>
+      <material name="weighted_dark_base">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <collision name="weighted_base">
+      <geometry>
+        <mesh filename="assets/meshes/weighted_base.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="body">
+    <visual name="housing_frame">
+      <geometry>
+        <mesh filename="assets/meshes/tower_housing.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="front_grille">
+      <origin xyz="0 -0.09 0.55" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_vent_grille.obj" />
+        </geometry>
+      <material name="shadow_grille_grey">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="control_panel">
+      <origin xyz="0 -0.02 1.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.105 0.004" />
+        </geometry>
+      <material name="satin_black_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="button_socket">
+      <origin xyz="0.088 -0.02 1.1155" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.003" />
+        </geometry>
+      <material name="satin_black_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_arm">
+      <origin xyz="0 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.196 0.014 0.012" />
+        </geometry>
+      <material name="satin_black_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing_arm">
+      <origin xyz="0 0 0.955" rpy="0 0 0" />
+      <geometry>
+        <box size="0.196 0.014 0.012" />
+        </geometry>
+      <material name="satin_black_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing">
+      <origin xyz="0 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.01" />
+        </geometry>
+      <material name="satin_black_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing">
+      <origin xyz="0 0 0.955" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.01" />
+        </geometry>
+      <material name="satin_black_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <collision name="housing_frame">
+      <geometry>
+        <mesh filename="assets/meshes/tower_housing.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_grille">
+      <origin xyz="0 -0.09 0.55" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_vent_grille.obj" />
+        </geometry>
+      </collision>
+    <collision name="control_panel">
+      <origin xyz="0 -0.02 1.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.105 0.004" />
+        </geometry>
+      </collision>
+    <collision name="button_socket">
+      <origin xyz="0.088 -0.02 1.1155" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_arm">
+      <origin xyz="0 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.196 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing_arm">
+      <origin xyz="0 0 0.955" rpy="0 0 0" />
+      <geometry>
+        <box size="0.196 0.014 0.012" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing">
+      <origin xyz="0 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing">
+      <origin xyz="0 0 0.955" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blower_wheel">
+    <visual name="squirrel_cage">
+      <geometry>
+        <mesh filename="assets/meshes/blower_wheel.obj" />
+        </geometry>
+      <material name="satin_black_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="center_core">
+      <geometry>
+        <cylinder radius="0.026" length="0.798" />
+        </geometry>
+      <material name="satin_black_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <collision name="squirrel_cage">
+      <geometry>
+        <mesh filename="assets/meshes/blower_wheel.obj" />
+        </geometry>
+      </collision>
+    <collision name="center_core">
+      <geometry>
+        <cylinder radius="0.026" length="0.798" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="speed_dial">
+    <visual name="speed_knob">
+      <geometry>
+        <mesh filename="assets/meshes/speed_dial.obj" />
+        </geometry>
+      <material name="satin_black_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="speed_pointer">
+      <origin xyz="0 0.01 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.03 0.002" />
+        </geometry>
+      <material name="white_control_marks">
+        <color rgba="0.95 0.94 0.88 1" />
+        </material>
+      </visual>
+    <collision name="speed_knob">
+      <geometry>
+        <mesh filename="assets/meshes/speed_dial.obj" />
+        </geometry>
+      </collision>
+    <collision name="speed_pointer">
+      <origin xyz="0 0.01 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.03 0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="timer_dial">
+    <visual name="timer_knob">
+      <geometry>
+        <mesh filename="assets/meshes/timer_dial.obj" />
+        </geometry>
+      <material name="satin_black_plastic">
+        <color rgba="0.025 0.026 0.028 1" />
+        </material>
+      </visual>
+    <visual name="timer_pointer">
+      <origin xyz="0 0.009 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.027 0.002" />
+        </geometry>
+      <material name="white_control_marks">
+        <color rgba="0.95 0.94 0.88 1" />
+        </material>
+      </visual>
+    <collision name="timer_knob">
+      <geometry>
+        <mesh filename="assets/meshes/timer_dial.obj" />
+        </geometry>
+      </collision>
+    <collision name="timer_pointer">
+      <origin xyz="0 0.009 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.027 0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="oscillation_button">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.011" />
+        </geometry>
+      <material name="soft_grey_button">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.011" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_body" type="revolute">
+    <origin xyz="0 0 0.075" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="body" />
+    <axis xyz="0 0 1" />
+    <limit effort="30" velocity="0.8" lower="-0.85" upper="0.85" />
+    </joint>
+  <joint name="body_to_blower_wheel" type="continuous">
+    <origin xyz="0 -0.006 0.55" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="blower_wheel" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.5" velocity="60" />
+    </joint>
+  <joint name="body_to_speed_dial" type="continuous">
+    <origin xyz="-0.06 -0.02 1.114" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="speed_dial" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="6" />
+    </joint>
+  <joint name="body_to_timer_dial" type="continuous">
+    <origin xyz="0.025 -0.02 1.114" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="timer_dial" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="6" />
+    </joint>
+  <joint name="body_to_oscillation_button" type="prismatic">
+    <origin xyz="0.088 -0.02 1.117" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="oscillation_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="4" velocity="0.06" lower="0" upper="0.01" />
+    </joint>
+  </robot>

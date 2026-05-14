@@ -1,0 +1,830 @@
+<robot name="compact_fold_flat_skateboard">
+  <material name="maple_ply">
+    <color rgba="0.76 0.55 0.31 1" />
+    </material>
+  <material name="charcoal_grip">
+    <color rgba="0.018 0.02 0.022 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.7 0.72 0.72 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.48 0.5 0.52 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.13 0.14 0.15 1" />
+    </material>
+  <material name="amber_bushing">
+    <color rgba="0.95 0.58 0.12 1" />
+    </material>
+  <material name="soft_black_rubber">
+    <color rgba="0.005 0.005 0.004 1" />
+    </material>
+  <material name="warm_urethane">
+    <color rgba="0.98 0.78 0.28 1" />
+    </material>
+  <link name="deck">
+    <visual name="maple_deck">
+      <origin xyz="0 0 0.111" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upturned_mini_deck.obj" />
+        </geometry>
+      <material name="maple_ply" />
+      </visual>
+    <visual name="grip_tape">
+      <origin xyz="0 0 0.111" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/inset_grip_tape.obj" />
+        </geometry>
+      <material name="charcoal_grip" />
+      </visual>
+    <visual name="hinge_tab_p_a">
+      <origin xyz="0.145 -0.054 0.0915" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.03" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="outer_hinge_p_a">
+      <origin xyz="0.145 -0.054 0.078" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.024" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="hinge_tab_p_b">
+      <origin xyz="0.145 0.054 0.0915" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.03" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="outer_hinge_p_b">
+      <origin xyz="0.145 0.054 0.078" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.024" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="screw_p_0_0">
+      <origin xyz="0.127 -0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="screw_p_0_1">
+      <origin xyz="0.127 0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="screw_p_1_0">
+      <origin xyz="0.163 -0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="screw_p_1_1">
+      <origin xyz="0.163 0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="hinge_tab_n_a">
+      <origin xyz="-0.145 -0.054 0.0915" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.03" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="outer_hinge_n_a">
+      <origin xyz="-0.145 -0.054 0.078" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.024" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="hinge_tab_n_b">
+      <origin xyz="-0.145 0.054 0.0915" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.03" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="outer_hinge_n_b">
+      <origin xyz="-0.145 0.054 0.078" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.024" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="screw_n_0_0">
+      <origin xyz="-0.163 -0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="screw_n_0_1">
+      <origin xyz="-0.163 0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="screw_n_1_0">
+      <origin xyz="-0.127 -0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="screw_n_1_1">
+      <origin xyz="-0.127 0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <collision name="maple_deck">
+      <origin xyz="0 0 0.111" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upturned_mini_deck.obj" />
+        </geometry>
+      </collision>
+    <collision name="grip_tape">
+      <origin xyz="0 0 0.111" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/inset_grip_tape.obj" />
+        </geometry>
+      </collision>
+    <collision name="hinge_tab_p_a">
+      <origin xyz="0.145 -0.054 0.0915" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.03" />
+        </geometry>
+      </collision>
+    <collision name="outer_hinge_p_a">
+      <origin xyz="0.145 -0.054 0.078" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="hinge_tab_p_b">
+      <origin xyz="0.145 0.054 0.0915" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.03" />
+        </geometry>
+      </collision>
+    <collision name="outer_hinge_p_b">
+      <origin xyz="0.145 0.054 0.078" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="screw_p_0_0">
+      <origin xyz="0.127 -0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_p_0_1">
+      <origin xyz="0.127 0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_p_1_0">
+      <origin xyz="0.163 -0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_p_1_1">
+      <origin xyz="0.163 0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="hinge_tab_n_a">
+      <origin xyz="-0.145 -0.054 0.0915" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.03" />
+        </geometry>
+      </collision>
+    <collision name="outer_hinge_n_a">
+      <origin xyz="-0.145 -0.054 0.078" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="hinge_tab_n_b">
+      <origin xyz="-0.145 0.054 0.0915" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.03" />
+        </geometry>
+      </collision>
+    <collision name="outer_hinge_n_b">
+      <origin xyz="-0.145 0.054 0.078" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="screw_n_0_0">
+      <origin xyz="-0.163 -0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_n_0_1">
+      <origin xyz="-0.163 0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_n_1_0">
+      <origin xyz="-0.127 -0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_n_1_1">
+      <origin xyz="-0.127 0.026 0.1167" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_truck">
+    <visual name="center_hinge">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0052" length="0.084" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="fold_leaf">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.046 0.007" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="drop_link">
+      <origin xyz="0 0 -0.0145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.044 0.023" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="baseplate">
+      <origin xyz="0 0 -0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.055 0.006" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="top_washer">
+      <origin xyz="0 0 -0.026" rpy="0 -0.2 0" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.002" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="top_bushing">
+      <origin xyz="0 0 -0.0295" rpy="0 -0.2 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.006" />
+        </geometry>
+      <material name="amber_bushing" />
+      </visual>
+    <visual name="center_washer">
+      <origin xyz="0 0 -0.0335" rpy="0 -0.2 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.0018" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="lower_bushing">
+      <origin xyz="0 0 -0.0367" rpy="0 -0.2 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.0058" />
+        </geometry>
+      <material name="amber_bushing" />
+      </visual>
+    <visual name="kingpin">
+      <origin xyz="0 0 -0.0305" rpy="0 -0.2 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.027" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <collision name="center_hinge">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0052" length="0.084" />
+        </geometry>
+      </collision>
+    <collision name="fold_leaf">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.046 0.007" />
+        </geometry>
+      </collision>
+    <collision name="drop_link">
+      <origin xyz="0 0 -0.0145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.044 0.023" />
+        </geometry>
+      </collision>
+    <collision name="baseplate">
+      <origin xyz="0 0 -0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.055 0.006" />
+        </geometry>
+      </collision>
+    <collision name="top_washer">
+      <origin xyz="0 0 -0.026" rpy="0 -0.2 0" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="top_bushing">
+      <origin xyz="0 0 -0.0295" rpy="0 -0.2 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="center_washer">
+      <origin xyz="0 0 -0.0335" rpy="0 -0.2 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.0018" />
+        </geometry>
+      </collision>
+    <collision name="lower_bushing">
+      <origin xyz="0 0 -0.0367" rpy="0 -0.2 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.0058" />
+        </geometry>
+      </collision>
+    <collision name="kingpin">
+      <origin xyz="0 0 -0.0305" rpy="0 -0.2 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.027" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_hanger">
+    <visual name="hanger_body">
+      <origin xyz="0 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.052 0.014" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="hanger_arms">
+      <origin xyz="0 0 -0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.118 0.009" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="arm_web_0">
+      <origin xyz="0 -0.045 -0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.01 0.011" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="arm_web_1">
+      <origin xyz="0 0.045 -0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.01 0.011" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="axle">
+      <origin xyz="0 0 -0.024" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0034" length="0.212" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <collision name="hanger_body">
+      <origin xyz="0 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.052 0.014" />
+        </geometry>
+      </collision>
+    <collision name="hanger_arms">
+      <origin xyz="0 0 -0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.118 0.009" />
+        </geometry>
+      </collision>
+    <collision name="arm_web_0">
+      <origin xyz="0 -0.045 -0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.01 0.011" />
+        </geometry>
+      </collision>
+    <collision name="arm_web_1">
+      <origin xyz="0 0.045 -0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.01 0.011" />
+        </geometry>
+      </collision>
+    <collision name="axle">
+      <origin xyz="0 0 -0.024" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0034" length="0.212" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_wheel_0">
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/soft_ribbed_skate_tire.obj" />
+        </geometry>
+      <material name="soft_black_rubber" />
+      </visual>
+    <visual name="core">
+      <geometry>
+        <mesh filename="assets/meshes/mini_skate_wheel_core.obj" />
+        </geometry>
+      <material name="warm_urethane" />
+      </visual>
+    <visual name="bearing_cap">
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <collision name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/soft_ribbed_skate_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="core">
+      <geometry>
+        <mesh filename="assets/meshes/mini_skate_wheel_core.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap">
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_wheel_1">
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/soft_ribbed_skate_tire.obj" />
+        </geometry>
+      <material name="soft_black_rubber" />
+      </visual>
+    <visual name="core">
+      <geometry>
+        <mesh filename="assets/meshes/mini_skate_wheel_core.obj" />
+        </geometry>
+      <material name="warm_urethane" />
+      </visual>
+    <visual name="bearing_cap">
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <collision name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/soft_ribbed_skate_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="core">
+      <geometry>
+        <mesh filename="assets/meshes/mini_skate_wheel_core.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap">
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rear_truck">
+    <visual name="center_hinge">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0052" length="0.084" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="fold_leaf">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.046 0.007" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="drop_link">
+      <origin xyz="0 0 -0.0145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.044 0.023" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="baseplate">
+      <origin xyz="0 0 -0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.055 0.006" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="top_washer">
+      <origin xyz="0 0 -0.026" rpy="0 0.2 0" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.002" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="top_bushing">
+      <origin xyz="0 0 -0.0295" rpy="0 0.2 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.006" />
+        </geometry>
+      <material name="amber_bushing" />
+      </visual>
+    <visual name="center_washer">
+      <origin xyz="0 0 -0.0335" rpy="0 0.2 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.0018" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="lower_bushing">
+      <origin xyz="0 0 -0.0367" rpy="0 0.2 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.0058" />
+        </geometry>
+      <material name="amber_bushing" />
+      </visual>
+    <visual name="kingpin">
+      <origin xyz="0 0 -0.0305" rpy="0 0.2 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.027" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <collision name="center_hinge">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0052" length="0.084" />
+        </geometry>
+      </collision>
+    <collision name="fold_leaf">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.046 0.007" />
+        </geometry>
+      </collision>
+    <collision name="drop_link">
+      <origin xyz="0 0 -0.0145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.044 0.023" />
+        </geometry>
+      </collision>
+    <collision name="baseplate">
+      <origin xyz="0 0 -0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.055 0.006" />
+        </geometry>
+      </collision>
+    <collision name="top_washer">
+      <origin xyz="0 0 -0.026" rpy="0 0.2 0" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="top_bushing">
+      <origin xyz="0 0 -0.0295" rpy="0 0.2 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="center_washer">
+      <origin xyz="0 0 -0.0335" rpy="0 0.2 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.0018" />
+        </geometry>
+      </collision>
+    <collision name="lower_bushing">
+      <origin xyz="0 0 -0.0367" rpy="0 0.2 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.0058" />
+        </geometry>
+      </collision>
+    <collision name="kingpin">
+      <origin xyz="0 0 -0.0305" rpy="0 0.2 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.027" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rear_hanger">
+    <visual name="hanger_body">
+      <origin xyz="0 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.052 0.014" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="hanger_arms">
+      <origin xyz="0 0 -0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.118 0.009" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="arm_web_0">
+      <origin xyz="0 -0.045 -0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.01 0.011" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="arm_web_1">
+      <origin xyz="0 0.045 -0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.01 0.011" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="axle">
+      <origin xyz="0 0 -0.024" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0034" length="0.212" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <collision name="hanger_body">
+      <origin xyz="0 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.052 0.014" />
+        </geometry>
+      </collision>
+    <collision name="hanger_arms">
+      <origin xyz="0 0 -0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.118 0.009" />
+        </geometry>
+      </collision>
+    <collision name="arm_web_0">
+      <origin xyz="0 -0.045 -0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.01 0.011" />
+        </geometry>
+      </collision>
+    <collision name="arm_web_1">
+      <origin xyz="0 0.045 -0.0195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.01 0.011" />
+        </geometry>
+      </collision>
+    <collision name="axle">
+      <origin xyz="0 0 -0.024" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0034" length="0.212" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rear_wheel_0">
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/soft_ribbed_skate_tire.obj" />
+        </geometry>
+      <material name="soft_black_rubber" />
+      </visual>
+    <visual name="core">
+      <geometry>
+        <mesh filename="assets/meshes/mini_skate_wheel_core.obj" />
+        </geometry>
+      <material name="warm_urethane" />
+      </visual>
+    <visual name="bearing_cap">
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <collision name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/soft_ribbed_skate_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="core">
+      <geometry>
+        <mesh filename="assets/meshes/mini_skate_wheel_core.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap">
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rear_wheel_1">
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/soft_ribbed_skate_tire.obj" />
+        </geometry>
+      <material name="soft_black_rubber" />
+      </visual>
+    <visual name="core">
+      <geometry>
+        <mesh filename="assets/meshes/mini_skate_wheel_core.obj" />
+        </geometry>
+      <material name="warm_urethane" />
+      </visual>
+    <visual name="bearing_cap">
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <collision name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/soft_ribbed_skate_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="core">
+      <geometry>
+        <mesh filename="assets/meshes/mini_skate_wheel_core.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cap">
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="deck_to_front_truck" type="revolute">
+    <origin xyz="0.145 0 0.078" rpy="0 0 0" />
+    <parent link="deck" />
+    <child link="front_truck" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="1.6" lower="0" upper="1.35" />
+    </joint>
+  <joint name="front_truck_to_hanger" type="revolute">
+    <origin xyz="0 0 -0.034" rpy="0 -0.2 0" />
+    <parent link="front_truck" />
+    <child link="front_hanger" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="3" lower="-0.38" upper="0.38" />
+    </joint>
+  <joint name="front_wheel_0_spin" type="continuous">
+    <origin xyz="0 -0.096 -0.024" rpy="0 0 1.5708" />
+    <parent link="front_hanger" />
+    <child link="front_wheel_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="1.2" velocity="25" />
+    </joint>
+  <joint name="front_wheel_1_spin" type="continuous">
+    <origin xyz="0 0.096 -0.024" rpy="0 0 1.5708" />
+    <parent link="front_hanger" />
+    <child link="front_wheel_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="1.2" velocity="25" />
+    </joint>
+  <joint name="deck_to_rear_truck" type="revolute">
+    <origin xyz="-0.145 0 0.078" rpy="0 0 0" />
+    <parent link="deck" />
+    <child link="rear_truck" />
+    <axis xyz="0 -1 0" />
+    <limit effort="8" velocity="1.6" lower="0" upper="1.35" />
+    </joint>
+  <joint name="rear_truck_to_hanger" type="revolute">
+    <origin xyz="0 0 -0.034" rpy="0 0.2 0" />
+    <parent link="rear_truck" />
+    <child link="rear_hanger" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="3" lower="-0.38" upper="0.38" />
+    </joint>
+  <joint name="rear_wheel_0_spin" type="continuous">
+    <origin xyz="0 -0.096 -0.024" rpy="0 0 1.5708" />
+    <parent link="rear_hanger" />
+    <child link="rear_wheel_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="1.2" velocity="25" />
+    </joint>
+  <joint name="rear_wheel_1_spin" type="continuous">
+    <origin xyz="0 0.096 -0.024" rpy="0 0 1.5708" />
+    <parent link="rear_hanger" />
+    <child link="rear_wheel_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="1.2" velocity="25" />
+    </joint>
+  </robot>

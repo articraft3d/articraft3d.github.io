@@ -1,0 +1,436 @@
+<robot name="bridge_supported_cantilever_arm">
+  <material name="powder_coated_frame">
+    <color rgba="0.1 0.12 0.14 1" />
+    </material>
+  <material name="dark_bridge_braces">
+    <color rgba="0.16 0.18 0.2 1" />
+    </material>
+  <material name="safety_orange_links">
+    <color rgba="0.95 0.38 0.08 1" />
+    </material>
+  <material name="brushed_wrist_plate">
+    <color rgba="0.72 0.74 0.72 1" />
+    </material>
+  <material name="black_bushed_pivots">
+    <color rgba="0.02 0.02 0.025 1" />
+    </material>
+  <link name="frame">
+    <visual name="floor_plate">
+      <origin xyz="-0.13 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.3 0.04" />
+        </geometry>
+      <material name="powder_coated_frame">
+        <color rgba="0.1 0.12 0.14 1" />
+        </material>
+      </visual>
+    <visual name="rear_upright">
+      <origin xyz="-0.25 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.24 0.61" />
+        </geometry>
+      <material name="powder_coated_frame">
+        <color rgba="0.1 0.12 0.14 1" />
+        </material>
+      </visual>
+    <visual name="upper_bridge">
+      <origin xyz="-0.12 0 0.625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.13 0.05" />
+        </geometry>
+      <material name="dark_bridge_braces">
+        <color rgba="0.16 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="diagonal_bridge">
+      <origin xyz="-0.135 0 0.315" rpy="0 -1.1 0" />
+      <geometry>
+        <box size="0.43 0.05 0.036" />
+        </geometry>
+      <material name="dark_bridge_braces">
+        <color rgba="0.16 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_cheek_near">
+      <origin xyz="-0.015 -0.066 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.028 0.15" />
+        </geometry>
+      <material name="powder_coated_frame">
+        <color rgba="0.1 0.12 0.14 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_boss_near">
+      <origin xyz="0 -0.066 0.55" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.028" />
+        </geometry>
+      <material name="black_bushed_pivots">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_cheek_far">
+      <origin xyz="-0.015 0.066 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.028 0.15" />
+        </geometry>
+      <material name="powder_coated_frame">
+        <color rgba="0.1 0.12 0.14 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_boss_far">
+      <origin xyz="0 0.066 0.55" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.028" />
+        </geometry>
+      <material name="black_bushed_pivots">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="-0.13 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.3 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_upright">
+      <origin xyz="-0.25 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.24 0.61" />
+        </geometry>
+      </collision>
+    <collision name="upper_bridge">
+      <origin xyz="-0.12 0 0.625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.13 0.05" />
+        </geometry>
+      </collision>
+    <collision name="diagonal_bridge">
+      <origin xyz="-0.135 0 0.315" rpy="0 -1.1 0" />
+      <geometry>
+        <box size="0.43 0.05 0.036" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_cheek_near">
+      <origin xyz="-0.015 -0.066 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.028 0.15" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_boss_near">
+      <origin xyz="0 -0.066 0.55" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_cheek_far">
+      <origin xyz="-0.015 0.066 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.028 0.15" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_boss_far">
+      <origin xyz="0 0.066 0.55" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.028" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_link">
+    <visual name="shoulder_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.104" />
+        </geometry>
+      <material name="black_bushed_pivots">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_web">
+      <origin xyz="0.06 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.07 0.024" />
+        </geometry>
+      <material name="safety_orange_links">
+        <color rgba="0.95 0.38 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rail_crosshead">
+      <origin xyz="0.13 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.15 0.03" />
+        </geometry>
+      <material name="safety_orange_links">
+        <color rgba="0.95 0.38 0.08 1" />
+        </material>
+      </visual>
+    <visual name="upper_rail_near">
+      <origin xyz="0.375 -0.064 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.595 0.026 0.044" />
+        </geometry>
+      <material name="safety_orange_links">
+        <color rgba="0.95 0.38 0.08 1" />
+        </material>
+      </visual>
+    <visual name="elbow_boss_near">
+      <origin xyz="0.7 -0.064 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.026" />
+        </geometry>
+      <material name="black_bushed_pivots">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <visual name="upper_rail_far">
+      <origin xyz="0.375 0.064 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.595 0.026 0.044" />
+        </geometry>
+      <material name="safety_orange_links">
+        <color rgba="0.95 0.38 0.08 1" />
+        </material>
+      </visual>
+    <visual name="elbow_boss_far">
+      <origin xyz="0.7 0.064 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.026" />
+        </geometry>
+      <material name="black_bushed_pivots">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <visual name="elbow_end_bridge">
+      <origin xyz="0.625 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.15 0.03" />
+        </geometry>
+      <material name="safety_orange_links">
+        <color rgba="0.95 0.38 0.08 1" />
+        </material>
+      </visual>
+    <collision name="shoulder_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.104" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_web">
+      <origin xyz="0.06 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.07 0.024" />
+        </geometry>
+      </collision>
+    <collision name="rail_crosshead">
+      <origin xyz="0.13 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.15 0.03" />
+        </geometry>
+      </collision>
+    <collision name="upper_rail_near">
+      <origin xyz="0.375 -0.064 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.595 0.026 0.044" />
+        </geometry>
+      </collision>
+    <collision name="elbow_boss_near">
+      <origin xyz="0.7 -0.064 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="upper_rail_far">
+      <origin xyz="0.375 0.064 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.595 0.026 0.044" />
+        </geometry>
+      </collision>
+    <collision name="elbow_boss_far">
+      <origin xyz="0.7 0.064 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="elbow_end_bridge">
+      <origin xyz="0.625 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.15 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="forelink">
+    <visual name="elbow_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.102" />
+        </geometry>
+      <material name="black_bushed_pivots">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <visual name="forearm_web">
+      <origin xyz="0.19 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.048 0.04" />
+        </geometry>
+      <material name="safety_orange_links">
+        <color rgba="0.95 0.38 0.08 1" />
+        </material>
+      </visual>
+    <visual name="wrist_fork_bridge">
+      <origin xyz="0.36 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.108 0.034" />
+        </geometry>
+      <material name="safety_orange_links">
+        <color rgba="0.95 0.38 0.08 1" />
+        </material>
+      </visual>
+    <visual name="wrist_boss_near">
+      <origin xyz="0.42 -0.046 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.018" />
+        </geometry>
+      <material name="black_bushed_pivots">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <visual name="wrist_boss_far">
+      <origin xyz="0.42 0.046 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.018" />
+        </geometry>
+      <material name="black_bushed_pivots">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <collision name="elbow_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.037" length="0.102" />
+        </geometry>
+      </collision>
+    <collision name="forearm_web">
+      <origin xyz="0.19 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.048 0.04" />
+        </geometry>
+      </collision>
+    <collision name="wrist_fork_bridge">
+      <origin xyz="0.36 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.108 0.034" />
+        </geometry>
+      </collision>
+    <collision name="wrist_boss_near">
+      <origin xyz="0.42 -0.046 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="wrist_boss_far">
+      <origin xyz="0.42 0.046 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist_plate">
+    <visual name="wrist_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.074" />
+        </geometry>
+      <material name="black_bushed_pivots">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <visual name="plate_neck">
+      <origin xyz="0.035 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.036 0.018" />
+        </geometry>
+      <material name="brushed_wrist_plate">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="tool_plate">
+      <origin xyz="0.095 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.11 0.018" />
+        </geometry>
+      <material name="brushed_wrist_plate">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="mount_button_near">
+      <origin xyz="0.112 -0.034 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      <material name="black_bushed_pivots">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <visual name="mount_button_far">
+      <origin xyz="0.112 0.034 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      <material name="black_bushed_pivots">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <collision name="wrist_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.074" />
+        </geometry>
+      </collision>
+    <collision name="plate_neck">
+      <origin xyz="0.035 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.036 0.018" />
+        </geometry>
+      </collision>
+    <collision name="tool_plate">
+      <origin xyz="0.095 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.11 0.018" />
+        </geometry>
+      </collision>
+    <collision name="mount_button_near">
+      <origin xyz="0.112 -0.034 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="mount_button_far">
+      <origin xyz="0.112 0.034 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shoulder" type="revolute">
+    <origin xyz="0 0 0.55" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="upper_link" />
+    <axis xyz="0 -1 0" />
+    <limit effort="80" velocity="1.2" lower="-0.75" upper="1.05" />
+    </joint>
+  <joint name="elbow" type="revolute">
+    <origin xyz="0.7 0 0" rpy="0 0 0" />
+    <parent link="upper_link" />
+    <child link="forelink" />
+    <axis xyz="0 -1 0" />
+    <limit effort="45" velocity="1.6" lower="-1.35" upper="1.35" />
+    </joint>
+  <joint name="wrist" type="revolute">
+    <origin xyz="0.42 0 0" rpy="0 0 0" />
+    <parent link="forelink" />
+    <child link="wrist_plate" />
+    <axis xyz="0 -1 0" />
+    <limit effort="15" velocity="2.2" lower="-1.8" upper="1.8" />
+    </joint>
+  </robot>

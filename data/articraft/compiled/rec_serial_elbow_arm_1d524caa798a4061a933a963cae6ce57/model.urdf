@@ -1,0 +1,348 @@
+<robot name="compact_serial_elbow_arm">
+  <material name="dark_cast_metal">
+    <color rgba="0.13 0.14 0.16 1" />
+    </material>
+  <material name="blue_powdercoat">
+    <color rgba="0.13 0.27 0.48 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.66 0.69 0.72 1" />
+    </material>
+  <material name="black_fasteners">
+    <color rgba="0.03 0.03 0.035 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <mass value="4.8" />
+      <inertia ixx="0.02404" ixy="0" ixz="0" iyy="0.02404" iyz="0" izz="0.03456" />
+      </inertial>
+    <visual name="floor_plate">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.024" />
+        </geometry>
+      <material name="dark_cast_metal" />
+      </visual>
+    <visual name="pedestal">
+      <origin xyz="0 0 0.068" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.088" />
+        </geometry>
+      <material name="dark_cast_metal" />
+      </visual>
+    <visual name="top_bearing">
+      <origin xyz="0 0 0.121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.074" length="0.018" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="pedestal">
+      <origin xyz="0 0 0.068" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.088" />
+        </geometry>
+      </collision>
+    <collision name="top_bearing">
+      <origin xyz="0 0 0.121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.074" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shoulder_link">
+    <inertial>
+      <origin xyz="0.18 0 0.045" rpy="0 0 0" />
+      <mass value="1.1" />
+      <inertia ixx="0.00103583" ixy="0" ixz="0" iyy="0.0124667" iyz="0" izz="0.0123292" />
+      </inertial>
+    <visual name="shoulder_hub">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.035" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="shoulder_riser">
+      <origin xyz="0 0 0.0435" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.043" />
+        </geometry>
+      <material name="blue_powdercoat" />
+      </visual>
+    <visual name="shoulder_tube_top_wall">
+      <origin xyz="0.1755 0 0.0815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.239 0.058 0.008" />
+        </geometry>
+      <material name="blue_powdercoat" />
+      </visual>
+    <visual name="shoulder_tube_bottom_wall">
+      <origin xyz="0.1755 0 0.0465" rpy="0 0 0" />
+      <geometry>
+        <box size="0.239 0.058 0.008" />
+        </geometry>
+      <material name="blue_powdercoat" />
+      </visual>
+    <visual name="shoulder_tube_side_0_wall">
+      <origin xyz="0.1755 0.0255 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.239 0.008 0.042" />
+        </geometry>
+      <material name="blue_powdercoat" />
+      </visual>
+    <visual name="shoulder_tube_side_1_wall">
+      <origin xyz="0.1755 -0.0255 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.239 0.008 0.042" />
+        </geometry>
+      <material name="blue_powdercoat" />
+      </visual>
+    <visual name="elbow_bearing">
+      <origin xyz="0.36 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.028" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="elbow_block">
+      <origin xyz="0.32 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.06 0.024" />
+        </geometry>
+      <material name="blue_powdercoat" />
+      </visual>
+    <collision name="shoulder_hub">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_riser">
+      <origin xyz="0 0 0.0435" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.043" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_tube_top_wall">
+      <origin xyz="0.1755 0 0.0815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.239 0.058 0.008" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_tube_bottom_wall">
+      <origin xyz="0.1755 0 0.0465" rpy="0 0 0" />
+      <geometry>
+        <box size="0.239 0.058 0.008" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_tube_side_0_wall">
+      <origin xyz="0.1755 0.0255 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.239 0.008 0.042" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_tube_side_1_wall">
+      <origin xyz="0.1755 -0.0255 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.239 0.008 0.042" />
+        </geometry>
+      </collision>
+    <collision name="elbow_bearing">
+      <origin xyz="0.36 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="elbow_block">
+      <origin xyz="0.32 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.06 0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="forearm">
+    <inertial>
+      <origin xyz="0.14 0 0.045" rpy="0 0 0" />
+      <mass value="0.8" />
+      <inertia ixx="0.0015" ixy="0" ixz="0" iyy="0.00694667" iyz="0" izz="0.00736667" />
+      </inertial>
+    <visual name="elbow_hub">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.034" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="elbow_riser">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.03" />
+        </geometry>
+      <material name="blue_powdercoat" />
+      </visual>
+    <visual name="forearm_tube_top_wall">
+      <origin xyz="0.1405 0 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.05 0.007" />
+        </geometry>
+      <material name="blue_powdercoat" />
+      </visual>
+    <visual name="forearm_tube_bottom_wall">
+      <origin xyz="0.1405 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.05 0.007" />
+        </geometry>
+      <material name="blue_powdercoat" />
+      </visual>
+    <visual name="forearm_tube_side_0_wall">
+      <origin xyz="0.1405 0.022 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.007 0.036" />
+        </geometry>
+      <material name="blue_powdercoat" />
+      </visual>
+    <visual name="forearm_tube_side_1_wall">
+      <origin xyz="0.1405 -0.022 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.007 0.036" />
+        </geometry>
+      <material name="blue_powdercoat" />
+      </visual>
+    <visual name="wrist_adapter">
+      <origin xyz="0.245 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.046 0.034" />
+        </geometry>
+      <material name="blue_powdercoat" />
+      </visual>
+    <visual name="mounting_plate">
+      <origin xyz="0.289 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.11 0.086" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="plate_bolt_0_0">
+      <origin xyz="0.301 -0.036 0.019" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.008" />
+        </geometry>
+      <material name="black_fasteners" />
+      </visual>
+    <visual name="plate_bolt_0_1">
+      <origin xyz="0.301 0.036 0.019" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.008" />
+        </geometry>
+      <material name="black_fasteners" />
+      </visual>
+    <visual name="plate_bolt_1_0">
+      <origin xyz="0.301 -0.036 0.073" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.008" />
+        </geometry>
+      <material name="black_fasteners" />
+      </visual>
+    <visual name="plate_bolt_1_1">
+      <origin xyz="0.301 0.036 0.073" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.008" />
+        </geometry>
+      <material name="black_fasteners" />
+      </visual>
+    <collision name="elbow_hub">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="elbow_riser">
+      <origin xyz="0 0 0.047" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="forearm_tube_top_wall">
+      <origin xyz="0.1405 0 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.05 0.007" />
+        </geometry>
+      </collision>
+    <collision name="forearm_tube_bottom_wall">
+      <origin xyz="0.1405 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.05 0.007" />
+        </geometry>
+      </collision>
+    <collision name="forearm_tube_side_0_wall">
+      <origin xyz="0.1405 0.022 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.007 0.036" />
+        </geometry>
+      </collision>
+    <collision name="forearm_tube_side_1_wall">
+      <origin xyz="0.1405 -0.022 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.007 0.036" />
+        </geometry>
+      </collision>
+    <collision name="wrist_adapter">
+      <origin xyz="0.245 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.046 0.034" />
+        </geometry>
+      </collision>
+    <collision name="mounting_plate">
+      <origin xyz="0.289 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.11 0.086" />
+        </geometry>
+      </collision>
+    <collision name="plate_bolt_0_0">
+      <origin xyz="0.301 -0.036 0.019" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="plate_bolt_0_1">
+      <origin xyz="0.301 0.036 0.019" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="plate_bolt_1_0">
+      <origin xyz="0.301 -0.036 0.073" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="plate_bolt_1_1">
+      <origin xyz="0.301 0.036 0.073" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shoulder" type="revolute">
+    <origin xyz="0 0 0.13" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="shoulder_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="55" velocity="1.8" lower="-1.75" upper="1.75" />
+    </joint>
+  <joint name="elbow" type="revolute">
+    <origin xyz="0.36 0 0.064" rpy="0 0 0" />
+    <parent link="shoulder_link" />
+    <child link="forearm" />
+    <axis xyz="0 0 1" />
+    <limit effort="38" velocity="2.2" lower="-2.35" upper="2.35" />
+    </joint>
+  </robot>

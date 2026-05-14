@@ -1,0 +1,412 @@
+<robot name="bench_manipulator_arm">
+  <material name="powder_steel">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <material name="dark_anodized">
+    <color rgba="0.06 0.07 0.075 1" />
+    </material>
+  <material name="satin_aluminum">
+    <color rgba="0.63 0.66 0.68 1" />
+    </material>
+  <material name="machined_zinc">
+    <color rgba="0.74 0.75 0.72 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.015 0.015 0.016 1" />
+    </material>
+  <link name="base_yoke">
+    <inertial>
+      <origin xyz="0 0 0.07" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.065664" ixy="0" ixz="0" iyy="0.065664" iyz="0" izz="0.1296" />
+      </inertial>
+    <visual name="bench_foot">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.036" />
+        </geometry>
+      <material name="powder_steel" />
+      </visual>
+    <visual name="pedestal">
+      <origin xyz="0 0 0.072" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.18 0.078" />
+        </geometry>
+      <material name="powder_steel" />
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.17 0.044" />
+        </geometry>
+      <material name="powder_steel" />
+      </visual>
+    <visual name="shoulder_plate_pos">
+      <origin xyz="0 0.07 0.206" rpy="0 0 0" />
+      <geometry>
+        <box size="0.185 0.024 0.176" />
+        </geometry>
+      <material name="powder_steel" />
+      </visual>
+    <visual name="shoulder_plate_neg">
+      <origin xyz="0 -0.07 0.206" rpy="0 0 0" />
+      <geometry>
+        <box size="0.185 0.024 0.176" />
+        </geometry>
+      <material name="powder_steel" />
+      </visual>
+    <visual name="shoulder_journal_pos">
+      <origin xyz="0 0.091 0.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.018" />
+        </geometry>
+      <material name="machined_zinc" />
+      </visual>
+    <visual name="shoulder_journal_neg">
+      <origin xyz="0 -0.091 0.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.018" />
+        </geometry>
+      <material name="machined_zinc" />
+      </visual>
+    <visual name="base_bolt_0">
+      <origin xyz="-0.118 -0.096 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="machined_zinc" />
+      </visual>
+    <visual name="base_bolt_1">
+      <origin xyz="-0.118 0.096 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="machined_zinc" />
+      </visual>
+    <visual name="base_bolt_2">
+      <origin xyz="0.118 -0.096 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="machined_zinc" />
+      </visual>
+    <visual name="base_bolt_3">
+      <origin xyz="0.118 0.096 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="machined_zinc" />
+      </visual>
+    <collision name="bench_foot">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.036" />
+        </geometry>
+      </collision>
+    <collision name="pedestal">
+      <origin xyz="0 0 0.072" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.18 0.078" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.17 0.044" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_plate_pos">
+      <origin xyz="0 0.07 0.206" rpy="0 0 0" />
+      <geometry>
+        <box size="0.185 0.024 0.176" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_plate_neg">
+      <origin xyz="0 -0.07 0.206" rpy="0 0 0" />
+      <geometry>
+        <box size="0.185 0.024 0.176" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_journal_pos">
+      <origin xyz="0 0.091 0.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_journal_neg">
+      <origin xyz="0 -0.091 0.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_0">
+      <origin xyz="-0.118 -0.096 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_1">
+      <origin xyz="-0.118 0.096 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_2">
+      <origin xyz="0.118 -0.096 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_3">
+      <origin xyz="0.118 0.096 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_link">
+    <inertial>
+      <origin xyz="0.285 0 0" rpy="0 0 0" />
+      <mass value="1.8" />
+      <inertia ixx="0.00303" ixy="0" ixz="0" iyy="0.044955" iyz="0" izz="0.045555" />
+      </inertial>
+    <visual name="shoulder_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.116" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="tapered_web">
+      <geometry>
+        <mesh filename="assets/meshes/upper_taper.obj" />
+        </geometry>
+      <material name="satin_aluminum" />
+      </visual>
+    <visual name="elbow_bridge">
+      <origin xyz="0.426 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.062 0.136 0.048" />
+        </geometry>
+      <material name="satin_aluminum" />
+      </visual>
+    <visual name="elbow_plate_pos">
+      <origin xyz="0.54 0.071 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.192 0.018 0.154" />
+        </geometry>
+      <material name="satin_aluminum" />
+      </visual>
+    <visual name="elbow_plate_neg">
+      <origin xyz="0.54 -0.071 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.192 0.018 0.154" />
+        </geometry>
+      <material name="satin_aluminum" />
+      </visual>
+    <visual name="elbow_journal_pos">
+      <origin xyz="0.54 0.087 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.014" />
+        </geometry>
+      <material name="machined_zinc" />
+      </visual>
+    <visual name="elbow_journal_neg">
+      <origin xyz="0.54 -0.087 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.014" />
+        </geometry>
+      <material name="machined_zinc" />
+      </visual>
+    <visual name="elbow_stop_pos">
+      <origin xyz="0.44 0.07 0.076" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.018 0.04" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="elbow_stop_neg">
+      <origin xyz="0.44 -0.07 0.076" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.018 0.04" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <collision name="shoulder_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.116" />
+        </geometry>
+      </collision>
+    <collision name="tapered_web">
+      <geometry>
+        <mesh filename="assets/meshes/upper_taper.obj" />
+        </geometry>
+      </collision>
+    <collision name="elbow_bridge">
+      <origin xyz="0.426 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.062 0.136 0.048" />
+        </geometry>
+      </collision>
+    <collision name="elbow_plate_pos">
+      <origin xyz="0.54 0.071 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.192 0.018 0.154" />
+        </geometry>
+      </collision>
+    <collision name="elbow_plate_neg">
+      <origin xyz="0.54 -0.071 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.192 0.018 0.154" />
+        </geometry>
+      </collision>
+    <collision name="elbow_journal_pos">
+      <origin xyz="0.54 0.087 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="elbow_journal_neg">
+      <origin xyz="0.54 -0.087 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="elbow_stop_pos">
+      <origin xyz="0.44 0.07 0.076" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.018 0.04" />
+        </geometry>
+      </collision>
+    <collision name="elbow_stop_neg">
+      <origin xyz="0.44 -0.07 0.076" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.018 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tool_carrier">
+    <inertial>
+      <origin xyz="0.115 0 0" rpy="0 0 0" />
+      <mass value="0.9" />
+      <inertia ixx="0.00111308" ixy="0" ixz="0" iyy="0.00786375" iyz="0" izz="0.00813308" />
+      </inertial>
+    <visual name="elbow_cartridge">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.124" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="cartridge_ring_pos">
+      <origin xyz="0 0.05 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.006" />
+        </geometry>
+      <material name="machined_zinc" />
+      </visual>
+    <visual name="cartridge_ring_neg">
+      <origin xyz="0 -0.05 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.006" />
+        </geometry>
+      <material name="machined_zinc" />
+      </visual>
+    <visual name="carrier_beam">
+      <geometry>
+        <mesh filename="assets/meshes/carrier_taper.obj" />
+        </geometry>
+      <material name="satin_aluminum" />
+      </visual>
+    <visual name="tool_socket">
+      <origin xyz="0.27 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.07" />
+        </geometry>
+      <material name="machined_zinc" />
+      </visual>
+    <visual name="clamp_screw_pos">
+      <origin xyz="0.27 0.033 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="clamp_screw_neg">
+      <origin xyz="0.27 -0.033 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="tool_bore">
+      <origin xyz="0.311 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <collision name="elbow_cartridge">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.124" />
+        </geometry>
+      </collision>
+    <collision name="cartridge_ring_pos">
+      <origin xyz="0 0.05 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="cartridge_ring_neg">
+      <origin xyz="0 -0.05 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="carrier_beam">
+      <geometry>
+        <mesh filename="assets/meshes/carrier_taper.obj" />
+        </geometry>
+      </collision>
+    <collision name="tool_socket">
+      <origin xyz="0.27 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="clamp_screw_pos">
+      <origin xyz="0.27 0.033 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="clamp_screw_neg">
+      <origin xyz="0.27 -0.033 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="tool_bore">
+      <origin xyz="0.311 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shoulder_hinge" type="revolute">
+    <origin xyz="0 0 0.2" rpy="0 0 0" />
+    <parent link="base_yoke" />
+    <child link="upper_link" />
+    <axis xyz="0 -1 0" />
+    <limit effort="120" velocity="1.2" lower="-0.35" upper="1.25" />
+    </joint>
+  <joint name="elbow_hinge" type="revolute">
+    <origin xyz="0.54 0 0" rpy="0 0 0" />
+    <parent link="upper_link" />
+    <child link="tool_carrier" />
+    <axis xyz="0 -1 0" />
+    <limit effort="80" velocity="1.4" lower="-0.85" upper="1.35" />
+    </joint>
+  </robot>

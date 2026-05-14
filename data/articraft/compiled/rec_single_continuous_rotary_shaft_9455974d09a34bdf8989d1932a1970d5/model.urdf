@@ -1,0 +1,143 @@
+<robot name="pottery_wheel">
+  <material name="glazed_teal_enamel">
+    <color rgba="0.1 0.34 0.38 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.74 0.76 0.73 1" />
+    </material>
+  <material name="dark_drive_steel">
+    <color rgba="0.1 0.1 0.1 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <link name="base">
+    <visual name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/stationary_shell.obj" />
+        </geometry>
+      <material name="glazed_teal_enamel">
+        <color rgba="0.1 0.34 0.38 1" />
+        </material>
+      </visual>
+    <visual name="foot_0">
+      <origin xyz="-0.255 -0.19 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="foot_1">
+      <origin xyz="-0.255 0.19 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="foot_2">
+      <origin xyz="0.255 -0.19 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="foot_3">
+      <origin xyz="0.255 0.19 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/stationary_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="foot_0">
+      <origin xyz="-0.255 -0.19 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="foot_1">
+      <origin xyz="-0.255 0.19 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="foot_2">
+      <origin xyz="0.255 -0.19 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="foot_3">
+      <origin xyz="0.255 0.19 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wheelhead">
+    <visual name="shaft">
+      <origin xyz="0 0 0.23" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.46" />
+        </geometry>
+      <material name="dark_drive_steel">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0.44" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.07" />
+        </geometry>
+      <material name="dark_drive_steel">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_plate">
+      <origin xyz="0 0 0.435" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_plate.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.74 0.76 0.73 1" />
+        </material>
+      </visual>
+    <collision name="shaft">
+      <origin xyz="0 0 0.23" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.46" />
+        </geometry>
+      </collision>
+    <collision name="hub">
+      <origin xyz="0 0 0.44" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="top_plate">
+      <origin xyz="0 0 0.435" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_plate.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_wheelhead" type="continuous">
+    <origin xyz="0 0 0.18" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="wheelhead" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="12" />
+    </joint>
+  </robot>

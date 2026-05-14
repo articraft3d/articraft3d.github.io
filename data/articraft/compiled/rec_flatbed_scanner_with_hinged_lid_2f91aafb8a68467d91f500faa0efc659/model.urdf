@@ -1,0 +1,436 @@
+<robot name="photo_scanning_platform">
+  <material name="warm_white_plastic">
+    <color rgba="0.86 0.84 0.78 1" />
+    </material>
+  <material name="matte_dark_plastic">
+    <color rgba="0.035 0.038 0.042 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="brushed_satin_metal">
+    <color rgba="0.65 0.66 0.62 1" />
+    </material>
+  <material name="slightly_green_glass">
+    <color rgba="0.55 0.86 0.92 0.36" />
+    </material>
+  <material name="smoked_platen_glass">
+    <color rgba="0.08 0.13 0.16 0.45" />
+    </material>
+  <material name="charcoal_tray_plastic">
+    <color rgba="0.07 0.075 0.08 1" />
+    </material>
+  <material name="semi_gloss_photo_paper">
+    <color rgba="0.94 0.92 0.86 1" />
+    </material>
+  <link name="body">
+    <visual name="shallow_body">
+      <origin xyz="0 0 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.44 0.065" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_face">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.585 0.405 0.008" />
+        </geometry>
+      <material name="matte_dark_plastic">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="glass_platen">
+      <origin xyz="0 -0.01 0.0755" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.31 0.005" />
+        </geometry>
+      <material name="smoked_platen_glass">
+        <color rgba="0.08 0.13 0.16 0.45" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_shelf">
+      <origin xyz="0 0.222 0.079" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.03 0.028" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="hinge_support">
+      <origin xyz="0 0.244 0.1045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.016 0.027" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="front_grip_pad">
+      <origin xyz="-0.235 -0.206 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.004" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_rail">
+      <origin xyz="0 -0.13 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.008 0.012" />
+        </geometry>
+      <material name="brushed_satin_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="rear_rail">
+      <origin xyz="0 0.13 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.008 0.012" />
+        </geometry>
+      <material name="brushed_satin_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="piano_hinge">
+      <origin xyz="0 0.247 0.112" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/full_width_piano_hinge.obj" />
+        </geometry>
+      <material name="brushed_satin_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="hinge_pin">
+      <origin xyz="0 0.247 0.112" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.59" />
+        </geometry>
+      <material name="brushed_satin_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    <collision name="shallow_body">
+      <origin xyz="0 0 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.44 0.065" />
+        </geometry>
+      </collision>
+    <collision name="top_face">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.585 0.405 0.008" />
+        </geometry>
+      </collision>
+    <collision name="glass_platen">
+      <origin xyz="0 -0.01 0.0755" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.31 0.005" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_shelf">
+      <origin xyz="0 0.222 0.079" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.03 0.028" />
+        </geometry>
+      </collision>
+    <collision name="hinge_support">
+      <origin xyz="0 0.244 0.1045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.016 0.027" />
+        </geometry>
+      </collision>
+    <collision name="front_grip_pad">
+      <origin xyz="-0.235 -0.206 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.004" />
+        </geometry>
+      </collision>
+    <collision name="front_rail">
+      <origin xyz="0 -0.13 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.008 0.012" />
+        </geometry>
+      </collision>
+    <collision name="rear_rail">
+      <origin xyz="0 0.13 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.008 0.012" />
+        </geometry>
+      </collision>
+    <collision name="piano_hinge">
+      <origin xyz="0 0.247 0.112" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/full_width_piano_hinge.obj" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pin">
+      <origin xyz="0 0.247 0.112" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.59" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="rear_frame">
+      <origin xyz="0 -0.031 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.575 0.028 0.025" />
+        </geometry>
+      <material name="matte_dark_plastic">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="front_frame">
+      <origin xyz="0 -0.398 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.575 0.028 0.025" />
+        </geometry>
+      <material name="matte_dark_plastic">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="side_frame_0">
+      <origin xyz="-0.286 -0.206 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.384 0.025" />
+        </geometry>
+      <material name="matte_dark_plastic">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="side_frame_1">
+      <origin xyz="0.286 -0.206 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.384 0.025" />
+        </geometry>
+      <material name="matte_dark_plastic">
+        <color rgba="0.035 0.038 0.042 1" />
+        </material>
+      </visual>
+    <visual name="lid_glass">
+      <origin xyz="0 -0.206 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.552 0.372 0.006" />
+        </geometry>
+      <material name="slightly_green_glass">
+        <color rgba="0.55 0.86 0.92 0.36" />
+        </material>
+      </visual>
+    <visual name="moving_hinge_leaf">
+      <origin xyz="0 -0.019 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.016 0.006" />
+        </geometry>
+      <material name="brushed_satin_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    <collision name="rear_frame">
+      <origin xyz="0 -0.031 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.575 0.028 0.025" />
+        </geometry>
+      </collision>
+    <collision name="front_frame">
+      <origin xyz="0 -0.398 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.575 0.028 0.025" />
+        </geometry>
+      </collision>
+    <collision name="side_frame_0">
+      <origin xyz="-0.286 -0.206 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.384 0.025" />
+        </geometry>
+      </collision>
+    <collision name="side_frame_1">
+      <origin xyz="0.286 -0.206 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.384 0.025" />
+        </geometry>
+      </collision>
+    <collision name="lid_glass">
+      <origin xyz="0 -0.206 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.552 0.372 0.006" />
+        </geometry>
+      </collision>
+    <collision name="moving_hinge_leaf">
+      <origin xyz="0 -0.019 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.016 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="print_tray">
+    <visual name="front_bar">
+      <origin xyz="0 -0.13 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.282 0.014 0.01" />
+        </geometry>
+      <material name="charcoal_tray_plastic">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_bar">
+      <origin xyz="0 0.13 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.282 0.014 0.01" />
+        </geometry>
+      <material name="charcoal_tray_plastic">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="end_bar_0">
+      <origin xyz="-0.134 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.26 0.01" />
+        </geometry>
+      <material name="charcoal_tray_plastic">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="end_bar_1">
+      <origin xyz="0.134 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.26 0.01" />
+        </geometry>
+      <material name="charcoal_tray_plastic">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="support_plate">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.25 0.002" />
+        </geometry>
+      <material name="charcoal_tray_plastic">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_shoe">
+      <origin xyz="0 -0.13 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.018 0.006" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_shoe">
+      <origin xyz="0 0.13 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.018 0.006" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="print_card">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.235 0.002" />
+        </geometry>
+      <material name="semi_gloss_photo_paper">
+        <color rgba="0.94 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="front_clip_0">
+      <origin xyz="-0.09 -0.104 0.01775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.0025" />
+        </geometry>
+      <material name="charcoal_tray_plastic">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_clip_1">
+      <origin xyz="0.09 0.104 0.01775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.0025" />
+        </geometry>
+      <material name="charcoal_tray_plastic">
+        <color rgba="0.07 0.075 0.08 1" />
+        </material>
+      </visual>
+    <collision name="front_bar">
+      <origin xyz="0 -0.13 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.282 0.014 0.01" />
+        </geometry>
+      </collision>
+    <collision name="rear_bar">
+      <origin xyz="0 0.13 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.282 0.014 0.01" />
+        </geometry>
+      </collision>
+    <collision name="end_bar_0">
+      <origin xyz="-0.134 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.26 0.01" />
+        </geometry>
+      </collision>
+    <collision name="end_bar_1">
+      <origin xyz="0.134 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.26 0.01" />
+        </geometry>
+      </collision>
+    <collision name="support_plate">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.25 0.002" />
+        </geometry>
+      </collision>
+    <collision name="front_shoe">
+      <origin xyz="0 -0.13 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.018 0.006" />
+        </geometry>
+      </collision>
+    <collision name="rear_shoe">
+      <origin xyz="0 0.13 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.018 0.006" />
+        </geometry>
+      </collision>
+    <collision name="print_card">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.245 0.235 0.002" />
+        </geometry>
+      </collision>
+    <collision name="front_clip_0">
+      <origin xyz="-0.09 -0.104 0.01775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="rear_clip_1">
+      <origin xyz="0.09 0.104 0.01775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.0025" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_lid" type="revolute">
+    <origin xyz="0 0.247 0.112" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="1.6" lower="0" upper="1.35" />
+    </joint>
+  <joint name="body_to_print_tray" type="prismatic">
+    <origin xyz="0 0 0.09" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="print_tray" />
+    <axis xyz="1 0 0" />
+    <limit effort="35" velocity="0.22" lower="-0.12" upper="0.12" />
+    </joint>
+  </robot>

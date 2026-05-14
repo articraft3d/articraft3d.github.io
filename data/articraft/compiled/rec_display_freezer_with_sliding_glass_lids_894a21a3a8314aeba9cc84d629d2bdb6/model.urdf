@@ -1,0 +1,820 @@
+<robot name="supermarket_freezer_island">
+  <link name="tub">
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="2.6 1.4 0.16" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="tub_floor">
+      <origin xyz="0 0 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="2.34 1.14 0.1" />
+        </geometry>
+      <material name="warm_white_insulation">
+        <color rgba="0.82 0.84 0.8 1" />
+        </material>
+      </visual>
+    <visual name="liner_floor">
+      <origin xyz="0 0 0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="2.24 1.04 0.035" />
+        </geometry>
+      <material name="pale_freezer_liner">
+        <color rgba="0.74 0.88 0.94 1" />
+        </material>
+      </visual>
+    <visual name="front_wall">
+      <origin xyz="0 -0.66 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="2.6 0.12 0.64" />
+        </geometry>
+      <material name="white_enamel">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="rear_wall">
+      <origin xyz="0 0.66 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="2.6 0.12 0.64" />
+        </geometry>
+      <material name="white_enamel">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="end_wall_0">
+      <origin xyz="-1.3 0 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 1.4 0.64" />
+        </geometry>
+      <material name="white_enamel">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="end_wall_1">
+      <origin xyz="1.3 0 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 1.4 0.64" />
+        </geometry>
+      <material name="white_enamel">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="front_rim">
+      <origin xyz="0 -0.66 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="2.6 0.12 0.04" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_rim">
+      <origin xyz="0 0.66 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="2.6 0.12 0.04" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="end_rim_0">
+      <origin xyz="-1.3 0 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 1.4 0.04" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="end_rim_1">
+      <origin xyz="1.3 0 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 1.4 0.04" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="center_divider">
+      <origin xyz="0 0 0.805" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 1.3 0.055" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="track_0_outer">
+      <origin xyz="-1.095 0 0.825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.2 0.04" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="track_0_inner">
+      <origin xyz="-0.045 0 0.825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.2 0.04" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="track_1_inner">
+      <origin xyz="0.045 0 0.825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.2 0.04" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="track_1_outer">
+      <origin xyz="1.095 0 0.825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.2 0.04" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="front_grille_panel">
+      <origin xyz="0 -0.724 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.018 0.18" />
+        </geometry>
+      <material name="black_grille_shadow">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="grille_louver_0">
+      <origin xyz="-0.27 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      <material name="white_enamel">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="grille_louver_1">
+      <origin xyz="-0.18 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      <material name="white_enamel">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="grille_louver_2">
+      <origin xyz="-0.09 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      <material name="white_enamel">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="grille_louver_3">
+      <origin xyz="0 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      <material name="white_enamel">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="grille_louver_4">
+      <origin xyz="0.09 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      <material name="white_enamel">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="grille_louver_5">
+      <origin xyz="0.18 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      <material name="white_enamel">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <visual name="grille_louver_6">
+      <origin xyz="0.27 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      <material name="white_enamel">
+        <color rgba="0.92 0.94 0.93 1" />
+        </material>
+      </visual>
+    <collision name="base_plinth">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="2.6 1.4 0.16" />
+        </geometry>
+      </collision>
+    <collision name="tub_floor">
+      <origin xyz="0 0 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="2.34 1.14 0.1" />
+        </geometry>
+      </collision>
+    <collision name="liner_floor">
+      <origin xyz="0 0 0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="2.24 1.04 0.035" />
+        </geometry>
+      </collision>
+    <collision name="front_wall">
+      <origin xyz="0 -0.66 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="2.6 0.12 0.64" />
+        </geometry>
+      </collision>
+    <collision name="rear_wall">
+      <origin xyz="0 0.66 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="2.6 0.12 0.64" />
+        </geometry>
+      </collision>
+    <collision name="end_wall_0">
+      <origin xyz="-1.3 0 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 1.4 0.64" />
+        </geometry>
+      </collision>
+    <collision name="end_wall_1">
+      <origin xyz="1.3 0 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 1.4 0.64" />
+        </geometry>
+      </collision>
+    <collision name="front_rim">
+      <origin xyz="0 -0.66 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="2.6 0.12 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_rim">
+      <origin xyz="0 0.66 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="2.6 0.12 0.04" />
+        </geometry>
+      </collision>
+    <collision name="end_rim_0">
+      <origin xyz="-1.3 0 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 1.4 0.04" />
+        </geometry>
+      </collision>
+    <collision name="end_rim_1">
+      <origin xyz="1.3 0 0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 1.4 0.04" />
+        </geometry>
+      </collision>
+    <collision name="center_divider">
+      <origin xyz="0 0 0.805" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 1.3 0.055" />
+        </geometry>
+      </collision>
+    <collision name="track_0_outer">
+      <origin xyz="-1.095 0 0.825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.2 0.04" />
+        </geometry>
+      </collision>
+    <collision name="track_0_inner">
+      <origin xyz="-0.045 0 0.825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.2 0.04" />
+        </geometry>
+      </collision>
+    <collision name="track_1_inner">
+      <origin xyz="0.045 0 0.825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.2 0.04" />
+        </geometry>
+      </collision>
+    <collision name="track_1_outer">
+      <origin xyz="1.095 0 0.825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.2 0.04" />
+        </geometry>
+      </collision>
+    <collision name="front_grille_panel">
+      <origin xyz="0 -0.724 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.018 0.18" />
+        </geometry>
+      </collision>
+    <collision name="grille_louver_0">
+      <origin xyz="-0.27 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      </collision>
+    <collision name="grille_louver_1">
+      <origin xyz="-0.18 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      </collision>
+    <collision name="grille_louver_2">
+      <origin xyz="-0.09 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      </collision>
+    <collision name="grille_louver_3">
+      <origin xyz="0 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      </collision>
+    <collision name="grille_louver_4">
+      <origin xyz="0.09 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      </collision>
+    <collision name="grille_louver_5">
+      <origin xyz="0.18 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      </collision>
+    <collision name="grille_louver_6">
+      <origin xyz="0.27 -0.738 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.026 0.14" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid_0">
+    <visual name="glass_panel">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.96 0.024" />
+        </geometry>
+      <material name="slightly_blue_glass">
+        <color rgba="0.62 0.86 0.96 0.38" />
+        </material>
+      </visual>
+    <visual name="front_frame">
+      <origin xyz="0 -0.505 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.06 0.045" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_frame">
+      <origin xyz="0 0.505 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.06 0.045" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="outer_frame">
+      <origin xyz="-0.525 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 1.03 0.045" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="inner_frame">
+      <origin xyz="0.525 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 1.03 0.045" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="outer_runner">
+      <origin xyz="-0.525 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 1.02 0.025" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="inner_runner">
+      <origin xyz="0.525 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 1.02 0.025" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handle_mount_0">
+      <origin xyz="-0.51 -0.552 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.037 0.04" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handle_mount_1">
+      <origin xyz="-0.4 -0.552 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.037 0.04" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <collision name="glass_panel">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.96 0.024" />
+        </geometry>
+      </collision>
+    <collision name="front_frame">
+      <origin xyz="0 -0.505 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.06 0.045" />
+        </geometry>
+      </collision>
+    <collision name="rear_frame">
+      <origin xyz="0 0.505 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.06 0.045" />
+        </geometry>
+      </collision>
+    <collision name="outer_frame">
+      <origin xyz="-0.525 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 1.03 0.045" />
+        </geometry>
+      </collision>
+    <collision name="inner_frame">
+      <origin xyz="0.525 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 1.03 0.045" />
+        </geometry>
+      </collision>
+    <collision name="outer_runner">
+      <origin xyz="-0.525 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 1.02 0.025" />
+        </geometry>
+      </collision>
+    <collision name="inner_runner">
+      <origin xyz="0.525 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 1.02 0.025" />
+        </geometry>
+      </collision>
+    <collision name="handle_mount_0">
+      <origin xyz="-0.51 -0.552 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.037 0.04" />
+        </geometry>
+      </collision>
+    <collision name="handle_mount_1">
+      <origin xyz="-0.4 -0.552 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.037 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="handle_0">
+    <visual name="pivot_0">
+      <origin xyz="-0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.03" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="pivot_1">
+      <origin xyz="0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.03" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="arm_0">
+      <origin xyz="-0.055 -0.085 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.17 0.018" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="arm_1">
+      <origin xyz="0.055 -0.085 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.17 0.018" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="grip">
+      <origin xyz="0 -0.18 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.045 0.032" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="pivot_0">
+      <origin xyz="-0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="pivot_1">
+      <origin xyz="0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="arm_0">
+      <origin xyz="-0.055 -0.085 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.17 0.018" />
+        </geometry>
+      </collision>
+    <collision name="arm_1">
+      <origin xyz="0.055 -0.085 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.17 0.018" />
+        </geometry>
+      </collision>
+    <collision name="grip">
+      <origin xyz="0 -0.18 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.045 0.032" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid_1">
+    <visual name="glass_panel">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.96 0.024" />
+        </geometry>
+      <material name="slightly_blue_glass">
+        <color rgba="0.62 0.86 0.96 0.38" />
+        </material>
+      </visual>
+    <visual name="front_frame">
+      <origin xyz="0 -0.505 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.06 0.045" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_frame">
+      <origin xyz="0 0.505 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.06 0.045" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="outer_frame">
+      <origin xyz="0.525 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 1.03 0.045" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="inner_frame">
+      <origin xyz="-0.525 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 1.03 0.045" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="outer_runner">
+      <origin xyz="0.525 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 1.02 0.025" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="inner_runner">
+      <origin xyz="-0.525 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 1.02 0.025" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handle_mount_0">
+      <origin xyz="0.4 -0.552 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.037 0.04" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handle_mount_1">
+      <origin xyz="0.51 -0.552 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.037 0.04" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <collision name="glass_panel">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.96 0.024" />
+        </geometry>
+      </collision>
+    <collision name="front_frame">
+      <origin xyz="0 -0.505 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.06 0.045" />
+        </geometry>
+      </collision>
+    <collision name="rear_frame">
+      <origin xyz="0 0.505 0" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.06 0.045" />
+        </geometry>
+      </collision>
+    <collision name="outer_frame">
+      <origin xyz="0.525 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 1.03 0.045" />
+        </geometry>
+      </collision>
+    <collision name="inner_frame">
+      <origin xyz="-0.525 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 1.03 0.045" />
+        </geometry>
+      </collision>
+    <collision name="outer_runner">
+      <origin xyz="0.525 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 1.02 0.025" />
+        </geometry>
+      </collision>
+    <collision name="inner_runner">
+      <origin xyz="-0.525 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 1.02 0.025" />
+        </geometry>
+      </collision>
+    <collision name="handle_mount_0">
+      <origin xyz="0.4 -0.552 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.037 0.04" />
+        </geometry>
+      </collision>
+    <collision name="handle_mount_1">
+      <origin xyz="0.51 -0.552 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.037 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="handle_1">
+    <visual name="pivot_0">
+      <origin xyz="-0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.03" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="pivot_1">
+      <origin xyz="0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.03" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="arm_0">
+      <origin xyz="-0.055 -0.085 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.17 0.018" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="arm_1">
+      <origin xyz="0.055 -0.085 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.17 0.018" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="grip">
+      <origin xyz="0 -0.18 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.045 0.032" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="pivot_0">
+      <origin xyz="-0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="pivot_1">
+      <origin xyz="0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="arm_0">
+      <origin xyz="-0.055 -0.085 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.17 0.018" />
+        </geometry>
+      </collision>
+    <collision name="arm_1">
+      <origin xyz="0.055 -0.085 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.17 0.018" />
+        </geometry>
+      </collision>
+    <collision name="grip">
+      <origin xyz="0 -0.18 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.175 0.045 0.032" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="tub_to_lid_0" type="prismatic">
+    <origin xyz="-0.57 0 0.8925" rpy="0 0 0" />
+    <parent link="tub" />
+    <child link="lid_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="60" velocity="0.25" lower="0" upper="0.3" />
+    </joint>
+  <joint name="lid_0_to_handle_0" type="revolute">
+    <origin xyz="-0.455 -0.583 0" rpy="0 0 0" />
+    <parent link="lid_0" />
+    <child link="handle_0" />
+    <axis xyz="-1 0 0" />
+    <limit effort="3" velocity="2" lower="0" upper="1.25" />
+    </joint>
+  <joint name="tub_to_lid_1" type="prismatic">
+    <origin xyz="0.57 0 0.8925" rpy="0 0 0" />
+    <parent link="tub" />
+    <child link="lid_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="60" velocity="0.25" lower="0" upper="0.3" />
+    </joint>
+  <joint name="lid_1_to_handle_1" type="revolute">
+    <origin xyz="0.455 -0.583 0" rpy="0 0 0" />
+    <parent link="lid_1" />
+    <child link="handle_1" />
+    <axis xyz="-1 0 0" />
+    <limit effort="3" velocity="2" lower="0" upper="1.25" />
+    </joint>
+  </robot>

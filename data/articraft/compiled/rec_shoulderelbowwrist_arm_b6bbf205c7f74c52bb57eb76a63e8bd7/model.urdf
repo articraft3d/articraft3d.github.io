@@ -1,0 +1,439 @@
+<robot name="compact_three_joint_robot_arm">
+  <material name="dark_anodized">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="charcoal">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <material name="safety_orange">
+    <color rgba="0.95 0.36 0.08 1" />
+    </material>
+  <material name="powdercoat_gray">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.55 0.58 0.6 1" />
+    </material>
+  <material name="tool_plate_blue">
+    <color rgba="0.06 0.24 0.78 1" />
+    </material>
+  <link name="base">
+    <visual name="floor_flange">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.03" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="short_column">
+      <origin xyz="0 0 0.098" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.138" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_saddle">
+      <origin xyz="0 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.17 0.03" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_cheek_front">
+      <origin xyz="0 -0.08 0.232" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.028 0.145" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_pin_cap_front">
+      <origin xyz="0 -0.092 0.24" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_cheek_rear">
+      <origin xyz="0 0.08 0.232" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.028 0.145" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_pin_cap_rear">
+      <origin xyz="0 0.092 0.24" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <collision name="floor_flange">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="short_column">
+      <origin xyz="0 0 0.098" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.138" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_saddle">
+      <origin xyz="0 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.17 0.03" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_cheek_front">
+      <origin xyz="0 -0.08 0.232" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.028 0.145" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_pin_cap_front">
+      <origin xyz="0 -0.092 0.24" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_cheek_rear">
+      <origin xyz="0 0.08 0.232" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.028 0.145" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_pin_cap_rear">
+      <origin xyz="0 0.092 0.24" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shoulder_link">
+    <visual name="shoulder_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.132" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="wide_link_body">
+      <origin xyz="0.143 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.285 0.092 0.078" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="elbow_side_0">
+      <origin xyz="0.308 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.019 0.036" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="elbow_side_1">
+      <origin xyz="0.308 0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.019 0.036" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="elbow_outer_boss_0">
+      <origin xyz="0.34 -0.058 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="elbow_pin_cap_0">
+      <origin xyz="0.34 -0.06786 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="elbow_outer_boss_1">
+      <origin xyz="0.34 0.058 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="elbow_pin_cap_1">
+      <origin xyz="0.34 0.06786 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <collision name="shoulder_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.132" />
+        </geometry>
+      </collision>
+    <collision name="wide_link_body">
+      <origin xyz="0.143 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.285 0.092 0.078" />
+        </geometry>
+      </collision>
+    <collision name="elbow_side_0">
+      <origin xyz="0.308 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.019 0.036" />
+        </geometry>
+      </collision>
+    <collision name="elbow_side_1">
+      <origin xyz="0.308 0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.019 0.036" />
+        </geometry>
+      </collision>
+    <collision name="elbow_outer_boss_0">
+      <origin xyz="0.34 -0.058 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="elbow_pin_cap_0">
+      <origin xyz="0.34 -0.06786 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="elbow_outer_boss_1">
+      <origin xyz="0.34 0.058 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="elbow_pin_cap_1">
+      <origin xyz="0.34 0.06786 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="forearm">
+    <visual name="elbow_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.091" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="slim_link_body">
+      <origin xyz="0.132 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.055 0.052" />
+        </geometry>
+      <material name="powdercoat_gray">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="wrist_hub">
+      <origin xyz="0.28 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.076" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="wrist_neck">
+      <origin xyz="0.248 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.042 0.03" />
+        </geometry>
+      <material name="powdercoat_gray">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <collision name="elbow_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.049" length="0.091" />
+        </geometry>
+      </collision>
+    <collision name="slim_link_body">
+      <origin xyz="0.132 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.235 0.055 0.052" />
+        </geometry>
+      </collision>
+    <collision name="wrist_hub">
+      <origin xyz="0.28 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.076" />
+        </geometry>
+      </collision>
+    <collision name="wrist_neck">
+      <origin xyz="0.248 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.042 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist">
+    <visual name="yoke_side_0">
+      <origin xyz="0.022 -0.047 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.018 0.092" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="yoke_side_1">
+      <origin xyz="0.022 0.047 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.018 0.092" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0.079 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.116 0.022" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="wrist_pin_cap_0">
+      <origin xyz="0 -0.061 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="wrist_pin_cap_1">
+      <origin xyz="0 0.061 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="plate_neck">
+      <origin xyz="0.105 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.055 0.055" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="square_output_plate">
+      <origin xyz="0.143 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.12 0.12" />
+        </geometry>
+      <material name="tool_plate_blue">
+        <color rgba="0.06 0.24 0.78 1" />
+        </material>
+      </visual>
+    <collision name="yoke_side_0">
+      <origin xyz="0.022 -0.047 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.018 0.092" />
+        </geometry>
+      </collision>
+    <collision name="yoke_side_1">
+      <origin xyz="0.022 0.047 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.018 0.092" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0.079 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.116 0.022" />
+        </geometry>
+      </collision>
+    <collision name="wrist_pin_cap_0">
+      <origin xyz="0 -0.061 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="wrist_pin_cap_1">
+      <origin xyz="0 0.061 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="plate_neck">
+      <origin xyz="0.105 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.055 0.055" />
+        </geometry>
+      </collision>
+    <collision name="square_output_plate">
+      <origin xyz="0.143 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.12 0.12" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_shoulder" type="revolute">
+    <origin xyz="0 0 0.24" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="shoulder_link" />
+    <axis xyz="0 1 0" />
+    <limit effort="55" velocity="1.6" lower="-1.2" upper="1.2" />
+    </joint>
+  <joint name="shoulder_to_forearm" type="revolute">
+    <origin xyz="0.34 0 0" rpy="0 0 0" />
+    <parent link="shoulder_link" />
+    <child link="forearm" />
+    <axis xyz="0 1 0" />
+    <limit effort="35" velocity="1.8" lower="-1.35" upper="1.45" />
+    </joint>
+  <joint name="forearm_to_wrist" type="revolute">
+    <origin xyz="0.28 0 0" rpy="0 0 0" />
+    <parent link="forearm" />
+    <child link="wrist" />
+    <axis xyz="0 1 0" />
+    <limit effort="14" velocity="2.8" lower="-1.6" upper="1.6" />
+    </joint>
+  </robot>

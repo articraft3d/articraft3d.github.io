@@ -1,0 +1,299 @@
+<robot name="telephoto_zoom_lens">
+  <material name="satin_black">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="ribbed_rubber">
+    <color rgba="0.035 0.036 0.038 1" />
+    </material>
+  <material name="graphite_metal">
+    <color rgba="0.12 0.125 0.13 1" />
+    </material>
+  <material name="coated_glass">
+    <color rgba="0.18 0.32 0.4 0.48" />
+    </material>
+  <material name="rear_glass">
+    <color rgba="0.03 0.04 0.05 0.7" />
+    </material>
+  <material name="engraving_white">
+    <color rgba="0.86 0.88 0.84 1" />
+    </material>
+  <material name="mount_red">
+    <color rgba="0.7 0.04 0.03 1" />
+    </material>
+  <link name="barrel">
+    <visual name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/stepped_lens_barrel.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="front_element">
+      <origin xyz="0.302 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.087" length="0.008" />
+        </geometry>
+      <material name="coated_glass">
+        <color rgba="0.18 0.32 0.4 0.48" />
+        </material>
+      </visual>
+    <visual name="rear_element">
+      <origin xyz="-0.444 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.006" />
+        </geometry>
+      <material name="rear_glass">
+        <color rgba="0.03 0.04 0.05 0.7" />
+        </material>
+      </visual>
+    <visual name="zoom_index">
+      <origin xyz="-0.145 0 0.0718" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.022 0.0024" />
+        </geometry>
+      <material name="engraving_white">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="focus_index">
+      <origin xyz="0.07 0 0.0748" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.026 0.0024" />
+        </geometry>
+      <material name="engraving_white">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="mount_dot">
+      <origin xyz="-0.392 -0.039 0.039" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0045" />
+        </geometry>
+      <material name="mount_red">
+        <color rgba="0.7 0.04 0.03 1" />
+        </material>
+      </visual>
+    <collision name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/stepped_lens_barrel.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_element">
+      <origin xyz="0.302 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.087" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="rear_element">
+      <origin xyz="-0.444 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="zoom_index">
+      <origin xyz="-0.145 0 0.0718" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.022 0.0024" />
+        </geometry>
+      </collision>
+    <collision name="focus_index">
+      <origin xyz="0.07 0 0.0748" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.026 0.0024" />
+        </geometry>
+      </collision>
+    <collision name="mount_dot">
+      <origin xyz="-0.392 -0.039 0.039" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="zoom_ring">
+    <visual name="zoom_grip">
+      <geometry>
+        <mesh filename="assets/meshes/zoom_ring_ribbed.obj" />
+        </geometry>
+      <material name="ribbed_rubber">
+        <color rgba="0.035 0.036 0.038 1" />
+        </material>
+      </visual>
+    <visual name="zoom_mark_m0_042">
+      <origin xyz="-0.042 0 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.018 0.002" />
+        </geometry>
+      <material name="engraving_white">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="zoom_mark_m0_006">
+      <origin xyz="-0.006 0 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.012 0.002" />
+        </geometry>
+      <material name="engraving_white">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="zoom_mark_0_030">
+      <origin xyz="0.03 0 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.016 0.002" />
+        </geometry>
+      <material name="engraving_white">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <collision name="zoom_grip">
+      <geometry>
+        <mesh filename="assets/meshes/zoom_ring_ribbed.obj" />
+        </geometry>
+      </collision>
+    <collision name="zoom_mark_m0_042">
+      <origin xyz="-0.042 0 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.018 0.002" />
+        </geometry>
+      </collision>
+    <collision name="zoom_mark_m0_006">
+      <origin xyz="-0.006 0 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.012 0.002" />
+        </geometry>
+      </collision>
+    <collision name="zoom_mark_0_030">
+      <origin xyz="0.03 0 0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.016 0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="focus_ring">
+    <visual name="focus_grip">
+      <geometry>
+        <mesh filename="assets/meshes/focus_ring_ribbed.obj" />
+        </geometry>
+      <material name="ribbed_rubber">
+        <color rgba="0.035 0.036 0.038 1" />
+        </material>
+      </visual>
+    <visual name="focus_mark_0">
+      <origin xyz="-0.032 0 0.101" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.02 0.002" />
+        </geometry>
+      <material name="engraving_white">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="focus_mark_1">
+      <origin xyz="0 0 0.101" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.016 0.002" />
+        </geometry>
+      <material name="engraving_white">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="focus_mark_2">
+      <origin xyz="0.032 0 0.101" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.012 0.002" />
+        </geometry>
+      <material name="engraving_white">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <collision name="focus_grip">
+      <geometry>
+        <mesh filename="assets/meshes/focus_ring_ribbed.obj" />
+        </geometry>
+      </collision>
+    <collision name="focus_mark_0">
+      <origin xyz="-0.032 0 0.101" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.02 0.002" />
+        </geometry>
+      </collision>
+    <collision name="focus_mark_1">
+      <origin xyz="0 0 0.101" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.016 0.002" />
+        </geometry>
+      </collision>
+    <collision name="focus_mark_2">
+      <origin xyz="0.032 0 0.101" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.012 0.002" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tripod_collar">
+    <visual name="collar_foot">
+      <geometry>
+        <mesh filename="assets/meshes/tripod_collar_foot.obj" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="clamp_screw">
+      <origin xyz="0 0.107 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      <material name="engraving_white">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="tripod_socket">
+      <origin xyz="0 0 -0.1765" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="collar_foot">
+      <geometry>
+        <mesh filename="assets/meshes/tripod_collar_foot.obj" />
+        </geometry>
+      </collision>
+    <collision name="clamp_screw">
+      <origin xyz="0 0.107 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="tripod_socket">
+      <origin xyz="0 0 -0.1765" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="barrel_to_zoom_ring" type="revolute">
+    <origin xyz="-0.245 0 0" rpy="0 0 0" />
+    <parent link="barrel" />
+    <child link="zoom_ring" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.7" velocity="3.5" lower="-0.663225" upper="1.6057" />
+    </joint>
+  <joint name="barrel_to_focus_ring" type="revolute">
+    <origin xyz="0.155 0 0" rpy="0 0 0" />
+    <parent link="barrel" />
+    <child link="focus_ring" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.45" velocity="4" lower="-1.8326" upper="1.8326" />
+    </joint>
+  <joint name="barrel_to_tripod_collar" type="continuous">
+    <origin xyz="-0.01 0 0" rpy="0 0 0" />
+    <parent link="barrel" />
+    <child link="tripod_collar" />
+    <axis xyz="1 0 0" />
+    <limit effort="2" velocity="2.5" />
+    </joint>
+  </robot>

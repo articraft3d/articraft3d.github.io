@@ -1,0 +1,172 @@
+<robot name="screw_in_bulb_socket">
+  <material name="black_phenolic">
+    <color rgba="0.015 0.013 0.011 1" />
+    </material>
+  <material name="brass_threaded_collar">
+    <color rgba="0.93 0.67 0.27 1" />
+    </material>
+  <material name="brushed_nickel_base">
+    <color rgba="0.72 0.74 0.7 1" />
+    </material>
+  <material name="warm_clear_glass">
+    <color rgba="0.82 0.94 1 0.32" />
+    </material>
+  <material name="dark_insulator">
+    <color rgba="0.03 0.026 0.022 1" />
+    </material>
+  <material name="warm_filament">
+    <color rgba="1 0.64 0.2 1" />
+    </material>
+  <link name="socket">
+    <visual name="socket_shell">
+      <geometry>
+        <mesh filename="assets/meshes/socket_shell.obj" />
+        </geometry>
+      <material name="black_phenolic">
+        <color rgba="0.015 0.013 0.011 1" />
+        </material>
+      </visual>
+    <visual name="threaded_collar">
+      <geometry>
+        <mesh filename="assets/meshes/threaded_collar.obj" />
+        </geometry>
+      <material name="brass_threaded_collar">
+        <color rgba="0.93 0.67 0.27 1" />
+        </material>
+      </visual>
+    <collision name="socket_shell">
+      <geometry>
+        <mesh filename="assets/meshes/socket_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="threaded_collar">
+      <geometry>
+        <mesh filename="assets/meshes/threaded_collar.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bulb">
+    <visual name="threaded_base">
+      <geometry>
+        <mesh filename="assets/meshes/threaded_base.obj" />
+        </geometry>
+      <material name="brushed_nickel_base">
+        <color rgba="0.72 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="base_seating_flange">
+      <origin xyz="0 0 0.04525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0152" length="0.0025" />
+        </geometry>
+      <material name="brushed_nickel_base">
+        <color rgba="0.72 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="glass_envelope">
+      <geometry>
+        <mesh filename="assets/meshes/glass_envelope.obj" />
+        </geometry>
+      <material name="warm_clear_glass">
+        <color rgba="0.82 0.94 1 0.32" />
+        </material>
+      </visual>
+    <visual name="base_insulator">
+      <origin xyz="0 0 0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0076" length="0.0042" />
+        </geometry>
+      <material name="dark_insulator">
+        <color rgba="0.03 0.026 0.022 1" />
+        </material>
+      </visual>
+    <visual name="base_contact">
+      <origin xyz="0 0 0.0048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.0024" />
+        </geometry>
+      <material name="brushed_nickel_base">
+        <color rgba="0.72 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="filament_support_0">
+      <origin xyz="-0.0048 0 0.0655" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00038" length="0.027" />
+        </geometry>
+      <material name="warm_filament">
+        <color rgba="1 0.64 0.2 1" />
+        </material>
+      </visual>
+    <visual name="filament_support_1">
+      <origin xyz="0.0048 0 0.0655" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00038" length="0.027" />
+        </geometry>
+      <material name="warm_filament">
+        <color rgba="1 0.64 0.2 1" />
+        </material>
+      </visual>
+    <visual name="filament_bridge">
+      <origin xyz="0 0 0.079" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.00062" length="0.0096" />
+        </geometry>
+      <material name="warm_filament">
+        <color rgba="1 0.64 0.2 1" />
+        </material>
+      </visual>
+    <collision name="threaded_base">
+      <geometry>
+        <mesh filename="assets/meshes/threaded_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_seating_flange">
+      <origin xyz="0 0 0.04525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0152" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="glass_envelope">
+      <geometry>
+        <mesh filename="assets/meshes/glass_envelope.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_insulator">
+      <origin xyz="0 0 0.0074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0076" length="0.0042" />
+        </geometry>
+      </collision>
+    <collision name="base_contact">
+      <origin xyz="0 0 0.0048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.0024" />
+        </geometry>
+      </collision>
+    <collision name="filament_support_0">
+      <origin xyz="-0.0048 0 0.0655" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00038" length="0.027" />
+        </geometry>
+      </collision>
+    <collision name="filament_support_1">
+      <origin xyz="0.0048 0 0.0655" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.00038" length="0.027" />
+        </geometry>
+      </collision>
+    <collision name="filament_bridge">
+      <origin xyz="0 0 0.079" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.00062" length="0.0096" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="socket_to_bulb" type="continuous">
+    <parent link="socket" />
+    <child link="bulb" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="8" />
+    </joint>
+  </robot>

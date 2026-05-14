@@ -1,0 +1,466 @@
+<robot name="service_manipulator">
+  <material name="dark_cast">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="satin_metal">
+    <color rgba="0.62 0.66 0.68 1" />
+    </material>
+  <material name="blue_housing">
+    <color rgba="0.1 0.25 0.45 1" />
+    </material>
+  <material name="amber_guard">
+    <color rgba="0.95 0.58 0.12 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.015 0.015 0.014 1" />
+    </material>
+  <link name="base">
+    <visual name="floor_plate">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.045" />
+        </geometry>
+      <material name="dark_cast">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="bearing_boss">
+      <origin xyz="0 0 0.0775" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.065" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="base_foot">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="bearing_boss">
+      <origin xyz="0 0 0.0775" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.065" />
+        </geometry>
+      </collision>
+    <collision name="base_foot">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="turret">
+    <visual name="turntable_cap">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.06" />
+        </geometry>
+      <material name="blue_housing">
+        <color rgba="0.1 0.25 0.45 1" />
+        </material>
+      </visual>
+    <visual name="riser_column">
+      <origin xyz="0 0 0.2875" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.455" />
+        </geometry>
+      <material name="blue_housing">
+        <color rgba="0.1 0.25 0.45 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_housing">
+      <origin xyz="0.04 0 0.545" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.24 0.21" />
+        </geometry>
+      <material name="blue_housing">
+        <color rgba="0.1 0.25 0.45 1" />
+        </material>
+      </visual>
+    <visual name="top_rail">
+      <origin xyz="0.4425 0 0.6275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.625 0.18 0.025" />
+        </geometry>
+      <material name="blue_housing">
+        <color rgba="0.1 0.25 0.45 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail">
+      <origin xyz="0.4425 0 0.4725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.625 0.18 0.025" />
+        </geometry>
+      <material name="blue_housing">
+        <color rgba="0.1 0.25 0.45 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_0">
+      <origin xyz="0.4425 0.077 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.625 0.026 0.135" />
+        </geometry>
+      <material name="blue_housing">
+        <color rgba="0.1 0.25 0.45 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="0.4425 -0.077 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.625 0.026 0.135" />
+        </geometry>
+      <material name="blue_housing">
+        <color rgba="0.1 0.25 0.45 1" />
+        </material>
+      </visual>
+    <visual name="front_top_lip">
+      <origin xyz="0.76 0 0.6275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.18 0.025" />
+        </geometry>
+      <material name="amber_guard">
+        <color rgba="0.95 0.58 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_bottom_lip">
+      <origin xyz="0.76 0 0.4725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.18 0.025" />
+        </geometry>
+      <material name="amber_guard">
+        <color rgba="0.95 0.58 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_side_lip_0">
+      <origin xyz="0.76 0.077 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.026 0.135" />
+        </geometry>
+      <material name="amber_guard">
+        <color rgba="0.95 0.58 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_side_lip_1">
+      <origin xyz="0.76 -0.077 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.026 0.135" />
+        </geometry>
+      <material name="amber_guard">
+        <color rgba="0.95 0.58 0.12 1" />
+        </material>
+      </visual>
+    <collision name="turntable_cap">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="riser_column">
+      <origin xyz="0 0 0.2875" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.455" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_housing">
+      <origin xyz="0.04 0 0.545" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.24 0.21" />
+        </geometry>
+      </collision>
+    <collision name="top_rail">
+      <origin xyz="0.4425 0 0.6275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.625 0.18 0.025" />
+        </geometry>
+      </collision>
+    <collision name="bottom_rail">
+      <origin xyz="0.4425 0 0.4725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.625 0.18 0.025" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_0">
+      <origin xyz="0.4425 0.077 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.625 0.026 0.135" />
+        </geometry>
+      </collision>
+    <collision name="side_rail_1">
+      <origin xyz="0.4425 -0.077 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.625 0.026 0.135" />
+        </geometry>
+      </collision>
+    <collision name="front_top_lip">
+      <origin xyz="0.76 0 0.6275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.18 0.025" />
+        </geometry>
+      </collision>
+    <collision name="front_bottom_lip">
+      <origin xyz="0.76 0 0.4725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.18 0.025" />
+        </geometry>
+      </collision>
+    <collision name="front_side_lip_0">
+      <origin xyz="0.76 0.077 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.026 0.135" />
+        </geometry>
+      </collision>
+    <collision name="front_side_lip_1">
+      <origin xyz="0.76 -0.077 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.026 0.135" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="slide">
+    <visual name="inner_member">
+      <origin xyz="0.36 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.09 0.07" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="top_slide_shoe">
+      <origin xyz="0.35 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.078 0.03" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="bottom_slide_shoe">
+      <origin xyz="0.35 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.078 0.03" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="side_slide_shoe_0">
+      <origin xyz="0.35 0.0545 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.019 0.058" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="side_slide_shoe_1">
+      <origin xyz="0.35 -0.0545 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.019 0.058" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="wrist_carriage">
+      <origin xyz="0.78 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.15 0.12" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0.88 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.15 0.085" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_0">
+      <origin xyz="0.94 0.076 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.024 0.17" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_1">
+      <origin xyz="0.94 -0.076 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.024 0.17" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <collision name="inner_member">
+      <origin xyz="0.36 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.09 0.07" />
+        </geometry>
+      </collision>
+    <collision name="top_slide_shoe">
+      <origin xyz="0.35 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.078 0.03" />
+        </geometry>
+      </collision>
+    <collision name="bottom_slide_shoe">
+      <origin xyz="0.35 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.078 0.03" />
+        </geometry>
+      </collision>
+    <collision name="side_slide_shoe_0">
+      <origin xyz="0.35 0.0545 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.019 0.058" />
+        </geometry>
+      </collision>
+    <collision name="side_slide_shoe_1">
+      <origin xyz="0.35 -0.0545 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.019 0.058" />
+        </geometry>
+      </collision>
+    <collision name="wrist_carriage">
+      <origin xyz="0.78 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.15 0.12" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0.88 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.15 0.085" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_0">
+      <origin xyz="0.94 0.076 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.024 0.17" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_1">
+      <origin xyz="0.94 -0.076 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.024 0.17" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist">
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.116" />
+        </geometry>
+      <material name="dark_cast">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="hinge_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.18" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="wrist_housing">
+      <origin xyz="0.1325 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.1 0.08" />
+        </geometry>
+      <material name="blue_housing">
+        <color rgba="0.1 0.25 0.45 1" />
+        </material>
+      </visual>
+    <visual name="tool_plate">
+      <origin xyz="0.2575 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.16 0.125" />
+        </geometry>
+      <material name="dark_cast">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="tool_bolt_pattern">
+      <origin xyz="0.2825 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      <material name="amber_guard">
+        <color rgba="0.95 0.58 0.12 1" />
+        </material>
+      </visual>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.116" />
+        </geometry>
+      </collision>
+    <collision name="hinge_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="wrist_housing">
+      <origin xyz="0.1325 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.1 0.08" />
+        </geometry>
+      </collision>
+    <collision name="tool_plate">
+      <origin xyz="0.2575 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.16 0.125" />
+        </geometry>
+      </collision>
+    <collision name="tool_bolt_pattern">
+      <origin xyz="0.2825 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_yaw" type="revolute">
+    <origin xyz="0 0 0.11" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="turret" />
+    <axis xyz="0 0 1" />
+    <limit effort="180" velocity="1.2" lower="-2.8" upper="2.8" />
+    </joint>
+  <joint name="slide_extension" type="prismatic">
+    <origin xyz="0.17 0 0.55" rpy="0 0 0" />
+    <parent link="turret" />
+    <child link="slide" />
+    <axis xyz="1 0 0" />
+    <limit effort="220" velocity="0.35" lower="0" upper="0.25" />
+    </joint>
+  <joint name="wrist_pitch" type="revolute">
+    <origin xyz="0.94 0 0" rpy="0 0 0" />
+    <parent link="slide" />
+    <child link="wrist" />
+    <axis xyz="0 1 0" />
+    <limit effort="55" velocity="1.8" lower="-1.2" upper="1.2" />
+    </joint>
+  </robot>

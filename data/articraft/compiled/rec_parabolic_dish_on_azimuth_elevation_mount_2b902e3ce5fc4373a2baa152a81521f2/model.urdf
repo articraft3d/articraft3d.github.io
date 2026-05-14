@@ -1,0 +1,408 @@
+<robot name="wall_bracket_communication_dish">
+  <material name="galvanized_steel">
+    <color rgba="0.62 0.65 0.64 1" />
+    </material>
+  <material name="dark_clamp">
+    <color rgba="0.16 0.17 0.17 1" />
+    </material>
+  <material name="warm_wall">
+    <color rgba="0.76 0.72 0.64 1" />
+    </material>
+  <material name="dish_white">
+    <color rgba="0.92 0.94 0.91 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.02 0.025 0.025 1" />
+    </material>
+  <material name="signal_gray">
+    <color rgba="0.52 0.55 0.55 1" />
+    </material>
+  <link name="wall_mount">
+    <visual name="wall_plate">
+      <origin xyz="-0.18 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.34 0.56" />
+        </geometry>
+      <material name="warm_wall" />
+      </visual>
+    <visual name="pipe_mast">
+      <geometry>
+        <cylinder radius="0.026" length="1.06" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="standoff_arm_lower">
+      <origin xyz="-0.08 0 -0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.162 0.058 0.046" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="pipe_saddle_lower">
+      <origin xyz="-0.026 0 -0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.08 0.03" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="standoff_arm_upper">
+      <origin xyz="-0.08 0 0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.162 0.058 0.046" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="pipe_saddle_upper">
+      <origin xyz="-0.026 0 0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.08 0.03" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="wall_bolt_-0.11_-0.18">
+      <origin xyz="-0.154 -0.11 -0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      <material name="dark_clamp" />
+      </visual>
+    <visual name="wall_bolt_-0.11_+0.18">
+      <origin xyz="-0.154 -0.11 0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      <material name="dark_clamp" />
+      </visual>
+    <visual name="wall_bolt_+0.11_-0.18">
+      <origin xyz="-0.154 0.11 -0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      <material name="dark_clamp" />
+      </visual>
+    <visual name="wall_bolt_+0.11_+0.18">
+      <origin xyz="-0.154 0.11 0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      <material name="dark_clamp" />
+      </visual>
+    <collision name="wall_plate">
+      <origin xyz="-0.18 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.34 0.56" />
+        </geometry>
+      </collision>
+    <collision name="pipe_mast">
+      <geometry>
+        <cylinder radius="0.026" length="1.06" />
+        </geometry>
+      </collision>
+    <collision name="standoff_arm_lower">
+      <origin xyz="-0.08 0 -0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.162 0.058 0.046" />
+        </geometry>
+      </collision>
+    <collision name="pipe_saddle_lower">
+      <origin xyz="-0.026 0 -0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.08 0.03" />
+        </geometry>
+      </collision>
+    <collision name="standoff_arm_upper">
+      <origin xyz="-0.08 0 0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.162 0.058 0.046" />
+        </geometry>
+      </collision>
+    <collision name="pipe_saddle_upper">
+      <origin xyz="-0.026 0 0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.08 0.03" />
+        </geometry>
+      </collision>
+    <collision name="wall_bolt_-0.11_-0.18">
+      <origin xyz="-0.154 -0.11 -0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="wall_bolt_-0.11_+0.18">
+      <origin xyz="-0.154 -0.11 0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="wall_bolt_+0.11_-0.18">
+      <origin xyz="-0.154 0.11 -0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="wall_bolt_+0.11_+0.18">
+      <origin xyz="-0.154 0.11 0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="clamp_head">
+    <visual name="azimuth_collar">
+      <geometry>
+        <mesh filename="assets/meshes/azimuth_clamp_collar.obj" />
+        </geometry>
+      <material name="dark_clamp" />
+      </visual>
+    <visual name="mast_liner_front">
+      <origin xyz="0.033 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.12" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="mast_liner_rear">
+      <origin xyz="-0.033 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.12" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="lower_side_arm_0">
+      <origin xyz="0.08 -0.047 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.018 0.026" />
+        </geometry>
+      <material name="dark_clamp" />
+      </visual>
+    <visual name="lower_side_arm_1">
+      <origin xyz="0.08 0.047 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.018 0.026" />
+        </geometry>
+      <material name="dark_clamp" />
+      </visual>
+    <visual name="clamp_bolt">
+      <origin xyz="0.035 0 -0.056" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.14" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="elevation_cheek_0">
+      <origin xyz="0.18 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.014 0.174" />
+        </geometry>
+      <material name="dark_clamp" />
+      </visual>
+    <visual name="elevation_cheek_1">
+      <origin xyz="0.18 0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.014 0.174" />
+        </geometry>
+      <material name="dark_clamp" />
+      </visual>
+    <visual name="keeper_bridge_0">
+      <origin xyz="0.18 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.124 0.018" />
+        </geometry>
+      <material name="dark_clamp" />
+      </visual>
+    <visual name="keeper_bridge_1">
+      <origin xyz="0.18 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.124 0.018" />
+        </geometry>
+      <material name="dark_clamp" />
+      </visual>
+    <visual name="elevation_scale_plate">
+      <origin xyz="0.196 -0.068 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.018 0.145" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <collision name="azimuth_collar">
+      <geometry>
+        <mesh filename="assets/meshes/azimuth_clamp_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="mast_liner_front">
+      <origin xyz="0.033 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.12" />
+        </geometry>
+      </collision>
+    <collision name="mast_liner_rear">
+      <origin xyz="-0.033 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.034 0.12" />
+        </geometry>
+      </collision>
+    <collision name="lower_side_arm_0">
+      <origin xyz="0.08 -0.047 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="lower_side_arm_1">
+      <origin xyz="0.08 0.047 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.018 0.026" />
+        </geometry>
+      </collision>
+    <collision name="clamp_bolt">
+      <origin xyz="0.035 0 -0.056" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.14" />
+        </geometry>
+      </collision>
+    <collision name="elevation_cheek_0">
+      <origin xyz="0.18 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.014 0.174" />
+        </geometry>
+      </collision>
+    <collision name="elevation_cheek_1">
+      <origin xyz="0.18 0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.014 0.174" />
+        </geometry>
+      </collision>
+    <collision name="keeper_bridge_0">
+      <origin xyz="0.18 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.124 0.018" />
+        </geometry>
+      </collision>
+    <collision name="keeper_bridge_1">
+      <origin xyz="0.18 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.124 0.018" />
+        </geometry>
+      </collision>
+    <collision name="elevation_scale_plate">
+      <origin xyz="0.196 -0.068 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.018 0.145" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dish_frame">
+    <visual name="trunnion_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.096" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="rear_hub">
+      <origin xyz="0.15 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.036" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="rear_support_tube">
+      <origin xyz="0.078 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.168" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="reflector_shell">
+      <geometry>
+        <mesh filename="assets/meshes/shallow_parabolic_reflector.obj" />
+        </geometry>
+      <material name="dish_white" />
+      </visual>
+    <visual name="feed_arm_foot">
+      <origin xyz="0.255 0 -0.305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.042 0.038" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="feed_arm">
+      <geometry>
+        <mesh filename="assets/meshes/curved_feed_arm.obj" />
+        </geometry>
+      <material name="galvanized_steel" />
+      </visual>
+    <visual name="feed_horn">
+      <origin xyz="0.638 0 -0.002" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.082" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="feed_collar">
+      <origin xyz="0.59 0 -0.012" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.052" />
+        </geometry>
+      <material name="signal_gray" />
+      </visual>
+    <collision name="trunnion_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.096" />
+        </geometry>
+      </collision>
+    <collision name="rear_hub">
+      <origin xyz="0.15 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.036" />
+        </geometry>
+      </collision>
+    <collision name="rear_support_tube">
+      <origin xyz="0.078 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.168" />
+        </geometry>
+      </collision>
+    <collision name="reflector_shell">
+      <geometry>
+        <mesh filename="assets/meshes/shallow_parabolic_reflector.obj" />
+        </geometry>
+      </collision>
+    <collision name="feed_arm_foot">
+      <origin xyz="0.255 0 -0.305" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.042 0.038" />
+        </geometry>
+      </collision>
+    <collision name="feed_arm">
+      <geometry>
+        <mesh filename="assets/meshes/curved_feed_arm.obj" />
+        </geometry>
+      </collision>
+    <collision name="feed_horn">
+      <origin xyz="0.638 0 -0.002" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.082" />
+        </geometry>
+      </collision>
+    <collision name="feed_collar">
+      <origin xyz="0.59 0 -0.012" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.052" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="mast_to_clamp" type="revolute">
+    <parent link="wall_mount" />
+    <child link="clamp_head" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1" lower="-2.4" upper="2.4" />
+    </joint>
+  <joint name="clamp_to_dish" type="revolute">
+    <origin xyz="0.18 0 0" rpy="0 0 0" />
+    <parent link="clamp_head" />
+    <child link="dish_frame" />
+    <axis xyz="0 -1 0" />
+    <limit effort="12" velocity="0.8" lower="-0.65" upper="0.85" />
+    </joint>
+  </robot>

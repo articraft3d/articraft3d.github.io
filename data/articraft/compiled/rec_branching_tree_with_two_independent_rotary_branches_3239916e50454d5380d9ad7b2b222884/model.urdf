@@ -1,0 +1,505 @@
+<robot name="dual_arm_positioning_tree">
+  <material name="painted_steel">
+    <color rgba="0.24 0.29 0.32 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.64 0.66 0.66 1" />
+    </material>
+  <material name="bearing_bronze">
+    <color rgba="0.63 0.47 0.2 1" />
+    </material>
+  <material name="pad_rubber">
+    <color rgba="0.025 0.025 0.025 1" />
+    </material>
+  <material name="safety_blue">
+    <color rgba="0.08 0.23 0.7 1" />
+    </material>
+  <link name="central_mast">
+    <visual name="floor_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.32 0.035" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="mast_tube">
+      <origin xyz="0 0 0.395" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.72" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.24 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="base_collar">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="forward_yoke_-0.047">
+      <origin xyz="-0.047 0.07 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.12 0.105" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.24 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="forward_yoke_0.047">
+      <origin xyz="0.047 0.07 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.12 0.105" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.24 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="forward_bearing">
+      <origin xyz="0 0.105 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/forward_bearing.obj" />
+        </geometry>
+      <material name="bearing_bronze">
+        <color rgba="0.63 0.47 0.2 1" />
+        </material>
+      </visual>
+    <visual name="side_yoke_-0.05">
+      <origin xyz="0.072 -0.05 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.026 0.11" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.24 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="side_yoke_0.05">
+      <origin xyz="0.072 0.05 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.026 0.11" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.24 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="side_bearing">
+      <origin xyz="0.105 0 0.45" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_bearing.obj" />
+        </geometry>
+      <material name="bearing_bronze">
+        <color rgba="0.63 0.47 0.2 1" />
+        </material>
+      </visual>
+    <visual name="anchor_-0.155_-0.105">
+      <origin xyz="-0.155 -0.105 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="anchor_-0.155_0.105">
+      <origin xyz="-0.155 0.105 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="anchor_0.155_-0.105">
+      <origin xyz="0.155 -0.105 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="anchor_0.155_0.105">
+      <origin xyz="0.155 0.105 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.32 0.035" />
+        </geometry>
+      </collision>
+    <collision name="mast_tube">
+      <origin xyz="0 0 0.395" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.72" />
+        </geometry>
+      </collision>
+    <collision name="base_collar">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="forward_yoke_-0.047">
+      <origin xyz="-0.047 0.07 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.12 0.105" />
+        </geometry>
+      </collision>
+    <collision name="forward_yoke_0.047">
+      <origin xyz="0.047 0.07 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.12 0.105" />
+        </geometry>
+      </collision>
+    <collision name="forward_bearing">
+      <origin xyz="0 0.105 0.68" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/forward_bearing.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_yoke_-0.05">
+      <origin xyz="0.072 -0.05 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.026 0.11" />
+        </geometry>
+      </collision>
+    <collision name="side_yoke_0.05">
+      <origin xyz="0.072 0.05 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.026 0.11" />
+        </geometry>
+      </collision>
+    <collision name="side_bearing">
+      <origin xyz="0.105 0 0.45" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/side_bearing.obj" />
+        </geometry>
+      </collision>
+    <collision name="anchor_-0.155_-0.105">
+      <origin xyz="-0.155 -0.105 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="anchor_-0.155_0.105">
+      <origin xyz="-0.155 0.105 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="anchor_0.155_-0.105">
+      <origin xyz="0.155 -0.105 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="anchor_0.155_0.105">
+      <origin xyz="0.155 0.105 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="forward_branch">
+    <visual name="forward_shaft">
+      <origin xyz="0 0.2 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.5" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="front_hub">
+      <origin xyz="0 0.095 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.04" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="short_boom">
+      <origin xyz="0 0.235 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.21 0.036" />
+        </geometry>
+      <material name="safety_blue">
+        <color rgba="0.08 0.23 0.7 1" />
+        </material>
+      </visual>
+    <visual name="tool_pad_body">
+      <origin xyz="0 0.39 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.032 0.09" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="tool_pad_face">
+      <origin xyz="0 0.411 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.01 0.075" />
+        </geometry>
+      <material name="pad_rubber">
+        <color rgba="0.025 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="pad_screw_-0.038_-0.028">
+      <origin xyz="-0.038 0.418 -0.028" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="pad_screw_-0.038_0.028">
+      <origin xyz="-0.038 0.418 0.028" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="pad_screw_0.038_-0.028">
+      <origin xyz="0.038 0.418 -0.028" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="pad_screw_0.038_0.028">
+      <origin xyz="0.038 0.418 0.028" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <collision name="forward_shaft">
+      <origin xyz="0 0.2 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.5" />
+        </geometry>
+      </collision>
+    <collision name="front_hub">
+      <origin xyz="0 0.095 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="short_boom">
+      <origin xyz="0 0.235 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.21 0.036" />
+        </geometry>
+      </collision>
+    <collision name="tool_pad_body">
+      <origin xyz="0 0.39 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.032 0.09" />
+        </geometry>
+      </collision>
+    <collision name="tool_pad_face">
+      <origin xyz="0 0.411 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.01 0.075" />
+        </geometry>
+      </collision>
+    <collision name="pad_screw_-0.038_-0.028">
+      <origin xyz="-0.038 0.418 -0.028" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="pad_screw_-0.038_0.028">
+      <origin xyz="-0.038 0.418 0.028" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="pad_screw_0.038_-0.028">
+      <origin xyz="0.038 0.418 -0.028" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="pad_screw_0.038_0.028">
+      <origin xyz="0.038 0.418 0.028" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="side_branch">
+    <visual name="side_shaft">
+      <origin xyz="0.285 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.65" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="side_hub">
+      <origin xyz="0.1065 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.048" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="long_boom">
+      <origin xyz="0.3 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.038 0.038" />
+        </geometry>
+      <material name="safety_blue">
+        <color rgba="0.08 0.23 0.7 1" />
+        </material>
+      </visual>
+    <visual name="tool_pad_body">
+      <origin xyz="0.575 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.135 0.095" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="tool_pad_face">
+      <origin xyz="0.597 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.12 0.08" />
+        </geometry>
+      <material name="pad_rubber">
+        <color rgba="0.025 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="pad_screw_-0.044_-0.03">
+      <origin xyz="0.604 -0.044 -0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="pad_screw_-0.044_0.03">
+      <origin xyz="0.604 -0.044 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="pad_screw_0.044_-0.03">
+      <origin xyz="0.604 0.044 -0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <visual name="pad_screw_0.044_0.03">
+      <origin xyz="0.604 0.044 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.66 1" />
+        </material>
+      </visual>
+    <collision name="side_shaft">
+      <origin xyz="0.285 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.65" />
+        </geometry>
+      </collision>
+    <collision name="side_hub">
+      <origin xyz="0.1065 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.048" />
+        </geometry>
+      </collision>
+    <collision name="long_boom">
+      <origin xyz="0.3 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.038 0.038" />
+        </geometry>
+      </collision>
+    <collision name="tool_pad_body">
+      <origin xyz="0.575 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.135 0.095" />
+        </geometry>
+      </collision>
+    <collision name="tool_pad_face">
+      <origin xyz="0.597 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.12 0.08" />
+        </geometry>
+      </collision>
+    <collision name="pad_screw_-0.044_-0.03">
+      <origin xyz="0.604 -0.044 -0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="pad_screw_-0.044_0.03">
+      <origin xyz="0.604 -0.044 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="pad_screw_0.044_-0.03">
+      <origin xyz="0.604 0.044 -0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="pad_screw_0.044_0.03">
+      <origin xyz="0.604 0.044 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="mast_to_forward_branch" type="revolute">
+    <origin xyz="0 0.105 0.68" rpy="0 0 0" />
+    <parent link="central_mast" />
+    <child link="forward_branch" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="1.4" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="mast_to_side_branch" type="revolute">
+    <origin xyz="0.105 0 0.45" rpy="0 0 0" />
+    <parent link="central_mast" />
+    <child link="side_branch" />
+    <axis xyz="1 0 0" />
+    <limit effort="22" velocity="1.2" lower="-0.95" upper="0.95" />
+    </joint>
+  </robot>

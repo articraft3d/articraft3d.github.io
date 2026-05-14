@@ -1,0 +1,678 @@
+<robot name="serial_lever_chain_study">
+  <material name="base_blue">
+    <color rgba="0.08 0.12 0.18 1" />
+    </material>
+  <material name="rail_dark">
+    <color rgba="0.03 0.035 0.04 1" />
+    </material>
+  <material name="pin_steel">
+    <color rgba="0.68 0.7 0.7 1" />
+    </material>
+  <material name="bearing_dark">
+    <color rgba="0.005 0.006 0.007 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.012 0.012 0.014 1" />
+    </material>
+  <material name="bar_blue">
+    <color rgba="0.05 0.26 0.78 1" />
+    </material>
+  <material name="bar_orange">
+    <color rgba="0.95 0.42 0.07 1" />
+    </material>
+  <material name="bar_green">
+    <color rgba="0.08 0.5 0.25 1" />
+    </material>
+  <material name="bar_yellow">
+    <color rgba="0.96 0.76 0.12 1" />
+    </material>
+  <material name="handle_red">
+    <color rgba="0.78 0.05 0.04 1" />
+    </material>
+  <link name="base_frame">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.5 0.025" />
+        </geometry>
+      <material name="base_blue" />
+      </visual>
+    <visual name="rail_0">
+      <origin xyz="0 -0.205 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.12 0.03 0.03" />
+        </geometry>
+      <material name="rail_dark" />
+      </visual>
+    <visual name="rail_1">
+      <origin xyz="0 0.205 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.12 0.03 0.03" />
+        </geometry>
+      <material name="rail_dark" />
+      </visual>
+    <visual name="cross_tie_0">
+      <origin xyz="-0.54 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.44 0.026" />
+        </geometry>
+      <material name="rail_dark" />
+      </visual>
+    <visual name="cross_tie_1">
+      <origin xyz="0 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.44 0.026" />
+        </geometry>
+      <material name="rail_dark" />
+      </visual>
+    <visual name="cross_tie_2">
+      <origin xyz="0.54 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.44 0.026" />
+        </geometry>
+      <material name="rail_dark" />
+      </visual>
+    <visual name="centerline">
+      <origin xyz="0 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="1.05 0.006 0.002" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="station_tick_0">
+      <origin xyz="-0.45 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="station_tick_1">
+      <origin xyz="-0.3 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="station_tick_2">
+      <origin xyz="-0.15 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="station_tick_3">
+      <origin xyz="0 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="station_tick_4">
+      <origin xyz="0.15 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="station_tick_5">
+      <origin xyz="0.3 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="station_tick_6">
+      <origin xyz="0.45 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="rubber_foot_0">
+      <origin xyz="-0.55 -0.22 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="rubber_foot_1">
+      <origin xyz="-0.55 0.22 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="rubber_foot_2">
+      <origin xyz="0.55 -0.22 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="rubber_foot_3">
+      <origin xyz="0.55 0.22 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.5 0.025" />
+        </geometry>
+      </collision>
+    <collision name="rail_0">
+      <origin xyz="0 -0.205 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.12 0.03 0.03" />
+        </geometry>
+      </collision>
+    <collision name="rail_1">
+      <origin xyz="0 0.205 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.12 0.03 0.03" />
+        </geometry>
+      </collision>
+    <collision name="cross_tie_0">
+      <origin xyz="-0.54 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.44 0.026" />
+        </geometry>
+      </collision>
+    <collision name="cross_tie_1">
+      <origin xyz="0 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.44 0.026" />
+        </geometry>
+      </collision>
+    <collision name="cross_tie_2">
+      <origin xyz="0.54 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.44 0.026" />
+        </geometry>
+      </collision>
+    <collision name="centerline">
+      <origin xyz="0 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="1.05 0.006 0.002" />
+        </geometry>
+      </collision>
+    <collision name="station_tick_0">
+      <origin xyz="-0.45 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="station_tick_1">
+      <origin xyz="-0.3 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="station_tick_2">
+      <origin xyz="-0.15 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="station_tick_3">
+      <origin xyz="0 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="station_tick_4">
+      <origin xyz="0.15 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="station_tick_5">
+      <origin xyz="0.3 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="station_tick_6">
+      <origin xyz="0.45 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_0">
+      <origin xyz="-0.55 -0.22 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_1">
+      <origin xyz="-0.55 0.22 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_2">
+      <origin xyz="0.55 -0.22 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_3">
+      <origin xyz="0.55 0.22 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bar_0">
+    <visual name="link_plate">
+      <geometry>
+        <mesh filename="assets/meshes/bar_0_plate.obj" />
+        </geometry>
+      <material name="bar_blue" />
+      </visual>
+    <collision name="link_plate">
+      <geometry>
+        <mesh filename="assets/meshes/bar_0_plate.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bar_1">
+    <visual name="link_plate">
+      <geometry>
+        <mesh filename="assets/meshes/bar_1_plate.obj" />
+        </geometry>
+      <material name="bar_orange" />
+      </visual>
+    <collision name="link_plate">
+      <geometry>
+        <mesh filename="assets/meshes/bar_1_plate.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bar_2">
+    <visual name="link_plate">
+      <geometry>
+        <mesh filename="assets/meshes/bar_2_plate.obj" />
+        </geometry>
+      <material name="bar_green" />
+      </visual>
+    <collision name="link_plate">
+      <geometry>
+        <mesh filename="assets/meshes/bar_2_plate.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bar_3">
+    <visual name="link_plate">
+      <geometry>
+        <mesh filename="assets/meshes/bar_3_plate.obj" />
+        </geometry>
+      <material name="bar_yellow" />
+      </visual>
+    <collision name="link_plate">
+      <geometry>
+        <mesh filename="assets/meshes/bar_3_plate.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pivot_0">
+    <visual name="base_flange">
+      <origin xyz="0 0 -0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.008" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="child_bottom_washer">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="child_top_washer">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="pivot_shaft">
+      <origin xyz="0 0 -0.0025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.035" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <collision name="base_flange">
+      <origin xyz="0 0 -0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="child_bottom_washer">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="child_top_washer">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="pivot_shaft">
+      <origin xyz="0 0 -0.0025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.035" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pivot_1">
+    <visual name="parent_bottom_washer">
+      <origin xyz="0 0 -0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="parent_top_washer">
+      <origin xyz="0 0 -0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="child_bottom_washer">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="child_top_washer">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="pivot_shaft">
+      <origin xyz="0 0 -0.0145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.059" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <collision name="parent_bottom_washer">
+      <origin xyz="0 0 -0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="parent_top_washer">
+      <origin xyz="0 0 -0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="child_bottom_washer">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="child_top_washer">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="pivot_shaft">
+      <origin xyz="0 0 -0.0145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.059" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pivot_2">
+    <visual name="parent_bottom_washer">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="parent_top_washer">
+      <origin xyz="0 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="child_bottom_washer">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="child_top_washer">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="pivot_shaft">
+      <origin xyz="0 0 0.0145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.059" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <collision name="parent_bottom_washer">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="parent_top_washer">
+      <origin xyz="0 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="child_bottom_washer">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="child_top_washer">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="pivot_shaft">
+      <origin xyz="0 0 0.0145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.059" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pivot_3">
+    <visual name="parent_bottom_washer">
+      <origin xyz="0 0 -0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="parent_top_washer">
+      <origin xyz="0 0 -0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="child_bottom_washer">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="child_top_washer">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="pivot_shaft">
+      <origin xyz="0 0 -0.0145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.059" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <collision name="parent_bottom_washer">
+      <origin xyz="0 0 -0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="parent_top_washer">
+      <origin xyz="0 0 -0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="child_bottom_washer">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="child_top_washer">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="pivot_shaft">
+      <origin xyz="0 0 -0.0145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.059" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tip_pin">
+    <visual name="parent_bottom_washer">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="parent_top_washer">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <visual name="tip_knob">
+      <origin xyz="0 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.022" />
+        </geometry>
+      <material name="handle_red" />
+      </visual>
+    <visual name="pivot_shaft">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.06" />
+        </geometry>
+      <material name="pin_steel" />
+      </visual>
+    <collision name="parent_bottom_washer">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="parent_top_washer">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="tip_knob">
+      <origin xyz="0 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="pivot_shaft">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_pivot_0" type="fixed">
+    <origin xyz="-0.44 -0.1 0.045" rpy="0 0 0.349066" />
+    <parent link="base_frame" />
+    <child link="pivot_0" />
+    </joint>
+  <joint name="pivot_0_to_bar_0" type="revolute">
+    <parent link="pivot_0" />
+    <child link="bar_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="2.5" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="bar_0_to_pivot_1" type="fixed">
+    <origin xyz="0.3 0 0.029" rpy="0 0 -0.610865" />
+    <parent link="bar_0" />
+    <child link="pivot_1" />
+    </joint>
+  <joint name="pivot_1_to_bar_1" type="revolute">
+    <parent link="pivot_1" />
+    <child link="bar_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="2.5" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="bar_1_to_pivot_2" type="fixed">
+    <origin xyz="0.24 0 -0.029" rpy="0 0 0.785398" />
+    <parent link="bar_1" />
+    <child link="pivot_2" />
+    </joint>
+  <joint name="pivot_2_to_bar_2" type="revolute">
+    <parent link="pivot_2" />
+    <child link="bar_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="2.5" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="bar_2_to_pivot_3" type="fixed">
+    <origin xyz="0.28 0 0.029" rpy="0 0 -0.872665" />
+    <parent link="bar_2" />
+    <child link="pivot_3" />
+    </joint>
+  <joint name="pivot_3_to_bar_3" type="revolute">
+    <parent link="pivot_3" />
+    <child link="bar_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="2.5" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="bar_3_to_tip_pin" type="fixed">
+    <origin xyz="0.2 0 0" rpy="0 0 0" />
+    <parent link="bar_3" />
+    <child link="tip_pin" />
+    </joint>
+  </robot>

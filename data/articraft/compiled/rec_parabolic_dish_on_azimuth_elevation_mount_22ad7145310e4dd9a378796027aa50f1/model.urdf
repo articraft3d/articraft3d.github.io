@@ -1,0 +1,433 @@
+<robot name="satellite_dish_pedestal_mount">
+  <material name="dark_steel">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="painted_steel">
+    <color rgba="0.32 0.34 0.36 1" />
+    </material>
+  <material name="matte_concrete">
+    <color rgba="0.43 0.42 0.39 1" />
+    </material>
+  <material name="warm_white_reflector">
+    <color rgba="0.86 0.86 0.8 1" />
+    </material>
+  <material name="feed_radome_white">
+    <color rgba="0.94 0.94 0.88 1" />
+    </material>
+  <link name="base">
+    <visual name="round_footing">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.42" length="0.1" />
+        </geometry>
+      <material name="matte_concrete">
+        <color rgba="0.43 0.42 0.39 1" />
+        </material>
+      </visual>
+    <visual name="fixed_turntable">
+      <origin xyz="0 0 0.1175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.035" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <collision name="round_footing">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.42" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="fixed_turntable">
+      <origin xyz="0 0 0.1175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.035" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="yaw_stage">
+    <visual name="rotating_turntable">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.27" length="0.09" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.32 0.34 0.36 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_column">
+      <origin xyz="0 0 0.4" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.72" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.32 0.34 0.36 1" />
+        </material>
+      </visual>
+    <visual name="top_collar">
+      <origin xyz="0 0 0.76" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.1" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0 -0.055 0.835" rpy="0 0 0" />
+      <geometry>
+        <box size="0.98 0.22 0.09" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.32 0.34 0.36 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_0">
+      <origin xyz="-0.43 -0.055 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.22 0.52" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.32 0.34 0.36 1" />
+        </material>
+      </visual>
+    <visual name="bearing_ring_0">
+      <origin xyz="-0.43 0.064 1.08" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.018" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_1">
+      <origin xyz="0.43 -0.055 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.22 0.52" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.32 0.34 0.36 1" />
+        </material>
+      </visual>
+    <visual name="bearing_ring_1">
+      <origin xyz="0.43 0.064 1.08" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.018" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <collision name="rotating_turntable">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.27" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_column">
+      <origin xyz="0 0 0.4" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.72" />
+        </geometry>
+      </collision>
+    <collision name="top_collar">
+      <origin xyz="0 0 0.76" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0 -0.055 0.835" rpy="0 0 0" />
+      <geometry>
+        <box size="0.98 0.22 0.09" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_0">
+      <origin xyz="-0.43 -0.055 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.22 0.52" />
+        </geometry>
+      </collision>
+    <collision name="bearing_ring_0">
+      <origin xyz="-0.43 0.064 1.08" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_1">
+      <origin xyz="0.43 -0.055 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.22 0.52" />
+        </geometry>
+      </collision>
+    <collision name="bearing_ring_1">
+      <origin xyz="0.43 0.064 1.08" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="reflector_frame">
+    <visual name="parabolic_reflector">
+      <geometry>
+        <mesh filename="assets/meshes/parabolic_reflector.obj" />
+        </geometry>
+      <material name="warm_white_reflector">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="rolled_rim">
+      <origin xyz="0 0.48 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rolled_rim.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_axle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.043" length="1.02" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="rear_hub">
+      <origin xyz="0 0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.09" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="rear_support_ring">
+      <origin xyz="0 0.22 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_support_ring.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_0">
+      <geometry>
+        <mesh filename="assets/meshes/rear_spoke_0.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="shell_standoff_0">
+      <geometry>
+        <mesh filename="assets/meshes/shell_standoff_0.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_1">
+      <geometry>
+        <mesh filename="assets/meshes/rear_spoke_1.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="shell_standoff_1">
+      <geometry>
+        <mesh filename="assets/meshes/shell_standoff_1.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_2">
+      <geometry>
+        <mesh filename="assets/meshes/rear_spoke_2.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="shell_standoff_2">
+      <geometry>
+        <mesh filename="assets/meshes/shell_standoff_2.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_3">
+      <geometry>
+        <mesh filename="assets/meshes/rear_spoke_3.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="shell_standoff_3">
+      <geometry>
+        <mesh filename="assets/meshes/shell_standoff_3.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="feed_arm">
+      <geometry>
+        <mesh filename="assets/meshes/feed_arm.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="feed_brace_0">
+      <geometry>
+        <mesh filename="assets/meshes/feed_brace_0.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="feed_brace_1">
+      <geometry>
+        <mesh filename="assets/meshes/feed_brace_1.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="feed_horn">
+      <origin xyz="0 0.74 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.09" />
+        </geometry>
+      <material name="feed_radome_white">
+        <color rgba="0.94 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="feed_neck">
+      <origin xyz="0 0.675 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.07" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <collision name="parabolic_reflector">
+      <geometry>
+        <mesh filename="assets/meshes/parabolic_reflector.obj" />
+        </geometry>
+      </collision>
+    <collision name="rolled_rim">
+      <origin xyz="0 0.48 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rolled_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_axle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.043" length="1.02" />
+        </geometry>
+      </collision>
+    <collision name="rear_hub">
+      <origin xyz="0 0.026 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="rear_support_ring">
+      <origin xyz="0 0.22 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_support_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_0">
+      <geometry>
+        <mesh filename="assets/meshes/rear_spoke_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="shell_standoff_0">
+      <geometry>
+        <mesh filename="assets/meshes/shell_standoff_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_1">
+      <geometry>
+        <mesh filename="assets/meshes/rear_spoke_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="shell_standoff_1">
+      <geometry>
+        <mesh filename="assets/meshes/shell_standoff_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_2">
+      <geometry>
+        <mesh filename="assets/meshes/rear_spoke_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="shell_standoff_2">
+      <geometry>
+        <mesh filename="assets/meshes/shell_standoff_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_spoke_3">
+      <geometry>
+        <mesh filename="assets/meshes/rear_spoke_3.obj" />
+        </geometry>
+      </collision>
+    <collision name="shell_standoff_3">
+      <geometry>
+        <mesh filename="assets/meshes/shell_standoff_3.obj" />
+        </geometry>
+      </collision>
+    <collision name="feed_arm">
+      <geometry>
+        <mesh filename="assets/meshes/feed_arm.obj" />
+        </geometry>
+      </collision>
+    <collision name="feed_brace_0">
+      <geometry>
+        <mesh filename="assets/meshes/feed_brace_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="feed_brace_1">
+      <geometry>
+        <mesh filename="assets/meshes/feed_brace_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="feed_horn">
+      <origin xyz="0 0.74 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="feed_neck">
+      <origin xyz="0 0.675 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_yaw" type="revolute">
+    <origin xyz="0 0 0.135" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="yaw_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="180" velocity="0.55" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="yoke_to_reflector" type="revolute">
+    <origin xyz="0 0 1.08" rpy="0 0 0" />
+    <parent link="yaw_stage" />
+    <child link="reflector_frame" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="0.35" lower="0" upper="1.15" />
+    </joint>
+  </robot>

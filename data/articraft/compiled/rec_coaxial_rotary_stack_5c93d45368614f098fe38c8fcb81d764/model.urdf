@@ -1,0 +1,256 @@
+<robot name="nested_rotary_turntable">
+  <material name="cast_iron">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <material name="dark_anodized">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="machined_aluminum">
+    <color rgba="0.7 0.73 0.76 1" />
+    </material>
+  <material name="bearing_steel">
+    <color rgba="0.58 0.61 0.65 1" />
+    </material>
+  <material name="safety_orange">
+    <color rgba="0.88 0.38 0.07 1" />
+    </material>
+  <material name="index_yellow">
+    <color rgba="0.95 0.78 0.12 1" />
+    </material>
+  <link name="base">
+    <visual name="base_body">
+      <geometry>
+        <mesh filename="assets/meshes/base_body.obj" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="base_bearing_race">
+      <origin xyz="0 0 0.058" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_bearing_race.obj" />
+        </geometry>
+      <material name="bearing_steel" />
+      </visual>
+    <visual name="foot_0">
+      <origin xyz="0.18 0.18 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.014" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="foot_1">
+      <origin xyz="-0.18 0.18 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.014" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="foot_2">
+      <origin xyz="-0.18 -0.18 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.014" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="foot_3">
+      <origin xyz="0.18 -0.18 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.014" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <collision name="base_body">
+      <geometry>
+        <mesh filename="assets/meshes/base_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_bearing_race">
+      <origin xyz="0 0 0.058" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_bearing_race.obj" />
+        </geometry>
+      </collision>
+    <collision name="foot_0">
+      <origin xyz="0.18 0.18 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="foot_1">
+      <origin xyz="-0.18 0.18 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="foot_2">
+      <origin xyz="-0.18 -0.18 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="foot_3">
+      <origin xyz="0.18 -0.18 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="outer_carrier">
+    <visual name="outer_carrier_body">
+      <geometry>
+        <mesh filename="assets/meshes/outer_carrier_body.obj" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="outer_lower_race">
+      <geometry>
+        <mesh filename="assets/meshes/outer_lower_race.obj" />
+        </geometry>
+      <material name="bearing_steel" />
+      </visual>
+    <visual name="outer_upper_race">
+      <origin xyz="0 0 0.037" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/outer_upper_race.obj" />
+        </geometry>
+      <material name="bearing_steel" />
+      </visual>
+    <visual name="outer_index_tab">
+      <origin xyz="0.252 0 0.0375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.014 0.006" />
+        </geometry>
+      <material name="index_yellow" />
+      </visual>
+    <collision name="outer_carrier_body">
+      <geometry>
+        <mesh filename="assets/meshes/outer_carrier_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="outer_lower_race">
+      <geometry>
+        <mesh filename="assets/meshes/outer_lower_race.obj" />
+        </geometry>
+      </collision>
+    <collision name="outer_upper_race">
+      <origin xyz="0 0 0.037" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/outer_upper_race.obj" />
+        </geometry>
+      </collision>
+    <collision name="outer_index_tab">
+      <origin xyz="0.252 0 0.0375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.014 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="middle_ring">
+    <visual name="middle_ring_body">
+      <geometry>
+        <mesh filename="assets/meshes/middle_ring_body.obj" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="middle_lower_race">
+      <geometry>
+        <mesh filename="assets/meshes/middle_lower_race.obj" />
+        </geometry>
+      <material name="bearing_steel" />
+      </visual>
+    <visual name="middle_upper_race">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/middle_upper_race.obj" />
+        </geometry>
+      <material name="bearing_steel" />
+      </visual>
+    <visual name="middle_index_tab">
+      <origin xyz="0.161 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.012 0.006" />
+        </geometry>
+      <material name="index_yellow" />
+      </visual>
+    <collision name="middle_ring_body">
+      <geometry>
+        <mesh filename="assets/meshes/middle_ring_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="middle_lower_race">
+      <geometry>
+        <mesh filename="assets/meshes/middle_lower_race.obj" />
+        </geometry>
+      </collision>
+    <collision name="middle_upper_race">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/middle_upper_race.obj" />
+        </geometry>
+      </collision>
+    <collision name="middle_index_tab">
+      <origin xyz="0.161 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.012 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="top_platter">
+    <visual name="top_platter_body">
+      <geometry>
+        <mesh filename="assets/meshes/top_platter_body.obj" />
+        </geometry>
+      <material name="safety_orange" />
+      </visual>
+    <visual name="platter_lower_race">
+      <geometry>
+        <mesh filename="assets/meshes/platter_lower_race.obj" />
+        </geometry>
+      <material name="bearing_steel" />
+      </visual>
+    <visual name="fixture_rail">
+      <origin xyz="0.075 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.018 0.006" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <collision name="top_platter_body">
+      <geometry>
+        <mesh filename="assets/meshes/top_platter_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="platter_lower_race">
+      <geometry>
+        <mesh filename="assets/meshes/platter_lower_race.obj" />
+        </geometry>
+      </collision>
+    <collision name="fixture_rail">
+      <origin xyz="0.075 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_outer" type="revolute">
+    <origin xyz="0 0 0.064" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="outer_carrier" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="1" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="outer_to_middle" type="revolute">
+    <origin xyz="0 0 0.043" rpy="0 0 0" />
+    <parent link="outer_carrier" />
+    <child link="middle_ring" />
+    <axis xyz="0 0 1" />
+    <limit effort="70" velocity="1.6" lower="-2.35" upper="2.35" />
+    </joint>
+  <joint name="middle_to_platter" type="revolute">
+    <origin xyz="0 0 0.035" rpy="0 0 0" />
+    <parent link="middle_ring" />
+    <child link="top_platter" />
+    <axis xyz="0 0 1" />
+    <limit effort="45" velocity="2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

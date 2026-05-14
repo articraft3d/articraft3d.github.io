@@ -1,0 +1,259 @@
+<robot name="compact_coaxial_turntable">
+  <material name="matte_black">
+    <color rgba="0.04 0.045 0.05 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.18 0.19 0.21 1" />
+    </material>
+  <material name="bearing_steel">
+    <color rgba="0.62 0.65 0.68 1" />
+    </material>
+  <material name="lower_blue">
+    <color rgba="0.1 0.22 0.42 1" />
+    </material>
+  <material name="middle_aluminum">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <material name="upper_bronze">
+    <color rgba="0.74 0.55 0.28 1" />
+    </material>
+  <material name="faceplate_gray">
+    <color rgba="0.5 0.52 0.55 1" />
+    </material>
+  <material name="index_white">
+    <color rgba="0.92 0.93 0.9 1" />
+    </material>
+  <link name="base">
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.02" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing">
+      <origin xyz="0 0 0.02375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.1" length="0.0085" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="lower_spindle">
+      <origin xyz="0 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.021" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="middle_bearing">
+      <origin xyz="0 0 0.0485" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.003" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.62 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="middle_spindle">
+      <origin xyz="0 0 0.057" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.015" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing">
+      <origin xyz="0 0 0.0645" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.003" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.62 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="axis_nose">
+      <origin xyz="0 0 0.0715" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.011" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <collision name="base_plinth">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing">
+      <origin xyz="0 0 0.02375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.1" length="0.0085" />
+        </geometry>
+      </collision>
+    <collision name="lower_spindle">
+      <origin xyz="0 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.021" />
+        </geometry>
+      </collision>
+    <collision name="middle_bearing">
+      <origin xyz="0 0 0.0485" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="middle_spindle">
+      <origin xyz="0 0 0.057" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.015" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing">
+      <origin xyz="0 0 0.0645" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="axis_nose">
+      <origin xyz="0 0 0.0715" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.011" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_stage">
+    <visual name="lower_ring">
+      <geometry>
+        <mesh filename="assets/meshes/lower_stage_ring.obj" />
+        </geometry>
+      <material name="lower_blue">
+        <color rgba="0.1 0.22 0.42 1" />
+        </material>
+      </visual>
+    <visual name="lower_index">
+      <origin xyz="0.0751335 0.0244123 0.011" rpy="0 0 0.314159" />
+      <geometry>
+        <box size="0.02 0.008 0.004" />
+        </geometry>
+      <material name="index_white">
+        <color rgba="0.92 0.93 0.9 1" />
+        </material>
+      </visual>
+    <collision name="lower_ring">
+      <geometry>
+        <mesh filename="assets/meshes/lower_stage_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_index">
+      <origin xyz="0.0751335 0.0244123 0.011" rpy="0 0 0.314159" />
+      <geometry>
+        <box size="0.02 0.008 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="middle_stage">
+    <visual name="middle_ring">
+      <geometry>
+        <mesh filename="assets/meshes/middle_stage_ring.obj" />
+        </geometry>
+      <material name="middle_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="middle_index">
+      <origin xyz="-0.0496447 0.0387867 0.00875" rpy="0 0 2.47837" />
+      <geometry>
+        <box size="0.016 0.007 0.0035" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <collision name="middle_ring">
+      <geometry>
+        <mesh filename="assets/meshes/middle_stage_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="middle_index">
+      <origin xyz="-0.0496447 0.0387867 0.00875" rpy="0 0 2.47837" />
+      <geometry>
+        <box size="0.016 0.007 0.0035" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_stage">
+    <visual name="upper_ring">
+      <geometry>
+        <mesh filename="assets/meshes/upper_stage_ring.obj" />
+        </geometry>
+      <material name="upper_bronze">
+        <color rgba="0.74 0.55 0.28 1" />
+        </material>
+      </visual>
+    <visual name="top_faceplate">
+      <origin xyz="0 0 0.0085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.006" />
+        </geometry>
+      <material name="faceplate_gray">
+        <color rgba="0.5 0.52 0.55 1" />
+        </material>
+      </visual>
+    <visual name="upper_index">
+      <origin xyz="-0.00400916 -0.045825 0.0072" rpy="0 0 4.62512" />
+      <geometry>
+        <box size="0.012 0.006 0.003" />
+        </geometry>
+      <material name="index_white">
+        <color rgba="0.92 0.93 0.9 1" />
+        </material>
+      </visual>
+    <collision name="upper_ring">
+      <geometry>
+        <mesh filename="assets/meshes/upper_stage_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_faceplate">
+      <origin xyz="0 0 0.0085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="upper_index">
+      <origin xyz="-0.00400916 -0.045825 0.0072" rpy="0 0 4.62512" />
+      <geometry>
+        <box size="0.012 0.006 0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_lower" type="revolute">
+    <origin xyz="0 0 0.037" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="lower_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="28" velocity="2.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="base_to_middle" type="revolute">
+    <origin xyz="0 0 0.057" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="middle_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="2.8" lower="-2.7" upper="2.7" />
+    </joint>
+  <joint name="base_to_upper" type="revolute">
+    <origin xyz="0 0 0.072" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="upper_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="3.2" lower="-2.2" upper="2.2" />
+    </joint>
+  </robot>

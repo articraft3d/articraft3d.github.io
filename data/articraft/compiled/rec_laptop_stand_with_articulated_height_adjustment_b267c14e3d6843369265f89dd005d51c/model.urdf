@@ -1,0 +1,484 @@
+<robot name="cantilever_laptop_stand">
+  <material name="base_powdercoat">
+    <color rgba="0.075 0.08 0.085 1" />
+    </material>
+  <material name="dark_anodized">
+    <color rgba="0.015 0.018 0.02 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.62 0.64 0.66 1" />
+    </material>
+  <material name="hinge_steel">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.005 0.005 0.004 1" />
+    </material>
+  <link name="base">
+    <visual name="rounded_base">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_base.obj" />
+        </geometry>
+      <material name="base_powdercoat" />
+      </visual>
+    <visual name="top_weight">
+      <origin xyz="-0.015 0 0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.25 0.008" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="pivot_socket">
+      <origin xyz="-0.23 0.135 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.03" />
+        </geometry>
+      <material name="base_powdercoat" />
+      </visual>
+    <visual name="foot_0">
+      <origin xyz="-0.22 -0.13 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="foot_1">
+      <origin xyz="0.22 -0.13 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="foot_2">
+      <origin xyz="-0.22 0.13 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="foot_3">
+      <origin xyz="0.22 0.13 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <collision name="rounded_base">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_weight">
+      <origin xyz="-0.015 0 0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.25 0.008" />
+        </geometry>
+      </collision>
+    <collision name="pivot_socket">
+      <origin xyz="-0.23 0.135 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="foot_0">
+      <origin xyz="-0.22 -0.13 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="foot_1">
+      <origin xyz="0.22 -0.13 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="foot_2">
+      <origin xyz="-0.22 0.13 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="foot_3">
+      <origin xyz="0.22 0.13 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_arm">
+    <visual name="turntable">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.022" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="pivot_column">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.06" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="base_bridge">
+      <origin xyz="0.022 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.115 0.018" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="lower_bar_0">
+      <origin xyz="0.067 -0.05 0.145" rpy="0 -1.16801 0" />
+      <geometry>
+        <box size="0.250008 0.014 0.016" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="lower_bar_1">
+      <origin xyz="0.067 0.05 0.145" rpy="0 -1.16801 0" />
+      <geometry>
+        <box size="0.250008 0.014 0.016" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="elbow_bridge">
+      <origin xyz="0.09 0 0.234" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.094 0.014" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="elbow_cheek_0">
+      <origin xyz="0.116 -0.046 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.012 0.076" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="elbow_cheek_1">
+      <origin xyz="0.116 0.046 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.012 0.076" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="elbow_pin">
+      <origin xyz="0.12 0 0.27" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.088" />
+        </geometry>
+      <material name="hinge_steel" />
+      </visual>
+    <collision name="turntable">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="pivot_column">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="base_bridge">
+      <origin xyz="0.022 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.115 0.018" />
+        </geometry>
+      </collision>
+    <collision name="lower_bar_0">
+      <origin xyz="0.067 -0.05 0.145" rpy="0 -1.16801 0" />
+      <geometry>
+        <box size="0.250008 0.014 0.016" />
+        </geometry>
+      </collision>
+    <collision name="lower_bar_1">
+      <origin xyz="0.067 0.05 0.145" rpy="0 -1.16801 0" />
+      <geometry>
+        <box size="0.250008 0.014 0.016" />
+        </geometry>
+      </collision>
+    <collision name="elbow_bridge">
+      <origin xyz="0.09 0 0.234" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.094 0.014" />
+        </geometry>
+      </collision>
+    <collision name="elbow_cheek_0">
+      <origin xyz="0.116 -0.046 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.012 0.076" />
+        </geometry>
+      </collision>
+    <collision name="elbow_cheek_1">
+      <origin xyz="0.116 0.046 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.012 0.076" />
+        </geometry>
+      </collision>
+    <collision name="elbow_pin">
+      <origin xyz="0.12 0 0.27" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.088" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_arm">
+    <visual name="elbow_lug">
+      <geometry>
+        <box size="0.045 0.042 0.052" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="lug_bridge">
+      <origin xyz="0.028 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.03 0.014" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="upper_link">
+      <origin xyz="0.063 0 0.0315" rpy="0 -0.558599 0" />
+      <geometry>
+        <box size="0.0660379 0.026 0.02" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="tilt_plate">
+      <origin xyz="0.07 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.04 0.058" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="tray_pin">
+      <origin xyz="0.1 0 0.055" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.17" />
+        </geometry>
+      <material name="hinge_steel" />
+      </visual>
+    <collision name="elbow_lug">
+      <geometry>
+        <box size="0.045 0.042 0.052" />
+        </geometry>
+      </collision>
+    <collision name="lug_bridge">
+      <origin xyz="0.028 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.03 0.014" />
+        </geometry>
+      </collision>
+    <collision name="upper_link">
+      <origin xyz="0.063 0 0.0315" rpy="0 -0.558599 0" />
+      <geometry>
+        <box size="0.0660379 0.026 0.02" />
+        </geometry>
+      </collision>
+    <collision name="tilt_plate">
+      <origin xyz="0.07 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.04 0.058" />
+        </geometry>
+      </collision>
+    <collision name="tray_pin">
+      <origin xyz="0.1 0 0.055" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.17" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tray">
+    <visual name="vented_plate">
+      <geometry>
+        <mesh filename="assets/meshes/vented_tray_plate.obj" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="front_lip">
+      <origin xyz="0.448 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.3 0.04" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="side_lip_0">
+      <origin xyz="0.2626 -0.143 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3444 0.014 0.026" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="side_lip_1">
+      <origin xyz="0.2626 0.143 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3444 0.014 0.026" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="tray_barrel_0">
+      <origin xyz="0 -0.055 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.052" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="hinge_tab_0">
+      <origin xyz="0.026 -0.055 -0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.052 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="tray_barrel_1">
+      <origin xyz="0 0.055 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.052" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="hinge_tab_1">
+      <origin xyz="0.026 0.055 -0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.052 0.012" />
+        </geometry>
+      <material name="dark_anodized" />
+      </visual>
+    <visual name="pad_0">
+      <origin xyz="0.155 -0.088 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.02 0.004" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="pad_1">
+      <origin xyz="0.155 0.088 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.02 0.004" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="pad_2">
+      <origin xyz="0.335 -0.088 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.02 0.004" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="pad_3">
+      <origin xyz="0.335 0.088 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.02 0.004" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="front_bumper">
+      <origin xyz="0.434 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.235 0.008" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <collision name="vented_plate">
+      <geometry>
+        <mesh filename="assets/meshes/vented_tray_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_lip">
+      <origin xyz="0.448 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.3 0.04" />
+        </geometry>
+      </collision>
+    <collision name="side_lip_0">
+      <origin xyz="0.2626 -0.143 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3444 0.014 0.026" />
+        </geometry>
+      </collision>
+    <collision name="side_lip_1">
+      <origin xyz="0.2626 0.143 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3444 0.014 0.026" />
+        </geometry>
+      </collision>
+    <collision name="tray_barrel_0">
+      <origin xyz="0 -0.055 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="hinge_tab_0">
+      <origin xyz="0.026 -0.055 -0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.052 0.012" />
+        </geometry>
+      </collision>
+    <collision name="tray_barrel_1">
+      <origin xyz="0 0.055 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="hinge_tab_1">
+      <origin xyz="0.026 0.055 -0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.052 0.012" />
+        </geometry>
+      </collision>
+    <collision name="pad_0">
+      <origin xyz="0.155 -0.088 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.02 0.004" />
+        </geometry>
+      </collision>
+    <collision name="pad_1">
+      <origin xyz="0.155 0.088 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.02 0.004" />
+        </geometry>
+      </collision>
+    <collision name="pad_2">
+      <origin xyz="0.335 -0.088 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.02 0.004" />
+        </geometry>
+      </collision>
+    <collision name="pad_3">
+      <origin xyz="0.335 0.088 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.02 0.004" />
+        </geometry>
+      </collision>
+    <collision name="front_bumper">
+      <origin xyz="0.434 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.235 0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_lower" type="revolute">
+    <origin xyz="-0.23 0.135 0.065" rpy="0 0 -0.45" />
+    <parent link="base" />
+    <child link="lower_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.2" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="lower_to_upper" type="revolute">
+    <origin xyz="0.12 0 0.27" rpy="0 0 0" />
+    <parent link="lower_arm" />
+    <child link="upper_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="12" velocity="0.9" lower="-0.4" upper="0.75" />
+    </joint>
+  <joint name="upper_to_tray" type="revolute">
+    <origin xyz="0.1 0 0.055" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="tray" />
+    <axis xyz="0 -1 0" />
+    <limit effort="8" velocity="0.8" lower="-0.35" upper="0.7" />
+    </joint>
+  </robot>

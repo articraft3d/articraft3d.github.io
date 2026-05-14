@@ -1,0 +1,932 @@
+<robot name="stackable_rolling_toolbox_base">
+  <material name="graphite_rugged_polymer">
+    <color rgba="0.055 0.06 0.06 1" />
+    </material>
+  <material name="black_rubberized_trim">
+    <color rgba="0.012 0.013 0.012 1" />
+    </material>
+  <material name="yellow_latch_plastic">
+    <color rgba="0.95 0.7 0.08 1" />
+    </material>
+  <material name="dark_zinc_pin">
+    <color rgba="0.35 0.36 0.34 1" />
+    </material>
+  <link name="body">
+    <visual name="lower_bin_shell">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_bin_shell.obj" />
+        </geometry>
+      <material name="graphite_rugged_polymer">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="front_rib_0">
+      <origin xyz="-0.245 -0.216 0.28" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.34" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_rib_1">
+      <origin xyz="0.245 -0.216 0.28" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.34" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_skid_0">
+      <origin xyz="-0.26 -0.195 0.098" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.035 0.026" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_skid_1">
+      <origin xyz="0 -0.195 0.098" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.035 0.026" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="front_skid_2">
+      <origin xyz="0.26 -0.195 0.098" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.035 0.026" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="stack_socket_0">
+      <origin xyz="-0.22 0.175 0.486" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.055 0.026" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="stack_socket_1">
+      <origin xyz="0.22 0.175 0.486" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.055 0.026" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_axle">
+      <origin xyz="0 0.32 0.09" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.7" />
+        </geometry>
+      <material name="dark_zinc_pin">
+        <color rgba="0.35 0.36 0.34 1" />
+        </material>
+      </visual>
+    <visual name="axle_bracket_0">
+      <origin xyz="-0.22 0.27 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.12 0.05" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="axle_bracket_1">
+      <origin xyz="0.22 0.27 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.12 0.05" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_rail_back_0">
+      <origin xyz="-0.23 0.312 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.018 0.46" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_rail_lip_0_0">
+      <origin xyz="-0.263 0.335 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.045 0.46" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_rail_lip_0_1">
+      <origin xyz="-0.197 0.335 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.045 0.46" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rail_mount_0_0">
+      <origin xyz="-0.23 0.26 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.125 0.035" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rail_mount_0_1">
+      <origin xyz="-0.23 0.26 0.675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.125 0.035" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_rail_back_1">
+      <origin xyz="0.23 0.312 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.018 0.46" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_rail_lip_1_0">
+      <origin xyz="0.197 0.335 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.045 0.46" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_rail_lip_1_1">
+      <origin xyz="0.263 0.335 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.045 0.46" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rail_mount_1_0">
+      <origin xyz="0.23 0.26 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.125 0.035" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rail_mount_1_1">
+      <origin xyz="0.23 0.26 0.675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.125 0.035" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_strip">
+      <origin xyz="0 0.222 0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.04 0.02" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="body_hinge_barrel_0">
+      <origin xyz="-0.3 0.235 0.515" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.1" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="body_hinge_leaf_0">
+      <origin xyz="-0.3 0.214 0.492" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.026 0.01" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="body_hinge_barrel_1">
+      <origin xyz="0 0.235 0.515" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.1" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="body_hinge_leaf_1">
+      <origin xyz="0 0.214 0.492" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.026 0.01" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="body_hinge_barrel_2">
+      <origin xyz="0.3 0.235 0.515" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.1" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="body_hinge_leaf_2">
+      <origin xyz="0.3 0.214 0.492" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.026 0.01" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="latch_pivot_pad_0">
+      <origin xyz="0.369 -0.055 0.455" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.018" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="latch_pivot_pad_1">
+      <origin xyz="-0.369 -0.055 0.455" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.018" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <collision name="lower_bin_shell">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_bin_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_rib_0">
+      <origin xyz="-0.245 -0.216 0.28" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.34" />
+        </geometry>
+      </collision>
+    <collision name="front_rib_1">
+      <origin xyz="0.245 -0.216 0.28" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.34" />
+        </geometry>
+      </collision>
+    <collision name="front_skid_0">
+      <origin xyz="-0.26 -0.195 0.098" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.035 0.026" />
+        </geometry>
+      </collision>
+    <collision name="front_skid_1">
+      <origin xyz="0 -0.195 0.098" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.035 0.026" />
+        </geometry>
+      </collision>
+    <collision name="front_skid_2">
+      <origin xyz="0.26 -0.195 0.098" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.035 0.026" />
+        </geometry>
+      </collision>
+    <collision name="stack_socket_0">
+      <origin xyz="-0.22 0.175 0.486" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.055 0.026" />
+        </geometry>
+      </collision>
+    <collision name="stack_socket_1">
+      <origin xyz="0.22 0.175 0.486" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.055 0.026" />
+        </geometry>
+      </collision>
+    <collision name="rear_axle">
+      <origin xyz="0 0.32 0.09" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.7" />
+        </geometry>
+      </collision>
+    <collision name="axle_bracket_0">
+      <origin xyz="-0.22 0.27 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.12 0.05" />
+        </geometry>
+      </collision>
+    <collision name="axle_bracket_1">
+      <origin xyz="0.22 0.27 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.12 0.05" />
+        </geometry>
+      </collision>
+    <collision name="rear_rail_back_0">
+      <origin xyz="-0.23 0.312 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.018 0.46" />
+        </geometry>
+      </collision>
+    <collision name="rear_rail_lip_0_0">
+      <origin xyz="-0.263 0.335 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.045 0.46" />
+        </geometry>
+      </collision>
+    <collision name="rear_rail_lip_0_1">
+      <origin xyz="-0.197 0.335 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.045 0.46" />
+        </geometry>
+      </collision>
+    <collision name="rail_mount_0_0">
+      <origin xyz="-0.23 0.26 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.125 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rail_mount_0_1">
+      <origin xyz="-0.23 0.26 0.675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.125 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rear_rail_back_1">
+      <origin xyz="0.23 0.312 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.018 0.46" />
+        </geometry>
+      </collision>
+    <collision name="rear_rail_lip_1_0">
+      <origin xyz="0.197 0.335 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.045 0.46" />
+        </geometry>
+      </collision>
+    <collision name="rear_rail_lip_1_1">
+      <origin xyz="0.263 0.335 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.045 0.46" />
+        </geometry>
+      </collision>
+    <collision name="rail_mount_1_0">
+      <origin xyz="0.23 0.26 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.125 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rail_mount_1_1">
+      <origin xyz="0.23 0.26 0.675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.125 0.035" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_strip">
+      <origin xyz="0 0.222 0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.04 0.02" />
+        </geometry>
+      </collision>
+    <collision name="body_hinge_barrel_0">
+      <origin xyz="-0.3 0.235 0.515" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="body_hinge_leaf_0">
+      <origin xyz="-0.3 0.214 0.492" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.026 0.01" />
+        </geometry>
+      </collision>
+    <collision name="body_hinge_barrel_1">
+      <origin xyz="0 0.235 0.515" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="body_hinge_leaf_1">
+      <origin xyz="0 0.214 0.492" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.026 0.01" />
+        </geometry>
+      </collision>
+    <collision name="body_hinge_barrel_2">
+      <origin xyz="0.3 0.235 0.515" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="body_hinge_leaf_2">
+      <origin xyz="0.3 0.214 0.492" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.026 0.01" />
+        </geometry>
+      </collision>
+    <collision name="latch_pivot_pad_0">
+      <origin xyz="0.369 -0.055 0.455" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="latch_pivot_pad_1">
+      <origin xyz="-0.369 -0.055 0.455" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="lid_panel">
+      <origin xyz="0 -0.2325 0.02" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lid_panel.obj" />
+        </geometry>
+      <material name="graphite_rugged_polymer">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="top_recess_field">
+      <origin xyz="0 -0.245 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.23 0.012" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="lid_long_rib_0">
+      <origin xyz="-0.26 -0.24 0.067" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.3 0.022" />
+        </geometry>
+      <material name="graphite_rugged_polymer">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lid_long_rib_1">
+      <origin xyz="0.26 -0.24 0.067" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.3 0.022" />
+        </geometry>
+      <material name="graphite_rugged_polymer">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lid_cross_rib_0">
+      <origin xyz="0 -0.35 0.066" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.035 0.02" />
+        </geometry>
+      <material name="graphite_rugged_polymer">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lid_cross_rib_1">
+      <origin xyz="0 -0.155 0.066" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.035 0.02" />
+        </geometry>
+      <material name="graphite_rugged_polymer">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_barrel_0">
+      <origin xyz="-0.15 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.12" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_leaf_0">
+      <origin xyz="-0.15 -0.018 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.03 0.01" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_barrel_1">
+      <origin xyz="0.15 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.12" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_leaf_1">
+      <origin xyz="0.15 -0.018 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.03 0.01" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="lid_latch_catch_0">
+      <origin xyz="0.379 -0.29 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.085 0.04" />
+        </geometry>
+      <material name="yellow_latch_plastic">
+        <color rgba="0.95 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="lid_latch_catch_1">
+      <origin xyz="-0.379 -0.29 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.085 0.04" />
+        </geometry>
+      <material name="yellow_latch_plastic">
+        <color rgba="0.95 0.7 0.08 1" />
+        </material>
+      </visual>
+    <collision name="lid_panel">
+      <origin xyz="0 -0.2325 0.02" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lid_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_recess_field">
+      <origin xyz="0 -0.245 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.23 0.012" />
+        </geometry>
+      </collision>
+    <collision name="lid_long_rib_0">
+      <origin xyz="-0.26 -0.24 0.067" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.3 0.022" />
+        </geometry>
+      </collision>
+    <collision name="lid_long_rib_1">
+      <origin xyz="0.26 -0.24 0.067" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.3 0.022" />
+        </geometry>
+      </collision>
+    <collision name="lid_cross_rib_0">
+      <origin xyz="0 -0.35 0.066" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.035 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lid_cross_rib_1">
+      <origin xyz="0 -0.155 0.066" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.035 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_barrel_0">
+      <origin xyz="-0.15 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_leaf_0">
+      <origin xyz="-0.15 -0.018 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.03 0.01" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_barrel_1">
+      <origin xyz="0.15 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_leaf_1">
+      <origin xyz="0.15 -0.018 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.03 0.01" />
+        </geometry>
+      </collision>
+    <collision name="lid_latch_catch_0">
+      <origin xyz="0.379 -0.29 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.085 0.04" />
+        </geometry>
+      </collision>
+    <collision name="lid_latch_catch_1">
+      <origin xyz="-0.379 -0.29 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.085 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="handle">
+    <visual name="handle_stanchion_0">
+      <origin xyz="-0.23 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.024 0.68" />
+        </geometry>
+      <material name="dark_zinc_pin">
+        <color rgba="0.35 0.36 0.34 1" />
+        </material>
+      </visual>
+    <visual name="handle_stanchion_1">
+      <origin xyz="0.23 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.024 0.68" />
+        </geometry>
+      <material name="dark_zinc_pin">
+        <color rgba="0.35 0.36 0.34 1" />
+        </material>
+      </visual>
+    <visual name="handle_grip">
+      <origin xyz="0 0 0.39" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.56" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="handle_cross_tie">
+      <origin xyz="0 0 0.375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.51 0.02 0.03" />
+        </geometry>
+      <material name="dark_zinc_pin">
+        <color rgba="0.35 0.36 0.34 1" />
+        </material>
+      </visual>
+    <collision name="handle_stanchion_0">
+      <origin xyz="-0.23 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.024 0.68" />
+        </geometry>
+      </collision>
+    <collision name="handle_stanchion_1">
+      <origin xyz="0.23 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.024 0.68" />
+        </geometry>
+      </collision>
+    <collision name="handle_grip">
+      <origin xyz="0 0 0.39" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.56" />
+        </geometry>
+      </collision>
+    <collision name="handle_cross_tie">
+      <origin xyz="0 0 0.375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.51 0.02 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="side_latch_0">
+    <visual name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.036" />
+        </geometry>
+      <material name="yellow_latch_plastic">
+        <color rgba="0.95 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="latch_bridge">
+      <origin xyz="0.018 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.07 0.18" />
+        </geometry>
+      <material name="yellow_latch_plastic">
+        <color rgba="0.95 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="upper_hook">
+      <origin xyz="0.009 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.082 0.035" />
+        </geometry>
+      <material name="yellow_latch_plastic">
+        <color rgba="0.95 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="lower_pull_tab">
+      <origin xyz="0.008 0 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.056 0.028" />
+        </geometry>
+      <material name="yellow_latch_plastic">
+        <color rgba="0.95 0.7 0.08 1" />
+        </material>
+      </visual>
+    <collision name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.036" />
+        </geometry>
+      </collision>
+    <collision name="latch_bridge">
+      <origin xyz="0.018 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.07 0.18" />
+        </geometry>
+      </collision>
+    <collision name="upper_hook">
+      <origin xyz="0.009 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.082 0.035" />
+        </geometry>
+      </collision>
+    <collision name="lower_pull_tab">
+      <origin xyz="0.008 0 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.056 0.028" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="side_latch_1">
+    <visual name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.036" />
+        </geometry>
+      <material name="yellow_latch_plastic">
+        <color rgba="0.95 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="latch_bridge">
+      <origin xyz="-0.018 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.07 0.18" />
+        </geometry>
+      <material name="yellow_latch_plastic">
+        <color rgba="0.95 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="upper_hook">
+      <origin xyz="-0.009 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.082 0.035" />
+        </geometry>
+      <material name="yellow_latch_plastic">
+        <color rgba="0.95 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="lower_pull_tab">
+      <origin xyz="-0.008 0 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.056 0.028" />
+        </geometry>
+      <material name="yellow_latch_plastic">
+        <color rgba="0.95 0.7 0.08 1" />
+        </material>
+      </visual>
+    <collision name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.036" />
+        </geometry>
+      </collision>
+    <collision name="latch_bridge">
+      <origin xyz="-0.018 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.07 0.18" />
+        </geometry>
+      </collision>
+    <collision name="upper_hook">
+      <origin xyz="-0.009 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.082 0.035" />
+        </geometry>
+      </collision>
+    <collision name="lower_pull_tab">
+      <origin xyz="-0.008 0 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.056 0.028" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wheel_0">
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_tire.obj" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_hub.obj" />
+        </geometry>
+      <material name="dark_zinc_pin">
+        <color rgba="0.35 0.36 0.34 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="hub">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_hub.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wheel_1">
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_tire.obj" />
+        </geometry>
+      <material name="black_rubberized_trim">
+        <color rgba="0.012 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_hub.obj" />
+        </geometry>
+      <material name="dark_zinc_pin">
+        <color rgba="0.35 0.36 0.34 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="hub">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_hub.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_lid" type="revolute">
+    <origin xyz="0 0.235 0.515" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="30" velocity="1.5" lower="0" upper="1.65" />
+    </joint>
+  <joint name="body_to_handle" type="prismatic">
+    <origin xyz="0 0.34 0.34" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="handle" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.35" lower="0" upper="0.38" />
+    </joint>
+  <joint name="body_to_side_latch_0" type="revolute">
+    <origin xyz="0.396 -0.055 0.455" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="side_latch_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="3" lower="0" upper="1.05" />
+    </joint>
+  <joint name="body_to_side_latch_1" type="revolute">
+    <origin xyz="-0.396 -0.055 0.455" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="side_latch_1" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="3" lower="0" upper="1.05" />
+    </joint>
+  <joint name="body_to_wheel_0" type="continuous">
+    <origin xyz="-0.31 0.32 0.09" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="wheel_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="15" />
+    </joint>
+  <joint name="body_to_wheel_1" type="continuous">
+    <origin xyz="0.31 0.32 0.09" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="wheel_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="15" />
+    </joint>
+  </robot>

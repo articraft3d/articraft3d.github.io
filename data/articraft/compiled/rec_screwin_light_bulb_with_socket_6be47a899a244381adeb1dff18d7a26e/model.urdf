@@ -1,0 +1,380 @@
+<robot name="screw_in_light_bulb_socket">
+  <material name="frosted_glass">
+    <color rgba="0.8 0.94 1 0.34" />
+    </material>
+  <material name="glass_stem">
+    <color rgba="0.76 0.91 1 0.46" />
+    </material>
+  <material name="warm_tungsten">
+    <color rgba="1 0.55 0.12 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.72 0.72 0.68 1" />
+    </material>
+  <material name="nickel">
+    <color rgba="0.62 0.64 0.63 1" />
+    </material>
+  <material name="brass">
+    <color rgba="0.92 0.68 0.3 1" />
+    </material>
+  <material name="black_insulator">
+    <color rgba="0.025 0.022 0.02 1" />
+    </material>
+  <material name="porcelain">
+    <color rgba="0.93 0.91 0.85 1" />
+    </material>
+  <material name="slot_shadow">
+    <color rgba="0.08 0.075 0.065 1" />
+    </material>
+  <link name="socket">
+    <visual name="socket_body">
+      <geometry>
+        <mesh filename="assets/meshes/socket_body.obj" />
+        </geometry>
+      <material name="porcelain" />
+      </visual>
+    <visual name="socket_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/socket_sleeve.obj" />
+        </geometry>
+      <material name="nickel" />
+      </visual>
+    <visual name="socket_thread">
+      <geometry>
+        <mesh filename="assets/meshes/socket_thread.obj" />
+        </geometry>
+      <material name="nickel" />
+      </visual>
+    <visual name="center_contact">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.003" />
+        </geometry>
+      <material name="brass" />
+      </visual>
+    <visual name="contact_post">
+      <origin xyz="0 0 0.01125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0033" length="0.0148" />
+        </geometry>
+      <material name="brass" />
+      </visual>
+    <visual name="contact_insulator">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0146" length="0.006" />
+        </geometry>
+      <material name="porcelain" />
+      </visual>
+    <visual name="mount_ear_0">
+      <origin xyz="-0.047 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.02 0.006" />
+        </geometry>
+      <material name="porcelain" />
+      </visual>
+    <visual name="mount_screw_0">
+      <origin xyz="-0.047 0 0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.003" />
+        </geometry>
+      <material name="nickel" />
+      </visual>
+    <visual name="screw_slot_0">
+      <origin xyz="-0.047 0 0.0092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0075 0.0011 0.0006" />
+        </geometry>
+      <material name="slot_shadow" />
+      </visual>
+    <visual name="mount_ear_1">
+      <origin xyz="0.047 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.02 0.006" />
+        </geometry>
+      <material name="porcelain" />
+      </visual>
+    <visual name="mount_screw_1">
+      <origin xyz="0.047 0 0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.003" />
+        </geometry>
+      <material name="nickel" />
+      </visual>
+    <visual name="screw_slot_1">
+      <origin xyz="0.047 0 0.0092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0075 0.0011 0.0006" />
+        </geometry>
+      <material name="slot_shadow" />
+      </visual>
+    <visual name="terminal_lug_0">
+      <origin xyz="0 -0.032 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.007 0.01" />
+        </geometry>
+      <material name="brass" />
+      </visual>
+    <visual name="terminal_screw_0">
+      <origin xyz="0 -0.0362 0.026" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.004" />
+        </geometry>
+      <material name="nickel" />
+      </visual>
+    <visual name="terminal_slot_0">
+      <origin xyz="0 -0.0384 0.026" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.007 0.0006 0.001" />
+        </geometry>
+      <material name="slot_shadow" />
+      </visual>
+    <visual name="terminal_lug_1">
+      <origin xyz="0 -0.032 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.007 0.01" />
+        </geometry>
+      <material name="brass" />
+      </visual>
+    <visual name="terminal_screw_1">
+      <origin xyz="0 -0.0362 0.04" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.004" />
+        </geometry>
+      <material name="nickel" />
+      </visual>
+    <visual name="terminal_slot_1">
+      <origin xyz="0 -0.0384 0.04" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.007 0.0006 0.001" />
+        </geometry>
+      <material name="slot_shadow" />
+      </visual>
+    <collision name="socket_body">
+      <geometry>
+        <mesh filename="assets/meshes/socket_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="socket_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/socket_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="socket_thread">
+      <geometry>
+        <mesh filename="assets/meshes/socket_thread.obj" />
+        </geometry>
+      </collision>
+    <collision name="center_contact">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="contact_post">
+      <origin xyz="0 0 0.01125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0033" length="0.0148" />
+        </geometry>
+      </collision>
+    <collision name="contact_insulator">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0146" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="mount_ear_0">
+      <origin xyz="-0.047 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.02 0.006" />
+        </geometry>
+      </collision>
+    <collision name="mount_screw_0">
+      <origin xyz="-0.047 0 0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_slot_0">
+      <origin xyz="-0.047 0 0.0092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0075 0.0011 0.0006" />
+        </geometry>
+      </collision>
+    <collision name="mount_ear_1">
+      <origin xyz="0.047 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.02 0.006" />
+        </geometry>
+      </collision>
+    <collision name="mount_screw_1">
+      <origin xyz="0.047 0 0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_slot_1">
+      <origin xyz="0.047 0 0.0092" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0075 0.0011 0.0006" />
+        </geometry>
+      </collision>
+    <collision name="terminal_lug_0">
+      <origin xyz="0 -0.032 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.007 0.01" />
+        </geometry>
+      </collision>
+    <collision name="terminal_screw_0">
+      <origin xyz="0 -0.0362 0.026" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="terminal_slot_0">
+      <origin xyz="0 -0.0384 0.026" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.007 0.0006 0.001" />
+        </geometry>
+      </collision>
+    <collision name="terminal_lug_1">
+      <origin xyz="0 -0.032 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.007 0.01" />
+        </geometry>
+      </collision>
+    <collision name="terminal_screw_1">
+      <origin xyz="0 -0.0362 0.04" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="terminal_slot_1">
+      <origin xyz="0 -0.0384 0.04" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.007 0.0006 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bulb">
+    <visual name="glass_envelope">
+      <geometry>
+        <mesh filename="assets/meshes/glass_envelope.obj" />
+        </geometry>
+      <material name="frosted_glass" />
+      </visual>
+    <visual name="glass_stem">
+      <origin xyz="0 0 0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0043" length="0.017" />
+        </geometry>
+      <material name="glass_stem" />
+      </visual>
+    <visual name="filament">
+      <geometry>
+        <mesh filename="assets/meshes/filament.obj" />
+        </geometry>
+      <material name="warm_tungsten" />
+      </visual>
+    <visual name="screw_core">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.024" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="edison_thread">
+      <geometry>
+        <mesh filename="assets/meshes/edison_thread.obj" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="orientation_mark">
+      <origin xyz="0.0128 0 -0.0145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0012 0.005 0.01" />
+        </geometry>
+      <material name="slot_shadow" />
+      </visual>
+    <visual name="crimp_ring">
+      <origin xyz="0 0 -0.0022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0134" length="0.0042" />
+        </geometry>
+      <material name="brushed_aluminum" />
+      </visual>
+    <visual name="insulator_disk">
+      <origin xyz="0 0 -0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.0037" />
+        </geometry>
+      <material name="black_insulator" />
+      </visual>
+    <visual name="bottom_contact">
+      <origin xyz="0 0 -0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0057" length="0.003" />
+        </geometry>
+      <material name="brass" />
+      </visual>
+    <collision name="glass_envelope">
+      <geometry>
+        <mesh filename="assets/meshes/glass_envelope.obj" />
+        </geometry>
+      </collision>
+    <collision name="glass_stem">
+      <origin xyz="0 0 0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0043" length="0.017" />
+        </geometry>
+      </collision>
+    <collision name="filament">
+      <geometry>
+        <mesh filename="assets/meshes/filament.obj" />
+        </geometry>
+      </collision>
+    <collision name="screw_core">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="edison_thread">
+      <geometry>
+        <mesh filename="assets/meshes/edison_thread.obj" />
+        </geometry>
+      </collision>
+    <collision name="orientation_mark">
+      <origin xyz="0.0128 0 -0.0145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0012 0.005 0.01" />
+        </geometry>
+      </collision>
+    <collision name="crimp_ring">
+      <origin xyz="0 0 -0.0022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0134" length="0.0042" />
+        </geometry>
+      </collision>
+    <collision name="insulator_disk">
+      <origin xyz="0 0 -0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.0037" />
+        </geometry>
+      </collision>
+    <collision name="bottom_contact">
+      <origin xyz="0 0 -0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0057" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="bulb_twist" type="revolute">
+    <origin xyz="0 0 0.052" rpy="0 0 0" />
+    <parent link="socket" />
+    <child link="bulb" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.2" velocity="3" lower="0" upper="18.8496" />
+    <dynamics damping="0.02" friction="0.04" />
+    </joint>
+  </robot>

@@ -1,0 +1,173 @@
+<robot name="saddle_body_coaxial_stack">
+  <material name="housing_paint">
+    <color rgba="0.13 0.15 0.17 1" />
+    </material>
+  <material name="bearing_black">
+    <color rgba="0.02 0.023 0.025 1" />
+    </material>
+  <material name="lower_blue">
+    <color rgba="0.08 0.3 0.55 1" />
+    </material>
+  <material name="middle_steel">
+    <color rgba="0.62 0.65 0.68 1" />
+    </material>
+  <material name="top_bronze">
+    <color rgba="0.76 0.55 0.28 1" />
+    </material>
+  <link name="housing">
+    <visual name="saddle_body">
+      <geometry>
+        <mesh filename="assets/meshes/saddle_housing.obj" />
+        </geometry>
+      <material name="housing_paint">
+        <color rgba="0.13 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="fixed_spindle">
+      <origin xyz="0 0 0.3315" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.363" />
+        </geometry>
+      <material name="bearing_black">
+        <color rgba="0.02 0.023 0.025 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_race">
+      <origin xyz="0 0 0.219" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.185" length="0.018" />
+        </geometry>
+      <material name="bearing_black">
+        <color rgba="0.02 0.023 0.025 1" />
+        </material>
+      </visual>
+    <visual name="middle_bearing_race">
+      <origin xyz="0 0 0.329" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.142" length="0.012" />
+        </geometry>
+      <material name="bearing_black">
+        <color rgba="0.02 0.023 0.025 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing_race">
+      <origin xyz="0 0 0.421" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.107" length="0.01" />
+        </geometry>
+      <material name="bearing_black">
+        <color rgba="0.02 0.023 0.025 1" />
+        </material>
+      </visual>
+    <visual name="retainer_cap">
+      <origin xyz="0 0 0.5012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.084" length="0.024" />
+        </geometry>
+      <material name="bearing_black">
+        <color rgba="0.02 0.023 0.025 1" />
+        </material>
+      </visual>
+    <collision name="saddle_body">
+      <geometry>
+        <mesh filename="assets/meshes/saddle_housing.obj" />
+        </geometry>
+      </collision>
+    <collision name="fixed_spindle">
+      <origin xyz="0 0 0.3315" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.363" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_race">
+      <origin xyz="0 0 0.219" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.185" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="middle_bearing_race">
+      <origin xyz="0 0 0.329" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.142" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing_race">
+      <origin xyz="0 0 0.421" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.107" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="retainer_cap">
+      <origin xyz="0 0 0.5012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.084" length="0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_stage">
+    <visual name="lower_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/lower_stage_shell.obj" />
+        </geometry>
+      <material name="lower_blue">
+        <color rgba="0.08 0.3 0.55 1" />
+        </material>
+      </visual>
+    <collision name="lower_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/lower_stage_shell.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="middle_stage">
+    <visual name="middle_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/middle_stage_shell.obj" />
+        </geometry>
+      <material name="middle_steel">
+        <color rgba="0.62 0.65 0.68 1" />
+        </material>
+      </visual>
+    <collision name="middle_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/middle_stage_shell.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="top_stage">
+    <visual name="top_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/top_stage_shell.obj" />
+        </geometry>
+      <material name="top_bronze">
+        <color rgba="0.76 0.55 0.28 1" />
+        </material>
+      </visual>
+    <collision name="top_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/top_stage_shell.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="housing_to_lower_stage" type="revolute">
+    <origin xyz="0 0 0.27" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="lower_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="85" velocity="1.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="housing_to_middle_stage" type="revolute">
+    <origin xyz="0 0 0.369" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="middle_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="55" velocity="1.5" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="housing_to_top_stage" type="revolute">
+    <origin xyz="0 0 0.455" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="top_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="1.8" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

@@ -1,0 +1,223 @@
+<robot name="folding_fan_fidget">
+  <link name="rivet">
+    <visual name="pin">
+      <geometry>
+        <cylinder radius="0.0044" length="0.0324" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.74 0.7 0.64 1" />
+        </material>
+      </visual>
+    <visual name="top_cap">
+      <origin xyz="0 0 0.0149" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.0026" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.74 0.7 0.64 1" />
+        </material>
+      </visual>
+    <visual name="bottom_cap">
+      <origin xyz="0 0 -0.0149" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.0026" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.74 0.7 0.64 1" />
+        </material>
+      </visual>
+    <collision name="pin">
+      <geometry>
+        <cylinder radius="0.0044" length="0.0324" />
+        </geometry>
+      </collision>
+    <collision name="top_cap">
+      <origin xyz="0 0 0.0149" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.0026" />
+        </geometry>
+      </collision>
+    <collision name="bottom_cap">
+      <origin xyz="0 0 -0.0149" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.0026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rib_0">
+    <visual name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      <material name="rib_red">
+        <color rgba="0.9 0.18 0.16 1" />
+        </material>
+      </visual>
+    <collision name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rib_1">
+    <visual name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      <material name="rib_orange">
+        <color rgba="0.95 0.48 0.13 1" />
+        </material>
+      </visual>
+    <collision name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rib_2">
+    <visual name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      <material name="rib_yellow">
+        <color rgba="0.96 0.74 0.16 1" />
+        </material>
+      </visual>
+    <collision name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rib_3">
+    <visual name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      <material name="rib_green">
+        <color rgba="0.25 0.7 0.25 1" />
+        </material>
+      </visual>
+    <collision name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rib_4">
+    <visual name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      <material name="rib_teal">
+        <color rgba="0.12 0.65 0.7 1" />
+        </material>
+      </visual>
+    <collision name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rib_5">
+    <visual name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      <material name="rib_blue">
+        <color rgba="0.14 0.34 0.9 1" />
+        </material>
+      </visual>
+    <collision name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rib_6">
+    <visual name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      <material name="rib_indigo">
+        <color rgba="0.34 0.25 0.78 1" />
+        </material>
+      </visual>
+    <collision name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rib_7">
+    <visual name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      <material name="rib_violet">
+        <color rgba="0.62 0.25 0.74 1" />
+        </material>
+      </visual>
+    <collision name="rib_body">
+      <geometry>
+        <mesh filename="assets/meshes/flat_rib.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="pivot_0" type="revolute">
+    <origin xyz="0 0 -0.0126" rpy="0 0 0" />
+    <parent link="rivet" />
+    <child link="rib_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="8" lower="-0.977384" upper="0" />
+    </joint>
+  <joint name="pivot_1" type="revolute">
+    <origin xyz="0 0 -0.009" rpy="0 0 0" />
+    <parent link="rivet" />
+    <child link="rib_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="8" lower="-0.698132" upper="0" />
+    </joint>
+  <joint name="pivot_2" type="revolute">
+    <origin xyz="0 0 -0.0054" rpy="0 0 0" />
+    <parent link="rivet" />
+    <child link="rib_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="8" lower="-0.418879" upper="0" />
+    </joint>
+  <joint name="pivot_3" type="revolute">
+    <origin xyz="0 0 -0.0018" rpy="0 0 0" />
+    <parent link="rivet" />
+    <child link="rib_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="8" lower="-0.139626" upper="0" />
+    </joint>
+  <joint name="pivot_4" type="revolute">
+    <origin xyz="0 0 0.0018" rpy="0 0 0" />
+    <parent link="rivet" />
+    <child link="rib_4" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="8" lower="0" upper="0.139626" />
+    </joint>
+  <joint name="pivot_5" type="revolute">
+    <origin xyz="0 0 0.0054" rpy="0 0 0" />
+    <parent link="rivet" />
+    <child link="rib_5" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="8" lower="0" upper="0.418879" />
+    </joint>
+  <joint name="pivot_6" type="revolute">
+    <origin xyz="0 0 0.009" rpy="0 0 0" />
+    <parent link="rivet" />
+    <child link="rib_6" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="8" lower="0" upper="0.698132" />
+    </joint>
+  <joint name="pivot_7" type="revolute">
+    <origin xyz="0 0 0.0126" rpy="0 0 0" />
+    <parent link="rivet" />
+    <child link="rib_7" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="8" lower="0" upper="0.977384" />
+    </joint>
+  </robot>

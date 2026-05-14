@@ -1,0 +1,385 @@
+<robot name="nested_three_carriage_linear_chain">
+  <link name="guide_frame">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.34 0.045" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_0">
+      <origin xyz="0 -0.11 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="1.12 0.04 0.045" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_1">
+      <origin xyz="0 0.11 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="1.12 0.04 0.045" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_0">
+      <origin xyz="-0.595 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.34 0.09" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="bumper_0">
+      <origin xyz="-0.578 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.22 0.03" />
+        </geometry>
+      <material name="rubber_stop">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_1">
+      <origin xyz="0.595 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.34 0.09" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="bumper_1">
+      <origin xyz="0.578 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.22 0.03" />
+        </geometry>
+      <material name="rubber_stop">
+        <color rgba="0.015 0.015 0.018 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.34 0.045" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_0">
+      <origin xyz="0 -0.11 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="1.12 0.04 0.045" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_1">
+      <origin xyz="0 0.11 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="1.12 0.04 0.045" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_0">
+      <origin xyz="-0.595 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.34 0.09" />
+        </geometry>
+      </collision>
+    <collision name="bumper_0">
+      <origin xyz="-0.578 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.22 0.03" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_1">
+      <origin xyz="0.595 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.34 0.09" />
+        </geometry>
+      </collision>
+    <collision name="bumper_1">
+      <origin xyz="0.578 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.22 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="large_carriage">
+    <visual name="large_plate">
+      <geometry>
+        <box size="0.72 0.28 0.05" />
+        </geometry>
+      <material name="anodized_blue">
+        <color rgba="0.05 0.22 0.62 1" />
+        </material>
+      </visual>
+    <visual name="large_runner_0">
+      <origin xyz="0 -0.11 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.045 0.018" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="large_runner_1">
+      <origin xyz="0 0.11 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.045 0.018" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="large_inner_rail_0">
+      <origin xyz="0 -0.092 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.026 0.04" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="large_inner_rail_1">
+      <origin xyz="0 0.092 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.026 0.04" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="large_cross_stop">
+      <origin xyz="-0.345 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.22 0.05" />
+        </geometry>
+      <material name="anodized_blue">
+        <color rgba="0.05 0.22 0.62 1" />
+        </material>
+      </visual>
+    <collision name="large_plate">
+      <geometry>
+        <box size="0.72 0.28 0.05" />
+        </geometry>
+      </collision>
+    <collision name="large_runner_0">
+      <origin xyz="0 -0.11 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.045 0.018" />
+        </geometry>
+      </collision>
+    <collision name="large_runner_1">
+      <origin xyz="0 0.11 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.045 0.018" />
+        </geometry>
+      </collision>
+    <collision name="large_inner_rail_0">
+      <origin xyz="0 -0.092 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="large_inner_rail_1">
+      <origin xyz="0 0.092 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.026 0.04" />
+        </geometry>
+      </collision>
+    <collision name="large_cross_stop">
+      <origin xyz="-0.345 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.22 0.05" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="medium_carriage">
+    <visual name="medium_plate">
+      <geometry>
+        <box size="0.44 0.205 0.04" />
+        </geometry>
+      <material name="anodized_teal">
+        <color rgba="0.02 0.46 0.5 1" />
+        </material>
+      </visual>
+    <visual name="medium_runner_0">
+      <origin xyz="0 -0.092 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.025 0.016" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="medium_runner_1">
+      <origin xyz="0 0.092 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.025 0.016" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="medium_inner_rail_0">
+      <origin xyz="0 -0.062 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.018 0.025" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="medium_inner_rail_1">
+      <origin xyz="0 0.062 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.018 0.025" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="medium_cross_stop">
+      <origin xyz="-0.212 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.125 0.04" />
+        </geometry>
+      <material name="anodized_teal">
+        <color rgba="0.02 0.46 0.5 1" />
+        </material>
+      </visual>
+    <collision name="medium_plate">
+      <geometry>
+        <box size="0.44 0.205 0.04" />
+        </geometry>
+      </collision>
+    <collision name="medium_runner_0">
+      <origin xyz="0 -0.092 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.025 0.016" />
+        </geometry>
+      </collision>
+    <collision name="medium_runner_1">
+      <origin xyz="0 0.092 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.025 0.016" />
+        </geometry>
+      </collision>
+    <collision name="medium_inner_rail_0">
+      <origin xyz="0 -0.062 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.018 0.025" />
+        </geometry>
+      </collision>
+    <collision name="medium_inner_rail_1">
+      <origin xyz="0 0.062 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.018 0.025" />
+        </geometry>
+      </collision>
+    <collision name="medium_cross_stop">
+      <origin xyz="-0.212 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.125 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="small_carriage">
+    <visual name="small_plate">
+      <geometry>
+        <box size="0.24 0.13 0.032" />
+        </geometry>
+      <material name="anodized_orange">
+        <color rgba="0.88 0.34 0.06 1" />
+        </material>
+      </visual>
+    <visual name="small_runner_0">
+      <origin xyz="0 -0.062 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.02 0.012" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="small_runner_1">
+      <origin xyz="0 0.062 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.02 0.012" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="output_face">
+      <origin xyz="0.13 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.105 0.058" />
+        </geometry>
+      <material name="anodized_orange">
+        <color rgba="0.88 0.34 0.06 1" />
+        </material>
+      </visual>
+    <visual name="output_pin">
+      <origin xyz="0.18 0 0.004" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <collision name="small_plate">
+      <geometry>
+        <box size="0.24 0.13 0.032" />
+        </geometry>
+      </collision>
+    <collision name="small_runner_0">
+      <origin xyz="0 -0.062 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.02 0.012" />
+        </geometry>
+      </collision>
+    <collision name="small_runner_1">
+      <origin xyz="0 0.062 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.02 0.012" />
+        </geometry>
+      </collision>
+    <collision name="output_face">
+      <origin xyz="0.13 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.105 0.058" />
+        </geometry>
+      </collision>
+    <collision name="output_pin">
+      <origin xyz="0.18 0 0.004" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="guide_to_large" type="prismatic">
+    <origin xyz="-0.2 0 0.115" rpy="0 0 0" />
+    <parent link="guide_frame" />
+    <child link="large_carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="180" velocity="0.35" lower="0" upper="0.28" />
+    </joint>
+  <joint name="large_to_medium" type="prismatic">
+    <origin xyz="-0.12 0 0.099" rpy="0 0 0" />
+    <parent link="large_carriage" />
+    <child link="medium_carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="90" velocity="0.3" lower="0" upper="0.22" />
+    </joint>
+  <joint name="medium_to_small" type="prismatic">
+    <origin xyz="-0.065 0 0.071" rpy="0 0 0" />
+    <parent link="medium_carriage" />
+    <child link="small_carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="45" velocity="0.25" lower="0" upper="0.16" />
+    </joint>
+  </robot>

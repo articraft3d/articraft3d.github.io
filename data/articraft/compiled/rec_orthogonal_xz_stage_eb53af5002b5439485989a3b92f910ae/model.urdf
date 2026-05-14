@@ -1,0 +1,577 @@
+<robot name="two_axis_positioning_stage">
+  <material name="brushed_aluminum">
+    <color rgba="0.7 0.72 0.7 1" />
+    </material>
+  <material name="dark_anodized">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="polished_rail_steel">
+    <color rgba="0.82 0.84 0.86 1" />
+    </material>
+  <material name="black_bearing_blocks">
+    <color rgba="0.015 0.017 0.02 1" />
+    </material>
+  <material name="dark_socket_screws">
+    <color rgba="0 0 0 1" />
+    </material>
+  <link name="base">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.32 0.025" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="x_rail_support_front">
+      <origin xyz="0 -0.1 0.0405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.02 0.031" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="x_rail_front">
+      <origin xyz="0 -0.1 0.067" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.5" />
+        </geometry>
+      <material name="polished_rail_steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="x_end_stop_front_low">
+      <origin xyz="-0.255 -0.1 0.0475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.056 0.045" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="x_end_stop_front_high">
+      <origin xyz="0.255 -0.1 0.0475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.056 0.045" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="x_rail_support_rear">
+      <origin xyz="0 0.1 0.0405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.02 0.031" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="x_rail_rear">
+      <origin xyz="0 0.1 0.067" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.5" />
+        </geometry>
+      <material name="polished_rail_steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="x_end_stop_rear_low">
+      <origin xyz="-0.255 0.1 0.0475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.056 0.045" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="x_end_stop_rear_high">
+      <origin xyz="0.255 0.1 0.0475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.056 0.045" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="base_screw_0">
+      <origin xyz="-0.24 -0.13 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      <material name="dark_socket_screws">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="base_screw_1">
+      <origin xyz="-0.24 0.13 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      <material name="dark_socket_screws">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="base_screw_2">
+      <origin xyz="0.24 -0.13 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      <material name="dark_socket_screws">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="base_screw_3">
+      <origin xyz="0.24 0.13 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      <material name="dark_socket_screws">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.32 0.025" />
+        </geometry>
+      </collision>
+    <collision name="x_rail_support_front">
+      <origin xyz="0 -0.1 0.0405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.02 0.031" />
+        </geometry>
+      </collision>
+    <collision name="x_rail_front">
+      <origin xyz="0 -0.1 0.067" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.5" />
+        </geometry>
+      </collision>
+    <collision name="x_end_stop_front_low">
+      <origin xyz="-0.255 -0.1 0.0475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.056 0.045" />
+        </geometry>
+      </collision>
+    <collision name="x_end_stop_front_high">
+      <origin xyz="0.255 -0.1 0.0475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.056 0.045" />
+        </geometry>
+      </collision>
+    <collision name="x_rail_support_rear">
+      <origin xyz="0 0.1 0.0405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.02 0.031" />
+        </geometry>
+      </collision>
+    <collision name="x_rail_rear">
+      <origin xyz="0 0.1 0.067" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.5" />
+        </geometry>
+      </collision>
+    <collision name="x_end_stop_rear_low">
+      <origin xyz="-0.255 0.1 0.0475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.056 0.045" />
+        </geometry>
+      </collision>
+    <collision name="x_end_stop_rear_high">
+      <origin xyz="0.255 0.1 0.0475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.056 0.045" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_0">
+      <origin xyz="-0.24 -0.13 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_1">
+      <origin xyz="-0.24 0.13 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_2">
+      <origin xyz="0.24 -0.13 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_3">
+      <origin xyz="0.24 0.13 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="x_carriage">
+    <visual name="x_bearing_front_neg">
+      <origin xyz="-0.055 -0.1 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.012" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="x_bearing_rear_neg">
+      <origin xyz="-0.055 0.1 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.012" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="x_bearing_front_pos">
+      <origin xyz="0.055 -0.1 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.012" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="x_bearing_rear_pos">
+      <origin xyz="0.055 0.1 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.012" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="x_saddle_plate">
+      <origin xyz="0 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.25 0.022" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="z_backplate">
+      <origin xyz="0 0 0.194" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.024 0.32" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="z_base_foot">
+      <origin xyz="0 0.01 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.095 0.032" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="z_rail_clamp_bottom">
+      <origin xyz="0 -0.01 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.04 0.026" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="z_rail_clamp_top">
+      <origin xyz="0 -0.01 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.04 0.026" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="z_rail_neg">
+      <origin xyz="-0.055 -0.022 0.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.25" />
+        </geometry>
+      <material name="polished_rail_steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="z_rail_pos">
+      <origin xyz="0.055 -0.022 0.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.25" />
+        </geometry>
+      <material name="polished_rail_steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <collision name="x_bearing_front_neg">
+      <origin xyz="-0.055 -0.1 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.012" />
+        </geometry>
+      </collision>
+    <collision name="x_bearing_rear_neg">
+      <origin xyz="-0.055 0.1 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.012" />
+        </geometry>
+      </collision>
+    <collision name="x_bearing_front_pos">
+      <origin xyz="0.055 -0.1 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.012" />
+        </geometry>
+      </collision>
+    <collision name="x_bearing_rear_pos">
+      <origin xyz="0.055 0.1 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.012" />
+        </geometry>
+      </collision>
+    <collision name="x_saddle_plate">
+      <origin xyz="0 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.25 0.022" />
+        </geometry>
+      </collision>
+    <collision name="z_backplate">
+      <origin xyz="0 0 0.194" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.024 0.32" />
+        </geometry>
+      </collision>
+    <collision name="z_base_foot">
+      <origin xyz="0 0.01 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.095 0.032" />
+        </geometry>
+      </collision>
+    <collision name="z_rail_clamp_bottom">
+      <origin xyz="0 -0.01 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.04 0.026" />
+        </geometry>
+      </collision>
+    <collision name="z_rail_clamp_top">
+      <origin xyz="0 -0.01 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.04 0.026" />
+        </geometry>
+      </collision>
+    <collision name="z_rail_neg">
+      <origin xyz="-0.055 -0.022 0.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="z_rail_pos">
+      <origin xyz="0.055 -0.022 0.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.25" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="z_slider">
+    <visual name="z_bearing_neg">
+      <origin xyz="-0.055 -0.039 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.018 0.06" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="z_bearing_pos">
+      <origin xyz="0.055 -0.039 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.018 0.06" />
+        </geometry>
+      <material name="black_bearing_blocks">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="z_cross_bridge">
+      <origin xyz="0 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.142 0.02 0.14" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="payload_plate">
+      <origin xyz="0 -0.069 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.012 0.16" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="payload_standoff_neg_low">
+      <origin xyz="-0.05 -0.061 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.02 0.018" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="payload_screw_neg_low">
+      <origin xyz="-0.05 -0.077 -0.05" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="dark_socket_screws">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="payload_standoff_neg_high">
+      <origin xyz="-0.05 -0.061 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.02 0.018" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="payload_screw_neg_high">
+      <origin xyz="-0.05 -0.077 0.05" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="dark_socket_screws">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="payload_standoff_pos_low">
+      <origin xyz="0.05 -0.061 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.02 0.018" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="payload_screw_pos_low">
+      <origin xyz="0.05 -0.077 -0.05" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="dark_socket_screws">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="payload_standoff_pos_high">
+      <origin xyz="0.05 -0.061 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.02 0.018" />
+        </geometry>
+      <material name="dark_anodized">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="payload_screw_pos_high">
+      <origin xyz="0.05 -0.077 0.05" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="dark_socket_screws">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <collision name="z_bearing_neg">
+      <origin xyz="-0.055 -0.039 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.018 0.06" />
+        </geometry>
+      </collision>
+    <collision name="z_bearing_pos">
+      <origin xyz="0.055 -0.039 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.018 0.06" />
+        </geometry>
+      </collision>
+    <collision name="z_cross_bridge">
+      <origin xyz="0 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.142 0.02 0.14" />
+        </geometry>
+      </collision>
+    <collision name="payload_plate">
+      <origin xyz="0 -0.069 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.012 0.16" />
+        </geometry>
+      </collision>
+    <collision name="payload_standoff_neg_low">
+      <origin xyz="-0.05 -0.061 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.02 0.018" />
+        </geometry>
+      </collision>
+    <collision name="payload_screw_neg_low">
+      <origin xyz="-0.05 -0.077 -0.05" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="payload_standoff_neg_high">
+      <origin xyz="-0.05 -0.061 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.02 0.018" />
+        </geometry>
+      </collision>
+    <collision name="payload_screw_neg_high">
+      <origin xyz="-0.05 -0.077 0.05" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="payload_standoff_pos_low">
+      <origin xyz="0.05 -0.061 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.02 0.018" />
+        </geometry>
+      </collision>
+    <collision name="payload_screw_pos_low">
+      <origin xyz="0.05 -0.077 -0.05" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="payload_standoff_pos_high">
+      <origin xyz="0.05 -0.061 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.02 0.018" />
+        </geometry>
+      </collision>
+    <collision name="payload_screw_pos_high">
+      <origin xyz="0.05 -0.077 0.05" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="x_slide" type="prismatic">
+    <origin xyz="0 0 0.079" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="x_carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="150" velocity="0.35" lower="-0.1" upper="0.1" />
+    </joint>
+  <joint name="z_slide" type="prismatic">
+    <origin xyz="0 0 0.115" rpy="0 0 0" />
+    <parent link="x_carriage" />
+    <child link="z_slider" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.25" lower="0" upper="0.16" />
+    </joint>
+  </robot>

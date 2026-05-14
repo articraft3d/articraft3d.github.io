@@ -1,0 +1,490 @@
+<robot name="compact_remote_weapon_station">
+  <material name="matte_olive_armor">
+    <color rgba="0.22 0.26 0.18 1" />
+    </material>
+  <material name="dark_olive_shadow">
+    <color rgba="0.12 0.15 0.11 1" />
+    </material>
+  <material name="phosphated_gunmetal">
+    <color rgba="0.06 0.065 0.06 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.01 0.011 0.01 1" />
+    </material>
+  <material name="blue_black_glass">
+    <color rgba="0.02 0.08 0.12 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.018 0.018 0.016 1" />
+    </material>
+  <link name="pedestal">
+    <visual name="floor_plinth">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.62 0.06" />
+        </geometry>
+      <material name="dark_olive_shadow">
+        <color rgba="0.12 0.15 0.11 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_column">
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.185" length="0.24" />
+        </geometry>
+      <material name="matte_olive_armor">
+        <color rgba="0.22 0.26 0.18 1" />
+        </material>
+      </visual>
+    <visual name="fixed_bearing">
+      <origin xyz="0 0 0.34" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.26" length="0.08" />
+        </geometry>
+      <material name="dark_olive_shadow">
+        <color rgba="0.12 0.15 0.11 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_0_0">
+      <origin xyz="-0.27 -0.2 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="phosphated_gunmetal">
+        <color rgba="0.06 0.065 0.06 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_0_1">
+      <origin xyz="-0.27 0.2 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="phosphated_gunmetal">
+        <color rgba="0.06 0.065 0.06 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_1_0">
+      <origin xyz="0.27 -0.2 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="phosphated_gunmetal">
+        <color rgba="0.06 0.065 0.06 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_1_1">
+      <origin xyz="0.27 0.2 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      <material name="phosphated_gunmetal">
+        <color rgba="0.06 0.065 0.06 1" />
+        </material>
+      </visual>
+    <collision name="floor_plinth">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.62 0.06" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_column">
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.185" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="fixed_bearing">
+      <origin xyz="0 0 0.34" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.26" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_0_0">
+      <origin xyz="-0.27 -0.2 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_0_1">
+      <origin xyz="-0.27 0.2 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_1_0">
+      <origin xyz="0.27 -0.2 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_1_1">
+      <origin xyz="0.27 0.2 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="yaw_base">
+    <visual name="turntable_disk">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.278" length="0.06" />
+        </geometry>
+      <material name="dark_olive_shadow">
+        <color rgba="0.12 0.15 0.11 1" />
+        </material>
+      </visual>
+    <visual name="rotating_bearing">
+      <origin xyz="0 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.225" length="0.075" />
+        </geometry>
+      <material name="matte_olive_armor">
+        <color rgba="0.22 0.26 0.18 1" />
+        </material>
+      </visual>
+    <visual name="armored_deck">
+      <origin xyz="0 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.61 0.12" />
+        </geometry>
+      <material name="matte_olive_armor">
+        <color rgba="0.22 0.26 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rear_equipment_hump">
+      <origin xyz="-0.2 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.42 0.16" />
+        </geometry>
+      <material name="dark_olive_shadow">
+        <color rgba="0.12 0.15 0.11 1" />
+        </material>
+      </visual>
+    <visual name="side_plate_0">
+      <origin xyz="0 -0.305 0.43" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/sloped_side_armor.obj" />
+        </geometry>
+      <material name="matte_olive_armor">
+        <color rgba="0.22 0.26 0.18 1" />
+        </material>
+      </visual>
+    <visual name="side_plate_1">
+      <origin xyz="0 0.305 0.43" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/sloped_side_armor.obj" />
+        </geometry>
+      <material name="matte_olive_armor">
+        <color rgba="0.22 0.26 0.18 1" />
+        </material>
+      </visual>
+    <visual name="bearing_boss_0">
+      <origin xyz="0 -0.345 0.43" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.092" length="0.04" />
+        </geometry>
+      <material name="phosphated_gunmetal">
+        <color rgba="0.06 0.065 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bearing_boss_1">
+      <origin xyz="0 0.345 0.43" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.092" length="0.04" />
+        </geometry>
+      <material name="phosphated_gunmetal">
+        <color rgba="0.06 0.065 0.06 1" />
+        </material>
+      </visual>
+    <visual name="top_bridge">
+      <origin xyz="-0.1 0 0.625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.66 0.075" />
+        </geometry>
+      <material name="dark_olive_shadow">
+        <color rgba="0.12 0.15 0.11 1" />
+        </material>
+      </visual>
+    <collision name="turntable_disk">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.278" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="rotating_bearing">
+      <origin xyz="0 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.225" length="0.075" />
+        </geometry>
+      </collision>
+    <collision name="armored_deck">
+      <origin xyz="0 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.61 0.12" />
+        </geometry>
+      </collision>
+    <collision name="rear_equipment_hump">
+      <origin xyz="-0.2 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.42 0.16" />
+        </geometry>
+      </collision>
+    <collision name="side_plate_0">
+      <origin xyz="0 -0.305 0.43" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/sloped_side_armor.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_plate_1">
+      <origin xyz="0 0.305 0.43" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/sloped_side_armor.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_boss_0">
+      <origin xyz="0 -0.345 0.43" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.092" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="bearing_boss_1">
+      <origin xyz="0 0.345 0.43" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.092" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="top_bridge">
+      <origin xyz="-0.1 0 0.625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.66 0.075" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cradle">
+    <visual name="trunnion_tube">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.566" />
+        </geometry>
+      <material name="phosphated_gunmetal">
+        <color rgba="0.06 0.065 0.06 1" />
+        </material>
+      </visual>
+    <visual name="cross_beam">
+      <origin xyz="0.09 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.42 0.075" />
+        </geometry>
+      <material name="dark_olive_shadow">
+        <color rgba="0.12 0.15 0.11 1" />
+        </material>
+      </visual>
+    <visual name="weapon_receiver">
+      <origin xyz="0.185 0.095 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.325 0.15 0.155" />
+        </geometry>
+      <material name="phosphated_gunmetal">
+        <color rgba="0.06 0.065 0.06 1" />
+        </material>
+      </visual>
+    <visual name="feed_box">
+      <origin xyz="0.17 0.217 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.115 0.17" />
+        </geometry>
+      <material name="dark_olive_shadow">
+        <color rgba="0.12 0.15 0.11 1" />
+        </material>
+      </visual>
+    <visual name="main_barrel">
+      <origin xyz="0.65 0.095 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.69" />
+        </geometry>
+      <material name="phosphated_gunmetal">
+        <color rgba="0.06 0.065 0.06 1" />
+        </material>
+      </visual>
+    <visual name="gas_tube">
+      <origin xyz="0.57 0.095 0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.455" />
+        </geometry>
+      <material name="phosphated_gunmetal">
+        <color rgba="0.06 0.065 0.06 1" />
+        </material>
+      </visual>
+    <visual name="barrel_clamp_0">
+      <origin xyz="0.395 0.095 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.044 0.05" />
+        </geometry>
+      <material name="phosphated_gunmetal">
+        <color rgba="0.06 0.065 0.06 1" />
+        </material>
+      </visual>
+    <visual name="barrel_clamp_1">
+      <origin xyz="0.71 0.095 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.044 0.05" />
+        </geometry>
+      <material name="phosphated_gunmetal">
+        <color rgba="0.06 0.065 0.06 1" />
+        </material>
+      </visual>
+    <visual name="muzzle_brake">
+      <origin xyz="1.035 0.095 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.105" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.011 0.01 1" />
+        </material>
+      </visual>
+    <visual name="sensor_body">
+      <origin xyz="0.17 -0.165 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.165 0.205" />
+        </geometry>
+      <material name="dark_olive_shadow">
+        <color rgba="0.12 0.15 0.11 1" />
+        </material>
+      </visual>
+    <visual name="sensor_sun_brow">
+      <origin xyz="0.23 -0.165 0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.18 0.04" />
+        </geometry>
+      <material name="matte_olive_armor">
+        <color rgba="0.22 0.26 0.18 1" />
+        </material>
+      </visual>
+    <visual name="primary_lens">
+      <origin xyz="0.304 -0.165 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.022" />
+        </geometry>
+      <material name="blue_black_glass">
+        <color rgba="0.02 0.08 0.12 1" />
+        </material>
+      </visual>
+    <visual name="secondary_lens">
+      <origin xyz="0.302 -0.165 -0.055" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.02" />
+        </geometry>
+      <material name="blue_black_glass">
+        <color rgba="0.02 0.08 0.12 1" />
+        </material>
+      </visual>
+    <visual name="sensor_mount_pad">
+      <origin xyz="-0.025 -0.165 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.15 0.085" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.018 0.018 0.016 1" />
+        </material>
+      </visual>
+    <collision name="trunnion_tube">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.566" />
+        </geometry>
+      </collision>
+    <collision name="cross_beam">
+      <origin xyz="0.09 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.42 0.075" />
+        </geometry>
+      </collision>
+    <collision name="weapon_receiver">
+      <origin xyz="0.185 0.095 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.325 0.15 0.155" />
+        </geometry>
+      </collision>
+    <collision name="feed_box">
+      <origin xyz="0.17 0.217 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.115 0.17" />
+        </geometry>
+      </collision>
+    <collision name="main_barrel">
+      <origin xyz="0.65 0.095 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.69" />
+        </geometry>
+      </collision>
+    <collision name="gas_tube">
+      <origin xyz="0.57 0.095 0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.455" />
+        </geometry>
+      </collision>
+    <collision name="barrel_clamp_0">
+      <origin xyz="0.395 0.095 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.044 0.05" />
+        </geometry>
+      </collision>
+    <collision name="barrel_clamp_1">
+      <origin xyz="0.71 0.095 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.044 0.05" />
+        </geometry>
+      </collision>
+    <collision name="muzzle_brake">
+      <origin xyz="1.035 0.095 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.105" />
+        </geometry>
+      </collision>
+    <collision name="sensor_body">
+      <origin xyz="0.17 -0.165 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.165 0.205" />
+        </geometry>
+      </collision>
+    <collision name="sensor_sun_brow">
+      <origin xyz="0.23 -0.165 0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.18 0.04" />
+        </geometry>
+      </collision>
+    <collision name="primary_lens">
+      <origin xyz="0.304 -0.165 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="secondary_lens">
+      <origin xyz="0.302 -0.165 -0.055" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="sensor_mount_pad">
+      <origin xyz="-0.025 -0.165 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.15 0.085" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="yaw" type="continuous">
+    <origin xyz="0 0 0.38" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="yaw_base" />
+    <axis xyz="0 0 1" />
+    <limit effort="160" velocity="1.6" />
+    </joint>
+  <joint name="pitch" type="revolute">
+    <origin xyz="0 0 0.43" rpy="0 0 0" />
+    <parent link="yaw_base" />
+    <child link="cradle" />
+    <axis xyz="0 -1 0" />
+    <limit effort="95" velocity="1.2" lower="-0.349066" upper="1.0472" />
+    </joint>
+  </robot>

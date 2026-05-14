@@ -1,0 +1,610 @@
+<robot name="compact_monocular_microscope">
+  <material name="warm_enamel">
+    <color rgba="0.82 0.8 0.72 1" />
+    </material>
+  <material name="dark_stage_finish">
+    <color rgba="0.045 0.047 0.05 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.015 0.016 0.017 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.7 0.72 0.72 1" />
+    </material>
+  <material name="pale_slide_glass">
+    <color rgba="0.78 0.92 0.96 0.42" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.02 0.02 0.022 1" />
+    </material>
+  <link name="base_frame">
+    <visual name="heavy_base">
+      <geometry>
+        <mesh filename="assets/meshes/heavy_rounded_base.obj" />
+        </geometry>
+      <material name="warm_enamel">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="stage_pedestal">
+      <origin xyz="0 -0.03 0.055" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/stage_pedestal_cap.obj" />
+        </geometry>
+      <material name="warm_enamel">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="stage_support">
+      <origin xyz="0 -0.03 0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.12 0.016" />
+        </geometry>
+      <material name="dark_stage_finish">
+        <color rgba="0.045 0.047 0.05 1" />
+        </material>
+      </visual>
+    <visual name="stage_riser">
+      <origin xyz="0 -0.03 0.091" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.06 0.072" />
+        </geometry>
+      <material name="warm_enamel">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="stage_gearbox">
+      <origin xyz="0.102 -0.03 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.044 0.036" />
+        </geometry>
+      <material name="dark_stage_finish">
+        <color rgba="0.045 0.047 0.05 1" />
+        </material>
+      </visual>
+    <visual name="coaxial_control_shaft">
+      <origin xyz="0.148 -0.03 0.132" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.095" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="control_collar_0">
+      <origin xyz="0.118 -0.03 0.132" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="control_collar_1">
+      <origin xyz="0.149 -0.03 0.132" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="control_collar_2">
+      <origin xyz="0.184 -0.03 0.132" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="vertical_column">
+      <origin xyz="0 0.097 0.23" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.35" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="column_foot">
+      <origin xyz="0 0.097 0.063" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.016" />
+        </geometry>
+      <material name="warm_enamel">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <collision name="heavy_base">
+      <geometry>
+        <mesh filename="assets/meshes/heavy_rounded_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="stage_pedestal">
+      <origin xyz="0 -0.03 0.055" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/stage_pedestal_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="stage_support">
+      <origin xyz="0 -0.03 0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.12 0.016" />
+        </geometry>
+      </collision>
+    <collision name="stage_riser">
+      <origin xyz="0 -0.03 0.091" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.06 0.072" />
+        </geometry>
+      </collision>
+    <collision name="stage_gearbox">
+      <origin xyz="0.102 -0.03 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.044 0.036" />
+        </geometry>
+      </collision>
+    <collision name="coaxial_control_shaft">
+      <origin xyz="0.148 -0.03 0.132" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.095" />
+        </geometry>
+      </collision>
+    <collision name="control_collar_0">
+      <origin xyz="0.118 -0.03 0.132" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="control_collar_1">
+      <origin xyz="0.149 -0.03 0.132" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="control_collar_2">
+      <origin xyz="0.184 -0.03 0.132" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="vertical_column">
+      <origin xyz="0 0.097 0.23" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.35" />
+        </geometry>
+      </collision>
+    <collision name="column_foot">
+      <origin xyz="0 0.097 0.063" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.016" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="stage_carriage">
+    <visual name="stage_plate">
+      <geometry>
+        <mesh filename="assets/meshes/rectangular_stage_with_aperture.obj" />
+        </geometry>
+      <material name="dark_stage_finish">
+        <color rgba="0.045 0.047 0.05 1" />
+        </material>
+      </visual>
+    <visual name="glass_slide">
+      <origin xyz="0 -0.004 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.094 0.031 0.002" />
+        </geometry>
+      <material name="pale_slide_glass">
+        <color rgba="0.78 0.92 0.96 0.42" />
+        </material>
+      </visual>
+    <visual name="slide_clip_0">
+      <origin xyz="-0.04 0.018 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.006 0.003" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="slide_clip_1">
+      <origin xyz="0.04 0.018 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.006 0.003" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="clip_anchor_0">
+      <origin xyz="-0.061 0.018 0.0085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.02 0.005" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="clip_anchor_1">
+      <origin xyz="0.061 0.018 0.0085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.02 0.005" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <collision name="stage_plate">
+      <geometry>
+        <mesh filename="assets/meshes/rectangular_stage_with_aperture.obj" />
+        </geometry>
+      </collision>
+    <collision name="glass_slide">
+      <origin xyz="0 -0.004 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.094 0.031 0.002" />
+        </geometry>
+      </collision>
+    <collision name="slide_clip_0">
+      <origin xyz="-0.04 0.018 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.006 0.003" />
+        </geometry>
+      </collision>
+    <collision name="slide_clip_1">
+      <origin xyz="0.04 0.018 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.006 0.003" />
+        </geometry>
+      </collision>
+    <collision name="clip_anchor_0">
+      <origin xyz="-0.061 0.018 0.0085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.02 0.005" />
+        </geometry>
+      </collision>
+    <collision name="clip_anchor_1">
+      <origin xyz="0.061 0.018 0.0085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.02 0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="optical_body">
+    <visual name="carriage_cheek_0">
+      <origin xyz="-0.024 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.06 0.084" />
+        </geometry>
+      <material name="warm_enamel">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="carriage_cheek_1">
+      <origin xyz="0.024 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.06 0.084" />
+        </geometry>
+      <material name="warm_enamel">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="front_carriage_bridge">
+      <origin xyz="0 -0.024 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.084" />
+        </geometry>
+      <material name="warm_enamel">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_carriage_bridge">
+      <origin xyz="0 0.024 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.084" />
+        </geometry>
+      <material name="warm_enamel">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="arm_root_web">
+      <origin xyz="0 -0.04 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.02 0.05" />
+        </geometry>
+      <material name="warm_enamel">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="swept_arm">
+      <geometry>
+        <mesh filename="assets/meshes/swept_microscope_arm.obj" />
+        </geometry>
+      <material name="warm_enamel">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="optical_tube">
+      <origin xyz="0 -0.145 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.125" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="head_socket">
+      <origin xyz="0 -0.145 0.076" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.038" />
+        </geometry>
+      <material name="warm_enamel">
+        <color rgba="0.82 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="monocular_head">
+      <origin xyz="0 -0.113 0.108" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.088" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="eyepiece">
+      <origin xyz="0 -0.071 0.15" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.044" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.022 1" />
+        </material>
+      </visual>
+    <visual name="rack_strip">
+      <origin xyz="0 0.036 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.07" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <collision name="carriage_cheek_0">
+      <origin xyz="-0.024 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.06 0.084" />
+        </geometry>
+      </collision>
+    <collision name="carriage_cheek_1">
+      <origin xyz="0.024 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.06 0.084" />
+        </geometry>
+      </collision>
+    <collision name="front_carriage_bridge">
+      <origin xyz="0 -0.024 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.084" />
+        </geometry>
+      </collision>
+    <collision name="rear_carriage_bridge">
+      <origin xyz="0 0.024 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.012 0.084" />
+        </geometry>
+      </collision>
+    <collision name="arm_root_web">
+      <origin xyz="0 -0.04 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.02 0.05" />
+        </geometry>
+      </collision>
+    <collision name="swept_arm">
+      <geometry>
+        <mesh filename="assets/meshes/swept_microscope_arm.obj" />
+        </geometry>
+      </collision>
+    <collision name="optical_tube">
+      <origin xyz="0 -0.145 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.125" />
+        </geometry>
+      </collision>
+    <collision name="head_socket">
+      <origin xyz="0 -0.145 0.076" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.038" />
+        </geometry>
+      </collision>
+    <collision name="monocular_head">
+      <origin xyz="0 -0.113 0.108" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.088" />
+        </geometry>
+      </collision>
+    <collision name="eyepiece">
+      <origin xyz="0 -0.071 0.15" rpy="-0.785398 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.044" />
+        </geometry>
+      </collision>
+    <collision name="rack_strip">
+      <origin xyz="0 0.036 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="objective_turret">
+    <visual name="turret_disk">
+      <geometry>
+        <cylinder radius="0.034" length="0.016" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="objective_0">
+      <origin xyz="1.04095e-18 0.017 -0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.034" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="objective_collar_0">
+      <origin xyz="1.04095e-18 0.017 -0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="objective_1">
+      <origin xyz="-0.0147224 -0.0085 -0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.034" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="objective_collar_1">
+      <origin xyz="-0.0147224 -0.0085 -0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="objective_2">
+      <origin xyz="0.0147224 -0.0085 -0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.034" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="objective_collar_2">
+      <origin xyz="0.0147224 -0.0085 -0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <collision name="turret_disk">
+      <geometry>
+        <cylinder radius="0.034" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="objective_0">
+      <origin xyz="1.04095e-18 0.017 -0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="objective_collar_0">
+      <origin xyz="1.04095e-18 0.017 -0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="objective_1">
+      <origin xyz="-0.0147224 -0.0085 -0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="objective_collar_1">
+      <origin xyz="-0.0147224 -0.0085 -0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="objective_2">
+      <origin xyz="0.0147224 -0.0085 -0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="objective_collar_2">
+      <origin xyz="0.0147224 -0.0085 -0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="stage_control">
+    <visual name="control_knob">
+      <geometry>
+        <mesh filename="assets/meshes/stage_axis_knob.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <collision name="control_knob">
+      <geometry>
+        <mesh filename="assets/meshes/stage_axis_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="second_stage_control">
+    <visual name="second_control_knob">
+      <geometry>
+        <mesh filename="assets/meshes/second_stage_axis_knob.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <collision name="second_control_knob">
+      <geometry>
+        <mesh filename="assets/meshes/second_stage_axis_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="stage_slide" type="prismatic">
+    <origin xyz="0 -0.03 0.14" rpy="0 0 0" />
+    <parent link="base_frame" />
+    <child link="stage_carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="0.055" lower="-0.035" upper="0.035" />
+    </joint>
+  <joint name="focus_slide" type="prismatic">
+    <origin xyz="0 0.097 0.265" rpy="0 0 0" />
+    <parent link="base_frame" />
+    <child link="optical_body" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="0.035" lower="0" upper="0.065" />
+    </joint>
+  <joint name="turret_rotate" type="continuous">
+    <origin xyz="0 -0.145 -0.0645" rpy="0 0 0" />
+    <parent link="optical_body" />
+    <child link="objective_turret" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.35" velocity="2.8" />
+    </joint>
+  <joint name="stage_control_rotate" type="continuous">
+    <origin xyz="0.132 -0.03 0.132" rpy="0 1.5708 0" />
+    <parent link="base_frame" />
+    <child link="stage_control" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.22" velocity="5" />
+    </joint>
+  <joint name="second_stage_control_rotate" type="continuous">
+    <origin xyz="0.169 -0.03 0.132" rpy="0 1.5708 0" />
+    <parent link="base_frame" />
+    <child link="second_stage_control" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.18" velocity="5" />
+    </joint>
+  </robot>

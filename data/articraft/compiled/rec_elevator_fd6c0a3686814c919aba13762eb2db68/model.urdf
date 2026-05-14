@@ -1,0 +1,631 @@
+<robot name="glass_observation_tower_elevator">
+  <material name="pale_blue_glass">
+    <color rgba="0.62 0.88 1 0.26" />
+    </material>
+  <material name="car_curved_glass">
+    <color rgba="0.7 0.94 1 0.34" />
+    </material>
+  <material name="brushed_dark_metal">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="ribbed_steel">
+    <color rgba="0.35 0.37 0.38 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <link name="column">
+    <visual name="round_plinth">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.06" length="0.12" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="outer_glass_tube">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/outer_glass_tube.obj" />
+        </geometry>
+      <material name="pale_blue_glass">
+        <color rgba="0.62 0.88 1 0.26" />
+        </material>
+      </visual>
+    <visual name="base_clamp_ring">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_clamp_ring.obj" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_clamp_ring">
+      <origin xyz="0 0 4.28" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_clamp_ring.obj" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="round_head_cap">
+      <origin xyz="0 0 4.37" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1" length="0.1" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="vertical_mullion_0">
+      <origin xyz="0.95 0 2.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="4.26" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="vertical_mullion_1">
+      <origin xyz="0.475 0.822724 2.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="4.26" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="vertical_mullion_2">
+      <origin xyz="-0.475 0.822724 2.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="4.26" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="vertical_mullion_3">
+      <origin xyz="-0.95 1.16341e-16 2.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="4.26" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="vertical_mullion_4">
+      <origin xyz="-0.475 -0.822724 2.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="4.26" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="vertical_mullion_5">
+      <origin xyz="0.475 -0.822724 2.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="4.26" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_0">
+      <origin xyz="-0.28 0.675 2.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.035 4.14" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_1">
+      <origin xyz="0.28 0.675 2.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.035 4.14" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lower_rail_tie">
+      <origin xyz="0 0.675 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.03 0.045" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="upper_rail_tie">
+      <origin xyz="0 0.675 4.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.03 0.045" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="round_plinth">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.06" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="outer_glass_tube">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/outer_glass_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="base_clamp_ring">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_clamp_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_clamp_ring">
+      <origin xyz="0 0 4.28" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_clamp_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="round_head_cap">
+      <origin xyz="0 0 4.37" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="vertical_mullion_0">
+      <origin xyz="0.95 0 2.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="4.26" />
+        </geometry>
+      </collision>
+    <collision name="vertical_mullion_1">
+      <origin xyz="0.475 0.822724 2.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="4.26" />
+        </geometry>
+      </collision>
+    <collision name="vertical_mullion_2">
+      <origin xyz="-0.475 0.822724 2.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="4.26" />
+        </geometry>
+      </collision>
+    <collision name="vertical_mullion_3">
+      <origin xyz="-0.95 1.16341e-16 2.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="4.26" />
+        </geometry>
+      </collision>
+    <collision name="vertical_mullion_4">
+      <origin xyz="-0.475 -0.822724 2.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="4.26" />
+        </geometry>
+      </collision>
+    <collision name="vertical_mullion_5">
+      <origin xyz="0.475 -0.822724 2.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="4.26" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_0">
+      <origin xyz="-0.28 0.675 2.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.035 4.14" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_1">
+      <origin xyz="0.28 0.675 2.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.035 4.14" />
+        </geometry>
+      </collision>
+    <collision name="lower_rail_tie">
+      <origin xyz="0 0.675 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.03 0.045" />
+        </geometry>
+      </collision>
+    <collision name="upper_rail_tie">
+      <origin xyz="0 0.675 4.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.66 0.03 0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="car">
+    <visual name="round_floor">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.58" length="0.08" />
+        </geometry>
+      <material name="ribbed_steel">
+        <color rgba="0.35 0.37 0.38 1" />
+        </material>
+      </visual>
+    <visual name="curved_three_side_glass">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/curved_three_side_glass.obj" />
+        </geometry>
+      <material name="car_curved_glass">
+        <color rgba="0.7 0.94 1 0.34" />
+        </material>
+      </visual>
+    <visual name="lower_car_ring">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_car_ring.obj" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="upper_car_ring">
+      <origin xyz="0 0 1.84" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_car_ring.obj" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_post_0">
+      <origin xyz="0.44 -0.37 0.99" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="1.9" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_post_1">
+      <origin xyz="-0.44 -0.37 0.99" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="1.9" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_post">
+      <origin xyz="0 0.59 0.99" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="1.9" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="bottom_door_track">
+      <origin xyz="0 -0.58 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.1 0.06" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_door_track">
+      <origin xyz="0 -0.58 1.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.1 0.06" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_track_return_0">
+      <origin xyz="-0.44 -0.48 1.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.22 0.06" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_track_return_1">
+      <origin xyz="0.44 -0.48 1.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.22 0.06" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_guide_carriage">
+      <origin xyz="0 0.61 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.045 0.25" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="guide_shoe_0">
+      <origin xyz="-0.25 0.6425 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.03 0.12" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="guide_shoe_1">
+      <origin xyz="0.25 0.6425 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.03 0.12" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <collision name="round_floor">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.58" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="curved_three_side_glass">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/curved_three_side_glass.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_car_ring">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_car_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_car_ring">
+      <origin xyz="0 0 1.84" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_car_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_post_0">
+      <origin xyz="0.44 -0.37 0.99" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="1.9" />
+        </geometry>
+      </collision>
+    <collision name="front_post_1">
+      <origin xyz="-0.44 -0.37 0.99" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="1.9" />
+        </geometry>
+      </collision>
+    <collision name="rear_post">
+      <origin xyz="0 0.59 0.99" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="1.9" />
+        </geometry>
+      </collision>
+    <collision name="bottom_door_track">
+      <origin xyz="0 -0.58 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.1 0.06" />
+        </geometry>
+      </collision>
+    <collision name="top_door_track">
+      <origin xyz="0 -0.58 1.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.1 0.06" />
+        </geometry>
+      </collision>
+    <collision name="top_track_return_0">
+      <origin xyz="-0.44 -0.48 1.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.22 0.06" />
+        </geometry>
+      </collision>
+    <collision name="top_track_return_1">
+      <origin xyz="0.44 -0.48 1.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.22 0.06" />
+        </geometry>
+      </collision>
+    <collision name="rear_guide_carriage">
+      <origin xyz="0 0.61 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.045 0.25" />
+        </geometry>
+      </collision>
+    <collision name="guide_shoe_0">
+      <origin xyz="-0.25 0.6425 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.03 0.12" />
+        </geometry>
+      </collision>
+    <collision name="guide_shoe_1">
+      <origin xyz="0.25 0.6425 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.03 0.12" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="left_door">
+    <visual name="door_glass">
+      <origin xyz="0 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.018 1.48" />
+        </geometry>
+      <material name="car_curved_glass">
+        <color rgba="0.7 0.94 1 0.34" />
+        </material>
+      </visual>
+    <visual name="bottom_shoe">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.03 0.045" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_hanger">
+      <origin xyz="0 0 1.6175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.03 0.045" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="edge_stile_0">
+      <origin xyz="-0.18 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.028 1.6" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="edge_stile_1">
+      <origin xyz="0.18 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.028 1.6" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="door_glass">
+      <origin xyz="0 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.018 1.48" />
+        </geometry>
+      </collision>
+    <collision name="bottom_shoe">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.03 0.045" />
+        </geometry>
+      </collision>
+    <collision name="top_hanger">
+      <origin xyz="0 0 1.6175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.03 0.045" />
+        </geometry>
+      </collision>
+    <collision name="edge_stile_0">
+      <origin xyz="-0.18 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.028 1.6" />
+        </geometry>
+      </collision>
+    <collision name="edge_stile_1">
+      <origin xyz="0.18 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.028 1.6" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="right_door">
+    <visual name="door_glass">
+      <origin xyz="0 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.018 1.48" />
+        </geometry>
+      <material name="car_curved_glass">
+        <color rgba="0.7 0.94 1 0.34" />
+        </material>
+      </visual>
+    <visual name="bottom_shoe">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.03 0.045" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_hanger">
+      <origin xyz="0 0 1.6175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.03 0.045" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="edge_stile_0">
+      <origin xyz="-0.18 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.028 1.6" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="edge_stile_1">
+      <origin xyz="0.18 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.028 1.6" />
+        </geometry>
+      <material name="brushed_dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="door_glass">
+      <origin xyz="0 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.018 1.48" />
+        </geometry>
+      </collision>
+    <collision name="bottom_shoe">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.03 0.045" />
+        </geometry>
+      </collision>
+    <collision name="top_hanger">
+      <origin xyz="0 0 1.6175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.03 0.045" />
+        </geometry>
+      </collision>
+    <collision name="edge_stile_0">
+      <origin xyz="-0.18 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.028 1.6" />
+        </geometry>
+      </collision>
+    <collision name="edge_stile_1">
+      <origin xyz="0.18 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.028 1.6" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="column_to_car" type="prismatic">
+    <origin xyz="0 0 0.25" rpy="0 0 0" />
+    <parent link="column" />
+    <child link="car" />
+    <axis xyz="0 0 1" />
+    <limit effort="4000" velocity="0.8" lower="0" upper="2.05" />
+    </joint>
+  <joint name="car_to_left_door" type="prismatic">
+    <origin xyz="-0.185 -0.555 0.13" rpy="0 0 0" />
+    <parent link="car" />
+    <child link="left_door" />
+    <axis xyz="-1 0 0" />
+    <limit effort="180" velocity="0.55" lower="0" upper="0.25" />
+    </joint>
+  <joint name="car_to_right_door" type="prismatic">
+    <origin xyz="0.185 -0.605 0.13" rpy="0 0 0" />
+    <parent link="car" />
+    <child link="right_door" />
+    <axis xyz="1 0 0" />
+    <limit effort="180" velocity="0.55" lower="0" upper="0.25" />
+    </joint>
+  </robot>

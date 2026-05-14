@@ -1,0 +1,447 @@
+<robot name="machine_tool_linear_stage">
+  <material name="ground_steel">
+    <color rgba="0.62 0.65 0.68 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.18 0.19 0.21 1" />
+    </material>
+  <material name="anodized_aluminum">
+    <color rgba="0.74 0.76 0.78 1" />
+    </material>
+  <material name="black_polymer">
+    <color rgba="0.025 0.025 0.03 1" />
+    </material>
+  <material name="brass_bearing">
+    <color rgba="0.86 0.66 0.3 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.04 0.035 0.03 1" />
+    </material>
+  <link name="bed">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="1.05 0.22 0.028" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="rail_body">
+      <origin xyz="0 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.052 0.052" />
+        </geometry>
+      <material name="ground_steel" />
+      </visual>
+    <visual name="rail_screw_-0.34">
+      <origin xyz="-0.34 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.004" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="rail_screw_-0.18">
+      <origin xyz="-0.18 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.004" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="rail_screw_+0.00">
+      <origin xyz="0 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.004" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="rail_screw_+0.18">
+      <origin xyz="0.18 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.004" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="rail_screw_+0.34">
+      <origin xyz="0.34 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.004" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="end_stop_neg">
+      <origin xyz="-0.49 0 0.068" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.16 0.08" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="bumper_neg">
+      <origin xyz="-0.469 0 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.045 0.026" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="end_stop_pos">
+      <origin xyz="0.49 0 0.068" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.16 0.08" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="bumper_pos">
+      <origin xyz="0.469 0 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.045 0.026" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="base_bolt_-0.40_-0.08">
+      <origin xyz="-0.4 -0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="base_bolt_-0.40_+0.08">
+      <origin xyz="-0.4 0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="base_bolt_-0.20_-0.08">
+      <origin xyz="-0.2 -0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="base_bolt_-0.20_+0.08">
+      <origin xyz="-0.2 0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="base_bolt_+0.20_-0.08">
+      <origin xyz="0.2 -0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="base_bolt_+0.20_+0.08">
+      <origin xyz="0.2 0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="base_bolt_+0.40_-0.08">
+      <origin xyz="0.4 -0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="base_bolt_+0.40_+0.08">
+      <origin xyz="0.4 0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="1.05 0.22 0.028" />
+        </geometry>
+      </collision>
+    <collision name="rail_body">
+      <origin xyz="0 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.052 0.052" />
+        </geometry>
+      </collision>
+    <collision name="rail_screw_-0.34">
+      <origin xyz="-0.34 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="rail_screw_-0.18">
+      <origin xyz="-0.18 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="rail_screw_+0.00">
+      <origin xyz="0 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="rail_screw_+0.18">
+      <origin xyz="0.18 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="rail_screw_+0.34">
+      <origin xyz="0.34 0 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_neg">
+      <origin xyz="-0.49 0 0.068" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.16 0.08" />
+        </geometry>
+      </collision>
+    <collision name="bumper_neg">
+      <origin xyz="-0.469 0 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.045 0.026" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_pos">
+      <origin xyz="0.49 0 0.068" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.16 0.08" />
+        </geometry>
+      </collision>
+    <collision name="bumper_pos">
+      <origin xyz="0.469 0 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.045 0.026" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_-0.40_-0.08">
+      <origin xyz="-0.4 -0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_-0.40_+0.08">
+      <origin xyz="-0.4 0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_-0.20_-0.08">
+      <origin xyz="-0.2 -0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_-0.20_+0.08">
+      <origin xyz="-0.2 0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_+0.20_-0.08">
+      <origin xyz="0.2 -0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_+0.20_+0.08">
+      <origin xyz="0.2 0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_+0.40_-0.08">
+      <origin xyz="0.4 -0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_+0.40_+0.08">
+      <origin xyz="0.4 0.08 0.0295" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carriage">
+    <visual name="top_saddle">
+      <origin xyz="0 0 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.142 0.038" />
+        </geometry>
+      <material name="anodized_aluminum" />
+      </visual>
+    <visual name="side_cheek_neg">
+      <origin xyz="0 -0.046 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.018 0.058" />
+        </geometry>
+      <material name="anodized_aluminum" />
+      </visual>
+    <visual name="bearing_pad_neg">
+      <origin xyz="0 -0.0315 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.011 0.04" />
+        </geometry>
+      <material name="brass_bearing" />
+      </visual>
+    <visual name="side_cheek_pos">
+      <origin xyz="0 0.046 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.018 0.058" />
+        </geometry>
+      <material name="anodized_aluminum" />
+      </visual>
+    <visual name="bearing_pad_pos">
+      <origin xyz="0 0.0315 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.011 0.04" />
+        </geometry>
+      <material name="brass_bearing" />
+      </visual>
+    <visual name="wiper_bridge_neg">
+      <origin xyz="-0.105 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.13064 0.016" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="wiper_side_neg_neg">
+      <origin xyz="-0.105 -0.046 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.05104" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="wiper_side_neg_pos">
+      <origin xyz="-0.105 0.046 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.05104" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="wiper_bridge_pos">
+      <origin xyz="0.105 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.13064 0.016" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="wiper_side_pos_neg">
+      <origin xyz="0.105 -0.046 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.05104" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="wiper_side_pos_pos">
+      <origin xyz="0.105 0.046 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.05104" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="table_slot_-0.04">
+      <origin xyz="0 -0.04 0.0775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.01 0.003" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <visual name="table_slot_+0.04">
+      <origin xyz="0 0.04 0.0775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.01 0.003" />
+        </geometry>
+      <material name="black_polymer" />
+      </visual>
+    <collision name="top_saddle">
+      <origin xyz="0 0 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.142 0.038" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_neg">
+      <origin xyz="0 -0.046 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.018 0.058" />
+        </geometry>
+      </collision>
+    <collision name="bearing_pad_neg">
+      <origin xyz="0 -0.0315 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.011 0.04" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_pos">
+      <origin xyz="0 0.046 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.018 0.058" />
+        </geometry>
+      </collision>
+    <collision name="bearing_pad_pos">
+      <origin xyz="0 0.0315 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.011 0.04" />
+        </geometry>
+      </collision>
+    <collision name="wiper_bridge_neg">
+      <origin xyz="-0.105 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.13064 0.016" />
+        </geometry>
+      </collision>
+    <collision name="wiper_side_neg_neg">
+      <origin xyz="-0.105 -0.046 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.05104" />
+        </geometry>
+      </collision>
+    <collision name="wiper_side_neg_pos">
+      <origin xyz="-0.105 0.046 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.05104" />
+        </geometry>
+      </collision>
+    <collision name="wiper_bridge_pos">
+      <origin xyz="0.105 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.13064 0.016" />
+        </geometry>
+      </collision>
+    <collision name="wiper_side_pos_neg">
+      <origin xyz="0.105 -0.046 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.05104" />
+        </geometry>
+      </collision>
+    <collision name="wiper_side_pos_pos">
+      <origin xyz="0.105 0.046 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.05104" />
+        </geometry>
+      </collision>
+    <collision name="table_slot_-0.04">
+      <origin xyz="0 -0.04 0.0775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.01 0.003" />
+        </geometry>
+      </collision>
+    <collision name="table_slot_+0.04">
+      <origin xyz="0 0.04 0.0775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.01 0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="bed_to_carriage" type="prismatic">
+    <origin xyz="0 0 0.054" rpy="0 0 0" />
+    <parent link="bed" />
+    <child link="carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="1200" velocity="0.35" lower="-0.28" upper="0.28" />
+    </joint>
+  </robot>

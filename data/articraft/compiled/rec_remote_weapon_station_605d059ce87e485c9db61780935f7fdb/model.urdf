@@ -1,0 +1,336 @@
+<robot name="heavy_remote_weapon_station">
+  <material name="olive_armor">
+    <color rgba="0.22 0.28 0.18 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.06 0.07 0.07 1" />
+    </material>
+  <material name="worn_ring">
+    <color rgba="0.38 0.38 0.34 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.015 0.016 0.016 1" />
+    </material>
+  <material name="optic_glass">
+    <color rgba="0.02 0.09 0.12 0.78" />
+    </material>
+  <link name="pedestal">
+    <visual name="floor_flange">
+      <origin xyz="0 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.56" length="0.14" />
+        </geometry>
+      <material name="olive_armor" />
+      </visual>
+    <visual name="pedestal_tube">
+      <origin xyz="0 0 0.49" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.7" />
+        </geometry>
+      <material name="olive_armor" />
+      </visual>
+    <visual name="top_flange">
+      <origin xyz="0 0 0.88" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.42" length="0.08" />
+        </geometry>
+      <material name="olive_armor" />
+      </visual>
+    <visual name="fixed_race">
+      <origin xyz="0 0 0.955" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fixed_slewing_race.obj" />
+        </geometry>
+      <material name="worn_ring" />
+      </visual>
+    <collision name="floor_flange">
+      <origin xyz="0 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.56" length="0.14" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_tube">
+      <origin xyz="0 0 0.49" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.7" />
+        </geometry>
+      </collision>
+    <collision name="top_flange">
+      <origin xyz="0 0 0.88" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.42" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="fixed_race">
+      <origin xyz="0 0 0.955" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fixed_slewing_race.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="yaw_stage">
+    <visual name="moving_race">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/moving_slewing_race.obj" />
+        </geometry>
+      <material name="worn_ring" />
+      </visual>
+    <visual name="rotating_deck">
+      <origin xyz="0.08 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.94 0.1" />
+        </geometry>
+      <material name="olive_armor" />
+      </visual>
+    <visual name="side_cheek_0">
+      <origin xyz="0.16 0.38 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.08 0.7" />
+        </geometry>
+      <material name="olive_armor" />
+      </visual>
+    <visual name="side_cheek_1">
+      <origin xyz="0.16 -0.38 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.08 0.7" />
+        </geometry>
+      <material name="olive_armor" />
+      </visual>
+    <visual name="rear_bridge">
+      <origin xyz="-0.24 0 0.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.78 0.54" />
+        </geometry>
+      <material name="olive_armor" />
+      </visual>
+    <visual name="trunnion_boss_0">
+      <origin xyz="0 0.405 0.58" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.1" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="trunnion_boss_1">
+      <origin xyz="0 -0.405 0.58" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.1" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="side_shield_0">
+      <origin xyz="0.2 0.445 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.07 0.48" />
+        </geometry>
+      <material name="olive_armor" />
+      </visual>
+    <visual name="side_shield_1">
+      <origin xyz="0.2 -0.445 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.07 0.48" />
+        </geometry>
+      <material name="olive_armor" />
+      </visual>
+    <visual name="front_shield_0">
+      <origin xyz="0.49 0.31 0.32" rpy="0 -0.18 0" />
+      <geometry>
+        <box size="0.07 0.18 0.34" />
+        </geometry>
+      <material name="olive_armor" />
+      </visual>
+    <visual name="front_shield_1">
+      <origin xyz="0.49 -0.31 0.32" rpy="0 -0.18 0" />
+      <geometry>
+        <box size="0.07 0.18 0.34" />
+        </geometry>
+      <material name="olive_armor" />
+      </visual>
+    <collision name="moving_race">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/moving_slewing_race.obj" />
+        </geometry>
+      </collision>
+    <collision name="rotating_deck">
+      <origin xyz="0.08 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.94 0.1" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_0">
+      <origin xyz="0.16 0.38 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.08 0.7" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_1">
+      <origin xyz="0.16 -0.38 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.08 0.7" />
+        </geometry>
+      </collision>
+    <collision name="rear_bridge">
+      <origin xyz="-0.24 0 0.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.78 0.54" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_boss_0">
+      <origin xyz="0 0.405 0.58" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_boss_1">
+      <origin xyz="0 -0.405 0.58" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="side_shield_0">
+      <origin xyz="0.2 0.445 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.07 0.48" />
+        </geometry>
+      </collision>
+    <collision name="side_shield_1">
+      <origin xyz="0.2 -0.445 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.07 0.48" />
+        </geometry>
+      </collision>
+    <collision name="front_shield_0">
+      <origin xyz="0.49 0.31 0.32" rpy="0 -0.18 0" />
+      <geometry>
+        <box size="0.07 0.18 0.34" />
+        </geometry>
+      </collision>
+    <collision name="front_shield_1">
+      <origin xyz="0.49 -0.31 0.32" rpy="0 -0.18 0" />
+      <geometry>
+        <box size="0.07 0.18 0.34" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="weapon_cradle">
+    <visual name="trunnion">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.68" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="breech_block">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.26 0.22" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="launcher_box">
+      <origin xyz="0.49 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.18 0.16" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="gun_barrel">
+      <origin xyz="0.84 0 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.76" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="muzzle_brake">
+      <origin xyz="1.26 0 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.09" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="sensor_strut">
+      <origin xyz="0.32 0 -0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.1 0.22" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="sensor_housing">
+      <origin xyz="0.46 0 -0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.2 0.14" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="sensor_window">
+      <origin xyz="0.635 0 -0.23" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.07" />
+        </geometry>
+      <material name="optic_glass" />
+      </visual>
+    <collision name="trunnion">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.68" />
+        </geometry>
+      </collision>
+    <collision name="breech_block">
+      <origin xyz="0.23 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.26 0.22" />
+        </geometry>
+      </collision>
+    <collision name="launcher_box">
+      <origin xyz="0.49 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.18 0.16" />
+        </geometry>
+      </collision>
+    <collision name="gun_barrel">
+      <origin xyz="0.84 0 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.76" />
+        </geometry>
+      </collision>
+    <collision name="muzzle_brake">
+      <origin xyz="1.26 0 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="sensor_strut">
+      <origin xyz="0.32 0 -0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.1 0.22" />
+        </geometry>
+      </collision>
+    <collision name="sensor_housing">
+      <origin xyz="0.46 0 -0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.2 0.14" />
+        </geometry>
+      </collision>
+    <collision name="sensor_window">
+      <origin xyz="0.635 0 -0.23" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="azimuth" type="revolute">
+    <origin xyz="0 0 0.99" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="yaw_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="450" velocity="1.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="elevation" type="revolute">
+    <origin xyz="0 0 0.58" rpy="0 0 0" />
+    <parent link="yaw_stage" />
+    <child link="weapon_cradle" />
+    <axis xyz="0 -1 0" />
+    <limit effort="260" velocity="0.8" lower="-0.174533" upper="1.22173" />
+    </joint>
+  </robot>

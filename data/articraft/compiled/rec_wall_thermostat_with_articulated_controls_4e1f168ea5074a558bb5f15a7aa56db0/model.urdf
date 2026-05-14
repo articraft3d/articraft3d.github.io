@@ -1,0 +1,965 @@
+<robot name="precision_wall_thermostat">
+  <material name="warm_white">
+    <color rgba="0.88 0.87 0.82 1" />
+    </material>
+  <material name="satin_white">
+    <color rgba="0.96 0.95 0.9 1" />
+    </material>
+  <material name="datum_gray">
+    <color rgba="0.18 0.19 0.18 1" />
+    </material>
+  <material name="shadow_gray">
+    <color rgba="0.08 0.085 0.08 1" />
+    </material>
+  <material name="brushed_stainless">
+    <color rgba="0.63 0.64 0.61 1" />
+    </material>
+  <material name="calibration_amber">
+    <color rgba="0.92 0.56 0.18 1" />
+    </material>
+  <link name="body">
+    <visual name="rounded_wall_plate">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wall_plate.obj" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.88 0.87 0.82 1" />
+        </material>
+      </visual>
+    <visual name="datum_ring">
+      <geometry>
+        <mesh filename="assets/meshes/datum_ring.obj" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="bottom_datum_bar">
+      <origin xyz="0 -0.044 0.0146" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.004 0.0014" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_0">
+      <origin xyz="-0.0411362 -0.02375 0.01445" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.007 0.00125 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_1">
+      <origin xyz="-0.0446354 -0.016246 0.01445" rpy="0 0 1.91986" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_2">
+      <origin xyz="-0.0467784 -0.00824829 0.01445" rpy="0 0 1.74533" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_3">
+      <origin xyz="-0.0475 2.90854e-18 0.01445" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.005 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_4">
+      <origin xyz="-0.0467784 0.00824829 0.01445" rpy="0 0 1.39626" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_5">
+      <origin xyz="-0.0446354 0.016246 0.01445" rpy="0 0 1.22173" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_6">
+      <origin xyz="-0.0411362 0.02375 0.01445" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.007 0.00125 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_7">
+      <origin xyz="-0.0363871 0.0305324 0.01445" rpy="0 0 0.872665" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_8">
+      <origin xyz="-0.0305324 0.0363871 0.01445" rpy="0 0 0.698132" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_9">
+      <origin xyz="-0.02375 0.0411362 0.01445" rpy="0 0 0.523599" />
+      <geometry>
+        <box size="0.005 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_10">
+      <origin xyz="-0.016246 0.0446354 0.01445" rpy="0 0 0.349066" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_11">
+      <origin xyz="-0.00824829 0.0467784 0.01445" rpy="0 0 0.174533" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_12">
+      <origin xyz="0 0.0475 0.01445" rpy="0 0 -0" />
+      <geometry>
+        <box size="0.007 0.00125 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_13">
+      <origin xyz="0.00824829 0.0467784 0.01445" rpy="0 0 -0.174533" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_14">
+      <origin xyz="0.016246 0.0446354 0.01445" rpy="0 0 -0.349066" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_15">
+      <origin xyz="0.02375 0.0411362 0.01445" rpy="0 0 -0.523599" />
+      <geometry>
+        <box size="0.005 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_16">
+      <origin xyz="0.0305324 0.0363871 0.01445" rpy="0 0 -0.698132" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_17">
+      <origin xyz="0.0363871 0.0305324 0.01445" rpy="0 0 -0.872665" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_18">
+      <origin xyz="0.0411362 0.02375 0.01445" rpy="0 0 -1.0472" />
+      <geometry>
+        <box size="0.007 0.00125 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_19">
+      <origin xyz="0.0446354 0.016246 0.01445" rpy="0 0 -1.22173" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_20">
+      <origin xyz="0.0467784 0.00824829 0.01445" rpy="0 0 -1.39626" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_21">
+      <origin xyz="0.0475 2.90854e-18 0.01445" rpy="0 0 -1.5708" />
+      <geometry>
+        <box size="0.005 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_22">
+      <origin xyz="0.0467784 -0.00824829 0.01445" rpy="0 0 -1.74533" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_23">
+      <origin xyz="0.0446354 -0.016246 0.01445" rpy="0 0 -1.91986" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="index_mark_24">
+      <origin xyz="0.0411362 -0.02375 0.01445" rpy="0 0 -2.0944" />
+      <geometry>
+        <box size="0.007 0.00125 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="screw_boss_0">
+      <origin xyz="-0.044 -0.032 0.0149" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.0018" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="screw_boss_1">
+      <origin xyz="0.044 -0.032 0.0149" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.0018" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <collision name="rounded_wall_plate">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_wall_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="datum_ring">
+      <geometry>
+        <mesh filename="assets/meshes/datum_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="bottom_datum_bar">
+      <origin xyz="0 -0.044 0.0146" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.004 0.0014" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_0">
+      <origin xyz="-0.0411362 -0.02375 0.01445" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.007 0.00125 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_1">
+      <origin xyz="-0.0446354 -0.016246 0.01445" rpy="0 0 1.91986" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_2">
+      <origin xyz="-0.0467784 -0.00824829 0.01445" rpy="0 0 1.74533" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_3">
+      <origin xyz="-0.0475 2.90854e-18 0.01445" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.005 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_4">
+      <origin xyz="-0.0467784 0.00824829 0.01445" rpy="0 0 1.39626" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_5">
+      <origin xyz="-0.0446354 0.016246 0.01445" rpy="0 0 1.22173" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_6">
+      <origin xyz="-0.0411362 0.02375 0.01445" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.007 0.00125 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_7">
+      <origin xyz="-0.0363871 0.0305324 0.01445" rpy="0 0 0.872665" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_8">
+      <origin xyz="-0.0305324 0.0363871 0.01445" rpy="0 0 0.698132" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_9">
+      <origin xyz="-0.02375 0.0411362 0.01445" rpy="0 0 0.523599" />
+      <geometry>
+        <box size="0.005 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_10">
+      <origin xyz="-0.016246 0.0446354 0.01445" rpy="0 0 0.349066" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_11">
+      <origin xyz="-0.00824829 0.0467784 0.01445" rpy="0 0 0.174533" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_12">
+      <origin xyz="0 0.0475 0.01445" rpy="0 0 -0" />
+      <geometry>
+        <box size="0.007 0.00125 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_13">
+      <origin xyz="0.00824829 0.0467784 0.01445" rpy="0 0 -0.174533" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_14">
+      <origin xyz="0.016246 0.0446354 0.01445" rpy="0 0 -0.349066" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_15">
+      <origin xyz="0.02375 0.0411362 0.01445" rpy="0 0 -0.523599" />
+      <geometry>
+        <box size="0.005 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_16">
+      <origin xyz="0.0305324 0.0363871 0.01445" rpy="0 0 -0.698132" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_17">
+      <origin xyz="0.0363871 0.0305324 0.01445" rpy="0 0 -0.872665" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_18">
+      <origin xyz="0.0411362 0.02375 0.01445" rpy="0 0 -1.0472" />
+      <geometry>
+        <box size="0.007 0.00125 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_19">
+      <origin xyz="0.0446354 0.016246 0.01445" rpy="0 0 -1.22173" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_20">
+      <origin xyz="0.0467784 0.00824829 0.01445" rpy="0 0 -1.39626" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_21">
+      <origin xyz="0.0475 2.90854e-18 0.01445" rpy="0 0 -1.5708" />
+      <geometry>
+        <box size="0.005 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_22">
+      <origin xyz="0.0467784 -0.00824829 0.01445" rpy="0 0 -1.74533" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_23">
+      <origin xyz="0.0446354 -0.016246 0.01445" rpy="0 0 -1.91986" />
+      <geometry>
+        <box size="0.0032 0.00085 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="index_mark_24">
+      <origin xyz="0.0411362 -0.02375 0.01445" rpy="0 0 -2.0944" />
+      <geometry>
+        <box size="0.007 0.00125 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="screw_boss_0">
+      <origin xyz="-0.044 -0.032 0.0149" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.0018" />
+        </geometry>
+      </collision>
+    <collision name="screw_boss_1">
+      <origin xyz="0.044 -0.032 0.0149" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.0018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shaft">
+    <visual name="center_shaft">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.013" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.63 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="retainer_cap">
+      <origin xyz="0 0 0.0145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.003" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.63 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="retainer_slot">
+      <origin xyz="0 0 0.01625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.0022 0.0005" />
+        </geometry>
+      <material name="shadow_gray">
+        <color rgba="0.08 0.085 0.08 1" />
+        </material>
+      </visual>
+    <collision name="center_shaft">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.013" />
+        </geometry>
+      </collision>
+    <collision name="retainer_cap">
+      <origin xyz="0 0 0.0145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="retainer_slot">
+      <origin xyz="0 0 0.01625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.0022 0.0005" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dial">
+    <visual name="rotary_annulus">
+      <geometry>
+        <mesh filename="assets/meshes/rotary_dial_annulus.obj" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="bore_chamfer">
+      <geometry>
+        <mesh filename="assets/meshes/dial_bore_chamfer.obj" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.88 0.87 0.82 1" />
+        </material>
+      </visual>
+    <visual name="datum_pointer">
+      <origin xyz="0 0.023 0.0123" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.022 0.0008" />
+        </geometry>
+      <material name="shadow_gray">
+        <color rgba="0.08 0.085 0.08 1" />
+        </material>
+      </visual>
+    <visual name="thumb_flat">
+      <origin xyz="0 -0.024 0.01235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.0045 0.0009" />
+        </geometry>
+      <material name="datum_gray">
+        <color rgba="0.18 0.19 0.18 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_0">
+      <origin xyz="0.0375 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_1">
+      <origin xyz="0.0352385 0.0128258 0.007" rpy="0 0 0.349066" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_2">
+      <origin xyz="0.0287267 0.0241045 0.007" rpy="0 0 0.698132" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_3">
+      <origin xyz="0.01875 0.032476 0.007" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_4">
+      <origin xyz="0.00651181 0.0369303 0.007" rpy="0 0 1.39626" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_5">
+      <origin xyz="-0.00651181 0.0369303 0.007" rpy="0 0 1.74533" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_6">
+      <origin xyz="-0.01875 0.032476 0.007" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_7">
+      <origin xyz="-0.0287267 0.0241045 0.007" rpy="0 0 2.44346" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_8">
+      <origin xyz="-0.0352385 0.0128258 0.007" rpy="0 0 2.79253" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_9">
+      <origin xyz="-0.0375 4.59243e-18 0.007" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_10">
+      <origin xyz="-0.0352385 -0.0128258 0.007" rpy="0 0 3.49066" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_11">
+      <origin xyz="-0.0287267 -0.0241045 0.007" rpy="0 0 3.83972" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_12">
+      <origin xyz="-0.01875 -0.032476 0.007" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_13">
+      <origin xyz="-0.00651181 -0.0369303 0.007" rpy="0 0 4.53786" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_14">
+      <origin xyz="0.00651181 -0.0369303 0.007" rpy="0 0 4.88692" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_15">
+      <origin xyz="0.01875 -0.032476 0.007" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_16">
+      <origin xyz="0.0287267 -0.0241045 0.007" rpy="0 0 5.58505" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="grip_rib_17">
+      <origin xyz="0.0352385 -0.0128258 0.007" rpy="0 0 5.93412" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <collision name="rotary_annulus">
+      <geometry>
+        <mesh filename="assets/meshes/rotary_dial_annulus.obj" />
+        </geometry>
+      </collision>
+    <collision name="bore_chamfer">
+      <geometry>
+        <mesh filename="assets/meshes/dial_bore_chamfer.obj" />
+        </geometry>
+      </collision>
+    <collision name="datum_pointer">
+      <origin xyz="0 0.023 0.0123" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.022 0.0008" />
+        </geometry>
+      </collision>
+    <collision name="thumb_flat">
+      <origin xyz="0 -0.024 0.01235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.0045 0.0009" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_0">
+      <origin xyz="0.0375 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_1">
+      <origin xyz="0.0352385 0.0128258 0.007" rpy="0 0 0.349066" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_2">
+      <origin xyz="0.0287267 0.0241045 0.007" rpy="0 0 0.698132" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_3">
+      <origin xyz="0.01875 0.032476 0.007" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_4">
+      <origin xyz="0.00651181 0.0369303 0.007" rpy="0 0 1.39626" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_5">
+      <origin xyz="-0.00651181 0.0369303 0.007" rpy="0 0 1.74533" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_6">
+      <origin xyz="-0.01875 0.032476 0.007" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_7">
+      <origin xyz="-0.0287267 0.0241045 0.007" rpy="0 0 2.44346" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_8">
+      <origin xyz="-0.0352385 0.0128258 0.007" rpy="0 0 2.79253" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_9">
+      <origin xyz="-0.0375 4.59243e-18 0.007" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_10">
+      <origin xyz="-0.0352385 -0.0128258 0.007" rpy="0 0 3.49066" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_11">
+      <origin xyz="-0.0287267 -0.0241045 0.007" rpy="0 0 3.83972" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_12">
+      <origin xyz="-0.01875 -0.032476 0.007" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_13">
+      <origin xyz="-0.00651181 -0.0369303 0.007" rpy="0 0 4.53786" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_14">
+      <origin xyz="0.00651181 -0.0369303 0.007" rpy="0 0 4.88692" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_15">
+      <origin xyz="0.01875 -0.032476 0.007" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_16">
+      <origin xyz="0.0287267 -0.0241045 0.007" rpy="0 0 5.58505" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    <collision name="grip_rib_17">
+      <origin xyz="0.0352385 -0.0128258 0.007" rpy="0 0 5.93412" />
+      <geometry>
+        <box size="0.004 0.0054 0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="trim_screw_0">
+    <visual name="screw_head">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.003" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.63 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="screw_slot">
+      <origin xyz="0 0 0.0033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0105 0.0016 0.0006" />
+        </geometry>
+      <material name="shadow_gray">
+        <color rgba="0.08 0.085 0.08 1" />
+        </material>
+      </visual>
+    <visual name="calibration_witness">
+      <origin xyz="0.0048 0 0.00335" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0016 0.0007" />
+        </geometry>
+      <material name="calibration_amber">
+        <color rgba="0.92 0.56 0.18 1" />
+        </material>
+      </visual>
+    <collision name="screw_head">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_slot">
+      <origin xyz="0 0 0.0033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0105 0.0016 0.0006" />
+        </geometry>
+      </collision>
+    <collision name="calibration_witness">
+      <origin xyz="0.0048 0 0.00335" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0016 0.0007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="trim_screw_1">
+    <visual name="screw_head">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.003" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.63 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual name="screw_slot">
+      <origin xyz="0 0 0.0033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0105 0.0016 0.0006" />
+        </geometry>
+      <material name="shadow_gray">
+        <color rgba="0.08 0.085 0.08 1" />
+        </material>
+      </visual>
+    <visual name="calibration_witness">
+      <origin xyz="0.0048 0 0.00335" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0016 0.0007" />
+        </geometry>
+      <material name="calibration_amber">
+        <color rgba="0.92 0.56 0.18 1" />
+        </material>
+      </visual>
+    <collision name="screw_head">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_slot">
+      <origin xyz="0 0 0.0033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0105 0.0016 0.0006" />
+        </geometry>
+      </collision>
+    <collision name="calibration_witness">
+      <origin xyz="0.0048 0 0.00335" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0016 0.0007" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_shaft" type="fixed">
+    <origin xyz="0 0 0.014" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="shaft" />
+    </joint>
+  <joint name="shaft_to_dial" type="revolute">
+    <parent link="shaft" />
+    <child link="dial" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.18" velocity="1.2" lower="-2.26893" upper="2.26893" />
+    <dynamics damping="0.025" friction="0.015" />
+    </joint>
+  <joint name="body_to_trim_screw_0" type="continuous">
+    <origin xyz="-0.044 -0.032 0.0158" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="trim_screw_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.04" velocity="2" />
+    <dynamics damping="0.01" friction="0.005" />
+    </joint>
+  <joint name="body_to_trim_screw_1" type="continuous">
+    <origin xyz="0.044 -0.032 0.0158" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="trim_screw_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.04" velocity="2" />
+    <dynamics damping="0.01" friction="0.005" />
+    </joint>
+  </robot>

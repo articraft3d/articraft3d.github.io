@@ -1,0 +1,788 @@
+<robot name="industrial_safety_wall_thermostat">
+  <material name="dark_polymer">
+    <color rgba="0.055 0.06 0.06 1" />
+    </material>
+  <material name="safety_yellow">
+    <color rgba="0.95 0.7 0.05 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.62 0.64 0.62 1" />
+    </material>
+  <material name="black_oxide">
+    <color rgba="0.01 0.012 0.012 1" />
+    </material>
+  <material name="white_marking">
+    <color rgba="0.93 0.94 0.88 1" />
+    </material>
+  <material name="warning_red">
+    <color rgba="0.78 0.08 0.05 1" />
+    </material>
+  <link name="body">
+    <visual name="wall_plate">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.255 0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="sealed_housing">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.215 0.028" />
+        </geometry>
+      <material name="dark_polymer">
+        <color rgba="0.055 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="top_mount_flange">
+      <origin xyz="0 0.112 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.176 0.03 0.016" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="bottom_mount_flange">
+      <origin xyz="0 -0.112 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.176 0.03 0.016" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="shaft_retainer">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shaft_retainer.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="guard_rail_0">
+      <origin xyz="-0.065 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.16 0.016" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.05 1" />
+        </material>
+      </visual>
+    <visual name="guard_rail_1">
+      <origin xyz="0.065 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.16 0.016" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.05 1" />
+        </material>
+      </visual>
+    <visual name="guard_crossbar_0">
+      <origin xyz="0 -0.082 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.144 0.014 0.016" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.05 1" />
+        </material>
+      </visual>
+    <visual name="guard_crossbar_1">
+      <origin xyz="0 0.082 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.144 0.014 0.016" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.05 1" />
+        </material>
+      </visual>
+    <visual name="guard_standoff_0">
+      <origin xyz="-0.065 -0.082 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="guard_standoff_1">
+      <origin xyz="-0.065 0.082 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="guard_standoff_2">
+      <origin xyz="0.065 -0.082 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="guard_standoff_3">
+      <origin xyz="0.065 0.082 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="guard_brace_0">
+      <origin xyz="-0.05 0.064 0.05" rpy="0 0 -0.6" />
+      <geometry>
+        <box size="0.048 0.007 0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="guard_brace_1">
+      <origin xyz="0.05 0.064 0.05" rpy="0 0 0.6" />
+      <geometry>
+        <box size="0.048 0.007 0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="guard_brace_2">
+      <origin xyz="-0.05 -0.064 0.05" rpy="0 0 0.6" />
+      <geometry>
+        <box size="0.048 0.007 0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="guard_brace_3">
+      <origin xyz="0.05 -0.064 0.05" rpy="0 0 -0.6" />
+      <geometry>
+        <box size="0.048 0.007 0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="overtravel_stop_0">
+      <origin xyz="-0.062 -0.004 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.03 0.022" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.78 0.08 0.05 1" />
+        </material>
+      </visual>
+    <visual name="overtravel_stop_1">
+      <origin xyz="0.062 -0.004 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.03 0.022" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.78 0.08 0.05 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_0">
+      <origin xyz="-0.074 0.106 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="screw_slot_0">
+      <origin xyz="-0.074 0.106 0.0444" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_1">
+      <origin xyz="0.074 0.106 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="screw_slot_1">
+      <origin xyz="0.074 0.106 0.0444" rpy="0 0 0.785" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_2">
+      <origin xyz="-0.074 -0.106 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="screw_slot_2">
+      <origin xyz="-0.074 -0.106 0.0444" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_3">
+      <origin xyz="0.074 -0.106 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="screw_slot_3">
+      <origin xyz="0.074 -0.106 0.0444" rpy="0 0 0.785" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_4">
+      <origin xyz="-0.065 0.082 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="screw_slot_4">
+      <origin xyz="-0.065 0.082 0.0444" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_5">
+      <origin xyz="0.065 0.082 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="screw_slot_5">
+      <origin xyz="0.065 0.082 0.0444" rpy="0 0 0.785" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_6">
+      <origin xyz="-0.065 -0.082 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="screw_slot_6">
+      <origin xyz="-0.065 -0.082 0.0444" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_7">
+      <origin xyz="0.065 -0.082 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="screw_slot_7">
+      <origin xyz="0.065 -0.082 0.0444" rpy="0 0 0.785" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_0">
+      <origin xyz="-0.038 0.044 0.0408" rpy="0 0 -0.72" />
+      <geometry>
+        <box size="0.004 0.018 0.0018" />
+        </geometry>
+      <material name="white_marking">
+        <color rgba="0.93 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_1">
+      <origin xyz="-0.02 0.055 0.0408" rpy="0 0 -0.35" />
+      <geometry>
+        <box size="0.004 0.018 0.0018" />
+        </geometry>
+      <material name="white_marking">
+        <color rgba="0.93 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_2">
+      <origin xyz="0 0.059 0.0408" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.018 0.0018" />
+        </geometry>
+      <material name="white_marking">
+        <color rgba="0.93 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_3">
+      <origin xyz="0.02 0.055 0.0408" rpy="0 0 0.35" />
+      <geometry>
+        <box size="0.004 0.018 0.0018" />
+        </geometry>
+      <material name="white_marking">
+        <color rgba="0.93 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="scale_tick_4">
+      <origin xyz="0.038 0.044 0.0408" rpy="0 0 0.72" />
+      <geometry>
+        <box size="0.004 0.018 0.0018" />
+        </geometry>
+      <material name="white_marking">
+        <color rgba="0.93 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="lockout_mount">
+      <origin xyz="0.086 -0.108 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.05 0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="lockout_pin">
+      <origin xyz="0.086 -0.108 0.0505" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.021" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="lockout_hasp">
+      <origin xyz="0.108 -0.108 0.04" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lockout_hasp.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <collision name="wall_plate">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.255 0.012" />
+        </geometry>
+      </collision>
+    <collision name="sealed_housing">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.215 0.028" />
+        </geometry>
+      </collision>
+    <collision name="top_mount_flange">
+      <origin xyz="0 0.112 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.176 0.03 0.016" />
+        </geometry>
+      </collision>
+    <collision name="bottom_mount_flange">
+      <origin xyz="0 -0.112 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.176 0.03 0.016" />
+        </geometry>
+      </collision>
+    <collision name="shaft_retainer">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shaft_retainer.obj" />
+        </geometry>
+      </collision>
+    <collision name="guard_rail_0">
+      <origin xyz="-0.065 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.16 0.016" />
+        </geometry>
+      </collision>
+    <collision name="guard_rail_1">
+      <origin xyz="0.065 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.16 0.016" />
+        </geometry>
+      </collision>
+    <collision name="guard_crossbar_0">
+      <origin xyz="0 -0.082 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.144 0.014 0.016" />
+        </geometry>
+      </collision>
+    <collision name="guard_crossbar_1">
+      <origin xyz="0 0.082 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.144 0.014 0.016" />
+        </geometry>
+      </collision>
+    <collision name="guard_standoff_0">
+      <origin xyz="-0.065 -0.082 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.018" />
+        </geometry>
+      </collision>
+    <collision name="guard_standoff_1">
+      <origin xyz="-0.065 0.082 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.018" />
+        </geometry>
+      </collision>
+    <collision name="guard_standoff_2">
+      <origin xyz="0.065 -0.082 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.018" />
+        </geometry>
+      </collision>
+    <collision name="guard_standoff_3">
+      <origin xyz="0.065 0.082 0.049" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.018" />
+        </geometry>
+      </collision>
+    <collision name="guard_brace_0">
+      <origin xyz="-0.05 0.064 0.05" rpy="0 0 -0.6" />
+      <geometry>
+        <box size="0.048 0.007 0.008" />
+        </geometry>
+      </collision>
+    <collision name="guard_brace_1">
+      <origin xyz="0.05 0.064 0.05" rpy="0 0 0.6" />
+      <geometry>
+        <box size="0.048 0.007 0.008" />
+        </geometry>
+      </collision>
+    <collision name="guard_brace_2">
+      <origin xyz="-0.05 -0.064 0.05" rpy="0 0 0.6" />
+      <geometry>
+        <box size="0.048 0.007 0.008" />
+        </geometry>
+      </collision>
+    <collision name="guard_brace_3">
+      <origin xyz="0.05 -0.064 0.05" rpy="0 0 -0.6" />
+      <geometry>
+        <box size="0.048 0.007 0.008" />
+        </geometry>
+      </collision>
+    <collision name="overtravel_stop_0">
+      <origin xyz="-0.062 -0.004 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.03 0.022" />
+        </geometry>
+      </collision>
+    <collision name="overtravel_stop_1">
+      <origin xyz="0.062 -0.004 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.03 0.022" />
+        </geometry>
+      </collision>
+    <collision name="screw_head_0">
+      <origin xyz="-0.074 0.106 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="screw_slot_0">
+      <origin xyz="-0.074 0.106 0.0444" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      </collision>
+    <collision name="screw_head_1">
+      <origin xyz="0.074 0.106 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="screw_slot_1">
+      <origin xyz="0.074 0.106 0.0444" rpy="0 0 0.785" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      </collision>
+    <collision name="screw_head_2">
+      <origin xyz="-0.074 -0.106 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="screw_slot_2">
+      <origin xyz="-0.074 -0.106 0.0444" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      </collision>
+    <collision name="screw_head_3">
+      <origin xyz="0.074 -0.106 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="screw_slot_3">
+      <origin xyz="0.074 -0.106 0.0444" rpy="0 0 0.785" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      </collision>
+    <collision name="screw_head_4">
+      <origin xyz="-0.065 0.082 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="screw_slot_4">
+      <origin xyz="-0.065 0.082 0.0444" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      </collision>
+    <collision name="screw_head_5">
+      <origin xyz="0.065 0.082 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="screw_slot_5">
+      <origin xyz="0.065 0.082 0.0444" rpy="0 0 0.785" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      </collision>
+    <collision name="screw_head_6">
+      <origin xyz="-0.065 -0.082 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="screw_slot_6">
+      <origin xyz="-0.065 -0.082 0.0444" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      </collision>
+    <collision name="screw_head_7">
+      <origin xyz="0.065 -0.082 0.0415" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="screw_slot_7">
+      <origin xyz="0.065 -0.082 0.0444" rpy="0 0 0.785" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_0">
+      <origin xyz="-0.038 0.044 0.0408" rpy="0 0 -0.72" />
+      <geometry>
+        <box size="0.004 0.018 0.0018" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_1">
+      <origin xyz="-0.02 0.055 0.0408" rpy="0 0 -0.35" />
+      <geometry>
+        <box size="0.004 0.018 0.0018" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_2">
+      <origin xyz="0 0.059 0.0408" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.018 0.0018" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_3">
+      <origin xyz="0.02 0.055 0.0408" rpy="0 0 0.35" />
+      <geometry>
+        <box size="0.004 0.018 0.0018" />
+        </geometry>
+      </collision>
+    <collision name="scale_tick_4">
+      <origin xyz="0.038 0.044 0.0408" rpy="0 0 0.72" />
+      <geometry>
+        <box size="0.004 0.018 0.0018" />
+        </geometry>
+      </collision>
+    <collision name="lockout_mount">
+      <origin xyz="0.086 -0.108 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.05 0.014" />
+        </geometry>
+      </collision>
+    <collision name="lockout_pin">
+      <origin xyz="0.086 -0.108 0.0505" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.021" />
+        </geometry>
+      </collision>
+    <collision name="lockout_hasp">
+      <origin xyz="0.108 -0.108 0.04" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lockout_hasp.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dial">
+    <visual name="shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.02" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="dial_cap">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dial_cap.obj" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="pointer_bar">
+      <origin xyz="0 0.014 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.036 0.0022" />
+        </geometry>
+      <material name="white_marking">
+        <color rgba="0.93 0.94 0.88 1" />
+        </material>
+      </visual>
+    <visual name="stop_lug">
+      <origin xyz="0 0.044 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.014 0.012" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.78 0.08 0.05 1" />
+        </material>
+      </visual>
+    <collision name="shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="dial_cap">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dial_cap.obj" />
+        </geometry>
+      </collision>
+    <collision name="pointer_bar">
+      <origin xyz="0 0.014 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.036 0.0022" />
+        </geometry>
+      </collision>
+    <collision name="stop_lug">
+      <origin xyz="0 0.044 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.014 0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lockout_pawl">
+    <visual name="pawl_hub">
+      <geometry>
+        <mesh filename="assets/meshes/pawl_hub.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="pawl_arm">
+      <origin xyz="-0.026 -0.03 0.003" rpy="0 0 -0.72" />
+      <geometry>
+        <box size="0.01 0.052 0.006" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.05 1" />
+        </material>
+      </visual>
+    <visual name="pawl_tooth">
+      <origin xyz="-0.046 -0.053 0.004" rpy="0 0 -0.72" />
+      <geometry>
+        <box size="0.016 0.012 0.008" />
+        </geometry>
+      <material name="warning_red">
+        <color rgba="0.78 0.08 0.05 1" />
+        </material>
+      </visual>
+    <collision name="pawl_hub">
+      <geometry>
+        <mesh filename="assets/meshes/pawl_hub.obj" />
+        </geometry>
+      </collision>
+    <collision name="pawl_arm">
+      <origin xyz="-0.026 -0.03 0.003" rpy="0 0 -0.72" />
+      <geometry>
+        <box size="0.01 0.052 0.006" />
+        </geometry>
+      </collision>
+    <collision name="pawl_tooth">
+      <origin xyz="-0.046 -0.053 0.004" rpy="0 0 -0.72" />
+      <geometry>
+        <box size="0.016 0.012 0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_dial" type="revolute">
+    <origin xyz="0 0 0.04" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="dial" />
+    <axis xyz="0 0 1" />
+    <limit effort="2.5" velocity="1.2" lower="-1.65" upper="1.65" />
+    </joint>
+  <joint name="body_to_lockout_pawl" type="revolute">
+    <origin xyz="0.086 -0.108 0.055" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lockout_pawl" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="1" lower="-0.35" upper="0.55" />
+    </joint>
+  </robot>

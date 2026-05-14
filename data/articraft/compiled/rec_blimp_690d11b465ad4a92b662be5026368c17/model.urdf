@@ -1,0 +1,1108 @@
+<robot name="surveillance_blimp">
+  <material name="envelope_fabric">
+    <color rgba="0.86 0.88 0.84 1" />
+    </material>
+  <material name="blue_marking">
+    <color rgba="0.08 0.25 0.55 1" />
+    </material>
+  <material name="gondola_white">
+    <color rgba="0.88 0.9 0.88 1" />
+    </material>
+  <material name="blue_glass">
+    <color rgba="0.25 0.55 0.72 0.46" />
+    </material>
+  <material name="dark_composite">
+    <color rgba="0.07 0.08 0.09 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.55 0.57 0.58 1" />
+    </material>
+  <material name="nacelle_grey">
+    <color rgba="0.48 0.5 0.5 1" />
+    </material>
+  <material name="prop_black">
+    <color rgba="0.035 0.035 0.035 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <material name="wheel_aluminum">
+    <color rgba="0.72 0.73 0.72 1" />
+    </material>
+  <material name="tail_fabric">
+    <color rgba="0.78 0.8 0.78 1" />
+    </material>
+  <link name="envelope">
+    <visual name="hull">
+      <geometry>
+        <mesh filename="assets/meshes/long_surveillance_envelope.obj" />
+        </geometry>
+      <material name="envelope_fabric">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="side_stripe">
+      <origin xyz="2 5.12 8.55" rpy="0 0 0" />
+      <geometry>
+        <box size="21 0.035 0.45" />
+        </geometry>
+      <material name="blue_marking">
+        <color rgba="0.08 0.25 0.55 1" />
+        </material>
+      </visual>
+    <visual name="side_stripe_mirror">
+      <origin xyz="2 -5.12 8.55" rpy="0 0 0" />
+      <geometry>
+        <box size="21 0.035 0.45" />
+        </geometry>
+      <material name="blue_marking">
+        <color rgba="0.08 0.25 0.55 1" />
+        </material>
+      </visual>
+    <visual name="keel_rail">
+      <origin xyz="4.8 0 4.55" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.1" length="18" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="tail_stinger">
+      <origin xyz="-24.3 0 9.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.92" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="vertical_tail_pylon">
+      <origin xyz="-23.62 0 9.66" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="1.15" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="front_keel_strut_0">
+      <geometry>
+        <mesh filename="assets/meshes/front_keel_strut_0.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="front_keel_strut_1">
+      <geometry>
+        <mesh filename="assets/meshes/front_keel_strut_1.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="rear_keel_strut_0">
+      <geometry>
+        <mesh filename="assets/meshes/rear_keel_strut_0.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="rear_keel_strut_1">
+      <geometry>
+        <mesh filename="assets/meshes/rear_keel_strut_1.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="hull">
+      <geometry>
+        <mesh filename="assets/meshes/long_surveillance_envelope.obj" />
+        </geometry>
+      </collision>
+    <collision name="side_stripe">
+      <origin xyz="2 5.12 8.55" rpy="0 0 0" />
+      <geometry>
+        <box size="21 0.035 0.45" />
+        </geometry>
+      </collision>
+    <collision name="side_stripe_mirror">
+      <origin xyz="2 -5.12 8.55" rpy="0 0 0" />
+      <geometry>
+        <box size="21 0.035 0.45" />
+        </geometry>
+      </collision>
+    <collision name="keel_rail">
+      <origin xyz="4.8 0 4.55" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.1" length="18" />
+        </geometry>
+      </collision>
+    <collision name="tail_stinger">
+      <origin xyz="-24.3 0 9.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.92" />
+        </geometry>
+      </collision>
+    <collision name="vertical_tail_pylon">
+      <origin xyz="-23.62 0 9.66" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="1.15" />
+        </geometry>
+      </collision>
+    <collision name="front_keel_strut_0">
+      <geometry>
+        <mesh filename="assets/meshes/front_keel_strut_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_keel_strut_1">
+      <geometry>
+        <mesh filename="assets/meshes/front_keel_strut_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_keel_strut_0">
+      <geometry>
+        <mesh filename="assets/meshes/rear_keel_strut_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_keel_strut_1">
+      <geometry>
+        <mesh filename="assets/meshes/rear_keel_strut_1.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gondola">
+    <visual name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/sensor_gondola_shell.obj" />
+        </geometry>
+      <material name="gondola_white">
+        <color rgba="0.88 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="roof_hardpoint">
+      <origin xyz="-0.35 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="6.25 1.18 0.06" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="gear_mount_plate">
+      <origin xyz="-0.65 0 -2.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.45 1.02 0.12" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="bow_observation_glass">
+      <origin xyz="2.55 0 -0.74" rpy="0 0 0" />
+      <geometry>
+        <box size="1.35 2.24 0.42" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.25 0.55 0.72 0.46" />
+        </material>
+      </visual>
+    <visual name="window_-1.2_a">
+      <origin xyz="-1.25 1.12 -0.73" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.035 0.52" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.25 0.55 0.72 0.46" />
+        </material>
+      </visual>
+    <visual name="window_-1.2_b">
+      <origin xyz="-1.25 -1.12 -0.73" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.035 0.52" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.25 0.55 0.72 0.46" />
+        </material>
+      </visual>
+    <visual name="window_-0.2_a">
+      <origin xyz="-0.2 1.12 -0.73" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.035 0.52" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.25 0.55 0.72 0.46" />
+        </material>
+      </visual>
+    <visual name="window_-0.2_b">
+      <origin xyz="-0.2 -1.12 -0.73" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.035 0.52" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.25 0.55 0.72 0.46" />
+        </material>
+      </visual>
+    <visual name="window_0.8_a">
+      <origin xyz="0.85 1.12 -0.73" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.035 0.52" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.25 0.55 0.72 0.46" />
+        </material>
+      </visual>
+    <visual name="window_0.8_b">
+      <origin xyz="0.85 -1.12 -0.73" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.035 0.52" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.25 0.55 0.72 0.46" />
+        </material>
+      </visual>
+    <visual name="sensor_neck">
+      <origin xyz="1.15 0 -2.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.45" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="sensor_turret">
+      <origin xyz="1.15 0 -2.38" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.4" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="sensor_window">
+      <origin xyz="1.48 0 -2.38" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.08 0.14" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.25 0.55 0.72 0.46" />
+        </material>
+      </visual>
+    <visual name="gear_cross_axle">
+      <origin xyz="-0.65 0 -2.68" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="2.4" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="gear_front_strut_-1">
+      <geometry>
+        <mesh filename="assets/meshes/gear_front_strut_-1.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="gear_rear_strut_-1">
+      <geometry>
+        <mesh filename="assets/meshes/gear_rear_strut_-1.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="wheel_fork_inner_-1">
+      <origin xyz="-0.65 -1 -3.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.035 0.58" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="wheel_fork_outer_-1">
+      <origin xyz="-0.65 -1.36 -3.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.035 0.58" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="wheel_fork_bridge_-1">
+      <origin xyz="-0.65 -1.155 -2.745" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.46 0.09" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="axle_stub_-1">
+      <origin xyz="-0.65 -1.16 -3.25" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.44" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="gear_front_strut_+1">
+      <geometry>
+        <mesh filename="assets/meshes/gear_front_strut_-1--4e953207f3f0.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="gear_rear_strut_+1">
+      <geometry>
+        <mesh filename="assets/meshes/gear_rear_strut_-1--43ccb96b3d25.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="wheel_fork_inner_+1">
+      <origin xyz="-0.65 1 -3.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.035 0.58" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="wheel_fork_outer_+1">
+      <origin xyz="-0.65 1.36 -3.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.035 0.58" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="wheel_fork_bridge_+1">
+      <origin xyz="-0.65 1.155 -2.745" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.46 0.09" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="axle_stub_+1">
+      <origin xyz="-0.65 1.16 -3.25" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.44" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/sensor_gondola_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="roof_hardpoint">
+      <origin xyz="-0.35 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="6.25 1.18 0.06" />
+        </geometry>
+      </collision>
+    <collision name="gear_mount_plate">
+      <origin xyz="-0.65 0 -2.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.45 1.02 0.12" />
+        </geometry>
+      </collision>
+    <collision name="bow_observation_glass">
+      <origin xyz="2.55 0 -0.74" rpy="0 0 0" />
+      <geometry>
+        <box size="1.35 2.24 0.42" />
+        </geometry>
+      </collision>
+    <collision name="window_-1.2_a">
+      <origin xyz="-1.25 1.12 -0.73" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.035 0.52" />
+        </geometry>
+      </collision>
+    <collision name="window_-1.2_b">
+      <origin xyz="-1.25 -1.12 -0.73" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.035 0.52" />
+        </geometry>
+      </collision>
+    <collision name="window_-0.2_a">
+      <origin xyz="-0.2 1.12 -0.73" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.035 0.52" />
+        </geometry>
+      </collision>
+    <collision name="window_-0.2_b">
+      <origin xyz="-0.2 -1.12 -0.73" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.035 0.52" />
+        </geometry>
+      </collision>
+    <collision name="window_0.8_a">
+      <origin xyz="0.85 1.12 -0.73" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.035 0.52" />
+        </geometry>
+      </collision>
+    <collision name="window_0.8_b">
+      <origin xyz="0.85 -1.12 -0.73" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.035 0.52" />
+        </geometry>
+      </collision>
+    <collision name="sensor_neck">
+      <origin xyz="1.15 0 -2.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.45" />
+        </geometry>
+      </collision>
+    <collision name="sensor_turret">
+      <origin xyz="1.15 0 -2.38" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.4" />
+        </geometry>
+      </collision>
+    <collision name="sensor_window">
+      <origin xyz="1.48 0 -2.38" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.08 0.14" />
+        </geometry>
+      </collision>
+    <collision name="gear_cross_axle">
+      <origin xyz="-0.65 0 -2.68" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="2.4" />
+        </geometry>
+      </collision>
+    <collision name="gear_front_strut_-1">
+      <geometry>
+        <mesh filename="assets/meshes/gear_front_strut_-1.obj" />
+        </geometry>
+      </collision>
+    <collision name="gear_rear_strut_-1">
+      <geometry>
+        <mesh filename="assets/meshes/gear_rear_strut_-1.obj" />
+        </geometry>
+      </collision>
+    <collision name="wheel_fork_inner_-1">
+      <origin xyz="-0.65 -1 -3.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.035 0.58" />
+        </geometry>
+      </collision>
+    <collision name="wheel_fork_outer_-1">
+      <origin xyz="-0.65 -1.36 -3.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.035 0.58" />
+        </geometry>
+      </collision>
+    <collision name="wheel_fork_bridge_-1">
+      <origin xyz="-0.65 -1.155 -2.745" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.46 0.09" />
+        </geometry>
+      </collision>
+    <collision name="axle_stub_-1">
+      <origin xyz="-0.65 -1.16 -3.25" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.44" />
+        </geometry>
+      </collision>
+    <collision name="gear_front_strut_+1">
+      <geometry>
+        <mesh filename="assets/meshes/gear_front_strut_-1--4e953207f3f0.obj" />
+        </geometry>
+      </collision>
+    <collision name="gear_rear_strut_+1">
+      <geometry>
+        <mesh filename="assets/meshes/gear_rear_strut_-1--43ccb96b3d25.obj" />
+        </geometry>
+      </collision>
+    <collision name="wheel_fork_inner_+1">
+      <origin xyz="-0.65 1 -3.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.035 0.58" />
+        </geometry>
+      </collision>
+    <collision name="wheel_fork_outer_+1">
+      <origin xyz="-0.65 1.36 -3.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.035 0.58" />
+        </geometry>
+      </collision>
+    <collision name="wheel_fork_bridge_+1">
+      <origin xyz="-0.65 1.155 -2.745" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.46 0.09" />
+        </geometry>
+      </collision>
+    <collision name="axle_stub_+1">
+      <origin xyz="-0.65 1.16 -3.25" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.44" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="left_engine">
+    <visual name="nacelle_shell">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.44" length="1.45" />
+        </geometry>
+      <material name="nacelle_grey">
+        <color rgba="0.48 0.5 0.5 1" />
+        </material>
+      </visual>
+    <visual name="intake_lip">
+      <origin xyz="0.83 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.22" length="0.25" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="prop_shaft">
+      <origin xyz="-0.74 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.18" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="left_engine_upper_strut">
+      <geometry>
+        <mesh filename="assets/meshes/left_engine_upper_strut.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="left_engine_lower_strut">
+      <geometry>
+        <mesh filename="assets/meshes/left_engine_lower_strut.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="mount_pad">
+      <origin xyz="-0.36 -1.35 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.1 0.16" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="nacelle_shell">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.44" length="1.45" />
+        </geometry>
+      </collision>
+    <collision name="intake_lip">
+      <origin xyz="0.83 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.22" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="prop_shaft">
+      <origin xyz="-0.74 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="left_engine_upper_strut">
+      <geometry>
+        <mesh filename="assets/meshes/left_engine_upper_strut.obj" />
+        </geometry>
+      </collision>
+    <collision name="left_engine_lower_strut">
+      <geometry>
+        <mesh filename="assets/meshes/left_engine_lower_strut.obj" />
+        </geometry>
+      </collision>
+    <collision name="mount_pad">
+      <origin xyz="-0.36 -1.35 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.1 0.16" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="left_propeller">
+    <visual name="rotor">
+      <geometry>
+        <mesh filename="assets/meshes/left_propeller_rotor.obj" />
+        </geometry>
+      <material name="prop_black">
+        <color rgba="0.035 0.035 0.035 1" />
+        </material>
+      </visual>
+    <collision name="rotor">
+      <geometry>
+        <mesh filename="assets/meshes/left_propeller_rotor.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="right_engine">
+    <visual name="nacelle_shell">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.44" length="1.45" />
+        </geometry>
+      <material name="nacelle_grey">
+        <color rgba="0.48 0.5 0.5 1" />
+        </material>
+      </visual>
+    <visual name="intake_lip">
+      <origin xyz="0.83 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.22" length="0.25" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="prop_shaft">
+      <origin xyz="-0.74 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.18" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="right_engine_upper_strut">
+      <geometry>
+        <mesh filename="assets/meshes/right_engine_upper_strut.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="right_engine_lower_strut">
+      <geometry>
+        <mesh filename="assets/meshes/right_engine_lower_strut.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="mount_pad">
+      <origin xyz="-0.36 1.35 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.1 0.16" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="nacelle_shell">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.44" length="1.45" />
+        </geometry>
+      </collision>
+    <collision name="intake_lip">
+      <origin xyz="0.83 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.22" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="prop_shaft">
+      <origin xyz="-0.74 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="right_engine_upper_strut">
+      <geometry>
+        <mesh filename="assets/meshes/right_engine_upper_strut.obj" />
+        </geometry>
+      </collision>
+    <collision name="right_engine_lower_strut">
+      <geometry>
+        <mesh filename="assets/meshes/right_engine_lower_strut.obj" />
+        </geometry>
+      </collision>
+    <collision name="mount_pad">
+      <origin xyz="-0.36 1.35 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.1 0.16" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="right_propeller">
+    <visual name="rotor">
+      <geometry>
+        <mesh filename="assets/meshes/right_propeller_rotor.obj" />
+        </geometry>
+      <material name="prop_black">
+        <color rgba="0.035 0.035 0.035 1" />
+        </material>
+      </visual>
+    <collision name="rotor">
+      <geometry>
+        <mesh filename="assets/meshes/right_propeller_rotor.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="left_wheel">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/left_wheel_tire.obj" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/left_wheel_rim.obj" />
+        </geometry>
+      <material name="wheel_aluminum">
+        <color rgba="0.72 0.73 0.72 1" />
+        </material>
+      </visual>
+    <visual name="hub_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.08" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/left_wheel_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/left_wheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="hub_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.08" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="right_wheel">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/right_wheel_tire.obj" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/right_wheel_rim.obj" />
+        </geometry>
+      <material name="wheel_aluminum">
+        <color rgba="0.72 0.73 0.72 1" />
+        </material>
+      </visual>
+    <visual name="hub_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.08" />
+        </geometry>
+      <material name="dark_composite">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/right_wheel_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/right_wheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="hub_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.08" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="vertical_tail">
+    <visual name="fin_panel">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_fixed_fin.obj" />
+        </geometry>
+      <material name="tail_fabric">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rudder_hinge_post">
+      <origin xyz="0.035 0 1.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="3.45" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="fin_panel">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_fixed_fin.obj" />
+        </geometry>
+      </collision>
+    <collision name="rudder_hinge_post">
+      <origin xyz="0.035 0 1.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="3.45" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rudder">
+    <visual name="rudder_panel">
+      <geometry>
+        <mesh filename="assets/meshes/rudder_control_surface.obj" />
+        </geometry>
+      <material name="tail_fabric">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rudder_hinge_knuckle">
+      <origin xyz="-0.035 0 1.18" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="3.05" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="rudder_panel">
+      <geometry>
+        <mesh filename="assets/meshes/rudder_control_surface.obj" />
+        </geometry>
+      </collision>
+    <collision name="rudder_hinge_knuckle">
+      <origin xyz="-0.035 0 1.18" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="3.05" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="horizontal_tail">
+    <visual name="elevator_hinge_spar">
+      <origin xyz="0 0 0.1" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="8.7" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="stabilizer_root_rib_-1">
+      <origin xyz="0.55 -2.14 0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.18 0.12" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="stabilizer_panel_-1">
+      <origin xyz="1.18 -3.2 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="1.65 2.15 0.13" />
+        </geometry>
+      <material name="tail_fabric">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <visual name="stabilizer_root_rib_+1">
+      <origin xyz="0.55 2.14 0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.18 0.12" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="stabilizer_panel_+1">
+      <origin xyz="1.18 3.2 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="1.65 2.15 0.13" />
+        </geometry>
+      <material name="tail_fabric">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <collision name="elevator_hinge_spar">
+      <origin xyz="0 0 0.1" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="8.7" />
+        </geometry>
+      </collision>
+    <collision name="stabilizer_root_rib_-1">
+      <origin xyz="0.55 -2.14 0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.18 0.12" />
+        </geometry>
+      </collision>
+    <collision name="stabilizer_panel_-1">
+      <origin xyz="1.18 -3.2 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="1.65 2.15 0.13" />
+        </geometry>
+      </collision>
+    <collision name="stabilizer_root_rib_+1">
+      <origin xyz="0.55 2.14 0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.18 0.12" />
+        </geometry>
+      </collision>
+    <collision name="stabilizer_panel_+1">
+      <origin xyz="1.18 3.2 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="1.65 2.15 0.13" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="elevator">
+    <visual name="elevator_torque_tube">
+      <origin xyz="0 0 0.02" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="8.5" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="elevator_panel_-1">
+      <origin xyz="-0.66 -3.2 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 2.1 0.11" />
+        </geometry>
+      <material name="tail_fabric">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <visual name="elevator_panel_+1">
+      <origin xyz="-0.66 3.2 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 2.1 0.11" />
+        </geometry>
+      <material name="tail_fabric">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <collision name="elevator_torque_tube">
+      <origin xyz="0 0 0.02" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="8.5" />
+        </geometry>
+      </collision>
+    <collision name="elevator_panel_-1">
+      <origin xyz="-0.66 -3.2 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 2.1 0.11" />
+        </geometry>
+      </collision>
+    <collision name="elevator_panel_+1">
+      <origin xyz="-0.66 3.2 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 2.1 0.11" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="envelope_to_gondola" type="fixed">
+    <origin xyz="5 0 3.72" rpy="0 0 0" />
+    <parent link="envelope" />
+    <child link="gondola" />
+    </joint>
+  <joint name="gondola_to_left_engine" type="fixed">
+    <origin xyz="-1.55 2.58 -0.75" rpy="0 0 0" />
+    <parent link="gondola" />
+    <child link="left_engine" />
+    </joint>
+  <joint name="left_propeller_spin" type="continuous">
+    <origin xyz="-0.885 0 0" rpy="0 1.5708 0" />
+    <parent link="left_engine" />
+    <child link="left_propeller" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="90" />
+    </joint>
+  <joint name="gondola_to_right_engine" type="fixed">
+    <origin xyz="-1.55 -2.58 -0.75" rpy="0 0 0" />
+    <parent link="gondola" />
+    <child link="right_engine" />
+    </joint>
+  <joint name="right_propeller_spin" type="continuous">
+    <origin xyz="-0.885 0 0" rpy="0 1.5708 0" />
+    <parent link="right_engine" />
+    <child link="right_propeller" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="90" />
+    </joint>
+  <joint name="left_wheel_spin" type="continuous">
+    <origin xyz="-0.65 1.16 -3.25" rpy="0 0 0" />
+    <parent link="gondola" />
+    <child link="left_wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="10" velocity="45" />
+    </joint>
+  <joint name="right_wheel_spin" type="continuous">
+    <origin xyz="-0.65 -1.16 -3.25" rpy="0 0 0" />
+    <parent link="gondola" />
+    <child link="right_wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="10" velocity="45" />
+    </joint>
+  <joint name="envelope_to_vertical_tail" type="fixed">
+    <origin xyz="-23.78 0 10.2" rpy="0 0 0" />
+    <parent link="envelope" />
+    <child link="vertical_tail" />
+    </joint>
+  <joint name="rudder_hinge" type="revolute">
+    <parent link="vertical_tail" />
+    <child link="rudder" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.4" lower="-0.55" upper="0.55" />
+    </joint>
+  <joint name="envelope_to_horizontal_tail" type="fixed">
+    <origin xyz="-24.55 0 9.05" rpy="0 0 0" />
+    <parent link="envelope" />
+    <child link="horizontal_tail" />
+    </joint>
+  <joint name="elevator_hinge" type="revolute">
+    <parent link="horizontal_tail" />
+    <child link="elevator" />
+    <axis xyz="0 1 0" />
+    <limit effort="10" velocity="1.2" lower="-0.42" upper="0.42" />
+    </joint>
+  </robot>

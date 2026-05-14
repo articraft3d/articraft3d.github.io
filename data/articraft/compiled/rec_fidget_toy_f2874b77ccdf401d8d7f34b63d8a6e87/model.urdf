@@ -1,0 +1,45 @@
+<robot name="acupressure_finger_massage_ring">
+  <material name="smooth_satin_steel">
+    <color rgba="0.78 0.8 0.78 1" />
+    </material>
+  <material name="warm_anodized_spikes">
+    <color rgba="0.95 0.44 0.18 1" />
+    </material>
+  <link name="inner_band">
+    <visual name="smooth_band">
+      <geometry>
+        <mesh filename="assets/meshes/smooth_oval_inner_band.obj" />
+        </geometry>
+      <material name="smooth_satin_steel">
+        <color rgba="0.78 0.8 0.78 1" />
+        </material>
+      </visual>
+    <collision name="smooth_band">
+      <geometry>
+        <mesh filename="assets/meshes/smooth_oval_inner_band.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="outer_roller">
+    <visual name="spiked_roller">
+      <geometry>
+        <mesh filename="assets/meshes/spiked_outer_roller.obj" />
+        </geometry>
+      <material name="warm_anodized_spikes">
+        <color rgba="0.95 0.44 0.18 1" />
+        </material>
+      </visual>
+    <collision name="spiked_roller">
+      <geometry>
+        <mesh filename="assets/meshes/spiked_outer_roller.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="band_to_roller" type="continuous">
+    <parent link="inner_band" />
+    <child link="outer_roller" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="12" />
+    <dynamics damping="0.01" friction="0.003" />
+    </joint>
+  </robot>

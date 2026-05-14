@@ -1,0 +1,277 @@
+<robot name="pedestal_radial_beam_slide">
+  <material name="dark_cast_iron">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.62 0.64 0.62 1" />
+    </material>
+  <material name="oiled_rail">
+    <color rgba="0.07 0.08 0.08 1" />
+    </material>
+  <material name="safety_blue">
+    <color rgba="0.08 0.23 0.55 1" />
+    </material>
+  <material name="plain_output_metal">
+    <color rgba="0.74 0.75 0.72 1" />
+    </material>
+  <link name="pedestal">
+    <visual name="floor_flange">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.06" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="column">
+      <origin xyz="0 0 0.31" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.5" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="top_bearing">
+      <origin xyz="0 0 0.545" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.19" length="0.07" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <collision name="floor_flange">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="column">
+      <origin xyz="0 0 0.31" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.5" />
+        </geometry>
+      </collision>
+    <collision name="top_bearing">
+      <origin xyz="0 0 0.545" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.19" length="0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="radial_arm">
+    <visual name="turntable_hub">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.1" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="beam_web">
+      <origin xyz="0.65 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.16 0.08" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_0">
+      <origin xyz="0.7 0.067 0.1375" rpy="0 0 0" />
+      <geometry>
+        <box size="1.08 0.035 0.035" />
+        </geometry>
+      <material name="oiled_rail">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_1">
+      <origin xyz="0.7 -0.067 0.1375" rpy="0 0 0" />
+      <geometry>
+        <box size="1.08 0.035 0.035" />
+        </geometry>
+      <material name="oiled_rail">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="center_oil_slot">
+      <origin xyz="0.72 0 0.123" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.055 0.006" />
+        </geometry>
+      <material name="oiled_rail">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="inner_end_stop">
+      <origin xyz="0.145 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.24 0.14" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="outer_end_stop">
+      <origin xyz="1.275 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.24 0.14" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <collision name="turntable_hub">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="beam_web">
+      <origin xyz="0.65 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="1.25 0.16 0.08" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_0">
+      <origin xyz="0.7 0.067 0.1375" rpy="0 0 0" />
+      <geometry>
+        <box size="1.08 0.035 0.035" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_1">
+      <origin xyz="0.7 -0.067 0.1375" rpy="0 0 0" />
+      <geometry>
+        <box size="1.08 0.035 0.035" />
+        </geometry>
+      </collision>
+    <collision name="center_oil_slot">
+      <origin xyz="0.72 0 0.123" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.055 0.006" />
+        </geometry>
+      </collision>
+    <collision name="inner_end_stop">
+      <origin xyz="0.145 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.24 0.14" />
+        </geometry>
+      </collision>
+    <collision name="outer_end_stop">
+      <origin xyz="1.275 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.24 0.14" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="sliding_truck">
+    <visual name="top_saddle">
+      <origin xyz="0 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.32 0.06" />
+        </geometry>
+      <material name="safety_blue">
+        <color rgba="0.08 0.23 0.55 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_0">
+      <origin xyz="0 0.1825 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.045 0.15" />
+        </geometry>
+      <material name="safety_blue">
+        <color rgba="0.08 0.23 0.55 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_1">
+      <origin xyz="0 -0.1825 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.045 0.15" />
+        </geometry>
+      <material name="safety_blue">
+        <color rgba="0.08 0.23 0.55 1" />
+        </material>
+      </visual>
+    <visual name="output_face">
+      <origin xyz="0.14 0 0.2425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.3 0.17" />
+        </geometry>
+      <material name="plain_output_metal">
+        <color rgba="0.74 0.75 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rail_shoe_0">
+      <origin xyz="0 0.067 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.02 0.02" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="rail_shoe_1">
+      <origin xyz="0 -0.067 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.02 0.02" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <collision name="top_saddle">
+      <origin xyz="0 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.32 0.06" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_0">
+      <origin xyz="0 0.1825 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.045 0.15" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_1">
+      <origin xyz="0 -0.1825 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.045 0.15" />
+        </geometry>
+      </collision>
+    <collision name="output_face">
+      <origin xyz="0.14 0 0.2425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.3 0.17" />
+        </geometry>
+      </collision>
+    <collision name="rail_shoe_0">
+      <origin xyz="0 0.067 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.02 0.02" />
+        </geometry>
+      </collision>
+    <collision name="rail_shoe_1">
+      <origin xyz="0 -0.067 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.02 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="pedestal_to_arm" type="revolute">
+    <origin xyz="0 0 0.58" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="radial_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="1" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="arm_to_truck" type="prismatic">
+    <origin xyz="0.35 0 0" rpy="0 0 0" />
+    <parent link="radial_arm" />
+    <child link="sliding_truck" />
+    <axis xyz="1 0 0" />
+    <limit effort="80" velocity="0.35" lower="0" upper="0.65" />
+    </joint>
+  </robot>

@@ -1,0 +1,65 @@
+<robot name="screw_cap_bottle">
+  <link name="body">
+    <visual name="bottle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bottle_shell.obj" />
+        </geometry>
+      <material name="pale_clear_plastic">
+        <color rgba="0.75 0.92 1 0.58" />
+        </material>
+      </visual>
+    <visual name="threaded_neck">
+      <geometry>
+        <mesh filename="assets/meshes/threaded_neck.obj" />
+        </geometry>
+      <material name="pale_clear_plastic">
+        <color rgba="0.75 0.92 1 0.58" />
+        </material>
+      </visual>
+    <visual name="label_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/label_sleeve.obj" />
+        </geometry>
+      <material name="satin_white_label">
+        <color rgba="0.96 0.96 0.9 1" />
+        </material>
+      </visual>
+    <collision name="bottle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bottle_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="threaded_neck">
+      <geometry>
+        <mesh filename="assets/meshes/threaded_neck.obj" />
+        </geometry>
+      </collision>
+    <collision name="label_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/label_sleeve.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cap">
+    <visual name="cap_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cap_shell.obj" />
+        </geometry>
+      <material name="ribbed_blue_plastic">
+        <color rgba="0.03 0.18 0.72 1" />
+        </material>
+      </visual>
+    <collision name="cap_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cap_shell.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="neck_to_cap" type="continuous">
+    <origin xyz="0 0 0.139" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.8" velocity="8" />
+    </joint>
+  </robot>

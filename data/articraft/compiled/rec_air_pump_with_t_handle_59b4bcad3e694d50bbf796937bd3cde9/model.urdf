@@ -1,0 +1,286 @@
+<robot name="garage_floor_pump">
+  <material name="satin_black">
+    <color rgba="0.02 0.022 0.024 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.005 0.005 0.004 1" />
+    </material>
+  <material name="polished_steel">
+    <color rgba="0.7 0.72 0.7 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.18 0.19 0.2 1" />
+    </material>
+  <material name="clip_yellow">
+    <color rgba="1 0.72 0.06 1" />
+    </material>
+  <link name="body">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.2 0.035" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.02 0.022 0.024 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_0">
+      <origin xyz="-0.105 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.16 0.01" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_1">
+      <origin xyz="0.105 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.16 0.01" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="lower_socket">
+      <geometry>
+        <mesh filename="assets/meshes/lower_socket.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="top_guide_collar">
+      <geometry>
+        <mesh filename="assets/meshes/top_guide_collar.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="clip_pivot_boss">
+      <origin xyz="0 0.043 0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.025 0.055" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="clip_pivot_pin">
+      <origin xyz="0 0.061 0.23" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.052" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.2 0.035" />
+        </geometry>
+      </collision>
+    <collision name="foot_pad_0">
+      <origin xyz="-0.105 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.16 0.01" />
+        </geometry>
+      </collision>
+    <collision name="foot_pad_1">
+      <origin xyz="0.105 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.16 0.01" />
+        </geometry>
+      </collision>
+    <collision name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_socket">
+      <geometry>
+        <mesh filename="assets/meshes/lower_socket.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_guide_collar">
+      <geometry>
+        <mesh filename="assets/meshes/top_guide_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="clip_pivot_boss">
+      <origin xyz="0 0.043 0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.025 0.055" />
+        </geometry>
+      </collision>
+    <collision name="clip_pivot_pin">
+      <origin xyz="0 0.061 0.23" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.052" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="plunger">
+    <visual name="piston_rod">
+      <origin xyz="0 0 -0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.55" />
+        </geometry>
+      <material name="polished_steel">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="handle_stem">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.065" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="t_handle_bar">
+      <origin xyz="0 0 0.078" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.32" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="handle_end_0">
+      <origin xyz="-0.16 0 0.078" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.019" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="handle_end_1">
+      <origin xyz="0.16 0 0.078" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.019" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <collision name="piston_rod">
+      <origin xyz="0 0 -0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.55" />
+        </geometry>
+      </collision>
+    <collision name="handle_stem">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.065" />
+        </geometry>
+      </collision>
+    <collision name="t_handle_bar">
+      <origin xyz="0 0 0.078" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.32" />
+        </geometry>
+      </collision>
+    <collision name="handle_end_0">
+      <origin xyz="-0.16 0 0.078" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.019" />
+        </geometry>
+      </collision>
+    <collision name="handle_end_1">
+      <origin xyz="0.16 0 0.078" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.019" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="hose_clip">
+    <visual name="clip_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.02" />
+        </geometry>
+      <material name="clip_yellow">
+        <color rgba="1 0.72 0.06 1" />
+        </material>
+      </visual>
+    <visual name="clip_back">
+      <origin xyz="0 0 -0.048" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.072" />
+        </geometry>
+      <material name="clip_yellow">
+        <color rgba="1 0.72 0.06 1" />
+        </material>
+      </visual>
+    <visual name="hook_shelf">
+      <origin xyz="0.02 0 -0.088" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.014 0.018" />
+        </geometry>
+      <material name="clip_yellow">
+        <color rgba="1 0.72 0.06 1" />
+        </material>
+      </visual>
+    <visual name="hook_tip">
+      <origin xyz="0.054 0 -0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.046" />
+        </geometry>
+      <material name="clip_yellow">
+        <color rgba="1 0.72 0.06 1" />
+        </material>
+      </visual>
+    <collision name="clip_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="clip_back">
+      <origin xyz="0 0 -0.048" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.072" />
+        </geometry>
+      </collision>
+    <collision name="hook_shelf">
+      <origin xyz="0.02 0 -0.088" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.014 0.018" />
+        </geometry>
+      </collision>
+    <collision name="hook_tip">
+      <origin xyz="0.054 0 -0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.046" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_plunger" type="prismatic">
+    <origin xyz="0 0 0.805" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="plunger" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.55" lower="0" upper="0.28" />
+    </joint>
+  <joint name="body_to_hose_clip" type="revolute">
+    <origin xyz="0 0.079 0.23" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="hose_clip" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="2" lower="-0.55" upper="0.75" />
+    </joint>
+  </robot>

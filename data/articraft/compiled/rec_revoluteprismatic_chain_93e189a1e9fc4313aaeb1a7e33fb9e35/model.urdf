@@ -1,0 +1,1032 @@
+<robot name="revolute_prismatic_chain_study">
+  <material name="dark_steel">
+    <color rgba="0.18 0.19 0.2 1" />
+    </material>
+  <material name="satin_steel">
+    <color rgba="0.52 0.54 0.55 1" />
+    </material>
+  <material name="ground_steel">
+    <color rgba="0.72 0.73 0.71 1" />
+    </material>
+  <material name="black_oxide">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="bearing_bronze">
+    <color rgba="0.72 0.48 0.2 1" />
+    </material>
+  <material name="removable_cover_grey">
+    <color rgba="0.36 0.39 0.4 1" />
+    </material>
+  <material name="safety_red">
+    <color rgba="0.82 0.05 0.035 1" />
+    </material>
+  <link name="base_frame">
+    <visual name="ground_plate">
+      <origin xyz="0.22 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.36 0.035" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_plinth">
+      <origin xyz="0 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.25 0.04" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_cheek_pos">
+      <origin xyz="0 0.1 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.035 0.22" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_cheek_neg">
+      <origin xyz="0 -0.1 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.035 0.22" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="rear_cheek_bridge">
+      <origin xyz="-0.0925 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.235 0.07" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="bearing_ring_pos">
+      <origin xyz="0 0.0795 0.185" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.006" />
+        </geometry>
+      <material name="bearing_bronze">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="bore_shadow_pos">
+      <origin xyz="0 0.075 0.185" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bearing_ring_neg">
+      <origin xyz="0 -0.0795 0.185" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.006" />
+        </geometry>
+      <material name="bearing_bronze">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="bore_shadow_neg">
+      <origin xyz="0 -0.075 0.185" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="lockout_tab_pos">
+      <origin xyz="0.1175 0.1325 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.04" />
+        </geometry>
+      <material name="safety_red">
+        <color rgba="0.82 0.05 0.035 1" />
+        </material>
+      </visual>
+    <visual name="lockout_hole_pos">
+      <origin xyz="0.1175 0.1495 0.22" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="lockout_tab_neg">
+      <origin xyz="0.1175 -0.1325 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.04" />
+        </geometry>
+      <material name="safety_red">
+        <color rgba="0.82 0.05 0.035 1" />
+        </material>
+      </visual>
+    <visual name="lockout_hole_neg">
+      <origin xyz="0.1175 -0.1495 0.22" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="plinth_bolt_rear_neg">
+      <origin xyz="-0.12 -0.13 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="plinth_bolt_front_neg">
+      <origin xyz="0.12 -0.13 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="plinth_bolt_rear_pos">
+      <origin xyz="-0.12 0.13 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="plinth_bolt_front_pos">
+      <origin xyz="0.12 0.13 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="ground_plate">
+      <origin xyz="0.22 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.36 0.035" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_plinth">
+      <origin xyz="0 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.25 0.04" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_cheek_pos">
+      <origin xyz="0 0.1 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.035 0.22" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_cheek_neg">
+      <origin xyz="0 -0.1 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.035 0.22" />
+        </geometry>
+      </collision>
+    <collision name="rear_cheek_bridge">
+      <origin xyz="-0.0925 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.235 0.07" />
+        </geometry>
+      </collision>
+    <collision name="bearing_ring_pos">
+      <origin xyz="0 0.0795 0.185" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="bore_shadow_pos">
+      <origin xyz="0 0.075 0.185" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="bearing_ring_neg">
+      <origin xyz="0 -0.0795 0.185" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="bore_shadow_neg">
+      <origin xyz="0 -0.075 0.185" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="lockout_tab_pos">
+      <origin xyz="0.1175 0.1325 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.04" />
+        </geometry>
+      </collision>
+    <collision name="lockout_hole_pos">
+      <origin xyz="0.1175 0.1495 0.22" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="lockout_tab_neg">
+      <origin xyz="0.1175 -0.1325 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.03 0.04" />
+        </geometry>
+      </collision>
+    <collision name="lockout_hole_neg">
+      <origin xyz="0.1175 -0.1495 0.22" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="plinth_bolt_rear_neg">
+      <origin xyz="-0.12 -0.13 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="plinth_bolt_front_neg">
+      <origin xyz="0.12 -0.13 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="plinth_bolt_rear_pos">
+      <origin xyz="-0.12 0.13 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="plinth_bolt_front_pos">
+      <origin xyz="0.12 0.13 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotary_stage">
+    <visual name="hub_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.14" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.72 0.73 0.71 1" />
+        </material>
+      </visual>
+    <visual name="hub_cap_pos">
+      <origin xyz="0 0.074 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.008" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="hub_cap_neg">
+      <origin xyz="0 -0.074 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.008" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="side_link_pos">
+      <origin xyz="0.135 0.067 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.018 0.105" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="side_link_neg">
+      <origin xyz="0.135 -0.067 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.018 0.105" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="rear_cross_tie_top">
+      <origin xyz="0.252 0 0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.13 0.02" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="rear_cross_tie_bottom">
+      <origin xyz="0.252 0 -0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.13 0.02" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="guide_side_pos">
+      <origin xyz="0.45 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.012 0.084" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="guide_side_neg">
+      <origin xyz="0.45 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.012 0.084" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="guide_top">
+      <origin xyz="0.45 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.104 0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="guide_bottom">
+      <origin xyz="0.45 0 -0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.104 0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="guide_collar_top_rear">
+      <origin xyz="0.295 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.124 0.016" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="guide_collar_bottom_rear">
+      <origin xyz="0.295 0 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.124 0.016" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="guide_collar_rear_pos">
+      <origin xyz="0.295 0.062 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.016 0.12" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="guide_collar_rear_neg">
+      <origin xyz="0.295 -0.062 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.016 0.12" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="guide_collar_top_front">
+      <origin xyz="0.605 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.124 0.016" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="guide_collar_bottom_front">
+      <origin xyz="0.605 0 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.124 0.016" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="guide_collar_front_pos">
+      <origin xyz="0.605 0.062 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.016 0.12" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="guide_collar_front_neg">
+      <origin xyz="0.605 -0.062 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.016 0.12" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="guide_lockout_tab">
+      <origin xyz="0.59 -0.075 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.034 0.026" />
+        </geometry>
+      <material name="safety_red">
+        <color rgba="0.82 0.05 0.035 1" />
+        </material>
+      </visual>
+    <visual name="guide_lockout_hole">
+      <origin xyz="0.59 -0.094 0.055" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="hub_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.14" />
+        </geometry>
+      </collision>
+    <collision name="hub_cap_pos">
+      <origin xyz="0 0.074 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="hub_cap_neg">
+      <origin xyz="0 -0.074 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="side_link_pos">
+      <origin xyz="0.135 0.067 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.018 0.105" />
+        </geometry>
+      </collision>
+    <collision name="side_link_neg">
+      <origin xyz="0.135 -0.067 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.018 0.105" />
+        </geometry>
+      </collision>
+    <collision name="rear_cross_tie_top">
+      <origin xyz="0.252 0 0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.13 0.02" />
+        </geometry>
+      </collision>
+    <collision name="rear_cross_tie_bottom">
+      <origin xyz="0.252 0 -0.0625" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.13 0.02" />
+        </geometry>
+      </collision>
+    <collision name="guide_side_pos">
+      <origin xyz="0.45 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.012 0.084" />
+        </geometry>
+      </collision>
+    <collision name="guide_side_neg">
+      <origin xyz="0.45 -0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.012 0.084" />
+        </geometry>
+      </collision>
+    <collision name="guide_top">
+      <origin xyz="0.45 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.104 0.012" />
+        </geometry>
+      </collision>
+    <collision name="guide_bottom">
+      <origin xyz="0.45 0 -0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.104 0.012" />
+        </geometry>
+      </collision>
+    <collision name="guide_collar_top_rear">
+      <origin xyz="0.295 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.124 0.016" />
+        </geometry>
+      </collision>
+    <collision name="guide_collar_bottom_rear">
+      <origin xyz="0.295 0 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.124 0.016" />
+        </geometry>
+      </collision>
+    <collision name="guide_collar_rear_pos">
+      <origin xyz="0.295 0.062 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.016 0.12" />
+        </geometry>
+      </collision>
+    <collision name="guide_collar_rear_neg">
+      <origin xyz="0.295 -0.062 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.016 0.12" />
+        </geometry>
+      </collision>
+    <collision name="guide_collar_top_front">
+      <origin xyz="0.605 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.124 0.016" />
+        </geometry>
+      </collision>
+    <collision name="guide_collar_bottom_front">
+      <origin xyz="0.605 0 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.124 0.016" />
+        </geometry>
+      </collision>
+    <collision name="guide_collar_front_pos">
+      <origin xyz="0.605 0.062 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.016 0.12" />
+        </geometry>
+      </collision>
+    <collision name="guide_collar_front_neg">
+      <origin xyz="0.605 -0.062 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.016 0.12" />
+        </geometry>
+      </collision>
+    <collision name="guide_lockout_tab">
+      <origin xyz="0.59 -0.075 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.034 0.026" />
+        </geometry>
+      </collision>
+    <collision name="guide_lockout_hole">
+      <origin xyz="0.59 -0.094 0.055" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="output_carriage">
+    <visual name="ram_core">
+      <origin xyz="0.1 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.044 0.044" />
+        </geometry>
+      <material name="ground_steel">
+        <color rgba="0.72 0.73 0.71 1" />
+        </material>
+      </visual>
+    <visual name="side_wear_pos">
+      <origin xyz="0.06 0.034 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.024 0.036" />
+        </geometry>
+      <material name="bearing_bronze">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="side_wear_neg">
+      <origin xyz="0.06 -0.034 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.024 0.036" />
+        </geometry>
+      <material name="bearing_bronze">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="top_wear">
+      <origin xyz="0.06 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.036 0.018" />
+        </geometry>
+      <material name="bearing_bronze">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="bottom_wear">
+      <origin xyz="0.06 0 -0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.036 0.018" />
+        </geometry>
+      <material name="bearing_bronze">
+        <color rgba="0.72 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="front_guide_block">
+      <origin xyz="0.425 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.12 0.1" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="output_faceplate">
+      <origin xyz="0.493 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.162 0.14" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="output_lug_pos">
+      <origin xyz="0.545 0.067 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.024 0.07" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="output_lug_neg">
+      <origin xyz="0.545 -0.067 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.024 0.07" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.52 0.54 0.55 1" />
+        </material>
+      </visual>
+    <visual name="output_pin">
+      <origin xyz="0.56 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.152" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="carriage_access_cover">
+      <origin xyz="0.425 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.082 0.01" />
+        </geometry>
+      <material name="removable_cover_grey">
+        <color rgba="0.36 0.39 0.4 1" />
+        </material>
+      </visual>
+    <visual name="carriage_cover_screw_rear_pos">
+      <origin xyz="0.395 0.03 0.062" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="carriage_cover_screw_front_pos">
+      <origin xyz="0.455 0.03 0.062" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="carriage_cover_screw_rear_neg">
+      <origin xyz="0.395 -0.03 0.062" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="carriage_cover_screw_front_neg">
+      <origin xyz="0.455 -0.03 0.062" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="carriage_lockout_tab">
+      <origin xyz="0.385 0.0775 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.035 0.035" />
+        </geometry>
+      <material name="safety_red">
+        <color rgba="0.82 0.05 0.035 1" />
+        </material>
+      </visual>
+    <visual name="carriage_lockout_hole">
+      <origin xyz="0.385 0.0965 0.044" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="ram_core">
+      <origin xyz="0.1 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.044 0.044" />
+        </geometry>
+      </collision>
+    <collision name="side_wear_pos">
+      <origin xyz="0.06 0.034 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.024 0.036" />
+        </geometry>
+      </collision>
+    <collision name="side_wear_neg">
+      <origin xyz="0.06 -0.034 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.024 0.036" />
+        </geometry>
+      </collision>
+    <collision name="top_wear">
+      <origin xyz="0.06 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.036 0.018" />
+        </geometry>
+      </collision>
+    <collision name="bottom_wear">
+      <origin xyz="0.06 0 -0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.036 0.018" />
+        </geometry>
+      </collision>
+    <collision name="front_guide_block">
+      <origin xyz="0.425 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.12 0.1" />
+        </geometry>
+      </collision>
+    <collision name="output_faceplate">
+      <origin xyz="0.493 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.162 0.14" />
+        </geometry>
+      </collision>
+    <collision name="output_lug_pos">
+      <origin xyz="0.545 0.067 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.024 0.07" />
+        </geometry>
+      </collision>
+    <collision name="output_lug_neg">
+      <origin xyz="0.545 -0.067 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.024 0.07" />
+        </geometry>
+      </collision>
+    <collision name="output_pin">
+      <origin xyz="0.56 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.152" />
+        </geometry>
+      </collision>
+    <collision name="carriage_access_cover">
+      <origin xyz="0.425 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.082 0.01" />
+        </geometry>
+      </collision>
+    <collision name="carriage_cover_screw_rear_pos">
+      <origin xyz="0.395 0.03 0.062" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="carriage_cover_screw_front_pos">
+      <origin xyz="0.455 0.03 0.062" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="carriage_cover_screw_rear_neg">
+      <origin xyz="0.395 -0.03 0.062" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="carriage_cover_screw_front_neg">
+      <origin xyz="0.455 -0.03 0.062" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="carriage_lockout_tab">
+      <origin xyz="0.385 0.0775 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.035 0.035" />
+        </geometry>
+      </collision>
+    <collision name="carriage_lockout_hole">
+      <origin xyz="0.385 0.0965 0.044" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="guide_cover">
+    <visual name="guide_access_plate">
+      <origin xyz="0.45 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.08 0.014" />
+        </geometry>
+      <material name="removable_cover_grey">
+        <color rgba="0.36 0.39 0.4 1" />
+        </material>
+      </visual>
+    <visual name="guide_cover_screw_rear_pos">
+      <origin xyz="0.335 0.032 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="guide_cover_screw_front_pos">
+      <origin xyz="0.565 0.032 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="guide_cover_screw_rear_neg">
+      <origin xyz="0.335 -0.032 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="guide_cover_screw_front_neg">
+      <origin xyz="0.565 -0.032 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="guide_access_plate">
+      <origin xyz="0.45 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.08 0.014" />
+        </geometry>
+      </collision>
+    <collision name="guide_cover_screw_rear_pos">
+      <origin xyz="0.335 0.032 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="guide_cover_screw_front_pos">
+      <origin xyz="0.565 0.032 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="guide_cover_screw_rear_neg">
+      <origin xyz="0.335 -0.032 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="guide_cover_screw_front_neg">
+      <origin xyz="0.565 -0.032 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bearing_cover">
+    <visual name="outer_bearing_plate">
+      <origin xyz="0 0.1205 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.006 0.1" />
+        </geometry>
+      <material name="removable_cover_grey">
+        <color rgba="0.36 0.39 0.4 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cover_screw_lower_rear">
+      <origin xyz="-0.045 0.1265 0.15" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cover_screw_lower_front">
+      <origin xyz="0.045 0.1265 0.15" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cover_screw_upper_rear">
+      <origin xyz="-0.045 0.1265 0.22" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cover_screw_upper_front">
+      <origin xyz="0.045 0.1265 0.22" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.006" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="outer_bearing_plate">
+      <origin xyz="0 0.1205 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.006 0.1" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cover_screw_lower_rear">
+      <origin xyz="-0.045 0.1265 0.15" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cover_screw_lower_front">
+      <origin xyz="0.045 0.1265 0.15" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cover_screw_upper_rear">
+      <origin xyz="-0.045 0.1265 0.22" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="bearing_cover_screw_upper_front">
+      <origin xyz="0.045 0.1265 0.22" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_rotary" type="revolute">
+    <origin xyz="0 0 0.185" rpy="0 0 0" />
+    <parent link="base_frame" />
+    <child link="rotary_stage" />
+    <axis xyz="0 -1 0" />
+    <limit effort="220" velocity="1.2" lower="-0.35" upper="0.75" />
+    <dynamics damping="0.7" friction="0.08" />
+    </joint>
+  <joint name="rotary_to_carriage" type="prismatic">
+    <origin xyz="0.28 0 0" rpy="0 0 0" />
+    <parent link="rotary_stage" />
+    <child link="output_carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="450" velocity="0.35" lower="0" upper="0.22" />
+    <dynamics damping="1.2" friction="0.15" />
+    </joint>
+  <joint name="rotary_to_cover" type="fixed">
+    <parent link="rotary_stage" />
+    <child link="guide_cover" />
+    </joint>
+  <joint name="base_to_cover" type="fixed">
+    <parent link="base_frame" />
+    <child link="bearing_cover" />
+    </joint>
+  </robot>

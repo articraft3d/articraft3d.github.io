@@ -1,0 +1,274 @@
+<robot name="premium_consumer_wind_turbine">
+  <material name="warm_white_painted_metal">
+    <color rgba="0.86 0.88 0.87 1" />
+    </material>
+  <material name="satin_white_polymer">
+    <color rgba="0.92 0.93 0.91 1" />
+    </material>
+  <material name="graphite_anodized_metal">
+    <color rgba="0.15 0.16 0.17 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.64 0.67 0.69 1" />
+    </material>
+  <material name="matte_composite_blade">
+    <color rgba="0.96 0.96 0.93 1" />
+    </material>
+  <material name="black_elastomer_seal">
+    <color rgba="0.025 0.027 0.03 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 1.25" rpy="0 0 0" />
+      <mass value="18" />
+      <inertia ixx="9.4038" ixy="0" ixz="0" iyy="9.4038" iyz="0" izz="0.0576" />
+      </inertial>
+    <visual name="base_plate">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.23" length="0.05" />
+        </geometry>
+      <material name="graphite_anodized_metal">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tower_shell.obj" />
+        </geometry>
+      <material name="warm_white_painted_metal">
+        <color rgba="0.86 0.88 0.87 1" />
+        </material>
+      </visual>
+    <visual name="lower_yaw_race">
+      <origin xyz="0 0 2.475" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.05" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.67 0.69 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_0">
+      <origin xyz="0.165 0 0.056" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.67 0.69 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_1">
+      <origin xyz="-0.082 0.143 0.056" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.67 0.69 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_2">
+      <origin xyz="-0.082 -0.143 0.056" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.67 0.69 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.23" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tower_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_yaw_race">
+      <origin xyz="0 0 2.475" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_0">
+      <origin xyz="0.165 0 0.056" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_1">
+      <origin xyz="-0.082 0.143 0.056" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_2">
+      <origin xyz="-0.082 -0.143 0.056" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="nacelle">
+    <inertial>
+      <origin xyz="0.02 0 0.225" rpy="0 0 0" />
+      <mass value="7.5" />
+      <inertia ixx="0.366187" ixy="0" ixz="0" iyy="0.366187" iyz="0" izz="0.084375" />
+      </inertial>
+    <visual name="upper_yaw_race">
+      <origin xyz="0 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.104" length="0.046" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.67 0.69 1" />
+        </material>
+      </visual>
+    <visual name="yaw_pedestal">
+      <geometry>
+        <mesh filename="assets/meshes/yaw_pedestal.obj" />
+        </geometry>
+      <material name="satin_white_polymer">
+        <color rgba="0.92 0.93 0.91 1" />
+        </material>
+      </visual>
+    <visual name="nacelle_body">
+      <geometry>
+        <mesh filename="assets/meshes/nacelle_body.obj" />
+        </geometry>
+      <material name="satin_white_polymer">
+        <color rgba="0.92 0.93 0.91 1" />
+        </material>
+      </visual>
+    <visual name="nose_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/nose_bearing.obj" />
+        </geometry>
+      <material name="graphite_anodized_metal">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="rear_service_seam">
+      <geometry>
+        <mesh filename="assets/meshes/rear_service_seam.obj" />
+        </geometry>
+      <material name="black_elastomer_seal">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <collision name="upper_yaw_race">
+      <origin xyz="0 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.104" length="0.046" />
+        </geometry>
+      </collision>
+    <collision name="yaw_pedestal">
+      <geometry>
+        <mesh filename="assets/meshes/yaw_pedestal.obj" />
+        </geometry>
+      </collision>
+    <collision name="nacelle_body">
+      <geometry>
+        <mesh filename="assets/meshes/nacelle_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="nose_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/nose_bearing.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_service_seam">
+      <geometry>
+        <mesh filename="assets/meshes/rear_service_seam.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotor">
+    <inertial>
+      <mass value="2.6" />
+      <inertia ixx="0.338347" ixy="0" ixz="0" iyy="0.338347" iyz="0" izz="0.67392" />
+      </inertial>
+    <visual name="hub_body">
+      <geometry>
+        <mesh filename="assets/meshes/hub_body.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.67 0.69 1" />
+        </material>
+      </visual>
+    <visual name="root_cuffs">
+      <geometry>
+        <mesh filename="assets/meshes/root_cuffs.obj" />
+        </geometry>
+      <material name="black_elastomer_seal">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="blade_0">
+      <geometry>
+        <mesh filename="assets/meshes/blade_0.obj" />
+        </geometry>
+      <material name="matte_composite_blade">
+        <color rgba="0.96 0.96 0.93 1" />
+        </material>
+      </visual>
+    <visual name="blade_1">
+      <geometry>
+        <mesh filename="assets/meshes/blade_1.obj" />
+        </geometry>
+      <material name="matte_composite_blade">
+        <color rgba="0.96 0.96 0.93 1" />
+        </material>
+      </visual>
+    <visual name="blade_2">
+      <geometry>
+        <mesh filename="assets/meshes/blade_2.obj" />
+        </geometry>
+      <material name="matte_composite_blade">
+        <color rgba="0.96 0.96 0.93 1" />
+        </material>
+      </visual>
+    <collision name="hub_body">
+      <geometry>
+        <mesh filename="assets/meshes/hub_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="root_cuffs">
+      <geometry>
+        <mesh filename="assets/meshes/root_cuffs.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_0">
+      <geometry>
+        <mesh filename="assets/meshes/blade_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_1">
+      <geometry>
+        <mesh filename="assets/meshes/blade_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="blade_2">
+      <geometry>
+        <mesh filename="assets/meshes/blade_2.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="tower_to_nacelle" type="continuous">
+    <origin xyz="0 0 2.5" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="nacelle" />
+    <axis xyz="0 0 1" />
+    <limit effort="24" velocity="0.7" />
+    </joint>
+  <joint name="nacelle_to_rotor" type="continuous">
+    <origin xyz="-0.45 0 0.225" rpy="0 0 0" />
+    <parent link="nacelle" />
+    <child link="rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="18" />
+    </joint>
+  </robot>

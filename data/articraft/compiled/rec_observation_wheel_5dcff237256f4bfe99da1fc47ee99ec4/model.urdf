@@ -1,0 +1,1037 @@
+<robot name="a_frame_observation_wheel">
+  <material name="painted_steel">
+    <color rgba="0.88 0.9 0.92 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.12 0.14 0.16 1" />
+    </material>
+  <material name="blue_glass">
+    <color rgba="0.35 0.65 0.9 0.72" />
+    </material>
+  <material name="cabin_red">
+    <color rgba="0.86 0.15 0.1 1" />
+    </material>
+  <material name="cabin_roof">
+    <color rgba="0.95 0.82 0.18 1" />
+    </material>
+  <material name="concrete">
+    <color rgba="0.5 0.5 0.48 1" />
+    </material>
+  <link name="support">
+    <visual name="foundation">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="2.75 1.05 0.08" />
+        </geometry>
+      <material name="concrete">
+        <color rgba="0.5 0.5 0.48 1" />
+        </material>
+      </visual>
+    <visual name="a_frame">
+      <geometry>
+        <mesh filename="assets/meshes/a_frame_support.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.88 0.9 0.92 1" />
+        </material>
+      </visual>
+    <visual name="bearing_0">
+      <origin xyz="0 -0.245 1.85" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.075" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="bearing_1">
+      <origin xyz="0 0.245 1.85" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.075" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <collision name="foundation">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="2.75 1.05 0.08" />
+        </geometry>
+      </collision>
+    <collision name="a_frame">
+      <geometry>
+        <mesh filename="assets/meshes/a_frame_support.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_0">
+      <origin xyz="0 -0.245 1.85" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.075" />
+        </geometry>
+      </collision>
+    <collision name="bearing_1">
+      <origin xyz="0 0.245 1.85" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.075" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wheel">
+    <visual name="rim_spokes">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_rim_spokes.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.88 0.9 0.92 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.3" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <collision name="rim_spokes">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_rim_spokes.obj" />
+        </geometry>
+      </collision>
+    <collision name="hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.3" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gondola_0">
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      <material name="cabin_red">
+        <color rgba="0.86 0.15 0.1 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      <material name="cabin_roof">
+        <color rgba="0.95 0.82 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <visual name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      </collision>
+    <collision name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      </collision>
+    <collision name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    <collision name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gondola_1">
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      <material name="cabin_red">
+        <color rgba="0.86 0.15 0.1 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      <material name="cabin_roof">
+        <color rgba="0.95 0.82 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <visual name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      </collision>
+    <collision name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      </collision>
+    <collision name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    <collision name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gondola_2">
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      <material name="cabin_red">
+        <color rgba="0.86 0.15 0.1 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      <material name="cabin_roof">
+        <color rgba="0.95 0.82 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <visual name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      </collision>
+    <collision name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      </collision>
+    <collision name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    <collision name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gondola_3">
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      <material name="cabin_red">
+        <color rgba="0.86 0.15 0.1 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      <material name="cabin_roof">
+        <color rgba="0.95 0.82 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <visual name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      </collision>
+    <collision name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      </collision>
+    <collision name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    <collision name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gondola_4">
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      <material name="cabin_red">
+        <color rgba="0.86 0.15 0.1 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      <material name="cabin_roof">
+        <color rgba="0.95 0.82 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <visual name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      </collision>
+    <collision name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      </collision>
+    <collision name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    <collision name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gondola_5">
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      <material name="cabin_red">
+        <color rgba="0.86 0.15 0.1 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      <material name="cabin_roof">
+        <color rgba="0.95 0.82 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <visual name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      </collision>
+    <collision name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      </collision>
+    <collision name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    <collision name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gondola_6">
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      <material name="cabin_red">
+        <color rgba="0.86 0.15 0.1 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      <material name="cabin_roof">
+        <color rgba="0.95 0.82 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <visual name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      </collision>
+    <collision name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      </collision>
+    <collision name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    <collision name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gondola_7">
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.12 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      <material name="cabin_red">
+        <color rgba="0.86 0.15 0.1 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      <material name="cabin_roof">
+        <color rgba="0.95 0.82 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <visual name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      <material name="blue_glass">
+        <color rgba="0.35 0.65 0.9 0.72" />
+        </material>
+      </visual>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="hanger_0">
+      <origin xyz="0 -0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="hanger_1">
+      <origin xyz="0 0.082 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.28" />
+        </geometry>
+      </collision>
+    <collision name="cabin_body">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.18 0.16" />
+        </geometry>
+      </collision>
+    <collision name="roof">
+      <origin xyz="0 0 -0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.205 0.035" />
+        </geometry>
+      </collision>
+    <collision name="window_0">
+      <origin xyz="0 -0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    <collision name="window_1">
+      <origin xyz="0 0.091 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.006 0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="support_to_wheel" type="continuous">
+    <origin xyz="0 0 1.85" rpy="0 0 0" />
+    <parent link="support" />
+    <child link="wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="2500" velocity="0.35" />
+    </joint>
+  <joint name="wheel_to_gondola_0" type="continuous">
+    <origin xyz="1.2 0 0" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="35" velocity="2" />
+    <mimic joint="support_to_wheel" multiplier="-1" />
+    </joint>
+  <joint name="wheel_to_gondola_1" type="continuous">
+    <origin xyz="0.848528 0 0.848528" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="35" velocity="2" />
+    <mimic joint="support_to_wheel" multiplier="-1" />
+    </joint>
+  <joint name="wheel_to_gondola_2" type="continuous">
+    <origin xyz="7.34788e-17 0 1.2" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="35" velocity="2" />
+    <mimic joint="support_to_wheel" multiplier="-1" />
+    </joint>
+  <joint name="wheel_to_gondola_3" type="continuous">
+    <origin xyz="-0.848528 0 0.848528" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_3" />
+    <axis xyz="0 1 0" />
+    <limit effort="35" velocity="2" />
+    <mimic joint="support_to_wheel" multiplier="-1" />
+    </joint>
+  <joint name="wheel_to_gondola_4" type="continuous">
+    <origin xyz="-1.2 0 1.46958e-16" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_4" />
+    <axis xyz="0 1 0" />
+    <limit effort="35" velocity="2" />
+    <mimic joint="support_to_wheel" multiplier="-1" />
+    </joint>
+  <joint name="wheel_to_gondola_5" type="continuous">
+    <origin xyz="-0.848528 0 -0.848528" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_5" />
+    <axis xyz="0 1 0" />
+    <limit effort="35" velocity="2" />
+    <mimic joint="support_to_wheel" multiplier="-1" />
+    </joint>
+  <joint name="wheel_to_gondola_6" type="continuous">
+    <origin xyz="-2.20436e-16 0 -1.2" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_6" />
+    <axis xyz="0 1 0" />
+    <limit effort="35" velocity="2" />
+    <mimic joint="support_to_wheel" multiplier="-1" />
+    </joint>
+  <joint name="wheel_to_gondola_7" type="continuous">
+    <origin xyz="0.848528 0 -0.848528" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_7" />
+    <axis xyz="0 1 0" />
+    <limit effort="35" velocity="2" />
+    <mimic joint="support_to_wheel" multiplier="-1" />
+    </joint>
+  </robot>

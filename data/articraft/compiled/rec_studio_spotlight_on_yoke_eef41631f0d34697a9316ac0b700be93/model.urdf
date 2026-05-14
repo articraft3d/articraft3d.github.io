@@ -1,0 +1,672 @@
+<robot name="rolling_tripod_photo_spotlight">
+  <material name="matte_black">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="satin_black">
+    <color rgba="0.05 0.052 0.055 1" />
+    </material>
+  <material name="dark_graphite">
+    <color rgba="0.12 0.125 0.13 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.55 0.56 0.54 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.01 0.01 0.01 1" />
+    </material>
+  <material name="warm_fresnel_lens">
+    <color rgba="1 0.76 0.32 0.72" />
+    </material>
+  <material name="pale_led">
+    <color rgba="0.88 0.92 0.96 1" />
+    </material>
+  <link name="base">
+    <visual name="crown_hub">
+      <origin xyz="0 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.08" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="lower_mast_sleeve">
+      <origin xyz="0 0 0.34" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_mast_sleeve.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.05 0.052 0.055 1" />
+        </material>
+      </visual>
+    <visual name="mast_clamp_collar">
+      <origin xyz="0 0 0.94" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/mast_clamp_collar.obj" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="clamp_boss">
+      <origin xyz="0.078 0 0.94" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.026 0.036" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="crown_hinge_0">
+      <origin xyz="0.148 0 0.31" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.082" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="crown_hinge_1">
+      <origin xyz="-0.074 0.128172 0.31" rpy="1.5708 0 3.66519" />
+      <geometry>
+        <cylinder radius="0.017" length="0.082" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="crown_hinge_2">
+      <origin xyz="-0.074 -0.128172 0.31" rpy="1.5708 0 5.75959" />
+      <geometry>
+        <cylinder radius="0.017" length="0.082" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="leg_0">
+    <visual name="hinge_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="hinge_to_leg_socket">
+      <origin xyz="0.0438502 0 -0.0195234" rpy="0 0.418879 0" />
+      <geometry>
+        <box size="0.095 0.032 0.028" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="folding_leg_tube">
+      <origin xyz="0.315173 0 -0.140324" rpy="0 0.418879 0" />
+      <geometry>
+        <box size="0.55 0.034 0.026" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="caster_neck">
+      <origin xyz="0.554398 0 -0.182177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.026 0.07" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_socket">
+      <origin xyz="0.554398 0 -0.234177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.036 0.05" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_bridge">
+      <origin xyz="0.570398 0 -0.226177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.072 0.018" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_fork_a">
+      <origin xyz="0.578398 0.027 -0.292177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.12" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_fork_b">
+      <origin xyz="0.578398 -0.027 -0.292177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.12" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_axle">
+      <origin xyz="0.578398 0 -0.332177" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.072" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="wheel_0">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/caster_tire_0.obj" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="wheel_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.038" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="leg_1">
+    <visual name="hinge_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="hinge_to_leg_socket">
+      <origin xyz="0.0438502 0 -0.0195234" rpy="0 0.418879 0" />
+      <geometry>
+        <box size="0.095 0.032 0.028" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="folding_leg_tube">
+      <origin xyz="0.315173 0 -0.140324" rpy="0 0.418879 0" />
+      <geometry>
+        <box size="0.55 0.034 0.026" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="caster_neck">
+      <origin xyz="0.554398 0 -0.182177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.026 0.07" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_socket">
+      <origin xyz="0.554398 0 -0.234177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.036 0.05" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_bridge">
+      <origin xyz="0.570398 0 -0.226177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.072 0.018" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_fork_a">
+      <origin xyz="0.578398 0.027 -0.292177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.12" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_fork_b">
+      <origin xyz="0.578398 -0.027 -0.292177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.12" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_axle">
+      <origin xyz="0.578398 0 -0.332177" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.072" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="wheel_1">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/caster_tire_1.obj" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="wheel_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.038" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="leg_2">
+    <visual name="hinge_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="hinge_to_leg_socket">
+      <origin xyz="0.0438502 0 -0.0195234" rpy="0 0.418879 0" />
+      <geometry>
+        <box size="0.095 0.032 0.028" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="folding_leg_tube">
+      <origin xyz="0.315173 0 -0.140324" rpy="0 0.418879 0" />
+      <geometry>
+        <box size="0.55 0.034 0.026" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="caster_neck">
+      <origin xyz="0.554398 0 -0.182177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.026 0.07" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_socket">
+      <origin xyz="0.554398 0 -0.234177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.036 0.05" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_bridge">
+      <origin xyz="0.570398 0 -0.226177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.072 0.018" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_fork_a">
+      <origin xyz="0.578398 0.027 -0.292177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.12" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_fork_b">
+      <origin xyz="0.578398 -0.027 -0.292177" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.12" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="caster_axle">
+      <origin xyz="0.578398 0 -0.332177" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.072" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="wheel_2">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/caster_tire_2.obj" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="wheel_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.038" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="mast">
+    <visual name="inner_mast">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.15" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="lower_slide_bushing">
+      <origin xyz="0 0 -0.48" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.03" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="pan_bearing_cap">
+      <origin xyz="0 0 0.665" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.038" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="top_turntable_plate">
+      <origin xyz="0 0 0.692" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.02" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="yoke">
+    <visual name="pan_disk">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.074" length="0.03" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="tilt_yoke">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tilt_yoke.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <visual name="housing">
+      <geometry>
+        <mesh filename="assets/meshes/spotlight_housing.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.05 0.052 0.055 1" />
+        </material>
+      </visual>
+    <visual name="side_trunnion_a">
+      <origin xyz="0.132 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.065" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="side_trunnion_b">
+      <origin xyz="-0.132 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.065" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="front_bezel">
+      <origin xyz="0 0.126 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bezel_ring.obj" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0 0.122 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.074" length="0.008" />
+        </geometry>
+      <material name="warm_fresnel_lens">
+        <color rgba="1 0.76 0.32 0.72" />
+        </material>
+      </visual>
+    <visual name="led_emitter">
+      <origin xyz="0 0.127 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.004" />
+        </geometry>
+      <material name="pale_led">
+        <color rgba="0.88 0.92 0.96 1" />
+        </material>
+      </visual>
+    <visual name="rear_heat_sink">
+      <origin xyz="0 -0.124 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.038" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="handle_pivot_a">
+      <origin xyz="0.128 -0.128 0.022" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.042" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="handle_pivot_mount_a">
+      <origin xyz="0.103 -0.118 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.02 0.03" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="handle_pivot_b">
+      <origin xyz="-0.128 -0.128 0.022" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.042" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="handle_pivot_mount_b">
+      <origin xyz="-0.103 -0.118 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.02 0.03" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rear_handle">
+    <visual name="pivot_eye_a">
+      <origin xyz="0.132 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.034" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="pivot_eye_b">
+      <origin xyz="-0.132 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.034" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.12 0.125 0.13 1" />
+        </material>
+      </visual>
+    <visual name="handle_arm_a">
+      <origin xyz="0.132 -0.075 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.15 0.026" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="handle_arm_b">
+      <origin xyz="-0.132 -0.075 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.15 0.026" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="carry_grip">
+      <origin xyz="0 -0.15 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.032 0.04" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="leg_hinge_0" type="revolute">
+    <origin xyz="0.148 0 0.31" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="leg_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="1.4" lower="-0.75" upper="0.18" />
+    </joint>
+  <joint name="wheel_spin_0" type="continuous">
+    <origin xyz="0.578398 0 -0.332177" rpy="0 0 0" />
+    <parent link="leg_0" />
+    <child link="wheel_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="20" />
+    </joint>
+  <joint name="leg_hinge_1" type="revolute">
+    <origin xyz="-0.074 0.128172 0.31" rpy="0 0 2.0944" />
+    <parent link="base" />
+    <child link="leg_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="1.4" lower="-0.75" upper="0.18" />
+    </joint>
+  <joint name="wheel_spin_1" type="continuous">
+    <origin xyz="0.578398 0 -0.332177" rpy="0 0 0" />
+    <parent link="leg_1" />
+    <child link="wheel_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="20" />
+    </joint>
+  <joint name="leg_hinge_2" type="revolute">
+    <origin xyz="-0.074 -0.128172 0.31" rpy="0 0 4.18879" />
+    <parent link="base" />
+    <child link="leg_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="1.4" lower="-0.75" upper="0.18" />
+    </joint>
+  <joint name="wheel_spin_2" type="continuous">
+    <origin xyz="0.578398 0 -0.332177" rpy="0 0 0" />
+    <parent link="leg_2" />
+    <child link="wheel_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="20" />
+    </joint>
+  <joint name="mast_slide" type="prismatic">
+    <origin xyz="0 0 0.895" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="mast" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="0.35" lower="0" upper="0.45" />
+    </joint>
+  <joint name="yoke_pan" type="revolute">
+    <origin xyz="0 0 0.702" rpy="0 0 0" />
+    <parent link="mast" />
+    <child link="yoke" />
+    <axis xyz="0 0 1" />
+    <limit effort="20" velocity="1.5" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="head_tilt" type="revolute">
+    <origin xyz="0 0 0.191" rpy="0 0 0" />
+    <parent link="yoke" />
+    <child link="head" />
+    <axis xyz="1 0 0" />
+    <limit effort="15" velocity="1.2" lower="-0.85" upper="0.85" />
+    </joint>
+  <joint name="handle_fold" type="revolute">
+    <origin xyz="0 -0.128 0.022" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="rear_handle" />
+    <axis xyz="1 0 0" />
+    <limit effort="5" velocity="2" lower="-1.35" upper="0.55" />
+    </joint>
+  </robot>

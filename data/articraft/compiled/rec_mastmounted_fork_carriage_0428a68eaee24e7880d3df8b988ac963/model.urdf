@@ -1,0 +1,475 @@
+<robot name="narrow_fork_carriage">
+  <material name="mast_paint">
+    <color rgba="0.12 0.15 0.17 1" />
+    </material>
+  <material name="carriage_paint">
+    <color rgba="0.95 0.63 0.08 1" />
+    </material>
+  <material name="fork_steel">
+    <color rgba="0.1 0.1 0.1 1" />
+    </material>
+  <material name="roller_rubber">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <link name="mast">
+    <visual name="guide_rail_0">
+      <origin xyz="0 -0.28 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.06 2.25" />
+        </geometry>
+      <material name="mast_paint">
+        <color rgba="0.12 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="floor_shoe_0">
+      <origin xyz="0.18 -0.28 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.1 0.08" />
+        </geometry>
+      <material name="mast_paint">
+        <color rgba="0.12 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_1">
+      <origin xyz="0 0.28 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.06 2.25" />
+        </geometry>
+      <material name="mast_paint">
+        <color rgba="0.12 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="floor_shoe_1">
+      <origin xyz="0.18 0.28 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.1 0.08" />
+        </geometry>
+      <material name="mast_paint">
+        <color rgba="0.12 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="bottom_sill">
+      <origin xyz="-0.025 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.72 0.1" />
+        </geometry>
+      <material name="mast_paint">
+        <color rgba="0.12 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="top_header">
+      <origin xyz="-0.025 0 2.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.76 0.12" />
+        </geometry>
+      <material name="mast_paint">
+        <color rgba="0.12 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="rear_tie">
+      <origin xyz="-0.055 0 1.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.68 0.08" />
+        </geometry>
+      <material name="mast_paint">
+        <color rgba="0.12 0.15 0.17 1" />
+        </material>
+      </visual>
+    <collision name="guide_rail_0">
+      <origin xyz="0 -0.28 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.06 2.25" />
+        </geometry>
+      </collision>
+    <collision name="floor_shoe_0">
+      <origin xyz="0.18 -0.28 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.1 0.08" />
+        </geometry>
+      </collision>
+    <collision name="guide_rail_1">
+      <origin xyz="0 0.28 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.06 2.25" />
+        </geometry>
+      </collision>
+    <collision name="floor_shoe_1">
+      <origin xyz="0.18 0.28 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.1 0.08" />
+        </geometry>
+      </collision>
+    <collision name="bottom_sill">
+      <origin xyz="-0.025 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.72 0.1" />
+        </geometry>
+      </collision>
+    <collision name="top_header">
+      <origin xyz="-0.025 0 2.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.76 0.12" />
+        </geometry>
+      </collision>
+    <collision name="rear_tie">
+      <origin xyz="-0.055 0 1.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.68 0.08" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carriage">
+    <visual name="top_bar">
+      <origin xyz="0.14 0 0.64" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.82 0.08" />
+        </geometry>
+      <material name="carriage_paint">
+        <color rgba="0.95 0.63 0.08 1" />
+        </material>
+      </visual>
+    <visual name="bottom_bar">
+      <origin xyz="0.15 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.82 0.1" />
+        </geometry>
+      <material name="carriage_paint">
+        <color rgba="0.95 0.63 0.08 1" />
+        </material>
+      </visual>
+    <visual name="side_upright_0">
+      <origin xyz="0.14 -0.39 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.68" />
+        </geometry>
+      <material name="carriage_paint">
+        <color rgba="0.95 0.63 0.08 1" />
+        </material>
+      </visual>
+    <visual name="side_upright_1">
+      <origin xyz="0.14 0.39 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.68" />
+        </geometry>
+      <material name="carriage_paint">
+        <color rgba="0.95 0.63 0.08 1" />
+        </material>
+      </visual>
+    <visual name="middle_bar">
+      <origin xyz="0.165 0 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.68 0.06" />
+        </geometry>
+      <material name="carriage_paint">
+        <color rgba="0.95 0.63 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_shoe_0">
+      <origin xyz="0.095 -0.28 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.16 0.58" />
+        </geometry>
+      <material name="carriage_paint">
+        <color rgba="0.95 0.63 0.08 1" />
+        </material>
+      </visual>
+    <visual name="inner_cheek_0">
+      <origin xyz="0.04 -0.205 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.025 0.58" />
+        </geometry>
+      <material name="carriage_paint">
+        <color rgba="0.95 0.63 0.08 1" />
+        </material>
+      </visual>
+    <visual name="outer_cheek_0">
+      <origin xyz="0.04 -0.355 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.025 0.58" />
+        </geometry>
+      <material name="carriage_paint">
+        <color rgba="0.95 0.63 0.08 1" />
+        </material>
+      </visual>
+    <visual name="lower_roller_0">
+      <origin xyz="0.075 -0.28 0.18" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.052" />
+        </geometry>
+      <material name="roller_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="upper_roller_0">
+      <origin xyz="0.075 -0.28 0.52" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.052" />
+        </geometry>
+      <material name="roller_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="front_shoe_1">
+      <origin xyz="0.095 0.28 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.16 0.58" />
+        </geometry>
+      <material name="carriage_paint">
+        <color rgba="0.95 0.63 0.08 1" />
+        </material>
+      </visual>
+    <visual name="inner_cheek_1">
+      <origin xyz="0.04 0.205 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.025 0.58" />
+        </geometry>
+      <material name="carriage_paint">
+        <color rgba="0.95 0.63 0.08 1" />
+        </material>
+      </visual>
+    <visual name="outer_cheek_1">
+      <origin xyz="0.04 0.355 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.025 0.58" />
+        </geometry>
+      <material name="carriage_paint">
+        <color rgba="0.95 0.63 0.08 1" />
+        </material>
+      </visual>
+    <visual name="lower_roller_1">
+      <origin xyz="0.075 0.28 0.18" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.052" />
+        </geometry>
+      <material name="roller_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="upper_roller_1">
+      <origin xyz="0.075 0.28 0.52" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.052" />
+        </geometry>
+      <material name="roller_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="fork_shank_0">
+      <origin xyz="0.18 -0.21 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.1 0.42" />
+        </geometry>
+      <material name="fork_steel">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_tine_0">
+      <origin xyz="0.58 -0.21 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.09 0.07" />
+        </geometry>
+      <material name="fork_steel">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_tip_0">
+      <origin xyz="1.06 -0.21 -0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.07 0.045" />
+        </geometry>
+      <material name="fork_steel">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_hook_0">
+      <origin xyz="0.135 -0.21 0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.18 0.12" />
+        </geometry>
+      <material name="fork_steel">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_shank_1">
+      <origin xyz="0.18 0.21 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.1 0.42" />
+        </geometry>
+      <material name="fork_steel">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_tine_1">
+      <origin xyz="0.58 0.21 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.09 0.07" />
+        </geometry>
+      <material name="fork_steel">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_tip_1">
+      <origin xyz="1.06 0.21 -0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.07 0.045" />
+        </geometry>
+      <material name="fork_steel">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_hook_1">
+      <origin xyz="0.135 0.21 0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.18 0.12" />
+        </geometry>
+      <material name="fork_steel">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <collision name="top_bar">
+      <origin xyz="0.14 0 0.64" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.82 0.08" />
+        </geometry>
+      </collision>
+    <collision name="bottom_bar">
+      <origin xyz="0.15 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.82 0.1" />
+        </geometry>
+      </collision>
+    <collision name="side_upright_0">
+      <origin xyz="0.14 -0.39 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.68" />
+        </geometry>
+      </collision>
+    <collision name="side_upright_1">
+      <origin xyz="0.14 0.39 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.68" />
+        </geometry>
+      </collision>
+    <collision name="middle_bar">
+      <origin xyz="0.165 0 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.68 0.06" />
+        </geometry>
+      </collision>
+    <collision name="front_shoe_0">
+      <origin xyz="0.095 -0.28 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.16 0.58" />
+        </geometry>
+      </collision>
+    <collision name="inner_cheek_0">
+      <origin xyz="0.04 -0.205 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.025 0.58" />
+        </geometry>
+      </collision>
+    <collision name="outer_cheek_0">
+      <origin xyz="0.04 -0.355 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.025 0.58" />
+        </geometry>
+      </collision>
+    <collision name="lower_roller_0">
+      <origin xyz="0.075 -0.28 0.18" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="upper_roller_0">
+      <origin xyz="0.075 -0.28 0.52" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="front_shoe_1">
+      <origin xyz="0.095 0.28 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.16 0.58" />
+        </geometry>
+      </collision>
+    <collision name="inner_cheek_1">
+      <origin xyz="0.04 0.205 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.025 0.58" />
+        </geometry>
+      </collision>
+    <collision name="outer_cheek_1">
+      <origin xyz="0.04 0.355 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.025 0.58" />
+        </geometry>
+      </collision>
+    <collision name="lower_roller_1">
+      <origin xyz="0.075 0.28 0.18" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="upper_roller_1">
+      <origin xyz="0.075 0.28 0.52" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="fork_shank_0">
+      <origin xyz="0.18 -0.21 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.1 0.42" />
+        </geometry>
+      </collision>
+    <collision name="fork_tine_0">
+      <origin xyz="0.58 -0.21 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.09 0.07" />
+        </geometry>
+      </collision>
+    <collision name="fork_tip_0">
+      <origin xyz="1.06 -0.21 -0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.07 0.045" />
+        </geometry>
+      </collision>
+    <collision name="fork_hook_0">
+      <origin xyz="0.135 -0.21 0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.18 0.12" />
+        </geometry>
+      </collision>
+    <collision name="fork_shank_1">
+      <origin xyz="0.18 0.21 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.1 0.42" />
+        </geometry>
+      </collision>
+    <collision name="fork_tine_1">
+      <origin xyz="0.58 0.21 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.09 0.07" />
+        </geometry>
+      </collision>
+    <collision name="fork_tip_1">
+      <origin xyz="1.06 0.21 -0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.07 0.045" />
+        </geometry>
+      </collision>
+    <collision name="fork_hook_1">
+      <origin xyz="0.135 0.21 0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.18 0.12" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="mast_to_carriage" type="prismatic">
+    <origin xyz="0 0 0.34" rpy="0 0 0" />
+    <parent link="mast" />
+    <child link="carriage" />
+    <axis xyz="0 0 1" />
+    <limit effort="18000" velocity="0.45" lower="0" upper="1.05" />
+    </joint>
+  </robot>

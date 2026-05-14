@@ -1,0 +1,535 @@
+<robot name="stainless_retractable_bollard">
+  <link name="sleeve">
+    <visual name="pavement_opening">
+      <geometry>
+        <mesh filename="assets/meshes/pavement_with_opening.obj" />
+        </geometry>
+      <material name="pavement_concrete">
+        <color rgba="0.43 0.42 0.39 1" />
+        </material>
+      </visual>
+    <visual name="collar_ring">
+      <geometry>
+        <mesh filename="assets/meshes/annular_sleeve_collar.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_tube">
+      <geometry>
+        <mesh filename="assets/meshes/below_grade_sleeve_tube.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="flap_ledge_rear">
+      <origin xyz="0.165 -0.135 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.07 0.012" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="flap_ledge_front">
+      <origin xyz="0.165 0.135 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.07 0.012" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="flap_hinge_stand_rear">
+      <origin xyz="-0.29 -0.155 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.07 0.052" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="flap_hinge_knuckle_rear">
+      <origin xyz="-0.29 -0.155 0.066" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="flap_hinge_stand_front">
+      <origin xyz="-0.29 0.155 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.07 0.052" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="flap_hinge_knuckle_front">
+      <origin xyz="-0.29 0.155 0.066" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <collision name="pavement_opening">
+      <geometry>
+        <mesh filename="assets/meshes/pavement_with_opening.obj" />
+        </geometry>
+      </collision>
+    <collision name="collar_ring">
+      <geometry>
+        <mesh filename="assets/meshes/annular_sleeve_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_tube">
+      <geometry>
+        <mesh filename="assets/meshes/below_grade_sleeve_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="flap_ledge_rear">
+      <origin xyz="0.165 -0.135 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.07 0.012" />
+        </geometry>
+      </collision>
+    <collision name="flap_ledge_front">
+      <origin xyz="0.165 0.135 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.07 0.012" />
+        </geometry>
+      </collision>
+    <collision name="flap_hinge_stand_rear">
+      <origin xyz="-0.29 -0.155 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.07 0.052" />
+        </geometry>
+      </collision>
+    <collision name="flap_hinge_knuckle_rear">
+      <origin xyz="-0.29 -0.155 0.066" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="flap_hinge_stand_front">
+      <origin xyz="-0.29 0.155 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.07 0.052" />
+        </geometry>
+      </collision>
+    <collision name="flap_hinge_knuckle_front">
+      <origin xyz="-0.29 0.155 0.066" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="post">
+    <visual name="post_body">
+      <origin xyz="0 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="1.3" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="lower_guide_ring">
+      <origin xyz="0 0 -0.245" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.098" length="0.055" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="crown_cap">
+      <origin xyz="0 0 1.0325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.093" length="0.045" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="reflective_band_30">
+      <origin xyz="0 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.087" length="0.052" />
+        </geometry>
+      <material name="yellow_reflective_band">
+        <color rgba="1 0.82 0.12 1" />
+        </material>
+      </visual>
+    <visual name="reflective_band_68">
+      <origin xyz="0 0 0.68" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.087" length="0.052" />
+        </geometry>
+      <material name="yellow_reflective_band">
+        <color rgba="1 0.82 0.12 1" />
+        </material>
+      </visual>
+    <visual name="post_seam">
+      <origin xyz="0.087 0 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.006 0.86" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="light_base">
+      <origin xyz="0 0 1.065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.02" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="warning_light">
+      <origin xyz="0 0 1.1" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      <material name="amber_warning_lens">
+        <color rgba="1 0.56 0.05 0.75" />
+        </material>
+      </visual>
+    <visual name="light_hinge_stand_0">
+      <origin xyz="-0.077 -0.05 1.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.028 0.06" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="light_hinge_stand_1">
+      <origin xyz="-0.077 0.05 1.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.028 0.06" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="light_hinge_knuckle_0">
+      <origin xyz="-0.075 -0.05 1.103" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.026" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="light_hinge_knuckle_1">
+      <origin xyz="-0.075 0.05 1.103" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.026" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <collision name="post_body">
+      <origin xyz="0 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="1.3" />
+        </geometry>
+      </collision>
+    <collision name="lower_guide_ring">
+      <origin xyz="0 0 -0.245" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.098" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="crown_cap">
+      <origin xyz="0 0 1.0325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.093" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="reflective_band_30">
+      <origin xyz="0 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.087" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="reflective_band_68">
+      <origin xyz="0 0 0.68" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.087" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="post_seam">
+      <origin xyz="0.087 0 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.006 0.86" />
+        </geometry>
+      </collision>
+    <collision name="light_base">
+      <origin xyz="0 0 1.065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="warning_light">
+      <origin xyz="0 0 1.1" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.034" />
+        </geometry>
+      </collision>
+    <collision name="light_hinge_stand_0">
+      <origin xyz="-0.077 -0.05 1.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.028 0.06" />
+        </geometry>
+      </collision>
+    <collision name="light_hinge_stand_1">
+      <origin xyz="-0.077 0.05 1.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.028 0.06" />
+        </geometry>
+      </collision>
+    <collision name="light_hinge_knuckle_0">
+      <origin xyz="-0.075 -0.05 1.103" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="light_hinge_knuckle_1">
+      <origin xyz="-0.075 0.05 1.103" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="sleeve_flap">
+    <visual name="flap_hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.178" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="flap_hinge_leaf">
+      <origin xyz="0.04 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.21 0.014" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="flap_arm_rear">
+      <origin xyz="0.2625 -0.135 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.435 0.06 0.018" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="flap_bumper_rear">
+      <origin xyz="0.415 -0.135 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.05 0.006" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="flap_arm_front">
+      <origin xyz="0.2625 0.135 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.435 0.06 0.018" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="flap_bumper_front">
+      <origin xyz="0.415 0.135 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.05 0.006" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="flap_nose_bridge">
+      <origin xyz="0.445 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.33 0.018" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <collision name="flap_hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.178" />
+        </geometry>
+      </collision>
+    <collision name="flap_hinge_leaf">
+      <origin xyz="0.04 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.21 0.014" />
+        </geometry>
+      </collision>
+    <collision name="flap_arm_rear">
+      <origin xyz="0.2625 -0.135 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.435 0.06 0.018" />
+        </geometry>
+      </collision>
+    <collision name="flap_bumper_rear">
+      <origin xyz="0.415 -0.135 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.05 0.006" />
+        </geometry>
+      </collision>
+    <collision name="flap_arm_front">
+      <origin xyz="0.2625 0.135 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.435 0.06 0.018" />
+        </geometry>
+      </collision>
+    <collision name="flap_bumper_front">
+      <origin xyz="0.415 0.135 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.05 0.006" />
+        </geometry>
+      </collision>
+    <collision name="flap_nose_bridge">
+      <origin xyz="0.445 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.33 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="light_cover">
+    <visual name="cover_hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.074" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.085 0.09 1" />
+        </material>
+      </visual>
+    <visual name="cover_hinge_tab">
+      <origin xyz="0 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.04 0.086" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="cover_side_strut_0">
+      <origin xyz="0.05 -0.028 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.016 0.018" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="cover_side_strut_1">
+      <origin xyz="0.05 0.028 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.016 0.018" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="clear_light_lid">
+      <origin xyz="0.075 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.018" />
+        </geometry>
+      <material name="clear_smoke_cover">
+        <color rgba="0.62 0.78 0.95 0.38" />
+        </material>
+      </visual>
+    <visual name="amber_warning_window">
+      <origin xyz="0.075 0 0.056" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.004" />
+        </geometry>
+      <material name="amber_warning_lens">
+        <color rgba="1 0.56 0.05 0.75" />
+        </material>
+      </visual>
+    <collision name="cover_hinge_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.074" />
+        </geometry>
+      </collision>
+    <collision name="cover_hinge_tab">
+      <origin xyz="0 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.04 0.086" />
+        </geometry>
+      </collision>
+    <collision name="cover_side_strut_0">
+      <origin xyz="0.05 -0.028 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.016 0.018" />
+        </geometry>
+      </collision>
+    <collision name="cover_side_strut_1">
+      <origin xyz="0.05 0.028 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.016 0.018" />
+        </geometry>
+      </collision>
+    <collision name="clear_light_lid">
+      <origin xyz="0.075 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="amber_warning_window">
+      <origin xyz="0.075 0 0.056" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="sleeve_to_post" type="prismatic">
+    <origin xyz="0 0 0.045" rpy="0 0 0" />
+    <parent link="sleeve" />
+    <child link="post" />
+    <axis xyz="0 0 1" />
+    <limit effort="1200" velocity="0.35" lower="-0.5" upper="0" />
+    </joint>
+  <joint name="sleeve_to_flap" type="revolute">
+    <origin xyz="-0.29 0 0.066" rpy="0 0 0" />
+    <parent link="sleeve" />
+    <child link="sleeve_flap" />
+    <axis xyz="0 -1 0" />
+    <limit effort="12" velocity="2" lower="0" upper="1.75" />
+    </joint>
+  <joint name="post_to_light_cover" type="revolute">
+    <origin xyz="-0.075 0 1.103" rpy="0 0 0" />
+    <parent link="post" />
+    <child link="light_cover" />
+    <axis xyz="0 -1 0" />
+    <limit effort="1.5" velocity="3" lower="0" upper="1.3" />
+    </joint>
+  </robot>

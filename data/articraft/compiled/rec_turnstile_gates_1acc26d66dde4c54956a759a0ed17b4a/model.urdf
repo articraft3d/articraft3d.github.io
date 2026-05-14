@@ -1,0 +1,894 @@
+<robot name="cost_optimized_turnstile_gate">
+  <material name="galvanized_steel">
+    <color rgba="0.6 0.62 0.6 1" />
+    </material>
+  <material name="dark_bearing_core">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <material name="molded_black">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="safety_yellow_caps">
+    <color rgba="0.98 0.7 0.08 1" />
+    </material>
+  <material name="powder_coated_base">
+    <color rgba="0.26 0.28 0.3 1" />
+    </material>
+  <material name="zinc_bolts">
+    <color rgba="0.72 0.73 0.7 1" />
+    </material>
+  <link name="fixed_support">
+    <inertial>
+      <origin xyz="0 0 0.98" rpy="0 0 0" />
+      <mass value="55" />
+      <inertia ixx="23.2375" ixy="0" ixz="0" iyy="23.2375" iyz="0" izz="11.6188" />
+      </inertial>
+    <visual name="base_plate">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.26 1.26 0.08" />
+        </geometry>
+      <material name="powder_coated_base">
+        <color rgba="0.26 0.28 0.3 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_casting">
+      <origin xyz="0 0 0.21" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.23" length="0.3" />
+        </geometry>
+      <material name="powder_coated_base">
+        <color rgba="0.26 0.28 0.3 1" />
+        </material>
+      </visual>
+    <visual name="supported_spindle">
+      <origin xyz="0 0 1.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="1.9" />
+        </geometry>
+      <material name="dark_bearing_core">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_race">
+      <origin xyz="0 0 0.3475" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.065" />
+        </geometry>
+      <material name="dark_bearing_core">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing_race">
+      <origin xyz="0 0 1.79" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.185" length="0.09" />
+        </geometry>
+      <material name="dark_bearing_core">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="retaining_nut">
+      <origin xyz="0 0 1.885" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.085" />
+        </geometry>
+      <material name="zinc_bolts">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="lower_clamp_ear">
+      <origin xyz="0.205 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.04 0.075" />
+        </geometry>
+      <material name="powder_coated_base">
+        <color rgba="0.26 0.28 0.3 1" />
+        </material>
+      </visual>
+    <visual name="lower_clamp_bolt">
+      <origin xyz="0.255 0 0.325" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.06" />
+        </geometry>
+      <material name="zinc_bolts">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="upper_clamp_ear">
+      <origin xyz="0.205 0 1.79" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.04 0.075" />
+        </geometry>
+      <material name="powder_coated_base">
+        <color rgba="0.26 0.28 0.3 1" />
+        </material>
+      </visual>
+    <visual name="upper_clamp_bolt">
+      <origin xyz="0.255 0 1.79" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.06" />
+        </geometry>
+      <material name="zinc_bolts">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_0">
+      <origin xyz="0.46 0.46 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      <material name="zinc_bolts">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="anchor_slot_0">
+      <origin xyz="0.46 0.46 0.09" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.11 0.03 0.01" />
+        </geometry>
+      <material name="zinc_bolts">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_1">
+      <origin xyz="-0.46 0.46 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      <material name="zinc_bolts">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="anchor_slot_1">
+      <origin xyz="-0.46 0.46 0.09" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.11 0.03 0.01" />
+        </geometry>
+      <material name="zinc_bolts">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_2">
+      <origin xyz="-0.46 -0.46 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      <material name="zinc_bolts">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="anchor_slot_2">
+      <origin xyz="-0.46 -0.46 0.09" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.11 0.03 0.01" />
+        </geometry>
+      <material name="zinc_bolts">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="anchor_bolt_3">
+      <origin xyz="0.46 -0.46 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      <material name="zinc_bolts">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="anchor_slot_3">
+      <origin xyz="0.46 -0.46 0.09" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.11 0.03 0.01" />
+        </geometry>
+      <material name="zinc_bolts">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="1.26 1.26 0.08" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_casting">
+      <origin xyz="0 0 0.21" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.23" length="0.3" />
+        </geometry>
+      </collision>
+    <collision name="supported_spindle">
+      <origin xyz="0 0 1.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="1.9" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_race">
+      <origin xyz="0 0 0.3475" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.065" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing_race">
+      <origin xyz="0 0 1.79" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.185" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="retaining_nut">
+      <origin xyz="0 0 1.885" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.085" />
+        </geometry>
+      </collision>
+    <collision name="lower_clamp_ear">
+      <origin xyz="0.205 0 0.325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.04 0.075" />
+        </geometry>
+      </collision>
+    <collision name="lower_clamp_bolt">
+      <origin xyz="0.255 0 0.325" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="upper_clamp_ear">
+      <origin xyz="0.205 0 1.79" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.04 0.075" />
+        </geometry>
+      </collision>
+    <collision name="upper_clamp_bolt">
+      <origin xyz="0.255 0 1.79" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_0">
+      <origin xyz="0.46 0.46 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="anchor_slot_0">
+      <origin xyz="0.46 0.46 0.09" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.11 0.03 0.01" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_1">
+      <origin xyz="-0.46 0.46 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="anchor_slot_1">
+      <origin xyz="-0.46 0.46 0.09" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.11 0.03 0.01" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_2">
+      <origin xyz="-0.46 -0.46 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="anchor_slot_2">
+      <origin xyz="-0.46 -0.46 0.09" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.11 0.03 0.01" />
+        </geometry>
+      </collision>
+    <collision name="anchor_bolt_3">
+      <origin xyz="0.46 -0.46 0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="anchor_slot_3">
+      <origin xyz="0.46 -0.46 0.09" rpy="0 0 0.785398" />
+      <geometry>
+        <box size="0.11 0.03 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotor">
+    <inertial>
+      <mass value="24" />
+      <inertia ixx="10.845" ixy="0" ixz="0" iyy="10.845" iyz="0" izz="17.28" />
+      </inertial>
+    <visual name="hub_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/turnstile_hub_sleeve.obj" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_core">
+      <origin xyz="0 0 -0.6" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/turnstile_lower_bearing_core.obj" />
+        </geometry>
+      <material name="dark_bearing_core">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing_core">
+      <origin xyz="0 0 0.6" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/turnstile_upper_bearing_core.obj" />
+        </geometry>
+      <material name="dark_bearing_core">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="rail_0_low">
+      <origin xyz="0.6575 0 -0.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_0_low">
+      <origin xyz="0.218 0 -0.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rail_0_mid">
+      <origin xyz="0.6575 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_0_mid">
+      <origin xyz="0.218 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rail_0_high">
+      <origin xyz="0.6575 0 0.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_0_high">
+      <origin xyz="0.218 0 0.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="outer_post_0">
+      <origin xyz="1.18 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.935" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="top_snap_cap_0">
+      <origin xyz="1.18 0 0.49" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      <material name="safety_yellow_caps">
+        <color rgba="0.98 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="bottom_snap_cap_0">
+      <origin xyz="1.18 0 -0.49" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      <material name="safety_yellow_caps">
+        <color rgba="0.98 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rail_1_low">
+      <origin xyz="4.02603e-17 0.6575 -0.42" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_1_low">
+      <origin xyz="1.33487e-17 0.218 -0.42" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rail_1_mid">
+      <origin xyz="4.02603e-17 0.6575 0" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_1_mid">
+      <origin xyz="1.33487e-17 0.218 0" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rail_1_high">
+      <origin xyz="4.02603e-17 0.6575 0.42" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_1_high">
+      <origin xyz="1.33487e-17 0.218 0.42" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="outer_post_1">
+      <origin xyz="7.22542e-17 1.18 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.935" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="top_snap_cap_1">
+      <origin xyz="7.22542e-17 1.18 0.49" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      <material name="safety_yellow_caps">
+        <color rgba="0.98 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="bottom_snap_cap_1">
+      <origin xyz="7.22542e-17 1.18 -0.49" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      <material name="safety_yellow_caps">
+        <color rgba="0.98 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rail_2_low">
+      <origin xyz="-0.6575 8.05205e-17 -0.42" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_2_low">
+      <origin xyz="-0.218 2.66973e-17 -0.42" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rail_2_mid">
+      <origin xyz="-0.6575 8.05205e-17 0" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_2_mid">
+      <origin xyz="-0.218 2.66973e-17 0" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rail_2_high">
+      <origin xyz="-0.6575 8.05205e-17 0.42" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_2_high">
+      <origin xyz="-0.218 2.66973e-17 0.42" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="outer_post_2">
+      <origin xyz="-1.18 1.44508e-16 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.935" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="top_snap_cap_2">
+      <origin xyz="-1.18 1.44508e-16 0.49" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      <material name="safety_yellow_caps">
+        <color rgba="0.98 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="bottom_snap_cap_2">
+      <origin xyz="-1.18 1.44508e-16 -0.49" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      <material name="safety_yellow_caps">
+        <color rgba="0.98 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rail_3_low">
+      <origin xyz="-1.20781e-16 -0.6575 -0.42" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_3_low">
+      <origin xyz="-4.0046e-17 -0.218 -0.42" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rail_3_mid">
+      <origin xyz="-1.20781e-16 -0.6575 0" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_3_mid">
+      <origin xyz="-4.0046e-17 -0.218 0" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rail_3_high">
+      <origin xyz="-1.20781e-16 -0.6575 0.42" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_3_high">
+      <origin xyz="-4.0046e-17 -0.218 0.42" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="outer_post_3">
+      <origin xyz="-2.16762e-16 -1.18 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.935" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.6 0.62 0.6 1" />
+        </material>
+      </visual>
+    <visual name="top_snap_cap_3">
+      <origin xyz="-2.16762e-16 -1.18 0.49" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      <material name="safety_yellow_caps">
+        <color rgba="0.98 0.7 0.08 1" />
+        </material>
+      </visual>
+    <visual name="bottom_snap_cap_3">
+      <origin xyz="-2.16762e-16 -1.18 -0.49" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      <material name="safety_yellow_caps">
+        <color rgba="0.98 0.7 0.08 1" />
+        </material>
+      </visual>
+    <collision name="hub_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/turnstile_hub_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_core">
+      <origin xyz="0 0 -0.6" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/turnstile_lower_bearing_core.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing_core">
+      <origin xyz="0 0 0.6" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/turnstile_upper_bearing_core.obj" />
+        </geometry>
+      </collision>
+    <collision name="rail_0_low">
+      <origin xyz="0.6575 0 -0.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      </collision>
+    <collision name="socket_0_low">
+      <origin xyz="0.218 0 -0.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="rail_0_mid">
+      <origin xyz="0.6575 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      </collision>
+    <collision name="socket_0_mid">
+      <origin xyz="0.218 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="rail_0_high">
+      <origin xyz="0.6575 0 0.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      </collision>
+    <collision name="socket_0_high">
+      <origin xyz="0.218 0 0.42" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="outer_post_0">
+      <origin xyz="1.18 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.935" />
+        </geometry>
+      </collision>
+    <collision name="top_snap_cap_0">
+      <origin xyz="1.18 0 0.49" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="bottom_snap_cap_0">
+      <origin xyz="1.18 0 -0.49" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="rail_1_low">
+      <origin xyz="4.02603e-17 0.6575 -0.42" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      </collision>
+    <collision name="socket_1_low">
+      <origin xyz="1.33487e-17 0.218 -0.42" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="rail_1_mid">
+      <origin xyz="4.02603e-17 0.6575 0" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      </collision>
+    <collision name="socket_1_mid">
+      <origin xyz="1.33487e-17 0.218 0" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="rail_1_high">
+      <origin xyz="4.02603e-17 0.6575 0.42" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      </collision>
+    <collision name="socket_1_high">
+      <origin xyz="1.33487e-17 0.218 0.42" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="outer_post_1">
+      <origin xyz="7.22542e-17 1.18 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.935" />
+        </geometry>
+      </collision>
+    <collision name="top_snap_cap_1">
+      <origin xyz="7.22542e-17 1.18 0.49" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="bottom_snap_cap_1">
+      <origin xyz="7.22542e-17 1.18 -0.49" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="rail_2_low">
+      <origin xyz="-0.6575 8.05205e-17 -0.42" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      </collision>
+    <collision name="socket_2_low">
+      <origin xyz="-0.218 2.66973e-17 -0.42" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="rail_2_mid">
+      <origin xyz="-0.6575 8.05205e-17 0" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      </collision>
+    <collision name="socket_2_mid">
+      <origin xyz="-0.218 2.66973e-17 0" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="rail_2_high">
+      <origin xyz="-0.6575 8.05205e-17 0.42" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      </collision>
+    <collision name="socket_2_high">
+      <origin xyz="-0.218 2.66973e-17 0.42" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="outer_post_2">
+      <origin xyz="-1.18 1.44508e-16 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.935" />
+        </geometry>
+      </collision>
+    <collision name="top_snap_cap_2">
+      <origin xyz="-1.18 1.44508e-16 0.49" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="bottom_snap_cap_2">
+      <origin xyz="-1.18 1.44508e-16 -0.49" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="rail_3_low">
+      <origin xyz="-1.20781e-16 -0.6575 -0.42" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      </collision>
+    <collision name="socket_3_low">
+      <origin xyz="-4.0046e-17 -0.218 -0.42" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="rail_3_mid">
+      <origin xyz="-1.20781e-16 -0.6575 0" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      </collision>
+    <collision name="socket_3_mid">
+      <origin xyz="-4.0046e-17 -0.218 0" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="rail_3_high">
+      <origin xyz="-1.20781e-16 -0.6575 0.42" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.026" length="1.045" />
+        </geometry>
+      </collision>
+    <collision name="socket_3_high">
+      <origin xyz="-4.0046e-17 -0.218 0.42" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.044" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="outer_post_3">
+      <origin xyz="-2.16762e-16 -1.18 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.935" />
+        </geometry>
+      </collision>
+    <collision name="top_snap_cap_3">
+      <origin xyz="-2.16762e-16 -1.18 0.49" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="bottom_snap_cap_3">
+      <origin xyz="-2.16762e-16 -1.18 -0.49" rpy="0 1.5708 4.71239" />
+      <geometry>
+        <cylinder radius="0.04" length="0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="spindle_rotation" type="continuous">
+    <origin xyz="0 0 1.05" rpy="0 0 0" />
+    <parent link="fixed_support" />
+    <child link="rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="1.8" />
+    <dynamics damping="0.18" friction="0.04" />
+    </joint>
+  </robot>

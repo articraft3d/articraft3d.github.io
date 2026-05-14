@@ -1,0 +1,109 @@
+<robot name="overshot_waterwheel">
+  <material name="warm_oak">
+    <color rgba="0.55 0.32 0.14 1" />
+    </material>
+  <material name="dark_wet_wood">
+    <color rgba="0.32 0.19 0.1 1" />
+    </material>
+  <material name="dark_iron">
+    <color rgba="0.08 0.075 0.065 1" />
+    </material>
+  <material name="chute_water">
+    <color rgba="0.25 0.56 0.88 0.72" />
+    </material>
+  <link name="frame">
+    <visual name="frame_wood">
+      <geometry>
+        <mesh filename="assets/meshes/frame_wood.obj" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.32 0.14 1" />
+        </material>
+      </visual>
+    <visual name="bearing_rings">
+      <geometry>
+        <mesh filename="assets/meshes/bearing_rings.obj" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.08 0.075 0.065 1" />
+        </material>
+      </visual>
+    <visual name="chute_water">
+      <origin xyz="0 -0.58 2" rpy="-0.16 0 0" />
+      <geometry>
+        <box size="0.24 0.56 0.01" />
+        </geometry>
+      <material name="chute_water">
+        <color rgba="0.25 0.56 0.88 0.72" />
+        </material>
+      </visual>
+    <collision name="frame_wood">
+      <geometry>
+        <mesh filename="assets/meshes/frame_wood.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_rings">
+      <geometry>
+        <mesh filename="assets/meshes/bearing_rings.obj" />
+        </geometry>
+      </collision>
+    <collision name="chute_water">
+      <origin xyz="0 -0.58 2" rpy="-0.16 0 0" />
+      <geometry>
+        <box size="0.24 0.56 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wheel">
+    <visual name="wheel_body">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_body.obj" />
+        </geometry>
+      <material name="dark_wet_wood">
+        <color rgba="0.32 0.19 0.1 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.23" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.32 0.14 1" />
+        </material>
+      </visual>
+    <visual name="axle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.78" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.08 0.075 0.065 1" />
+        </material>
+      </visual>
+    <collision name="wheel_body">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.23" />
+        </geometry>
+      </collision>
+    <collision name="axle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.78" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="axle_rotation" type="continuous">
+    <origin xyz="0 0 1" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="80" velocity="2.5" />
+    </joint>
+  </robot>

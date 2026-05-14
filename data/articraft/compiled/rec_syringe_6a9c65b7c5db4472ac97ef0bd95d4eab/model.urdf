@@ -1,0 +1,145 @@
+<robot name="hand_syringe">
+  <material name="clear_plastic">
+    <color rgba="0.72 0.9 1 0.34" />
+    </material>
+  <material name="pale_tip">
+    <color rgba="0.86 0.94 0.98 0.72" />
+    </material>
+  <material name="black_ink">
+    <color rgba="0.03 0.04 0.05 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.02 0.02 0.025 1" />
+    </material>
+  <material name="plunger_plastic">
+    <color rgba="0.9 0.92 0.94 1" />
+    </material>
+  <link name="barrel">
+    <visual name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      <material name="clear_plastic">
+        <color rgba="0.72 0.9 1 0.34" />
+        </material>
+      </visual>
+    <visual name="nozzle_tip">
+      <geometry>
+        <mesh filename="assets/meshes/nozzle_tip.obj" />
+        </geometry>
+      <material name="pale_tip">
+        <color rgba="0.86 0.94 0.98 0.72" />
+        </material>
+      </visual>
+    <visual name="graduation_0">
+      <geometry>
+        <mesh filename="assets/meshes/graduation_0.obj" />
+        </geometry>
+      <material name="black_ink">
+        <color rgba="0.03 0.04 0.05 1" />
+        </material>
+      </visual>
+    <visual name="graduation_1">
+      <geometry>
+        <mesh filename="assets/meshes/graduation_1.obj" />
+        </geometry>
+      <material name="black_ink">
+        <color rgba="0.03 0.04 0.05 1" />
+        </material>
+      </visual>
+    <visual name="graduation_2">
+      <geometry>
+        <mesh filename="assets/meshes/graduation_2.obj" />
+        </geometry>
+      <material name="black_ink">
+        <color rgba="0.03 0.04 0.05 1" />
+        </material>
+      </visual>
+    <visual name="graduation_3">
+      <geometry>
+        <mesh filename="assets/meshes/graduation_3.obj" />
+        </geometry>
+      <material name="black_ink">
+        <color rgba="0.03 0.04 0.05 1" />
+        </material>
+      </visual>
+    <visual name="graduation_4">
+      <geometry>
+        <mesh filename="assets/meshes/graduation_4.obj" />
+        </geometry>
+      <material name="black_ink">
+        <color rgba="0.03 0.04 0.05 1" />
+        </material>
+      </visual>
+    <visual name="graduation_5">
+      <geometry>
+        <mesh filename="assets/meshes/graduation_5.obj" />
+        </geometry>
+      <material name="black_ink">
+        <color rgba="0.03 0.04 0.05 1" />
+        </material>
+      </visual>
+    <visual name="graduation_6">
+      <geometry>
+        <mesh filename="assets/meshes/graduation_6.obj" />
+        </geometry>
+      <material name="black_ink">
+        <color rgba="0.03 0.04 0.05 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="plunger">
+    <visual name="plunger_head">
+      <origin xyz="0.03 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01215" length="0.012" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.025 1" />
+        </material>
+      </visual>
+    <visual name="center_rod">
+      <origin xyz="-0.024 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.106" />
+        </geometry>
+      <material name="plunger_plastic">
+        <color rgba="0.9 0.92 0.94 1" />
+        </material>
+      </visual>
+    <visual name="flat_web">
+      <origin xyz="-0.024 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.106 0.007 0.0014" />
+        </geometry>
+      <material name="plunger_plastic">
+        <color rgba="0.9 0.92 0.94 1" />
+        </material>
+      </visual>
+    <visual name="upright_web">
+      <origin xyz="-0.024 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.106 0.0014 0.007" />
+        </geometry>
+      <material name="plunger_plastic">
+        <color rgba="0.9 0.92 0.94 1" />
+        </material>
+      </visual>
+    <visual name="thumb_pad">
+      <origin xyz="-0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="plunger_plastic">
+        <color rgba="0.9 0.92 0.94 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="barrel_to_plunger" type="prismatic">
+    <parent link="barrel" />
+    <child link="plunger" />
+    <axis xyz="-1 0 0" />
+    <limit effort="18" velocity="0.35" lower="0" upper="0.055" />
+    <dynamics damping="0.2" friction="0.03" />
+    </joint>
+  </robot>

@@ -1,0 +1,937 @@
+<robot name="industrial_ceiling_fan">
+  <material name="ceiling_white">
+    <color rgba="0.86 0.86 0.82 1" />
+    </material>
+  <material name="satin_steel">
+    <color rgba="0.64 0.68 0.7 1" />
+    </material>
+  <material name="brushed_blade_metal">
+    <color rgba="0.56 0.6 0.62 1" />
+    </material>
+  <material name="black_iron">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="charcoal_motor">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <link name="ceiling_mount">
+    <visual name="ceiling_plate">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.42 0.018" />
+        </geometry>
+      <material name="ceiling_white">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="bell_canopy">
+      <geometry>
+        <mesh filename="assets/meshes/bell_canopy.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="downrod">
+      <origin xyz="0 0 -0.465" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.71" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="upper_collar">
+      <origin xyz="0 0 -0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.055" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lower_collar">
+      <origin xyz="0 0 -0.79" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.062" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="hanger_bridge">
+      <origin xyz="0 0 -0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.3 0.026" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_0">
+      <origin xyz="0 -0.135 -0.865" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.12" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_1">
+      <origin xyz="0 0.135 -0.865" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.12" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <collision name="ceiling_plate">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.42 0.018" />
+        </geometry>
+      </collision>
+    <collision name="bell_canopy">
+      <geometry>
+        <mesh filename="assets/meshes/bell_canopy.obj" />
+        </geometry>
+      </collision>
+    <collision name="downrod">
+      <origin xyz="0 0 -0.465" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.71" />
+        </geometry>
+      </collision>
+    <collision name="upper_collar">
+      <origin xyz="0 0 -0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="lower_collar">
+      <origin xyz="0 0 -0.79" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.062" />
+        </geometry>
+      </collision>
+    <collision name="hanger_bridge">
+      <origin xyz="0 0 -0.795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.3 0.026" />
+        </geometry>
+      </collision>
+    <collision name="hanger_strap_0">
+      <origin xyz="0 -0.135 -0.865" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.12" />
+        </geometry>
+      </collision>
+    <collision name="hanger_strap_1">
+      <origin xyz="0 0.135 -0.865" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.12" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotor">
+    <inertial>
+      <mass value="8" />
+      <inertia ixx="0.117067" ixy="0" ixz="0" iyy="0.117067" iyz="0" izz="0.1296" />
+      </inertial>
+    <visual name="motor_drum">
+      <geometry>
+        <cylinder radius="0.162" length="0.205" />
+        </geometry>
+      <material name="charcoal_motor">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="top_flange">
+      <origin xyz="0 0 0.113" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.176" length="0.026" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bottom_flange">
+      <origin xyz="0 0 -0.113" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.176" length="0.026" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="neck">
+      <origin xyz="0 0 0.124" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.055" />
+        </geometry>
+      <material name="charcoal_motor">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="bearing_collar">
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.1" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bottom_hub">
+      <origin xyz="0 0 -0.155" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.07" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="blade_lug_0">
+      <origin xyz="0.1775 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.13 0.026" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="blade_lug_1">
+      <origin xyz="1.08687e-17 0.1775 -0.055" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.055 0.13 0.026" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="blade_lug_2">
+      <origin xyz="-0.1775 2.17375e-17 -0.055" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.055 0.13 0.026" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="blade_lug_3">
+      <origin xyz="-3.26062e-17 -0.1775 -0.055" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.055 0.13 0.026" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <collision name="motor_drum">
+      <geometry>
+        <cylinder radius="0.162" length="0.205" />
+        </geometry>
+      </collision>
+    <collision name="top_flange">
+      <origin xyz="0 0 0.113" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.176" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="bottom_flange">
+      <origin xyz="0 0 -0.113" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.176" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="neck">
+      <origin xyz="0 0 0.124" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="bearing_collar">
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="bottom_hub">
+      <origin xyz="0 0 -0.155" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="blade_lug_0">
+      <origin xyz="0.1775 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.13 0.026" />
+        </geometry>
+      </collision>
+    <collision name="blade_lug_1">
+      <origin xyz="1.08687e-17 0.1775 -0.055" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.055 0.13 0.026" />
+        </geometry>
+      </collision>
+    <collision name="blade_lug_2">
+      <origin xyz="-0.1775 2.17375e-17 -0.055" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.055 0.13 0.026" />
+        </geometry>
+      </collision>
+    <collision name="blade_lug_3">
+      <origin xyz="-3.26062e-17 -0.1775 -0.055" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.055 0.13 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_0">
+    <inertial>
+      <origin xyz="0.64 0 -0.055" rpy="0 0 0" />
+      <mass value="1.1" />
+      <inertia ixx="0.00238333" ixy="0" ixz="0" iyy="0.0475567" iyz="0" izz="0.0498667" />
+      </inertial>
+    <visual name="blade_panel">
+      <geometry>
+        <mesh filename="assets/meshes/blade_panel_0.obj" />
+        </geometry>
+      <material name="brushed_blade_metal">
+        <color rgba="0.56 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="hub_clamp">
+      <origin xyz="0.23 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.112 0.022" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bracket_arm_0">
+      <origin xyz="0.2875 0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bracket_arm_1">
+      <origin xyz="0.2875 -0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="blade_saddle">
+      <origin xyz="0.362 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.138 0.014" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="pressed_rib">
+      <origin xyz="0.635 0 -0.049" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.59 0.017 0.006" />
+        </geometry>
+      <material name="brushed_blade_metal">
+        <color rgba="0.56 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="bolt_0">
+      <origin xyz="0.335 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bolt_1">
+      <origin xyz="0.335 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bolt_2">
+      <origin xyz="0.39 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bolt_3">
+      <origin xyz="0.39 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <collision name="blade_panel">
+      <geometry>
+        <mesh filename="assets/meshes/blade_panel_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="hub_clamp">
+      <origin xyz="0.23 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.112 0.022" />
+        </geometry>
+      </collision>
+    <collision name="bracket_arm_0">
+      <origin xyz="0.2875 0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      </collision>
+    <collision name="bracket_arm_1">
+      <origin xyz="0.2875 -0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      </collision>
+    <collision name="blade_saddle">
+      <origin xyz="0.362 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.138 0.014" />
+        </geometry>
+      </collision>
+    <collision name="pressed_rib">
+      <origin xyz="0.635 0 -0.049" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.59 0.017 0.006" />
+        </geometry>
+      </collision>
+    <collision name="bolt_0">
+      <origin xyz="0.335 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_1">
+      <origin xyz="0.335 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_2">
+      <origin xyz="0.39 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_3">
+      <origin xyz="0.39 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_1">
+    <inertial>
+      <origin xyz="0.64 0 -0.055" rpy="0 0 0" />
+      <mass value="1.1" />
+      <inertia ixx="0.00238333" ixy="0" ixz="0" iyy="0.0475567" iyz="0" izz="0.0498667" />
+      </inertial>
+    <visual name="blade_panel">
+      <geometry>
+        <mesh filename="assets/meshes/blade_panel_1.obj" />
+        </geometry>
+      <material name="brushed_blade_metal">
+        <color rgba="0.56 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="hub_clamp">
+      <origin xyz="0.23 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.112 0.022" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bracket_arm_0">
+      <origin xyz="0.2875 0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bracket_arm_1">
+      <origin xyz="0.2875 -0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="blade_saddle">
+      <origin xyz="0.362 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.138 0.014" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="pressed_rib">
+      <origin xyz="0.635 0 -0.049" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.59 0.017 0.006" />
+        </geometry>
+      <material name="brushed_blade_metal">
+        <color rgba="0.56 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="bolt_0">
+      <origin xyz="0.335 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bolt_1">
+      <origin xyz="0.335 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bolt_2">
+      <origin xyz="0.39 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bolt_3">
+      <origin xyz="0.39 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <collision name="blade_panel">
+      <geometry>
+        <mesh filename="assets/meshes/blade_panel_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="hub_clamp">
+      <origin xyz="0.23 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.112 0.022" />
+        </geometry>
+      </collision>
+    <collision name="bracket_arm_0">
+      <origin xyz="0.2875 0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      </collision>
+    <collision name="bracket_arm_1">
+      <origin xyz="0.2875 -0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      </collision>
+    <collision name="blade_saddle">
+      <origin xyz="0.362 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.138 0.014" />
+        </geometry>
+      </collision>
+    <collision name="pressed_rib">
+      <origin xyz="0.635 0 -0.049" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.59 0.017 0.006" />
+        </geometry>
+      </collision>
+    <collision name="bolt_0">
+      <origin xyz="0.335 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_1">
+      <origin xyz="0.335 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_2">
+      <origin xyz="0.39 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_3">
+      <origin xyz="0.39 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_2">
+    <inertial>
+      <origin xyz="0.64 0 -0.055" rpy="0 0 0" />
+      <mass value="1.1" />
+      <inertia ixx="0.00238333" ixy="0" ixz="0" iyy="0.0475567" iyz="0" izz="0.0498667" />
+      </inertial>
+    <visual name="blade_panel">
+      <geometry>
+        <mesh filename="assets/meshes/blade_panel_2.obj" />
+        </geometry>
+      <material name="brushed_blade_metal">
+        <color rgba="0.56 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="hub_clamp">
+      <origin xyz="0.23 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.112 0.022" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bracket_arm_0">
+      <origin xyz="0.2875 0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bracket_arm_1">
+      <origin xyz="0.2875 -0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="blade_saddle">
+      <origin xyz="0.362 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.138 0.014" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="pressed_rib">
+      <origin xyz="0.635 0 -0.049" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.59 0.017 0.006" />
+        </geometry>
+      <material name="brushed_blade_metal">
+        <color rgba="0.56 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="bolt_0">
+      <origin xyz="0.335 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bolt_1">
+      <origin xyz="0.335 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bolt_2">
+      <origin xyz="0.39 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bolt_3">
+      <origin xyz="0.39 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <collision name="blade_panel">
+      <geometry>
+        <mesh filename="assets/meshes/blade_panel_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="hub_clamp">
+      <origin xyz="0.23 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.112 0.022" />
+        </geometry>
+      </collision>
+    <collision name="bracket_arm_0">
+      <origin xyz="0.2875 0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      </collision>
+    <collision name="bracket_arm_1">
+      <origin xyz="0.2875 -0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      </collision>
+    <collision name="blade_saddle">
+      <origin xyz="0.362 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.138 0.014" />
+        </geometry>
+      </collision>
+    <collision name="pressed_rib">
+      <origin xyz="0.635 0 -0.049" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.59 0.017 0.006" />
+        </geometry>
+      </collision>
+    <collision name="bolt_0">
+      <origin xyz="0.335 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_1">
+      <origin xyz="0.335 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_2">
+      <origin xyz="0.39 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_3">
+      <origin xyz="0.39 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blade_3">
+    <inertial>
+      <origin xyz="0.64 0 -0.055" rpy="0 0 0" />
+      <mass value="1.1" />
+      <inertia ixx="0.00238333" ixy="0" ixz="0" iyy="0.0475567" iyz="0" izz="0.0498667" />
+      </inertial>
+    <visual name="blade_panel">
+      <geometry>
+        <mesh filename="assets/meshes/blade_panel_3.obj" />
+        </geometry>
+      <material name="brushed_blade_metal">
+        <color rgba="0.56 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="hub_clamp">
+      <origin xyz="0.23 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.112 0.022" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bracket_arm_0">
+      <origin xyz="0.2875 0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bracket_arm_1">
+      <origin xyz="0.2875 -0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="blade_saddle">
+      <origin xyz="0.362 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.138 0.014" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="pressed_rib">
+      <origin xyz="0.635 0 -0.049" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.59 0.017 0.006" />
+        </geometry>
+      <material name="brushed_blade_metal">
+        <color rgba="0.56 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="bolt_0">
+      <origin xyz="0.335 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bolt_1">
+      <origin xyz="0.335 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bolt_2">
+      <origin xyz="0.39 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bolt_3">
+      <origin xyz="0.39 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.64 0.68 0.7 1" />
+        </material>
+      </visual>
+    <collision name="blade_panel">
+      <geometry>
+        <mesh filename="assets/meshes/blade_panel_3.obj" />
+        </geometry>
+      </collision>
+    <collision name="hub_clamp">
+      <origin xyz="0.23 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.112 0.022" />
+        </geometry>
+      </collision>
+    <collision name="bracket_arm_0">
+      <origin xyz="0.2875 0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      </collision>
+    <collision name="bracket_arm_1">
+      <origin xyz="0.2875 -0.042 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.165 0.018 0.02" />
+        </geometry>
+      </collision>
+    <collision name="blade_saddle">
+      <origin xyz="0.362 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.138 0.014" />
+        </geometry>
+      </collision>
+    <collision name="pressed_rib">
+      <origin xyz="0.635 0 -0.049" rpy="0.122173 0 0" />
+      <geometry>
+        <box size="0.59 0.017 0.006" />
+        </geometry>
+      </collision>
+    <collision name="bolt_0">
+      <origin xyz="0.335 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_1">
+      <origin xyz="0.335 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_2">
+      <origin xyz="0.39 -0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="bolt_3">
+      <origin xyz="0.39 0.048 -0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="axle" type="continuous">
+    <origin xyz="0 0 -1.05" rpy="0 0 0" />
+    <parent link="ceiling_mount" />
+    <child link="rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="30" velocity="20" />
+    </joint>
+  <joint name="rotor_to_blade_0" type="fixed">
+    <parent link="rotor" />
+    <child link="blade_0" />
+    </joint>
+  <joint name="rotor_to_blade_1" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 1.5708" />
+    <parent link="rotor" />
+    <child link="blade_1" />
+    </joint>
+  <joint name="rotor_to_blade_2" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 3.14159" />
+    <parent link="rotor" />
+    <child link="blade_2" />
+    </joint>
+  <joint name="rotor_to_blade_3" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 4.71239" />
+    <parent link="rotor" />
+    <child link="blade_3" />
+    </joint>
+  </robot>

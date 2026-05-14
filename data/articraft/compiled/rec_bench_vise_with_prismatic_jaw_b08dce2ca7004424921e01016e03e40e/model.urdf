@@ -1,0 +1,848 @@
+<robot name="compound_angle_vise">
+  <material name="cast_blue">
+    <color rgba="0.05 0.18 0.32 1" />
+    </material>
+  <material name="dark_cast">
+    <color rgba="0.035 0.04 0.045 1" />
+    </material>
+  <material name="machined_steel">
+    <color rgba="0.62 0.64 0.62 1" />
+    </material>
+  <material name="hardened_jaw">
+    <color rgba="0.8 0.78 0.7 1" />
+    </material>
+  <material name="blackened_steel">
+    <color rgba="0.015 0.014 0.012 1" />
+    </material>
+  <link name="base_plate">
+    <visual name="flat_base_plate">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.32 0.032" />
+        </geometry>
+      <material name="dark_cast" />
+      </visual>
+    <visual name="mount_slot_-0.19_-0.12">
+      <origin xyz="-0.19 -0.115 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.02 0.002" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="mount_slot_-0.19_+0.12">
+      <origin xyz="-0.19 0.115 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.02 0.002" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="mount_slot_+0.19_-0.12">
+      <origin xyz="0.19 -0.115 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.02 0.002" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="mount_slot_+0.19_+0.12">
+      <origin xyz="0.19 0.115 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.02 0.002" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="swivel_pivot_washer">
+      <origin xyz="0 0 0.0335" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.003" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <collision name="flat_base_plate">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.32 0.032" />
+        </geometry>
+      </collision>
+    <collision name="mount_slot_-0.19_-0.12">
+      <origin xyz="-0.19 -0.115 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.02 0.002" />
+        </geometry>
+      </collision>
+    <collision name="mount_slot_-0.19_+0.12">
+      <origin xyz="-0.19 0.115 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.02 0.002" />
+        </geometry>
+      </collision>
+    <collision name="mount_slot_+0.19_-0.12">
+      <origin xyz="0.19 -0.115 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.02 0.002" />
+        </geometry>
+      </collision>
+    <collision name="mount_slot_+0.19_+0.12">
+      <origin xyz="0.19 0.115 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.02 0.002" />
+        </geometry>
+      </collision>
+    <collision name="swivel_pivot_washer">
+      <origin xyz="0 0 0.0335" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="swivel_stage">
+    <visual name="swivel_disk">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.035" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="degree_ring">
+      <origin xyz="0 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/swivel_degree_ring.obj" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="central_boss">
+      <origin xyz="0 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.034" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="tilt_yoke_foot">
+      <origin xyz="0 0 0.0475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.205 0.025" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="yoke_cheek_0">
+      <origin xyz="0 -0.125 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.035 0.12" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="yoke_cheek_1">
+      <origin xyz="0 0.125 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.035 0.12" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <collision name="swivel_disk">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="degree_ring">
+      <origin xyz="0 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/swivel_degree_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="central_boss">
+      <origin xyz="0 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="tilt_yoke_foot">
+      <origin xyz="0 0 0.0475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.205 0.025" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_0">
+      <origin xyz="0 -0.125 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.035 0.12" />
+        </geometry>
+      </collision>
+    <collision name="yoke_cheek_1">
+      <origin xyz="0 0.125 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.035 0.12" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tilt_stage">
+    <visual name="trunnion_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.3" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="tilting_bed">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.18 0.04" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="trunnion_lug_0">
+      <origin xyz="0 -0.075 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.035 0.035" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="trunnion_lug_1">
+      <origin xyz="0 0.075 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.035 0.035" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="dovetail_way_0">
+      <origin xyz="-0.005 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dovetail_way_0.obj" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="dovetail_way_1">
+      <origin xyz="-0.005 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dovetail_way_1.obj" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="fixed_jaw_rib_0">
+      <origin xyz="0.145 -0.06 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.04 0.042" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="fixed_jaw_rib_1">
+      <origin xyz="0.145 0.06 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.04 0.042" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="fixed_jaw_block">
+      <origin xyz="0.145 0 0.1495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.18 0.095" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="fixed_jaw_plate">
+      <origin xyz="0.1005 0 0.148" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.155 0.07" />
+        </geometry>
+      <material name="hardened_jaw" />
+      </visual>
+    <visual name="fixed_jaw_serration_0">
+      <origin xyz="0.0953 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="fixed_jaw_serration_1">
+      <origin xyz="0.0953 0 0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="fixed_jaw_serration_2">
+      <origin xyz="0.0953 0 0.148" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="fixed_jaw_serration_3">
+      <origin xyz="0.0953 0 0.161" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="fixed_jaw_serration_4">
+      <origin xyz="0.0953 0 0.174" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="screw_bearing_base">
+      <origin xyz="-0.205 0 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.05 0.005" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="front_screw_bearing">
+      <origin xyz="-0.205 0 0.078" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_screw_bearing.obj" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <collision name="trunnion_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.3" />
+        </geometry>
+      </collision>
+    <collision name="tilting_bed">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.18 0.04" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_lug_0">
+      <origin xyz="0 -0.075 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.035 0.035" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_lug_1">
+      <origin xyz="0 0.075 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.035 0.035" />
+        </geometry>
+      </collision>
+    <collision name="dovetail_way_0">
+      <origin xyz="-0.005 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dovetail_way_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="dovetail_way_1">
+      <origin xyz="-0.005 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dovetail_way_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="fixed_jaw_rib_0">
+      <origin xyz="0.145 -0.06 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.04 0.042" />
+        </geometry>
+      </collision>
+    <collision name="fixed_jaw_rib_1">
+      <origin xyz="0.145 0.06 0.083" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.04 0.042" />
+        </geometry>
+      </collision>
+    <collision name="fixed_jaw_block">
+      <origin xyz="0.145 0 0.1495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.18 0.095" />
+        </geometry>
+      </collision>
+    <collision name="fixed_jaw_plate">
+      <origin xyz="0.1005 0 0.148" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.155 0.07" />
+        </geometry>
+      </collision>
+    <collision name="fixed_jaw_serration_0">
+      <origin xyz="0.0953 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      </collision>
+    <collision name="fixed_jaw_serration_1">
+      <origin xyz="0.0953 0 0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      </collision>
+    <collision name="fixed_jaw_serration_2">
+      <origin xyz="0.0953 0 0.148" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      </collision>
+    <collision name="fixed_jaw_serration_3">
+      <origin xyz="0.0953 0 0.161" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      </collision>
+    <collision name="fixed_jaw_serration_4">
+      <origin xyz="0.0953 0 0.174" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      </collision>
+    <collision name="screw_bearing_base">
+      <origin xyz="-0.205 0 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.05 0.005" />
+        </geometry>
+      </collision>
+    <collision name="front_screw_bearing">
+      <origin xyz="-0.205 0 0.078" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_screw_bearing.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="moving_jaw">
+    <visual name="slide_shoe_0">
+      <origin xyz="-0.04 -0.052 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.035 0.018" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="slide_shoe_1">
+      <origin xyz="-0.04 0.052 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.035 0.018" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="jaw_saddle">
+      <origin xyz="-0.04 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.13 0.006" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="moving_jaw_block">
+      <origin xyz="-0.035 0 0.1485" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.18 0.095" />
+        </geometry>
+      <material name="cast_blue" />
+      </visual>
+    <visual name="moving_jaw_plate">
+      <origin xyz="0.007 0 0.148" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.155 0.07" />
+        </geometry>
+      <material name="hardened_jaw" />
+      </visual>
+    <visual name="moving_jaw_serration_0">
+      <origin xyz="0.0122 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="moving_jaw_serration_1">
+      <origin xyz="0.0122 0 0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="moving_jaw_serration_2">
+      <origin xyz="0.0122 0 0.148" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="moving_jaw_serration_3">
+      <origin xyz="0.0122 0 0.161" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="moving_jaw_serration_4">
+      <origin xyz="0.0122 0 0.174" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <collision name="slide_shoe_0">
+      <origin xyz="-0.04 -0.052 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.035 0.018" />
+        </geometry>
+      </collision>
+    <collision name="slide_shoe_1">
+      <origin xyz="-0.04 0.052 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.035 0.018" />
+        </geometry>
+      </collision>
+    <collision name="jaw_saddle">
+      <origin xyz="-0.04 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.13 0.006" />
+        </geometry>
+      </collision>
+    <collision name="moving_jaw_block">
+      <origin xyz="-0.035 0 0.1485" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.18 0.095" />
+        </geometry>
+      </collision>
+    <collision name="moving_jaw_plate">
+      <origin xyz="0.007 0 0.148" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.155 0.07" />
+        </geometry>
+      </collision>
+    <collision name="moving_jaw_serration_0">
+      <origin xyz="0.0122 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      </collision>
+    <collision name="moving_jaw_serration_1">
+      <origin xyz="0.0122 0 0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      </collision>
+    <collision name="moving_jaw_serration_2">
+      <origin xyz="0.0122 0 0.148" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      </collision>
+    <collision name="moving_jaw_serration_3">
+      <origin xyz="0.0122 0 0.161" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      </collision>
+    <collision name="moving_jaw_serration_4">
+      <origin xyz="0.0122 0 0.174" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0015 0.142 0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="leadscrew">
+    <visual name="screw_shaft">
+      <origin xyz="-0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.39" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="bearing_journal">
+      <origin xyz="-0.205 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.012" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="thread_crest_0">
+      <origin xyz="-0.165 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="thread_crest_1">
+      <origin xyz="-0.14 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="thread_crest_2">
+      <origin xyz="-0.115 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="thread_crest_3">
+      <origin xyz="-0.09 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="thread_crest_4">
+      <origin xyz="-0.065 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="thread_crest_5">
+      <origin xyz="-0.04 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="thread_crest_6">
+      <origin xyz="-0.015 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="thread_crest_7">
+      <origin xyz="0.01 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="thread_crest_8">
+      <origin xyz="0.035 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="thread_crest_9">
+      <origin xyz="0.06 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="thread_crest_10">
+      <origin xyz="0.085 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="thread_crest_11">
+      <origin xyz="0.11 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="handwheel_hub">
+      <origin xyz="-0.265 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.024" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="handle_stem">
+      <origin xyz="-0.27 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.07" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="handwheel_rim">
+      <origin xyz="-0.265 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/handwheel_rim.obj" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="handwheel_spoke_y">
+      <origin xyz="-0.265 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.072" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="handwheel_spoke_z">
+      <origin xyz="-0.265 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.072" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="tee_handle_bar">
+      <origin xyz="-0.286 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.11" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="tee_handle_knob_0">
+      <origin xyz="-0.286 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <visual name="tee_handle_knob_1">
+      <origin xyz="-0.286 0.055 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      <material name="blackened_steel" />
+      </visual>
+    <collision name="screw_shaft">
+      <origin xyz="-0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.39" />
+        </geometry>
+      </collision>
+    <collision name="bearing_journal">
+      <origin xyz="-0.205 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="thread_crest_0">
+      <origin xyz="-0.165 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="thread_crest_1">
+      <origin xyz="-0.14 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="thread_crest_2">
+      <origin xyz="-0.115 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="thread_crest_3">
+      <origin xyz="-0.09 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="thread_crest_4">
+      <origin xyz="-0.065 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="thread_crest_5">
+      <origin xyz="-0.04 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="thread_crest_6">
+      <origin xyz="-0.015 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="thread_crest_7">
+      <origin xyz="0.01 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="thread_crest_8">
+      <origin xyz="0.035 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="thread_crest_9">
+      <origin xyz="0.06 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="thread_crest_10">
+      <origin xyz="0.085 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="thread_crest_11">
+      <origin xyz="0.11 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="handwheel_hub">
+      <origin xyz="-0.265 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="handle_stem">
+      <origin xyz="-0.27 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="handwheel_rim">
+      <origin xyz="-0.265 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/handwheel_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="handwheel_spoke_y">
+      <origin xyz="-0.265 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.072" />
+        </geometry>
+      </collision>
+    <collision name="handwheel_spoke_z">
+      <origin xyz="-0.265 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.072" />
+        </geometry>
+      </collision>
+    <collision name="tee_handle_bar">
+      <origin xyz="-0.286 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.11" />
+        </geometry>
+      </collision>
+    <collision name="tee_handle_knob_0">
+      <origin xyz="-0.286 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      </collision>
+    <collision name="tee_handle_knob_1">
+      <origin xyz="-0.286 0.055 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_swivel" type="revolute">
+    <origin xyz="0 0 0.032" rpy="0 0 0" />
+    <parent link="base_plate" />
+    <child link="swivel_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="1.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="swivel_to_tilt" type="revolute">
+    <origin xyz="0 0 0.125" rpy="0 0 0" />
+    <parent link="swivel_stage" />
+    <child link="tilt_stage" />
+    <axis xyz="0 1 0" />
+    <limit effort="100" velocity="0.8" lower="-0.65" upper="0.65" />
+    </joint>
+  <joint name="tilt_to_moving_jaw" type="prismatic">
+    <origin xyz="0.045 0 0" rpy="0 0 0" />
+    <parent link="tilt_stage" />
+    <child link="moving_jaw" />
+    <axis xyz="-1 0 0" />
+    <limit effort="250" velocity="0.08" lower="0" upper="0.12" />
+    </joint>
+  <joint name="tilt_to_leadscrew" type="continuous">
+    <origin xyz="0 0 0.078" rpy="0 0 0" />
+    <parent link="tilt_stage" />
+    <child link="leadscrew" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="8" />
+    </joint>
+  </robot>

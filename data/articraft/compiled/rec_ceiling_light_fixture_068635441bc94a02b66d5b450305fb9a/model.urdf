@@ -1,0 +1,370 @@
+<robot name="retractable_pull_down_pendant_light">
+  <material name="brushed_brass">
+    <color rgba="0.86 0.63 0.3 1" />
+    </material>
+  <material name="shadowed_brass">
+    <color rgba="0.42 0.3 0.14 1" />
+    </material>
+  <material name="black_braided_cord">
+    <color rgba="0.015 0.013 0.012 1" />
+    </material>
+  <material name="warm_linen_shade">
+    <color rgba="0.92 0.82 0.63 0.82" />
+    </material>
+  <material name="warm_frosted_glass">
+    <color rgba="1 0.93 0.72 0.62" />
+    </material>
+  <material name="matte_white_ceiling">
+    <color rgba="0.93 0.92 0.88 1" />
+    </material>
+  <material name="dark_lock_button">
+    <color rgba="0.05 0.045 0.04 1" />
+    </material>
+  <link name="canopy">
+    <visual name="ceiling_plate">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.012" />
+        </geometry>
+      <material name="matte_white_ceiling">
+        <color rgba="0.93 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="canopy_cup">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.132" length="0.074" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.3 1" />
+        </material>
+      </visual>
+    <visual name="rolled_lip">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/canopy_rolled_lip.obj" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.3 1" />
+        </material>
+      </visual>
+    <visual name="cord_outlet">
+      <origin xyz="0 0 -0.062" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cord_outlet_ring.obj" />
+        </geometry>
+      <material name="shadowed_brass">
+        <color rgba="0.42 0.3 0.14 1" />
+        </material>
+      </visual>
+    <visual name="lock_pocket">
+      <origin xyz="0.126 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.032 0.026" />
+        </geometry>
+      <material name="shadowed_brass">
+        <color rgba="0.42 0.3 0.14 1" />
+        </material>
+      </visual>
+    <visual name="ratchet_slot">
+      <origin xyz="0.101 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.04 0.018" />
+        </geometry>
+      <material name="black_braided_cord">
+        <color rgba="0.015 0.013 0.012 1" />
+        </material>
+      </visual>
+    <collision name="ceiling_plate">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="canopy_cup">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.132" length="0.074" />
+        </geometry>
+      </collision>
+    <collision name="rolled_lip">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/canopy_rolled_lip.obj" />
+        </geometry>
+      </collision>
+    <collision name="cord_outlet">
+      <origin xyz="0 0 -0.062" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cord_outlet_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="lock_pocket">
+      <origin xyz="0.126 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.032 0.026" />
+        </geometry>
+      </collision>
+    <collision name="ratchet_slot">
+      <origin xyz="0.101 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.04 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lock_button">
+    <visual name="button_plunger">
+      <origin xyz="0.02 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.04" />
+        </geometry>
+      <material name="dark_lock_button">
+        <color rgba="0.05 0.045 0.04 1" />
+        </material>
+      </visual>
+    <collision name="button_plunger">
+      <origin xyz="0.02 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cord">
+    <visual name="moving_cord">
+      <origin xyz="0 0 -0.31" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.67" />
+        </geometry>
+      <material name="black_braided_cord">
+        <color rgba="0.015 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="cord_stop">
+      <origin xyz="0 0 -0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.012" />
+        </geometry>
+      <material name="black_braided_cord">
+        <color rgba="0.015 0.013 0.012 1" />
+        </material>
+      </visual>
+    <visual name="swivel_cap">
+      <origin xyz="0 0 -0.635" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.044" />
+        </geometry>
+      <material name="shadowed_brass">
+        <color rgba="0.42 0.3 0.14 1" />
+        </material>
+      </visual>
+    <collision name="moving_cord">
+      <origin xyz="0 0 -0.31" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.67" />
+        </geometry>
+      </collision>
+    <collision name="cord_stop">
+      <origin xyz="0 0 -0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="swivel_cap">
+      <origin xyz="0 0 -0.635" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.044" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shade">
+    <visual name="swivel_cup">
+      <origin xyz="0 0 -0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.032" />
+        </geometry>
+      <material name="shadowed_brass">
+        <color rgba="0.42 0.3 0.14 1" />
+        </material>
+      </visual>
+    <visual name="center_stem">
+      <origin xyz="0 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.06" />
+        </geometry>
+      <material name="shadowed_brass">
+        <color rgba="0.42 0.3 0.14 1" />
+        </material>
+      </visual>
+    <visual name="lamp_socket">
+      <origin xyz="0 0 -0.123" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.074" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.3 1" />
+        </material>
+      </visual>
+    <visual name="globe_bulb">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.056" />
+        </geometry>
+      <material name="warm_frosted_glass">
+        <color rgba="1 0.93 0.72 0.62" />
+        </material>
+      </visual>
+    <visual name="drum_shell">
+      <origin xyz="0 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/linen_drum_shade.obj" />
+        </geometry>
+      <material name="warm_linen_shade">
+        <color rgba="0.92 0.82 0.63 0.82" />
+        </material>
+      </visual>
+    <visual name="top_ring">
+      <origin xyz="0 0 -0.074" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_shade_ring.obj" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.3 1" />
+        </material>
+      </visual>
+    <visual name="bottom_ring">
+      <origin xyz="0 0 -0.37" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bottom_shade_ring.obj" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.3 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0">
+      <origin xyz="0.079 0 -0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.158 0.008 0.006" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.3 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1">
+      <origin xyz="4.83735e-18 0.079 -0.074" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.158 0.008 0.006" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.3 1" />
+        </material>
+      </visual>
+    <visual name="spoke_2">
+      <origin xyz="-0.079 9.67471e-18 -0.074" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.158 0.008 0.006" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.3 1" />
+        </material>
+      </visual>
+    <visual name="spoke_3">
+      <origin xyz="-1.45121e-17 -0.079 -0.074" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.158 0.008 0.006" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.3 1" />
+        </material>
+      </visual>
+    <collision name="swivel_cup">
+      <origin xyz="0 0 -0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="center_stem">
+      <origin xyz="0 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="lamp_socket">
+      <origin xyz="0 0 -0.123" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.074" />
+        </geometry>
+      </collision>
+    <collision name="globe_bulb">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.056" />
+        </geometry>
+      </collision>
+    <collision name="drum_shell">
+      <origin xyz="0 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/linen_drum_shade.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_ring">
+      <origin xyz="0 0 -0.074" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_shade_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="bottom_ring">
+      <origin xyz="0 0 -0.37" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bottom_shade_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="spoke_0">
+      <origin xyz="0.079 0 -0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.158 0.008 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_1">
+      <origin xyz="4.83735e-18 0.079 -0.074" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.158 0.008 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_2">
+      <origin xyz="-0.079 9.67471e-18 -0.074" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.158 0.008 0.006" />
+        </geometry>
+      </collision>
+    <collision name="spoke_3">
+      <origin xyz="-1.45121e-17 -0.079 -0.074" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.158 0.008 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="canopy_to_lock_button" type="prismatic">
+    <origin xyz="0.158 0 -0.02" rpy="0 0 0" />
+    <parent link="canopy" />
+    <child link="lock_button" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="0.05" lower="0" upper="0.012" />
+    <dynamics damping="0.2" friction="0.8" />
+    </joint>
+  <joint name="canopy_to_cord" type="prismatic">
+    <origin xyz="0 0 -0.062" rpy="0 0 0" />
+    <parent link="canopy" />
+    <child link="cord" />
+    <axis xyz="0 0 -1" />
+    <limit effort="45" velocity="0.22" lower="-0.55" upper="0" />
+    <dynamics damping="0.6" friction="6" />
+    </joint>
+  <joint name="cord_to_shade" type="continuous">
+    <origin xyz="0 0 -0.657" rpy="0 0 0" />
+    <parent link="cord" />
+    <child link="shade" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="5" />
+    <dynamics damping="0.02" friction="0.01" />
+    </joint>
+  </robot>

@@ -1,0 +1,748 @@
+<robot name="countertop_juicer">
+  <material name="warm_white_plastic">
+    <color rgba="0.86 0.84 0.78 1" />
+    </material>
+  <material name="dark_graphite">
+    <color rgba="0.06 0.065 0.07 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="brushed_stainless">
+    <color rgba="0.68 0.7 0.69 1" />
+    </material>
+  <material name="clear_smoked_polycarbonate">
+    <color rgba="0.62 0.82 0.95 0.34" />
+    </material>
+  <material name="amber_pusher_plastic">
+    <color rgba="0.96 0.76 0.28 0.72" />
+    </material>
+  <material name="red_push_button">
+    <color rgba="0.82 0.04 0.025 1" />
+    </material>
+  <link name="body">
+    <visual name="tapered_body">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_body.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.175" length="0.026" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="motor_coupling">
+      <origin xyz="0 0 0.274" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.065" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="juice_spout">
+      <origin xyz="0 -0.158 0.225" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="rear_web">
+      <origin xyz="0 0.14 0.239" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.08 0.034" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_stand">
+      <origin xyz="0 0.182 0.283" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.04 0.095" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_pin">
+      <origin xyz="0 0.151 0.318" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.17" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="arm_pivot_boss">
+      <origin xyz="0.15 0 0.205" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.05" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="button_socket">
+      <origin xyz="0.145 0 0.145" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.03" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <collision name="tapered_body">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.175" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="motor_coupling">
+      <origin xyz="0 0 0.274" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.065" />
+        </geometry>
+      </collision>
+    <collision name="juice_spout">
+      <origin xyz="0 -0.158 0.225" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="rear_web">
+      <origin xyz="0 0.14 0.239" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.08 0.034" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_stand">
+      <origin xyz="0 0.182 0.283" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.04 0.095" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_pin">
+      <origin xyz="0 0.151 0.318" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.17" />
+        </geometry>
+      </collision>
+    <collision name="arm_pivot_boss">
+      <origin xyz="0.15 0 0.205" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="button_socket">
+      <origin xyz="0.145 0 0.145" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="basket">
+    <visual name="filter_basket">
+      <geometry>
+        <mesh filename="assets/meshes/filter_basket.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="basket_hub">
+      <origin xyz="0 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.034" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_0">
+      <origin xyz="0.089 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_1">
+      <origin xyz="0.084644 0.0275025 0.012" rpy="0 0 0.314159" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_2">
+      <origin xyz="0.0720025 0.0523129 0.012" rpy="0 0 0.628319" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_3">
+      <origin xyz="0.0523129 0.0720025 0.012" rpy="0 0 0.942478" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_4">
+      <origin xyz="0.0275025 0.084644 0.012" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_5">
+      <origin xyz="5.44968e-18 0.089 0.012" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_6">
+      <origin xyz="-0.0275025 0.084644 0.012" rpy="0 0 1.88496" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_7">
+      <origin xyz="-0.0523129 0.0720025 0.012" rpy="0 0 2.19911" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_8">
+      <origin xyz="-0.0720025 0.0523129 0.012" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_9">
+      <origin xyz="-0.084644 0.0275025 0.012" rpy="0 0 2.82743" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_10">
+      <origin xyz="-0.089 1.08994e-17 0.012" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_11">
+      <origin xyz="-0.084644 -0.0275025 0.012" rpy="0 0 3.45575" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_12">
+      <origin xyz="-0.0720025 -0.0523129 0.012" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_13">
+      <origin xyz="-0.0523129 -0.0720025 0.012" rpy="0 0 4.08407" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_14">
+      <origin xyz="-0.0275025 -0.084644 0.012" rpy="0 0 4.39823" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_15">
+      <origin xyz="-1.6349e-17 -0.089 0.012" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_16">
+      <origin xyz="0.0275025 -0.084644 0.012" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_17">
+      <origin xyz="0.0523129 -0.0720025 0.012" rpy="0 0 5.34071" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_18">
+      <origin xyz="0.0720025 -0.0523129 0.012" rpy="0 0 5.65487" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="perforation_19">
+      <origin xyz="0.084644 -0.0275025 0.012" rpy="0 0 5.96903" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <collision name="filter_basket">
+      <geometry>
+        <mesh filename="assets/meshes/filter_basket.obj" />
+        </geometry>
+      </collision>
+    <collision name="basket_hub">
+      <origin xyz="0 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="perforation_0">
+      <origin xyz="0.089 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_1">
+      <origin xyz="0.084644 0.0275025 0.012" rpy="0 0 0.314159" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_2">
+      <origin xyz="0.0720025 0.0523129 0.012" rpy="0 0 0.628319" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_3">
+      <origin xyz="0.0523129 0.0720025 0.012" rpy="0 0 0.942478" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_4">
+      <origin xyz="0.0275025 0.084644 0.012" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_5">
+      <origin xyz="5.44968e-18 0.089 0.012" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_6">
+      <origin xyz="-0.0275025 0.084644 0.012" rpy="0 0 1.88496" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_7">
+      <origin xyz="-0.0523129 0.0720025 0.012" rpy="0 0 2.19911" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_8">
+      <origin xyz="-0.0720025 0.0523129 0.012" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_9">
+      <origin xyz="-0.084644 0.0275025 0.012" rpy="0 0 2.82743" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_10">
+      <origin xyz="-0.089 1.08994e-17 0.012" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_11">
+      <origin xyz="-0.084644 -0.0275025 0.012" rpy="0 0 3.45575" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_12">
+      <origin xyz="-0.0720025 -0.0523129 0.012" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_13">
+      <origin xyz="-0.0523129 -0.0720025 0.012" rpy="0 0 4.08407" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_14">
+      <origin xyz="-0.0275025 -0.084644 0.012" rpy="0 0 4.39823" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_15">
+      <origin xyz="-1.6349e-17 -0.089 0.012" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_16">
+      <origin xyz="0.0275025 -0.084644 0.012" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_17">
+      <origin xyz="0.0523129 -0.0720025 0.012" rpy="0 0 5.34071" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_18">
+      <origin xyz="0.0720025 -0.0523129 0.012" rpy="0 0 5.65487" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    <collision name="perforation_19">
+      <origin xyz="0.084644 -0.0275025 0.012" rpy="0 0 5.96903" />
+      <geometry>
+        <box size="0.0035 0.01 0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="clear_chamber">
+      <geometry>
+        <mesh filename="assets/meshes/clear_chamber.obj" />
+        </geometry>
+      <material name="clear_smoked_polycarbonate">
+        <color rgba="0.62 0.82 0.95 0.34" />
+        </material>
+      </visual>
+    <visual name="feed_chute_tube">
+      <geometry>
+        <mesh filename="assets/meshes/feed_chute_tube.obj" />
+        </geometry>
+      <material name="clear_smoked_polycarbonate">
+        <color rgba="0.62 0.82 0.95 0.34" />
+        </material>
+      </visual>
+    <visual name="chute_collar">
+      <geometry>
+        <mesh filename="assets/meshes/chute_collar.obj" />
+        </geometry>
+      <material name="clear_smoked_polycarbonate">
+        <color rgba="0.62 0.82 0.95 0.34" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf">
+      <origin xyz="0 0.02 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.085 0.014" />
+        </geometry>
+      <material name="clear_smoked_polycarbonate">
+        <color rgba="0.62 0.82 0.95 0.34" />
+        </material>
+      </visual>
+    <visual name="lid_bridge">
+      <origin xyz="0 0.02 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.045 0.054" />
+        </geometry>
+      <material name="clear_smoked_polycarbonate">
+        <color rgba="0.62 0.82 0.95 0.34" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.125" />
+        </geometry>
+      <material name="clear_smoked_polycarbonate">
+        <color rgba="0.62 0.82 0.95 0.34" />
+        </material>
+      </visual>
+    <collision name="clear_chamber">
+      <geometry>
+        <mesh filename="assets/meshes/clear_chamber.obj" />
+        </geometry>
+      </collision>
+    <collision name="feed_chute_tube">
+      <geometry>
+        <mesh filename="assets/meshes/feed_chute_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="chute_collar">
+      <geometry>
+        <mesh filename="assets/meshes/chute_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="hinge_leaf">
+      <origin xyz="0 0.02 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.085 0.014" />
+        </geometry>
+      </collision>
+    <collision name="lid_bridge">
+      <origin xyz="0 0.02 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.045 0.054" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.125" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pusher">
+    <visual name="pusher_shaft">
+      <origin xyz="0 0 -0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.25" />
+        </geometry>
+      <material name="amber_pusher_plastic">
+        <color rgba="0.96 0.76 0.28 0.72" />
+        </material>
+      </visual>
+    <visual name="pusher_neck">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.024" />
+        </geometry>
+      <material name="amber_pusher_plastic">
+        <color rgba="0.96 0.76 0.28 0.72" />
+        </material>
+      </visual>
+    <visual name="pusher_cap">
+      <origin xyz="0 0 0.02075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.028" />
+        </geometry>
+      <material name="amber_pusher_plastic">
+        <color rgba="0.96 0.76 0.28 0.72" />
+        </material>
+      </visual>
+    <visual name="pusher_tip">
+      <origin xyz="0 0 -0.265" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.03" />
+        </geometry>
+      <material name="amber_pusher_plastic">
+        <color rgba="0.96 0.76 0.28 0.72" />
+        </material>
+      </visual>
+    <collision name="pusher_shaft">
+      <origin xyz="0 0 -0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="pusher_neck">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="pusher_cap">
+      <origin xyz="0 0 0.02075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="pusher_tip">
+      <origin xyz="0 0 -0.265" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="locking_arm">
+    <visual name="locking_arm_tube">
+      <geometry>
+        <mesh filename="assets/meshes/locking_arm_tube.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="arm_pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.064" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.68 0.7 0.69 1" />
+        </material>
+      </visual>
+    <visual name="latch_pad">
+      <origin xyz="-0.03 0 0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.016" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <collision name="locking_arm_tube">
+      <geometry>
+        <mesh filename="assets/meshes/locking_arm_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="arm_pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.064" />
+        </geometry>
+      </collision>
+    <collision name="latch_pad">
+      <origin xyz="-0.03 0 0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.016" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button">
+    <visual name="button_cap">
+      <origin xyz="0.013 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.026" />
+        </geometry>
+      <material name="red_push_button">
+        <color rgba="0.82 0.04 0.025 1" />
+        </material>
+      </visual>
+    <visual name="button_stem">
+      <origin xyz="-0.006 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.02" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0.013 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="button_stem">
+      <origin xyz="-0.006 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_basket" type="continuous">
+    <origin xyz="0 0 0.305" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="basket" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="120" />
+    </joint>
+  <joint name="body_to_lid" type="revolute">
+    <origin xyz="0 0.151 0.318" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="6" velocity="2" lower="0" upper="1.18" />
+    </joint>
+  <joint name="lid_to_pusher" type="prismatic">
+    <origin xyz="0 -0.145 0.287" rpy="0 0 0" />
+    <parent link="lid" />
+    <child link="pusher" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="0.35" lower="0" upper="0.16" />
+    </joint>
+  <joint name="body_to_locking_arm" type="revolute">
+    <origin xyz="0.17 0 0.205" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="locking_arm" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="2.5" lower="0" upper="0.95" />
+    </joint>
+  <joint name="body_to_button" type="prismatic">
+    <origin xyz="0.159 0 0.145" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button" />
+    <axis xyz="-1 0 0" />
+    <limit effort="2" velocity="0.08" lower="0" upper="0.012" />
+    </joint>
+  </robot>

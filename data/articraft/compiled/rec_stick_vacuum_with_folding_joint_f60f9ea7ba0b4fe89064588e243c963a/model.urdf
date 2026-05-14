@@ -1,0 +1,426 @@
+<robot name="compact_folding_stick_vacuum">
+  <link name="motor_body">
+    <visual name="motor_pod">
+      <origin xyz="-0.14 0 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.22" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="rear_motor_cap">
+      <origin xyz="-0.235 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.057" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.22 0.23 0.24 1" />
+        </material>
+      </visual>
+    <visual name="dust_cup">
+      <origin xyz="-0.12 0 -0.047" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.1" />
+        </geometry>
+      <material name="smoky_clear_bin">
+        <color rgba="0.42 0.66 0.78 0.45" />
+        </material>
+      </visual>
+    <visual name="filter_ring">
+      <origin xyz="-0.12 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.018" />
+        </geometry>
+      <material name="blue_filter_ring">
+        <color rgba="0.02 0.18 0.65 1" />
+        </material>
+      </visual>
+    <visual name="handle_grip">
+      <origin xyz="-0.145 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.026 0.026" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="rear_handle_post">
+      <origin xyz="-0.235 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.026 0.12" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="front_handle_post">
+      <origin xyz="-0.055 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.026 0.12" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="fold_hinge_boss">
+      <origin xyz="-0.045 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.09 0.045" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="fold_lug_0">
+      <origin xyz="0 0.036 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.024" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.22 0.23 0.24 1" />
+        </material>
+      </visual>
+    <visual name="fold_lug_1">
+      <origin xyz="0 -0.036 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.024" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.22 0.23 0.24 1" />
+        </material>
+      </visual>
+    <visual name="release_tab">
+      <origin xyz="-0.07 -0.019 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.012 0.016" />
+        </geometry>
+      <material name="red_release_tabs">
+        <color rgba="0.85 0.08 0.045 1" />
+        </material>
+      </visual>
+    <collision name="motor_pod">
+      <origin xyz="-0.14 0 0.02" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="rear_motor_cap">
+      <origin xyz="-0.235 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.057" />
+        </geometry>
+      </collision>
+    <collision name="dust_cup">
+      <origin xyz="-0.12 0 -0.047" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="filter_ring">
+      <origin xyz="-0.12 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="handle_grip">
+      <origin xyz="-0.145 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.026 0.026" />
+        </geometry>
+      </collision>
+    <collision name="rear_handle_post">
+      <origin xyz="-0.235 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.026 0.12" />
+        </geometry>
+      </collision>
+    <collision name="front_handle_post">
+      <origin xyz="-0.055 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.026 0.12" />
+        </geometry>
+      </collision>
+    <collision name="fold_hinge_boss">
+      <origin xyz="-0.045 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.09 0.045" />
+        </geometry>
+      </collision>
+    <collision name="fold_lug_0">
+      <origin xyz="0 0.036 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="fold_lug_1">
+      <origin xyz="0 -0.036 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="release_tab">
+      <origin xyz="-0.07 -0.019 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.012 0.016" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wand">
+    <visual name="fold_knuckle">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.048" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.22 0.23 0.24 1" />
+        </material>
+      </visual>
+    <visual name="straight_tube">
+      <origin xyz="0.2 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.365" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.68 0.72 0.73 1" />
+        </material>
+      </visual>
+    <visual name="fold_collar">
+      <origin xyz="0.055 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.046 0.042" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.22 0.23 0.24 1" />
+        </material>
+      </visual>
+    <visual name="head_yoke_bridge">
+      <origin xyz="0.343 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.1 0.032" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.22 0.23 0.24 1" />
+        </material>
+      </visual>
+    <visual name="head_yoke_0">
+      <origin xyz="0.372 0.045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.02 0.03" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.22 0.23 0.24 1" />
+        </material>
+      </visual>
+    <visual name="head_hinge_lug_0">
+      <origin xyz="0.405 0.039 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.022" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.22 0.23 0.24 1" />
+        </material>
+      </visual>
+    <visual name="head_yoke_1">
+      <origin xyz="0.372 -0.045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.02 0.03" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.22 0.23 0.24 1" />
+        </material>
+      </visual>
+    <visual name="head_hinge_lug_1">
+      <origin xyz="0.405 -0.039 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.022" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.22 0.23 0.24 1" />
+        </material>
+      </visual>
+    <collision name="fold_knuckle">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.048" />
+        </geometry>
+      </collision>
+    <collision name="straight_tube">
+      <origin xyz="0.2 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.365" />
+        </geometry>
+      </collision>
+    <collision name="fold_collar">
+      <origin xyz="0.055 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.046 0.042" />
+        </geometry>
+      </collision>
+    <collision name="head_yoke_bridge">
+      <origin xyz="0.343 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.1 0.032" />
+        </geometry>
+      </collision>
+    <collision name="head_yoke_0">
+      <origin xyz="0.372 0.045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.02 0.03" />
+        </geometry>
+      </collision>
+    <collision name="head_hinge_lug_0">
+      <origin xyz="0.405 0.039 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.022" />
+        </geometry>
+      </collision>
+    <collision name="head_yoke_1">
+      <origin xyz="0.372 -0.045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.02 0.03" />
+        </geometry>
+      </collision>
+    <collision name="head_hinge_lug_1">
+      <origin xyz="0.405 -0.039 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="floor_head">
+    <visual name="head_knuckle">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.056" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="swivel_neck">
+      <origin xyz="0.022 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.042 0.108" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="nozzle_shell">
+      <origin xyz="0.088 0 -0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.17 0.045" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="side_bumper_0">
+      <origin xyz="0.108 0.085 -0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.02 0.018" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.015 0.015 0.016 1" />
+        </material>
+      </visual>
+    <visual name="side_bumper_1">
+      <origin xyz="0.108 -0.085 -0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.02 0.018" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.015 0.015 0.016 1" />
+        </material>
+      </visual>
+    <visual name="brush_roll">
+      <origin xyz="0.12 0 -0.146" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.15" />
+        </geometry>
+      <material name="blue_filter_ring">
+        <color rgba="0.02 0.18 0.65 1" />
+        </material>
+      </visual>
+    <visual name="rear_wheel_0">
+      <origin xyz="0.006 0.084 -0.13" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.02" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.015 0.015 0.016 1" />
+        </material>
+      </visual>
+    <visual name="rear_wheel_1">
+      <origin xyz="0.006 -0.084 -0.13" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.02" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.015 0.015 0.016 1" />
+        </material>
+      </visual>
+    <collision name="head_knuckle">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.056" />
+        </geometry>
+      </collision>
+    <collision name="swivel_neck">
+      <origin xyz="0.022 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.042 0.108" />
+        </geometry>
+      </collision>
+    <collision name="nozzle_shell">
+      <origin xyz="0.088 0 -0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.17 0.045" />
+        </geometry>
+      </collision>
+    <collision name="side_bumper_0">
+      <origin xyz="0.108 0.085 -0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.02 0.018" />
+        </geometry>
+      </collision>
+    <collision name="side_bumper_1">
+      <origin xyz="0.108 -0.085 -0.122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.02 0.018" />
+        </geometry>
+      </collision>
+    <collision name="brush_roll">
+      <origin xyz="0.12 0 -0.146" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.15" />
+        </geometry>
+      </collision>
+    <collision name="rear_wheel_0">
+      <origin xyz="0.006 0.084 -0.13" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="rear_wheel_1">
+      <origin xyz="0.006 -0.084 -0.13" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="fold_joint" type="revolute">
+    <parent link="motor_body" />
+    <child link="wand" />
+    <axis xyz="0 -1 0" />
+    <limit effort="8" velocity="2" lower="0" upper="2.05" />
+    </joint>
+  <joint name="head_pitch" type="revolute">
+    <origin xyz="0.405 0 0" rpy="0 0 0" />
+    <parent link="wand" />
+    <child link="floor_head" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="2.5" lower="-0.55" upper="0.55" />
+    </joint>
+  </robot>

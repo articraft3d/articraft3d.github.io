@@ -1,0 +1,398 @@
+<robot name="telescoping_security_post">
+  <material name="galvanized_steel">
+    <color rgba="0.58 0.6 0.58 1" />
+    </material>
+  <material name="dark_burnished_steel">
+    <color rgba="0.1 0.11 0.11 1" />
+    </material>
+  <material name="yellow_powder_coat">
+    <color rgba="1 0.73 0.05 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.01 0.01 1" />
+    </material>
+  <material name="white_reflector">
+    <color rgba="0.92 0.92 0.82 1" />
+    </material>
+  <material name="amber_lens">
+    <color rgba="1 0.55 0.02 0.7" />
+    </material>
+  <material name="smoked_clear_cover">
+    <color rgba="0.42 0.48 0.45 0.38" />
+    </material>
+  <material name="dark_concrete">
+    <color rgba="0.23 0.23 0.22 1" />
+    </material>
+  <link name="sleeve">
+    <visual name="flush_pavement_plate">
+      <origin xyz="0 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pavement_plate_hole.obj" />
+        </geometry>
+      <material name="dark_concrete">
+        <color rgba="0.23 0.23 0.22 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_tube">
+      <origin xyz="0 0 -0.7" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/recessed_sleeve_tube.obj" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="collar_ring">
+      <geometry>
+        <mesh filename="assets/meshes/raised_sleeve_collar.obj" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="collar_lip">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/collar_lip_ring.obj" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="guide_pad_0">
+      <origin xyz="0.1025 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.04 0.115" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="guide_pad_1">
+      <origin xyz="-0.1025 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.04 0.115" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="guide_pad_2">
+      <origin xyz="0 0.1025 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.115" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="guide_pad_3">
+      <origin xyz="0 -0.1025 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.115" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <collision name="flush_pavement_plate">
+      <origin xyz="0 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pavement_plate_hole.obj" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_tube">
+      <origin xyz="0 0 -0.7" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/recessed_sleeve_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="collar_ring">
+      <geometry>
+        <mesh filename="assets/meshes/raised_sleeve_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="collar_lip">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/collar_lip_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_pad_0">
+      <origin xyz="0.1025 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.04 0.115" />
+        </geometry>
+      </collision>
+    <collision name="guide_pad_1">
+      <origin xyz="-0.1025 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.04 0.115" />
+        </geometry>
+      </collision>
+    <collision name="guide_pad_2">
+      <origin xyz="0 0.1025 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.115" />
+        </geometry>
+      </collision>
+    <collision name="guide_pad_3">
+      <origin xyz="0 -0.1025 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.115" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bollard">
+    <visual name="upper_cylinder">
+      <origin xyz="0 0 0.33" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="1.5" />
+        </geometry>
+      <material name="yellow_powder_coat">
+        <color rgba="1 0.73 0.05 1" />
+        </material>
+      </visual>
+    <visual name="lower_grip_band">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.098" length="0.06" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="reflective_band">
+      <origin xyz="0 0 0.65" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.098" length="0.048" />
+        </geometry>
+      <material name="white_reflector">
+        <color rgba="0.92 0.92 0.82 1" />
+        </material>
+      </visual>
+    <visual name="crown_cap">
+      <origin xyz="0 0 1.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.103" length="0.05" />
+        </geometry>
+      <material name="yellow_powder_coat">
+        <color rgba="1 0.73 0.05 1" />
+        </material>
+      </visual>
+    <visual name="warning_lamp">
+      <origin xyz="0 0 1.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.02" />
+        </geometry>
+      <material name="amber_lens">
+        <color rgba="1 0.55 0.02 0.7" />
+        </material>
+      </visual>
+    <visual name="service_boss">
+      <origin xyz="0.099 0 0.92" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.075 0.075" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="hinge_saddle">
+      <origin xyz="0.064 0 1.139" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.1 0.022" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="hinge_yoke_0">
+      <origin xyz="0.078 -0.044 1.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.012 0.034" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="hinge_yoke_1">
+      <origin xyz="0.078 0.044 1.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.012 0.034" />
+        </geometry>
+      <material name="dark_burnished_steel">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <collision name="upper_cylinder">
+      <origin xyz="0 0 0.33" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="1.5" />
+        </geometry>
+      </collision>
+    <collision name="lower_grip_band">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.098" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="reflective_band">
+      <origin xyz="0 0 0.65" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.098" length="0.048" />
+        </geometry>
+      </collision>
+    <collision name="crown_cap">
+      <origin xyz="0 0 1.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.103" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="warning_lamp">
+      <origin xyz="0 0 1.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="service_boss">
+      <origin xyz="0.099 0 0.92" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.075 0.075" />
+        </geometry>
+      </collision>
+    <collision name="hinge_saddle">
+      <origin xyz="0.064 0 1.139" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.1 0.022" />
+        </geometry>
+      </collision>
+    <collision name="hinge_yoke_0">
+      <origin xyz="0.078 -0.044 1.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.012 0.034" />
+        </geometry>
+      </collision>
+    <collision name="hinge_yoke_1">
+      <origin xyz="0.078 0.044 1.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.012 0.034" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="service_cap">
+    <visual name="cap_disk">
+      <origin xyz="0.007 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.014" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="key_slot">
+      <origin xyz="0.0152 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.008 0.026" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <collision name="cap_disk">
+      <origin xyz="0.007 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="key_slot">
+      <origin xyz="0.0152 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.008 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="light_cover">
+    <visual name="cover_hinge_knuckle">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.104" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="cover_leaf">
+      <origin xyz="-0.02 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.006" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="cover_bridge">
+      <origin xyz="-0.034 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.046 0.03" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.58 0.6 0.58 1" />
+        </material>
+      </visual>
+    <visual name="cover_lens">
+      <origin xyz="-0.064 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.024" />
+        </geometry>
+      <material name="smoked_clear_cover">
+        <color rgba="0.42 0.48 0.45 0.38" />
+        </material>
+      </visual>
+    <collision name="cover_hinge_knuckle">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.104" />
+        </geometry>
+      </collision>
+    <collision name="cover_leaf">
+      <origin xyz="-0.02 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.006" />
+        </geometry>
+      </collision>
+    <collision name="cover_bridge">
+      <origin xyz="-0.034 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.046 0.03" />
+        </geometry>
+      </collision>
+    <collision name="cover_lens">
+      <origin xyz="-0.064 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="sleeve_to_bollard" type="prismatic">
+    <origin xyz="0 0 0.105" rpy="0 0 0" />
+    <parent link="sleeve" />
+    <child link="bollard" />
+    <axis xyz="0 0 1" />
+    <limit effort="600" velocity="0.2" lower="0" upper="0.28" />
+    </joint>
+  <joint name="bollard_to_service_cap" type="continuous">
+    <origin xyz="0.105 0 0.92" rpy="0 0 0" />
+    <parent link="bollard" />
+    <child link="service_cap" />
+    <axis xyz="1 0 0" />
+    <limit effort="3" velocity="8" />
+    </joint>
+  <joint name="bollard_to_light_cover" type="revolute">
+    <origin xyz="0.078 0 1.165" rpy="0 0 0" />
+    <parent link="bollard" />
+    <child link="light_cover" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="4" lower="0" upper="1.35" />
+    </joint>
+  </robot>

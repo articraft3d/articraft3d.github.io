@@ -1,0 +1,736 @@
+<robot name="desk_post_monitor_arm">
+  <material name="dark_powder_coat">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="satin_hardware">
+    <color rgba="0.55 0.56 0.54 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="black_plastic">
+    <color rgba="0.02 0.022 0.026 1" />
+    </material>
+  <link name="clamp_post">
+    <visual name="upright_post">
+      <origin xyz="0 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.66" />
+        </geometry>
+      <material name="satin_hardware">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="desk_top_jaw">
+      <origin xyz="-0.035 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.11 0.018" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="clamp_spine">
+      <origin xyz="-0.12 0 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.11 0.13" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lower_jaw">
+      <origin xyz="-0.048 0 -0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.1 0.018" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="clamp_screw">
+      <origin xyz="0.015 0 -0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.082" />
+        </geometry>
+      <material name="satin_hardware">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="pressure_pad">
+      <origin xyz="0.015 0 -0.171" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.008" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="desk_pad">
+      <origin xyz="0.01 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.09 0.006" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <collision name="upright_post">
+      <origin xyz="0 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.66" />
+        </geometry>
+      </collision>
+    <collision name="desk_top_jaw">
+      <origin xyz="-0.035 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.11 0.018" />
+        </geometry>
+      </collision>
+    <collision name="clamp_spine">
+      <origin xyz="-0.12 0 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.11 0.13" />
+        </geometry>
+      </collision>
+    <collision name="lower_jaw">
+      <origin xyz="-0.048 0 -0.084" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.1 0.018" />
+        </geometry>
+      </collision>
+    <collision name="clamp_screw">
+      <origin xyz="0.015 0 -0.126" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.082" />
+        </geometry>
+      </collision>
+    <collision name="pressure_pad">
+      <origin xyz="0.015 0 -0.171" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="desk_pad">
+      <origin xyz="0.01 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.09 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="primary_link">
+    <visual name="collar_side_0">
+      <origin xyz="0.036 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.086 0.07" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="collar_side_1">
+      <origin xyz="-0.036 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.086 0.07" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="collar_face_0">
+      <origin xyz="0 0.036 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.016 0.07" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="collar_face_1">
+      <origin xyz="0 -0.036 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.016 0.07" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="collar_bushing">
+      <geometry>
+        <cylinder radius="0.03" length="0.068" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="collar_lock_stem">
+      <origin xyz="0 -0.064 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.052" />
+        </geometry>
+      <material name="satin_hardware">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="collar_lock_cap">
+      <origin xyz="0 -0.097 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.014" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.022 0.026 1" />
+        </material>
+      </visual>
+    <visual name="primary_rail_0">
+      <origin xyz="0.22 0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.018 0.05" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="primary_rail_1">
+      <origin xyz="0.22 -0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.018 0.05" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="elbow_pin">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.07" />
+        </geometry>
+      <material name="satin_hardware">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="elbow_top_cap">
+      <origin xyz="0.42 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.012" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="elbow_cap_bridge">
+      <origin xyz="0.405 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.102 0.01" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <collision name="collar_side_0">
+      <origin xyz="0.036 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.086 0.07" />
+        </geometry>
+      </collision>
+    <collision name="collar_side_1">
+      <origin xyz="-0.036 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.086 0.07" />
+        </geometry>
+      </collision>
+    <collision name="collar_face_0">
+      <origin xyz="0 0.036 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.016 0.07" />
+        </geometry>
+      </collision>
+    <collision name="collar_face_1">
+      <origin xyz="0 -0.036 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.016 0.07" />
+        </geometry>
+      </collision>
+    <collision name="collar_bushing">
+      <geometry>
+        <cylinder radius="0.03" length="0.068" />
+        </geometry>
+      </collision>
+    <collision name="collar_lock_stem">
+      <origin xyz="0 -0.064 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="collar_lock_cap">
+      <origin xyz="0 -0.097 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="primary_rail_0">
+      <origin xyz="0.22 0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.018 0.05" />
+        </geometry>
+      </collision>
+    <collision name="primary_rail_1">
+      <origin xyz="0.22 -0.042 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.018 0.05" />
+        </geometry>
+      </collision>
+    <collision name="elbow_pin">
+      <origin xyz="0.42 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="elbow_top_cap">
+      <origin xyz="0.42 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="elbow_cap_bridge">
+      <origin xyz="0.405 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.102 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="secondary_link">
+    <visual name="elbow_bearing">
+      <geometry>
+        <cylinder radius="0.026" length="0.038" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="secondary_rail_0">
+      <origin xyz="0.13 0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.02 0.04" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="secondary_rail_1">
+      <origin xyz="0.13 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.02 0.04" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="swivel_pin">
+      <origin xyz="0.265 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.06" />
+        </geometry>
+      <material name="satin_hardware">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="swivel_top_cap">
+      <origin xyz="0.265 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.01" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="swivel_cap_bridge">
+      <origin xyz="0.25 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.088 0.01" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <collision name="elbow_bearing">
+      <geometry>
+        <cylinder radius="0.026" length="0.038" />
+        </geometry>
+      </collision>
+    <collision name="secondary_rail_0">
+      <origin xyz="0.13 0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.02 0.04" />
+        </geometry>
+      </collision>
+    <collision name="secondary_rail_1">
+      <origin xyz="0.13 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.02 0.04" />
+        </geometry>
+      </collision>
+    <collision name="swivel_pin">
+      <origin xyz="0.265 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="swivel_top_cap">
+      <origin xyz="0.265 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="swivel_cap_bridge">
+      <origin xyz="0.25 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.088 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="head_swivel">
+    <visual name="swivel_bearing">
+      <geometry>
+        <cylinder radius="0.024" length="0.035" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="tilt_neck">
+      <origin xyz="0.032 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.02" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="tilt_fork_0">
+      <origin xyz="0.06 0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.012 0.055" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="tilt_fork_1">
+      <origin xyz="0.06 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.012 0.055" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="tilt_pin">
+      <origin xyz="0.07 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.085" />
+        </geometry>
+      <material name="satin_hardware">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <collision name="swivel_bearing">
+      <geometry>
+        <cylinder radius="0.024" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="tilt_neck">
+      <origin xyz="0.032 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.05 0.02" />
+        </geometry>
+      </collision>
+    <collision name="tilt_fork_0">
+      <origin xyz="0.06 0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.012 0.055" />
+        </geometry>
+      </collision>
+    <collision name="tilt_fork_1">
+      <origin xyz="0.06 -0.026 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.012 0.055" />
+        </geometry>
+      </collision>
+    <collision name="tilt_pin">
+      <origin xyz="0.07 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.085" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="vesa_head">
+    <visual name="tilt_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.026" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="head_backbone">
+      <origin xyz="0.038 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.03 0.024" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="vesa_top_bar">
+      <origin xyz="0.055 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.145 0.012" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="vesa_bottom_bar">
+      <origin xyz="0.055 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.145 0.012" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="vesa_side_0">
+      <origin xyz="0.055 0.072 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.012 0.104" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="vesa_side_1">
+      <origin xyz="0.055 -0.072 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.012 0.104" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="vesa_cross_bar">
+      <origin xyz="0.055 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.132 0.01" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="vesa_vertical_bar">
+      <origin xyz="0.055 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.012 0.104" />
+        </geometry>
+      <material name="dark_powder_coat">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="vesa_boss_0_0">
+      <origin xyz="0.05 -0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01" />
+        </geometry>
+      <material name="satin_hardware">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="vesa_hole_0_0">
+      <origin xyz="0.044 -0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.011" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.022 0.026 1" />
+        </material>
+      </visual>
+    <visual name="vesa_boss_0_1">
+      <origin xyz="0.05 -0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01" />
+        </geometry>
+      <material name="satin_hardware">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="vesa_hole_0_1">
+      <origin xyz="0.044 -0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.011" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.022 0.026 1" />
+        </material>
+      </visual>
+    <visual name="vesa_boss_1_0">
+      <origin xyz="0.05 0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01" />
+        </geometry>
+      <material name="satin_hardware">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="vesa_hole_1_0">
+      <origin xyz="0.044 0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.011" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.022 0.026 1" />
+        </material>
+      </visual>
+    <visual name="vesa_boss_1_1">
+      <origin xyz="0.05 0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01" />
+        </geometry>
+      <material name="satin_hardware">
+        <color rgba="0.55 0.56 0.54 1" />
+        </material>
+      </visual>
+    <visual name="vesa_hole_1_1">
+      <origin xyz="0.044 0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.011" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.02 0.022 0.026 1" />
+        </material>
+      </visual>
+    <collision name="tilt_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="head_backbone">
+      <origin xyz="0.038 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.03 0.024" />
+        </geometry>
+      </collision>
+    <collision name="vesa_top_bar">
+      <origin xyz="0.055 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.145 0.012" />
+        </geometry>
+      </collision>
+    <collision name="vesa_bottom_bar">
+      <origin xyz="0.055 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.145 0.012" />
+        </geometry>
+      </collision>
+    <collision name="vesa_side_0">
+      <origin xyz="0.055 0.072 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.012 0.104" />
+        </geometry>
+      </collision>
+    <collision name="vesa_side_1">
+      <origin xyz="0.055 -0.072 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.012 0.104" />
+        </geometry>
+      </collision>
+    <collision name="vesa_cross_bar">
+      <origin xyz="0.055 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.132 0.01" />
+        </geometry>
+      </collision>
+    <collision name="vesa_vertical_bar">
+      <origin xyz="0.055 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.012 0.104" />
+        </geometry>
+      </collision>
+    <collision name="vesa_boss_0_0">
+      <origin xyz="0.05 -0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="vesa_hole_0_0">
+      <origin xyz="0.044 -0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.011" />
+        </geometry>
+      </collision>
+    <collision name="vesa_boss_0_1">
+      <origin xyz="0.05 -0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="vesa_hole_0_1">
+      <origin xyz="0.044 -0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.011" />
+        </geometry>
+      </collision>
+    <collision name="vesa_boss_1_0">
+      <origin xyz="0.05 0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="vesa_hole_1_0">
+      <origin xyz="0.044 0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.011" />
+        </geometry>
+      </collision>
+    <collision name="vesa_boss_1_1">
+      <origin xyz="0.05 0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="vesa_hole_1_1">
+      <origin xyz="0.044 0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.011" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="collar_joint" type="revolute">
+    <origin xyz="0 0 0.55" rpy="0 0 0" />
+    <parent link="clamp_post" />
+    <child link="primary_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="20" velocity="2" lower="-2.8" upper="2.8" />
+    </joint>
+  <joint name="elbow_joint" type="revolute">
+    <origin xyz="0.42 0 0" rpy="0 0 0" />
+    <parent link="primary_link" />
+    <child link="secondary_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="15" velocity="2" lower="-2.4" upper="2.4" />
+    </joint>
+  <joint name="head_swivel_joint" type="revolute">
+    <origin xyz="0.265 0 0" rpy="0 0 0" />
+    <parent link="secondary_link" />
+    <child link="head_swivel" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="2" lower="-1.6" upper="1.6" />
+    </joint>
+  <joint name="head_tilt_joint" type="revolute">
+    <origin xyz="0.07 0 0" rpy="0 0 0" />
+    <parent link="head_swivel" />
+    <child link="vesa_head" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="1.5" lower="-0.8" upper="0.8" />
+    </joint>
+  </robot>

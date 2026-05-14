@@ -1,0 +1,502 @@
+<robot name="cost_optimized_sliding_window">
+  <material name="warm_white_extrusion">
+    <color rgba="0.86 0.84 0.78 1" />
+    </material>
+  <material name="dark_epdm_gasket">
+    <color rgba="0.035 0.037 0.038 1" />
+    </material>
+  <material name="pale_blue_glass">
+    <color rgba="0.6 0.82 0.95 0.34" />
+    </material>
+  <material name="zinc_fastener">
+    <color rgba="0.58 0.6 0.57 1" />
+    </material>
+  <material name="black_latch">
+    <color rgba="0.03 0.03 0.028 1" />
+    </material>
+  <link name="frame">
+    <visual name="bottom_sill">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.085 0.055" />
+        </geometry>
+      <material name="warm_white_extrusion">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_header">
+      <origin xyz="0 0 0.8225" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.085 0.055" />
+        </geometry>
+      <material name="warm_white_extrusion">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="jamb_0">
+      <origin xyz="-0.5725 0 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.085 0.85" />
+        </geometry>
+      <material name="warm_white_extrusion">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="jamb_1">
+      <origin xyz="0.5725 0 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.085 0.85" />
+        </geometry>
+      <material name="warm_white_extrusion">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bottom_back_lip">
+      <origin xyz="0 0.006 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="1.09 0.006 0.03" />
+        </geometry>
+      <material name="warm_white_extrusion">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bottom_front_lip">
+      <origin xyz="0 0.04 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="1.09 0.006 0.03" />
+        </geometry>
+      <material name="warm_white_extrusion">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_back_lip">
+      <origin xyz="0 0.006 0.78" rpy="0 0 0" />
+      <geometry>
+        <box size="1.09 0.006 0.03" />
+        </geometry>
+      <material name="warm_white_extrusion">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_front_lip">
+      <origin xyz="0 0.04 0.78" rpy="0 0 0" />
+      <geometry>
+        <box size="1.09 0.006 0.03" />
+        </geometry>
+      <material name="warm_white_extrusion">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="fixed_meeting_stile">
+      <origin xyz="-0.012 -0.018 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.03 0.69" />
+        </geometry>
+      <material name="warm_white_extrusion">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="fixed_glass">
+      <origin xyz="-0.286 -0.02 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.525 0.006 0.642" />
+        </geometry>
+      <material name="pale_blue_glass">
+        <color rgba="0.6 0.82 0.95 0.34" />
+        </material>
+      </visual>
+    <visual name="fixed_bottom_gasket">
+      <origin xyz="-0.286 -0.02 0.098" rpy="0 0 0" />
+      <geometry>
+        <box size="0.535 0.014 0.014" />
+        </geometry>
+      <material name="dark_epdm_gasket">
+        <color rgba="0.035 0.037 0.038 1" />
+        </material>
+      </visual>
+    <visual name="fixed_top_gasket">
+      <origin xyz="-0.286 -0.02 0.752" rpy="0 0 0" />
+      <geometry>
+        <box size="0.535 0.014 0.014" />
+        </geometry>
+      <material name="dark_epdm_gasket">
+        <color rgba="0.035 0.037 0.038 1" />
+        </material>
+      </visual>
+    <visual name="left_stop">
+      <origin xyz="-0.424 0.023 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.02 0.025" />
+        </geometry>
+      <material name="dark_epdm_gasket">
+        <color rgba="0.035 0.037 0.038 1" />
+        </material>
+      </visual>
+    <visual name="right_stop">
+      <origin xyz="0.544 0.023 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.02 0.025" />
+        </geometry>
+      <material name="dark_epdm_gasket">
+        <color rgba="0.035 0.037 0.038 1" />
+        </material>
+      </visual>
+    <visual name="mount_screw_0">
+      <origin xyz="-0.545 0.044 0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.004" />
+        </geometry>
+      <material name="zinc_fastener">
+        <color rgba="0.58 0.6 0.57 1" />
+        </material>
+      </visual>
+    <visual name="mount_screw_1">
+      <origin xyz="0.545 0.044 0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.004" />
+        </geometry>
+      <material name="zinc_fastener">
+        <color rgba="0.58 0.6 0.57 1" />
+        </material>
+      </visual>
+    <visual name="mount_screw_2">
+      <origin xyz="-0.545 0.044 0.78" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.004" />
+        </geometry>
+      <material name="zinc_fastener">
+        <color rgba="0.58 0.6 0.57 1" />
+        </material>
+      </visual>
+    <visual name="mount_screw_3">
+      <origin xyz="0.545 0.044 0.78" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.004" />
+        </geometry>
+      <material name="zinc_fastener">
+        <color rgba="0.58 0.6 0.57 1" />
+        </material>
+      </visual>
+    <visual name="keeper_plate">
+      <origin xyz="0.548 0.043 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.004 0.09" />
+        </geometry>
+      <material name="zinc_fastener">
+        <color rgba="0.58 0.6 0.57 1" />
+        </material>
+      </visual>
+    <collision name="bottom_sill">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.085 0.055" />
+        </geometry>
+      </collision>
+    <collision name="top_header">
+      <origin xyz="0 0 0.8225" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.085 0.055" />
+        </geometry>
+      </collision>
+    <collision name="jamb_0">
+      <origin xyz="-0.5725 0 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.085 0.85" />
+        </geometry>
+      </collision>
+    <collision name="jamb_1">
+      <origin xyz="0.5725 0 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.085 0.85" />
+        </geometry>
+      </collision>
+    <collision name="bottom_back_lip">
+      <origin xyz="0 0.006 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="1.09 0.006 0.03" />
+        </geometry>
+      </collision>
+    <collision name="bottom_front_lip">
+      <origin xyz="0 0.04 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="1.09 0.006 0.03" />
+        </geometry>
+      </collision>
+    <collision name="top_back_lip">
+      <origin xyz="0 0.006 0.78" rpy="0 0 0" />
+      <geometry>
+        <box size="1.09 0.006 0.03" />
+        </geometry>
+      </collision>
+    <collision name="top_front_lip">
+      <origin xyz="0 0.04 0.78" rpy="0 0 0" />
+      <geometry>
+        <box size="1.09 0.006 0.03" />
+        </geometry>
+      </collision>
+    <collision name="fixed_meeting_stile">
+      <origin xyz="-0.012 -0.018 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.03 0.69" />
+        </geometry>
+      </collision>
+    <collision name="fixed_glass">
+      <origin xyz="-0.286 -0.02 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.525 0.006 0.642" />
+        </geometry>
+      </collision>
+    <collision name="fixed_bottom_gasket">
+      <origin xyz="-0.286 -0.02 0.098" rpy="0 0 0" />
+      <geometry>
+        <box size="0.535 0.014 0.014" />
+        </geometry>
+      </collision>
+    <collision name="fixed_top_gasket">
+      <origin xyz="-0.286 -0.02 0.752" rpy="0 0 0" />
+      <geometry>
+        <box size="0.535 0.014 0.014" />
+        </geometry>
+      </collision>
+    <collision name="left_stop">
+      <origin xyz="-0.424 0.023 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.02 0.025" />
+        </geometry>
+      </collision>
+    <collision name="right_stop">
+      <origin xyz="0.544 0.023 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.02 0.025" />
+        </geometry>
+      </collision>
+    <collision name="mount_screw_0">
+      <origin xyz="-0.545 0.044 0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="mount_screw_1">
+      <origin xyz="0.545 0.044 0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="mount_screw_2">
+      <origin xyz="-0.545 0.044 0.78" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="mount_screw_3">
+      <origin xyz="0.545 0.044 0.78" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="keeper_plate">
+      <origin xyz="0.548 0.043 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.004 0.09" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="sash">
+    <visual name="bottom_rail">
+      <origin xyz="0 0 0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.026 0.044" />
+        </geometry>
+      <material name="warm_white_extrusion">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_rail">
+      <origin xyz="0 0 0.742" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.026 0.044" />
+        </geometry>
+      <material name="warm_white_extrusion">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="meeting_stile">
+      <origin xyz="-0.2625 0 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.026 0.68" />
+        </geometry>
+      <material name="warm_white_extrusion">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="right_stile">
+      <origin xyz="0.2625 0 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.026 0.68" />
+        </geometry>
+      <material name="warm_white_extrusion">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="sash_glass">
+      <origin xyz="0 -0.006 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.495 0.006 0.606" />
+        </geometry>
+      <material name="pale_blue_glass">
+        <color rgba="0.6 0.82 0.95 0.34" />
+        </material>
+      </visual>
+    <visual name="bottom_guide_tongue">
+      <origin xyz="0 0 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.541 0.016 0.036" />
+        </geometry>
+      <material name="dark_epdm_gasket">
+        <color rgba="0.035 0.037 0.038 1" />
+        </material>
+      </visual>
+    <visual name="top_guide_tongue">
+      <origin xyz="0 0 0.773" rpy="0 0 0" />
+      <geometry>
+        <box size="0.541 0.016 0.02" />
+        </geometry>
+      <material name="dark_epdm_gasket">
+        <color rgba="0.035 0.037 0.038 1" />
+        </material>
+      </visual>
+    <visual name="finger_pull">
+      <origin xyz="-0.2385 0.018 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.01 0.19" />
+        </geometry>
+      <material name="dark_epdm_gasket">
+        <color rgba="0.035 0.037 0.038 1" />
+        </material>
+      </visual>
+    <collision name="bottom_rail">
+      <origin xyz="0 0 0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.026 0.044" />
+        </geometry>
+      </collision>
+    <collision name="top_rail">
+      <origin xyz="0 0 0.742" rpy="0 0 0" />
+      <geometry>
+        <box size="0.565 0.026 0.044" />
+        </geometry>
+      </collision>
+    <collision name="meeting_stile">
+      <origin xyz="-0.2625 0 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.026 0.68" />
+        </geometry>
+      </collision>
+    <collision name="right_stile">
+      <origin xyz="0.2625 0 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.026 0.68" />
+        </geometry>
+      </collision>
+    <collision name="sash_glass">
+      <origin xyz="0 -0.006 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.495 0.006 0.606" />
+        </geometry>
+      </collision>
+    <collision name="bottom_guide_tongue">
+      <origin xyz="0 0 0.073" rpy="0 0 0" />
+      <geometry>
+        <box size="0.541 0.016 0.036" />
+        </geometry>
+      </collision>
+    <collision name="top_guide_tongue">
+      <origin xyz="0 0 0.773" rpy="0 0 0" />
+      <geometry>
+        <box size="0.541 0.016 0.02" />
+        </geometry>
+      </collision>
+    <collision name="finger_pull">
+      <origin xyz="-0.2385 0.018 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.01 0.19" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="latch">
+    <visual name="pivot_stem">
+      <origin xyz="0 -0.009 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.018 0.014" />
+        </geometry>
+      <material name="black_latch">
+        <color rgba="0.03 0.03 0.028 1" />
+        </material>
+      </visual>
+    <visual name="pivot_hub">
+      <origin xyz="0 -0.002 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.01" />
+        </geometry>
+      <material name="black_latch">
+        <color rgba="0.03 0.03 0.028 1" />
+        </material>
+      </visual>
+    <visual name="latch_bar">
+      <origin xyz="0.047 0.004 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.008 0.018" />
+        </geometry>
+      <material name="black_latch">
+        <color rgba="0.03 0.03 0.028 1" />
+        </material>
+      </visual>
+    <visual name="pivot_screw">
+      <origin xyz="-0.001 0.008 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.006" />
+        </geometry>
+      <material name="zinc_fastener">
+        <color rgba="0.58 0.6 0.57 1" />
+        </material>
+      </visual>
+    <collision name="pivot_stem">
+      <origin xyz="0 -0.009 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.018 0.014" />
+        </geometry>
+      </collision>
+    <collision name="pivot_hub">
+      <origin xyz="0 -0.002 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="latch_bar">
+      <origin xyz="0.047 0.004 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.008 0.018" />
+        </geometry>
+      </collision>
+    <collision name="pivot_screw">
+      <origin xyz="-0.001 0.008 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="sash_slide" type="prismatic">
+    <origin xyz="0.255 0.023 0" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="sash" />
+    <axis xyz="-1 0 0" />
+    <limit effort="80" velocity="0.3" lower="0" upper="0.39" />
+    </joint>
+  <joint name="latch_pivot" type="revolute">
+    <origin xyz="0.2475 0.027 0.5" rpy="0 0 0" />
+    <parent link="sash" />
+    <child link="latch" />
+    <axis xyz="0 1 0" />
+    <limit effort="2" velocity="2" lower="0" upper="1.35" />
+    </joint>
+  </robot>

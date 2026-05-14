@@ -1,0 +1,397 @@
+<robot name="symphony_music_stand">
+  <material name="satin_black">
+    <color rgba="0.015 0.014 0.013 1" />
+    </material>
+  <material name="dark_burnished_metal">
+    <color rgba="0.1 0.105 0.11 1" />
+    </material>
+  <material name="rubbed_metal_edge">
+    <color rgba="0.32 0.33 0.34 1" />
+    </material>
+  <material name="matte_rubber">
+    <color rgba="0.01 0.01 0.01 1" />
+    </material>
+  <link name="base">
+    <visual name="weighted_base">
+      <origin xyz="0 0 0.021" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.175" length="0.042" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_ring">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.006" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.01 0.01 0.01 1" />
+        </material>
+      </visual>
+    <visual name="center_boss">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.055" />
+        </geometry>
+      <material name="dark_burnished_metal">
+        <color rgba="0.1 0.105 0.11 1" />
+        </material>
+      </visual>
+    <visual name="lower_tube_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lower_tube_shell.obj" />
+        </geometry>
+      <material name="dark_burnished_metal">
+        <color rgba="0.1 0.105 0.11 1" />
+        </material>
+      </visual>
+    <visual name="height_collar">
+      <geometry>
+        <mesh filename="assets/meshes/height_collar_shell.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="clamp_boss">
+      <origin xyz="0 0.043 0.785" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.018" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <collision name="weighted_base">
+      <origin xyz="0 0 0.021" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.175" length="0.042" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_ring">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="center_boss">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="lower_tube_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lower_tube_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="height_collar">
+      <geometry>
+        <mesh filename="assets/meshes/height_collar_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="clamp_boss">
+      <origin xyz="0 0.043 0.785" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="mast">
+    <visual name="inner_mast">
+      <origin xyz="0 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.75" />
+        </geometry>
+      <material name="dark_burnished_metal">
+        <color rgba="0.1 0.105 0.11 1" />
+        </material>
+      </visual>
+    <visual name="guide_shoe_front">
+      <origin xyz="0 0.0108 -0.38" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.004 0.055" />
+        </geometry>
+      <material name="rubbed_metal_edge">
+        <color rgba="0.32 0.33 0.34 1" />
+        </material>
+      </visual>
+    <visual name="guide_shoe_rear">
+      <origin xyz="0 -0.0108 -0.38" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.004 0.055" />
+        </geometry>
+      <material name="rubbed_metal_edge">
+        <color rgba="0.32 0.33 0.34 1" />
+        </material>
+      </visual>
+    <visual name="head_socket">
+      <origin xyz="0 0 0.314" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.045" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="tilt_yoke_bridge">
+      <origin xyz="0 0 0.323" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.036 0.034" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="yoke_plate_0">
+      <origin xyz="-0.067 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.064 0.072" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="yoke_plate_1">
+      <origin xyz="0.067 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.064 0.072" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="tilt_axis_pin">
+      <origin xyz="0 0 0.36" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.132" />
+        </geometry>
+      <material name="rubbed_metal_edge">
+        <color rgba="0.32 0.33 0.34 1" />
+        </material>
+      </visual>
+    <collision name="inner_mast">
+      <origin xyz="0 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.75" />
+        </geometry>
+      </collision>
+    <collision name="guide_shoe_front">
+      <origin xyz="0 0.0108 -0.38" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.004 0.055" />
+        </geometry>
+      </collision>
+    <collision name="guide_shoe_rear">
+      <origin xyz="0 -0.0108 -0.38" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.004 0.055" />
+        </geometry>
+      </collision>
+    <collision name="head_socket">
+      <origin xyz="0 0 0.314" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="tilt_yoke_bridge">
+      <origin xyz="0 0 0.323" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.036 0.034" />
+        </geometry>
+      </collision>
+    <collision name="yoke_plate_0">
+      <origin xyz="-0.067 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.064 0.072" />
+        </geometry>
+      </collision>
+    <collision name="yoke_plate_1">
+      <origin xyz="0.067 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.064 0.072" />
+        </geometry>
+      </collision>
+    <collision name="tilt_axis_pin">
+      <origin xyz="0 0 0.36" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.132" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="clamp_knob">
+    <visual name="threaded_stem">
+      <origin xyz="0 0.014 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.028" />
+        </geometry>
+      <material name="rubbed_metal_edge">
+        <color rgba="0.32 0.33 0.34 1" />
+        </material>
+      </visual>
+    <visual name="lobed_knob">
+      <origin xyz="0 0.027 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lobed_clamp_knob.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <collision name="threaded_stem">
+      <origin xyz="0 0.014 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="lobed_knob">
+      <origin xyz="0 0.027 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lobed_clamp_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="desk">
+    <visual name="solid_desk_panel">
+      <geometry>
+        <mesh filename="assets/meshes/solid_desk_panel.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="score_shelf">
+      <origin xyz="0 0.057 -0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.558 0.064 0.01" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="lower_score_lip">
+      <origin xyz="0 0.02 -0.191" rpy="0 0 0" />
+      <geometry>
+        <box size="0.558 0.012 0.038" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="side_rim_0">
+      <origin xyz="-0.262 0.085 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.335" />
+        </geometry>
+      <material name="rubbed_metal_edge">
+        <color rgba="0.32 0.33 0.34 1" />
+        </material>
+      </visual>
+    <visual name="side_rim_1">
+      <origin xyz="0.262 0.085 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.335" />
+        </geometry>
+      <material name="rubbed_metal_edge">
+        <color rgba="0.32 0.33 0.34 1" />
+        </material>
+      </visual>
+    <visual name="top_rim">
+      <origin xyz="0 0.085 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.51 0.012 0.012" />
+        </geometry>
+      <material name="rubbed_metal_edge">
+        <color rgba="0.32 0.33 0.34 1" />
+        </material>
+      </visual>
+    <visual name="tilt_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.092" />
+        </geometry>
+      <material name="rubbed_metal_edge">
+        <color rgba="0.32 0.33 0.34 1" />
+        </material>
+      </visual>
+    <visual name="head_lug">
+      <origin xyz="0 0.0505 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.077 0.026" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <collision name="solid_desk_panel">
+      <geometry>
+        <mesh filename="assets/meshes/solid_desk_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="score_shelf">
+      <origin xyz="0 0.057 -0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.558 0.064 0.01" />
+        </geometry>
+      </collision>
+    <collision name="lower_score_lip">
+      <origin xyz="0 0.02 -0.191" rpy="0 0 0" />
+      <geometry>
+        <box size="0.558 0.012 0.038" />
+        </geometry>
+      </collision>
+    <collision name="side_rim_0">
+      <origin xyz="-0.262 0.085 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.335" />
+        </geometry>
+      </collision>
+    <collision name="side_rim_1">
+      <origin xyz="0.262 0.085 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.335" />
+        </geometry>
+      </collision>
+    <collision name="top_rim">
+      <origin xyz="0 0.085 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.51 0.012 0.012" />
+        </geometry>
+      </collision>
+    <collision name="tilt_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="head_lug">
+      <origin xyz="0 0.0505 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.077 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_mast" type="prismatic">
+    <origin xyz="0 0 0.8" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="mast" />
+    <axis xyz="0 0 1" />
+    <limit effort="90" velocity="0.18" lower="0" upper="0.35" />
+    </joint>
+  <joint name="mast_to_desk" type="revolute">
+    <origin xyz="0 0 0.36" rpy="0 0 0" />
+    <parent link="mast" />
+    <child link="desk" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="1.2" lower="-0.45" upper="0.7" />
+    </joint>
+  <joint name="base_to_clamp_knob" type="continuous">
+    <origin xyz="0 0.052 0.785" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="clamp_knob" />
+    <axis xyz="0 1 0" />
+    <limit effort="1.5" velocity="8" />
+    </joint>
+  </robot>

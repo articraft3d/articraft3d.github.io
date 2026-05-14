@@ -1,0 +1,847 @@
+<robot name="precision_service_access_panel">
+  <link name="frame">
+    <visual name="top_rail">
+      <origin xyz="0 0 0.176" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.035 0.052" />
+        </geometry>
+      <material name="dark_hard_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail">
+      <origin xyz="0 0 -0.176" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.035 0.052" />
+        </geometry>
+      <material name="dark_hard_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="hinge_rail">
+      <origin xyz="-0.254 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.035 0.405" />
+        </geometry>
+      <material name="dark_hard_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="latch_rail">
+      <origin xyz="0.254 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.035 0.405" />
+        </geometry>
+      <material name="dark_hard_anodized_aluminum">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="top_reveal">
+      <origin xyz="0 -0.0185 0.1515" rpy="0 0 0" />
+      <geometry>
+        <box size="0.456 0.002 0.004" />
+        </geometry>
+      <material name="black_controlled_reveal">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="bottom_reveal">
+      <origin xyz="0 -0.0185 -0.1515" rpy="0 0 0" />
+      <geometry>
+        <box size="0.456 0.002 0.004" />
+        </geometry>
+      <material name="black_controlled_reveal">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="hinge_reveal">
+      <origin xyz="-0.228 -0.0185 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.002 0.304" />
+        </geometry>
+      <material name="black_controlled_reveal">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="latch_reveal">
+      <origin xyz="0.228 -0.0185 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.002 0.304" />
+        </geometry>
+      <material name="black_controlled_reveal">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="upper_datum_land">
+      <origin xyz="0.254 -0.019 0.096" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.003 0.045" />
+        </geometry>
+      <material name="ground_datum_faces">
+        <color rgba="0.82 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="lower_datum_land">
+      <origin xyz="0.254 -0.019 -0.096" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.003 0.045" />
+        </geometry>
+      <material name="ground_datum_faces">
+        <color rgba="0.82 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bottom_datum_land">
+      <origin xyz="0 -0.019 -0.176" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.003 0.018" />
+        </geometry>
+      <material name="ground_datum_faces">
+        <color rgba="0.82 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="latch_strike_face">
+      <origin xyz="0.26 -0.01675 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.0015 0.052" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="fixed_hinge_leaf">
+      <origin xyz="-0.254 -0.0193 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.0042 0.318" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="fixed_knuckle_0">
+      <origin xyz="-0.238 -0.029 -0.1175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.055" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="fixed_knuckle_1">
+      <origin xyz="-0.238 -0.029 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.055" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="fixed_knuckle_2">
+      <origin xyz="-0.238 -0.029 0.1175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.055" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="locked_index">
+      <origin xyz="0.277 -0.018 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.002 0.004" />
+        </geometry>
+      <material name="green_locked_index">
+        <color rgba="0.05 0.72 0.18 1" />
+        </material>
+      </visual>
+    <visual name="release_index">
+      <origin xyz="0.277 -0.018 -0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.002 0.02" />
+        </geometry>
+      <material name="red_release_index">
+        <color rgba="0.9 0.06 0.04 1" />
+        </material>
+      </visual>
+    <visual name="frame_index_mark_0">
+      <origin xyz="0.275 -0.018 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.002 0.0025" />
+        </geometry>
+      <material name="blue_adjustment_marks">
+        <color rgba="0.05 0.22 0.85 1" />
+        </material>
+      </visual>
+    <visual name="frame_index_mark_1">
+      <origin xyz="0.275 -0.018 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.002 0.0025" />
+        </geometry>
+      <material name="blue_adjustment_marks">
+        <color rgba="0.05 0.22 0.85 1" />
+        </material>
+      </visual>
+    <visual name="frame_index_mark_2">
+      <origin xyz="0.275 -0.018 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.002 0.0025" />
+        </geometry>
+      <material name="blue_adjustment_marks">
+        <color rgba="0.05 0.22 0.85 1" />
+        </material>
+      </visual>
+    <visual name="frame_index_mark_3">
+      <origin xyz="0.275 -0.018 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.002 0.0025" />
+        </geometry>
+      <material name="blue_adjustment_marks">
+        <color rgba="0.05 0.22 0.85 1" />
+        </material>
+      </visual>
+    <collision name="top_rail">
+      <origin xyz="0 0 0.176" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.035 0.052" />
+        </geometry>
+      </collision>
+    <collision name="bottom_rail">
+      <origin xyz="0 0 -0.176" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.035 0.052" />
+        </geometry>
+      </collision>
+    <collision name="hinge_rail">
+      <origin xyz="-0.254 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.035 0.405" />
+        </geometry>
+      </collision>
+    <collision name="latch_rail">
+      <origin xyz="0.254 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.035 0.405" />
+        </geometry>
+      </collision>
+    <collision name="top_reveal">
+      <origin xyz="0 -0.0185 0.1515" rpy="0 0 0" />
+      <geometry>
+        <box size="0.456 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="bottom_reveal">
+      <origin xyz="0 -0.0185 -0.1515" rpy="0 0 0" />
+      <geometry>
+        <box size="0.456 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="hinge_reveal">
+      <origin xyz="-0.228 -0.0185 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.002 0.304" />
+        </geometry>
+      </collision>
+    <collision name="latch_reveal">
+      <origin xyz="0.228 -0.0185 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.002 0.304" />
+        </geometry>
+      </collision>
+    <collision name="upper_datum_land">
+      <origin xyz="0.254 -0.019 0.096" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.003 0.045" />
+        </geometry>
+      </collision>
+    <collision name="lower_datum_land">
+      <origin xyz="0.254 -0.019 -0.096" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.003 0.045" />
+        </geometry>
+      </collision>
+    <collision name="bottom_datum_land">
+      <origin xyz="0 -0.019 -0.176" rpy="0 0 0" />
+      <geometry>
+        <box size="0.125 0.003 0.018" />
+        </geometry>
+      </collision>
+    <collision name="latch_strike_face">
+      <origin xyz="0.26 -0.01675 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.0015 0.052" />
+        </geometry>
+      </collision>
+    <collision name="fixed_hinge_leaf">
+      <origin xyz="-0.254 -0.0193 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.0042 0.318" />
+        </geometry>
+      </collision>
+    <collision name="fixed_knuckle_0">
+      <origin xyz="-0.238 -0.029 -0.1175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="fixed_knuckle_1">
+      <origin xyz="-0.238 -0.029 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="fixed_knuckle_2">
+      <origin xyz="-0.238 -0.029 0.1175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="locked_index">
+      <origin xyz="0.277 -0.018 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.002 0.004" />
+        </geometry>
+      </collision>
+    <collision name="release_index">
+      <origin xyz="0.277 -0.018 -0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.002 0.02" />
+        </geometry>
+      </collision>
+    <collision name="frame_index_mark_0">
+      <origin xyz="0.275 -0.018 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.002 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="frame_index_mark_1">
+      <origin xyz="0.275 -0.018 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.002 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="frame_index_mark_2">
+      <origin xyz="0.275 -0.018 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.002 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="frame_index_mark_3">
+      <origin xyz="0.275 -0.018 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.002 0.0025" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="service_panel">
+    <visual name="panel_plate">
+      <origin xyz="0.238 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.434 0.01 0.284" />
+        </geometry>
+      <material name="warm_powder_coated_panel">
+        <color rgba="0.73 0.75 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_gap_line">
+      <origin xyz="0.246 -0.0056 0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.0015 0.0025" />
+        </geometry>
+      <material name="black_controlled_reveal">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="lower_gap_line">
+      <origin xyz="0.246 -0.0056 -0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.0015 0.0025" />
+        </geometry>
+      <material name="black_controlled_reveal">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="hinge_gap_line">
+      <origin xyz="0.038 -0.0056 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0015 0.23" />
+        </geometry>
+      <material name="black_controlled_reveal">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="latch_edge_datum">
+      <origin xyz="0.438 -0.0056 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0015 0.23" />
+        </geometry>
+      <material name="black_controlled_reveal">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="moving_knuckle_0">
+      <origin xyz="0 0 -0.0585" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0076" length="0.047" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="moving_hinge_leaf_0">
+      <origin xyz="0.021 0 -0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.004 0.044" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="moving_knuckle_1">
+      <origin xyz="0 0 0.0585" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0076" length="0.047" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="moving_hinge_leaf_1">
+      <origin xyz="0.021 0 0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.004 0.044" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="upper_panel_datum">
+      <origin xyz="0.395 -0.006 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.002 0.02" />
+        </geometry>
+      <material name="ground_datum_faces">
+        <color rgba="0.82 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="lower_panel_datum">
+      <origin xyz="0.395 -0.006 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.002 0.02" />
+        </geometry>
+      <material name="ground_datum_faces">
+        <color rgba="0.82 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bottom_panel_datum">
+      <origin xyz="0.238 -0.006 -0.129" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.002 0.014" />
+        </geometry>
+      <material name="ground_datum_faces">
+        <color rgba="0.82 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="adjuster_screw_0">
+      <origin xyz="0.105 -0.0068 0.09" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="adjuster_slot_0">
+      <origin xyz="0.105 -0.0093 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.001 0.0022" />
+        </geometry>
+      <material name="black_controlled_reveal">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="adjuster_witness_0">
+      <origin xyz="0.123 -0.0055 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0012 0.013" />
+        </geometry>
+      <material name="blue_adjustment_marks">
+        <color rgba="0.05 0.22 0.85 1" />
+        </material>
+      </visual>
+    <visual name="adjuster_screw_1">
+      <origin xyz="0.315 -0.0068 0.09" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="adjuster_slot_1">
+      <origin xyz="0.315 -0.0093 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.001 0.0022" />
+        </geometry>
+      <material name="black_controlled_reveal">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="adjuster_witness_1">
+      <origin xyz="0.333 -0.0055 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0012 0.013" />
+        </geometry>
+      <material name="blue_adjustment_marks">
+        <color rgba="0.05 0.22 0.85 1" />
+        </material>
+      </visual>
+    <visual name="adjuster_screw_2">
+      <origin xyz="0.105 -0.0068 -0.09" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="adjuster_slot_2">
+      <origin xyz="0.105 -0.0093 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.001 0.0022" />
+        </geometry>
+      <material name="black_controlled_reveal">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="adjuster_witness_2">
+      <origin xyz="0.123 -0.0055 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0012 0.013" />
+        </geometry>
+      <material name="blue_adjustment_marks">
+        <color rgba="0.05 0.22 0.85 1" />
+        </material>
+      </visual>
+    <visual name="adjuster_screw_3">
+      <origin xyz="0.315 -0.0068 -0.09" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="adjuster_slot_3">
+      <origin xyz="0.315 -0.0093 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.001 0.0022" />
+        </geometry>
+      <material name="black_controlled_reveal">
+        <color rgba="0.01 0.012 0.012 1" />
+        </material>
+      </visual>
+    <visual name="adjuster_witness_3">
+      <origin xyz="0.333 -0.0055 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0012 0.013" />
+        </geometry>
+      <material name="blue_adjustment_marks">
+        <color rgba="0.05 0.22 0.85 1" />
+        </material>
+      </visual>
+    <visual name="panel_index_mark_0">
+      <origin xyz="0.436 -0.0062 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0015 0.0025" />
+        </geometry>
+      <material name="blue_adjustment_marks">
+        <color rgba="0.05 0.22 0.85 1" />
+        </material>
+      </visual>
+    <visual name="panel_index_mark_1">
+      <origin xyz="0.436 -0.0062 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0015 0.0025" />
+        </geometry>
+      <material name="blue_adjustment_marks">
+        <color rgba="0.05 0.22 0.85 1" />
+        </material>
+      </visual>
+    <visual name="panel_index_mark_2">
+      <origin xyz="0.436 -0.0062 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0015 0.0025" />
+        </geometry>
+      <material name="blue_adjustment_marks">
+        <color rgba="0.05 0.22 0.85 1" />
+        </material>
+      </visual>
+    <visual name="panel_index_mark_3">
+      <origin xyz="0.436 -0.0062 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0015 0.0025" />
+        </geometry>
+      <material name="blue_adjustment_marks">
+        <color rgba="0.05 0.22 0.85 1" />
+        </material>
+      </visual>
+    <collision name="panel_plate">
+      <origin xyz="0.238 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.434 0.01 0.284" />
+        </geometry>
+      </collision>
+    <collision name="upper_gap_line">
+      <origin xyz="0.246 -0.0056 0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.0015 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="lower_gap_line">
+      <origin xyz="0.246 -0.0056 -0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.0015 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="hinge_gap_line">
+      <origin xyz="0.038 -0.0056 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0015 0.23" />
+        </geometry>
+      </collision>
+    <collision name="latch_edge_datum">
+      <origin xyz="0.438 -0.0056 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0015 0.23" />
+        </geometry>
+      </collision>
+    <collision name="moving_knuckle_0">
+      <origin xyz="0 0 -0.0585" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0076" length="0.047" />
+        </geometry>
+      </collision>
+    <collision name="moving_hinge_leaf_0">
+      <origin xyz="0.021 0 -0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.004 0.044" />
+        </geometry>
+      </collision>
+    <collision name="moving_knuckle_1">
+      <origin xyz="0 0 0.0585" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0076" length="0.047" />
+        </geometry>
+      </collision>
+    <collision name="moving_hinge_leaf_1">
+      <origin xyz="0.021 0 0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.004 0.044" />
+        </geometry>
+      </collision>
+    <collision name="upper_panel_datum">
+      <origin xyz="0.395 -0.006 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.002 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lower_panel_datum">
+      <origin xyz="0.395 -0.006 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.002 0.02" />
+        </geometry>
+      </collision>
+    <collision name="bottom_panel_datum">
+      <origin xyz="0.238 -0.006 -0.129" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.002 0.014" />
+        </geometry>
+      </collision>
+    <collision name="adjuster_screw_0">
+      <origin xyz="0.105 -0.0068 0.09" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="adjuster_slot_0">
+      <origin xyz="0.105 -0.0093 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.001 0.0022" />
+        </geometry>
+      </collision>
+    <collision name="adjuster_witness_0">
+      <origin xyz="0.123 -0.0055 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0012 0.013" />
+        </geometry>
+      </collision>
+    <collision name="adjuster_screw_1">
+      <origin xyz="0.315 -0.0068 0.09" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="adjuster_slot_1">
+      <origin xyz="0.315 -0.0093 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.001 0.0022" />
+        </geometry>
+      </collision>
+    <collision name="adjuster_witness_1">
+      <origin xyz="0.333 -0.0055 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0012 0.013" />
+        </geometry>
+      </collision>
+    <collision name="adjuster_screw_2">
+      <origin xyz="0.105 -0.0068 -0.09" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="adjuster_slot_2">
+      <origin xyz="0.105 -0.0093 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.001 0.0022" />
+        </geometry>
+      </collision>
+    <collision name="adjuster_witness_2">
+      <origin xyz="0.123 -0.0055 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0012 0.013" />
+        </geometry>
+      </collision>
+    <collision name="adjuster_screw_3">
+      <origin xyz="0.315 -0.0068 -0.09" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="adjuster_slot_3">
+      <origin xyz="0.315 -0.0093 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.017 0.001 0.0022" />
+        </geometry>
+      </collision>
+    <collision name="adjuster_witness_3">
+      <origin xyz="0.333 -0.0055 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.0012 0.013" />
+        </geometry>
+      </collision>
+    <collision name="panel_index_mark_0">
+      <origin xyz="0.436 -0.0062 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0015 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="panel_index_mark_1">
+      <origin xyz="0.436 -0.0062 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0015 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="panel_index_mark_2">
+      <origin xyz="0.436 -0.0062 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0015 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="panel_index_mark_3">
+      <origin xyz="0.436 -0.0062 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.0015 0.0025" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="latch">
+    <visual name="latch_knob">
+      <origin xyz="0 -0.017 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="latch_handle">
+      <origin xyz="0.023 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.004 0.01" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="latch_shaft">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.038" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="latch_cam">
+      <origin xyz="0.045 0.0085 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.004 0.018" />
+        </geometry>
+      <material name="brushed_stainless_hardware">
+        <color rgba="0.66 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="latch_pointer">
+      <origin xyz="0.022 -0.0275 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.0015 0.004" />
+        </geometry>
+      <material name="green_locked_index">
+        <color rgba="0.05 0.72 0.18 1" />
+        </material>
+      </visual>
+    <collision name="latch_knob">
+      <origin xyz="0 -0.017 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="latch_handle">
+      <origin xyz="0.023 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.004 0.01" />
+        </geometry>
+      </collision>
+    <collision name="latch_shaft">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.038" />
+        </geometry>
+      </collision>
+    <collision name="latch_cam">
+      <origin xyz="0.045 0.0085 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.004 0.018" />
+        </geometry>
+      </collision>
+    <collision name="latch_pointer">
+      <origin xyz="0.022 -0.0275 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.0015 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="frame_to_service_panel" type="revolute">
+    <origin xyz="-0.238 -0.029 0" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="service_panel" />
+    <axis xyz="0 0 -1" />
+    <limit effort="18" velocity="1.4" lower="0" upper="1.7" />
+    </joint>
+  <joint name="service_panel_to_latch" type="revolute">
+    <origin xyz="0.405 0 0" rpy="0 0 0" />
+    <parent link="service_panel" />
+    <child link="latch" />
+    <axis xyz="0 1 0" />
+    <limit effort="3" velocity="2.5" lower="0" upper="1.5708" />
+    </joint>
+  </robot>

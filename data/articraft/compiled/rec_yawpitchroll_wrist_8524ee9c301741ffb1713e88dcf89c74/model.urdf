@@ -1,0 +1,465 @@
+<robot name="fork_backed_ypr_head">
+  <link name="rear_support">
+    <visual name="floor_plate">
+      <origin xyz="0 -0.08 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.32 0.025" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="rear_upright">
+      <origin xyz="0 -0.19 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.05 0.36" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="top_boom">
+      <origin xyz="0 -0.1 0.4" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.205 0.045" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bearing_cup">
+      <origin xyz="0 0 0.4325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.035" />
+        </geometry>
+      <material name="satin_bearing_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0 -0.08 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.32 0.025" />
+        </geometry>
+      </collision>
+    <collision name="rear_upright">
+      <origin xyz="0 -0.19 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.05 0.36" />
+        </geometry>
+      </collision>
+    <collision name="top_boom">
+      <origin xyz="0 -0.1 0.4" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.205 0.045" />
+        </geometry>
+      </collision>
+    <collision name="yaw_bearing_cup">
+      <origin xyz="0 0 0.4325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.035" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="yaw_stage">
+    <visual name="turntable_disk">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.057" length="0.024" />
+        </geometry>
+      <material name="parkerized_steel">
+        <color rgba="0.24 0.26 0.27 1" />
+        </material>
+      </visual>
+    <visual name="turret_neck">
+      <origin xyz="0 0 0.0465" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      <material name="parkerized_steel">
+        <color rgba="0.24 0.26 0.27 1" />
+        </material>
+      </visual>
+    <visual name="yaw_fork">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/yaw_fork_mesh.obj" />
+        </geometry>
+      <material name="parkerized_steel">
+        <color rgba="0.24 0.26 0.27 1" />
+        </material>
+      </visual>
+    <collision name="turntable_disk">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.057" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="turret_neck">
+      <origin xyz="0 0 0.0465" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="yaw_fork">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/yaw_fork_mesh.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pitch_frame">
+    <visual name="pitch_pin_0">
+      <origin xyz="-0.091 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.058" />
+        </geometry>
+      <material name="satin_bearing_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="pitch_pin_1">
+      <origin xyz="0.091 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.058" />
+        </geometry>
+      <material name="satin_bearing_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_collar_0">
+      <origin xyz="-0.072 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="satin_bearing_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_collar_1">
+      <origin xyz="0.072 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="satin_bearing_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="frame_cheek_0">
+      <origin xyz="-0.057 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.036 0.114" />
+        </geometry>
+      <material name="parkerized_steel">
+        <color rgba="0.24 0.26 0.27 1" />
+        </material>
+      </visual>
+    <visual name="frame_cheek_1">
+      <origin xyz="0.057 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.036 0.114" />
+        </geometry>
+      <material name="parkerized_steel">
+        <color rgba="0.24 0.26 0.27 1" />
+        </material>
+      </visual>
+    <visual name="top_crossbar">
+      <origin xyz="0 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.036 0.014" />
+        </geometry>
+      <material name="parkerized_steel">
+        <color rgba="0.24 0.26 0.27 1" />
+        </material>
+      </visual>
+    <visual name="bottom_crossbar">
+      <origin xyz="0 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.036 0.014" />
+        </geometry>
+      <material name="parkerized_steel">
+        <color rgba="0.24 0.26 0.27 1" />
+        </material>
+      </visual>
+    <visual name="roll_bearing">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_bearing_ring_mesh.obj" />
+        </geometry>
+      <material name="satin_bearing_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="bearing_sleeve">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.034" />
+        </geometry>
+      <material name="satin_bearing_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="bearing_spoke_0">
+      <origin xyz="-0.031 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.018 0.006" />
+        </geometry>
+      <material name="satin_bearing_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="bearing_spoke_1">
+      <origin xyz="0.031 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.018 0.006" />
+        </geometry>
+      <material name="satin_bearing_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="bearing_spoke_2">
+      <origin xyz="0 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.024" />
+        </geometry>
+      <material name="satin_bearing_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="bearing_spoke_3">
+      <origin xyz="0 0 -0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.024" />
+        </geometry>
+      <material name="satin_bearing_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="ring_web_0">
+      <origin xyz="-0.05 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.02 0.012" />
+        </geometry>
+      <material name="parkerized_steel">
+        <color rgba="0.24 0.26 0.27 1" />
+        </material>
+      </visual>
+    <visual name="ring_web_1">
+      <origin xyz="0.05 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.02 0.012" />
+        </geometry>
+      <material name="parkerized_steel">
+        <color rgba="0.24 0.26 0.27 1" />
+        </material>
+      </visual>
+    <visual name="ring_web_2">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.02 0.024" />
+        </geometry>
+      <material name="parkerized_steel">
+        <color rgba="0.24 0.26 0.27 1" />
+        </material>
+      </visual>
+    <visual name="ring_web_3">
+      <origin xyz="0 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.02 0.024" />
+        </geometry>
+      <material name="parkerized_steel">
+        <color rgba="0.24 0.26 0.27 1" />
+        </material>
+      </visual>
+    <collision name="pitch_pin_0">
+      <origin xyz="-0.091 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="pitch_pin_1">
+      <origin xyz="0.091 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_collar_0">
+      <origin xyz="-0.072 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_collar_1">
+      <origin xyz="0.072 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="frame_cheek_0">
+      <origin xyz="-0.057 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.036 0.114" />
+        </geometry>
+      </collision>
+    <collision name="frame_cheek_1">
+      <origin xyz="0.057 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.036 0.114" />
+        </geometry>
+      </collision>
+    <collision name="top_crossbar">
+      <origin xyz="0 0 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.036 0.014" />
+        </geometry>
+      </collision>
+    <collision name="bottom_crossbar">
+      <origin xyz="0 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.036 0.014" />
+        </geometry>
+      </collision>
+    <collision name="roll_bearing">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_bearing_ring_mesh.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_sleeve">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="bearing_spoke_0">
+      <origin xyz="-0.031 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.018 0.006" />
+        </geometry>
+      </collision>
+    <collision name="bearing_spoke_1">
+      <origin xyz="0.031 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.018 0.006" />
+        </geometry>
+      </collision>
+    <collision name="bearing_spoke_2">
+      <origin xyz="0 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.024" />
+        </geometry>
+      </collision>
+    <collision name="bearing_spoke_3">
+      <origin xyz="0 0 -0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.018 0.024" />
+        </geometry>
+      </collision>
+    <collision name="ring_web_0">
+      <origin xyz="-0.05 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.02 0.012" />
+        </geometry>
+      </collision>
+    <collision name="ring_web_1">
+      <origin xyz="0.05 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.02 0.012" />
+        </geometry>
+      </collision>
+    <collision name="ring_web_2">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.02 0.024" />
+        </geometry>
+      </collision>
+    <collision name="ring_web_3">
+      <origin xyz="0 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.02 0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="roll_spindle">
+    <visual name="shaft">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.152" />
+        </geometry>
+      <material name="satin_bearing_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="front_cap">
+      <origin xyz="0 0.089 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.03" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="rear_collar">
+      <origin xyz="0 -0.085 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.02" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="index_rib">
+      <origin xyz="0 0.09 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.026 0.036" />
+        </geometry>
+      <material name="red_index_mark">
+        <color rgba="0.85 0.08 0.04 1" />
+        </material>
+      </visual>
+    <collision name="shaft">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.152" />
+        </geometry>
+      </collision>
+    <collision name="front_cap">
+      <origin xyz="0 0.089 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="rear_collar">
+      <origin xyz="0 -0.085 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="index_rib">
+      <origin xyz="0 0.09 0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.026 0.036" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="yaw" type="revolute">
+    <origin xyz="0 0 0.45" rpy="0 0 0" />
+    <parent link="rear_support" />
+    <child link="yaw_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.5" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="pitch" type="revolute">
+    <origin xyz="0 0 0.164" rpy="0 0 0" />
+    <parent link="yaw_stage" />
+    <child link="pitch_frame" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="1.2" lower="-1.1" upper="1.1" />
+    </joint>
+  <joint name="roll" type="revolute">
+    <parent link="pitch_frame" />
+    <child link="roll_spindle" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

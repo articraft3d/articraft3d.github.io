@@ -1,0 +1,509 @@
+<robot name="revolute_prismatic_revolute_chain">
+  <material name="dark_metal">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="blued_steel">
+    <color rgba="0.18 0.23 0.29 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.62 0.66 0.68 1" />
+    </material>
+  <material name="safety_orange">
+    <color rgba="0.95 0.38 0.1 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <link name="base">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.2 0.018" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fixed_bearing">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.016" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.18 0.23 0.29 1" />
+        </material>
+      </visual>
+    <visual name="base_spindle">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.052" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_-0.105_-0.065">
+      <origin xyz="-0.105 -0.065 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_-0.105_+0.065">
+      <origin xyz="-0.105 0.065 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_+0.105_-0.065">
+      <origin xyz="0.105 -0.065 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_+0.105_+0.065">
+      <origin xyz="0.105 0.065 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.2 0.018" />
+        </geometry>
+      </collision>
+    <collision name="fixed_bearing">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="base_spindle">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_-0.105_-0.065">
+      <origin xyz="-0.105 -0.065 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_-0.105_+0.065">
+      <origin xyz="-0.105 0.065 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_+0.105_-0.065">
+      <origin xyz="0.105 -0.065 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_+0.105_+0.065">
+      <origin xyz="0.105 0.065 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="swing_carriage">
+    <visual name="pivot_hub">
+      <geometry>
+        <cylinder radius="0.04" length="0.052" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.18 0.23 0.29 1" />
+        </material>
+      </visual>
+    <visual name="upper_thrust_plate">
+      <origin xyz="0 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.01" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_top">
+      <origin xyz="0.143 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.068 0.01" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.18 0.23 0.29 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_bottom">
+      <origin xyz="0.143 0 -0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.068 0.01" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.18 0.23 0.29 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_side_0">
+      <origin xyz="0.143 0.027 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.01 0.044" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.18 0.23 0.29 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_side_1">
+      <origin xyz="0.143 -0.027 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.01 0.044" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.18 0.23 0.29 1" />
+        </material>
+      </visual>
+    <visual name="travel_scale">
+      <origin xyz="0.152 0 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.01 0.004" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <collision name="pivot_hub">
+      <geometry>
+        <cylinder radius="0.04" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="upper_thrust_plate">
+      <origin xyz="0 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_top">
+      <origin xyz="0.143 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.068 0.01" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_bottom">
+      <origin xyz="0.143 0 -0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.068 0.01" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_side_0">
+      <origin xyz="0.143 0.027 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.01 0.044" />
+        </geometry>
+      </collision>
+    <collision name="sleeve_side_1">
+      <origin xyz="0.143 -0.027 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.215 0.01 0.044" />
+        </geometry>
+      </collision>
+    <collision name="travel_scale">
+      <origin xyz="0.152 0 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.01 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="middle_slide">
+    <visual name="slide_bar">
+      <origin xyz="0.118 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.278 0.032 0.022" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="upper_wear_pad">
+      <origin xyz="0.06 0 0.0135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.014 0.007" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lower_wear_pad">
+      <origin xyz="0.06 0 -0.0135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.014 0.007" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_mount_bridge">
+      <origin xyz="0.246 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.07 0.026" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="pin_cheek_0">
+      <origin xyz="0.277 0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.012 0.052" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.18 0.23 0.29 1" />
+        </material>
+      </visual>
+    <visual name="pin_cheek_1">
+      <origin xyz="0.277 -0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.012 0.052" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.18 0.23 0.29 1" />
+        </material>
+      </visual>
+    <visual name="fork_pin">
+      <origin xyz="0.28 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.078" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="pin_cap_0">
+      <origin xyz="0.28 0.042 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="pin_cap_1">
+      <origin xyz="0.28 -0.042 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="slide_stop">
+      <origin xyz="0.183 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.054 0.034" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="0.95 0.38 0.1 1" />
+        </material>
+      </visual>
+    <collision name="slide_bar">
+      <origin xyz="0.118 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.278 0.032 0.022" />
+        </geometry>
+      </collision>
+    <collision name="upper_wear_pad">
+      <origin xyz="0.06 0 0.0135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.014 0.007" />
+        </geometry>
+      </collision>
+    <collision name="lower_wear_pad">
+      <origin xyz="0.06 0 -0.0135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.014 0.007" />
+        </geometry>
+      </collision>
+    <collision name="fork_mount_bridge">
+      <origin xyz="0.246 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.07 0.026" />
+        </geometry>
+      </collision>
+    <collision name="pin_cheek_0">
+      <origin xyz="0.277 0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.012 0.052" />
+        </geometry>
+      </collision>
+    <collision name="pin_cheek_1">
+      <origin xyz="0.277 -0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.012 0.052" />
+        </geometry>
+      </collision>
+    <collision name="fork_pin">
+      <origin xyz="0.28 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.078" />
+        </geometry>
+      </collision>
+    <collision name="pin_cap_0">
+      <origin xyz="0.28 0.042 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="pin_cap_1">
+      <origin xyz="0.28 -0.042 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="slide_stop">
+      <origin xyz="0.183 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.054 0.034" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tool_fork">
+    <visual name="fork_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.03" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_tang">
+      <origin xyz="0.031 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.042 0.024 0.016" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="0.95 0.38 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_bridge">
+      <origin xyz="0.06 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.062 0.014" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="0.95 0.38 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_tine_0">
+      <origin xyz="0.108 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.011 0.012" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="0.95 0.38 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_tine_1">
+      <origin xyz="0.108 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.011 0.012" />
+        </geometry>
+      <material name="safety_orange">
+        <color rgba="0.95 0.38 0.1 1" />
+        </material>
+      </visual>
+    <visual name="tine_tip_0">
+      <origin xyz="0.15 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.012" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="tine_tip_1">
+      <origin xyz="0.15 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.012" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="fork_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="fork_tang">
+      <origin xyz="0.031 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.042 0.024 0.016" />
+        </geometry>
+      </collision>
+    <collision name="fork_bridge">
+      <origin xyz="0.06 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.062 0.014" />
+        </geometry>
+      </collision>
+    <collision name="fork_tine_0">
+      <origin xyz="0.108 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.011 0.012" />
+        </geometry>
+      </collision>
+    <collision name="fork_tine_1">
+      <origin xyz="0.108 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.011 0.012" />
+        </geometry>
+      </collision>
+    <collision name="tine_tip_0">
+      <origin xyz="0.15 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="tine_tip_1">
+      <origin xyz="0.15 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_hinge" type="revolute">
+    <origin xyz="0 0 0.06" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="swing_carriage" />
+    <axis xyz="0 0 1" />
+    <limit effort="20" velocity="2" lower="-2.0944" upper="2.0944" />
+    </joint>
+  <joint name="middle_slide" type="prismatic">
+    <origin xyz="0.075 0 0" rpy="0 0 0" />
+    <parent link="swing_carriage" />
+    <child link="middle_slide" />
+    <axis xyz="1 0 0" />
+    <limit effort="60" velocity="0.25" lower="0" upper="0.1" />
+    </joint>
+  <joint name="fork_pin" type="revolute">
+    <origin xyz="0.28 0 0" rpy="0 0 0" />
+    <parent link="middle_slide" />
+    <child link="tool_fork" />
+    <axis xyz="0 1 0" />
+    <limit effort="6" velocity="3" lower="-1.309" upper="1.309" />
+    </joint>
+  </robot>

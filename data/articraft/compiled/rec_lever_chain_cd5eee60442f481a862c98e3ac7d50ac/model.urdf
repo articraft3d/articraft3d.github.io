@@ -1,0 +1,510 @@
+<robot name="multi_link_flat_bar_lever">
+  <material name="blued_steel">
+    <color rgba="0.05 0.065 0.075 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.02 0.022 0.024 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.62 0.62 0.58 1" />
+    </material>
+  <material name="drive_red">
+    <color rgba="0.78 0.08 0.04 1" />
+    </material>
+  <material name="coupler_orange">
+    <color rgba="0.95 0.42 0.05 1" />
+    </material>
+  <material name="follower_blue">
+    <color rgba="0.08 0.23 0.72 1" />
+    </material>
+  <material name="output_green">
+    <color rgba="0.1 0.48 0.2 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.015 0.015 0.015 1" />
+    </material>
+  <link name="base">
+    <visual name="base_plate">
+      <origin xyz="0.3 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.24 0.026" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.05 0.065 0.075 1" />
+        </material>
+      </visual>
+    <visual name="pivot_cheek_0">
+      <origin xyz="0 -0.052 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.02 0.07" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.05 0.065 0.075 1" />
+        </material>
+      </visual>
+    <visual name="pivot_cheek_1">
+      <origin xyz="0 0.052 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.02 0.07" />
+        </geometry>
+      <material name="blued_steel">
+        <color rgba="0.05 0.065 0.075 1" />
+        </material>
+      </visual>
+    <visual name="ground_pin">
+      <origin xyz="0 0 0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.092" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.02 0.022 0.024 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_0_0">
+      <origin xyz="-0.03 -0.085 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_0_1">
+      <origin xyz="-0.03 0.085 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_1_0">
+      <origin xyz="0.63 -0.085 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_1_1">
+      <origin xyz="0.63 0.085 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0.3 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.24 0.026" />
+        </geometry>
+      </collision>
+    <collision name="pivot_cheek_0">
+      <origin xyz="0 -0.052 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.02 0.07" />
+        </geometry>
+      </collision>
+    <collision name="pivot_cheek_1">
+      <origin xyz="0 0.052 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.02 0.07" />
+        </geometry>
+      </collision>
+    <collision name="ground_pin">
+      <origin xyz="0 0 0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.092" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_0_0">
+      <origin xyz="-0.03 -0.085 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_0_1">
+      <origin xyz="-0.03 0.085 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_1_0">
+      <origin xyz="0.63 -0.085 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="mount_bolt_1_1">
+      <origin xyz="0.63 0.085 0.029" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="drive_lever">
+    <visual name="bar_span">
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.06 0.012" />
+        </geometry>
+      <material name="drive_red">
+        <color rgba="0.78 0.08 0.04 1" />
+        </material>
+      </visual>
+    <visual name="proximal_eye">
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      <material name="drive_red">
+        <color rgba="0.78 0.08 0.04 1" />
+        </material>
+      </visual>
+    <visual name="distal_eye">
+      <origin xyz="0.32 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      <material name="drive_red">
+        <color rgba="0.78 0.08 0.04 1" />
+        </material>
+      </visual>
+    <visual name="distal_pin">
+      <origin xyz="0.32 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.038" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.02 0.022 0.024 1" />
+        </material>
+      </visual>
+    <visual name="pin_cap">
+      <origin xyz="0.32 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0155" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <visual name="handle_shank">
+      <origin xyz="-0.092 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.0468 0.012" />
+        </geometry>
+      <material name="drive_red">
+        <color rgba="0.78 0.08 0.04 1" />
+        </material>
+      </visual>
+    <visual name="handle_grip">
+      <origin xyz="-0.172 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.105" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.015 0.015 0.015 1" />
+        </material>
+      </visual>
+    <collision name="bar_span">
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.06 0.012" />
+        </geometry>
+      </collision>
+    <collision name="proximal_eye">
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="distal_eye">
+      <origin xyz="0.32 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="distal_pin">
+      <origin xyz="0.32 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.038" />
+        </geometry>
+      </collision>
+    <collision name="pin_cap">
+      <origin xyz="0.32 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0155" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="handle_shank">
+      <origin xyz="-0.092 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.0468 0.012" />
+        </geometry>
+      </collision>
+    <collision name="handle_grip">
+      <origin xyz="-0.172 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.105" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="coupler_bar">
+    <visual name="bar_span">
+      <origin xyz="0.135 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.06 0.012" />
+        </geometry>
+      <material name="coupler_orange">
+        <color rgba="0.95 0.42 0.05 1" />
+        </material>
+      </visual>
+    <visual name="proximal_eye">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      <material name="coupler_orange">
+        <color rgba="0.95 0.42 0.05 1" />
+        </material>
+      </visual>
+    <visual name="distal_eye">
+      <origin xyz="0.27 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      <material name="coupler_orange">
+        <color rgba="0.95 0.42 0.05 1" />
+        </material>
+      </visual>
+    <visual name="distal_pin">
+      <origin xyz="0.27 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.038" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.02 0.022 0.024 1" />
+        </material>
+      </visual>
+    <visual name="pin_cap">
+      <origin xyz="0.27 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0155" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <collision name="bar_span">
+      <origin xyz="0.135 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.06 0.012" />
+        </geometry>
+      </collision>
+    <collision name="proximal_eye">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="distal_eye">
+      <origin xyz="0.27 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="distal_pin">
+      <origin xyz="0.27 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.038" />
+        </geometry>
+      </collision>
+    <collision name="pin_cap">
+      <origin xyz="0.27 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0155" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="follower_bar">
+    <visual name="bar_span">
+      <origin xyz="0.125 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.06 0.012" />
+        </geometry>
+      <material name="follower_blue">
+        <color rgba="0.08 0.23 0.72 1" />
+        </material>
+      </visual>
+    <visual name="proximal_eye">
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      <material name="follower_blue">
+        <color rgba="0.08 0.23 0.72 1" />
+        </material>
+      </visual>
+    <visual name="distal_eye">
+      <origin xyz="0.25 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      <material name="follower_blue">
+        <color rgba="0.08 0.23 0.72 1" />
+        </material>
+      </visual>
+    <visual name="distal_pin">
+      <origin xyz="0.25 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.038" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.02 0.022 0.024 1" />
+        </material>
+      </visual>
+    <visual name="pin_cap">
+      <origin xyz="0.25 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0155" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.62 0.58 1" />
+        </material>
+      </visual>
+    <collision name="bar_span">
+      <origin xyz="0.125 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.06 0.012" />
+        </geometry>
+      </collision>
+    <collision name="proximal_eye">
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="distal_eye">
+      <origin xyz="0.25 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="distal_pin">
+      <origin xyz="0.25 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.038" />
+        </geometry>
+      </collision>
+    <collision name="pin_cap">
+      <origin xyz="0.25 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0155" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="output_lever">
+    <visual name="bar_span">
+      <origin xyz="0.15 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.06 0.012" />
+        </geometry>
+      <material name="output_green">
+        <color rgba="0.1 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="proximal_eye">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      <material name="output_green">
+        <color rgba="0.1 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="distal_eye">
+      <origin xyz="0.3 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      <material name="output_green">
+        <color rgba="0.1 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="output_tip">
+      <origin xyz="0.352 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.0492 0.012" />
+        </geometry>
+      <material name="output_green">
+        <color rgba="0.1 0.48 0.2 1" />
+        </material>
+      </visual>
+    <visual name="output_grip">
+      <origin xyz="0.42 0 0.018" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.09" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.015 0.015 0.015 1" />
+        </material>
+      </visual>
+    <collision name="bar_span">
+      <origin xyz="0.15 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.06 0.012" />
+        </geometry>
+      </collision>
+    <collision name="proximal_eye">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="distal_eye">
+      <origin xyz="0.3 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="output_tip">
+      <origin xyz="0.352 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.0492 0.012" />
+        </geometry>
+      </collision>
+    <collision name="output_grip">
+      <origin xyz="0.42 0 0.018" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.09" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_drive" type="revolute">
+    <origin xyz="0 0 0.064" rpy="0 0 0.191986" />
+    <parent link="base" />
+    <child link="drive_lever" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="2.4" lower="-0.610865" upper="1.0821" />
+    </joint>
+  <joint name="drive_to_coupler" type="revolute">
+    <origin xyz="0.32 0 0" rpy="0 0 0.663225" />
+    <parent link="drive_lever" />
+    <child link="coupler_bar" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="2" lower="-1.22173" upper="1.22173" />
+    </joint>
+  <joint name="coupler_to_follower" type="revolute">
+    <origin xyz="0.27 0 0" rpy="0 0 -1.01229" />
+    <parent link="coupler_bar" />
+    <child link="follower_bar" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="2" lower="-1.39626" upper="1.13446" />
+    </joint>
+  <joint name="follower_to_output" type="revolute">
+    <origin xyz="0.25 0 0" rpy="0 0 0.733038" />
+    <parent link="follower_bar" />
+    <child link="output_lever" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="2" lower="-1.0472" upper="1.39626" />
+    </joint>
+  </robot>

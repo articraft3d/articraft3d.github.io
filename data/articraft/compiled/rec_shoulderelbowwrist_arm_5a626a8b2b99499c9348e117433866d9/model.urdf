@@ -1,0 +1,481 @@
+<robot name="bench_robot_arm">
+  <link name="pedestal">
+    <visual name="bench_plate">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.34 0.03" />
+        </geometry>
+      <material name="mat_deep_graphite">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_column">
+      <origin xyz="0 0 0.155" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.25" />
+        </geometry>
+      <material name="mat_deep_graphite">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_ring">
+      <origin xyz="0 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.032" />
+        </geometry>
+      <material name="mat_dark_joint">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_cap">
+      <origin xyz="0 0 0.288" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.044" />
+        </geometry>
+      <material name="mat_machined_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_0">
+      <origin xyz="0.155 0.115 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      <material name="mat_machined_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_1">
+      <origin xyz="0.155 -0.115 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      <material name="mat_machined_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_2">
+      <origin xyz="-0.155 0.115 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      <material name="mat_machined_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_3">
+      <origin xyz="-0.155 -0.115 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      <material name="mat_machined_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <collision name="bench_plate">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.34 0.03" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_column">
+      <origin xyz="0 0 0.155" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.25" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing_ring">
+      <origin xyz="0 0 0.046" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_cap">
+      <origin xyz="0 0 0.288" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.044" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_0">
+      <origin xyz="0.155 0.115 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_1">
+      <origin xyz="0.155 -0.115 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_2">
+      <origin xyz="-0.155 0.115 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="base_bolt_3">
+      <origin xyz="-0.155 -0.115 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_arm">
+    <visual name="shoulder_turntable">
+      <origin xyz="0 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.086" />
+        </geometry>
+      <material name="mat_machined_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_cross_axis">
+      <origin xyz="0 0 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.082" length="0.18" />
+        </geometry>
+      <material name="mat_dark_joint">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <visual name="upper_side_0">
+      <origin xyz="0.31 0.077 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.555 0.036 0.06" />
+        </geometry>
+      <material name="mat_robot_blue">
+        <color rgba="0.05 0.22 0.72 1" />
+        </material>
+      </visual>
+    <visual name="upper_side_1">
+      <origin xyz="0.31 -0.077 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.555 0.036 0.06" />
+        </geometry>
+      <material name="mat_robot_blue">
+        <color rgba="0.05 0.22 0.72 1" />
+        </material>
+      </visual>
+    <visual name="upper_root_bridge">
+      <origin xyz="0.125 0 0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.155 0.05" />
+        </geometry>
+      <material name="mat_robot_blue">
+        <color rgba="0.05 0.22 0.72 1" />
+        </material>
+      </visual>
+    <visual name="elbow_yoke_0">
+      <origin xyz="0.62 0.075 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.076" length="0.042" />
+        </geometry>
+      <material name="mat_dark_joint">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <visual name="elbow_cap_screw_0">
+      <origin xyz="0.62 0.101 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.01" />
+        </geometry>
+      <material name="mat_machined_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="elbow_yoke_1">
+      <origin xyz="0.62 -0.075 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.076" length="0.042" />
+        </geometry>
+      <material name="mat_dark_joint">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <visual name="elbow_cap_screw_1">
+      <origin xyz="0.62 -0.101 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.01" />
+        </geometry>
+      <material name="mat_machined_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <collision name="shoulder_turntable">
+      <origin xyz="0 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.086" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_cross_axis">
+      <origin xyz="0 0 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.082" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="upper_side_0">
+      <origin xyz="0.31 0.077 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.555 0.036 0.06" />
+        </geometry>
+      </collision>
+    <collision name="upper_side_1">
+      <origin xyz="0.31 -0.077 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.555 0.036 0.06" />
+        </geometry>
+      </collision>
+    <collision name="upper_root_bridge">
+      <origin xyz="0.125 0 0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.155 0.05" />
+        </geometry>
+      </collision>
+    <collision name="elbow_yoke_0">
+      <origin xyz="0.62 0.075 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.076" length="0.042" />
+        </geometry>
+      </collision>
+    <collision name="elbow_cap_screw_0">
+      <origin xyz="0.62 0.101 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="elbow_yoke_1">
+      <origin xyz="0.62 -0.075 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.076" length="0.042" />
+        </geometry>
+      </collision>
+    <collision name="elbow_cap_screw_1">
+      <origin xyz="0.62 -0.101 0.095" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="forearm">
+    <visual name="elbow_center_lug">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.108" />
+        </geometry>
+      <material name="mat_machined_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="forearm_web">
+      <origin xyz="0.245 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.064 0.056" />
+        </geometry>
+      <material name="mat_robot_blue">
+        <color rgba="0.05 0.22 0.72 1" />
+        </material>
+      </visual>
+    <visual name="forearm_rib_0">
+      <origin xyz="0.27 0.047 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.03 0.04" />
+        </geometry>
+      <material name="mat_robot_blue">
+        <color rgba="0.05 0.22 0.72 1" />
+        </material>
+      </visual>
+    <visual name="forearm_rib_1">
+      <origin xyz="0.27 -0.047 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.03 0.04" />
+        </geometry>
+      <material name="mat_robot_blue">
+        <color rgba="0.05 0.22 0.72 1" />
+        </material>
+      </visual>
+    <visual name="wrist_socket">
+      <origin xyz="0.46 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.063" length="0.08" />
+        </geometry>
+      <material name="mat_dark_joint">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <visual name="wrist_socket_bridge">
+      <origin xyz="0.43 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.135 0.038" />
+        </geometry>
+      <material name="mat_robot_blue">
+        <color rgba="0.05 0.22 0.72 1" />
+        </material>
+      </visual>
+    <collision name="elbow_center_lug">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.108" />
+        </geometry>
+      </collision>
+    <collision name="forearm_web">
+      <origin xyz="0.245 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.064 0.056" />
+        </geometry>
+      </collision>
+    <collision name="forearm_rib_0">
+      <origin xyz="0.27 0.047 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.03 0.04" />
+        </geometry>
+      </collision>
+    <collision name="forearm_rib_1">
+      <origin xyz="0.27 -0.047 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.03 0.04" />
+        </geometry>
+      </collision>
+    <collision name="wrist_socket">
+      <origin xyz="0.46 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.063" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="wrist_socket_bridge">
+      <origin xyz="0.43 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.135 0.038" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist">
+    <visual name="wrist_cartridge">
+      <origin xyz="0.075 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.15" />
+        </geometry>
+      <material name="mat_dark_joint">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <visual name="tool_flange">
+      <origin xyz="0.166 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.036" />
+        </geometry>
+      <material name="mat_machined_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="flange_index_tab">
+      <origin xyz="0.189 0 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.018 0.048" />
+        </geometry>
+      <material name="mat_black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_0_0">
+      <origin xyz="0.188 -0.044 -0.044" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.014" />
+        </geometry>
+      <material name="mat_dark_joint">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_0_1">
+      <origin xyz="0.188 -0.044 0.044" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.014" />
+        </geometry>
+      <material name="mat_dark_joint">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_1_0">
+      <origin xyz="0.188 0.044 -0.044" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.014" />
+        </geometry>
+      <material name="mat_dark_joint">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_1_1">
+      <origin xyz="0.188 0.044 0.044" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.014" />
+        </geometry>
+      <material name="mat_dark_joint">
+        <color rgba="0.015 0.018 0.022 1" />
+        </material>
+      </visual>
+    <collision name="wrist_cartridge">
+      <origin xyz="0.075 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.15" />
+        </geometry>
+      </collision>
+    <collision name="tool_flange">
+      <origin xyz="0.166 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.036" />
+        </geometry>
+      </collision>
+    <collision name="flange_index_tab">
+      <origin xyz="0.189 0 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.018 0.048" />
+        </geometry>
+      </collision>
+    <collision name="flange_bolt_0_0">
+      <origin xyz="0.188 -0.044 -0.044" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="flange_bolt_0_1">
+      <origin xyz="0.188 -0.044 0.044" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="flange_bolt_1_0">
+      <origin xyz="0.188 0.044 -0.044" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="flange_bolt_1_1">
+      <origin xyz="0.188 0.044 0.044" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shoulder_yaw" type="revolute">
+    <origin xyz="0 0 0.31" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="upper_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="1.8" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="elbow" type="revolute">
+    <origin xyz="0.62 0 0.095" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="forearm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="85" velocity="1.5" lower="-1.25" upper="1.35" />
+    </joint>
+  <joint name="wrist_roll" type="revolute">
+    <origin xyz="0.5 0 0" rpy="0 0 0" />
+    <parent link="forearm" />
+    <child link="wrist" />
+    <axis xyz="1 0 0" />
+    <limit effort="30" velocity="3.5" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

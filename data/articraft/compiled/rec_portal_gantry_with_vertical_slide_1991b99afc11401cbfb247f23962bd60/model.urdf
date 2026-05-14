@@ -1,0 +1,258 @@
+<robot name="compact_service_portal">
+  <link name="frame">
+    <visual name="floor_plinth">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="1.22 0.28 0.06" />
+        </geometry>
+      <material name="powder_coated_dark_frame">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="upright_negative">
+      <origin xyz="-0.55 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.14 0.78" />
+        </geometry>
+      <material name="powder_coated_dark_frame">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="upright_positive">
+      <origin xyz="0.55 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.14 0.78" />
+        </geometry>
+      <material name="powder_coated_dark_frame">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_beam">
+      <origin xyz="0 0 0.88" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.16 0.08" />
+        </geometry>
+      <material name="powder_coated_dark_frame">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lower_rail">
+      <origin xyz="0 -0.02 0.4" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="1.08" />
+        </geometry>
+      <material name="brushed_steel_rails">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="upper_rail">
+      <origin xyz="0 -0.02 0.64" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="1.08" />
+        </geometry>
+      <material name="brushed_steel_rails">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <collision name="floor_plinth">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="1.22 0.28 0.06" />
+        </geometry>
+      </collision>
+    <collision name="upright_negative">
+      <origin xyz="-0.55 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.14 0.78" />
+        </geometry>
+      </collision>
+    <collision name="upright_positive">
+      <origin xyz="0.55 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.14 0.78" />
+        </geometry>
+      </collision>
+    <collision name="top_beam">
+      <origin xyz="0 0 0.88" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.16 0.08" />
+        </geometry>
+      </collision>
+    <collision name="lower_rail">
+      <origin xyz="0 -0.02 0.4" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="1.08" />
+        </geometry>
+      </collision>
+    <collision name="upper_rail">
+      <origin xyz="0 -0.02 0.64" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="1.08" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carriage">
+    <visual name="carriage_plate">
+      <geometry>
+        <box size="0.46 0.07 0.36" />
+        </geometry>
+      <material name="blue_carriage_casting">
+        <color rgba="0.05 0.22 0.42 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing">
+      <origin xyz="0 -0.0525 -0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.035 0.05" />
+        </geometry>
+      <material name="black_linear_bearings">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing">
+      <origin xyz="0 -0.0525 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.035 0.05" />
+        </geometry>
+      <material name="black_linear_bearings">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="front_recess">
+      <origin xyz="0 0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.006 0.3" />
+        </geometry>
+      <material name="shadowed_recess">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="guide_0">
+      <origin xyz="-0.17 0.05 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.03 0.33" />
+        </geometry>
+      <material name="black_linear_bearings">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="guide_1">
+      <origin xyz="0.17 0.05 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.03 0.33" />
+        </geometry>
+      <material name="black_linear_bearings">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="carriage_plate">
+      <geometry>
+        <box size="0.46 0.07 0.36" />
+        </geometry>
+      </collision>
+    <collision name="lower_bearing">
+      <origin xyz="0 -0.0525 -0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.035 0.05" />
+        </geometry>
+      </collision>
+    <collision name="upper_bearing">
+      <origin xyz="0 -0.0525 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.035 0.05" />
+        </geometry>
+      </collision>
+    <collision name="front_recess">
+      <origin xyz="0 0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.006 0.3" />
+        </geometry>
+      </collision>
+    <collision name="guide_0">
+      <origin xyz="-0.17 0.05 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.03 0.33" />
+        </geometry>
+      </collision>
+    <collision name="guide_1">
+      <origin xyz="0.17 0.05 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.025 0.03 0.33" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="stage">
+    <visual name="stage_panel">
+      <geometry>
+        <box size="0.23 0.035 0.2" />
+        </geometry>
+      <material name="safety_orange_lift_stage">
+        <color rgba="0.95 0.45 0.08 1" />
+        </material>
+      </visual>
+    <visual name="service_plate">
+      <origin xyz="0 0.0235 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.012 0.15" />
+        </geometry>
+      <material name="dark_wear_strips">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="wear_strip_0">
+      <origin xyz="-0.092 0.0365 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.014 0.18" />
+        </geometry>
+      <material name="dark_wear_strips">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <visual name="wear_strip_1">
+      <origin xyz="0.092 0.0365 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.014 0.18" />
+        </geometry>
+      <material name="dark_wear_strips">
+        <color rgba="0.04 0.045 0.05 1" />
+        </material>
+      </visual>
+    <collision name="stage_panel">
+      <geometry>
+        <box size="0.23 0.035 0.2" />
+        </geometry>
+      </collision>
+    <collision name="service_plate">
+      <origin xyz="0 0.0235 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.012 0.15" />
+        </geometry>
+      </collision>
+    <collision name="wear_strip_0">
+      <origin xyz="-0.092 0.0365 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.014 0.18" />
+        </geometry>
+      </collision>
+    <collision name="wear_strip_1">
+      <origin xyz="0.092 0.0365 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.014 0.18" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="frame_to_carriage" type="prismatic">
+    <origin xyz="-0.23 0.075 0.52" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="180" velocity="0.3" lower="0" upper="0.46" />
+    </joint>
+  <joint name="carriage_to_stage" type="prismatic">
+    <origin xyz="0 0.0585 -0.055" rpy="0 0 0" />
+    <parent link="carriage" />
+    <child link="stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="90" velocity="0.2" lower="0" upper="0.16" />
+    </joint>
+  </robot>

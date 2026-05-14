@@ -1,0 +1,499 @@
+<robot name="saddle_body_multi_axis_wrist">
+  <material name="dark_cast_housing">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <material name="black_bearing_rubber">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="blue_anodized_yaw">
+    <color rgba="0.08 0.2 0.42 1" />
+    </material>
+  <material name="brushed_pitch_steel">
+    <color rgba="0.52 0.55 0.56 1" />
+    </material>
+  <material name="machined_roll_cartridge">
+    <color rgba="0.78 0.75 0.68 1" />
+    </material>
+  <material name="amber_index_mark">
+    <color rgba="0.95 0.55 0.12 1" />
+    </material>
+  <link name="housing">
+    <visual name="grounded_base">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.42 0.08" />
+        </geometry>
+      <material name="dark_cast_housing">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_cap">
+      <origin xyz="0 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.1" />
+        </geometry>
+      <material name="dark_cast_housing">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="fixed_bearing_shadow">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.08" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="base_bearing_ring">
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_bearing_ring.obj" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="mount_foot_0">
+      <origin xyz="-0.235 -0.165 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.05 0.02" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="mount_foot_1">
+      <origin xyz="-0.235 0.165 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.05 0.02" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="mount_foot_2">
+      <origin xyz="0.235 -0.165 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.05 0.02" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="mount_foot_3">
+      <origin xyz="0.235 0.165 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.05 0.02" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="grounded_base">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.42 0.08" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_cap">
+      <origin xyz="0 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.205" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="fixed_bearing_shadow">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="base_bearing_ring">
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_bearing_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="mount_foot_0">
+      <origin xyz="-0.235 -0.165 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.05 0.02" />
+        </geometry>
+      </collision>
+    <collision name="mount_foot_1">
+      <origin xyz="-0.235 0.165 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.05 0.02" />
+        </geometry>
+      </collision>
+    <collision name="mount_foot_2">
+      <origin xyz="0.235 -0.165 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.05 0.02" />
+        </geometry>
+      </collision>
+    <collision name="mount_foot_3">
+      <origin xyz="0.235 0.165 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.05 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="yaw_stage">
+    <visual name="yaw_bearing_plate">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.134" length="0.05" />
+        </geometry>
+      <material name="blue_anodized_yaw">
+        <color rgba="0.08 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="yaw_neck">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.096" length="0.06" />
+        </geometry>
+      <material name="blue_anodized_yaw">
+        <color rgba="0.08 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="saddle_floor">
+      <origin xyz="0.095 0 0.0725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.27 0.305 0.045" />
+        </geometry>
+      <material name="blue_anodized_yaw">
+        <color rgba="0.08 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="rear_saddle_web">
+      <origin xyz="-0.015 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.085 0.155" />
+        </geometry>
+      <material name="blue_anodized_yaw">
+        <color rgba="0.08 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="pitch_cheek_0">
+      <origin xyz="0.16 -0.125 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.045 0.24" />
+        </geometry>
+      <material name="blue_anodized_yaw">
+        <color rgba="0.08 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="pitch_cheek_0_bearing_cup">
+      <origin xyz="0.16 -0.1025 0.17" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pitch_cheek_0_bearing_cup.obj" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="pitch_cheek_1">
+      <origin xyz="0.16 0.125 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.045 0.24" />
+        </geometry>
+      <material name="blue_anodized_yaw">
+        <color rgba="0.08 0.2 0.42 1" />
+        </material>
+      </visual>
+    <visual name="pitch_cheek_1_bearing_cup">
+      <origin xyz="0.16 0.1025 0.17" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pitch_cheek_1_bearing_cup.obj" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="yaw_bearing_plate">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.134" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="yaw_neck">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.096" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="saddle_floor">
+      <origin xyz="0.095 0 0.0725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.27 0.305 0.045" />
+        </geometry>
+      </collision>
+    <collision name="rear_saddle_web">
+      <origin xyz="-0.015 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.085 0.155" />
+        </geometry>
+      </collision>
+    <collision name="pitch_cheek_0">
+      <origin xyz="0.16 -0.125 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.045 0.24" />
+        </geometry>
+      </collision>
+    <collision name="pitch_cheek_0_bearing_cup">
+      <origin xyz="0.16 -0.1025 0.17" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pitch_cheek_0_bearing_cup.obj" />
+        </geometry>
+      </collision>
+    <collision name="pitch_cheek_1">
+      <origin xyz="0.16 0.125 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.145 0.045 0.24" />
+        </geometry>
+      </collision>
+    <collision name="pitch_cheek_1_bearing_cup">
+      <origin xyz="0.16 0.1025 0.17" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pitch_cheek_1_bearing_cup.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pitch_support">
+    <visual name="pitch_trunnion">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.205" />
+        </geometry>
+      <material name="brushed_pitch_steel">
+        <color rgba="0.52 0.55 0.56 1" />
+        </material>
+      </visual>
+    <visual name="pitch_saddle_body">
+      <origin xyz="0.06 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.092 0.082" />
+        </geometry>
+      <material name="brushed_pitch_steel">
+        <color rgba="0.52 0.55 0.56 1" />
+        </material>
+      </visual>
+    <visual name="tapered_roll_neck">
+      <origin xyz="0.142 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.118" />
+        </geometry>
+      <material name="brushed_pitch_steel">
+        <color rgba="0.52 0.55 0.56 1" />
+        </material>
+      </visual>
+    <visual name="roll_side_rail_0">
+      <origin xyz="0.165 -0.058 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.024 0.064" />
+        </geometry>
+      <material name="brushed_pitch_steel">
+        <color rgba="0.52 0.55 0.56 1" />
+        </material>
+      </visual>
+    <visual name="roll_side_rail_1">
+      <origin xyz="0.165 0.058 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.024 0.064" />
+        </geometry>
+      <material name="brushed_pitch_steel">
+        <color rgba="0.52 0.55 0.56 1" />
+        </material>
+      </visual>
+    <visual name="roll_bearing_ring">
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_bearing_ring.obj" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="top_roll_bridge">
+      <origin xyz="0.195 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.014" />
+        </geometry>
+      <material name="brushed_pitch_steel">
+        <color rgba="0.52 0.55 0.56 1" />
+        </material>
+      </visual>
+    <visual name="top_roll_guide">
+      <origin xyz="0.225 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.03 0.01" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="roll_guide_0">
+      <origin xyz="0.225 -0.043 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.01 0.026" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="roll_guide_1">
+      <origin xyz="0.225 0.043 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.01 0.026" />
+        </geometry>
+      <material name="black_bearing_rubber">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <collision name="pitch_trunnion">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.205" />
+        </geometry>
+      </collision>
+    <collision name="pitch_saddle_body">
+      <origin xyz="0.06 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.092 0.082" />
+        </geometry>
+      </collision>
+    <collision name="tapered_roll_neck">
+      <origin xyz="0.142 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.118" />
+        </geometry>
+      </collision>
+    <collision name="roll_side_rail_0">
+      <origin xyz="0.165 -0.058 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.024 0.064" />
+        </geometry>
+      </collision>
+    <collision name="roll_side_rail_1">
+      <origin xyz="0.165 0.058 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.172 0.024 0.064" />
+        </geometry>
+      </collision>
+    <collision name="roll_bearing_ring">
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/roll_bearing_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_roll_bridge">
+      <origin xyz="0.195 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.014" />
+        </geometry>
+      </collision>
+    <collision name="top_roll_guide">
+      <origin xyz="0.225 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.03 0.01" />
+        </geometry>
+      </collision>
+    <collision name="roll_guide_0">
+      <origin xyz="0.225 -0.043 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.01 0.026" />
+        </geometry>
+      </collision>
+    <collision name="roll_guide_1">
+      <origin xyz="0.225 0.043 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.01 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="roll_cartridge">
+    <visual name="roll_barrel">
+      <origin xyz="0.063 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.16" />
+        </geometry>
+      <material name="machined_roll_cartridge">
+        <color rgba="0.78 0.75 0.68 1" />
+        </material>
+      </visual>
+    <visual name="output_flange">
+      <origin xyz="0.156 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.03" />
+        </geometry>
+      <material name="machined_roll_cartridge">
+        <color rgba="0.78 0.75 0.68 1" />
+        </material>
+      </visual>
+    <visual name="output_spigot">
+      <origin xyz="0.218 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.094" />
+        </geometry>
+      <material name="machined_roll_cartridge">
+        <color rgba="0.78 0.75 0.68 1" />
+        </material>
+      </visual>
+    <visual name="roll_index_key">
+      <origin xyz="0.105 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.014 0.014" />
+        </geometry>
+      <material name="amber_index_mark">
+        <color rgba="0.95 0.55 0.12 1" />
+        </material>
+      </visual>
+    <collision name="roll_barrel">
+      <origin xyz="0.063 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="output_flange">
+      <origin xyz="0.156 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="output_spigot">
+      <origin xyz="0.218 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.094" />
+        </geometry>
+      </collision>
+    <collision name="roll_index_key">
+      <origin xyz="0.105 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.014 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="housing_to_yaw" type="revolute">
+    <origin xyz="0 0 0.18" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="yaw_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="1.5" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="yaw_to_pitch" type="revolute">
+    <origin xyz="0.16 0 0.17" rpy="0 0 0" />
+    <parent link="yaw_stage" />
+    <child link="pitch_support" />
+    <axis xyz="0 -1 0" />
+    <limit effort="55" velocity="1.2" lower="-0.85" upper="0.85" />
+    </joint>
+  <joint name="pitch_to_roll" type="revolute">
+    <origin xyz="0.225 0 0" rpy="0 0 0" />
+    <parent link="pitch_support" />
+    <child link="roll_cartridge" />
+    <axis xyz="1 0 0" />
+    <limit effort="30" velocity="2.5" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

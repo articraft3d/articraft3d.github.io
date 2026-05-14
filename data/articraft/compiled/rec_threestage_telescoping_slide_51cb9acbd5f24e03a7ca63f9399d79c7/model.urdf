@@ -1,0 +1,617 @@
+<robot name="three_stage_telescoping_slide">
+  <material name="brushed_zinc">
+    <color rgba="0.62 0.65 0.66 1" />
+    </material>
+  <material name="dark_galvanized_steel">
+    <color rgba="0.2 0.22 0.24 1" />
+    </material>
+  <material name="polished_bearing_pads">
+    <color rgba="0.86 0.87 0.84 1" />
+    </material>
+  <material name="black_nylon_stops">
+    <color rgba="0.025 0.025 0.022 1" />
+    </material>
+  <link name="outer_body">
+    <visual name="ground_plate">
+      <origin xyz="0.325 0 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.14 0.01" />
+        </geometry>
+      <material name="dark_galvanized_steel">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="outer_bottom_web">
+      <origin xyz="0.325 0 -0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.65 0.114 0.01" />
+        </geometry>
+      <material name="brushed_zinc">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="outer_side_wall_pos">
+      <origin xyz="0.325 0.053 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.65 0.008 0.06" />
+        </geometry>
+      <material name="brushed_zinc">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="outer_return_lip_pos">
+      <origin xyz="0.325 0.04 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.65 0.02 0.008" />
+        </geometry>
+      <material name="brushed_zinc">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="outer_side_wall_neg">
+      <origin xyz="0.325 -0.053 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.65 0.008 0.06" />
+        </geometry>
+      <material name="brushed_zinc">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="outer_return_lip_neg">
+      <origin xyz="0.325 -0.04 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.65 0.02 0.008" />
+        </geometry>
+      <material name="brushed_zinc">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="outer_stop_55_pos">
+      <origin xyz="0.055 0.063 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.032" />
+        </geometry>
+      <material name="black_nylon_stops">
+        <color rgba="0.025 0.025 0.022 1" />
+        </material>
+      </visual>
+    <visual name="outer_stop_55_neg">
+      <origin xyz="0.055 -0.063 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.032" />
+        </geometry>
+      <material name="black_nylon_stops">
+        <color rgba="0.025 0.025 0.022 1" />
+        </material>
+      </visual>
+    <visual name="outer_stop_595_pos">
+      <origin xyz="0.595 0.063 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.032" />
+        </geometry>
+      <material name="black_nylon_stops">
+        <color rgba="0.025 0.025 0.022 1" />
+        </material>
+      </visual>
+    <visual name="outer_stop_595_neg">
+      <origin xyz="0.595 -0.063 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.032" />
+        </geometry>
+      <material name="black_nylon_stops">
+        <color rgba="0.025 0.025 0.022 1" />
+        </material>
+      </visual>
+    <visual name="mount_screw_80_neg">
+      <origin xyz="0.08 -0.047 -0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="dark_galvanized_steel">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="mount_screw_80_pos">
+      <origin xyz="0.08 0.047 -0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="dark_galvanized_steel">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="mount_screw_570_neg">
+      <origin xyz="0.57 -0.047 -0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="dark_galvanized_steel">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="mount_screw_570_pos">
+      <origin xyz="0.57 0.047 -0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="dark_galvanized_steel">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <collision name="ground_plate">
+      <origin xyz="0.325 0 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.14 0.01" />
+        </geometry>
+      </collision>
+    <collision name="outer_bottom_web">
+      <origin xyz="0.325 0 -0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.65 0.114 0.01" />
+        </geometry>
+      </collision>
+    <collision name="outer_side_wall_pos">
+      <origin xyz="0.325 0.053 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.65 0.008 0.06" />
+        </geometry>
+      </collision>
+    <collision name="outer_return_lip_pos">
+      <origin xyz="0.325 0.04 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.65 0.02 0.008" />
+        </geometry>
+      </collision>
+    <collision name="outer_side_wall_neg">
+      <origin xyz="0.325 -0.053 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.65 0.008 0.06" />
+        </geometry>
+      </collision>
+    <collision name="outer_return_lip_neg">
+      <origin xyz="0.325 -0.04 0.027" rpy="0 0 0" />
+      <geometry>
+        <box size="0.65 0.02 0.008" />
+        </geometry>
+      </collision>
+    <collision name="outer_stop_55_pos">
+      <origin xyz="0.055 0.063 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.032" />
+        </geometry>
+      </collision>
+    <collision name="outer_stop_55_neg">
+      <origin xyz="0.055 -0.063 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.032" />
+        </geometry>
+      </collision>
+    <collision name="outer_stop_595_pos">
+      <origin xyz="0.595 0.063 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.032" />
+        </geometry>
+      </collision>
+    <collision name="outer_stop_595_neg">
+      <origin xyz="0.595 -0.063 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.032" />
+        </geometry>
+      </collision>
+    <collision name="mount_screw_80_neg">
+      <origin xyz="0.08 -0.047 -0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="mount_screw_80_pos">
+      <origin xyz="0.08 0.047 -0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="mount_screw_570_neg">
+      <origin xyz="0.57 -0.047 -0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="mount_screw_570_pos">
+      <origin xyz="0.57 0.047 -0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="middle_section">
+    <visual name="middle_bottom_web">
+      <origin xyz="0.325 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.078 0.007" />
+        </geometry>
+      <material name="brushed_zinc">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="middle_side_wall_pos">
+      <origin xyz="0.325 0.036 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.006 0.037" />
+        </geometry>
+      <material name="brushed_zinc">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="middle_return_lip_pos">
+      <origin xyz="0.325 0.026 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.014 0.006" />
+        </geometry>
+      <material name="brushed_zinc">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="middle_side_wall_neg">
+      <origin xyz="0.325 -0.036 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.006 0.037" />
+        </geometry>
+      <material name="brushed_zinc">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="middle_return_lip_neg">
+      <origin xyz="0.325 -0.026 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.014 0.006" />
+        </geometry>
+      <material name="brushed_zinc">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="outer_bearing_95_pos">
+      <origin xyz="0.095 0.044 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.01 0.012" />
+        </geometry>
+      <material name="polished_bearing_pads">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="outer_bearing_95_neg">
+      <origin xyz="0.095 -0.044 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.01 0.012" />
+        </geometry>
+      <material name="polished_bearing_pads">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="outer_bearing_300_pos">
+      <origin xyz="0.3 0.044 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.01 0.012" />
+        </geometry>
+      <material name="polished_bearing_pads">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="outer_bearing_300_neg">
+      <origin xyz="0.3 -0.044 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.01 0.012" />
+        </geometry>
+      <material name="polished_bearing_pads">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="outer_bearing_520_pos">
+      <origin xyz="0.52 0.044 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.01 0.012" />
+        </geometry>
+      <material name="polished_bearing_pads">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="outer_bearing_520_neg">
+      <origin xyz="0.52 -0.044 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.01 0.012" />
+        </geometry>
+      <material name="polished_bearing_pads">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="middle_stop_50_pos">
+      <origin xyz="0.05 0.044 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.01 0.014" />
+        </geometry>
+      <material name="black_nylon_stops">
+        <color rgba="0.025 0.025 0.022 1" />
+        </material>
+      </visual>
+    <visual name="middle_stop_50_neg">
+      <origin xyz="0.05 -0.044 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.01 0.014" />
+        </geometry>
+      <material name="black_nylon_stops">
+        <color rgba="0.025 0.025 0.022 1" />
+        </material>
+      </visual>
+    <visual name="middle_stop_600_pos">
+      <origin xyz="0.6 0.044 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.01 0.014" />
+        </geometry>
+      <material name="black_nylon_stops">
+        <color rgba="0.025 0.025 0.022 1" />
+        </material>
+      </visual>
+    <visual name="middle_stop_600_neg">
+      <origin xyz="0.6 -0.044 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.01 0.014" />
+        </geometry>
+      <material name="black_nylon_stops">
+        <color rgba="0.025 0.025 0.022 1" />
+        </material>
+      </visual>
+    <collision name="middle_bottom_web">
+      <origin xyz="0.325 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.078 0.007" />
+        </geometry>
+      </collision>
+    <collision name="middle_side_wall_pos">
+      <origin xyz="0.325 0.036 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.006 0.037" />
+        </geometry>
+      </collision>
+    <collision name="middle_return_lip_pos">
+      <origin xyz="0.325 0.026 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.014 0.006" />
+        </geometry>
+      </collision>
+    <collision name="middle_side_wall_neg">
+      <origin xyz="0.325 -0.036 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.006 0.037" />
+        </geometry>
+      </collision>
+    <collision name="middle_return_lip_neg">
+      <origin xyz="0.325 -0.026 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.014 0.006" />
+        </geometry>
+      </collision>
+    <collision name="outer_bearing_95_pos">
+      <origin xyz="0.095 0.044 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.01 0.012" />
+        </geometry>
+      </collision>
+    <collision name="outer_bearing_95_neg">
+      <origin xyz="0.095 -0.044 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.01 0.012" />
+        </geometry>
+      </collision>
+    <collision name="outer_bearing_300_pos">
+      <origin xyz="0.3 0.044 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.01 0.012" />
+        </geometry>
+      </collision>
+    <collision name="outer_bearing_300_neg">
+      <origin xyz="0.3 -0.044 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.01 0.012" />
+        </geometry>
+      </collision>
+    <collision name="outer_bearing_520_pos">
+      <origin xyz="0.52 0.044 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.01 0.012" />
+        </geometry>
+      </collision>
+    <collision name="outer_bearing_520_neg">
+      <origin xyz="0.52 -0.044 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.01 0.012" />
+        </geometry>
+      </collision>
+    <collision name="middle_stop_50_pos">
+      <origin xyz="0.05 0.044 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.01 0.014" />
+        </geometry>
+      </collision>
+    <collision name="middle_stop_50_neg">
+      <origin xyz="0.05 -0.044 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.01 0.014" />
+        </geometry>
+      </collision>
+    <collision name="middle_stop_600_pos">
+      <origin xyz="0.6 0.044 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.01 0.014" />
+        </geometry>
+      </collision>
+    <collision name="middle_stop_600_neg">
+      <origin xyz="0.6 -0.044 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.01 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="inner_section">
+    <visual name="inner_bar">
+      <origin xyz="0.325 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.036 0.022" />
+        </geometry>
+      <material name="brushed_zinc">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="inner_mount_flange">
+      <origin xyz="0.345 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.052 0.006" />
+        </geometry>
+      <material name="brushed_zinc">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="inner_bearing_120_pos">
+      <origin xyz="0.12 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.01" />
+        </geometry>
+      <material name="polished_bearing_pads">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="inner_bearing_120_neg">
+      <origin xyz="0.12 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.01" />
+        </geometry>
+      <material name="polished_bearing_pads">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="inner_bearing_355_pos">
+      <origin xyz="0.355 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.01" />
+        </geometry>
+      <material name="polished_bearing_pads">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="inner_bearing_355_neg">
+      <origin xyz="0.355 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.01" />
+        </geometry>
+      <material name="polished_bearing_pads">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="inner_bearing_565_pos">
+      <origin xyz="0.565 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.01" />
+        </geometry>
+      <material name="polished_bearing_pads">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="inner_bearing_565_neg">
+      <origin xyz="0.565 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.01" />
+        </geometry>
+      <material name="polished_bearing_pads">
+        <color rgba="0.86 0.87 0.84 1" />
+        </material>
+      </visual>
+    <visual name="carriage_screw_95">
+      <origin xyz="0.095 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.004" />
+        </geometry>
+      <material name="dark_galvanized_steel">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="carriage_screw_560">
+      <origin xyz="0.56 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.004" />
+        </geometry>
+      <material name="dark_galvanized_steel">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <collision name="inner_bar">
+      <origin xyz="0.325 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.036 0.022" />
+        </geometry>
+      </collision>
+    <collision name="inner_mount_flange">
+      <origin xyz="0.345 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.052 0.006" />
+        </geometry>
+      </collision>
+    <collision name="inner_bearing_120_pos">
+      <origin xyz="0.12 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.01" />
+        </geometry>
+      </collision>
+    <collision name="inner_bearing_120_neg">
+      <origin xyz="0.12 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.01" />
+        </geometry>
+      </collision>
+    <collision name="inner_bearing_355_pos">
+      <origin xyz="0.355 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.01" />
+        </geometry>
+      </collision>
+    <collision name="inner_bearing_355_neg">
+      <origin xyz="0.355 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.01" />
+        </geometry>
+      </collision>
+    <collision name="inner_bearing_565_pos">
+      <origin xyz="0.565 0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.01" />
+        </geometry>
+      </collision>
+    <collision name="inner_bearing_565_neg">
+      <origin xyz="0.565 -0.025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.01" />
+        </geometry>
+      </collision>
+    <collision name="carriage_screw_95">
+      <origin xyz="0.095 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="carriage_screw_560">
+      <origin xyz="0.56 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="outer_to_middle" type="prismatic">
+    <parent link="outer_body" />
+    <child link="middle_section" />
+    <axis xyz="1 0 0" />
+    <limit effort="180" velocity="0.45" lower="0" upper="0.34" />
+    </joint>
+  <joint name="middle_to_inner" type="prismatic">
+    <parent link="middle_section" />
+    <child link="inner_section" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="0.45" lower="0" upper="0.34" />
+    </joint>
+  </robot>

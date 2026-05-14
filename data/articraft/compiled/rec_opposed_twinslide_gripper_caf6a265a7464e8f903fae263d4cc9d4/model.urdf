@@ -1,0 +1,412 @@
+<robot name="wafer_handling_gripper">
+  <link name="body">
+    <visual name="dense_body">
+      <origin xyz="0 -0.125 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.118 0.08" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="guideway_backbone">
+      <origin xyz="0 -0.086 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.026 0.07" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="upper_guideway">
+      <origin xyz="0 -0.062 0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.46" />
+        </geometry>
+      <material name="satin_ground_steel">
+        <color rgba="0.66 0.68 0.67 1" />
+        </material>
+      </visual>
+    <visual name="lower_guideway">
+      <origin xyz="0 -0.062 0.027" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.46" />
+        </geometry>
+      <material name="satin_ground_steel">
+        <color rgba="0.66 0.68 0.67 1" />
+        </material>
+      </visual>
+    <visual name="guide_end_0">
+      <origin xyz="-0.225 -0.062 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.032 0.084" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="guide_end_1">
+      <origin xyz="0.225 -0.062 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.032 0.084" />
+        </geometry>
+      <material name="dark_anodized_aluminum">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_screw_0">
+      <origin xyz="-0.095 -0.125 0.0815" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      <material name="matte_black_bumper">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="top_screw_1">
+      <origin xyz="0.095 -0.125 0.0815" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      <material name="matte_black_bumper">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <collision name="dense_body">
+      <origin xyz="0 -0.125 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.118 0.08" />
+        </geometry>
+      </collision>
+    <collision name="guideway_backbone">
+      <origin xyz="0 -0.086 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.026 0.07" />
+        </geometry>
+      </collision>
+    <collision name="upper_guideway">
+      <origin xyz="0 -0.062 0.06" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.46" />
+        </geometry>
+      </collision>
+    <collision name="lower_guideway">
+      <origin xyz="0 -0.062 0.027" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.46" />
+        </geometry>
+      </collision>
+    <collision name="guide_end_0">
+      <origin xyz="-0.225 -0.062 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.032 0.084" />
+        </geometry>
+      </collision>
+    <collision name="guide_end_1">
+      <origin xyz="0.225 -0.062 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.032 0.084" />
+        </geometry>
+      </collision>
+    <collision name="top_screw_0">
+      <origin xyz="-0.095 -0.125 0.0815" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="top_screw_1">
+      <origin xyz="0.095 -0.125 0.0815" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="left_jaw">
+    <visual name="slide_plate">
+      <origin xyz="0 -0.04 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.018 0.074" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="upper_top_bearing">
+      <origin xyz="0 -0.0495 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="upper_bottom_bearing">
+      <origin xyz="0 -0.0495 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="lower_top_bearing">
+      <origin xyz="0 -0.0495 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="lower_bottom_bearing">
+      <origin xyz="0 -0.0495 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="finger_root">
+      <origin xyz="0.02 -0.017 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.052 0.06" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="fork_blade">
+      <origin xyz="0.03 0.105 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.292 0.086" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="fork_tip_pad">
+      <origin xyz="0.03 0.233 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.058 0.072" />
+        </geometry>
+      <material name="white_ceramic_contact">
+        <color rgba="0.86 0.88 0.82 1" />
+        </material>
+      </visual>
+    <visual name="inner_contact_face">
+      <origin xyz="0.039 0.23 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.036 0.05" />
+        </geometry>
+      <material name="white_ceramic_contact">
+        <color rgba="0.86 0.88 0.82 1" />
+        </material>
+      </visual>
+    <collision name="slide_plate">
+      <origin xyz="0 -0.04 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.018 0.074" />
+        </geometry>
+      </collision>
+    <collision name="upper_top_bearing">
+      <origin xyz="0 -0.0495 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      </collision>
+    <collision name="upper_bottom_bearing">
+      <origin xyz="0 -0.0495 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      </collision>
+    <collision name="lower_top_bearing">
+      <origin xyz="0 -0.0495 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      </collision>
+    <collision name="lower_bottom_bearing">
+      <origin xyz="0 -0.0495 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      </collision>
+    <collision name="finger_root">
+      <origin xyz="0.02 -0.017 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.052 0.06" />
+        </geometry>
+      </collision>
+    <collision name="fork_blade">
+      <origin xyz="0.03 0.105 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.292 0.086" />
+        </geometry>
+      </collision>
+    <collision name="fork_tip_pad">
+      <origin xyz="0.03 0.233 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.058 0.072" />
+        </geometry>
+      </collision>
+    <collision name="inner_contact_face">
+      <origin xyz="0.039 0.23 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.036 0.05" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="right_jaw">
+    <visual name="slide_plate">
+      <origin xyz="0 -0.04 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.018 0.074" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="upper_top_bearing">
+      <origin xyz="0 -0.0495 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="upper_bottom_bearing">
+      <origin xyz="0 -0.0495 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="lower_top_bearing">
+      <origin xyz="0 -0.0495 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="lower_bottom_bearing">
+      <origin xyz="0 -0.0495 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="finger_root">
+      <origin xyz="-0.02 -0.017 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.052 0.06" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="fork_blade">
+      <origin xyz="-0.03 0.105 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.292 0.086" />
+        </geometry>
+      <material name="black_hardcoat_carriage">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="fork_tip_pad">
+      <origin xyz="-0.03 0.233 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.058 0.072" />
+        </geometry>
+      <material name="white_ceramic_contact">
+        <color rgba="0.86 0.88 0.82 1" />
+        </material>
+      </visual>
+    <visual name="inner_contact_face">
+      <origin xyz="-0.039 0.23 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.036 0.05" />
+        </geometry>
+      <material name="white_ceramic_contact">
+        <color rgba="0.86 0.88 0.82 1" />
+        </material>
+      </visual>
+    <collision name="slide_plate">
+      <origin xyz="0 -0.04 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.018 0.074" />
+        </geometry>
+      </collision>
+    <collision name="upper_top_bearing">
+      <origin xyz="0 -0.0495 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      </collision>
+    <collision name="upper_bottom_bearing">
+      <origin xyz="0 -0.0495 0.051" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      </collision>
+    <collision name="lower_top_bearing">
+      <origin xyz="0 -0.0495 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      </collision>
+    <collision name="lower_bottom_bearing">
+      <origin xyz="0 -0.0495 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.025 0.006" />
+        </geometry>
+      </collision>
+    <collision name="finger_root">
+      <origin xyz="-0.02 -0.017 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.052 0.06" />
+        </geometry>
+      </collision>
+    <collision name="fork_blade">
+      <origin xyz="-0.03 0.105 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.292 0.086" />
+        </geometry>
+      </collision>
+    <collision name="fork_tip_pad">
+      <origin xyz="-0.03 0.233 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.058 0.072" />
+        </geometry>
+      </collision>
+    <collision name="inner_contact_face">
+      <origin xyz="-0.039 0.23 0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.036 0.05" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="left_slide" type="prismatic">
+    <origin xyz="-0.13 0 0" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="left_jaw" />
+    <axis xyz="1 0 0" />
+    <limit effort="45" velocity="0.2" lower="0" upper="0.055" />
+    </joint>
+  <joint name="right_slide" type="prismatic">
+    <origin xyz="0.13 0 0" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="right_jaw" />
+    <axis xyz="-1 0 0" />
+    <limit effort="45" velocity="0.2" lower="0" upper="0.055" />
+    </joint>
+  </robot>

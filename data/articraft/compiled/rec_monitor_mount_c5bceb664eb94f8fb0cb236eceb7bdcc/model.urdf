@@ -1,0 +1,954 @@
+<robot name="engineered_monitor_mount">
+  <material name="matte_black">
+    <color rgba="0.015 0.016 0.017 1" />
+    </material>
+  <material name="satin_graphite">
+    <color rgba="0.11 0.115 0.12 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.55 0.57 0.58 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <material name="dark_display_back">
+    <color rgba="0.03 0.035 0.04 1" />
+    </material>
+  <link name="desk_clamp">
+    <visual name="rounded_top_plate">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_desk_plate.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="desk_grip_pad">
+      <origin xyz="0.01 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.145 0.006" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="rear_clamp_wall">
+      <origin xyz="-0.115 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.17 0.182" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="lower_clamp_jaw">
+      <origin xyz="-0.042 0 -0.151" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.15 0.022" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="clamp_screw">
+      <origin xyz="0.04 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.14" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="pressure_pad">
+      <origin xyz="0.04 0 -0.13" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.014" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="hand_knob">
+      <origin xyz="0.04 0 -0.286" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.026" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="fixed_post">
+      <origin xyz="0 0 0.208" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.362" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="post_cap">
+      <origin xyz="0 0 0.384" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.012" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <collision name="rounded_top_plate">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_desk_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="desk_grip_pad">
+      <origin xyz="0.01 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.145 0.006" />
+        </geometry>
+      </collision>
+    <collision name="rear_clamp_wall">
+      <origin xyz="-0.115 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.17 0.182" />
+        </geometry>
+      </collision>
+    <collision name="lower_clamp_jaw">
+      <origin xyz="-0.042 0 -0.151" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.15 0.022" />
+        </geometry>
+      </collision>
+    <collision name="clamp_screw">
+      <origin xyz="0.04 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.14" />
+        </geometry>
+      </collision>
+    <collision name="pressure_pad">
+      <origin xyz="0.04 0 -0.13" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="hand_knob">
+      <origin xyz="0.04 0 -0.286" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.026" />
+        </geometry>
+      </collision>
+    <collision name="fixed_post">
+      <origin xyz="0 0 0.208" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.362" />
+        </geometry>
+      </collision>
+    <collision name="post_cap">
+      <origin xyz="0 0 0.384" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="base_swivel">
+    <visual name="swivel_collar">
+      <origin xyz="0 0 0.0375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.075" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="turret_cap">
+      <origin xyz="0 0 0.084" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_bridge">
+      <origin xyz="0.045 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.1 0.032" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_cheek_0">
+      <origin xyz="0.1 0.043 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.018 0.09" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_cheek_1">
+      <origin xyz="0.1 -0.043 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.018 0.09" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_tension_knob">
+      <origin xyz="0.1 -0.061 0.118" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0215" length="0.018" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="swivel_collar">
+      <origin xyz="0 0 0.0375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.075" />
+        </geometry>
+      </collision>
+    <collision name="turret_cap">
+      <origin xyz="0 0 0.084" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bridge">
+      <origin xyz="0.045 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.1 0.032" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_cheek_0">
+      <origin xyz="0.1 0.043 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.018 0.09" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_cheek_1">
+      <origin xyz="0.1 -0.043 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.018 0.09" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_tension_knob">
+      <origin xyz="0.1 -0.061 0.118" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0215" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_arm">
+    <visual name="shoulder_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.052" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="parallel_tube_0">
+      <origin xyz="0.19 0.032 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.022 0.032" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_link_0">
+      <origin xyz="0.036 0.032 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.022 0.032" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="parallel_tube_1">
+      <origin xyz="0.19 -0.032 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.022 0.032" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_link_1">
+      <origin xyz="0.036 -0.032 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.022 0.032" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="upper_cover">
+      <origin xyz="0.195 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.285 0.074 0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="gas_spring_body">
+      <origin xyz="0.17 0 -0.025" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.22" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="gas_spring_rod">
+      <origin xyz="0.29 0 -0.025" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.155" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="front_spring_link">
+      <origin xyz="0.06 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.02 0.07" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="rear_spring_link">
+      <origin xyz="0.295 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.02 0.07" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="elbow_cheek_0">
+      <origin xyz="0.36 0.043 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.018 0.08" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="elbow_cheek_1">
+      <origin xyz="0.36 -0.043 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.018 0.08" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="elbow_cap_0">
+      <origin xyz="0.36 0.054 0.025" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.006" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="elbow_cap_1">
+      <origin xyz="0.36 -0.054 0.025" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.006" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <collision name="shoulder_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="parallel_tube_0">
+      <origin xyz="0.19 0.032 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.022 0.032" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_link_0">
+      <origin xyz="0.036 0.032 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.022 0.032" />
+        </geometry>
+      </collision>
+    <collision name="parallel_tube_1">
+      <origin xyz="0.19 -0.032 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.022 0.032" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_link_1">
+      <origin xyz="0.036 -0.032 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.022 0.032" />
+        </geometry>
+      </collision>
+    <collision name="upper_cover">
+      <origin xyz="0.195 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.285 0.074 0.018" />
+        </geometry>
+      </collision>
+    <collision name="gas_spring_body">
+      <origin xyz="0.17 0 -0.025" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="gas_spring_rod">
+      <origin xyz="0.29 0 -0.025" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.155" />
+        </geometry>
+      </collision>
+    <collision name="front_spring_link">
+      <origin xyz="0.06 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.02 0.07" />
+        </geometry>
+      </collision>
+    <collision name="rear_spring_link">
+      <origin xyz="0.295 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.02 0.07" />
+        </geometry>
+      </collision>
+    <collision name="elbow_cheek_0">
+      <origin xyz="0.36 0.043 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.018 0.08" />
+        </geometry>
+      </collision>
+    <collision name="elbow_cheek_1">
+      <origin xyz="0.36 -0.043 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.018 0.08" />
+        </geometry>
+      </collision>
+    <collision name="elbow_cap_0">
+      <origin xyz="0.36 0.054 0.025" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="elbow_cap_1">
+      <origin xyz="0.36 -0.054 0.025" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_arm">
+    <visual name="elbow_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.052" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="main_beam">
+      <origin xyz="0.165 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.058 0.05" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="top_insert">
+      <origin xyz="0.19 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.27 0.046 0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="cable_clip">
+      <origin xyz="0.185 0.037 -0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.018 0.018" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="elbow_tension_knob">
+      <origin xyz="0.15 0.038 0.036" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0215" length="0.018" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="wrist_strap_0">
+      <origin xyz="0.305 0.03397 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.024 0.02" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="wrist_cheek_0">
+      <origin xyz="0.34 0.043 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.018 0.08" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="wrist_strap_1">
+      <origin xyz="0.305 -0.03397 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.024 0.02" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="wrist_cheek_1">
+      <origin xyz="0.34 -0.043 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.018 0.08" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="wrist_pin">
+      <origin xyz="0.34 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.088" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="elbow_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="main_beam">
+      <origin xyz="0.165 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.058 0.05" />
+        </geometry>
+      </collision>
+    <collision name="top_insert">
+      <origin xyz="0.19 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.27 0.046 0.018" />
+        </geometry>
+      </collision>
+    <collision name="cable_clip">
+      <origin xyz="0.185 0.037 -0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.018 0.018" />
+        </geometry>
+      </collision>
+    <collision name="elbow_tension_knob">
+      <origin xyz="0.15 0.038 0.036" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0215" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="wrist_strap_0">
+      <origin xyz="0.305 0.03397 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.024 0.02" />
+        </geometry>
+      </collision>
+    <collision name="wrist_cheek_0">
+      <origin xyz="0.34 0.043 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.018 0.08" />
+        </geometry>
+      </collision>
+    <collision name="wrist_strap_1">
+      <origin xyz="0.305 -0.03397 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.024 0.02" />
+        </geometry>
+      </collision>
+    <collision name="wrist_cheek_1">
+      <origin xyz="0.34 -0.043 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.018 0.08" />
+        </geometry>
+      </collision>
+    <collision name="wrist_pin">
+      <origin xyz="0.34 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.088" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wrist">
+    <visual name="wrist_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.052" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="tilt_neck">
+      <origin xyz="0.055 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.05 0.045" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="roll_bearing_face">
+      <origin xyz="0.1 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.02" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="tilt_tension_knob">
+      <origin xyz="0.065 -0.033 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0215" length="0.018" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <collision name="wrist_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="tilt_neck">
+      <origin xyz="0.055 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.05 0.045" />
+        </geometry>
+      </collision>
+    <collision name="roll_bearing_face">
+      <origin xyz="0.1 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="tilt_tension_knob">
+      <origin xyz="0.065 -0.033 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0215" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="display_bracket">
+    <visual name="roll_boss">
+      <origin xyz="0.01 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.02" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="vesa_plate">
+      <origin xyz="0.032 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_vesa_plate.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="vesa_spoke_0">
+      <origin xyz="0.024 0.046 0.046" rpy="-0.78 0 0" />
+      <geometry>
+        <box size="0.014 0.024 0.145" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="vesa_spoke_1">
+      <origin xyz="0.024 -0.046 0.046" rpy="0.78 0 0" />
+      <geometry>
+        <box size="0.014 0.024 0.145" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="vesa_spoke_2">
+      <origin xyz="0.024 0.046 -0.046" rpy="0.78 0 0" />
+      <geometry>
+        <box size="0.014 0.024 0.145" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="vesa_spoke_3">
+      <origin xyz="0.024 -0.046 -0.046" rpy="-0.78 0 0" />
+      <geometry>
+        <box size="0.014 0.024 0.145" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.11 0.115 0.12 1" />
+        </material>
+      </visual>
+    <visual name="vesa_screw_ny_nz">
+      <origin xyz="0.017 -0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="standoff_ny_nz">
+      <origin xyz="0.049 -0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="vesa_screw_ny_pz">
+      <origin xyz="0.017 -0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="standoff_ny_pz">
+      <origin xyz="0.049 -0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="vesa_screw_py_nz">
+      <origin xyz="0.017 0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="standoff_py_nz">
+      <origin xyz="0.049 0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="vesa_screw_py_pz">
+      <origin xyz="0.017 0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="standoff_py_pz">
+      <origin xyz="0.049 0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="monitor_back">
+      <origin xyz="0.066 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_monitor_back.obj" />
+        </geometry>
+      <material name="dark_display_back">
+        <color rgba="0.03 0.035 0.04 1" />
+        </material>
+      </visual>
+    <visual name="thin_front_glass">
+      <origin xyz="0.0765 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.545 0.315" />
+        </geometry>
+      <material name="dark_glass">
+        <color rgba="0.005 0.007 0.01 1" />
+        </material>
+      </visual>
+    <collision name="roll_boss">
+      <origin xyz="0.01 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="vesa_plate">
+      <origin xyz="0.032 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_vesa_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="vesa_spoke_0">
+      <origin xyz="0.024 0.046 0.046" rpy="-0.78 0 0" />
+      <geometry>
+        <box size="0.014 0.024 0.145" />
+        </geometry>
+      </collision>
+    <collision name="vesa_spoke_1">
+      <origin xyz="0.024 -0.046 0.046" rpy="0.78 0 0" />
+      <geometry>
+        <box size="0.014 0.024 0.145" />
+        </geometry>
+      </collision>
+    <collision name="vesa_spoke_2">
+      <origin xyz="0.024 0.046 -0.046" rpy="0.78 0 0" />
+      <geometry>
+        <box size="0.014 0.024 0.145" />
+        </geometry>
+      </collision>
+    <collision name="vesa_spoke_3">
+      <origin xyz="0.024 -0.046 -0.046" rpy="-0.78 0 0" />
+      <geometry>
+        <box size="0.014 0.024 0.145" />
+        </geometry>
+      </collision>
+    <collision name="vesa_screw_ny_nz">
+      <origin xyz="0.017 -0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="standoff_ny_nz">
+      <origin xyz="0.049 -0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="vesa_screw_ny_pz">
+      <origin xyz="0.017 -0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="standoff_ny_pz">
+      <origin xyz="0.049 -0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="vesa_screw_py_nz">
+      <origin xyz="0.017 0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="standoff_py_nz">
+      <origin xyz="0.049 0.05 -0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="vesa_screw_py_pz">
+      <origin xyz="0.017 0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="standoff_py_pz">
+      <origin xyz="0.049 0.05 0.05" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="monitor_back">
+      <origin xyz="0.066 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_monitor_back.obj" />
+        </geometry>
+      </collision>
+    <collision name="thin_front_glass">
+      <origin xyz="0.0765 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.545 0.315" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_yaw" type="revolute">
+    <origin xyz="0 0 0.39" rpy="0 0 0" />
+    <parent link="desk_clamp" />
+    <child link="base_swivel" />
+    <axis xyz="0 0 1" />
+    <limit effort="35" velocity="1.4" lower="-3.14159" upper="3.14159" />
+    <dynamics damping="0.15" friction="0.08" />
+    </joint>
+  <joint name="shoulder_pitch" type="revolute">
+    <origin xyz="0.11 0 0.118" rpy="0 0 0" />
+    <parent link="base_swivel" />
+    <child link="lower_arm" />
+    <axis xyz="0 1 0" />
+    <limit effort="80" velocity="0.9" lower="-0.65" upper="0.55" />
+    <dynamics damping="0.35" friction="0.18" />
+    </joint>
+  <joint name="elbow_pitch" type="revolute">
+    <origin xyz="0.36 0 0.025" rpy="0 0 0" />
+    <parent link="lower_arm" />
+    <child link="upper_arm" />
+    <axis xyz="0 1 0" />
+    <limit effort="65" velocity="1" lower="-0.95" upper="0.95" />
+    <dynamics damping="0.28" friction="0.12" />
+    </joint>
+  <joint name="wrist_tilt" type="revolute">
+    <origin xyz="0.34 0 0" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="wrist" />
+    <axis xyz="0 1 0" />
+    <limit effort="28" velocity="1.2" lower="-0.75" upper="0.75" />
+    <dynamics damping="0.18" friction="0.1" />
+    </joint>
+  <joint name="display_roll" type="revolute">
+    <origin xyz="0.11 0 0" rpy="0 0 0" />
+    <parent link="wrist" />
+    <child link="display_bracket" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="1" lower="-1.5708" upper="1.5708" />
+    <dynamics damping="0.1" friction="0.12" />
+    </joint>
+  </robot>

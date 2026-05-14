@@ -1,0 +1,507 @@
+<robot name="glass_panoramic_elevator">
+  <material name="blue_tinted_glass">
+    <color rgba="0.45 0.78 0.95 0.32" />
+    </material>
+  <material name="brushed_stainless">
+    <color rgba="0.74 0.74 0.7 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.02 0.022 0.025 1" />
+    </material>
+  <material name="speckled_stone_floor">
+    <color rgba="0.62 0.6 0.55 1" />
+    </material>
+  <material name="machined_guide_rail">
+    <color rgba="0.52 0.54 0.56 1" />
+    </material>
+  <link name="guide_rail">
+    <visual name="landing_slab">
+      <origin xyz="0 0.2 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="2.45 2 0.08" />
+        </geometry>
+      <material name="speckled_stone_floor">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="center_track">
+      <origin xyz="0 1.12 3.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.13 6.4" />
+        </geometry>
+      <material name="machined_guide_rail">
+        <color rgba="0.52 0.54 0.56 1" />
+        </material>
+      </visual>
+    <visual name="rail_post_0">
+      <origin xyz="-0.18 1.02 3.245" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="6.45" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rail_post_1">
+      <origin xyz="0.18 1.02 3.245" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="6.45" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="top_header">
+      <origin xyz="0 1.08 6.52" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.24 0.18" />
+        </geometry>
+      <material name="machined_guide_rail">
+        <color rgba="0.52 0.54 0.56 1" />
+        </material>
+      </visual>
+    <collision name="landing_slab">
+      <origin xyz="0 0.2 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="2.45 2 0.08" />
+        </geometry>
+      </collision>
+    <collision name="center_track">
+      <origin xyz="0 1.12 3.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.13 6.4" />
+        </geometry>
+      </collision>
+    <collision name="rail_post_0">
+      <origin xyz="-0.18 1.02 3.245" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="6.45" />
+        </geometry>
+      </collision>
+    <collision name="rail_post_1">
+      <origin xyz="0.18 1.02 3.245" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="6.45" />
+        </geometry>
+      </collision>
+    <collision name="top_header">
+      <origin xyz="0 1.08 6.52" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.24 0.18" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="car">
+    <visual name="round_floor">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.92" length="0.16" />
+        </geometry>
+      <material name="speckled_stone_floor">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="ceiling_ring">
+      <origin xyz="0 0 2.46" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.94" length="0.14" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="curved_glass_wall">
+      <geometry>
+        <mesh filename="assets/meshes/curved_glass_wall.obj" />
+        </geometry>
+      <material name="blue_tinted_glass">
+        <color rgba="0.45 0.78 0.95 0.32" />
+        </material>
+      </visual>
+    <visual name="door_jamb_0">
+      <origin xyz="0.58 -0.69 1.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="2.33" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="door_jamb_1">
+      <origin xyz="-0.58 -0.69 1.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="2.33" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="lower_door_track">
+      <geometry>
+        <mesh filename="assets/meshes/lower_door_track.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="upper_door_track">
+      <geometry>
+        <mesh filename="assets/meshes/upper_door_track.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="lower_carriage">
+      <origin xyz="0 0.84 0.58" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.2 0.22" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="lower_roller_0">
+      <origin xyz="-0.18 0.94 0.58" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.08" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <visual name="lower_roller_1">
+      <origin xyz="0.18 0.94 0.58" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.08" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <visual name="upper_carriage">
+      <origin xyz="0 0.84 2.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.2 0.22" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="upper_roller_0">
+      <origin xyz="-0.18 0.94 2.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.08" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <visual name="upper_roller_1">
+      <origin xyz="0.18 0.94 2.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.08" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <visual name="handrail_cheek_0">
+      <origin xyz="-0.08 0.8 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.18 0.05" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="handrail_lug_0">
+      <origin xyz="-0.08 0.72 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.04 0.13" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="handrail_cheek_1">
+      <origin xyz="0.08 0.8 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.18 0.05" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="handrail_lug_1">
+      <origin xyz="0.08 0.72 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.04 0.13" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="handrail_pin">
+      <origin xyz="0 0.72 1.12" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.18" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <collision name="round_floor">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.92" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="ceiling_ring">
+      <origin xyz="0 0 2.46" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.94" length="0.14" />
+        </geometry>
+      </collision>
+    <collision name="curved_glass_wall">
+      <geometry>
+        <mesh filename="assets/meshes/curved_glass_wall.obj" />
+        </geometry>
+      </collision>
+    <collision name="door_jamb_0">
+      <origin xyz="0.58 -0.69 1.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="2.33" />
+        </geometry>
+      </collision>
+    <collision name="door_jamb_1">
+      <origin xyz="-0.58 -0.69 1.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="2.33" />
+        </geometry>
+      </collision>
+    <collision name="lower_door_track">
+      <geometry>
+        <mesh filename="assets/meshes/lower_door_track.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_door_track">
+      <geometry>
+        <mesh filename="assets/meshes/upper_door_track.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_carriage">
+      <origin xyz="0 0.84 0.58" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.2 0.22" />
+        </geometry>
+      </collision>
+    <collision name="lower_roller_0">
+      <origin xyz="-0.18 0.94 0.58" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="lower_roller_1">
+      <origin xyz="0.18 0.94 0.58" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="upper_carriage">
+      <origin xyz="0 0.84 2.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.2 0.22" />
+        </geometry>
+      </collision>
+    <collision name="upper_roller_0">
+      <origin xyz="-0.18 0.94 2.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="upper_roller_1">
+      <origin xyz="0.18 0.94 2.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="handrail_cheek_0">
+      <origin xyz="-0.08 0.8 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.18 0.05" />
+        </geometry>
+      </collision>
+    <collision name="handrail_lug_0">
+      <origin xyz="-0.08 0.72 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.04 0.13" />
+        </geometry>
+      </collision>
+    <collision name="handrail_cheek_1">
+      <origin xyz="0.08 0.8 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.18 0.05" />
+        </geometry>
+      </collision>
+    <collision name="handrail_lug_1">
+      <origin xyz="0.08 0.72 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.04 0.13" />
+        </geometry>
+      </collision>
+    <collision name="handrail_pin">
+      <origin xyz="0 0.72 1.12" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.18" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="door">
+    <visual name="curved_door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/curved_door_panel.obj" />
+        </geometry>
+      <material name="blue_tinted_glass">
+        <color rgba="0.45 0.78 0.95 0.32" />
+        </material>
+      </visual>
+    <visual name="lower_door_shoe">
+      <geometry>
+        <mesh filename="assets/meshes/lower_door_shoe.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="upper_door_shoe">
+      <geometry>
+        <mesh filename="assets/meshes/upper_door_shoe.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="vertical_pull_bar">
+      <origin xyz="0 -0.8 1.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.035 1.05" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <collision name="curved_door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/curved_door_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_door_shoe">
+      <geometry>
+        <mesh filename="assets/meshes/lower_door_shoe.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_door_shoe">
+      <geometry>
+        <mesh filename="assets/meshes/upper_door_shoe.obj" />
+        </geometry>
+      </collision>
+    <collision name="vertical_pull_bar">
+      <origin xyz="0 -0.8 1.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.035 1.05" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="handrail">
+    <visual name="handrail_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/handrail_sleeve.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="handrail_arm">
+      <geometry>
+        <mesh filename="assets/meshes/handrail_arm.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="perimeter_handrail">
+      <geometry>
+        <mesh filename="assets/meshes/perimeter_handrail.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="pin_standoff_10">
+      <origin xyz="0.669669 -0.546919 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.12" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <visual name="pin_standoff_170">
+      <origin xyz="-0.669669 -0.546919 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.12" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.74 0.74 0.7 1" />
+        </material>
+      </visual>
+    <collision name="handrail_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/handrail_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="handrail_arm">
+      <geometry>
+        <mesh filename="assets/meshes/handrail_arm.obj" />
+        </geometry>
+      </collision>
+    <collision name="perimeter_handrail">
+      <geometry>
+        <mesh filename="assets/meshes/perimeter_handrail.obj" />
+        </geometry>
+      </collision>
+    <collision name="pin_standoff_10">
+      <origin xyz="0.669669 -0.546919 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="pin_standoff_170">
+      <origin xyz="-0.669669 -0.546919 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.12" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="rail_to_car" type="prismatic">
+    <origin xyz="0 0 0.12" rpy="0 0 0" />
+    <parent link="guide_rail" />
+    <child link="car" />
+    <axis xyz="0 0 1" />
+    <limit effort="9000" velocity="1.2" lower="0" upper="3.35" />
+    </joint>
+  <joint name="car_to_door" type="prismatic">
+    <parent link="car" />
+    <child link="door" />
+    <axis xyz="1 0 0" />
+    <limit effort="180" velocity="0.45" lower="0" upper="0.44" />
+    </joint>
+  <joint name="car_to_handrail" type="revolute">
+    <origin xyz="0 0.72 1.12" rpy="0 0 0" />
+    <parent link="car" />
+    <child link="handrail" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="0.8" lower="-0.18" upper="0.18" />
+    </joint>
+  </robot>

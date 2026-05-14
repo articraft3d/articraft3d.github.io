@@ -1,0 +1,307 @@
+<robot name="pedestal_elbow_arm">
+  <material name="dark_blued_steel">
+    <color rgba="0.05 0.07 0.09 1" />
+    </material>
+  <material name="satin_steel">
+    <color rgba="0.55 0.58 0.6 1" />
+    </material>
+  <material name="safety_yellow">
+    <color rgba="0.95 0.68 0.08 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="tool_face_gray">
+    <color rgba="0.38 0.4 0.42 1" />
+    </material>
+  <link name="pedestal">
+    <visual name="floor_plate">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.34 0.055" />
+        </geometry>
+      <material name="dark_blued_steel">
+        <color rgba="0.05 0.07 0.09 1" />
+        </material>
+      </visual>
+    <visual name="round_column">
+      <origin xyz="0 0 0.355" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.6" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="fork_base">
+      <origin xyz="0 0 0.645" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.2 0.075" />
+        </geometry>
+      <material name="dark_blued_steel">
+        <color rgba="0.05 0.07 0.09 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_cheek_near">
+      <origin xyz="0 -0.065 0.75" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.03 0.24" />
+        </geometry>
+      <material name="dark_blued_steel">
+        <color rgba="0.05 0.07 0.09 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_bearing_cap_near">
+      <origin xyz="0 -0.07995 0.75" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.02" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_cheek_far">
+      <origin xyz="0 0.065 0.75" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.03 0.24" />
+        </geometry>
+      <material name="dark_blued_steel">
+        <color rgba="0.05 0.07 0.09 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_bearing_cap_far">
+      <origin xyz="0 0.07995 0.75" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.02" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <collision name="floor_plate">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.34 0.055" />
+        </geometry>
+      </collision>
+    <collision name="round_column">
+      <origin xyz="0 0 0.355" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.6" />
+        </geometry>
+      </collision>
+    <collision name="fork_base">
+      <origin xyz="0 0 0.645" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.2 0.075" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_cheek_near">
+      <origin xyz="0 -0.065 0.75" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.03 0.24" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bearing_cap_near">
+      <origin xyz="0 -0.07995 0.75" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_cheek_far">
+      <origin xyz="0 0.065 0.75" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.03 0.24" />
+        </geometry>
+      </collision>
+    <collision name="shoulder_bearing_cap_far">
+      <origin xyz="0 0.07995 0.75" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_link">
+    <visual name="shoulder_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.1" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="upper_beam">
+      <origin xyz="0.235 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.06 0.055" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.68 0.08 1" />
+        </material>
+      </visual>
+    <visual name="elbow_yoke_bridge">
+      <origin xyz="0.435 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.18 0.055" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.68 0.08 1" />
+        </material>
+      </visual>
+    <visual name="elbow_cheek_near">
+      <origin xyz="0.55 -0.06 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.03 0.14" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.68 0.08 1" />
+        </material>
+      </visual>
+    <visual name="elbow_bearing_cap_near">
+      <origin xyz="0.55 -0.084 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.018" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="elbow_cheek_far">
+      <origin xyz="0.55 0.06 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.03 0.14" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.68 0.08 1" />
+        </material>
+      </visual>
+    <visual name="elbow_bearing_cap_far">
+      <origin xyz="0.55 0.084 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.018" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <collision name="shoulder_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="upper_beam">
+      <origin xyz="0.235 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.06 0.055" />
+        </geometry>
+      </collision>
+    <collision name="elbow_yoke_bridge">
+      <origin xyz="0.435 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.18 0.055" />
+        </geometry>
+      </collision>
+    <collision name="elbow_cheek_near">
+      <origin xyz="0.55 -0.06 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.03 0.14" />
+        </geometry>
+      </collision>
+    <collision name="elbow_bearing_cap_near">
+      <origin xyz="0.55 -0.084 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="elbow_cheek_far">
+      <origin xyz="0.55 0.06 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.03 0.14" />
+        </geometry>
+      </collision>
+    <collision name="elbow_bearing_cap_far">
+      <origin xyz="0.55 0.084 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="distal_link">
+    <visual name="elbow_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.09" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="distal_beam">
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.05 0.045" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.68 0.08 1" />
+        </material>
+      </visual>
+    <visual name="tool_block">
+      <origin xyz="0.425 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.175 0.12" />
+        </geometry>
+      <material name="tool_face_gray">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="tool_face">
+      <origin xyz="0.455 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.155 0.095" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <collision name="elbow_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="distal_beam">
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.05 0.045" />
+        </geometry>
+      </collision>
+    <collision name="tool_block">
+      <origin xyz="0.425 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.175 0.12" />
+        </geometry>
+      </collision>
+    <collision name="tool_face">
+      <origin xyz="0.455 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.155 0.095" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="shoulder_joint" type="revolute">
+    <origin xyz="0 0 0.75" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="upper_link" />
+    <axis xyz="0 1 0" />
+    <limit effort="85" velocity="1.4" lower="-1.1" upper="1" />
+    </joint>
+  <joint name="elbow_joint" type="revolute">
+    <origin xyz="0.55 0 0" rpy="0 0 0" />
+    <parent link="upper_link" />
+    <child link="distal_link" />
+    <axis xyz="0 1 0" />
+    <limit effort="55" velocity="1.8" lower="-1.55" upper="1.7" />
+    </joint>
+  </robot>

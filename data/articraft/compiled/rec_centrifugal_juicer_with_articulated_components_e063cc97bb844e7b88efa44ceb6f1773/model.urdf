@@ -1,0 +1,439 @@
+<robot name="compact_kitchen_juicer">
+  <material name="warm_white">
+    <color rgba="0.92 0.9 0.84 1" />
+    </material>
+  <material name="soft_gray">
+    <color rgba="0.55 0.57 0.58 1" />
+    </material>
+  <material name="dark_gray">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.72 0.75 0.76 1" />
+    </material>
+  <material name="smoked_clear">
+    <color rgba="0.62 0.86 0.98 0.38" />
+    </material>
+  <material name="pusher_frosted">
+    <color rgba="0.8 0.85 0.88 0.72" />
+    </material>
+  <material name="orange_pulp">
+    <color rgba="0.94 0.52 0.14 1" />
+    </material>
+  <link name="body">
+    <visual name="compact_base">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.34 0.13" />
+        </geometry>
+      <material name="warm_white" />
+      </visual>
+    <visual name="top_band">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.31 0.03" />
+        </geometry>
+      <material name="soft_gray" />
+      </visual>
+    <visual name="bowl_shell">
+      <geometry>
+        <mesh filename="assets/meshes/juicer_bowl_shell.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="juice_spout">
+      <origin xyz="0 -0.186 0.218" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.085" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="pulp_channel_housing">
+      <origin xyz="0.176 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.23 0.16" />
+        </geometry>
+      <material name="warm_white" />
+      </visual>
+    <visual name="service_door_recess">
+      <origin xyz="0.206 0 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.005 0.195 0.135" />
+        </geometry>
+      <material name="soft_gray" />
+      </visual>
+    <visual name="door_top_gasket">
+      <origin xyz="0.209 0 0.263" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.205 0.016" />
+        </geometry>
+      <material name="dark_gray" />
+      </visual>
+    <visual name="door_bottom_gasket">
+      <origin xyz="0.209 0 0.127" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.205 0.016" />
+        </geometry>
+      <material name="dark_gray" />
+      </visual>
+    <visual name="door_front_gasket">
+      <origin xyz="0.209 -0.101 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.016 0.135" />
+        </geometry>
+      <material name="dark_gray" />
+      </visual>
+    <visual name="door_rear_gasket">
+      <origin xyz="0.209 0.101 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.016 0.135" />
+        </geometry>
+      <material name="dark_gray" />
+      </visual>
+    <visual name="side_hinge_lower">
+      <origin xyz="0.211 0.095 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.035" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="side_hinge_upper">
+      <origin xyz="0.211 0.095 0.245" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.035" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="control_panel">
+      <origin xyz="0.192 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.09 0.04" />
+        </geometry>
+      <material name="dark_gray" />
+      </visual>
+    <visual name="rear_hinge_knuckle_0">
+      <origin xyz="-0.115 0.148 0.279" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.05" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="rear_hinge_knuckle_1">
+      <origin xyz="0.115 0.148 0.279" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.05" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="basket_drive_coupler">
+      <origin xyz="0 0 0.151" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      <material name="dark_gray" />
+      </visual>
+    <visual name="rear_hinge_mount">
+      <origin xyz="0 0.151 0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.018 0.03" />
+        </geometry>
+      <material name="soft_gray" />
+      </visual>
+    <collision name="compact_base">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.34 0.13" />
+        </geometry>
+      </collision>
+    <collision name="top_band">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.31 0.03" />
+        </geometry>
+      </collision>
+    <collision name="bowl_shell">
+      <geometry>
+        <mesh filename="assets/meshes/juicer_bowl_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="juice_spout">
+      <origin xyz="0 -0.186 0.218" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.085" />
+        </geometry>
+      </collision>
+    <collision name="pulp_channel_housing">
+      <origin xyz="0.176 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.23 0.16" />
+        </geometry>
+      </collision>
+    <collision name="service_door_recess">
+      <origin xyz="0.206 0 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.005 0.195 0.135" />
+        </geometry>
+      </collision>
+    <collision name="door_top_gasket">
+      <origin xyz="0.209 0 0.263" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.205 0.016" />
+        </geometry>
+      </collision>
+    <collision name="door_bottom_gasket">
+      <origin xyz="0.209 0 0.127" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.205 0.016" />
+        </geometry>
+      </collision>
+    <collision name="door_front_gasket">
+      <origin xyz="0.209 -0.101 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.016 0.135" />
+        </geometry>
+      </collision>
+    <collision name="door_rear_gasket">
+      <origin xyz="0.209 0.101 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.016 0.135" />
+        </geometry>
+      </collision>
+    <collision name="side_hinge_lower">
+      <origin xyz="0.211 0.095 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="side_hinge_upper">
+      <origin xyz="0.211 0.095 0.245" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="control_panel">
+      <origin xyz="0.192 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.09 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_knuckle_0">
+      <origin xyz="-0.115 0.148 0.279" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_knuckle_1">
+      <origin xyz="0.115 0.148 0.279" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="basket_drive_coupler">
+      <origin xyz="0 0 0.151" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_mount">
+      <origin xyz="0 0.151 0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.018 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="filter_basket">
+    <visual name="perforated_basket">
+      <geometry>
+        <mesh filename="assets/meshes/filter_basket.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <collision name="perforated_basket">
+      <geometry>
+        <mesh filename="assets/meshes/filter_basket.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="clear_lid_shell">
+      <geometry>
+        <mesh filename="assets/meshes/transparent_lid.obj" />
+        </geometry>
+      <material name="smoked_clear" />
+      </visual>
+    <visual name="rear_hinge_leaf">
+      <origin xyz="0 -0.01 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.025 0.006" />
+        </geometry>
+      <material name="smoked_clear" />
+      </visual>
+    <visual name="rear_hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.085" />
+        </geometry>
+      <material name="smoked_clear" />
+      </visual>
+    <collision name="clear_lid_shell">
+      <geometry>
+        <mesh filename="assets/meshes/transparent_lid.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_leaf">
+      <origin xyz="0 -0.01 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.025 0.006" />
+        </geometry>
+      </collision>
+    <collision name="rear_hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.085" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="feed_pusher">
+    <visual name="pusher_cylinder">
+      <origin xyz="0 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.19" />
+        </geometry>
+      <material name="pusher_frosted" />
+      </visual>
+    <visual name="pusher_cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.026" />
+        </geometry>
+      <material name="pusher_frosted" />
+      </visual>
+    <collision name="pusher_cylinder">
+      <origin xyz="0 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.19" />
+        </geometry>
+      </collision>
+    <collision name="pusher_cap">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="service_door">
+    <visual name="door_hinge_barrel">
+      <geometry>
+        <cylinder radius="0.006" length="0.065" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="door_hinge_leaf">
+      <origin xyz="0.01 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.022 0.115" />
+        </geometry>
+      <material name="soft_gray" />
+      </visual>
+    <visual name="door_panel">
+      <origin xyz="0.012 -0.095 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.16 0.12" />
+        </geometry>
+      <material name="warm_white" />
+      </visual>
+    <visual name="door_grip">
+      <origin xyz="0.02 -0.095 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.08 0.012" />
+        </geometry>
+      <material name="dark_gray" />
+      </visual>
+    <collision name="door_hinge_barrel">
+      <geometry>
+        <cylinder radius="0.006" length="0.065" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_leaf">
+      <origin xyz="0.01 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.022 0.115" />
+        </geometry>
+      </collision>
+    <collision name="door_panel">
+      <origin xyz="0.012 -0.095 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.16 0.12" />
+        </geometry>
+      </collision>
+    <collision name="door_grip">
+      <origin xyz="0.02 -0.095 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.08 0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="control_knob">
+    <visual name="knob_shaft">
+      <origin xyz="0.007 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.016" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="knob_cap">
+      <origin xyz="0.014 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/control_knob_cap.obj" />
+        </geometry>
+      <material name="dark_gray" />
+      </visual>
+    <collision name="knob_shaft">
+      <origin xyz="0.007 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="knob_cap">
+      <origin xyz="0.014 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/control_knob_cap.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_filter_basket" type="continuous">
+    <origin xyz="0 0 0.16" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="filter_basket" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="40" />
+    </joint>
+  <joint name="body_to_lid" type="revolute">
+    <origin xyz="0 0.148 0.28" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="2" lower="0" upper="1.35" />
+    </joint>
+  <joint name="lid_to_feed_pusher" type="prismatic">
+    <origin xyz="0 -0.15 0.176" rpy="0 0 0" />
+    <parent link="lid" />
+    <child link="feed_pusher" />
+    <axis xyz="0 0 1" />
+    <limit effort="20" velocity="0.3" lower="0" upper="0.115" />
+    </joint>
+  <joint name="body_to_service_door" type="revolute">
+    <origin xyz="0.211 0.095 0.195" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="service_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="2" lower="0" upper="1.25" />
+    </joint>
+  <joint name="body_to_control_knob" type="revolute">
+    <origin xyz="0.195 0 0.075" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="control_knob" />
+    <axis xyz="1 0 0" />
+    <limit effort="1" velocity="4" lower="-2.35" upper="2.35" />
+    </joint>
+  </robot>

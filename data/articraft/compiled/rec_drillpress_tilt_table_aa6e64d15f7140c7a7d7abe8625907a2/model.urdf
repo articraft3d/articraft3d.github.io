@@ -1,0 +1,579 @@
+<robot name="drill_press_tilt_table">
+  <material name="dark_cast_iron">
+    <color rgba="0.1 0.11 0.11 1" />
+    </material>
+  <material name="worn_machined_iron">
+    <color rgba="0.22 0.23 0.22 1" />
+    </material>
+  <material name="brushed_column_steel">
+    <color rgba="0.47 0.49 0.48 1" />
+    </material>
+  <material name="black_handwheel">
+    <color rgba="0.015 0.014 0.013 1" />
+    </material>
+  <material name="oiled_bolt_steel">
+    <color rgba="0.33 0.32 0.3 1" />
+    </material>
+  <material name="engraved_white">
+    <color rgba="0.9 0.88 0.78 1" />
+    </material>
+  <material name="red_angle_pointer">
+    <color rgba="0.75 0.04 0.03 1" />
+    </material>
+  <link name="mount">
+    <visual name="column_tube">
+      <origin xyz="-0.34 0 -0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.78" />
+        </geometry>
+      <material name="brushed_column_steel">
+        <color rgba="0.47 0.49 0.48 1" />
+        </material>
+      </visual>
+    <visual name="split_collar_body">
+      <origin xyz="-0.34 0 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.17 0.095" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="collar_split_line">
+      <origin xyz="-0.34 -0.087 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.004 0.088" />
+        </geometry>
+      <material name="black_handwheel">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="column_clamp_lug">
+      <origin xyz="-0.34 -0.104 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.038 0.085" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="support_arm">
+      <origin xyz="-0.155 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.39 0.082 0.072" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="upper_gusset_0">
+      <origin xyz="-0.09 0.105 -0.112" rpy="0 -0.2 0" />
+      <geometry>
+        <box size="0.27 0.045 0.044" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="upper_gusset_1">
+      <origin xyz="-0.09 -0.105 -0.112" rpy="0 -0.2 0" />
+      <geometry>
+        <box size="0.27 0.045 0.044" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="yoke_base">
+      <origin xyz="0 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.57 0.038" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="lock_yoke_cheek">
+      <origin xyz="0 0.25 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.04 0.18" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="scale_yoke_cheek">
+      <origin xyz="0 -0.25 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.04 0.18" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="lock_side_bushing">
+      <origin xyz="0 0.226 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.012" />
+        </geometry>
+      <material name="oiled_bolt_steel">
+        <color rgba="0.33 0.32 0.3 1" />
+        </material>
+      </visual>
+    <visual name="scale_side_bushing">
+      <origin xyz="0 -0.226 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.012" />
+        </geometry>
+      <material name="oiled_bolt_steel">
+        <color rgba="0.33 0.32 0.3 1" />
+        </material>
+      </visual>
+    <visual name="tilt_sector_plate">
+      <origin xyz="0 -0.224 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tilt_sector_plate.obj" />
+        </geometry>
+      <material name="worn_machined_iron">
+        <color rgba="0.22 0.23 0.22 1" />
+        </material>
+      </visual>
+    <visual name="sector_mount_tab">
+      <origin xyz="0.083 -0.226 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.014 0.04" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="tilt_tick_0">
+      <origin xyz="0.0940452 -0.23 -0.0940452" rpy="0 0.785398 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.023" />
+        </geometry>
+      <material name="engraved_white">
+        <color rgba="0.9 0.88 0.78 1" />
+        </material>
+      </visual>
+    <visual name="tilt_tick_1">
+      <origin xyz="0.115181 -0.23 -0.0665" rpy="0 0.523599 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.015" />
+        </geometry>
+      <material name="engraved_white">
+        <color rgba="0.9 0.88 0.78 1" />
+        </material>
+      </visual>
+    <visual name="tilt_tick_2">
+      <origin xyz="0.128468 -0.23 -0.0344229" rpy="0 0.261799 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.015" />
+        </geometry>
+      <material name="engraved_white">
+        <color rgba="0.9 0.88 0.78 1" />
+        </material>
+      </visual>
+    <visual name="tilt_tick_3">
+      <origin xyz="0.133 -0.23 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.023" />
+        </geometry>
+      <material name="engraved_white">
+        <color rgba="0.9 0.88 0.78 1" />
+        </material>
+      </visual>
+    <visual name="tilt_tick_4">
+      <origin xyz="0.128468 -0.23 0.0344229" rpy="0 -0.261799 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.015" />
+        </geometry>
+      <material name="engraved_white">
+        <color rgba="0.9 0.88 0.78 1" />
+        </material>
+      </visual>
+    <visual name="tilt_tick_5">
+      <origin xyz="0.115181 -0.23 0.0665" rpy="0 -0.523599 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.015" />
+        </geometry>
+      <material name="engraved_white">
+        <color rgba="0.9 0.88 0.78 1" />
+        </material>
+      </visual>
+    <visual name="tilt_tick_6">
+      <origin xyz="0.0940452 -0.23 0.0940452" rpy="0 -0.785398 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.023" />
+        </geometry>
+      <material name="engraved_white">
+        <color rgba="0.9 0.88 0.78 1" />
+        </material>
+      </visual>
+    <collision name="column_tube">
+      <origin xyz="-0.34 0 -0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.78" />
+        </geometry>
+      </collision>
+    <collision name="split_collar_body">
+      <origin xyz="-0.34 0 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.17 0.095" />
+        </geometry>
+      </collision>
+    <collision name="collar_split_line">
+      <origin xyz="-0.34 -0.087 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.004 0.088" />
+        </geometry>
+      </collision>
+    <collision name="column_clamp_lug">
+      <origin xyz="-0.34 -0.104 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.038 0.085" />
+        </geometry>
+      </collision>
+    <collision name="support_arm">
+      <origin xyz="-0.155 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.39 0.082 0.072" />
+        </geometry>
+      </collision>
+    <collision name="upper_gusset_0">
+      <origin xyz="-0.09 0.105 -0.112" rpy="0 -0.2 0" />
+      <geometry>
+        <box size="0.27 0.045 0.044" />
+        </geometry>
+      </collision>
+    <collision name="upper_gusset_1">
+      <origin xyz="-0.09 -0.105 -0.112" rpy="0 -0.2 0" />
+      <geometry>
+        <box size="0.27 0.045 0.044" />
+        </geometry>
+      </collision>
+    <collision name="yoke_base">
+      <origin xyz="0 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.57 0.038" />
+        </geometry>
+      </collision>
+    <collision name="lock_yoke_cheek">
+      <origin xyz="0 0.25 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.04 0.18" />
+        </geometry>
+      </collision>
+    <collision name="scale_yoke_cheek">
+      <origin xyz="0 -0.25 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.04 0.18" />
+        </geometry>
+      </collision>
+    <collision name="lock_side_bushing">
+      <origin xyz="0 0.226 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="scale_side_bushing">
+      <origin xyz="0 -0.226 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="tilt_sector_plate">
+      <origin xyz="0 -0.224 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tilt_sector_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="sector_mount_tab">
+      <origin xyz="0.083 -0.226 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.014 0.04" />
+        </geometry>
+      </collision>
+    <collision name="tilt_tick_0">
+      <origin xyz="0.0940452 -0.23 -0.0940452" rpy="0 0.785398 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.023" />
+        </geometry>
+      </collision>
+    <collision name="tilt_tick_1">
+      <origin xyz="0.115181 -0.23 -0.0665" rpy="0 0.523599 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.015" />
+        </geometry>
+      </collision>
+    <collision name="tilt_tick_2">
+      <origin xyz="0.128468 -0.23 -0.0344229" rpy="0 0.261799 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.015" />
+        </geometry>
+      </collision>
+    <collision name="tilt_tick_3">
+      <origin xyz="0.133 -0.23 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.023" />
+        </geometry>
+      </collision>
+    <collision name="tilt_tick_4">
+      <origin xyz="0.128468 -0.23 0.0344229" rpy="0 -0.261799 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.015" />
+        </geometry>
+      </collision>
+    <collision name="tilt_tick_5">
+      <origin xyz="0.115181 -0.23 0.0665" rpy="0 -0.523599 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.015" />
+        </geometry>
+      </collision>
+    <collision name="tilt_tick_6">
+      <origin xyz="0.0940452 -0.23 0.0940452" rpy="0 -0.785398 0" />
+      <geometry>
+        <box size="0.0035 0.005 0.023" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="table">
+    <visual name="table_plate">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/machined_table_plate.obj" />
+        </geometry>
+      <material name="worn_machined_iron">
+        <color rgba="0.22 0.23 0.22 1" />
+        </material>
+      </visual>
+    <visual name="underside_rib_x">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.038 0.042" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="underside_rib_y">
+      <origin xyz="0 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.32 0.038" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="diagonal_rib_0">
+      <origin xyz="0 0 0.022" rpy="0 0 0.523599" />
+      <geometry>
+        <box size="0.36 0.028 0.034" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="diagonal_rib_1">
+      <origin xyz="0 0 0.022" rpy="0 0 -0.523599" />
+      <geometry>
+        <box size="0.36 0.028 0.034" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.57" />
+        </geometry>
+      <material name="oiled_bolt_steel">
+        <color rgba="0.33 0.32 0.3 1" />
+        </material>
+      </visual>
+    <visual name="central_trunnion_boss">
+      <origin xyz="0 0 0.018" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.22" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="angle_pointer">
+      <origin xyz="0.085 -0.288 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.008 0.01" />
+        </geometry>
+      <material name="red_angle_pointer">
+        <color rgba="0.75 0.04 0.03 1" />
+        </material>
+      </visual>
+    <collision name="table_plate">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/machined_table_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="underside_rib_x">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.038 0.042" />
+        </geometry>
+      </collision>
+    <collision name="underside_rib_y">
+      <origin xyz="0 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.32 0.038" />
+        </geometry>
+      </collision>
+    <collision name="diagonal_rib_0">
+      <origin xyz="0 0 0.022" rpy="0 0 0.523599" />
+      <geometry>
+        <box size="0.36 0.028 0.034" />
+        </geometry>
+      </collision>
+    <collision name="diagonal_rib_1">
+      <origin xyz="0 0 0.022" rpy="0 0 -0.523599" />
+      <geometry>
+        <box size="0.36 0.028 0.034" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.57" />
+        </geometry>
+      </collision>
+    <collision name="central_trunnion_boss">
+      <origin xyz="0 0 0.018" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="angle_pointer">
+      <origin xyz="0.085 -0.288 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.008 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tilt_lock">
+    <visual name="tilt_lock_screw">
+      <origin xyz="0 0.026 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.052" />
+        </geometry>
+      <material name="oiled_bolt_steel">
+        <color rgba="0.33 0.32 0.3 1" />
+        </material>
+      </visual>
+    <visual name="tilt_lock_washer">
+      <origin xyz="0 0.053 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.009" />
+        </geometry>
+      <material name="oiled_bolt_steel">
+        <color rgba="0.33 0.32 0.3 1" />
+        </material>
+      </visual>
+    <visual name="tilt_lock_knob">
+      <origin xyz="0 0.075 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tilt_lock_knob_mesh.obj" />
+        </geometry>
+      <material name="black_handwheel">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <collision name="tilt_lock_screw">
+      <origin xyz="0 0.026 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="tilt_lock_washer">
+      <origin xyz="0 0.053 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.009" />
+        </geometry>
+      </collision>
+    <collision name="tilt_lock_knob">
+      <origin xyz="0 0.075 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tilt_lock_knob_mesh.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="column_lock">
+    <visual name="column_lock_screw">
+      <origin xyz="0 -0.029 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.058" />
+        </geometry>
+      <material name="oiled_bolt_steel">
+        <color rgba="0.33 0.32 0.3 1" />
+        </material>
+      </visual>
+    <visual name="column_lock_washer">
+      <origin xyz="0 -0.06 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      <material name="oiled_bolt_steel">
+        <color rgba="0.33 0.32 0.3 1" />
+        </material>
+      </visual>
+    <visual name="column_lock_knob">
+      <origin xyz="0 -0.078 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/column_lock_knob_mesh.obj" />
+        </geometry>
+      <material name="black_handwheel">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <collision name="column_lock_screw">
+      <origin xyz="0 -0.029 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="column_lock_washer">
+      <origin xyz="0 -0.06 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="column_lock_knob">
+      <origin xyz="0 -0.078 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/column_lock_knob_mesh.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="mount_to_table" type="revolute">
+    <parent link="mount" />
+    <child link="table" />
+    <axis xyz="0 1 0" />
+    <limit effort="180" velocity="0.55" lower="-0.785398" upper="0.785398" />
+    <dynamics damping="2.5" friction="3" />
+    </joint>
+  <joint name="table_to_tilt_lock" type="continuous">
+    <origin xyz="0 0.285 0" rpy="0 0 0" />
+    <parent link="table" />
+    <child link="tilt_lock" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="5" />
+    <dynamics damping="0.25" friction="0.55" />
+    </joint>
+  <joint name="mount_to_column_lock" type="continuous">
+    <origin xyz="-0.34 -0.123 -0.08" rpy="0 0 0" />
+    <parent link="mount" />
+    <child link="column_lock" />
+    <axis xyz="0 -1 0" />
+    <limit effort="10" velocity="5" />
+    <dynamics damping="0.2" friction="0.45" />
+    </joint>
+  </robot>

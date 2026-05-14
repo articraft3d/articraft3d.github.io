@@ -1,0 +1,341 @@
+<robot name="manual_wheelchair">
+  <material name="brushed_aluminum">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <material name="navy_fabric">
+    <color rgba="0.03 0.06 0.12 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.015 0.014 0.013 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <material name="spoke_aluminum">
+    <color rgba="0.84 0.86 0.86 1" />
+    </material>
+  <material name="polished_handrim">
+    <color rgba="0.92 0.93 0.9 1" />
+    </material>
+  <link name="frame">
+    <visual name="tube_frame">
+      <geometry>
+        <mesh filename="assets/meshes/wheelchair_tubular_frame.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="rear_axle">
+      <origin xyz="-0.18 0 0.31" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.75" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="seat_sling">
+      <origin xyz="0.02 0 0.485" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.46 0.04" />
+        </geometry>
+      <material name="navy_fabric">
+        <color rgba="0.03 0.06 0.12 1" />
+        </material>
+      </visual>
+    <visual name="backrest_sling">
+      <origin xyz="-0.315 0 0.715" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.46 0.39" />
+        </geometry>
+      <material name="navy_fabric">
+        <color rgba="0.03 0.06 0.12 1" />
+        </material>
+      </visual>
+    <visual name="right_caster_socket">
+      <origin xyz="0.3275 -0.15 0.2175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.075 0.055" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="footplate_right">
+      <origin xyz="0.62 -0.115 0.124" rpy="0 -0.08 0" />
+      <geometry>
+        <box size="0.18 0.105 0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="push_handle_right">
+      <origin xyz="-0.475 -0.24 0.965" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.11" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="left_caster_socket">
+      <origin xyz="0.3275 0.15 0.2175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.075 0.055" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="footplate_left">
+      <origin xyz="0.62 0.115 0.124" rpy="0 -0.08 0" />
+      <geometry>
+        <box size="0.18 0.105 0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="push_handle_left">
+      <origin xyz="-0.475 0.24 0.965" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.11" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_rear_wheel">
+    <visual name="rim_spokes">
+      <geometry>
+        <mesh filename="assets/meshes/left_rear_rim.obj" />
+        </geometry>
+      <material name="spoke_aluminum">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/left_rear_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="pushrim">
+      <geometry>
+        <mesh filename="assets/meshes/left_pushrim.obj" />
+        </geometry>
+      <material name="polished_handrim">
+        <color rgba="0.92 0.93 0.9 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_rear_wheel">
+    <visual name="rim_spokes">
+      <geometry>
+        <mesh filename="assets/meshes/right_rear_rim.obj" />
+        </geometry>
+      <material name="spoke_aluminum">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/right_rear_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="pushrim">
+      <geometry>
+        <mesh filename="assets/meshes/right_pushrim.obj" />
+        </geometry>
+      <material name="polished_handrim">
+        <color rgba="0.92 0.93 0.9 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_caster_fork">
+    <visual name="swivel_stem">
+      <origin xyz="0 0 -0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.16" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="fork_crown">
+      <origin xyz="-0.055 0 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.078 0.018" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="fork_blade_right">
+      <origin xyz="-0.1 -0.033 -0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.008 0.168" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="fork_blade_left">
+      <origin xyz="-0.1 0.033 -0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.008 0.168" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="caster_axle">
+      <origin xyz="-0.1 0 -0.12" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.082" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_caster_fork">
+    <visual name="swivel_stem">
+      <origin xyz="0 0 -0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.16" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="fork_crown">
+      <origin xyz="-0.055 0 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.078 0.018" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="fork_blade_right">
+      <origin xyz="-0.1 -0.033 -0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.008 0.168" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="fork_blade_left">
+      <origin xyz="-0.1 0.033 -0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.008 0.168" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="caster_axle">
+      <origin xyz="-0.1 0 -0.12" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.082" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_caster_wheel">
+    <visual name="rim">
+      <geometry>
+        <mesh filename="assets/meshes/left_caster_rim.obj" />
+        </geometry>
+      <material name="spoke_aluminum">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/left_caster_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_caster_wheel">
+    <visual name="rim">
+      <geometry>
+        <mesh filename="assets/meshes/right_caster_rim.obj" />
+        </geometry>
+      <material name="spoke_aluminum">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/right_caster_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="left_rear_spin" type="continuous">
+    <origin xyz="-0.18 0.37 0.31" rpy="0 0 1.5708" />
+    <parent link="frame" />
+    <child link="left_rear_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="12" />
+    <dynamics damping="0.02" friction="0.01" />
+    </joint>
+  <joint name="right_rear_spin" type="continuous">
+    <origin xyz="-0.18 -0.37 0.31" rpy="0 0 -1.5708" />
+    <parent link="frame" />
+    <child link="right_rear_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="12" />
+    <dynamics damping="0.02" friction="0.01" />
+    </joint>
+  <joint name="left_caster_swivel" type="continuous">
+    <origin xyz="0.36 0.15 0.2" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="left_caster_fork" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="8" />
+    <dynamics damping="0.04" friction="0.02" />
+    </joint>
+  <joint name="left_caster_spin" type="continuous">
+    <origin xyz="-0.1 0 -0.12" rpy="0 0 1.5708" />
+    <parent link="left_caster_fork" />
+    <child link="left_caster_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="16" />
+    <dynamics damping="0.02" friction="0.01" />
+    </joint>
+  <joint name="right_caster_swivel" type="continuous">
+    <origin xyz="0.36 -0.15 0.2" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="right_caster_fork" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="8" />
+    <dynamics damping="0.04" friction="0.02" />
+    </joint>
+  <joint name="right_caster_spin" type="continuous">
+    <origin xyz="-0.1 0 -0.12" rpy="0 0 1.5708" />
+    <parent link="right_caster_fork" />
+    <child link="right_caster_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="16" />
+    <dynamics damping="0.02" friction="0.01" />
+    </joint>
+  </robot>

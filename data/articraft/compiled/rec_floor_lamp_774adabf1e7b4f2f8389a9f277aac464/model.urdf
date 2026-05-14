@@ -1,0 +1,301 @@
+<robot name="swing_arm_floor_lamp">
+  <material name="weighted_black">
+    <color rgba="0.035 0.037 0.04 1" />
+    </material>
+  <material name="satin_column">
+    <color rgba="0.48 0.5 0.52 1" />
+    </material>
+  <material name="dark_hardware">
+    <color rgba="0.075 0.075 0.08 1" />
+    </material>
+  <material name="warm_brass">
+    <color rgba="0.74 0.57 0.28 1" />
+    </material>
+  <material name="shade_cream">
+    <color rgba="0.92 0.88 0.76 1" />
+    </material>
+  <material name="warm_bulb">
+    <color rgba="1 0.82 0.42 0.88" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.01 0.01 0.011 1" />
+    </material>
+  <link name="stand">
+    <visual name="weighted_base">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_weighted_base.obj" />
+        </geometry>
+      <material name="weighted_black" />
+      </visual>
+    <visual name="fixed_column">
+      <origin xyz="0 0 0.695" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="1.28" />
+        </geometry>
+      <material name="satin_column" />
+      </visual>
+    <visual name="top_bearing">
+      <origin xyz="0 0 1.347" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.024" />
+        </geometry>
+      <material name="dark_hardware" />
+      </visual>
+    <visual name="bearing_washer">
+      <origin xyz="0 0 1.357" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.006" />
+        </geometry>
+      <material name="warm_brass" />
+      </visual>
+    <visual name="rubber_foot_-1e-01_-8e-02">
+      <origin xyz="-0.135 -0.08 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="rubber_foot_-1e-01_+8e-02">
+      <origin xyz="-0.135 0.08 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="rubber_foot_+1e-01_-8e-02">
+      <origin xyz="0.135 -0.08 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="rubber_foot_+1e-01_+8e-02">
+      <origin xyz="0.135 0.08 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <collision name="weighted_base">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rounded_weighted_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="fixed_column">
+      <origin xyz="0 0 0.695" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="1.28" />
+        </geometry>
+      </collision>
+    <collision name="top_bearing">
+      <origin xyz="0 0 1.347" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="bearing_washer">
+      <origin xyz="0 0 1.357" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_-1e-01_-8e-02">
+      <origin xyz="-0.135 -0.08 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_-1e-01_+8e-02">
+      <origin xyz="-0.135 0.08 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_+1e-01_-8e-02">
+      <origin xyz="0.135 -0.08 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot_+1e-01_+8e-02">
+      <origin xyz="0.135 0.08 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="boom">
+    <visual name="swing_turntable">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.035" />
+        </geometry>
+      <material name="dark_hardware" />
+      </visual>
+    <visual name="boom_tube">
+      <origin xyz="0.31 0 0.028" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.6" />
+        </geometry>
+      <material name="warm_brass" />
+      </visual>
+    <visual name="end_bridge">
+      <origin xyz="0.6025 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.074 0.024" />
+        </geometry>
+      <material name="dark_hardware" />
+      </visual>
+    <visual name="tilt_yoke_0">
+      <origin xyz="0.64 -0.034 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.012 0.048" />
+        </geometry>
+      <material name="dark_hardware" />
+      </visual>
+    <visual name="tilt_yoke_1">
+      <origin xyz="0.64 0.034 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.012 0.048" />
+        </geometry>
+      <material name="dark_hardware" />
+      </visual>
+    <visual name="tilt_pin">
+      <origin xyz="0.64 0 0.028" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.09" />
+        </geometry>
+      <material name="warm_brass" />
+      </visual>
+    <collision name="swing_turntable">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="boom_tube">
+      <origin xyz="0.31 0 0.028" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.6" />
+        </geometry>
+      </collision>
+    <collision name="end_bridge">
+      <origin xyz="0.6025 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.074 0.024" />
+        </geometry>
+      </collision>
+    <collision name="tilt_yoke_0">
+      <origin xyz="0.64 -0.034 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.012 0.048" />
+        </geometry>
+      </collision>
+    <collision name="tilt_yoke_1">
+      <origin xyz="0.64 0.034 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.012 0.048" />
+        </geometry>
+      </collision>
+    <collision name="tilt_pin">
+      <origin xyz="0.64 0 0.028" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.09" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shade">
+    <visual name="tilt_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.044" />
+        </geometry>
+      <material name="dark_hardware" />
+      </visual>
+    <visual name="drop_stem">
+      <origin xyz="0 0 -0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.066" />
+        </geometry>
+      <material name="warm_brass" />
+      </visual>
+    <visual name="lamp_socket">
+      <origin xyz="0 0 -0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.044" />
+        </geometry>
+      <material name="dark_hardware" />
+      </visual>
+    <visual name="shade_collar">
+      <origin xyz="0 0 -0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.012" />
+        </geometry>
+      <material name="dark_hardware" />
+      </visual>
+    <visual name="cone_shade">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_cone_shade.obj" />
+        </geometry>
+      <material name="shade_cream" />
+      </visual>
+    <visual name="glowing_bulb">
+      <origin xyz="0 0 -0.132" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.033" />
+        </geometry>
+      <material name="warm_bulb" />
+      </visual>
+    <collision name="tilt_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.044" />
+        </geometry>
+      </collision>
+    <collision name="drop_stem">
+      <origin xyz="0 0 -0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.066" />
+        </geometry>
+      </collision>
+    <collision name="lamp_socket">
+      <origin xyz="0 0 -0.082" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.044" />
+        </geometry>
+      </collision>
+    <collision name="shade_collar">
+      <origin xyz="0 0 -0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="cone_shade">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_cone_shade.obj" />
+        </geometry>
+      </collision>
+    <collision name="glowing_bulb">
+      <origin xyz="0 0 -0.132" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.033" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="swing_hinge" type="revolute">
+    <origin xyz="0 0 1.36" rpy="0 0 0" />
+    <parent link="stand" />
+    <child link="boom" />
+    <axis xyz="0 0 1" />
+    <limit effort="9" velocity="1.4" lower="-1.85" upper="1.85" />
+    </joint>
+  <joint name="shade_tilt" type="revolute">
+    <origin xyz="0.64 0 0.028" rpy="0 0 0" />
+    <parent link="boom" />
+    <child link="shade" />
+    <axis xyz="0 1 0" />
+    <limit effort="2" velocity="1.2" lower="-0.7" upper="0.7" />
+    </joint>
+  </robot>

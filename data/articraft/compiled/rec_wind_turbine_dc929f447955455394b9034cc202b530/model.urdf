@@ -1,0 +1,184 @@
+<robot name="horizontal_axis_wind_turbine">
+  <material name="galvanized_steel">
+    <color rgba="0.62 0.66 0.68 1" />
+    </material>
+  <material name="off_white_composite">
+    <color rgba="0.92 0.94 0.92 1" />
+    </material>
+  <material name="dark_service_panel">
+    <color rgba="0.08 0.1 0.12 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.025 0.025 0.023 1" />
+    </material>
+  <link name="tower">
+    <visual name="base_pad">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.48" length="0.18" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="tower_column">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_tower_column.obj" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="yaw_deck">
+      <origin xyz="0 0 2.46" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.27" length="0.08" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <collision name="base_pad">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.48" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="tower_column">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_tower_column.obj" />
+        </geometry>
+      </collision>
+    <collision name="yaw_deck">
+      <origin xyz="0 0 2.46" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.27" length="0.08" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="nacelle">
+    <visual name="yaw_bearing">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.23" length="0.08" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="main_housing">
+      <origin xyz="0.26 0 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.42 0.34" />
+        </geometry>
+      <material name="off_white_composite">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="shaft_collar">
+      <origin xyz="0.76 0 0.24" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.24" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <visual name="service_panel">
+      <origin xyz="0.22 -0.215 0.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.01 0.18" />
+        </geometry>
+      <material name="dark_service_panel">
+        <color rgba="0.08 0.1 0.12 1" />
+        </material>
+      </visual>
+    <visual name="rear_cap">
+      <origin xyz="-0.18 0 0.24" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.16" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.025 0.025 0.023 1" />
+        </material>
+      </visual>
+    <collision name="yaw_bearing">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.23" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="main_housing">
+      <origin xyz="0.26 0 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.42 0.34" />
+        </geometry>
+      </collision>
+    <collision name="shaft_collar">
+      <origin xyz="0.76 0 0.24" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="service_panel">
+      <origin xyz="0.22 -0.215 0.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.01 0.18" />
+        </geometry>
+      </collision>
+    <collision name="rear_cap">
+      <origin xyz="-0.18 0 0.24" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.16" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotor">
+    <visual name="rotor_mesh">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/three_blade_rotor.obj" />
+        </geometry>
+      <material name="off_white_composite">
+        <color rgba="0.92 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="rotor_shaft">
+      <origin xyz="-0.1 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.16" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.66 0.68 1" />
+        </material>
+      </visual>
+    <collision name="rotor_mesh">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/three_blade_rotor.obj" />
+        </geometry>
+      </collision>
+    <collision name="rotor_shaft">
+      <origin xyz="-0.1 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.16" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="tower_to_nacelle" type="continuous">
+    <origin xyz="0 0 2.5" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="nacelle" />
+    <axis xyz="0 0 1" />
+    <limit effort="250" velocity="0.6" />
+    <dynamics damping="0.08" friction="0.02" />
+    </joint>
+  <joint name="nacelle_to_rotor" type="continuous">
+    <origin xyz="0.94 0 0.24" rpy="0 0 0" />
+    <parent link="nacelle" />
+    <child link="rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="18" />
+    <dynamics damping="0.015" friction="0.004" />
+    </joint>
+  </robot>

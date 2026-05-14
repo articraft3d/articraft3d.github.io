@@ -1,0 +1,818 @@
+<robot name="three_head_track_lighting">
+  <material name="ceiling_white">
+    <color rgba="0.94 0.92 0.86 1" />
+    </material>
+  <material name="satin_black">
+    <color rgba="0.015 0.016 0.018 1" />
+    </material>
+  <material name="track_shadow">
+    <color rgba="0 0 0 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.55 0.57 0.58 1" />
+    </material>
+  <material name="screw_heads">
+    <color rgba="0.42 0.42 0.41 1" />
+    </material>
+  <material name="warm_lens">
+    <color rgba="1 0.86 0.48 0.68" />
+    </material>
+  <link name="rail">
+    <visual name="ceiling_strip">
+      <origin xyz="0 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="1.9 0.13 0.018" />
+        </geometry>
+      <material name="ceiling_white">
+        <color rgba="0.94 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="ceiling_neck">
+      <origin xyz="0 0 0.0265" rpy="0 0 0" />
+      <geometry>
+        <box size="1.76 0.05 0.02" />
+        </geometry>
+      <material name="ceiling_white">
+        <color rgba="0.94 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="rail_body">
+      <geometry>
+        <box size="1.8 0.07 0.035" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="recessed_slot">
+      <origin xyz="0 0 -0.0165" rpy="0 0 0" />
+      <geometry>
+        <box size="1.72 0.026 0.002" />
+        </geometry>
+      <material name="track_shadow">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="side_groove_0">
+      <origin xyz="0 -0.037 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="1.76 0.004 0.012" />
+        </geometry>
+      <material name="track_shadow">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="side_groove_1">
+      <origin xyz="0 0.037 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="1.76 0.004 0.012" />
+        </geometry>
+      <material name="track_shadow">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="screw_cap_0">
+      <origin xyz="-0.78 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.006" />
+        </geometry>
+      <material name="screw_heads">
+        <color rgba="0.42 0.42 0.41 1" />
+        </material>
+      </visual>
+    <visual name="screw_cap_1">
+      <origin xyz="0.78 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.006" />
+        </geometry>
+      <material name="screw_heads">
+        <color rgba="0.42 0.42 0.41 1" />
+        </material>
+      </visual>
+    <collision name="ceiling_strip">
+      <origin xyz="0 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="1.9 0.13 0.018" />
+        </geometry>
+      </collision>
+    <collision name="ceiling_neck">
+      <origin xyz="0 0 0.0265" rpy="0 0 0" />
+      <geometry>
+        <box size="1.76 0.05 0.02" />
+        </geometry>
+      </collision>
+    <collision name="rail_body">
+      <geometry>
+        <box size="1.8 0.07 0.035" />
+        </geometry>
+      </collision>
+    <collision name="recessed_slot">
+      <origin xyz="0 0 -0.0165" rpy="0 0 0" />
+      <geometry>
+        <box size="1.72 0.026 0.002" />
+        </geometry>
+      </collision>
+    <collision name="side_groove_0">
+      <origin xyz="0 -0.037 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="1.76 0.004 0.012" />
+        </geometry>
+      </collision>
+    <collision name="side_groove_1">
+      <origin xyz="0 0.037 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="1.76 0.004 0.012" />
+        </geometry>
+      </collision>
+    <collision name="screw_cap_0">
+      <origin xyz="-0.78 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="screw_cap_1">
+      <origin xyz="0.78 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="collar_0">
+    <visual name="shoe">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.02" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_0">
+      <origin xyz="0 -0.049 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.05" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_1">
+      <origin xyz="0 0.049 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.05" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="stem">
+      <origin xyz="0 0 -0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.077" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.16 0.025" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_0">
+      <origin xyz="0 -0.076 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.012 0.072" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bushing_0">
+      <origin xyz="0 -0.076 -0.135" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_1">
+      <origin xyz="0 0.076 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.012 0.072" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bushing_1">
+      <origin xyz="0 0.076 -0.135" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="shoe">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.02" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_0">
+      <origin xyz="0 -0.049 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_1">
+      <origin xyz="0 0.049 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="stem">
+      <origin xyz="0 0 -0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.077" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.16 0.025" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_0">
+      <origin xyz="0 -0.076 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.012 0.072" />
+        </geometry>
+      </collision>
+    <collision name="bushing_0">
+      <origin xyz="0 -0.076 -0.135" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_1">
+      <origin xyz="0 0.076 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.012 0.072" />
+        </geometry>
+      </collision>
+    <collision name="bushing_1">
+      <origin xyz="0 0.076 -0.135" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="head_0">
+    <visual name="pivot_axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.142" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="pivot_hub">
+      <origin xyz="0 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.028" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="can_shell">
+      <geometry>
+        <mesh filename="assets/meshes/spotlight_can_shell.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="lens">
+      <origin xyz="0 0 -0.207" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.004" />
+        </geometry>
+      <material name="warm_lens">
+        <color rgba="1 0.86 0.48 0.68" />
+        </material>
+      </visual>
+    <visual name="front_trim">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.061" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="pivot_axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.142" />
+        </geometry>
+      </collision>
+    <collision name="pivot_hub">
+      <origin xyz="0 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="can_shell">
+      <geometry>
+        <mesh filename="assets/meshes/spotlight_can_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="lens">
+      <origin xyz="0 0 -0.207" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="front_trim">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.061" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="collar_1">
+    <visual name="shoe">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.02" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_0">
+      <origin xyz="0 -0.049 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.05" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_1">
+      <origin xyz="0 0.049 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.05" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="stem">
+      <origin xyz="0 0 -0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.077" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.16 0.025" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_0">
+      <origin xyz="0 -0.076 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.012 0.072" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bushing_0">
+      <origin xyz="0 -0.076 -0.135" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_1">
+      <origin xyz="0 0.076 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.012 0.072" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bushing_1">
+      <origin xyz="0 0.076 -0.135" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="shoe">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.02" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_0">
+      <origin xyz="0 -0.049 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_1">
+      <origin xyz="0 0.049 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="stem">
+      <origin xyz="0 0 -0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.077" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.16 0.025" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_0">
+      <origin xyz="0 -0.076 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.012 0.072" />
+        </geometry>
+      </collision>
+    <collision name="bushing_0">
+      <origin xyz="0 -0.076 -0.135" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_1">
+      <origin xyz="0 0.076 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.012 0.072" />
+        </geometry>
+      </collision>
+    <collision name="bushing_1">
+      <origin xyz="0 0.076 -0.135" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="head_1">
+    <visual name="pivot_axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.142" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="pivot_hub">
+      <origin xyz="0 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.028" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="can_shell">
+      <geometry>
+        <mesh filename="assets/meshes/spotlight_can_shell.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="lens">
+      <origin xyz="0 0 -0.207" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.004" />
+        </geometry>
+      <material name="warm_lens">
+        <color rgba="1 0.86 0.48 0.68" />
+        </material>
+      </visual>
+    <visual name="front_trim">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.061" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="pivot_axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.142" />
+        </geometry>
+      </collision>
+    <collision name="pivot_hub">
+      <origin xyz="0 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="can_shell">
+      <geometry>
+        <mesh filename="assets/meshes/spotlight_can_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="lens">
+      <origin xyz="0 0 -0.207" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="front_trim">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.061" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="collar_2">
+    <visual name="shoe">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.02" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_0">
+      <origin xyz="0 -0.049 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.05" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="side_cheek_1">
+      <origin xyz="0 0.049 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.05" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="stem">
+      <origin xyz="0 0 -0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.077" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.16 0.025" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_0">
+      <origin xyz="0 -0.076 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.012 0.072" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bushing_0">
+      <origin xyz="0 -0.076 -0.135" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="yoke_arm_1">
+      <origin xyz="0 0.076 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.012 0.072" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="bushing_1">
+      <origin xyz="0 0.076 -0.135" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="shoe">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.11 0.02" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_0">
+      <origin xyz="0 -0.049 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="side_cheek_1">
+      <origin xyz="0 0.049 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.05" />
+        </geometry>
+      </collision>
+    <collision name="stem">
+      <origin xyz="0 0 -0.0585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.077" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0 0 -0.105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.16 0.025" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_0">
+      <origin xyz="0 -0.076 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.012 0.072" />
+        </geometry>
+      </collision>
+    <collision name="bushing_0">
+      <origin xyz="0 -0.076 -0.135" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="yoke_arm_1">
+      <origin xyz="0 0.076 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.012 0.072" />
+        </geometry>
+      </collision>
+    <collision name="bushing_1">
+      <origin xyz="0 0.076 -0.135" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="head_2">
+    <visual name="pivot_axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.142" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <visual name="pivot_hub">
+      <origin xyz="0 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.028" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="can_shell">
+      <geometry>
+        <mesh filename="assets/meshes/spotlight_can_shell.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.015 0.016 0.018 1" />
+        </material>
+      </visual>
+    <visual name="lens">
+      <origin xyz="0 0 -0.207" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.004" />
+        </geometry>
+      <material name="warm_lens">
+        <color rgba="1 0.86 0.48 0.68" />
+        </material>
+      </visual>
+    <visual name="front_trim">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.061" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.55 0.57 0.58 1" />
+        </material>
+      </visual>
+    <collision name="pivot_axle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.142" />
+        </geometry>
+      </collision>
+    <collision name="pivot_hub">
+      <origin xyz="0 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.028" />
+        </geometry>
+      </collision>
+    <collision name="can_shell">
+      <geometry>
+        <mesh filename="assets/meshes/spotlight_can_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="lens">
+      <origin xyz="0 0 -0.207" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="front_trim">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.061" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="collar_slide_0" type="prismatic">
+    <origin xyz="-0.55 0 -0.0175" rpy="0 0 0" />
+    <parent link="rail" />
+    <child link="collar_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="22" velocity="0.25" lower="-0.18" upper="0.18" />
+    </joint>
+  <joint name="head_pivot_0" type="revolute">
+    <origin xyz="0 0 -0.135" rpy="0 0 0" />
+    <parent link="collar_0" />
+    <child link="head_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="6" velocity="1.2" lower="-0.9" upper="0.9" />
+    </joint>
+  <joint name="collar_slide_1" type="prismatic">
+    <origin xyz="0 0 -0.0175" rpy="0 0 0" />
+    <parent link="rail" />
+    <child link="collar_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="22" velocity="0.25" lower="-0.18" upper="0.18" />
+    </joint>
+  <joint name="head_pivot_1" type="revolute">
+    <origin xyz="0 0 -0.135" rpy="0 0 0" />
+    <parent link="collar_1" />
+    <child link="head_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="6" velocity="1.2" lower="-0.9" upper="0.9" />
+    </joint>
+  <joint name="collar_slide_2" type="prismatic">
+    <origin xyz="0.55 0 -0.0175" rpy="0 0 0" />
+    <parent link="rail" />
+    <child link="collar_2" />
+    <axis xyz="1 0 0" />
+    <limit effort="22" velocity="0.25" lower="-0.18" upper="0.18" />
+    </joint>
+  <joint name="head_pivot_2" type="revolute">
+    <origin xyz="0 0 -0.135" rpy="0 0 0" />
+    <parent link="collar_2" />
+    <child link="head_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="6" velocity="1.2" lower="-0.9" upper="0.9" />
+    </joint>
+  </robot>

@@ -1,0 +1,80 @@
+<robot name="seat_belt_buckle_clicker">
+  <link name="housing">
+    <visual name="housing_shell">
+      <geometry>
+        <mesh filename="assets/meshes/housing_shell.obj" />
+        </geometry>
+      <material name="slightly_textured_black_plastic">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="slot_back_shadow">
+      <origin xyz="0.021 0 -0.003" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/slot_back_shadow.obj" />
+        </geometry>
+      <material name="shadowed_slot_black">
+        <color rgba="0.002 0.002 0.002 1" />
+        </material>
+      </visual>
+    <collision name="housing_shell">
+      <geometry>
+        <mesh filename="assets/meshes/housing_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="slot_back_shadow">
+      <origin xyz="0.021 0 -0.003" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/slot_back_shadow.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tongue">
+    <visual name="tongue_plate">
+      <origin xyz="0.004 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tongue_plate.obj" />
+        </geometry>
+      <material name="brushed_stainless_steel">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <collision name="tongue_plate">
+      <origin xyz="0.004 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tongue_plate.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button">
+    <visual name="release_button">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/release_button.obj" />
+        </geometry>
+      <material name="satin_red_release_button">
+        <color rgba="0.72 0.035 0.025 1" />
+        </material>
+      </visual>
+    <collision name="release_button">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/release_button.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="housing_to_tongue" type="prismatic">
+    <origin xyz="-0.043 0 0" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="tongue" />
+    <axis xyz="-1 0 0" />
+    <limit effort="18" velocity="0.35" lower="0" upper="0.04" />
+    </joint>
+  <joint name="housing_to_button" type="prismatic">
+    <origin xyz="-0.003 0 0.013" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.15" lower="0" upper="0.004" />
+    </joint>
+  </robot>

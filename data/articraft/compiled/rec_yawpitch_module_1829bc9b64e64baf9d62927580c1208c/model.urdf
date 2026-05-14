@@ -1,0 +1,328 @@
+<robot name="saddle_body_pan_tilt_unit">
+  <material name="matte_black">
+    <color rgba="0.025 0.028 0.032 1" />
+    </material>
+  <material name="anodized_graphite">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <material name="machined_aluminum">
+    <color rgba="0.7 0.72 0.74 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.006 0.006 0.005 1" />
+    </material>
+  <material name="fastener_black">
+    <color rgba="0.02 0.02 0.022 1" />
+    </material>
+  <link name="housing">
+    <visual name="mounting_foot">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.18 0.025" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="motor_housing">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.076" length="0.07" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="fixed_bearing_race">
+      <origin xyz="0 0 0.104" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.094" length="0.018" />
+        </geometry>
+      <material name="anodized_graphite" />
+      </visual>
+    <visual name="base_screw_0">
+      <origin xyz="-0.085 -0.06 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="fastener_black" />
+      </visual>
+    <visual name="base_screw_1">
+      <origin xyz="-0.085 0.06 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="fastener_black" />
+      </visual>
+    <visual name="base_screw_2">
+      <origin xyz="0.085 -0.06 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="fastener_black" />
+      </visual>
+    <visual name="base_screw_3">
+      <origin xyz="0.085 0.06 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="fastener_black" />
+      </visual>
+    <collision name="mounting_foot">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.18 0.025" />
+        </geometry>
+      </collision>
+    <collision name="motor_housing">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.076" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="fixed_bearing_race">
+      <origin xyz="0 0 0.104" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.094" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_0">
+      <origin xyz="-0.085 -0.06 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_1">
+      <origin xyz="-0.085 0.06 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_2">
+      <origin xyz="0.085 -0.06 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="base_screw_3">
+      <origin xyz="0.085 0.06 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="yaw_stage">
+    <visual name="turntable_disk">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.02" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="rotary_cap">
+      <origin xyz="0 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.057" length="0.016" />
+        </geometry>
+      <material name="anodized_graphite" />
+      </visual>
+    <visual name="saddle_yoke">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/saddle_yoke.obj" />
+        </geometry>
+      <material name="anodized_graphite" />
+      </visual>
+    <visual name="yaw_index_mark">
+      <origin xyz="0 0.043 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.004" />
+        </geometry>
+      <material name="dark_rubber" />
+      </visual>
+    <collision name="turntable_disk">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.086" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="rotary_cap">
+      <origin xyz="0 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.057" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="saddle_yoke">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/saddle_yoke.obj" />
+        </geometry>
+      </collision>
+    <collision name="yaw_index_mark">
+      <origin xyz="0 0.043 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.006 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tilt_cradle">
+    <visual name="pitch_axle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.154" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="axle_collar_0">
+      <origin xyz="-0.0805 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.007" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="axle_collar_1">
+      <origin xyz="0.0805 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.007" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="cradle_body">
+      <origin xyz="0 0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.058 0.052" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="plate_neck">
+      <origin xyz="0 0.058 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.045 0.035" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <collision name="pitch_axle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.154" />
+        </geometry>
+      </collision>
+    <collision name="axle_collar_0">
+      <origin xyz="-0.0805 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="axle_collar_1">
+      <origin xyz="0.0805 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.007" />
+        </geometry>
+      </collision>
+    <collision name="cradle_body">
+      <origin xyz="0 0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.058 0.052" />
+        </geometry>
+      </collision>
+    <collision name="plate_neck">
+      <origin xyz="0 0.058 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.045 0.035" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="output_plate">
+    <visual name="mounting_plate">
+      <geometry>
+        <box size="0.092 0.014 0.066" />
+        </geometry>
+      <material name="machined_aluminum" />
+      </visual>
+    <visual name="output_boss">
+      <origin xyz="0 0.009 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.004" />
+        </geometry>
+      <material name="anodized_graphite" />
+      </visual>
+    <visual name="plate_screw_0">
+      <origin xyz="-0.03 0.0084 -0.02" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.003" />
+        </geometry>
+      <material name="fastener_black" />
+      </visual>
+    <visual name="plate_screw_1">
+      <origin xyz="-0.03 0.0084 0.02" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.003" />
+        </geometry>
+      <material name="fastener_black" />
+      </visual>
+    <visual name="plate_screw_2">
+      <origin xyz="0.03 0.0084 -0.02" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.003" />
+        </geometry>
+      <material name="fastener_black" />
+      </visual>
+    <visual name="plate_screw_3">
+      <origin xyz="0.03 0.0084 0.02" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.003" />
+        </geometry>
+      <material name="fastener_black" />
+      </visual>
+    <collision name="mounting_plate">
+      <geometry>
+        <box size="0.092 0.014 0.066" />
+        </geometry>
+      </collision>
+    <collision name="output_boss">
+      <origin xyz="0 0.009 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="plate_screw_0">
+      <origin xyz="-0.03 0.0084 -0.02" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="plate_screw_1">
+      <origin xyz="-0.03 0.0084 0.02" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="plate_screw_2">
+      <origin xyz="0.03 0.0084 -0.02" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="plate_screw_3">
+      <origin xyz="0.03 0.0084 0.02" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="yaw" type="revolute">
+    <origin xyz="0 0 0.113" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="yaw_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="2.4" lower="-2.8" upper="2.8" />
+    </joint>
+  <joint name="pitch" type="revolute">
+    <origin xyz="0 0 0.132" rpy="0 0 0" />
+    <parent link="yaw_stage" />
+    <child link="tilt_cradle" />
+    <axis xyz="1 0 0" />
+    <limit effort="9" velocity="1.8" lower="-0.7" upper="0.7" />
+    </joint>
+  <joint name="cradle_to_plate" type="fixed">
+    <origin xyz="0 0.0875 0" rpy="0 0 0" />
+    <parent link="tilt_cradle" />
+    <child link="output_plate" />
+    </joint>
+  </robot>

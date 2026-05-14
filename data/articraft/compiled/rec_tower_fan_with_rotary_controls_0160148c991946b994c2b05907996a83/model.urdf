@@ -1,0 +1,338 @@
+<robot name="compact_office_tower_fan">
+  <material name="warm_white">
+    <color rgba="0.86 0.84 0.78 1" />
+    </material>
+  <material name="satin_grey">
+    <color rgba="0.5 0.52 0.54 1" />
+    </material>
+  <material name="dark_plastic">
+    <color rgba="0.055 0.06 0.065 1" />
+    </material>
+  <material name="grille_black">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.025 0.023 0.022 1" />
+    </material>
+  <material name="knob_grey">
+    <color rgba="0.7 0.72 0.72 1" />
+    </material>
+  <material name="accent_blue">
+    <color rgba="0.16 0.32 0.42 1" />
+    </material>
+  <link name="base">
+    <visual name="base_disc">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.03" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.118" length="0.004" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.025 0.023 0.022 1" />
+        </material>
+      </visual>
+    <visual name="bearing_ring">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bearing_ring.obj" />
+        </geometry>
+      <material name="satin_grey">
+        <color rgba="0.5 0.52 0.54 1" />
+        </material>
+      </visual>
+    <collision name="base_disc">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="rubber_foot">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.118" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="bearing_ring">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bearing_ring.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tower">
+    <visual name="turntable_neck">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.032" />
+        </geometry>
+      <material name="satin_grey">
+        <color rgba="0.5 0.52 0.54 1" />
+        </material>
+      </visual>
+    <visual name="bottom_cap">
+      <origin xyz="0 0 0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.11 0.024" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="side_shell_0">
+      <origin xyz="-0.079 0 0.279" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.11 0.45" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="side_shell_1">
+      <origin xyz="0.079 0 0.279" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.11 0.45" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rear_shell">
+      <origin xyz="0 0.049 0.279" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.012 0.45" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="front_grille">
+      <origin xyz="0 -0.0565 0.279" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_slot_grille.obj" />
+        </geometry>
+      <material name="grille_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="top_cap">
+      <origin xyz="0 0 0.523" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_cap_handle.obj" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="control_recess">
+      <origin xyz="0 -0.027 0.532" rpy="0 0 0" />
+      <geometry>
+        <box size="0.126 0.048 0.004" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <collision name="turntable_neck">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="bottom_cap">
+      <origin xyz="0 0 0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.11 0.024" />
+        </geometry>
+      </collision>
+    <collision name="side_shell_0">
+      <origin xyz="-0.079 0 0.279" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.11 0.45" />
+        </geometry>
+      </collision>
+    <collision name="side_shell_1">
+      <origin xyz="0.079 0 0.279" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.11 0.45" />
+        </geometry>
+      </collision>
+    <collision name="rear_shell">
+      <origin xyz="0 0.049 0.279" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.012 0.45" />
+        </geometry>
+      </collision>
+    <collision name="front_grille">
+      <origin xyz="0 -0.0565 0.279" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_slot_grille.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_cap">
+      <origin xyz="0 0 0.523" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_cap_handle.obj" />
+        </geometry>
+      </collision>
+    <collision name="control_recess">
+      <origin xyz="0 -0.027 0.532" rpy="0 0 0" />
+      <geometry>
+        <box size="0.126 0.048 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blower_wheel">
+    <visual name="blower_cage">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_blower_wheel.obj" />
+        </geometry>
+      <material name="accent_blue">
+        <color rgba="0.16 0.32 0.42 1" />
+        </material>
+      </visual>
+    <visual name="center_shaft">
+      <geometry>
+        <cylinder radius="0.006" length="0.39" />
+        </geometry>
+      <material name="satin_grey">
+        <color rgba="0.5 0.52 0.54 1" />
+        </material>
+      </visual>
+    <visual name="lower_hub">
+      <origin xyz="0 0 -0.178" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.008" />
+        </geometry>
+      <material name="satin_grey">
+        <color rgba="0.5 0.52 0.54 1" />
+        </material>
+      </visual>
+    <visual name="upper_hub">
+      <origin xyz="0 0 0.178" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.008" />
+        </geometry>
+      <material name="satin_grey">
+        <color rgba="0.5 0.52 0.54 1" />
+        </material>
+      </visual>
+    <collision name="blower_cage">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_blower_wheel.obj" />
+        </geometry>
+      </collision>
+    <collision name="center_shaft">
+      <geometry>
+        <cylinder radius="0.006" length="0.39" />
+        </geometry>
+      </collision>
+    <collision name="lower_hub">
+      <origin xyz="0 0 -0.178" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="upper_hub">
+      <origin xyz="0 0 0.178" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="speed_knob">
+    <visual name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/speed_knob.obj" />
+        </geometry>
+      <material name="knob_grey">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="knob_stem">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <collision name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/speed_knob.obj" />
+        </geometry>
+      </collision>
+    <collision name="knob_stem">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="timer_knob">
+    <visual name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/timer_knob.obj" />
+        </geometry>
+      <material name="knob_grey">
+        <color rgba="0.7 0.72 0.72 1" />
+        </material>
+      </visual>
+    <visual name="knob_stem">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.006" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.055 0.06 0.065 1" />
+        </material>
+      </visual>
+    <collision name="knob_cap">
+      <geometry>
+        <mesh filename="assets/meshes/timer_knob.obj" />
+        </geometry>
+      </collision>
+    <collision name="knob_stem">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="oscillation" type="revolute">
+    <origin xyz="0 0 0.03" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="tower" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="1.8" lower="-0.75" upper="0.75" />
+    </joint>
+  <joint name="blower_spin" type="continuous">
+    <origin xyz="0 -0.015 0.279" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="blower_wheel" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="40" />
+    </joint>
+  <joint name="speed_rotate" type="continuous">
+    <origin xyz="-0.032 -0.028 0.539" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="speed_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="8" />
+    </joint>
+  <joint name="timer_rotate" type="continuous">
+    <origin xyz="0.032 -0.028 0.539" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="timer_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="8" />
+    </joint>
+  </robot>

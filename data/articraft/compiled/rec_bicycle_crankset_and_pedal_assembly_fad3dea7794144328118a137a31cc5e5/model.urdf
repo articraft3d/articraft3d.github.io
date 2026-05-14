@@ -1,0 +1,622 @@
+<robot name="gravel_one_by_crankset">
+  <material name="forged_black">
+    <color rgba="0.015 0.018 0.02 1" />
+    </material>
+  <material name="satin_graphite">
+    <color rgba="0.23 0.24 0.24 1" />
+    </material>
+  <material name="dark_recess">
+    <color rgba="0.005 0.006 0.007 1" />
+    </material>
+  <material name="hard_anodized">
+    <color rgba="0.04 0.045 0.048 1" />
+    </material>
+  <material name="bearing_steel">
+    <color rgba="0.72 0.7 0.66 1" />
+    </material>
+  <material name="spindle_steel">
+    <color rgba="0.18 0.19 0.2 1" />
+    </material>
+  <material name="composite_black">
+    <color rgba="0.025 0.027 0.03 1" />
+    </material>
+  <material name="spring_steel">
+    <color rgba="0.55 0.58 0.58 1" />
+    </material>
+  <link name="bottom_bracket_shell">
+    <visual name="shell_body">
+      <geometry>
+        <mesh filename="assets/meshes/wide_hollow_bottom_bracket_shell.obj" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.23 0.24 0.24 1" />
+        </material>
+      </visual>
+    <visual name="bearing_race_0">
+      <geometry>
+        <mesh filename="assets/meshes/left_bearing_race.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="bearing_race_1">
+      <geometry>
+        <mesh filename="assets/meshes/right_bearing_race.obj" />
+        </geometry>
+      <material name="bearing_steel">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <collision name="shell_body">
+      <geometry>
+        <mesh filename="assets/meshes/wide_hollow_bottom_bracket_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_race_0">
+      <geometry>
+        <mesh filename="assets/meshes/left_bearing_race.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_race_1">
+      <geometry>
+        <mesh filename="assets/meshes/right_bearing_race.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="crankset">
+    <visual name="common_spindle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.17" />
+        </geometry>
+      <material name="spindle_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="right_arm">
+      <geometry>
+        <mesh filename="assets/meshes/right_hollow_crank_arm.obj" />
+        </geometry>
+      <material name="forged_black">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="left_arm">
+      <geometry>
+        <mesh filename="assets/meshes/left_hollow_crank_arm.obj" />
+        </geometry>
+      <material name="forged_black">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="right_arm_recess">
+      <geometry>
+        <mesh filename="assets/meshes/right_recess_shadow.obj" />
+        </geometry>
+      <material name="dark_recess">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="left_arm_recess">
+      <geometry>
+        <mesh filename="assets/meshes/left_recess_shadow.obj" />
+        </geometry>
+      <material name="dark_recess">
+        <color rgba="0.005 0.006 0.007 1" />
+        </material>
+      </visual>
+    <visual name="right_hub_boss">
+      <origin xyz="0.067 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.018" />
+        </geometry>
+      <material name="forged_black">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="left_hub_boss">
+      <origin xyz="-0.067 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.018" />
+        </geometry>
+      <material name="forged_black">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="right_pedal_boss">
+      <origin xyz="0.067 0 -0.17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      <material name="forged_black">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="left_pedal_boss">
+      <origin xyz="-0.067 0 0.17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      <material name="forged_black">
+        <color rgba="0.015 0.018 0.02 1" />
+        </material>
+      </visual>
+    <visual name="right_pedal_axle">
+      <origin xyz="0.101 0 -0.17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.06" />
+        </geometry>
+      <material name="spindle_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="left_pedal_axle">
+      <origin xyz="-0.101 0 0.17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.06" />
+        </geometry>
+      <material name="spindle_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="right_axle_collar">
+      <origin xyz="0.077 0 -0.17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.002" />
+        </geometry>
+      <material name="spindle_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="left_axle_collar">
+      <origin xyz="-0.077 0 0.17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.002" />
+        </geometry>
+      <material name="spindle_steel">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="spider_spoke_0">
+      <origin xyz="0.08 0 0.05" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.007 0.013 0.078" />
+        </geometry>
+      <material name="hard_anodized">
+        <color rgba="0.04 0.045 0.048 1" />
+        </material>
+      </visual>
+    <visual name="spider_spoke_1">
+      <origin xyz="0.08 0.0475528 0.0154508" rpy="-1.25664 0 0" />
+      <geometry>
+        <box size="0.007 0.013 0.078" />
+        </geometry>
+      <material name="hard_anodized">
+        <color rgba="0.04 0.045 0.048 1" />
+        </material>
+      </visual>
+    <visual name="spider_spoke_2">
+      <origin xyz="0.08 0.0293893 -0.0404508" rpy="-2.51327 0 0" />
+      <geometry>
+        <box size="0.007 0.013 0.078" />
+        </geometry>
+      <material name="hard_anodized">
+        <color rgba="0.04 0.045 0.048 1" />
+        </material>
+      </visual>
+    <visual name="spider_spoke_3">
+      <origin xyz="0.08 -0.0293893 -0.0404508" rpy="-3.76991 0 0" />
+      <geometry>
+        <box size="0.007 0.013 0.078" />
+        </geometry>
+      <material name="hard_anodized">
+        <color rgba="0.04 0.045 0.048 1" />
+        </material>
+      </visual>
+    <visual name="spider_spoke_4">
+      <origin xyz="0.08 -0.0475528 0.0154508" rpy="-5.02655 0 0" />
+      <geometry>
+        <box size="0.007 0.013 0.078" />
+        </geometry>
+      <material name="hard_anodized">
+        <color rgba="0.04 0.045 0.048 1" />
+        </material>
+      </visual>
+    <visual name="oval_chainring">
+      <geometry>
+        <mesh filename="assets/meshes/forty_tooth_oval_chainring.obj" />
+        </geometry>
+      <material name="hard_anodized">
+        <color rgba="0.04 0.045 0.048 1" />
+        </material>
+      </visual>
+    <visual name="direct_mount_lockring">
+      <origin xyz="0.086 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      <material name="hard_anodized">
+        <color rgba="0.04 0.045 0.048 1" />
+        </material>
+      </visual>
+    <collision name="common_spindle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.17" />
+        </geometry>
+      </collision>
+    <collision name="right_arm">
+      <geometry>
+        <mesh filename="assets/meshes/right_hollow_crank_arm.obj" />
+        </geometry>
+      </collision>
+    <collision name="left_arm">
+      <geometry>
+        <mesh filename="assets/meshes/left_hollow_crank_arm.obj" />
+        </geometry>
+      </collision>
+    <collision name="right_arm_recess">
+      <geometry>
+        <mesh filename="assets/meshes/right_recess_shadow.obj" />
+        </geometry>
+      </collision>
+    <collision name="left_arm_recess">
+      <geometry>
+        <mesh filename="assets/meshes/left_recess_shadow.obj" />
+        </geometry>
+      </collision>
+    <collision name="right_hub_boss">
+      <origin xyz="0.067 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="left_hub_boss">
+      <origin xyz="-0.067 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="right_pedal_boss">
+      <origin xyz="0.067 0 -0.17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="left_pedal_boss">
+      <origin xyz="-0.067 0 0.17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="right_pedal_axle">
+      <origin xyz="0.101 0 -0.17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="left_pedal_axle">
+      <origin xyz="-0.101 0 0.17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="right_axle_collar">
+      <origin xyz="0.077 0 -0.17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="left_axle_collar">
+      <origin xyz="-0.077 0 0.17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.002" />
+        </geometry>
+      </collision>
+    <collision name="spider_spoke_0">
+      <origin xyz="0.08 0 0.05" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.007 0.013 0.078" />
+        </geometry>
+      </collision>
+    <collision name="spider_spoke_1">
+      <origin xyz="0.08 0.0475528 0.0154508" rpy="-1.25664 0 0" />
+      <geometry>
+        <box size="0.007 0.013 0.078" />
+        </geometry>
+      </collision>
+    <collision name="spider_spoke_2">
+      <origin xyz="0.08 0.0293893 -0.0404508" rpy="-2.51327 0 0" />
+      <geometry>
+        <box size="0.007 0.013 0.078" />
+        </geometry>
+      </collision>
+    <collision name="spider_spoke_3">
+      <origin xyz="0.08 -0.0293893 -0.0404508" rpy="-3.76991 0 0" />
+      <geometry>
+        <box size="0.007 0.013 0.078" />
+        </geometry>
+      </collision>
+    <collision name="spider_spoke_4">
+      <origin xyz="0.08 -0.0475528 0.0154508" rpy="-5.02655 0 0" />
+      <geometry>
+        <box size="0.007 0.013 0.078" />
+        </geometry>
+      </collision>
+    <collision name="oval_chainring">
+      <geometry>
+        <mesh filename="assets/meshes/forty_tooth_oval_chainring.obj" />
+        </geometry>
+      </collision>
+    <collision name="direct_mount_lockring">
+      <origin xyz="0.086 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="right_pedal">
+    <visual name="axle_bushing">
+      <geometry>
+        <mesh filename="assets/meshes/right_pedal_hollow_bushing.obj" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="front_rail">
+      <origin xyz="0 0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.01 0.014" />
+        </geometry>
+      <material name="composite_black">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="rear_rail">
+      <origin xyz="0 -0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.01 0.014" />
+        </geometry>
+      <material name="composite_black">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="upper_clip">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.05 0.005" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="lower_clip">
+      <origin xyz="0 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.05 0.005" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="front_clip_post">
+      <origin xyz="0 0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.032" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="rear_clip_post">
+      <origin xyz="0 -0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.032" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="outer_bridge">
+      <origin xyz="0.033 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.07 0.01" />
+        </geometry>
+      <material name="composite_black">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <collision name="axle_bushing">
+      <geometry>
+        <mesh filename="assets/meshes/right_pedal_hollow_bushing.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_rail">
+      <origin xyz="0 0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.01 0.014" />
+        </geometry>
+      </collision>
+    <collision name="rear_rail">
+      <origin xyz="0 -0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.01 0.014" />
+        </geometry>
+      </collision>
+    <collision name="upper_clip">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.05 0.005" />
+        </geometry>
+      </collision>
+    <collision name="lower_clip">
+      <origin xyz="0 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.05 0.005" />
+        </geometry>
+      </collision>
+    <collision name="front_clip_post">
+      <origin xyz="0 0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.032" />
+        </geometry>
+      </collision>
+    <collision name="rear_clip_post">
+      <origin xyz="0 -0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.032" />
+        </geometry>
+      </collision>
+    <collision name="outer_bridge">
+      <origin xyz="0.033 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.07 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="left_pedal">
+    <visual name="axle_bushing">
+      <geometry>
+        <mesh filename="assets/meshes/left_pedal_hollow_bushing.obj" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="front_rail">
+      <origin xyz="0 0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.01 0.014" />
+        </geometry>
+      <material name="composite_black">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="rear_rail">
+      <origin xyz="0 -0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.01 0.014" />
+        </geometry>
+      <material name="composite_black">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="upper_clip">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.05 0.005" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="lower_clip">
+      <origin xyz="0 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.05 0.005" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="front_clip_post">
+      <origin xyz="0 0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.032" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="rear_clip_post">
+      <origin xyz="0 -0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.032" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.55 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="outer_bridge">
+      <origin xyz="-0.033 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.07 0.01" />
+        </geometry>
+      <material name="composite_black">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <collision name="axle_bushing">
+      <geometry>
+        <mesh filename="assets/meshes/left_pedal_hollow_bushing.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_rail">
+      <origin xyz="0 0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.01 0.014" />
+        </geometry>
+      </collision>
+    <collision name="rear_rail">
+      <origin xyz="0 -0.038 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.01 0.014" />
+        </geometry>
+      </collision>
+    <collision name="upper_clip">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.05 0.005" />
+        </geometry>
+      </collision>
+    <collision name="lower_clip">
+      <origin xyz="0 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.05 0.005" />
+        </geometry>
+      </collision>
+    <collision name="front_clip_post">
+      <origin xyz="0 0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.032" />
+        </geometry>
+      </collision>
+    <collision name="rear_clip_post">
+      <origin xyz="0 -0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.032" />
+        </geometry>
+      </collision>
+    <collision name="outer_bridge">
+      <origin xyz="-0.033 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.07 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="bottom_bracket_axle" type="continuous">
+    <parent link="bottom_bracket_shell" />
+    <child link="crankset" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="20" />
+    <dynamics damping="0.02" friction="0.01" />
+    </joint>
+  <joint name="right_pedal_axle" type="continuous">
+    <origin xyz="0.108 0 -0.17" rpy="0 0 0" />
+    <parent link="crankset" />
+    <child link="right_pedal" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="25" />
+    <dynamics damping="0.01" friction="0.004" />
+    </joint>
+  <joint name="left_pedal_axle" type="continuous">
+    <origin xyz="-0.108 0 0.17" rpy="0 0 0" />
+    <parent link="crankset" />
+    <child link="left_pedal" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="25" />
+    <dynamics damping="0.01" friction="0.004" />
+    </joint>
+  </robot>

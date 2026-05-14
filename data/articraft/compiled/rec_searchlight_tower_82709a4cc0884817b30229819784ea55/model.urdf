@@ -1,0 +1,447 @@
+<robot name="searchlight_tower">
+  <material name="painted_steel">
+    <color rgba="0.18 0.2 0.22 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="warm_metal">
+    <color rgba="0.58 0.53 0.45 1" />
+    </material>
+  <material name="pale_glass">
+    <color rgba="0.72 0.86 0.92 0.42" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.03 0.03 0.032 1" />
+    </material>
+  <link name="fixed_support">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="mast_foot">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.1" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="mast_tube">
+      <origin xyz="0 0 0.78" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="1.34" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="lower_collar">
+      <origin xyz="0 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.07" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="upper_collar">
+      <origin xyz="0 0 1.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.07" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_bearing">
+      <origin xyz="0 0 1.5" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.1" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="brace_0">
+      <geometry>
+        <mesh filename="assets/meshes/tower_brace_0.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="brace_1">
+      <geometry>
+        <mesh filename="assets/meshes/tower_brace_1.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="brace_2">
+      <geometry>
+        <mesh filename="assets/meshes/tower_brace_2.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="brace_3">
+      <geometry>
+        <mesh filename="assets/meshes/tower_brace_3.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="mast_foot">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="mast_tube">
+      <origin xyz="0 0 0.78" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="1.34" />
+        </geometry>
+      </collision>
+    <collision name="lower_collar">
+      <origin xyz="0 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="upper_collar">
+      <origin xyz="0 0 1.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.07" />
+        </geometry>
+      </collision>
+    <collision name="top_bearing">
+      <origin xyz="0 0 1.5" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="brace_0">
+      <geometry>
+        <mesh filename="assets/meshes/tower_brace_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="brace_1">
+      <geometry>
+        <mesh filename="assets/meshes/tower_brace_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="brace_2">
+      <geometry>
+        <mesh filename="assets/meshes/tower_brace_2.obj" />
+        </geometry>
+      </collision>
+    <collision name="brace_3">
+      <geometry>
+        <mesh filename="assets/meshes/tower_brace_3.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="pan_carriage">
+    <visual name="bearing_drum">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.158" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rotating_deck">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.26" length="0.06" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="turret_neck">
+      <origin xyz="0 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.12" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="yoke_frame">
+      <origin xyz="0 0 0.137" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/searchlight_yoke_frame.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="pivot_bushing_0">
+      <origin xyz="0.452 0 0.567" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pivot_bushing_0.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="pivot_bushing_1">
+      <origin xyz="-0.452 0 0.567" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pivot_bushing_1.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="bearing_drum">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.158" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="rotating_deck">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.26" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="turret_neck">
+      <origin xyz="0 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="yoke_frame">
+      <origin xyz="0 0 0.137" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/searchlight_yoke_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_bushing_0">
+      <origin xyz="0.452 0 0.567" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pivot_bushing_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="pivot_bushing_1">
+      <origin xyz="-0.452 0 0.567" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pivot_bushing_1.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lamp_head">
+    <visual name="lamp_shell">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/searchlight_lamp_shell.obj" />
+        </geometry>
+      <material name="warm_metal">
+        <color rgba="0.58 0.53 0.45 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_shaft">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.99" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="side_hub_0">
+      <origin xyz="0.26 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.05" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="side_hub_1">
+      <origin xyz="-0.26 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.05" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0 0.418 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.246" length="0.018" />
+        </geometry>
+      <material name="pale_glass">
+        <color rgba="0.72 0.86 0.92 0.42" />
+        </material>
+      </visual>
+    <visual name="front_lip">
+      <origin xyz="0 0.418 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/searchlight_front_lip.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lens_bar_x">
+      <origin xyz="0 0.43 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.014 0.018" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lens_bar_z">
+      <origin xyz="0 0.431 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.42" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_cap">
+      <origin xyz="0 -0.246 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.05" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_handle">
+      <geometry>
+        <mesh filename="assets/meshes/searchlight_top_handle.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.03 0.03 0.032 1" />
+        </material>
+      </visual>
+    <visual name="retaining_cap_0">
+      <origin xyz="0.497 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.045" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="retaining_cap_1">
+      <origin xyz="-0.497 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.045" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="lamp_shell">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/searchlight_lamp_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_shaft">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.99" />
+        </geometry>
+      </collision>
+    <collision name="side_hub_0">
+      <origin xyz="0.26 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="side_hub_1">
+      <origin xyz="-0.26 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="front_lens">
+      <origin xyz="0 0.418 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.246" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="front_lip">
+      <origin xyz="0 0.418 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/searchlight_front_lip.obj" />
+        </geometry>
+      </collision>
+    <collision name="lens_bar_x">
+      <origin xyz="0 0.43 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.014 0.018" />
+        </geometry>
+      </collision>
+    <collision name="lens_bar_z">
+      <origin xyz="0 0.431 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.42" />
+        </geometry>
+      </collision>
+    <collision name="rear_cap">
+      <origin xyz="0 -0.246 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="top_handle">
+      <geometry>
+        <mesh filename="assets/meshes/searchlight_top_handle.obj" />
+        </geometry>
+      </collision>
+    <collision name="retaining_cap_0">
+      <origin xyz="0.497 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.045" />
+        </geometry>
+      </collision>
+    <collision name="retaining_cap_1">
+      <origin xyz="-0.497 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_pan" type="revolute">
+    <origin xyz="0 0 1.55" rpy="0 0 0" />
+    <parent link="fixed_support" />
+    <child link="pan_carriage" />
+    <axis xyz="0 0 1" />
+    <limit effort="220" velocity="1" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="yoke_tilt" type="revolute">
+    <origin xyz="0 0 0.567" rpy="0 0 0" />
+    <parent link="pan_carriage" />
+    <child link="lamp_head" />
+    <axis xyz="1 0 0" />
+    <limit effort="90" velocity="0.9" lower="-0.45" upper="1.1" />
+    </joint>
+  </robot>

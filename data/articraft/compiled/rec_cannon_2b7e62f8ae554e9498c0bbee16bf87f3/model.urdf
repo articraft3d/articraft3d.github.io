@@ -1,0 +1,409 @@
+<robot name="naval_carronade">
+  <material name="dark_cast_iron">
+    <color rgba="0.015 0.016 0.015 1" />
+    </material>
+  <material name="worn_iron">
+    <color rgba="0.08 0.075 0.065 1" />
+    </material>
+  <material name="oiled_oak">
+    <color rgba="0.5 0.31 0.15 1" />
+    </material>
+  <material name="end_grain">
+    <color rgba="0.34 0.19 0.09 1" />
+    </material>
+  <material name="deck_oak">
+    <color rgba="0.58 0.4 0.22 1" />
+    </material>
+  <material name="dark_groove">
+    <color rgba="0.045 0.03 0.018 1" />
+    </material>
+  <link name="deck">
+    <visual name="deck_planks">
+      <geometry>
+        <box size="2.45 1.35 0.08" />
+        </geometry>
+      <material name="deck_oak" />
+      </visual>
+    <visual name="plank_seam_0">
+      <origin xyz="0 -0.45 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="2.46 0.01 0.006" />
+        </geometry>
+      <material name="dark_groove" />
+      </visual>
+    <visual name="plank_seam_1">
+      <origin xyz="0 -0.225 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="2.46 0.01 0.006" />
+        </geometry>
+      <material name="dark_groove" />
+      </visual>
+    <visual name="plank_seam_2">
+      <origin xyz="0 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="2.46 0.01 0.006" />
+        </geometry>
+      <material name="dark_groove" />
+      </visual>
+    <visual name="plank_seam_3">
+      <origin xyz="0 0.225 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="2.46 0.01 0.006" />
+        </geometry>
+      <material name="dark_groove" />
+      </visual>
+    <visual name="plank_seam_4">
+      <origin xyz="0 0.45 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="2.46 0.01 0.006" />
+        </geometry>
+      <material name="dark_groove" />
+      </visual>
+    <visual name="traverse_wear_plate">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.01" />
+        </geometry>
+      <material name="worn_iron" />
+      </visual>
+    <collision name="deck_planks">
+      <geometry>
+        <box size="2.45 1.35 0.08" />
+        </geometry>
+      </collision>
+    <collision name="plank_seam_0">
+      <origin xyz="0 -0.45 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="2.46 0.01 0.006" />
+        </geometry>
+      </collision>
+    <collision name="plank_seam_1">
+      <origin xyz="0 -0.225 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="2.46 0.01 0.006" />
+        </geometry>
+      </collision>
+    <collision name="plank_seam_2">
+      <origin xyz="0 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="2.46 0.01 0.006" />
+        </geometry>
+      </collision>
+    <collision name="plank_seam_3">
+      <origin xyz="0 0.225 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="2.46 0.01 0.006" />
+        </geometry>
+      </collision>
+    <collision name="plank_seam_4">
+      <origin xyz="0 0.45 0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="2.46 0.01 0.006" />
+        </geometry>
+      </collision>
+    <collision name="traverse_wear_plate">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="slide_base">
+    <visual name="pivot_plate">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.23" length="0.035" />
+        </geometry>
+      <material name="worn_iron" />
+      </visual>
+    <visual name="pivot_pin">
+      <origin xyz="0 0 0.0875" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.095" />
+        </geometry>
+      <material name="worn_iron" />
+      </visual>
+    <visual name="rail_plank">
+      <origin xyz="0.1 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="1.55 0.36 0.1" />
+        </geometry>
+      <material name="oiled_oak" />
+      </visual>
+    <visual name="wear_strip_0">
+      <origin xyz="0.11 -0.14 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="1.42 0.045 0.01" />
+        </geometry>
+      <material name="worn_iron" />
+      </visual>
+    <visual name="wear_strip_1">
+      <origin xyz="0.11 0.14 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="1.42 0.045 0.01" />
+        </geometry>
+      <material name="worn_iron" />
+      </visual>
+    <visual name="rear_stop">
+      <origin xyz="-0.58 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.42 0.08" />
+        </geometry>
+      <material name="end_grain" />
+      </visual>
+    <visual name="front_stop">
+      <origin xyz="0.78 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.42 0.08" />
+        </geometry>
+      <material name="end_grain" />
+      </visual>
+    <collision name="pivot_plate">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.23" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="pivot_pin">
+      <origin xyz="0 0 0.0875" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.095" />
+        </geometry>
+      </collision>
+    <collision name="rail_plank">
+      <origin xyz="0.1 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="1.55 0.36 0.1" />
+        </geometry>
+      </collision>
+    <collision name="wear_strip_0">
+      <origin xyz="0.11 -0.14 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="1.42 0.045 0.01" />
+        </geometry>
+      </collision>
+    <collision name="wear_strip_1">
+      <origin xyz="0.11 0.14 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="1.42 0.045 0.01" />
+        </geometry>
+      </collision>
+    <collision name="rear_stop">
+      <origin xyz="-0.58 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.42 0.08" />
+        </geometry>
+      </collision>
+    <collision name="front_stop">
+      <origin xyz="0.78 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.42 0.08" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carriage_bed">
+    <visual name="sled">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.56 0.12" />
+        </geometry>
+      <material name="oiled_oak" />
+      </visual>
+    <visual name="rear_transom">
+      <origin xyz="-0.25 0 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.58 0.2" />
+        </geometry>
+      <material name="end_grain" />
+      </visual>
+    <visual name="front_transom">
+      <origin xyz="0.27 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.58 0.12" />
+        </geometry>
+      <material name="end_grain" />
+      </visual>
+    <visual name="cheek_0">
+      <origin xyz="0.04 -0.3 0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.08 0.34" />
+        </geometry>
+      <material name="oiled_oak" />
+      </visual>
+    <visual name="cheek_1">
+      <origin xyz="0.04 0.3 0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.08 0.34" />
+        </geometry>
+      <material name="oiled_oak" />
+      </visual>
+    <visual name="bearing_boss_0">
+      <origin xyz="0.05 -0.235 0.4" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.05" />
+        </geometry>
+      <material name="worn_iron" />
+      </visual>
+    <visual name="bearing_boss_1">
+      <origin xyz="0.05 0.235 0.4" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.05" />
+        </geometry>
+      <material name="worn_iron" />
+      </visual>
+    <visual name="elevation_screw_block">
+      <origin xyz="-0.18 0 0.175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.08" />
+        </geometry>
+      <material name="worn_iron" />
+      </visual>
+    <visual name="elevation_screw">
+      <origin xyz="-0.18 0 0.135" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.12" />
+        </geometry>
+      <material name="worn_iron" />
+      </visual>
+    <collision name="sled">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.56 0.12" />
+        </geometry>
+      </collision>
+    <collision name="rear_transom">
+      <origin xyz="-0.25 0 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.58 0.2" />
+        </geometry>
+      </collision>
+    <collision name="front_transom">
+      <origin xyz="0.27 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.58 0.12" />
+        </geometry>
+      </collision>
+    <collision name="cheek_0">
+      <origin xyz="0.04 -0.3 0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.08 0.34" />
+        </geometry>
+      </collision>
+    <collision name="cheek_1">
+      <origin xyz="0.04 0.3 0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.08 0.34" />
+        </geometry>
+      </collision>
+    <collision name="bearing_boss_0">
+      <origin xyz="0.05 -0.235 0.4" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="bearing_boss_1">
+      <origin xyz="0.05 0.235 0.4" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="elevation_screw_block">
+      <origin xyz="-0.18 0 0.175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.08" />
+        </geometry>
+      </collision>
+    <collision name="elevation_screw">
+      <origin xyz="-0.18 0 0.135" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.12" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="barrel">
+    <visual name="barrel_body">
+      <geometry>
+        <mesh filename="assets/meshes/barrel_body.obj" />
+        </geometry>
+      <material name="dark_cast_iron" />
+      </visual>
+    <visual name="trunnion_axle">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.48" />
+        </geometry>
+      <material name="dark_cast_iron" />
+      </visual>
+    <visual name="cascabel_neck">
+      <origin xyz="-0.275 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.14" />
+        </geometry>
+      <material name="dark_cast_iron" />
+      </visual>
+    <visual name="cascabel_knob">
+      <origin xyz="-0.36 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.075" />
+        </geometry>
+      <material name="dark_cast_iron" />
+      </visual>
+    <visual name="touch_hole_boss">
+      <origin xyz="-0.09 0 0.175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.035" />
+        </geometry>
+      <material name="dark_cast_iron" />
+      </visual>
+    <collision name="barrel_body">
+      <geometry>
+        <mesh filename="assets/meshes/barrel_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="trunnion_axle">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.48" />
+        </geometry>
+      </collision>
+    <collision name="cascabel_neck">
+      <origin xyz="-0.275 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.14" />
+        </geometry>
+      </collision>
+    <collision name="cascabel_knob">
+      <origin xyz="-0.36 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.075" />
+        </geometry>
+      </collision>
+    <collision name="touch_hole_boss">
+      <origin xyz="-0.09 0 0.175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.035" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="deck_to_slide_base" type="revolute">
+    <origin xyz="0 0 0.04" rpy="0 0 0" />
+    <parent link="deck" />
+    <child link="slide_base" />
+    <axis xyz="0 0 1" />
+    <limit effort="400" velocity="0.35" lower="-0.55" upper="0.55" />
+    </joint>
+  <joint name="slide_base_to_carriage" type="prismatic">
+    <origin xyz="0.15 0 0.15" rpy="0 0 0" />
+    <parent link="slide_base" />
+    <child link="carriage_bed" />
+    <axis xyz="-1 0 0" />
+    <limit effort="1200" velocity="0.45" lower="0" upper="0.32" />
+    </joint>
+  <joint name="carriage_to_barrel" type="revolute">
+    <origin xyz="0.05 0 0.4" rpy="0 0 0" />
+    <parent link="carriage_bed" />
+    <child link="barrel" />
+    <axis xyz="0 -1 0" />
+    <limit effort="250" velocity="0.6" lower="-0.08" upper="0.32" />
+    </joint>
+  </robot>

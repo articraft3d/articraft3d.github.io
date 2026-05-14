@@ -1,0 +1,290 @@
+<robot name="bench_positioning_axis">
+  <material name="dark_iron">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.72 0.74 0.72 1" />
+    </material>
+  <material name="blue_carriage">
+    <color rgba="0.05 0.2 0.55 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="orange_lift">
+    <color rgba="0.95 0.42 0.08 1" />
+    </material>
+  <link name="bench_base">
+    <visual name="bench_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.22 0.035" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="x_rail_0">
+      <origin xyz="0 -0.0675 0.0565" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.026 0.047" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="x_rail_1">
+      <origin xyz="0 0.0675 0.0565" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.026 0.047" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_0">
+      <origin xyz="-0.52 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.22 0.12" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="end_stop_1">
+      <origin xyz="0.52 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.22 0.12" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="position_scale">
+      <origin xyz="0 -0.1135 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.008 0.03" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <collision name="bench_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.22 0.035" />
+        </geometry>
+      </collision>
+    <collision name="x_rail_0">
+      <origin xyz="0 -0.0675 0.0565" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.026 0.047" />
+        </geometry>
+      </collision>
+    <collision name="x_rail_1">
+      <origin xyz="0 0.0675 0.0565" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.026 0.047" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_0">
+      <origin xyz="-0.52 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.22 0.12" />
+        </geometry>
+      </collision>
+    <collision name="end_stop_1">
+      <origin xyz="0.52 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.22 0.12" />
+        </geometry>
+      </collision>
+    <collision name="position_scale">
+      <origin xyz="0 -0.1135 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.008 0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="base_carriage">
+    <visual name="bearing_shoe_0">
+      <origin xyz="0 -0.0675 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.035 0.035" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="bearing_shoe_1">
+      <origin xyz="0 0.0675 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.035 0.035" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="saddle_plate">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.18 0.03" />
+        </geometry>
+      <material name="blue_carriage">
+        <color rgba="0.05 0.2 0.55 1" />
+        </material>
+      </visual>
+    <visual name="column_foot">
+      <origin xyz="0 0 0.0875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.13 0.045" />
+        </geometry>
+      <material name="blue_carriage">
+        <color rgba="0.05 0.2 0.55 1" />
+        </material>
+      </visual>
+    <visual name="fixed_column">
+      <origin xyz="0 0 0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.075 0.6" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_rail_0">
+      <origin xyz="-0.03 0.043 0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.56" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="front_rail_1">
+      <origin xyz="0.03 0.043 0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.56" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="front_gusset">
+      <origin xyz="0 0.047 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.012 0.17" />
+        </geometry>
+      <material name="blue_carriage">
+        <color rgba="0.05 0.2 0.55 1" />
+        </material>
+      </visual>
+    <collision name="bearing_shoe_0">
+      <origin xyz="0 -0.0675 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.035 0.035" />
+        </geometry>
+      </collision>
+    <collision name="bearing_shoe_1">
+      <origin xyz="0 0.0675 0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.035 0.035" />
+        </geometry>
+      </collision>
+    <collision name="saddle_plate">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.18 0.03" />
+        </geometry>
+      </collision>
+    <collision name="column_foot">
+      <origin xyz="0 0 0.0875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.13 0.045" />
+        </geometry>
+      </collision>
+    <collision name="fixed_column">
+      <origin xyz="0 0 0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.075 0.6" />
+        </geometry>
+      </collision>
+    <collision name="front_rail_0">
+      <origin xyz="-0.03 0.043 0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.56" />
+        </geometry>
+      </collision>
+    <collision name="front_rail_1">
+      <origin xyz="0.03 0.043 0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.012 0.56" />
+        </geometry>
+      </collision>
+    <collision name="front_gusset">
+      <origin xyz="0 0.047 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.012 0.17" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="column_carriage">
+    <visual name="slider_block">
+      <geometry>
+        <box size="0.13 0.035 0.26" />
+        </geometry>
+      <material name="orange_lift">
+        <color rgba="0.95 0.42 0.08 1" />
+        </material>
+      </visual>
+    <visual name="lifted_column">
+      <origin xyz="0 0.006 0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.035 0.72" />
+        </geometry>
+      <material name="orange_lift">
+        <color rgba="0.95 0.42 0.08 1" />
+        </material>
+      </visual>
+    <visual name="head_pad">
+      <origin xyz="0 0.006 0.666" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.038" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <collision name="slider_block">
+      <geometry>
+        <box size="0.13 0.035 0.26" />
+        </geometry>
+      </collision>
+    <collision name="lifted_column">
+      <origin xyz="0 0.006 0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.035 0.72" />
+        </geometry>
+      </collision>
+    <collision name="head_pad">
+      <origin xyz="0 0.006 0.666" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.038" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="x_slide" type="prismatic">
+    <origin xyz="-0.28 0 0.08" rpy="0 0 0" />
+    <parent link="bench_base" />
+    <child link="base_carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="0.35" lower="0" upper="0.5" />
+    </joint>
+  <joint name="z_slide" type="prismatic">
+    <origin xyz="0 0.0665 0.3" rpy="0 0 0" />
+    <parent link="base_carriage" />
+    <child link="column_carriage" />
+    <axis xyz="0 0 1" />
+    <limit effort="90" velocity="0.25" lower="0" upper="0.34" />
+    </joint>
+  </robot>

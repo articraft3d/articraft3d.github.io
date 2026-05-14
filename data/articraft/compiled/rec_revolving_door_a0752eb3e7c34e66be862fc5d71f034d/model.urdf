@@ -1,0 +1,439 @@
+<robot name="four_wing_revolving_door">
+  <link name="drum">
+    <visual name="floor_disk">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.08" length="0.08" />
+        </geometry>
+      <material name="dark_stone_floor">
+        <color rgba="0.18 0.18 0.17 1" />
+        </material>
+      </visual>
+    <visual name="top_canopy">
+      <origin xyz="0 0 2.56" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.08" length="0.12" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="curved_glass_0">
+      <geometry>
+        <mesh filename="assets/meshes/curved_glass_0.obj" />
+        </geometry>
+      <material name="slightly_blue_glass">
+        <color rgba="0.62 0.84 0.95 0.34" />
+        </material>
+      </visual>
+    <visual name="curved_glass_1">
+      <geometry>
+        <mesh filename="assets/meshes/curved_glass_1.obj" />
+        </geometry>
+      <material name="slightly_blue_glass">
+        <color rgba="0.62 0.84 0.95 0.34" />
+        </material>
+      </visual>
+    <visual name="jamb_post_0">
+      <origin xyz="0.823248 0.576444 1.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="2.44" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="jamb_post_1">
+      <origin xyz="-0.823248 0.576444 1.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="2.44" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="jamb_post_2">
+      <origin xyz="-0.823248 -0.576444 1.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="2.44" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="jamb_post_3">
+      <origin xyz="0.823248 -0.576444 1.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="2.44" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="bottom_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/bottom_bearing.obj" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="top_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/top_bearing.obj" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <collision name="floor_disk">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.08" length="0.08" />
+        </geometry>
+      </collision>
+    <collision name="top_canopy">
+      <origin xyz="0 0 2.56" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.08" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="curved_glass_0">
+      <geometry>
+        <mesh filename="assets/meshes/curved_glass_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="curved_glass_1">
+      <geometry>
+        <mesh filename="assets/meshes/curved_glass_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="jamb_post_0">
+      <origin xyz="0.823248 0.576444 1.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="2.44" />
+        </geometry>
+      </collision>
+    <collision name="jamb_post_1">
+      <origin xyz="-0.823248 0.576444 1.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="2.44" />
+        </geometry>
+      </collision>
+    <collision name="jamb_post_2">
+      <origin xyz="-0.823248 -0.576444 1.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="2.44" />
+        </geometry>
+      </collision>
+    <collision name="jamb_post_3">
+      <origin xyz="0.823248 -0.576444 1.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="2.44" />
+        </geometry>
+      </collision>
+    <collision name="bottom_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/bottom_bearing.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/top_bearing.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wing_carrier">
+    <visual name="central_shaft">
+      <origin xyz="0 0 1.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="2.4" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="lower_hub">
+      <origin xyz="0 0 0.215" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.065" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="upper_hub">
+      <origin xyz="0 0 2.365" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.065" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="wing_0_panel">
+      <origin xyz="0.4775 0 1.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.955 0.032 2.34" />
+        </geometry>
+      <material name="clear_wing_glass">
+        <color rgba="0.72 0.9 1 0.42" />
+        </material>
+      </visual>
+    <visual name="wing_0_bottom_rail">
+      <origin xyz="0.4775 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="wing_0_top_rail">
+      <origin xyz="0.4775 0 2.395" rpy="0 0 0" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="wing_0_stile">
+      <origin xyz="0.955 0 1.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.06 2.34" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="wing_1_panel">
+      <origin xyz="2.92384e-17 0.4775 1.29" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.955 0.032 2.34" />
+        </geometry>
+      <material name="clear_wing_glass">
+        <color rgba="0.72 0.9 1 0.42" />
+        </material>
+      </visual>
+    <visual name="wing_1_bottom_rail">
+      <origin xyz="2.92384e-17 0.4775 0.185" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="wing_1_top_rail">
+      <origin xyz="2.92384e-17 0.4775 2.395" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="wing_1_stile">
+      <origin xyz="5.84769e-17 0.955 1.29" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.03 0.06 2.34" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="wing_2_panel">
+      <origin xyz="-0.4775 5.84769e-17 1.29" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.955 0.032 2.34" />
+        </geometry>
+      <material name="clear_wing_glass">
+        <color rgba="0.72 0.9 1 0.42" />
+        </material>
+      </visual>
+    <visual name="wing_2_bottom_rail">
+      <origin xyz="-0.4775 5.84769e-17 0.185" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="wing_2_top_rail">
+      <origin xyz="-0.4775 5.84769e-17 2.395" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="wing_2_stile">
+      <origin xyz="-0.955 1.16954e-16 1.29" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.03 0.06 2.34" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="wing_3_panel">
+      <origin xyz="-8.77153e-17 -0.4775 1.29" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.955 0.032 2.34" />
+        </geometry>
+      <material name="clear_wing_glass">
+        <color rgba="0.72 0.9 1 0.42" />
+        </material>
+      </visual>
+    <visual name="wing_3_bottom_rail">
+      <origin xyz="-8.77153e-17 -0.4775 0.185" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="wing_3_top_rail">
+      <origin xyz="-8.77153e-17 -0.4775 2.395" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <visual name="wing_3_stile">
+      <origin xyz="-1.75431e-16 -0.955 1.29" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.03 0.06 2.34" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.62 0.64 0.64 1" />
+        </material>
+      </visual>
+    <collision name="central_shaft">
+      <origin xyz="0 0 1.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="2.4" />
+        </geometry>
+      </collision>
+    <collision name="lower_hub">
+      <origin xyz="0 0 0.215" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.065" />
+        </geometry>
+      </collision>
+    <collision name="upper_hub">
+      <origin xyz="0 0 2.365" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.065" />
+        </geometry>
+      </collision>
+    <collision name="wing_0_panel">
+      <origin xyz="0.4775 0 1.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.955 0.032 2.34" />
+        </geometry>
+      </collision>
+    <collision name="wing_0_bottom_rail">
+      <origin xyz="0.4775 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      </collision>
+    <collision name="wing_0_top_rail">
+      <origin xyz="0.4775 0 2.395" rpy="0 0 0" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      </collision>
+    <collision name="wing_0_stile">
+      <origin xyz="0.955 0 1.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.06 2.34" />
+        </geometry>
+      </collision>
+    <collision name="wing_1_panel">
+      <origin xyz="2.92384e-17 0.4775 1.29" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.955 0.032 2.34" />
+        </geometry>
+      </collision>
+    <collision name="wing_1_bottom_rail">
+      <origin xyz="2.92384e-17 0.4775 0.185" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      </collision>
+    <collision name="wing_1_top_rail">
+      <origin xyz="2.92384e-17 0.4775 2.395" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      </collision>
+    <collision name="wing_1_stile">
+      <origin xyz="5.84769e-17 0.955 1.29" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.03 0.06 2.34" />
+        </geometry>
+      </collision>
+    <collision name="wing_2_panel">
+      <origin xyz="-0.4775 5.84769e-17 1.29" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.955 0.032 2.34" />
+        </geometry>
+      </collision>
+    <collision name="wing_2_bottom_rail">
+      <origin xyz="-0.4775 5.84769e-17 0.185" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      </collision>
+    <collision name="wing_2_top_rail">
+      <origin xyz="-0.4775 5.84769e-17 2.395" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      </collision>
+    <collision name="wing_2_stile">
+      <origin xyz="-0.955 1.16954e-16 1.29" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.03 0.06 2.34" />
+        </geometry>
+      </collision>
+    <collision name="wing_3_panel">
+      <origin xyz="-8.77153e-17 -0.4775 1.29" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.955 0.032 2.34" />
+        </geometry>
+      </collision>
+    <collision name="wing_3_bottom_rail">
+      <origin xyz="-8.77153e-17 -0.4775 0.185" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      </collision>
+    <collision name="wing_3_top_rail">
+      <origin xyz="-8.77153e-17 -0.4775 2.395" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.955 0.052 0.045" />
+        </geometry>
+      </collision>
+    <collision name="wing_3_stile">
+      <origin xyz="-1.75431e-16 -0.955 1.29" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.03 0.06 2.34" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="drum_to_wings" type="continuous">
+    <parent link="drum" />
+    <child link="wing_carrier" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="1.2" />
+    </joint>
+  </robot>

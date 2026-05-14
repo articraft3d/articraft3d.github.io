@@ -1,0 +1,510 @@
+<robot name="detailed_wheelbarrow">
+  <material name="powder_coated_green">
+    <color rgba="0.1 0.43 0.18 1" />
+    </material>
+  <material name="black_powdercoat">
+    <color rgba="0.015 0.014 0.012 1" />
+    </material>
+  <material name="matte_black_rubber">
+    <color rgba="0.005 0.005 0.004 1" />
+    </material>
+  <material name="utility_yellow_rim">
+    <color rgba="0.95 0.68 0.08 1" />
+    </material>
+  <material name="galvanized_steel">
+    <color rgba="0.62 0.65 0.62 1" />
+    </material>
+  <material name="dark_bolt_heads">
+    <color rgba="0.08 0.085 0.08 1" />
+    </material>
+  <link name="axle">
+    <visual name="axle_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.54" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.62 1" />
+        </material>
+      </visual>
+    <visual name="wheel_washer_0">
+      <origin xyz="0 -0.095 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.01" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.62 1" />
+        </material>
+      </visual>
+    <visual name="wheel_washer_1">
+      <origin xyz="0 0.095 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.01" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.62 1" />
+        </material>
+      </visual>
+    <collision name="axle_shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.54" />
+        </geometry>
+      </collision>
+    <collision name="wheel_washer_0">
+      <origin xyz="0 -0.095 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="wheel_washer_1">
+      <origin xyz="0 0.095 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wheel">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/block_tire.obj" />
+        </geometry>
+      <material name="matte_black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/yellow_spoked_rim.obj" />
+        </geometry>
+      <material name="utility_yellow_rim">
+        <color rgba="0.95 0.68 0.08 1" />
+        </material>
+      </visual>
+    <visual name="bearing_sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.11" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.62 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/block_tire.obj" />
+        </geometry>
+      </collision>
+    <collision name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/yellow_spoked_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="bearing_sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.11" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="body">
+    <visual name="tray_shell">
+      <geometry>
+        <mesh filename="assets/meshes/deep_flared_tray.obj" />
+        </geometry>
+      <material name="powder_coated_green">
+        <color rgba="0.1 0.43 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rolled_rim">
+      <geometry>
+        <mesh filename="assets/meshes/rolled_tray_rim.obj" />
+        </geometry>
+      <material name="powder_coated_green">
+        <color rgba="0.1 0.43 0.18 1" />
+        </material>
+      </visual>
+    <visual name="main_frame">
+      <geometry>
+        <mesh filename="assets/meshes/continuous_tubular_frame.obj" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="leg_stand">
+      <geometry>
+        <mesh filename="assets/meshes/rear_leg_stand.obj" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_0">
+      <origin xyz="1.32 -0.38 -0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.055 0.03" />
+        </geometry>
+      <material name="matte_black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_1">
+      <origin xyz="1.32 0.38 -0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.055 0.03" />
+        </geometry>
+      <material name="matte_black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="tray_crossbar_0">
+      <origin xyz="0.55 0 0.145" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.66" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tray_crossbar_1">
+      <origin xyz="1.04 0 0.145" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.66" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tray_support_0_0">
+      <origin xyz="0.55 -0.245 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.105 0.24" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tray_support_0_1">
+      <origin xyz="0.55 0.245 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.105 0.24" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tray_support_1_0">
+      <origin xyz="1.04 -0.245 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.105 0.24" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tray_support_1_1">
+      <origin xyz="1.04 0.245 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.105 0.24" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tray_strut_0_0">
+      <origin xyz="0.48 -0.23 0.21" rpy="0 0.55 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.36" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tray_strut_0_1">
+      <origin xyz="0.48 0.23 0.21" rpy="0 0.55 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.36" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tray_strut_1_0">
+      <origin xyz="1.1 -0.23 0.21" rpy="0 0.55 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.36" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="tray_strut_1_1">
+      <origin xyz="1.1 0.23 0.21" rpy="0 0.55 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.36" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="bushing_0">
+      <origin xyz="0 -0.185 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.052" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.62 1" />
+        </material>
+      </visual>
+    <visual name="fork_plate_0">
+      <origin xyz="0.07 -0.185 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.018 0.16" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="bushing_1">
+      <origin xyz="0 0.185 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.052" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.62 0.65 0.62 1" />
+        </material>
+      </visual>
+    <visual name="fork_plate_1">
+      <origin xyz="0.07 0.185 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.018 0.16" />
+        </geometry>
+      <material name="black_powdercoat">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="grip_0">
+      <origin xyz="1.72 -0.35 0.32" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.24" />
+        </geometry>
+      <material name="matte_black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="grip_1">
+      <origin xyz="1.72 0.35 0.32" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.24" />
+        </geometry>
+      <material name="matte_black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="tray_bolt_0">
+      <origin xyz="1.04 -0.245 0.37" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.06" />
+        </geometry>
+      <material name="dark_bolt_heads">
+        <color rgba="0.08 0.085 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_bolt_0">
+      <origin xyz="0.46 -0.28 0.58" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.06" />
+        </geometry>
+      <material name="dark_bolt_heads">
+        <color rgba="0.08 0.085 0.08 1" />
+        </material>
+      </visual>
+    <visual name="tray_bolt_1">
+      <origin xyz="1.04 0.245 0.37" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.06" />
+        </geometry>
+      <material name="dark_bolt_heads">
+        <color rgba="0.08 0.085 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_bolt_1">
+      <origin xyz="0.46 0.28 0.58" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.06" />
+        </geometry>
+      <material name="dark_bolt_heads">
+        <color rgba="0.08 0.085 0.08 1" />
+        </material>
+      </visual>
+    <collision name="tray_shell">
+      <geometry>
+        <mesh filename="assets/meshes/deep_flared_tray.obj" />
+        </geometry>
+      </collision>
+    <collision name="rolled_rim">
+      <geometry>
+        <mesh filename="assets/meshes/rolled_tray_rim.obj" />
+        </geometry>
+      </collision>
+    <collision name="main_frame">
+      <geometry>
+        <mesh filename="assets/meshes/continuous_tubular_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="leg_stand">
+      <geometry>
+        <mesh filename="assets/meshes/rear_leg_stand.obj" />
+        </geometry>
+      </collision>
+    <collision name="foot_pad_0">
+      <origin xyz="1.32 -0.38 -0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.055 0.03" />
+        </geometry>
+      </collision>
+    <collision name="foot_pad_1">
+      <origin xyz="1.32 0.38 -0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.055 0.03" />
+        </geometry>
+      </collision>
+    <collision name="tray_crossbar_0">
+      <origin xyz="0.55 0 0.145" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.66" />
+        </geometry>
+      </collision>
+    <collision name="tray_crossbar_1">
+      <origin xyz="1.04 0 0.145" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.66" />
+        </geometry>
+      </collision>
+    <collision name="tray_support_0_0">
+      <origin xyz="0.55 -0.245 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.105 0.24" />
+        </geometry>
+      </collision>
+    <collision name="tray_support_0_1">
+      <origin xyz="0.55 0.245 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.105 0.24" />
+        </geometry>
+      </collision>
+    <collision name="tray_support_1_0">
+      <origin xyz="1.04 -0.245 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.105 0.24" />
+        </geometry>
+      </collision>
+    <collision name="tray_support_1_1">
+      <origin xyz="1.04 0.245 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.105 0.24" />
+        </geometry>
+      </collision>
+    <collision name="tray_strut_0_0">
+      <origin xyz="0.48 -0.23 0.21" rpy="0 0.55 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.36" />
+        </geometry>
+      </collision>
+    <collision name="tray_strut_0_1">
+      <origin xyz="0.48 0.23 0.21" rpy="0 0.55 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.36" />
+        </geometry>
+      </collision>
+    <collision name="tray_strut_1_0">
+      <origin xyz="1.1 -0.23 0.21" rpy="0 0.55 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.36" />
+        </geometry>
+      </collision>
+    <collision name="tray_strut_1_1">
+      <origin xyz="1.1 0.23 0.21" rpy="0 0.55 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.36" />
+        </geometry>
+      </collision>
+    <collision name="bushing_0">
+      <origin xyz="0 -0.185 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="fork_plate_0">
+      <origin xyz="0.07 -0.185 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.018 0.16" />
+        </geometry>
+      </collision>
+    <collision name="bushing_1">
+      <origin xyz="0 0.185 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.052" />
+        </geometry>
+      </collision>
+    <collision name="fork_plate_1">
+      <origin xyz="0.07 0.185 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.018 0.16" />
+        </geometry>
+      </collision>
+    <collision name="grip_0">
+      <origin xyz="1.72 -0.35 0.32" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="grip_1">
+      <origin xyz="1.72 0.35 0.32" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="tray_bolt_0">
+      <origin xyz="1.04 -0.245 0.37" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="front_bolt_0">
+      <origin xyz="0.46 -0.28 0.58" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="tray_bolt_1">
+      <origin xyz="1.04 0.245 0.37" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.06" />
+        </geometry>
+      </collision>
+    <collision name="front_bolt_1">
+      <origin xyz="0.46 0.28 0.58" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.06" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="wheel_spin" type="continuous">
+    <parent link="axle" />
+    <child link="wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="35" velocity="18" />
+    </joint>
+  <joint name="dump_pivot" type="revolute">
+    <parent link="axle" />
+    <child link="body" />
+    <axis xyz="0 -1 0" />
+    <limit effort="140" velocity="0.9" lower="0" upper="0.78" />
+    </joint>
+  </robot>
