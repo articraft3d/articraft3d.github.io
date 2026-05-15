@@ -8,8 +8,927 @@
     <script type="module" crossorigin src="/assets/index-RAbzHmh6.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/ui-CVLqE0wk.js">
     <link rel="stylesheet" crossorigin href="/assets/index-CUreAlXV.css">
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <style>
+      /* ──────────────────────────────────────────────────────────────
+         UNIFIED APPLICATION SECTION STYLING
+         All 4 demo-blocks (image-cond / scene-recon / robotics / VR)
+         use these classes for consistent typography, spacing, colors.
+         ────────────────────────────────────────────────────────────── */
+      .demo-block .app-desc {
+        font-size: 14px !important;
+        color: #444 !important;
+        line-height: 1.65 !important;
+        margin: 0 auto !important;
+        max-width: 820px;
+        text-align: center;
+        font-weight: 400;
+      }
+      .demo-block .app-desc a {
+        color: #0c8ce9 !important;
+        text-decoration: none !important;
+        border-bottom: 1px solid rgba(12,140,233,0.35) !important;
+        font-weight: 500;
+        transition: color 0.2s, border-color 0.2s;
+      }
+      .demo-block .app-desc a:hover {
+        color: #0a7ac8 !important;
+        border-color: rgba(12,140,233,0.7) !important;
+      }
+      .demo-block .app-caption {
+        font-size: 13px !important;
+        color: #666 !important;
+        text-align: center;
+        font-weight: 500;
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      /* Image → Interactive 3D injected section. */
+      .img2gen-block { width: 100%; color: #111; }
+
+      .img2gen-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.1rem;
+      }
+      @media (max-width: 980px) { .img2gen-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 580px) { .img2gen-grid { grid-template-columns: 1fr; } }
+
+      .img2gen-card {
+        position: relative;
+        aspect-ratio: 1 / 1.05;
+        border-radius: 14px;
+        overflow: hidden;
+        background: linear-gradient(180deg, #ffffff 0%, #ececf2 100%);
+        border: 1px solid #e2e2e6;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 18px rgba(0,0,0,0.06);
+        transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s;
+      }
+      .img2gen-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.06), 0 10px 28px rgba(0,0,0,0.1);
+        border-color: #d0d0d6;
+      }
+
+      .img2gen-viewer {
+        position: absolute;
+        inset: 0;
+      }
+      .img2gen-viewer canvas {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+        cursor: grab;
+      }
+      .img2gen-viewer canvas:active { cursor: grabbing; }
+
+      .img2gen-loading {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        color: rgba(0,0,0,0.45);
+        font-size: 0.72rem;
+        pointer-events: none;
+      }
+      .img2gen-loading.hidden { display: none; }
+      .img2gen-spinner {
+        width: 22px;
+        height: 22px;
+        border: 2px solid rgba(0,0,0,0.1);
+        border-top-color: #7c6dfa;
+        border-radius: 50%;
+        animation: img2gen-spin 0.9s linear infinite;
+      }
+      @keyframes img2gen-spin { to { transform: rotate(360deg); } }
+
+      /* Input image thumbnail — sits in the top-left corner. */
+      .img2gen-thumb {
+        position: absolute;
+        top: 0.7rem;
+        left: 0.7rem;
+        width: 28%;
+        aspect-ratio: 1;
+        z-index: 3;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #000;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+        border: 2px solid rgba(255,255,255,0.92);
+        transition: width 0.22s ease;
+      }
+      .img2gen-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .img2gen-thumb-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0.15rem 0.4rem;
+        font-size: 0.55rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #fff;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        text-align: center;
+      }
+      .img2gen-card:hover .img2gen-thumb { width: 38%; }
+
+      /* Drag hint on the viewer */
+      .img2gen-hint {
+        position: absolute;
+        top: 0.85rem;
+        right: 0.85rem;
+        z-index: 3;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        padding: 0.25rem 0.55rem;
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(0,0,0,0.55);
+        background: rgba(255,255,255,0.72);
+        backdrop-filter: blur(6px);
+        border-radius: 6px;
+        border: 1px solid rgba(0,0,0,0.06);
+        opacity: 0;
+        transition: opacity 0.2s;
+        pointer-events: none;
+      }
+      .img2gen-card:hover .img2gen-hint { opacity: 1; }
+
+      /* Play / pause button */
+      .img2gen-play {
+        position: absolute;
+        right: 0.85rem;
+        bottom: 0.85rem;
+        z-index: 4;
+        width: 36px;
+        height: 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255,255,255,0.82);
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 50%;
+        color: rgba(0,0,0,0.7);
+        cursor: pointer;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        opacity: 0;
+        transition: opacity 0.22s ease, transform 0.15s ease, background 0.2s;
+        font-family: inherit;
+        padding: 0;
+      }
+      .img2gen-card:hover .img2gen-play { opacity: 1; }
+      .img2gen-play:hover { background: #fff; transform: scale(1.06); }
+      .img2gen-play.paused { background: #fff; opacity: 1; color: #7c6dfa; }
+      .img2gen-play svg { display: block; }
+
+      .img2gen-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1.6rem 1rem 0.85rem;
+        z-index: 2;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: -0.005em;
+        background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+        pointer-events: none;
+      }
+
+      /* ── Scene reconstruction layout ─────────────────────────────── */
+
+      /* Thumbnail selector strip — small, centered row */
+      .scene-thumbs {
+        display: flex;
+        gap: 0.55rem;
+        margin-bottom: 1.3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .scene-thumb {
+        position: relative;
+        width: 150px;
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #1a1a1a;
+        border: 2px solid #e2e2e6;
+        cursor: pointer;
+        transition: border-color 0.22s ease, transform 0.18s ease, box-shadow 0.22s;
+        flex: 0 0 auto;
+      }
+      .scene-thumb:hover {
+        border-color: #c0c0c8;
+        transform: translateY(-1px);
+      }
+      .scene-thumb.active {
+        border-color: #0c8ce9;
+        box-shadow: 0 0 0 1px rgba(12,140,233,0.45), 0 4px 12px rgba(12,140,233,0.25);
+      }
+      .scene-thumb video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .scene-thumb .thumb-label {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.5rem 0.45rem 0.3rem;
+        background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, transparent 100%);
+        color: #fff !important;
+        font-size: 0.68rem !important;
+        font-weight: 600 !important;
+        letter-spacing: -0.003em;
+        pointer-events: none;
+        line-height: 1.2;
+      }
+      .scene-thumb .thumb-index {
+        position: absolute;
+        top: 0.35rem;
+        left: 0.4rem;
+        font-size: 0.55rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.1em;
+        color: rgba(255,255,255,0.85) !important;
+        background: rgba(0,0,0,0.55);
+        padding: 0.08rem 0.32rem;
+        border-radius: 3px;
+        backdrop-filter: blur(6px);
+        line-height: 1;
+      }
+      .scene-thumb.active .thumb-index { background: #0c8ce9; color: #fff !important; }
+      @media (max-width: 540px) {
+        .scene-thumb { width: 110px; }
+      }
+
+      /* Pipeline stage: scan → arrow (LiteReality + Articraft) → fly-through */
+      .scene-stage {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.6rem;
+      }
+      .scene-pane {
+        position: relative;
+        aspect-ratio: 4 / 3;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #1a1a1a;
+        border: 1px solid #e2e2e6;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 18px rgba(0,0,0,0.06);
+      }
+      .scene-pane.is-scan { aspect-ratio: 3 / 4; max-width: 320px; justify-self: end; }
+      .scene-pane.is-fly  { aspect-ratio: 16 / 9; }
+      .scene-pane video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .scene-pane .pane-label {
+        position: absolute;
+        top: 0.6rem;
+        left: 0.6rem;
+        font-size: 0.6rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #ffffff !important;
+        background: rgba(0,0,0,0.6);
+        padding: 0.22rem 0.55rem;
+        border-radius: 5px;
+        backdrop-filter: blur(8px);
+        z-index: 2;
+        line-height: 1;
+      }
+
+      .scene-arrow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        min-width: 130px;
+        padding: 0 0.25rem;
+      }
+      .scene-arrow .arrow-label {
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        color: #333 !important;
+        text-align: center;
+        letter-spacing: -0.005em;
+        line-height: 1.35;
+      }
+      .scene-arrow .arrow-label .literality {
+        color: #0c8ce9 !important;
+        font-weight: 700 !important;
+      }
+      .scene-arrow .arrow-svg {
+        display: block;
+        color: #0c8ce9;
+        animation: arrow-pulse 2.6s ease-in-out infinite;
+      }
+      @keyframes arrow-pulse {
+        0%, 100% { transform: translateX(0); opacity: 0.7; }
+        50%      { transform: translateX(5px); opacity: 1; }
+      }
+
+      @media (max-width: 760px) {
+        .scene-stage { grid-template-columns: 1fr; }
+        .scene-pane.is-scan { justify-self: center; max-width: 240px; }
+        .scene-arrow .arrow-svg { transform: rotate(90deg); }
+        @keyframes arrow-pulse {
+          0%, 100% { transform: rotate(90deg) translateX(0); opacity: 0.7; }
+          50%      { transform: rotate(90deg) translateX(5px); opacity: 1; }
+        }
+      }
+
+      /* Robotics simulation: 2-column video grid */
+      .robotics-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        max-width: 880px;
+        margin: 0 auto;
+      }
+      .robotics-cell {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #1a1a1a;
+        border: 1px solid #e2e2e6;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 18px rgba(0,0,0,0.06);
+      }
+      .robotics-cell video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .robotics-cell .pane-label {
+        position: absolute;
+        top: 0.6rem;
+        left: 0.6rem;
+        font-size: 0.6rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #ffffff !important;
+        background: rgba(0,0,0,0.6);
+        padding: 0.22rem 0.55rem;
+        border-radius: 5px;
+        backdrop-filter: blur(8px);
+        line-height: 1;
+      }
+      @media (max-width: 640px) {
+        .robotics-grid { grid-template-columns: 1fr; }
+      }
+
+      /* VR demo: single full-width video */
+      .vr-cell {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        max-width: 880px;
+        margin: 0 auto;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #1a1a1a;
+        border: 1px solid #e2e2e6;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 18px rgba(0,0,0,0.06);
+      }
+      .vr-cell video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .vr-cell .pane-label {
+        position: absolute;
+        top: 0.6rem;
+        left: 0.6rem;
+        font-size: 0.6rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #ffffff !important;
+        background: rgba(0,0,0,0.6);
+        padding: 0.22rem 0.55rem;
+        border-radius: 5px;
+        backdrop-filter: blur(8px);
+        line-height: 1;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+
+    <script type="module">
+      import * as THREE from 'three';
+      import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+      import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+      import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
+
+      const PAIRS = [
+        // Row 1
+        { ref: '/webpage/references/backyard_playground_set.jpg',   glb: '/webpage/gallery/backyard_playground_set.glb',   name: 'Backyard Playground Set' },
+        { ref: '/webpage/references/eames_lounge.jpg',              glb: '/webpage/gallery/eames_lounge.glb',              name: 'Eames Lounge' },
+        { ref: '/webpage/references/27_penny_farthing.jpg',         glb: '/webpage/gallery/27_penny_farthing.glb',         name: 'Penny-Farthing' },
+        // Row 2
+        { ref: '/webpage/references/game_boy.jpg',                  glb: '/webpage/gallery/game_boy.glb',                  name: 'Game Boy' },
+        { ref: '/webpage/references/03_nintendo_ds_lite.jpg',       glb: '/webpage/gallery/03_nintendo_ds_lite.glb',       name: 'Nintendo DS Lite' },
+        { ref: '/webpage/references/pixar.jpg',                     glb: '/webpage/gallery/pixar.glb',                     name: 'Pixar Lamp' },
+        // Row 3
+        { ref: '/webpage/references/fidget_spinner.jpg',            glb: '/webpage/gallery/fidget_spinner.glb',            name: 'Fidget Spinner' },
+        { ref: '/webpage/references/wooden_mannequin.jpg',          glb: '/webpage/gallery/wooden_mannequin.glb',          name: 'Wooden Mannequin' },
+        { ref: '/webpage/references/chinese_carved_wooden_fan.jpg', glb: '/webpage/gallery/chinese_carved_wooden_fan.glb', name: 'Chinese Carved Wooden Fan' },
+      ];
+
+      const HDR_URL = '/webpage/gallery/studio_1k.hdr';
+      const ENV_INTENSITY = 1.1;
+
+      // Shared HDR env across all viewer instances.
+      let sharedEnvTexture = null;
+      let sharedEnvPromise = null;
+      function getEnv(renderer) {
+        if (sharedEnvTexture) return Promise.resolve(sharedEnvTexture);
+        if (sharedEnvPromise) return sharedEnvPromise;
+        sharedEnvPromise = new Promise((resolve, reject) => {
+          new RGBELoader().load(HDR_URL, (hdrTex) => {
+            const pmrem = new THREE.PMREMGenerator(renderer);
+            pmrem.compileEquirectangularShader();
+            sharedEnvTexture = pmrem.fromEquirectangular(hdrTex).texture;
+            hdrTex.dispose();
+            pmrem.dispose();
+            resolve(sharedEnvTexture);
+          }, undefined, reject);
+        });
+        return sharedEnvPromise;
+      }
+
+      const gltfLoader = new GLTFLoader();
+
+      class PairViewer {
+        constructor(viewerEl, glbUrl, cardEl) {
+          this.viewerEl = viewerEl;
+          this.glbUrl = glbUrl;
+          this.cardEl = cardEl;
+          this.loadingEl = viewerEl.querySelector('.img2gen-loading');
+          this.playBtn = cardEl ? cardEl.querySelector('[data-play]') : null;
+          this.playing = true;
+          if (this.playBtn) {
+            this.playBtn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              this.togglePlay();
+            });
+          }
+          this.observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+              this.observer.disconnect();
+              this.initScene();
+              this.loadModel();
+            }
+          }, { rootMargin: '300px' });
+          this.observer.observe(viewerEl);
+        }
+
+        togglePlay() {
+          this.playing = !this.playing;
+          if (this.mixer) {
+            // Animated: pause/resume all actions.
+            this.mixer._actions.forEach((a) => a.paused = !this.playing);
+          }
+          if (this.controls) {
+            this.controls.autoRotate = this.playing && !this.mixer;
+          }
+          if (this.playBtn) {
+            this.playBtn.classList.toggle('paused', !this.playing);
+            this.playBtn.querySelector('.ico-pause').style.display = this.playing ? 'block' : 'none';
+            this.playBtn.querySelector('.ico-play').style.display = this.playing ? 'none' : 'block';
+          }
+        }
+
+        initScene() {
+          const w = this.viewerEl.clientWidth;
+          const h = this.viewerEl.clientHeight;
+
+          this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+          this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+          this.renderer.setSize(w, h);
+          this.renderer.outputColorSpace = THREE.SRGBColorSpace;
+          this.renderer.toneMapping = THREE.NeutralToneMapping;
+          this.renderer.toneMappingExposure = 1.3;
+          this.viewerEl.appendChild(this.renderer.domElement);
+
+          this.scene = new THREE.Scene();
+          this.scene.environmentIntensity = ENV_INTENSITY;
+          getEnv(this.renderer).then((envTex) => { this.scene.environment = envTex; });
+
+          this.camera = new THREE.PerspectiveCamera(35, w / h, 0.01, 1000);
+          this.camera.position.set(2, 1.5, 3);
+
+          const key = new THREE.DirectionalLight(0xffffff, 1.0);
+          key.position.set(5, 8, 6);
+          this.scene.add(key);
+          const fill = new THREE.DirectionalLight(0xfff2e0, 0.5);
+          fill.position.set(-6, 4, 3);
+          this.scene.add(fill);
+          const rim = new THREE.DirectionalLight(0xb8c8ff, 0.5);
+          rim.position.set(0, 4, -8);
+          this.scene.add(rim);
+          const hemi = new THREE.HemisphereLight(0xffffff, 0xb8b8c8, 0.3);
+          this.scene.add(hemi);
+
+          this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+          this.controls.enableDamping = true;
+          this.controls.dampingFactor = 0.08;
+          this.controls.minDistance = 0.1;
+          this.controls.maxDistance = 100;
+          this.controls.autoRotateSpeed = 0.6;
+
+          this.clock = new THREE.Clock();
+
+          this.resizeObserver = new ResizeObserver(() => this.onResize());
+          this.resizeObserver.observe(this.viewerEl);
+
+          this.animate();
+        }
+
+        onResize() {
+          const w = this.viewerEl.clientWidth;
+          const h = this.viewerEl.clientHeight;
+          if (!w || !h) return;
+          this.renderer.setSize(w, h);
+          this.camera.aspect = w / h;
+          this.camera.updateProjectionMatrix();
+        }
+
+        loadModel() {
+          gltfLoader.load(
+            this.glbUrl,
+            (gltf) => this.onLoaded(gltf),
+            (progress) => {
+              if (progress.lengthComputable) {
+                const pct = Math.round((progress.loaded / progress.total) * 100);
+                const span = this.loadingEl.querySelector('span');
+                if (span) span.textContent = `Loading… ${pct}%`;
+              }
+            },
+            (err) => {
+              console.error('Load failed', this.glbUrl, err);
+              this.loadingEl.innerHTML = '<span style="color:#a55">Failed to load</span>';
+            },
+          );
+        }
+
+        onLoaded(gltf) {
+          this.model = gltf.scene;
+
+          this.model.traverse((obj) => {
+            if (obj.isMesh && obj.material) {
+              const mats = Array.isArray(obj.material) ? obj.material : [obj.material];
+              for (const m of mats) {
+                if ('envMapIntensity' in m) m.envMapIntensity = ENV_INTENSITY;
+                if (m.normalMap)    m.normalMap.colorSpace = THREE.NoColorSpace;
+                if (m.metalnessMap) m.metalnessMap.colorSpace = THREE.NoColorSpace;
+                if (m.roughnessMap) m.roughnessMap.colorSpace = THREE.NoColorSpace;
+                if (m.aoMap)        m.aoMap.colorSpace = THREE.NoColorSpace;
+                if (m.map)          m.map.colorSpace = THREE.SRGBColorSpace;
+                if (m.emissiveMap)  m.emissiveMap.colorSpace = THREE.SRGBColorSpace;
+                m.needsUpdate = true;
+              }
+            }
+          });
+
+          const box = new THREE.Box3().setFromObject(this.model);
+          const size = new THREE.Vector3(); box.getSize(size);
+          const center = new THREE.Vector3(); box.getCenter(center);
+          const maxDim = Math.max(size.x, size.y, size.z) || 1;
+          const scale = 2.0 / maxDim;
+          this.model.scale.setScalar(scale);
+          this.model.position.set(-center.x * scale, -center.y * scale, -center.z * scale);
+          this.scene.add(this.model);
+
+          const sb = new THREE.Box3().setFromObject(this.model);
+          const ss = new THREE.Vector3(); sb.getSize(ss);
+          const radius = ss.length() * 0.5;
+          const fovRad = (this.camera.fov * Math.PI) / 180;
+          const dist = (radius / Math.sin(fovRad / 2)) * 0.9;
+          this.camera.position.set(dist * 0.7, dist * 0.55, dist * 0.85);
+          this.controls.target.set(0, 0, 0);
+          this.controls.update();
+
+          if (gltf.animations && gltf.animations.length > 0) {
+            this.mixer = new THREE.AnimationMixer(this.model);
+            gltf.animations.forEach((c) => this.mixer.clipAction(c).play());
+          } else {
+            this.controls.autoRotate = true;
+          }
+
+          this.loadingEl.classList.add('hidden');
+        }
+
+        animate() {
+          this.rafId = requestAnimationFrame(() => this.animate());
+          const dt = this.clock.getDelta();
+          if (this.mixer) this.mixer.update(dt);
+          this.controls.update();
+          this.renderer.render(this.scene, this.camera);
+        }
+      }
+
+      // ── Build the replacement block ──────────────────────────────────
+      function buildBlock() {
+        const frag = htmlToFragment(`
+          <h3>Articulated 3D Object Generation from Images</h3>
+          <p class="app-desc">Each card pairs the input reference image with the generated, interactive 3D asset — drag any model to rotate.</p>
+          <div class="img2gen-grid">
+            ${PAIRS.map((p, i) => `
+              <div class="img2gen-card" data-idx="${i}">
+                <div class="img2gen-viewer">
+                  <div class="img2gen-loading"><div class="img2gen-spinner"></div><span>Loading…</span></div>
+                </div>
+                <div class="img2gen-thumb">
+                  <img src="${p.ref}" alt="${p.name} reference">
+                  <div class="img2gen-thumb-label">Input</div>
+                </div>
+                <div class="img2gen-hint">
+                  <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M16 7l5-3v6"/></svg>
+                  Drag
+                </div>
+                <button class="img2gen-play" data-play title="Pause / play animation">
+                  <svg class="ico-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+                  <svg class="ico-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none;margin-left:2px;"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <div class="img2gen-caption">${p.name}</div>
+              </div>
+            `).join('')}
+          </div>
+        `);
+
+        frag.querySelectorAll('.img2gen-card').forEach((card) => {
+          const idx = parseInt(card.dataset.idx, 10);
+          const viewerEl = card.querySelector('.img2gen-viewer');
+          new PairViewer(viewerEl, PAIRS[idx].glb, card);
+        });
+
+        return frag;
+      }
+
+      // ── Scene-reconstruction block ──────────────────────────────────
+      const SCENES = [
+        {
+          id: 'darwin', name: 'Darwin Bedroom',
+          scan:       '/webpage/scene_recon/Darwin_BedRoom_scan.mp4',
+          flythrough: '/webpage/scene_recon/Darwin_BedRoom_flythrough.mp4',
+        },
+        {
+          id: 'girton', name: 'Girton Study Room',
+          scan:       '/webpage/scene_recon/Girton_Study_Room_scan.mp4',
+          flythrough: '/webpage/scene_recon/Girton_Study_Room_flythrough.mp4',
+        },
+        {
+          id: 'tea',    name: 'SigProc Tea Room',
+          scan:       '/webpage/scene_recon/SigProc_Tea_Room_scan.mp4',
+          flythrough: '/webpage/scene_recon/SigProc_Tea_Room_flythrough.mp4',
+        },
+      ];
+
+      function htmlToFragment(html) {
+        const tpl = document.createElement('template');
+        tpl.innerHTML = html.trim();
+        return tpl.content;
+      }
+
+      function buildSceneBlock() {
+        const frag = htmlToFragment(`
+          <h3>Room-Level Scene Reconstruction with Articulated Objects</h3>
+          <p class="app-desc">
+            By integrating Articraft into the <a href="https://literality.world/" target="_blank" rel="noopener">LiteReality</a>
+            pipeline, we obtain fully interactive scene reconstructions: from commodity scanning-device input,
+            we produce a complete, room-scale environment whose objects are individually interactable and
+            rendered with PBR materials — ready for downstream simulation, VR, or robotics workflows.
+          </p>
+          <div class="scene-thumbs">
+            ${SCENES.map((s, i) => `
+              <div class="scene-thumb${i === 0 ? ' active' : ''}" data-scene="${s.id}">
+                <div class="thumb-index">${String(i + 1).padStart(2, '0')}</div>
+                <video src="${s.flythrough}" muted loop playsinline preload="metadata"></video>
+                <div class="thumb-label">${s.name}</div>
+              </div>
+            `).join('')}
+          </div>
+          <div class="scene-stage">
+            <div class="scene-pane is-scan">
+              <div class="pane-label">Raw Scan</div>
+              <video data-scene-scan autoplay muted loop playsinline></video>
+            </div>
+            <div class="scene-arrow">
+              <div class="arrow-label"><span class="literality">LiteReality</span><br>+ Articraft</div>
+              <svg class="arrow-svg" width="64" height="22" viewBox="0 0 64 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="2" y1="11" x2="58" y2="11"/>
+                <polyline points="48 3 58 11 48 19"/>
+              </svg>
+            </div>
+            <div class="scene-pane is-fly">
+              <div class="pane-label">Interactive Reconstruction</div>
+              <video data-scene-fly autoplay muted loop playsinline></video>
+            </div>
+          </div>
+          <p class="app-caption" data-scene-caption>${SCENES[0].name}</p>
+        `);
+
+        const scanVideo = frag.querySelector('[data-scene-scan]');
+        const flyVideo  = frag.querySelector('[data-scene-fly]');
+        const captionEl = frag.querySelector('[data-scene-caption]');
+        const thumbs    = frag.querySelectorAll('.scene-thumb');
+
+        function selectScene(id) {
+          const scene = SCENES.find((s) => s.id === id) || SCENES[0];
+          captionEl.textContent = scene.name;
+          scanVideo.src = scene.scan;
+          scanVideo.load();
+          scanVideo.play().catch(() => {});
+          flyVideo.src = scene.flythrough;
+          flyVideo.load();
+          flyVideo.play().catch(() => {});
+          thumbs.forEach((t) => t.classList.toggle('active', t.dataset.scene === id));
+        }
+
+        thumbs.forEach((t) => {
+          t.addEventListener('click', () => selectScene(t.dataset.scene));
+          const v = t.querySelector('video');
+          if (v) {
+            t.addEventListener('mouseenter', () => v.play().catch(() => {}));
+            t.addEventListener('mouseleave', () => { v.pause(); v.currentTime = 0; });
+          }
+        });
+
+        selectScene(SCENES[0].id);
+        return frag;
+      }
+
+      // ── Locate the React-rendered demo-blocks ───────────────────────
+      function findBlockByText(snippet) {
+        for (const el of document.querySelectorAll('.demo-block')) {
+          if ((el.textContent || '').includes(snippet)) return el;
+        }
+        return null;
+      }
+
+      // ── Robotics simulation block ───────────────────────────────────
+      function buildRoboticsBlock() {
+        return htmlToFragment(`
+          <h3>Robotic Simulation</h3>
+          <p class="app-desc">Articraft assets are simulation-ready: drop them into a physics engine and articulated parts respond to forces, contacts, and joint limits out of the box.</p>
+          <div class="robotics-grid">
+            <div class="robotics-cell">
+              <div class="pane-label">Open Door</div>
+              <video autoplay muted loop playsinline src="/webpage/simulation/open_door.mp4"></video>
+            </div>
+            <div class="robotics-cell">
+              <div class="pane-label">Close Door</div>
+              <video autoplay muted loop playsinline src="/webpage/simulation/close_door.mp4"></video>
+            </div>
+          </div>
+        `);
+      }
+
+      // ── VR demo block ────────────────────────────────────────────────
+      function buildVRBlock() {
+        return htmlToFragment(`
+          <h3>Interactive VR Environments</h3>
+          <p class="app-desc">Articraft assets reconstructed into LiteReality scenes can be loaded directly into VR for hands-on interaction — every door, drawer, and joint responds to the user, with PBR materials preserved.</p>
+          <div class="vr-cell">
+            <div class="pane-label">VR Demo</div>
+            <video autoplay muted loop playsinline src="/webpage/vr/vr_demo.mp4"></video>
+          </div>
+        `);
+      }
+
+      let img2genInstalled   = false;
+      let sceneInstalled     = false;
+      let roboticsInstalled  = false;
+      let appsReordered      = false;
+      let vrInstalled        = false;
+
+      function reorderApplications() {
+        if (appsReordered) return;
+        const demosSection = document.getElementById('demos');
+        if (!demosSection) return;
+        // Find the three existing demo-blocks by title text.
+        const blocks = Array.from(demosSection.querySelectorAll('.demo-block'));
+        if (blocks.length < 3) return;
+        const find = (t) => blocks.find((b) => (b.textContent || '').includes(t));
+        const imgB = find('Articulated 3D Object Generation from Images');
+        const sceB = find('Room-Level Scene Reconstruction');
+        const robB = find('Robotics Simulation');
+        if (!imgB || !sceB || !robB) return;
+        // Re-append in the desired order: image → scene → robotics.
+        const parent = imgB.parentNode;
+        parent.appendChild(imgB);
+        parent.appendChild(sceB);
+        parent.appendChild(robB);
+        appsReordered = true;
+      }
+
+      function installVR() {
+        if (vrInstalled) return;
+        const demosSection = document.getElementById('demos');
+        if (!demosSection) return;
+        // Avoid duplicate installs.
+        if (demosSection.querySelector('[data-vr-block]')) { vrInstalled = true; return; }
+        const robB = Array.from(demosSection.querySelectorAll('.demo-block'))
+          .find((b) => (b.textContent || '').includes('Robotics Simulation'));
+        if (!robB) return;
+        const vrWrap = document.createElement('div');
+        vrWrap.className = 'demo-block';
+        vrWrap.dataset.vrBlock = '1';
+        vrWrap.appendChild(buildVRBlock());
+        robB.parentNode.insertBefore(vrWrap, robB.nextSibling);
+        vrInstalled = true;
+      }
+
+      function tryInstall() {
+        if (!img2genInstalled) {
+          const t = findBlockByText('Articulated 3D Object Generation from Images');
+          if (t) {
+            t.innerHTML = '';
+            t.appendChild(buildBlock());
+            t.dataset.img2genInstalled = '1';
+            img2genInstalled = true;
+          }
+        }
+        if (!sceneInstalled) {
+          const t = findBlockByText('Room-Level Scene Reconstruction');
+          if (t) {
+            t.innerHTML = '';
+            t.appendChild(buildSceneBlock());
+            t.dataset.sceneInstalled = '1';
+            sceneInstalled = true;
+          }
+        }
+        if (!roboticsInstalled) {
+          const t = findBlockByText('Robotics Simulation');
+          if (t) {
+            t.innerHTML = '';
+            t.appendChild(buildRoboticsBlock());
+            t.dataset.roboticsInstalled = '1';
+            roboticsInstalled = true;
+          }
+        }
+        reorderApplications();
+        installVR();
+      }
+
+      const mo = new MutationObserver(() => {
+        if (!img2genInstalled || !sceneInstalled || !roboticsInstalled || !appsReordered || !vrInstalled) {
+          tryInstall();
+        } else {
+          const a = findBlockByText('Articulated 3D Object Generation from Images');
+          if (a && !a.dataset.img2genInstalled) { img2genInstalled = false; }
+          const b = findBlockByText('Room-Level Scene Reconstruction');
+          if (b && !b.dataset.sceneInstalled) { sceneInstalled = false; }
+          const c = findBlockByText('Robotic');
+          if (c && !c.dataset.roboticsInstalled) { roboticsInstalled = false; }
+          const demosSection = document.getElementById('demos');
+          if (demosSection && !demosSection.querySelector('[data-vr-block]')) vrInstalled = false;
+          if (!img2genInstalled || !sceneInstalled || !roboticsInstalled || !vrInstalled) tryInstall();
+        }
+      });
+      mo.observe(document.body, { childList: true, subtree: true });
+      document.addEventListener('DOMContentLoaded', tryInstall);
+      tryInstall();
+    </script>
   </body>
 </html>
