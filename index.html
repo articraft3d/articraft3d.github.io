@@ -56,6 +56,13 @@
       /* Image → Interactive 3D injected section. */
       .img2gen-block { width: 100%; color: #111; }
 
+      .img2gen-grid,
+      .scene-stage,
+      .robotics-grid,
+      .vr-cell {
+        width: 100%;
+      }
+
       .img2gen-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -294,21 +301,23 @@
       /* Pipeline stage: scan → arrow (LiteReality + Articraft) → fly-through */
       .scene-stage {
         display: grid;
-        grid-template-columns: 1fr auto 1fr;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
         align-items: center;
-        gap: 1rem;
-        margin-bottom: 0.6rem;
+        gap: 1.1rem;
+        max-width: 100%;
+        margin: 0 auto 0.6rem;
       }
       .scene-pane {
         position: relative;
-        aspect-ratio: 4 / 3;
+        width: 100%;
+        aspect-ratio: 16 / 9;
         border-radius: 12px;
         overflow: hidden;
         background: #1a1a1a;
         border: 1px solid #e2e2e6;
         box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 18px rgba(0,0,0,0.06);
       }
-      .scene-pane.is-scan { aspect-ratio: 3 / 4; max-width: 320px; justify-self: end; }
+      .scene-pane.is-scan { justify-self: stretch; }
       .scene-pane.is-fly  { aspect-ratio: 16 / 9; }
       .scene-pane video {
         width: 100%;
@@ -365,7 +374,7 @@
 
       @media (max-width: 760px) {
         .scene-stage { grid-template-columns: 1fr; }
-        .scene-pane.is-scan { justify-self: center; max-width: 240px; }
+        .scene-pane.is-scan { justify-self: stretch; }
         .scene-arrow .arrow-svg { transform: rotate(90deg); }
         @keyframes arrow-pulse {
           0%, 100% { transform: rotate(90deg) translateX(0); opacity: 0.7; }
@@ -377,8 +386,7 @@
       .robotics-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        max-width: 880px;
+        gap: 1.1rem;
         margin: 0 auto;
       }
       .robotics-cell {
@@ -415,17 +423,42 @@
         .robotics-grid { grid-template-columns: 1fr; }
       }
 
-      /* VR demo: single full-width video */
+      /* VR demo: headset image + interaction video */
+      .vr-showcase {
+        display: grid;
+        grid-template-columns: minmax(180px, 280px) minmax(0, 1fr);
+        align-items: stretch;
+        gap: 1.1rem;
+      }
+      .vr-user-card {
+        margin: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid #e2e2e6;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 18px rgba(0,0,0,0.06);
+      }
+      .vr-user-card img {
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        display: block;
+      }
       .vr-cell {
         position: relative;
         aspect-ratio: 16 / 9;
-        max-width: 880px;
+        max-width: 100%;
         margin: 0 auto;
         border-radius: 12px;
         overflow: hidden;
         background: #1a1a1a;
         border: 1px solid #e2e2e6;
         box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 18px rgba(0,0,0,0.06);
+      }
+      @media (max-width: 760px) {
+        .vr-showcase { grid-template-columns: 1fr; }
+        .vr-user-card img { aspect-ratio: 16 / 9; }
       }
       .vr-cell video {
         width: 100%;
@@ -670,7 +703,7 @@
       // ── Build the replacement block ──────────────────────────────────
       function buildBlock() {
         const frag = htmlToFragment(`
-          <h3>Articulated 3D Object Generation from Images</h3>
+          <h3>Image-Conditioned Generation with Articraft</h3>
           <p class="app-desc">Each card pairs the input reference image with the generated, interactive 3D asset — drag any model to rotate.</p>
           <div class="img2gen-grid">
             ${PAIRS.map((p, i) => `
@@ -732,12 +765,12 @@
 
       function buildSceneBlock() {
         const frag = htmlToFragment(`
-          <h3>Room-Level Scene Reconstruction with Articulated Objects</h3>
+          <h3>Articraft in Scene-Level Reconstruction</h3>
           <p class="app-desc">
-            By integrating Articraft into the <a href="https://literality.world/" target="_blank" rel="noopener">LiteReality</a>
+            By integrating Articraft into the <a href="https://litereality.github.io/" target="_blank" rel="noopener">LiteReality</a>
             pipeline, we obtain fully interactive scene reconstructions: from commodity scanning-device input,
-            we produce a complete, room-scale environment whose objects are individually interactable and
-            rendered with PBR materials — ready for downstream simulation, VR, or robotics workflows.
+            we produce a complete, room-scale environment whose objects are articulated and
+            contains full PBR materials — ready for downstream graphics, simulation, VR, workflows.
           </p>
           <div class="scene-thumbs">
             ${SCENES.map((s, i) => `
@@ -809,7 +842,7 @@
       // ── Robotics simulation block ───────────────────────────────────
       function buildRoboticsBlock() {
         return htmlToFragment(`
-          <h3>Robotic Simulation</h3>
+          <h3>Robotic Simulation with Articraft Assets</h3>
           <p class="app-desc">Articraft assets are simulation-ready: drop them into a physics engine and articulated parts respond to forces, contacts, and joint limits out of the box.</p>
           <div class="robotics-grid">
             <div class="robotics-cell">
@@ -827,11 +860,16 @@
       // ── VR demo block ────────────────────────────────────────────────
       function buildVRBlock() {
         return htmlToFragment(`
-          <h3>Interactive VR Environments</h3>
+          <h3>Articraft in VR</h3>
           <p class="app-desc">Articraft assets reconstructed into LiteReality scenes can be loaded directly into VR for hands-on interaction — every door, drawer, and joint responds to the user, with PBR materials preserved.</p>
-          <div class="vr-cell">
-            <div class="pane-label">VR Demo</div>
-            <video autoplay muted loop playsinline src="/webpage/vr/vr_demo.mp4"></video>
+          <div class="vr-showcase">
+            <figure class="vr-user-card">
+              <img src="/webpage/vr/wearing_vr_masked.png" alt="User wearing a VR headset">
+            </figure>
+            <div class="vr-cell">
+              <div class="pane-label">VR Demo</div>
+              <video autoplay muted loop playsinline src="/webpage/vr/vr_demo.mp4"></video>
+            </div>
           </div>
         `);
       }
@@ -849,10 +887,10 @@
         // Find the three existing demo-blocks by title text.
         const blocks = Array.from(demosSection.querySelectorAll('.demo-block'));
         if (blocks.length < 3) return;
-        const find = (t) => blocks.find((b) => (b.textContent || '').includes(t));
-        const imgB = find('Articulated 3D Object Generation from Images');
-        const sceB = find('Room-Level Scene Reconstruction');
-        const robB = find('Robotics Simulation');
+        const find = (...terms) => blocks.find((b) => terms.some((t) => (b.textContent || '').includes(t)));
+        const imgB = find('Image-Conditioned Generation with Articraft', 'Articulated 3D Object Generation from Images');
+        const sceB = find('Articraft in Scene-Level Reconstruction', 'Room-Level Scene Reconstruction');
+        const robB = find('Robotic Simulation with Articraft Assets', 'Robotics Simulation');
         if (!imgB || !sceB || !robB) return;
         // Re-append in the desired order: image → scene → robotics.
         const parent = imgB.parentNode;
@@ -868,8 +906,14 @@
         if (!demosSection) return;
         // Avoid duplicate installs.
         if (demosSection.querySelector('[data-vr-block]')) { vrInstalled = true; return; }
+        const oldVR = Array.from(demosSection.querySelectorAll('.demo-block'))
+          .find((b) => (b.textContent || '').includes('Creating Interactive Scenes for VR'));
+        if (oldVR) oldVR.remove();
         const robB = Array.from(demosSection.querySelectorAll('.demo-block'))
-          .find((b) => (b.textContent || '').includes('Robotics Simulation'));
+          .find((b) => {
+            const text = b.textContent || '';
+            return text.includes('Robotic Simulation with Articraft Assets') || text.includes('Robotics Simulation');
+          });
         if (!robB) return;
         const vrWrap = document.createElement('div');
         vrWrap.className = 'demo-block';
@@ -881,7 +925,7 @@
 
       function tryInstall() {
         if (!img2genInstalled) {
-          const t = findBlockByText('Articulated 3D Object Generation from Images');
+          const t = findBlockByText('Articulated 3D Object Generation from Images') || findBlockByText('Image-Conditioned Generation with Articraft');
           if (t) {
             t.innerHTML = '';
             t.appendChild(buildBlock());
@@ -890,7 +934,7 @@
           }
         }
         if (!sceneInstalled) {
-          const t = findBlockByText('Room-Level Scene Reconstruction');
+          const t = findBlockByText('Room-Level Scene Reconstruction') || findBlockByText('Articraft in Scene-Level Reconstruction');
           if (t) {
             t.innerHTML = '';
             t.appendChild(buildSceneBlock());
@@ -899,7 +943,7 @@
           }
         }
         if (!roboticsInstalled) {
-          const t = findBlockByText('Robotics Simulation');
+          const t = findBlockByText('Robotics Simulation') || findBlockByText('Robotic Simulation with Articraft Assets');
           if (t) {
             t.innerHTML = '';
             t.appendChild(buildRoboticsBlock());
@@ -915,9 +959,9 @@
         if (!img2genInstalled || !sceneInstalled || !roboticsInstalled || !appsReordered || !vrInstalled) {
           tryInstall();
         } else {
-          const a = findBlockByText('Articulated 3D Object Generation from Images');
+          const a = findBlockByText('Articulated 3D Object Generation from Images') || findBlockByText('Image-Conditioned Generation with Articraft');
           if (a && !a.dataset.img2genInstalled) { img2genInstalled = false; }
-          const b = findBlockByText('Room-Level Scene Reconstruction');
+          const b = findBlockByText('Room-Level Scene Reconstruction') || findBlockByText('Articraft in Scene-Level Reconstruction');
           if (b && !b.dataset.sceneInstalled) { sceneInstalled = false; }
           const c = findBlockByText('Robotic');
           if (c && !c.dataset.roboticsInstalled) { roboticsInstalled = false; }
