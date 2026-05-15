@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="Articraft: Scalable Articulated 3D Asset Generation. Generate interactive, articulated 3D assets with PBR materials from images, ready for graphics, simulation, and VR." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+
     <title>Articraft: Scalable Articulated 3D Asset Generation</title>
     <script type="module" crossorigin src="/assets/index-RAbzHmh6.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/ui-CVLqE0wk.js">
@@ -19,6 +27,50 @@
     </script>
 
     <style>
+      /* ──────────────────────────────────────────────────────────────
+         GLOBAL RULES — typography polish, focus visibility, motion.
+         Applied per Vercel Web Interface Guidelines.
+         ────────────────────────────────────────────────────────────── */
+      html {
+        color-scheme: light;
+        scroll-behavior: smooth;
+        scroll-padding-top: 72px;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      /* Typographic polish: balanced headings, pretty paragraphs. */
+      h1, h2, h3, h4 { text-wrap: balance; }
+      p { text-wrap: pretty; }
+
+      /* Brand-tinted selection — same hue family as the link / accent color. */
+      ::selection { background: rgba(12,140,233,0.22); color: inherit; }
+
+      /* Keyboard-only focus ring; mouse clicks stay clean.
+         Outline follows the element's own border-radius in modern browsers. */
+      :focus { outline: none; }
+      :focus-visible {
+        outline: 2px solid #0c8ce9;
+        outline-offset: 2px;
+      }
+
+      /* Respect users who prefer reduced motion. */
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+        /* The spinner is purely decorative motion — hide the ring and rely on the label. */
+        .img2gen-spinner { display: none; }
+      }
+
       /* ──────────────────────────────────────────────────────────────
          UNIFIED APPLICATION SECTION STYLING
          All 4 demo-blocks (image-cond / scene-recon / robotics / VR)
@@ -77,14 +129,16 @@
         border-radius: 14px;
         overflow: hidden;
         background: linear-gradient(180deg, #ffffff 0%, #ececf2 100%);
-        border: 1px solid #e2e2e6;
+        border: 1px solid rgba(0,0,0,0.08);
         box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 18px rgba(0,0,0,0.06);
         transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s;
       }
-      .img2gen-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 2px 6px rgba(0,0,0,0.06), 0 10px 28px rgba(0,0,0,0.1);
-        border-color: #d0d0d6;
+      @media (hover: hover) {
+        .img2gen-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 2px 6px rgba(0,0,0,0.06), 0 10px 28px rgba(0,0,0,0.1);
+          border-color: rgba(0,0,0,0.14);
+        }
       }
 
       .img2gen-viewer {
@@ -184,14 +238,14 @@
       }
       .img2gen-card:hover .img2gen-hint { opacity: 1; }
 
-      /* Play / pause button */
+      /* Play / pause button — sized to a 44×44 mobile hit target via padding. */
       .img2gen-play {
         position: absolute;
-        right: 0.85rem;
-        bottom: 0.85rem;
+        right: 0.6rem;
+        bottom: 0.6rem;
         z-index: 4;
-        width: 36px;
-        height: 36px;
+        width: 44px;
+        height: 44px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -201,14 +255,18 @@
         color: rgba(0,0,0,0.7);
         cursor: pointer;
         backdrop-filter: blur(8px);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.12);
         opacity: 0;
+        touch-action: manipulation;
         transition: opacity 0.22s ease, transform 0.15s ease, background 0.2s;
         font-family: inherit;
         padding: 0;
       }
-      .img2gen-card:hover .img2gen-play { opacity: 1; }
-      .img2gen-play:hover { background: #fff; transform: scale(1.06); }
+      @media (hover: hover) {
+        .img2gen-card:hover .img2gen-play { opacity: 1; }
+        .img2gen-play:hover { background: #fff; transform: scale(1.06); }
+      }
+      .img2gen-play:focus-visible { opacity: 1; }
       .img2gen-play.paused { background: #fff; opacity: 1; color: #7c6dfa; }
       .img2gen-play svg { display: block; }
 
@@ -248,10 +306,16 @@
         cursor: pointer;
         transition: border-color 0.22s ease, transform 0.18s ease, box-shadow 0.22s;
         flex: 0 0 auto;
+        padding: 0;
+        font: inherit;
+        color: inherit;
+        touch-action: manipulation;
       }
-      .scene-thumb:hover {
-        border-color: #c0c0c8;
-        transform: translateY(-1px);
+      @media (hover: hover) {
+        .scene-thumb:hover {
+          border-color: #c0c0c8;
+          transform: translateY(-1px);
+        }
       }
       .scene-thumb.active {
         border-color: #0c8ce9;
@@ -292,6 +356,7 @@
         border-radius: 3px;
         backdrop-filter: blur(6px);
         line-height: 1;
+        font-variant-numeric: tabular-nums;
       }
       .scene-thumb.active .thumb-index { background: #0c8ce9; color: #fff !important; }
       @media (max-width: 540px) {
@@ -510,6 +575,9 @@
       const HDR_URL = '/webpage/gallery/studio_1k.hdr';
       const ENV_INTENSITY = 1.1;
 
+      // Honor prefers-reduced-motion for the 3D viewer auto-rotate.
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
       // Shared HDR env across all viewer instances.
       let sharedEnvTexture = null;
       let sharedEnvPromise = null;
@@ -562,12 +630,13 @@
             this.mixer._actions.forEach((a) => a.paused = !this.playing);
           }
           if (this.controls) {
-            this.controls.autoRotate = this.playing && !this.mixer;
+            this.controls.autoRotate = this.playing && !this.mixer && !reduceMotion.matches;
           }
           if (this.playBtn) {
             this.playBtn.classList.toggle('paused', !this.playing);
             this.playBtn.querySelector('.ico-pause').style.display = this.playing ? 'block' : 'none';
             this.playBtn.querySelector('.ico-play').style.display = this.playing ? 'none' : 'block';
+            this.playBtn.setAttribute('aria-label', this.playing ? 'Pause animation' : 'Play animation');
           }
         }
 
@@ -684,8 +753,18 @@
           if (gltf.animations && gltf.animations.length > 0) {
             this.mixer = new THREE.AnimationMixer(this.model);
             gltf.animations.forEach((c) => this.mixer.clipAction(c).play());
+            if (reduceMotion.matches) {
+              this.mixer._actions.forEach((a) => a.paused = true);
+              this.playing = false;
+              if (this.playBtn) {
+                this.playBtn.classList.add('paused');
+                this.playBtn.querySelector('.ico-pause').style.display = 'none';
+                this.playBtn.querySelector('.ico-play').style.display = 'block';
+                this.playBtn.setAttribute('aria-label', 'Play animation');
+              }
+            }
           } else {
-            this.controls.autoRotate = true;
+            this.controls.autoRotate = !reduceMotion.matches;
           }
 
           this.loadingEl.classList.add('hidden');
@@ -703,25 +782,25 @@
       // ── Build the replacement block ──────────────────────────────────
       function buildBlock() {
         const frag = htmlToFragment(`
-          <h3>Image-Conditioned Generation with Articraft</h3>
+          <h3>Image-Conditioned Generation with <span translate="no">Articraft</span></h3>
           <p class="app-desc">Each card pairs the input reference image with the generated, interactive 3D asset — drag any model to rotate.</p>
           <div class="img2gen-grid">
             ${PAIRS.map((p, i) => `
               <div class="img2gen-card" data-idx="${i}">
                 <div class="img2gen-viewer">
-                  <div class="img2gen-loading"><div class="img2gen-spinner"></div><span>Loading…</span></div>
+                  <div class="img2gen-loading" aria-live="polite"><div class="img2gen-spinner" aria-hidden="true"></div><span>Loading…</span></div>
                 </div>
                 <div class="img2gen-thumb">
-                  <img src="${p.ref}" alt="${p.name} reference">
+                  <img src="${p.ref}" alt="${p.name} reference" loading="lazy" decoding="async">
                   <div class="img2gen-thumb-label">Input</div>
                 </div>
-                <div class="img2gen-hint">
-                  <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M16 7l5-3v6"/></svg>
+                <div class="img2gen-hint" aria-hidden="true">
+                  <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M16 7l5-3v6"/></svg>
                   Drag
                 </div>
-                <button class="img2gen-play" data-play title="Pause / play animation">
-                  <svg class="ico-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
-                  <svg class="ico-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none;margin-left:2px;"><path d="M8 5v14l11-7z"/></svg>
+                <button type="button" class="img2gen-play" data-play aria-label="Pause animation">
+                  <svg class="ico-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+                  <svg class="ico-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none;margin-left:2px;" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                 </button>
                 <div class="img2gen-caption">${p.name}</div>
               </div>
@@ -765,37 +844,37 @@
 
       function buildSceneBlock() {
         const frag = htmlToFragment(`
-          <h3>Articraft in Scene-Level Reconstruction</h3>
+          <h3><span translate="no">Articraft</span> in Scene-Level Reconstruction</h3>
           <p class="app-desc">
-            By integrating Articraft into the <a href="https://litereality.github.io/" target="_blank" rel="noopener">LiteReality</a>
-            pipeline, we obtain fully interactive scene reconstructions: from commodity scanning-device input,
-            we produce a complete, room-scale environment whose objects are articulated and
-            contains full PBR materials — ready for downstream graphics, simulation, VR, workflows.
+            By integrating <span translate="no">Articraft</span> into the <a href="https://litereality.github.io/" target="_blank" rel="noopener" translate="no">LiteReality</a>
+            pipeline, we obtain fully interactive scene reconstructions: from commodity scanner input, we produce a complete,
+            room-scale environment whose objects are articulated and carry full PBR materials —
+            ready for downstream graphics, simulation, and VR workflows.
           </p>
-          <div class="scene-thumbs">
+          <div class="scene-thumbs" role="tablist" aria-label="Scene examples">
             ${SCENES.map((s, i) => `
-              <div class="scene-thumb${i === 0 ? ' active' : ''}" data-scene="${s.id}">
-                <div class="thumb-index">${String(i + 1).padStart(2, '0')}</div>
-                <video src="${s.flythrough}" muted loop playsinline preload="metadata"></video>
+              <button type="button" class="scene-thumb${i === 0 ? ' active' : ''}" data-scene="${s.id}" role="tab" aria-selected="${i === 0 ? 'true' : 'false'}" aria-label="Show ${s.name}">
+                <div class="thumb-index" aria-hidden="true">${String(i + 1).padStart(2, '0')}</div>
+                <video src="${s.flythrough}" muted loop playsinline preload="metadata" aria-hidden="true"></video>
                 <div class="thumb-label">${s.name}</div>
-              </div>
+              </button>
             `).join('')}
           </div>
           <div class="scene-stage">
             <div class="scene-pane is-scan">
               <div class="pane-label">Raw Scan</div>
-              <video data-scene-scan autoplay muted loop playsinline></video>
+              <video data-scene-scan autoplay muted loop playsinline aria-label="Raw scanner input"></video>
             </div>
-            <div class="scene-arrow">
-              <div class="arrow-label"><span class="literality">LiteReality</span><br>+ Articraft</div>
-              <svg class="arrow-svg" width="64" height="22" viewBox="0 0 64 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <div class="scene-arrow" aria-hidden="true">
+              <div class="arrow-label"><span class="literality" translate="no">LiteReality</span><br>+ <span translate="no">Articraft</span></div>
+              <svg class="arrow-svg" width="64" height="22" viewBox="0 0 64 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="2" y1="11" x2="58" y2="11"/>
                 <polyline points="48 3 58 11 48 19"/>
               </svg>
             </div>
             <div class="scene-pane is-fly">
               <div class="pane-label">Interactive Reconstruction</div>
-              <video data-scene-fly autoplay muted loop playsinline></video>
+              <video data-scene-fly autoplay muted loop playsinline aria-label="Interactive scene reconstruction fly-through"></video>
             </div>
           </div>
           <p class="app-caption" data-scene-caption>${SCENES[0].name}</p>
@@ -815,7 +894,11 @@
           flyVideo.src = scene.flythrough;
           flyVideo.load();
           flyVideo.play().catch(() => {});
-          thumbs.forEach((t) => t.classList.toggle('active', t.dataset.scene === id));
+          thumbs.forEach((t) => {
+            const isActive = t.dataset.scene === id;
+            t.classList.toggle('active', isActive);
+            t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          });
         }
 
         thumbs.forEach((t) => {
@@ -842,16 +925,16 @@
       // ── Robotics simulation block ───────────────────────────────────
       function buildRoboticsBlock() {
         return htmlToFragment(`
-          <h3>Robotic Simulation with Articraft Assets</h3>
-          <p class="app-desc">Articraft assets are simulation-ready: drop them into a physics engine and articulated parts respond to forces, contacts, and joint limits out of the box.</p>
+          <h3>Robotic Simulation with <span translate="no">Articraft</span> Assets</h3>
+          <p class="app-desc"><span translate="no">Articraft</span> assets are simulation-ready: drop them into a physics engine and articulated parts respond to forces, contacts, and joint limits out of the box.</p>
           <div class="robotics-grid">
             <div class="robotics-cell">
               <div class="pane-label">Open Door</div>
-              <video autoplay muted loop playsinline src="/webpage/simulation/open_door.mp4"></video>
+              <video autoplay muted loop playsinline src="/webpage/simulation/open_door.mp4" aria-label="Simulated robot opening a door"></video>
             </div>
             <div class="robotics-cell">
               <div class="pane-label">Close Door</div>
-              <video autoplay muted loop playsinline src="/webpage/simulation/close_door.mp4"></video>
+              <video autoplay muted loop playsinline src="/webpage/simulation/close_door.mp4" aria-label="Simulated robot closing a door"></video>
             </div>
           </div>
         `);
@@ -860,15 +943,15 @@
       // ── VR demo block ────────────────────────────────────────────────
       function buildVRBlock() {
         return htmlToFragment(`
-          <h3>Articraft in VR</h3>
-          <p class="app-desc">Articraft generates assets and scenes that can be loaded directly into VR for hands-on interaction. Every articulated object responds to the user, with PBR materials preserved.</p>
+          <h3><span translate="no">Articraft</span> in VR</h3>
+          <p class="app-desc"><span translate="no">Articraft</span> generates assets and scenes that can be loaded directly into VR for hands-on interaction. Every articulated object responds to the user, with PBR materials preserved.</p>
           <div class="vr-showcase">
             <figure class="vr-user-card">
-              <img src="/webpage/vr/wearing_vr_masked.png" alt="User wearing a VR headset">
+              <img src="/webpage/vr/wearing_vr_masked.png" alt="User wearing a VR headset" loading="lazy" decoding="async">
             </figure>
             <div class="vr-cell">
               <div class="pane-label">VR Demo</div>
-              <video controls autoplay muted loop playsinline src="/webpage/vr/vr_demo.mp4"></video>
+              <video controls autoplay muted loop playsinline src="/webpage/vr/vr_demo.mp4" aria-label="Articraft assets in a VR environment"></video>
             </div>
           </div>
         `);
