@@ -96,6 +96,19 @@
       .content-section > .demo-block + .demo-block {
         margin-top: 56px;
       }
+      .comparison-grid .media-card h3 a {
+        color: inherit;
+        font: inherit;
+        font-weight: inherit;
+        letter-spacing: inherit;
+        text-decoration: none;
+      }
+      .comparison-grid .media-card h3 a:hover,
+      .comparison-grid .media-card h3 a:focus-visible {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
       .mobile-nav-toggle {
         display: none;
       }
@@ -1188,6 +1201,31 @@
         });
       }
 
+      const COMPARISON_LABEL_LINKS = [
+        ['Articulate-Anything', 'https://articulate-anything.github.io/'],
+        ['PhysX-Anything', 'https://physx-anything.github.io/'],
+        ['Codex', 'https://openai.com/codex/'],
+        ['URDF-Anything+', 'https://urdf-anything-plus.github.io/'],
+      ];
+
+      function installComparisonLinks(root = document) {
+        if (!root.querySelectorAll) return;
+        root.querySelectorAll('#comparisons .comparison-grid .media-card h3').forEach((heading) => {
+          if (heading.querySelector('a')) return;
+          const label = (heading.textContent || '').trim();
+          const match = COMPARISON_LABEL_LINKS.find(([prefix]) => label.startsWith(prefix));
+          if (!match) return;
+
+          const link = document.createElement('a');
+          link.href = match[1];
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.textContent = label;
+          heading.textContent = '';
+          heading.appendChild(link);
+        });
+      }
+
       function installMobileNavCollapse() {
         const nav = document.querySelector('.site-nav');
         const menu = nav ? nav.querySelector('nav') : null;
@@ -1353,10 +1391,12 @@
         moveActionAfterApplications();
         installMobileNavCollapse();
         hideVideoControls();
+        installComparisonLinks();
       }
 
       const mo = new MutationObserver(() => {
         hideVideoControls();
+        installComparisonLinks();
         if (!img2genInstalled || !sceneInstalled || !roboticsInstalled || !appsReordered || !vrInstalled || !actionReordered) {
           tryInstall();
         } else {
@@ -1376,6 +1416,7 @@
       mo.observe(document.body, { childList: true, subtree: true });
       document.addEventListener('DOMContentLoaded', tryInstall);
       hideVideoControls();
+      installComparisonLinks();
       tryInstall();
     </script>
   </body>
