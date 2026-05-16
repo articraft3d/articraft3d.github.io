@@ -96,12 +96,18 @@
       .content-section > .demo-block + .demo-block {
         margin-top: 56px;
       }
+      .mobile-nav-toggle {
+        display: none;
+      }
       @media (max-width: 680px) {
         .site-nav {
-          gap: 8px;
-          min-height: 48px;
-          padding: 10px 18px 9px;
-          transition: min-height 0.18s ease, padding 0.18s ease;
+          display: grid;
+          grid-template-columns: 1fr auto;
+          align-items: center;
+          gap: 0 12px;
+          min-height: 54px;
+          padding: 9px 18px;
+          transition: padding 0.18s ease;
         }
         .site-mark {
           display: inline-flex;
@@ -109,32 +115,64 @@
           min-height: 18px;
           line-height: 1.2;
         }
+        .mobile-nav-toggle {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 4px;
+          width: 36px;
+          height: 36px;
+          padding: 0;
+          color: #111;
+          background: transparent;
+          border: 1px solid rgba(17, 17, 17, 0.18);
+          border-radius: 8px;
+          cursor: pointer;
+        }
+        .mobile-nav-toggle span {
+          display: block;
+          width: 18px;
+          height: 2px;
+          background: currentColor;
+          border-radius: 999px;
+          transition: transform 0.18s ease, opacity 0.18s ease;
+        }
+        .mobile-nav-toggle[aria-expanded="true"] span:nth-child(1) {
+          transform: translateY(6px) rotate(45deg);
+        }
+        .mobile-nav-toggle[aria-expanded="true"] span:nth-child(2) {
+          opacity: 0;
+        }
+        .mobile-nav-toggle[aria-expanded="true"] span:nth-child(3) {
+          transform: translateY(-6px) rotate(-45deg);
+        }
         .site-nav nav {
-          gap: 3px 5px;
-          max-height: 120px;
-          opacity: 1;
+          display: grid;
+          grid-column: 1 / -1;
+          gap: 3px;
+          width: 100%;
+          max-height: 0;
+          opacity: 0;
           overflow: hidden;
+          pointer-events: none;
+          transform: translateY(-4px);
+          transition: max-height 0.2s ease, opacity 0.18s ease, transform 0.18s ease, padding-top 0.18s ease;
+        }
+        .site-nav.nav-open nav {
+          max-height: 280px;
+          opacity: 1;
+          padding-top: 8px;
+          pointer-events: auto;
           transform: translateY(0);
-          transition: max-height 0.18s ease, opacity 0.18s ease, transform 0.18s ease;
         }
         .site-nav nav a {
           display: inline-flex;
           align-items: center;
-          min-height: 24px;
-          padding: 5px 9px;
-          font-size: 11px;
+          min-height: 32px;
+          padding: 7px 2px;
+          font-size: 12px;
           line-height: 1.2;
-        }
-        .site-nav.nav-compact {
-          min-height: 42px;
-          padding-top: 9px;
-          padding-bottom: 9px;
-        }
-        .site-nav.nav-compact nav {
-          max-height: 0;
-          opacity: 0;
-          pointer-events: none;
-          transform: translateY(-6px);
         }
       }
 
@@ -1148,22 +1186,45 @@
 
       function installMobileNavCollapse() {
         const nav = document.querySelector('.site-nav');
-        if (!nav || nav.dataset.mobileCollapseInstalled === '1') return;
-        nav.dataset.mobileCollapseInstalled = '1';
+        const menu = nav ? nav.querySelector('nav') : null;
+        const mark = nav ? nav.querySelector('.site-mark') : null;
+        if (!nav || !menu || !mark) return;
+
+        let toggle = nav.querySelector('.mobile-nav-toggle');
+        if (!toggle) {
+          toggle = document.createElement('button');
+          toggle.type = 'button';
+          toggle.className = 'mobile-nav-toggle';
+          toggle.setAttribute('aria-label', 'Open navigation menu');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.innerHTML = '<span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>';
+          mark.insertAdjacentElement('afterend', toggle);
+        }
+
+        if (!menu.id) menu.id = 'project-sections-menu';
+        toggle.setAttribute('aria-controls', menu.id);
+
+        if (nav.dataset.mobileMenuInstalled === '1') return;
+        nav.dataset.mobileMenuInstalled = '1';
 
         const mobileQuery = window.matchMedia('(max-width: 680px)');
         let lastY = window.scrollY || 0;
         let ticking = false;
 
+        function setOpen(isOpen) {
+          const open = mobileQuery.matches && isOpen;
+          nav.classList.toggle('nav-open', open);
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+          menu.setAttribute('aria-hidden', mobileQuery.matches && !open ? 'true' : 'false');
+        }
+
         function update() {
           ticking = false;
           const y = window.scrollY || 0;
           const delta = y - lastY;
-          if (!mobileQuery.matches || y < 24 || delta < -4) {
-            nav.classList.remove('nav-compact');
-          } else if (delta > 4) {
-            nav.classList.add('nav-compact');
-          }
+          if (!mobileQuery.matches) setOpen(false);
+          if (mobileQuery.matches && delta > 4) setOpen(false);
           lastY = y;
         }
 
@@ -1179,6 +1240,19 @@
         } else if (typeof mobileQuery.addListener === 'function') {
           mobileQuery.addListener(requestUpdate);
         }
+
+        toggle.addEventListener('click', () => {
+          setOpen(!nav.classList.contains('nav-open'));
+        });
+        menu.addEventListener('click', (event) => {
+          if (event.target.closest('a')) setOpen(false);
+        });
+        document.addEventListener('click', (event) => {
+          if (mobileQuery.matches && nav.classList.contains('nav-open') && !nav.contains(event.target)) {
+            setOpen(false);
+          }
+        });
+        setOpen(false);
         update();
       }
 
