@@ -1110,18 +1110,18 @@
               <div class="pane-label">Manipulate Oven</div>
               <video autoplay muted loop playsinline src="/webpage/simulation/manipulate_oven.mp4" aria-label="Simulated robot manipulating an oven"></video>
               <div class="speed-floater" role="group" aria-label="Manipulate oven playback speed">
-                <button type="button" class="is-active" data-speed="1" aria-pressed="true">1x</button>
+                <button type="button" data-speed="1" aria-pressed="false">1x</button>
                 <button type="button" data-speed="2" aria-pressed="false">2x</button>
-                <button type="button" data-speed="3" aria-pressed="false">3x</button>
+                <button type="button" class="is-active" data-speed="3" aria-pressed="true">3x</button>
               </div>
             </div>
             <div class="robotics-cell">
               <div class="pane-label">Manipulate Drawer</div>
               <video autoplay muted loop playsinline src="/webpage/simulation/manipulate_drawer.mp4" aria-label="Simulated robot manipulating a drawer"></video>
               <div class="speed-floater" role="group" aria-label="Manipulate drawer playback speed">
-                <button type="button" class="is-active" data-speed="1" aria-pressed="true">1x</button>
+                <button type="button" data-speed="1" aria-pressed="false">1x</button>
                 <button type="button" data-speed="2" aria-pressed="false">2x</button>
-                <button type="button" data-speed="3" aria-pressed="false">3x</button>
+                <button type="button" class="is-active" data-speed="3" aria-pressed="true">3x</button>
               </div>
             </div>
           </div>
@@ -1130,6 +1130,10 @@
         frag.querySelectorAll('.robotics-cell').forEach((cell) => {
           const video = cell.querySelector('video');
           const speedButtons = cell.querySelectorAll('.speed-floater button');
+          if (video) {
+            video.defaultPlaybackRate = 3;
+            video.playbackRate = 3;
+          }
           speedButtons.forEach((button) => {
             button.addEventListener('click', () => {
               const speed = Number(button.dataset.speed) || 1;
