@@ -98,14 +98,14 @@
     ],
     robotics: [
       {
-        title: "Opening a generated toaster oven",
-        description: "Simulation of an imported Articraft (GPT-5.5) toaster oven asset with an articulated pull-down door.",
-        src: "webpage/simulation/open_door.mp4"
+        title: "Manipulating a generated oven",
+        description: "Simulation of an imported Articraft (GPT-5.5) oven asset with an articulated pull-down door.",
+        src: "webpage/simulation/manipulate_oven.mp4"
       },
       {
-        title: "Closing the toaster oven door",
-        description: "The same generated toaster oven is closed in simulation, preserving the predicted hinge behavior.",
-        src: "webpage/simulation/close_door.mp4"
+        title: "Manipulating a generated drawer",
+        description: "Simulation of an imported Articraft (GPT-5.5) cabinet asset with an articulated sliding drawer.",
+        src: "webpage/simulation/manipulate_drawer.mp4"
       }
     ],
     reconstruction: [

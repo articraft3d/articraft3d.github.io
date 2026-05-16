@@ -473,6 +473,43 @@
         gap: 1.1rem;
         margin: 0 auto;
       }
+      .robotics-cell .speed-floater {
+        position: absolute;
+        right: 0.6rem;
+        bottom: 0.6rem;
+        z-index: 2;
+        display: inline-flex;
+        gap: 0.2rem;
+        padding: 0.18rem;
+        border-radius: 6px;
+        background: rgba(0,0,0,0.6);
+        backdrop-filter: blur(8px);
+      }
+      .robotics-cell .speed-floater button {
+        min-width: 34px;
+        min-height: 26px;
+        padding: 0 0.42rem;
+        border-radius: 4px;
+        border: 0;
+        background: transparent;
+        color: rgba(255,255,255,0.78);
+        cursor: pointer;
+        font-size: 0.68rem;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 0;
+        transition: background-color 0.16s, color 0.16s, box-shadow 0.16s;
+      }
+      .robotics-cell .speed-floater button:hover,
+      .robotics-cell .speed-floater button:focus-visible {
+        color: #fff;
+        background: rgba(255,255,255,0.16);
+      }
+      .robotics-cell .speed-floater button.is-active {
+        color: #111;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.22);
+      }
       .robotics-cell {
         position: relative;
         aspect-ratio: 16 / 9;
@@ -943,20 +980,51 @@
 
       // ── Robotics simulation block ───────────────────────────────────
       function buildRoboticsBlock() {
-        return htmlToFragment(`
+        const frag = htmlToFragment(`
           <h3>Robotic Simulation with <span translate="no">Articraft</span> Assets</h3>
           <p class="app-desc"><span translate="no">Articraft</span> assets are simulation-ready: drop them into a physics engine and articulated parts respond to forces, contacts, and joint limits out of the box.</p>
           <div class="robotics-grid">
             <div class="robotics-cell">
-              <div class="pane-label">Open Door</div>
-              <video autoplay muted loop playsinline src="/webpage/simulation/open_door.mp4" aria-label="Simulated robot opening a door"></video>
+              <div class="pane-label">Manipulate Oven</div>
+              <video autoplay muted loop playsinline src="/webpage/simulation/manipulate_oven.mp4" aria-label="Simulated robot manipulating an oven"></video>
+              <div class="speed-floater" role="group" aria-label="Manipulate oven playback speed">
+                <button type="button" class="is-active" data-speed="1" aria-pressed="true">1x</button>
+                <button type="button" data-speed="2" aria-pressed="false">2x</button>
+                <button type="button" data-speed="3" aria-pressed="false">3x</button>
+              </div>
             </div>
             <div class="robotics-cell">
-              <div class="pane-label">Close Door</div>
-              <video autoplay muted loop playsinline src="/webpage/simulation/close_door.mp4" aria-label="Simulated robot closing a door"></video>
+              <div class="pane-label">Manipulate Drawer</div>
+              <video autoplay muted loop playsinline src="/webpage/simulation/manipulate_drawer.mp4" aria-label="Simulated robot manipulating a drawer"></video>
+              <div class="speed-floater" role="group" aria-label="Manipulate drawer playback speed">
+                <button type="button" class="is-active" data-speed="1" aria-pressed="true">1x</button>
+                <button type="button" data-speed="2" aria-pressed="false">2x</button>
+                <button type="button" data-speed="3" aria-pressed="false">3x</button>
+              </div>
             </div>
           </div>
         `);
+
+        frag.querySelectorAll('.robotics-cell').forEach((cell) => {
+          const video = cell.querySelector('video');
+          const speedButtons = cell.querySelectorAll('.speed-floater button');
+          speedButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+              const speed = Number(button.dataset.speed) || 1;
+              if (video) {
+                video.playbackRate = speed;
+                video.play().catch(() => {});
+              }
+              speedButtons.forEach((btn) => {
+                const isActive = btn === button;
+                btn.classList.toggle('is-active', isActive);
+                btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+              });
+            });
+          });
+        });
+
+        return frag;
       }
 
       // ── VR demo block ────────────────────────────────────────────────
